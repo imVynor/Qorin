@@ -60,6 +60,10 @@ export interface ChatMessage {
   tok_per_sec?: number;
   latency_ms?: number;
   token_count?: number;
+  is_error?: boolean;
+  error_code?: string;
+  is_timeout?: boolean;
+  retry_prompt?: string;
 }
 
 export interface GenerationSettings {

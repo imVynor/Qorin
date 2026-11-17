@@ -373,17 +373,51 @@ class QorinModelProvider(ModelProvider):
 
             use_cuda = device.startswith("cuda")
             autocast_ctx = torch.amp.autocast(device_type="cuda", dtype=torch.bfloat16) if use_cuda else torch.no_grad()
+            if not use_cuda and torch.get_num_threads() > 6:
+                torch.set_num_threads(4)
 
             start_time = time.perf_counter()
             first_token_time: Optional[float] = None
             token_count = 0
 
             stop_seqs = config.stop_sequences
+            supports_cache = hasattr(model, "blocks") and len(model.blocks) > 0
+            kv_cache = None
+            next_token = None
 
             for step in range(max_new):
+                # Authoritative deadline check before every forward step
+                if config.deadline is not None and time.perf_counter() >= config.deadline:
+                    now = time.perf_counter()
+                    yield StreamChunk(
+                        text="",
+                        is_finished=True,
+                        finish_reason="timeout",
+                        token_count=token_count,
+                        ttft_ms=(first_token_time - start_time) * 1000.0 if first_token_time else 0.0,
+                        elapsed_ms=(now - start_time) * 1000.0,
+                        tok_per_sec=token_count / (now - start_time) if (now - start_time) > 0 else 0.0,
+                    )
+                    break
+
                 with torch.no_grad():
                     with autocast_ctx:
-                        logits = model(inp[:, -context_len:])[:, -1, :].clone()
+                        if step == 0 or not supports_cache or kv_cache is None or next_token is None:
+                            # Prefill full prompt
+                            model_out = model(inp[:, -context_len:], use_cache=supports_cache)
+                            if isinstance(model_out, tuple):
+                                logits, kv_cache = model_out
+                            else:
+                                logits = model_out
+                                kv_cache = None
+                        else:
+                            # Incremental single-token decode using cached key-value states
+                            model_out = model(next_token, kv_cache=kv_cache, use_cache=True)
+                            if isinstance(model_out, tuple):
+                                logits, kv_cache = model_out
+                            else:
+                                logits = model_out
+                        logits = logits[:, -1, :].clone()
 
                 # Repetition penalty
                 if config.repetition_penalty != 1.0 and generated_tokens:

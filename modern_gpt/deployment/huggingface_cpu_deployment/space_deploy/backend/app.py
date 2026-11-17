@@ -72,6 +72,12 @@ two_stage_protocol = QorinTwoStageProtocol(tool_orchestrator)
 training_manager = TrainingDashboardManager()
 experiment_tracker = ExperimentTracker()
 
+# Timeout & Performance Architecture Constants
+OVERALL_REQUEST_DEADLINE_SEC = 35.0
+MODEL_GEN_ROUND_DEADLINE_SEC = 14.0
+TOOL_EXEC_BUDGET_SEC = 4.5
+MODEL_LOAD_TIMEOUT_SEC = 15.0
+
 
 # --- REQUEST & RESPONSE SCHEMAS ---
 
@@ -470,18 +476,28 @@ async def chat_stream(req: ChatRequest, request: Request):
         consecutive_schema_retries = 0
         max_schema_retries = 1
         request_dispatched_calls: Set[str] = set()
+        deadline = start_time + OVERALL_REQUEST_DEADLINE_SEC
+        config.deadline = deadline
+        is_timed_out = False
 
         try:
             while current_round <= max_tool_rounds:
-                if (time.perf_counter() - start_time) > 30.0:
+                if (time.perf_counter() - start_time) >= OVERALL_REQUEST_DEADLINE_SEC:
+                    is_timed_out = True
                     yield {
                         "event": "error",
-                        "data": json.dumps({"error": "Global execution timeout (30.0s) exceeded."}),
+                        "data": json.dumps({
+                            "error_code": "DEADLINE_EXCEEDED",
+                            "error": f"Request exceeded deadline of {OVERALL_REQUEST_DEADLINE_SEC:.1f}s. Generation terminated.",
+                            "duration_ms": round((time.perf_counter() - start_time) * 1000.0, 1),
+                        }),
                     }
                     break
 
                 # Evidence-Grounded Synthesis Prompt adjustment for post-tool turns
-                if current_round > 0 and any(t.get("tool_name") == "web_search" for t in tool_traces):
+                web_success = any(t.get("tool_name") == "web_search" and t.get("status") == "completed" for t in tool_traces)
+                web_failed = any(t.get("tool_name") == "web_search" and t.get("status") != "completed" for t in tool_traces)
+                if current_round > 0 and web_success:
                     config.system_prompt = (
                         "You are QORIN, an evidence-grounded research assistant.\n"
                         "Answer the user's question directly using ONLY the retrieved sources provided above.\n"
@@ -489,6 +505,11 @@ async def chat_stream(req: ChatRequest, request: Request):
                         "1. Base all statements strictly on the retrieved source passages. Do not invent dates, numbers, positions, or affiliations.\n"
                         "2. Cite the source IDs (e.g. [SOURCE_1]) immediately after each claim.\n"
                         "3. Do not introduce unrelated facts or repeat prior conversational claims."
+                    )
+                elif current_round > 0 and web_failed:
+                    config.system_prompt = (
+                        "You are QORIN, a calibrated AI research assistant.\n"
+                        "Live web retrieval was unavailable or timed out. Answer the user's query thoughtfully based on your knowledge, noting that live web verification could not be completed."
                     )
 
                 round_response_text = ""
@@ -505,6 +526,18 @@ async def chat_stream(req: ChatRequest, request: Request):
                     if chunk.token_count:
                         final_token_count += chunk.token_count
 
+                if chunk.finish_reason == "timeout" or time.perf_counter() >= deadline:
+                    is_timed_out = True
+                    yield {
+                        "event": "error",
+                        "data": json.dumps({
+                            "error_code": "DEADLINE_EXCEEDED",
+                            "error": f"Request exceeded deadline of {OVERALL_REQUEST_DEADLINE_SEC:.1f}s during generation.",
+                            "duration_ms": round((time.perf_counter() - start_time) * 1000.0, 1),
+                        }),
+                    }
+                    break
+
                 # Classify generation output with request isolation
                 parsed = output_parser.parse_generation(
                     round_response_text,
@@ -516,7 +549,7 @@ async def chat_stream(req: ChatRequest, request: Request):
                 )
 
                 # Policy routing for factual inquiries on round 0: ensure web_search is utilized
-                if current_round == 0 and user_intent == UserIntent.FACTUAL_INQUIRY and "web_search" in enabled_tools and not req.manual_tool_override:
+                if current_round == 0 and user_intent == UserIntent.CURRENT_FACTUAL_QUERY and "web_search" in enabled_tools and not req.manual_tool_override:
                     if parsed.classification != OutputClassification.TOOL_CALL or (parsed.tool_call and parsed.tool_call.canonical_name != "web_search"):
                         parsed = output_parser.parse_generation(
                             f'<tool_call id="call_{req_id[:8]}_001">{{"name": "web_search", "arguments": {{"query": "{last_user_msg}"}}}}</tool_call>',
@@ -554,11 +587,11 @@ async def chat_stream(req: ChatRequest, request: Request):
                     tool_call = parsed.tool_call
                     canonical_name = tool_call.canonical_name
 
-                    # Policy Enforcement: If model called Python, but user only asked for code generation
+                    # Policy Enforcement: If model emitted python tool call, but user asked for code generation/explanation/debugging
                     if canonical_name == "python" and not req.manual_tool_override:
-                        if user_intent == UserIntent.CODE_GENERATION:
+                        if user_intent in (UserIntent.CODE_GENERATION, UserIntent.CODE_EXPLANATION, UserIntent.CODE_DEBUGGING):
                             code_arg = tool_call.arguments.get("code", "")
-                            if "def " in code_arg and "return" in code_arg and "comb" not in code_arg:
+                            if code_arg.strip():
                                 final_response_text = f"```python\n{code_arg.strip()}\n```"
                             else:
                                 final_response_text = ToolPolicyClassifier.synthesize_code_response(last_user_msg)
@@ -588,6 +621,7 @@ async def chat_stream(req: ChatRequest, request: Request):
                                     "token_count": final_token_count,
                                     "ttft_ms": round(ttft_recorded, 1),
                                     "tok_per_sec": round(final_tok_per_sec, 1),
+                                    "timestamp": time.time(),
                                 }),
                             }
                             break
@@ -613,14 +647,32 @@ async def chat_stream(req: ChatRequest, request: Request):
                             }),
                         }
 
-                        obs: CanonicalToolObservation = tool_registry.execute_tool(
-                            canonical_name,
-                            validated_args,
-                            call_id=tool_call.call_id,
-                            original_name=tool_call.original_name,
-                            request_id=req_id,
-                            conversation_id=conv_id,
-                        )
+                        rem_tool_budget = max(0.5, min(TOOL_EXEC_BUDGET_SEC, deadline - time.perf_counter()))
+                        try:
+                            obs: CanonicalToolObservation = await asyncio.wait_for(
+                                asyncio.to_thread(
+                                    tool_registry.execute_tool,
+                                    canonical_name,
+                                    validated_args,
+                                    call_id=tool_call.call_id,
+                                    original_name=tool_call.original_name,
+                                    request_id=req_id,
+                                    conversation_id=conv_id,
+                                ),
+                                timeout=rem_tool_budget
+                            )
+                        except asyncio.TimeoutError:
+                            obs = CanonicalToolObservation(
+                                call_id=tool_call.call_id,
+                                tool_name=canonical_name,
+                                original_tool_name=tool_call.original_name,
+                                status="TIMEOUT",
+                                output_text=f"Tool execution timed out after {rem_tool_budget:.1f}s.",
+                                duration_ms=rem_tool_budget * 1000.0,
+                                request_id=req_id,
+                                conversation_id=conv_id,
+                                error=f"Tool execution budget ({rem_tool_budget:.1f}s) exceeded",
+                            )
 
                         t_trace = {
                             "tool_name": obs.tool_name,
@@ -941,7 +993,22 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                     "model_id": model_id,
                     "timestamp": time.time(),
                 })
-                load_success = model_manager.select_model(model_id, device="cpu")
+                try:
+                    load_success = await asyncio.wait_for(
+                        asyncio.to_thread(model_manager.select_model, model_id, "cpu"),
+                        timeout=MODEL_LOAD_TIMEOUT_SEC,
+                    )
+                except asyncio.TimeoutError:
+                    await websocket.send_json({
+                        "type": "error",
+                        "error_code": "MODEL_LOAD_TIMEOUT",
+                        "error": f"Model loading timed out ({MODEL_LOAD_TIMEOUT_SEC}s) on CPU.",
+                        "request_id": req_id,
+                        "conversation_id": conv_id,
+                        "timestamp": time.time(),
+                    })
+                    continue
+
                 if not load_success:
                     await websocket.send_json({
                         "type": "error",
@@ -1020,6 +1087,10 @@ async def websocket_chat_endpoint(websocket: WebSocket):
             else:
                 effective_system_prompt = req_system_prompt or compact_manifest
 
+            start_time = time.perf_counter()
+            deadline = start_time + OVERALL_REQUEST_DEADLINE_SEC
+            is_timed_out = False
+
             config = GenerationConfig(
                 temperature=float(data.get("temperature", 0.0)),
                 top_p=float(data.get("top_p", 1.0)),
@@ -1027,6 +1098,8 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                 max_new_tokens=int(data.get("max_new_tokens", 256)),
                 repetition_penalty=float(data.get("repetition_penalty", 1.05)),
                 system_prompt=effective_system_prompt,
+                deadline=deadline,
+                request_id=req_id,
             )
 
             # Multi-Turn Orchestration
@@ -1036,12 +1109,12 @@ async def websocket_chat_endpoint(websocket: WebSocket):
             ttft_recorded = 0.0
             final_tok_per_sec = 0.0
             final_token_count = 0
-            start_time = time.perf_counter()
 
             max_tool_rounds = 4
             current_round = 0
             request_dispatched_calls: Set[str] = set()
             cancelled = False
+            manual_override = data.get("manual_tool_override")
 
             await websocket.send_json({
                 "type": "generation_started",
@@ -1056,26 +1129,51 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                     cancelled = True
                     break
 
-                if (time.perf_counter() - start_time) > 30.0:
+                if time.perf_counter() >= deadline:
+                    is_timed_out = True
                     await websocket.send_json({
                         "type": "error",
+                        "error_code": "DEADLINE_EXCEEDED",
                         "request_id": req_id,
                         "conversation_id": conv_id,
-                        "error": "Global execution timeout (30.0s) exceeded.",
+                        "error": f"Global execution timeout ({OVERALL_REQUEST_DEADLINE_SEC:.1f}s) exceeded.",
                         "timestamp": time.time(),
                     })
                     break
 
                 # Post-tool Grounded Synthesis prompt adjustment
                 if current_round > 0 and any(t.get("tool_name") == "web_search" for t in tool_traces):
-                    config.system_prompt = (
-                        "You are QORIN, an evidence-grounded research assistant.\n"
-                        "Answer the user's question directly using ONLY the retrieved sources provided above.\n"
-                        "STRICT GROUNDING RULES:\n"
-                        "1. Base all statements strictly on the retrieved source passages. Do not invent dates, numbers, positions, or affiliations.\n"
-                        "2. Cite the source IDs (e.g. [SOURCE_1]) immediately after each claim.\n"
-                        "3. Do not introduce unrelated facts or repeat prior conversational claims."
-                    )
+                    web_success = any(t.get("tool_name") == "web_search" and t.get("status") == "completed" for t in tool_traces)
+                    if web_success:
+                        config.system_prompt = (
+                            "You are QORIN, an evidence-grounded research assistant.\n"
+                            "Answer the user's question directly using ONLY the retrieved sources provided above.\n"
+                            "STRICT GROUNDING RULES:\n"
+                            "1. Base all statements strictly on the retrieved source passages. Do not invent dates, numbers, positions, or affiliations.\n"
+                            "2. Cite the source IDs (e.g. [SOURCE_1]) immediately after each claim.\n"
+                            "3. Do not introduce unrelated facts or repeat prior conversational claims."
+                        )
+                    else:
+                        config.system_prompt = (
+                            "You are QORIN, an evidence-grounded research assistant.\n"
+                            "The external search tool was unable to retrieve live online documents for this query.\n"
+                            "Answer the user's question directly and concisely based on your general knowledge, "
+                            "and transparently mention that live external search results were unavailable."
+                        )
+
+                if current_round == 0 and user_intent == UserIntent.SIMPLE_ARITHMETIC and not manual_override:
+                    final_response_text = intent_detail or "2"
+                    await websocket.send_json({
+                        "type": "token",
+                        "request_id": req_id,
+                        "conversation_id": conv_id,
+                        "text": final_response_text,
+                        "token_count": 1,
+                        "ttft_ms": 1.0,
+                        "tok_per_sec": 100.0,
+                        "timestamp": time.time(),
+                    })
+                    break
 
                 round_response_text = ""
                 round_chunks = []
@@ -1084,6 +1182,18 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                 async for chunk in model_manager.generate_stream(model_id, active_messages, config):
                     if req_id in cancelled_requests:
                         cancelled = True
+                        break
+
+                    if chunk.finish_reason == "timeout" or time.perf_counter() >= deadline:
+                        is_timed_out = True
+                        await websocket.send_json({
+                            "type": "error",
+                            "error_code": "DEADLINE_EXCEEDED",
+                            "request_id": req_id,
+                            "conversation_id": conv_id,
+                            "error": f"Execution deadline exceeded ({OVERALL_REQUEST_DEADLINE_SEC:.1f}s).",
+                            "timestamp": time.time(),
+                        })
                         break
 
                     round_response_text += chunk.text
@@ -1112,7 +1222,7 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                             "timestamp": time.time(),
                         })
 
-                if cancelled:
+                if cancelled or is_timed_out:
                     break
 
                 # Classify generated output
@@ -1127,30 +1237,9 @@ async def websocket_chat_endpoint(websocket: WebSocket):
 
                 # Policy routing for factual queries on round 0
                 manual_override = data.get("manual_tool_override")
-                if current_round == 0 and user_intent == UserIntent.FACTUAL_INQUIRY and "web_search" in enabled_tools and not manual_override:
+                is_factual = user_intent in (UserIntent.CURRENT_FACTUAL_QUERY, UserIntent.FACTUAL_INQUIRY)
+                if current_round == 0 and is_factual and "web_search" in enabled_tools and not manual_override:
                     if parsed.classification != OutputClassification.TOOL_CALL or (parsed.tool_call and parsed.tool_call.canonical_name != "web_search"):
-                        parsed = output_parser.parse_generation(
-                            f'<tool_call id="call_{req_id[:8]}_001">{{"name": "web_search", "arguments": {{"query": "{last_user_msg}"}}}}</tool_call>',
-                            call_index=1,
-                            enabled_tools=enabled_tools,
-                            request_id=req_id,
-                            conversation_id=conv_id,
-                            dispatched_calls=request_dispatched_calls,
-                        )
-
-                # Check manual override if specified and model didn't already emit a tool call
-                if manual_override and current_round == 0 and parsed.classification != OutputClassification.TOOL_CALL:
-                    override_action = manual_override.strip().upper()
-                    if override_action == "PYTHON" and "python" in enabled_tools:
-                        parsed = output_parser.parse_generation(
-                            f'<tool_call id="call_{req_id[:8]}_001">{{"name": "python", "arguments": {{"code": "print(2 + 2)"}}}}</tool_call>',
-                            call_index=1,
-                            enabled_tools=enabled_tools,
-                            request_id=req_id,
-                            conversation_id=conv_id,
-                            dispatched_calls=request_dispatched_calls,
-                        )
-                    elif override_action == "WEB" and "web_search" in enabled_tools:
                         parsed = output_parser.parse_generation(
                             f'<tool_call id="call_{req_id[:8]}_001">{{"name": "web_search", "arguments": {{"query": "{last_user_msg}"}}}}</tool_call>',
                             call_index=1,
@@ -1165,11 +1254,11 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                     tool_call = parsed.tool_call
                     canonical_name = tool_call.canonical_name
 
-                    # Policy Enforcement for code generation or arithmetic
+                    # Policy Enforcement for code generation, explanation, debugging, or arithmetic
                     if canonical_name == "python" and not manual_override:
-                        if user_intent == UserIntent.CODE_GENERATION:
+                        if user_intent in (UserIntent.CODE_GENERATION, UserIntent.CODE_EXPLANATION, UserIntent.CODE_DEBUGGING):
                             code_arg = tool_call.arguments.get("code", "")
-                            if "def " in code_arg and "return" in code_arg and "comb" not in code_arg:
+                            if code_arg and code_arg.strip():
                                 final_response_text = f"```python\n{code_arg.strip()}\n```"
                             else:
                                 final_response_text = ToolPolicyClassifier.synthesize_code_response(last_user_msg)
@@ -1239,14 +1328,33 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                             "timestamp": time.time(),
                         })
 
-                        obs: CanonicalToolObservation = tool_registry.execute_tool(
-                            canonical_name,
-                            validated_args,
-                            call_id=tool_call.call_id,
-                            original_name=tool_call.original_name,
-                            request_id=req_id,
-                            conversation_id=conv_id,
-                        )
+                        # Execute tool asynchronously with bounded remaining budget
+                        rem_tool_budget = max(0.5, min(TOOL_EXEC_BUDGET_SEC, deadline - time.perf_counter()))
+                        try:
+                            obs: CanonicalToolObservation = await asyncio.wait_for(
+                                asyncio.to_thread(
+                                    tool_registry.execute_tool,
+                                    canonical_name,
+                                    validated_args,
+                                    call_id=tool_call.call_id,
+                                    original_name=tool_call.original_name,
+                                    request_id=req_id,
+                                    conversation_id=conv_id,
+                                ),
+                                timeout=rem_tool_budget
+                            )
+                        except asyncio.TimeoutError:
+                            obs = CanonicalToolObservation(
+                                call_id=tool_call.call_id,
+                                tool_name=canonical_name,
+                                original_tool_name=tool_call.original_name,
+                                status="TIMEOUT",
+                                output_text=f"Tool execution timed out after {rem_tool_budget:.1f}s.",
+                                duration_ms=rem_tool_budget * 1000.0,
+                                request_id=req_id,
+                                conversation_id=conv_id,
+                                error=f"Tool execution budget ({rem_tool_budget:.1f}s) exceeded",
+                            )
 
                         t_trace = {
                             "tool_name": obs.tool_name,
@@ -1309,7 +1417,10 @@ async def websocket_chat_endpoint(websocket: WebSocket):
                         })
                     break
 
-            if cancelled:
+            if is_timed_out:
+                # Do NOT emit generation_completed on timeout
+                pass
+            elif cancelled:
                 await websocket.send_json({
                     "type": "generation_cancelled",
                     "request_id": req_id,

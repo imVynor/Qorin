@@ -160,7 +160,7 @@ class CanonicalToolRegistry:
         self,
         canonical_name: str,
         validated_args: Dict[str, Any],
-        call_id: str,
+        call_id: str = "call_default",
         original_name: Optional[str] = None,
         request_id: str = "",
         conversation_id: str = "",

@@ -275,11 +275,23 @@ export function useStreamingChat(options: UseStreamingChatOptions = {}) {
             err.message.includes('401') ||
             err.message.includes('ALL CAPS'));
 
+        const isTimeout =
+          Boolean(err.message && (
+            err.message.includes('timeout') ||
+            err.message.includes('DEADLINE_EXCEEDED') ||
+            err.message.includes('timed out')
+          ));
+
         const errorMsg: ChatMessage = {
           id: `msg-err-${Date.now()}`,
           role: 'assistant',
+          is_error: true,
+          is_timeout: isTimeout,
+          retry_prompt: trimmed,
           content: isAuthError
             ? `[Protected Compute Locked]\n\nAccess to live model inference is restricted to protect author compute resources.\n\nPlease activate compute access via the Options menu (Unlock Compute) to run live queries.`
+            : isTimeout
+            ? `[Execution Timeout]\n\n${err.message || 'Global execution deadline exceeded.'}\n\nYou can click Retry below to reload this prompt or refine settings.`
             : `[Inference Error: ${err.message}]`,
         };
 

@@ -244,6 +244,29 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
 
               <div className={m.role === 'user' ? styles.userBubble : styles.assistantBubble}>
                 {m.content}
+                {m.is_timeout && m.retry_prompt && (
+                  <div style={{ marginTop: '8px', paddingTop: '6px', borderTop: '1px solid var(--color-rule-subtle)' }}>
+                    <button
+                      type="button"
+                      onClick={() => setInputPrompt(m.retry_prompt || '')}
+                      style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '4px',
+                        fontSize: '11px',
+                        padding: '3px 8px',
+                        borderRadius: '3px',
+                        border: '1px solid var(--color-rule-subtle)',
+                        background: 'var(--color-surface)',
+                        cursor: 'pointer',
+                        color: 'var(--color-ink-primary)',
+                      }}
+                      title="Load prompt into input to try again"
+                    >
+                      <RotateCcw size={11} /> Retry Prompt
+                    </button>
+                  </div>
+                )}
               </div>
 
               {/* Measured Metrics Ticker */}

@@ -32,6 +32,8 @@ class GenerationConfig:
     repetition_penalty: float = 1.15
     system_prompt: Optional[str] = None
     stop_sequences: List[str] = field(default_factory=lambda: ["<|im_end|>", "<|endoftext|>"])
+    deadline: Optional[float] = None
+    request_id: Optional[str] = None
 
 
 @dataclass

@@ -176,7 +176,7 @@ class DuckDuckGoProvider(BaseRetrievalProvider):
 
     USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 
-    def __init__(self, timeout_seconds: float = 8.0, max_retries: int = 2):
+    def __init__(self, timeout_seconds: float = 3.5, max_retries: int = 1):
         self.timeout_seconds = timeout_seconds
         self.max_retries = max_retries
 
@@ -251,8 +251,7 @@ class DuckDuckGoProvider(BaseRetrievalProvider):
             except Exception as e:
                 last_error = str(e)
                 if attempt < self.max_retries:
-                    # Exponential backoff
-                    time.sleep(1.0 * (2 ** attempt))
+                    time.sleep(0.5)
 
         latency_ms = (time.perf_counter() - t0) * 1000.0
         return EvidenceBundle(
@@ -264,34 +263,120 @@ class DuckDuckGoProvider(BaseRetrievalProvider):
         )
 
 
+class WikipediaSearchProvider(BaseRetrievalProvider):
+    """Authoritative Wikipedia REST API provider with high availability on cloud containers."""
+
+    USER_AGENT = "QORIN-Research-Agent/1.0 (academic-eval@example.org)"
+
+    def __init__(self, timeout_seconds: float = 3.5):
+        self.timeout_seconds = timeout_seconds
+
+    @property
+    def provider_name(self) -> str:
+        return "wikipedia_api"
+
+    def search(self, query: str, max_results: int = 3) -> EvidenceBundle:
+        t0 = time.perf_counter()
+        encoded = urllib.parse.quote_plus(query)
+        url = f"https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch={encoded}&format=json&utf8=1"
+        headers = {"User-Agent": self.USER_AGENT}
+
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=self.timeout_seconds) as resp:
+                data = json.loads(resp.read().decode("utf-8", errors="ignore"))
+                results = data.get("query", {}).get("search", [])
+                if not results:
+                    return EvidenceBundle(
+                        query=query,
+                        records=[],
+                        latency_ms=(time.perf_counter() - t0) * 1000.0,
+                        provider_name=self.provider_name,
+                        error="No Wikipedia search matches found."
+                    )
+
+                records: List[EvidenceRecord] = []
+                for idx, item in enumerate(results[:max_results], 1):
+                    title = item.get("title", "")
+                    snippet_html = item.get("snippet", "")
+                    clean_snippet = re.sub(r"<[^>]+>", "", snippet_html).strip()
+                    page_url = f"https://en.wikipedia.org/wiki/{urllib.parse.quote(title.replace(' ', '_'))}"
+                    records.append(EvidenceRecord(
+                        evidence_id=f"SOURCE_{idx}",
+                        source_title=title,
+                        source_url=page_url,
+                        source_snippet=clean_snippet,
+                        retrieval_timestamp=time.time(),
+                        search_query=query,
+                        provider=self.provider_name,
+                        is_cached=False
+                    ))
+
+                return EvidenceBundle(
+                    query=query,
+                    records=records,
+                    latency_ms=(time.perf_counter() - t0) * 1000.0,
+                    provider_name=self.provider_name,
+                    error=None
+                )
+        except Exception as e:
+            return EvidenceBundle(
+                query=query,
+                records=[],
+                latency_ms=(time.perf_counter() - t0) * 1000.0,
+                provider_name=self.provider_name,
+                error=f"Wikipedia search failed: {e}"
+            )
+
+
 class UnifiedWebResearcher:
-    """High-level retrieval interface decoupling caller from provider and caching."""
+    """Multi-tier resilient retrieval interface with automatic cloud fallback and SQLite caching."""
 
     def __init__(
         self,
-        provider: Optional[BaseRetrievalProvider] = None,
+        primary_provider: Optional[BaseRetrievalProvider] = None,
+        fallback_provider: Optional[BaseRetrievalProvider] = None,
         cache_manager: Optional[SQLiteCacheManager] = None,
         enable_cache: bool = True
     ):
-        self.provider = provider or DuckDuckGoProvider()
+        self.primary_provider = primary_provider or DuckDuckGoProvider(timeout_seconds=3.5, max_retries=1)
+        self.fallback_provider = fallback_provider or WikipediaSearchProvider(timeout_seconds=3.5)
         self.cache_manager = cache_manager or SQLiteCacheManager()
         self.enable_cache = enable_cache
 
+    @property
+    def provider(self) -> BaseRetrievalProvider:
+        return self.primary_provider
+
     def set_provider(self, provider: BaseRetrievalProvider):
-        self.provider = provider
+        self.primary_provider = provider
 
     def search(self, query: str, max_results: int = 3, force_live: bool = False) -> EvidenceBundle:
         # Check cache
         if self.enable_cache and not force_live:
-            cached_bundle = self.cache_manager.get(query, self.provider.provider_name)
+            cached_bundle = self.cache_manager.get(query, self.primary_provider.provider_name)
             if cached_bundle is not None:
                 return cached_bundle
+            if self.fallback_provider:
+                cached_fb = self.cache_manager.get(query, self.fallback_provider.provider_name)
+                if cached_fb is not None:
+                    return cached_fb
 
-        # Execute live query
-        bundle = self.provider.search(query, max_results=max_results)
+        # Execute primary query (bounded by 3.5s)
+        bundle = self.primary_provider.search(query, max_results=max_results)
 
-        # Cache valid evidence
-        if self.enable_cache and bundle.has_evidence:
-            self.cache_manager.put(query, self.provider.provider_name, bundle)
+        # If primary has evidence, cache and return
+        if bundle.has_evidence:
+            if self.enable_cache:
+                self.cache_manager.put(query, self.primary_provider.provider_name, bundle)
+            return bundle
+
+        # Primary failed or was blocked by cloud IP rate limit -> execute fallback provider
+        if self.fallback_provider:
+            fb_bundle = self.fallback_provider.search(query, max_results=max_results)
+            if fb_bundle.has_evidence:
+                if self.enable_cache:
+                    self.cache_manager.put(query, self.fallback_provider.provider_name, fb_bundle)
+                return fb_bundle
 
         return bundle
