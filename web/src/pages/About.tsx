@@ -9,11 +9,11 @@ export const About: React.FC = () => {
     <main className={styles.page}>
       <header className={styles.header}>
         <div className={styles.container}>
-          <div className={styles.kicker}>Identity &bull; Provenance &bull; Dataset Catalogue</div>
+          <div className={styles.kicker}>Identity &bull; Provenance &bull; Team &bull; Datasets &bull; Disclosures</div>
           <h1 className={styles.title}>About the QORIN Project</h1>
           <div className={styles.lead}>
             The academic origins, engineering philosophy, local hardware environment, researchers,
-            and comprehensive dataset inventory powering the QORIN investigation.
+            comprehensive dataset inventory, and research integrity disclosures powering the QORIN investigation.
           </div>
         </div>
       </header>
@@ -257,6 +257,30 @@ export const About: React.FC = () => {
               <em>Root Mean Square Layer Normalization.</em> Advances in Neural Information Processing Systems (NeurIPS 2019).
             </li>
           </ul>
+        </div>
+      </section>
+
+      {/* 8. AI-Use Disclosure */}
+      <section id="ai-disclosure" className={styles.bodySection}>
+        <div className={styles.container}>
+          <div className={styles.kicker}>Academic Integrity &bull; Transparent Methodology</div>
+          <h2 className={styles.sectionTitle}>8. AI-Use Disclosure</h2>
+          <div className={styles.proseMeasure}>
+            <p>
+              In accordance with transparent research principles and academic integrity standards:
+            </p>
+            <ul style={{ paddingLeft: '1.2rem', margin: 'var(--space-4) 0', lineHeight: 1.7, fontSize: 'var(--text-sm)', color: 'var(--color-ink-secondary)' }}>
+              <li style={{ marginBottom: 'var(--space-3)' }}>
+                <strong>AI Assistance:</strong> LLM coding assistants (Google Antigravity) were utilized for rapid code refactoring, frontend React component styling, script scaffolding, automated test authoring, LaTeX formatting, and documentation. But the initial model architecture code and experiments were completely written without ai assistance.
+              </li>
+              <li style={{ marginBottom: 'var(--space-3)' }}>
+                <strong>Model-Generated Content:</strong> Synthetic dialogue seeds in one of the supervised fine tuning dataset were initially generated via automated tooling and subsequently filtered through deterministic Python sandboxes and human quality audits before training.
+              </li>
+              <li>
+                <strong>Result Verification:</strong> All numerical results, hashes, parameter counts, and test passes cited in this research repository and across this website were independently executed and verified directly on the physical host hardware.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
