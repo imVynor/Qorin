@@ -356,7 +356,7 @@ export const Harness: React.FC = () => {
                     type="button"
                     onClick={() => setAuthModalOpen(true)}
                     className={styles.telemetryPillAuthUnlocked}
-                    title="Compute Unlocked. Click to inspect or revoke authorization."
+                    title="Compute Unlocked: Prof. Udit Bhatia. Click to inspect or revoke authorization."
                   >
                     <Unlock size={11} />
                     <span>Compute: Authorized</span>
@@ -366,7 +366,7 @@ export const Harness: React.FC = () => {
                     type="button"
                     onClick={() => setAuthModalOpen(true)}
                     className={styles.telemetryPillAuthLocked}
-                    title="Compute execution locked. Click to enter evaluator access key."
+                    title="Workstation compute locked. Click to enter professor's name."
                   >
                     <Lock size={11} />
                     <span>Compute: Locked</span>
@@ -523,7 +523,7 @@ export const Harness: React.FC = () => {
         )}
       </main>
 
-      {/* Evaluator Compute Access Protection Modal */}
+      {/* Personal Compute Access Protection Modal */}
       <ComputeAuthModal
         isOpen={authModalOpen}
         onClose={() => setAuthModalOpen(false)}
