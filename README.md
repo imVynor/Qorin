@@ -39,7 +39,7 @@ Qorin/
 ├── modern_gpt/               # Native QORIN PyTorch model architecture & training
 │   ├── model/                # Modern Transformer: RoPE, GQA, SwiGLU, RMSNorm
 │   ├── configs/              # Model configurations (16M, 50M, 100M, 500M)
-│   ├── scripts/              # Training, SFT alignment, benchmark & export scripts
+│   ├── scripts/              # Training, SFT alignment, download & export scripts
 │   ├── evaluations/          # Evaluation harnesses & automated validation metrics
 │   ├── diagnostics/          # Memory profiling, attention inspection & sanity checks
 │   └── tests/                # Unit test suites & architecture assertions
@@ -90,20 +90,65 @@ npm test
 
 ---
 
-## 4. Model Checkpoints & Cloud Inference
+## 4. Offline Setup: Downloading & Setting Up Model Weights
 
-Due to GitHub file size limits, large binary model checkpoints (`.pt`, `.bin`) and raw multi-gigabyte corpora are hosted separately on the Hugging Face Hub:
+If you wish to run QORIN **entirely offline** without communicating with external endpoints or remote Hugging Face APIs, download the model weights and tokenizer assets into your local directory.
 
-- **Model Repository**: [vynor/qorin-models](https://huggingface.co/vynor/qorin-models)
-  - `qorin-100m/`: Pretrained & SFT v3 checkpoints with 16k tokenizer assets.
-  - `qorin-500m/`: 514M parameter tool-augmented checkpoints with 32k tokenizer assets.
-- **Remote CPU Inference Space**: [vynor/stt4](https://huggingface.co/spaces/vynor/stt4)
-  - Live Docker container running FastAPI backend on CPU Basic.
-  - Automatically loads weights from `vynor/qorin-models` for real-time SSE chat streaming and tool execution.
+### Option A: Automated Checkpoint Downloader (Recommended)
+Use the included setup script to download and verify checkpoints directly from the public model repository:
+
+```bash
+# Download the primary 100M SFT v3 model (recommended for CPU/laptop execution)
+python modern_gpt/scripts/download_checkpoints.py --model qorin-100m
+
+# Or download all available model tiers (100M and 500M)
+python modern_gpt/scripts/download_checkpoints.py --model all
+```
+
+This utility performs the following automatically:
+1. Downloads the PyTorch state dictionary (`pytorch_model.pt`) from [`vynor/qorin-models`](https://huggingface.co/vynor/qorin-models).
+2. Performs cryptographic SHA-256 verification against the canonical registry hash.
+3. Downloads the matching BPE tokenizer files (`tokenizer.json`, `vocab.json`, `merges.txt`).
+4. Places the assets in the local directories expected by the backend.
+
+### Option B: Using the Hugging Face CLI
+If you have the `huggingface_hub` CLI installed:
+
+```bash
+# Download entire model repository into a local cache
+huggingface-cli download vynor/qorin-models --local-dir checkpoints/qorin-models
+```
+
+### Option C: Manual Download & Directory Structure
+You can also download files directly through your web browser from [https://huggingface.co/vynor/qorin-models/tree/main](https://huggingface.co/vynor/qorin-models/tree/main) and place them as follows:
+
+- **QORIN-100M SFT v3**:
+  - Checkpoint: `modern_gpt/checkpoints/modern_gpts_100m_sft_4k_v3/best_val.pt`
+  - Tokenizer: `modern_gpt/artifacts/tokenizer_16k_v2/` (`tokenizer.json`, `vocab.json`, `merges.txt`)
+  - Expected SHA-256: `d771ea9f5465e3bcf2b619a32f7797742e500a01704a4d5f582eb5db4adc7510`
+  - File Size: ~617 MB
+
+- **QORIN-500M SFT (Dual-Tool Orchestrator)**:
+  - Checkpoint: `modern_gpt/experiments/phase2_experiment_f/stage_14_training_pilot/checkpoints/qorin_500m_sft_exp_f_latest.pt`
+  - Tokenizer: `modern_gpt/artifacts/tokenizer_32k/` (`tokenizer.json`, `vocab.json`, `merges.txt`)
+  - Expected SHA-256: `bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4`
+  - File Size: ~2.08 GB
+
+Once placed, the backend automatically detects the local files and operates with **zero external network requests**.
 
 ---
 
-## 5. Security & Compute Authorization
+## 5. Cloud Hosting & Remote Backend Architecture
+
+For users or evaluators without local GPU resources, the application supports remote execution via pre-deployed Hugging Face infrastructure:
+
+- **Model Hub**: [vynor/qorin-models](https://huggingface.co/vynor/qorin-models) (Checkpoints, configs & tokenizers)
+- **CPU Space**: [vynor/stt4](https://huggingface.co/spaces/vynor/stt4) (FastAPI container on CPU Basic)
+- **Static Showcase**: [https://imvynor.github.io/Qorin/](https://imvynor.github.io/Qorin/) (GitHub Pages)
+
+---
+
+## 6. Security & Compute Authorization
 
 To protect personal compute resources from unauthenticated automated abuse while remaining accessible for academic review:
 - Interactive model execution on the live backend is protected via password authorization.
@@ -112,6 +157,6 @@ To protect personal compute resources from unauthenticated automated abuse while
 
 ---
 
-## 6. License
+## 7. License
 
 This repository is published for academic evaluation, reproducibility review, and educational research purposes.
