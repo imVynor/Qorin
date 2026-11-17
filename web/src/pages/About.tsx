@@ -78,35 +78,58 @@ export const About: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. The Research Team */}
-      <section className={styles.bodySection}>
+      {/* 3. Team & Contributions */}
+      <section id="contributions" className={styles.bodySection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>3. Research Authors &amp; Core Contributions</h2>
+          <h2 className={styles.sectionTitle}>3. Team &amp; Contributions</h2>
           <div className={styles.proseMeasure}>
             <p>
-              QORIN is conceived and executed by an independent two-person research collaboration:
+              QORIN is a collaborative research project conducted by <strong>Anish Raj</strong> and <strong>Jnandeep</strong>.
+              The investigation divides core technical responsibilities between foundational model engineering and runtime harness orchestration:
             </p>
           </div>
 
           <div className={styles.twoCol}>
+            {/* Anish Raj */}
             <div className={styles.card}>
-              <div className={styles.cardTag}>Co-Lead Researcher &amp; Architect</div>
-              <div className={styles.cardHeading}>Tumarada Sai Anish Raj</div>
-              <p className={styles.cardText}>
-                Primary responsibility for model architecture specification (GQA, RoPE, SwiGLU implementations), custom Byte-Pair
-                Encoding tokenizer training (16k and 32k vocabularies), mathematical derivation and unit-testing of token-weighted
-                invariant cross-entropy loss, and distributed pretraining engine orchestration.
-              </p>
+              <div className={styles.allocationBadge}>Core Research Focus</div>
+              <div className={styles.cardHeading} style={{ fontSize: 'var(--text-lg)', marginBottom: 'var(--space-1)' }}>
+                Anish Raj
+              </div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--color-accent-indigo)', fontWeight: 600, marginBottom: 'var(--space-3)' }}>
+                Model &bull; Model Training &bull; Evaluation &bull; Fine-Tuning
+              </div>
+
+              <div className={styles.cardText}>
+                <strong>Primary Contributions:</strong>
+                <ul style={{ paddingLeft: '1.1rem', marginTop: '8px', lineHeight: 1.65 }}>
+                  <li><strong>Model Architecture:</strong> Designed and implemented the decoder-only Transformer foundations across all scales (16M, 50M, 100M, and 514M) with RoPE positional encodings, RMSNorm pre-normalization, SwiGLU activations, and Grouped-Query Attention (GQA).</li>
+                  <li><strong>Model Training &amp; Pretraining:</strong> Executed causal language pretraining pipelines from scratch on consumer GPU hardware, including 100M baseline pretraining across 1.5B tokens and the 500M causal pretraining pilot.</li>
+                  <li><strong>Supervised Fine-Tuning (SFT):</strong> Led fine-tuning experiments, including context extension to 4,096 tokens via RoPE linear frequency scaling ($s=8.0$), conversational ChatML alignment, and multi-turn supervised loss masking.</li>
+                  <li><strong>Model Evaluation:</strong> Designed, benchmarked, and executed quantitative evaluation suites, measuring validation loss curves, AST code syntax adherence, functional pass rates, and held-out test splits.</li>
+                </ul>
+              </div>
             </div>
 
+            {/* Jnandeep */}
             <div className={styles.card}>
-              <div className={styles.cardTag}>Co-Lead Researcher &amp; Systems Engineer</div>
-              <div className={styles.cardHeading}>Depuru Jnan Deep</div>
-              <p className={styles.cardText}>
-                Primary responsibility for consumer GPU performance profiling, automated thermal duty-cycle management (105m active /
-                15m cool), dataset acquisition and cryptographic shard verification, passkey needle-in-a-haystack long-context
-                benchmarks, and multi-tier capability evaluation infrastructure.
-              </p>
+              <div className={styles.allocationBadge}>Core Research Focus</div>
+              <div className={styles.cardHeading} style={{ fontSize: 'var(--text-lg)', marginBottom: 'var(--space-1)' }}>
+                Jnandeep
+              </div>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', color: 'var(--color-accent-indigo)', fontWeight: 600, marginBottom: 'var(--space-3)' }}>
+                Harness &bull; Retrieval &bull; Dataset Preparation &bull; Tool Adaptation
+              </div>
+
+              <div className={styles.cardText}>
+                <strong>Primary Contributions:</strong>
+                <ul style={{ paddingLeft: '1.1rem', marginTop: '8px', lineHeight: 1.65 }}>
+                  <li><strong>Harness Engineering:</strong> Architected the runtime orchestration harness, including the 4-state execution state machine, stateless Python subprocess sandbox with execution timeouts (5000ms), and ephemeral UUID session memory isolation.</li>
+                  <li><strong>Retrieval Systems:</strong> Designed and implemented non-parametric retrieval pipelines, including BM25 sparse document retrieval and live DuckDuckGo web search integration for real-time factual augmentation.</li>
+                  <li><strong>Dataset Preparation:</strong> Curated, preprocessed, tokenized, and decontaminated training and evaluation datasets across all experimental phases, including pretraining token shards and the Stage 13 multi-turn dataset.</li>
+                  <li><strong>Adapting Model to Use Tools:</strong> Engineered structured tool calling schemas (<code>&lt;tool_call&gt;</code>), intent classification protocols, observation feedback loops, and runtime evidence grounding to prevent post-retrieval hallucination.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

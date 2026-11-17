@@ -845,3 +845,63 @@
     transform: rotate(360deg);
   }
 }
+
+.computeLockBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 8px 12px;
+  background: rgba(217, 119, 6, 0.08);
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  border-radius: var(--radius-xs);
+  font-size: 11px;
+  color: var(--color-ink-secondary);
+}
+
+.computeLockText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.computeLockIcon {
+  color: var(--color-accent-amber);
+  flex-shrink: 0;
+}
+
+.computeUnlockBtn {
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent-amber);
+  color: var(--color-ink-primary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  transition: all var(--duration-fast) ease;
+}
+
+.computeUnlockBtn:hover {
+  background: rgba(217, 119, 6, 0.15);
+}
+
+.modelLoadingNotice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--color-paper-subtle);
+  border: 1px solid var(--color-rule-subtle);
+  border-radius: var(--radius-xs);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--color-ink-secondary);
+  margin-bottom: var(--space-2);
+}
+

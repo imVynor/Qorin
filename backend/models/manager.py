@@ -31,6 +31,10 @@ class ModelManager:
             return self.ollama_provider
         return self.qorin_provider
 
+    def is_loaded(self, model_id: str) -> bool:
+        provider = self.get_provider_for_model(model_id)
+        return provider.is_loaded(model_id)
+
     def select_model(self, model_id: str, device: Optional[str] = None) -> bool:
         provider = self.get_provider_for_model(model_id)
 

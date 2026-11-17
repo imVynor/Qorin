@@ -212,5 +212,39 @@ export const modelsData: ModelConfigRecord[] = [
       "sft_experiment_e": "modern_gpt/experiments/phase2_experiment_e/stage_3_training/branch_d_combined/checkpoints/ckpt_branch_d_best.pt",
       "sft_experiment_f": "modern_gpt/experiments/phase2_experiment_f/stage_14_training_pilot/checkpoints/ckpt_pilot_best.pt"
     }
+  },
+  {
+    "model_id": "QORIN-500M-BASE",
+    "name": "QORIN 500M Pretraining Pilot",
+    "historical_name": "ModernGPT-S-500M-Base",
+    "architecture_family": "Dense Decoder-Only Transformer",
+    "total_parameters": 514389504,
+    "non_embedding_parameters": 464057856,
+    "layers": 20,
+    "hidden_dim": 1536,
+    "query_heads": 24,
+    "kv_heads": 4,
+    "head_dim": 64,
+    "gqa_ratio": 6,
+    "ffn_hidden_dim": 3840,
+    "ffn_type": "SwiGLU",
+    "ffn_expansion_ratio": 2.5,
+    "normalization": "Pre-norm RMSNorm",
+    "norm_eps": 1e-06,
+    "positional_encoding": "RoPE",
+    "rope_theta": 10000.0,
+    "rope_scale": 1.0,
+    "attention_backend": "Causal SDPA (Flash/MemEfficient)",
+    "context_length": 2048,
+    "vocab_size": 32768,
+    "tied_embeddings": true,
+    "linear_bias": false,
+    "out_proj_bias": false,
+    "tokenizer_id": "bpe_32k",
+    "tokenizer_fingerprint": "3559c7435e1d9330",
+    "status": "active_pretraining",
+    "checkpoints": {
+      "pretrained_base": "modern_gpt/checkpoints/500m_pretrain/ckpt_latest.pt"
+    }
   }
 ];

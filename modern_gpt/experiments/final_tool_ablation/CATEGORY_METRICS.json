@@ -1,0 +1,174 @@
+{
+  "Parametric knowledge": {
+    "sample_size": 8,
+    "denominator_raw": "N=8",
+    "tools_disabled_success": 1,
+    "tools_disabled_rate": 0.125,
+    "tools_disabled_pct": 12.5,
+    "tools_enabled_success": 8,
+    "tools_enabled_rate": 1.0,
+    "tools_enabled_pct": 100.0,
+    "absolute_diff_pct": 87.5,
+    "relative_improvement_pct": 700.0,
+    "tools_disabled_avg_lat_sec": 0.733,
+    "tools_enabled_avg_lat_sec": 1.029,
+    "sub_categories_included": [
+      "CAL_DIRECT_CONCEPT"
+    ]
+  },
+  "Current information": {
+    "sample_size": 8,
+    "denominator_raw": "N=8",
+    "tools_disabled_success": 6,
+    "tools_disabled_rate": 0.75,
+    "tools_disabled_pct": 75.0,
+    "tools_enabled_success": 7,
+    "tools_enabled_rate": 0.875,
+    "tools_enabled_pct": 87.5,
+    "absolute_diff_pct": 12.5,
+    "relative_improvement_pct": 16.7,
+    "tools_disabled_avg_lat_sec": 0.58,
+    "tools_enabled_avg_lat_sec": 0.496,
+    "sub_categories_included": [
+      "CAL_DIRECT_FACTUAL_WEB"
+    ]
+  },
+  "Numerical computation": {
+    "sample_size": 6,
+    "denominator_raw": "N=6",
+    "tools_disabled_success": 2,
+    "tools_disabled_rate": 0.3333,
+    "tools_disabled_pct": 33.3,
+    "tools_enabled_success": 2,
+    "tools_enabled_rate": 0.3333,
+    "tools_enabled_pct": 33.3,
+    "absolute_diff_pct": 0.0,
+    "relative_improvement_pct": 0.0,
+    "tools_disabled_avg_lat_sec": 1.58,
+    "tools_enabled_avg_lat_sec": 0.895,
+    "sub_categories_included": [
+      "CAL_DIRECT_PROVIDED_CALC"
+    ]
+  },
+  "Multi-step reasoning": {
+    "sample_size": 30,
+    "denominator_raw": "N=30",
+    "tools_disabled_success": 11,
+    "tools_disabled_rate": 0.3667,
+    "tools_disabled_pct": 36.7,
+    "tools_enabled_success": 20,
+    "tools_enabled_rate": 0.6667,
+    "tools_enabled_pct": 66.7,
+    "absolute_diff_pct": 30.0,
+    "relative_improvement_pct": 81.8,
+    "tools_disabled_avg_lat_sec": 1.857,
+    "tools_enabled_avg_lat_sec": 4.089,
+    "sub_categories_included": [
+      "MULTITURN_STANDARD_WEB_PYTHON"
+    ]
+  },
+  "Evidence synthesis": {
+    "sample_size": 15,
+    "denominator_raw": "N=15",
+    "tools_disabled_success": 14,
+    "tools_disabled_rate": 0.9333,
+    "tools_disabled_pct": 93.3,
+    "tools_enabled_success": 14,
+    "tools_enabled_rate": 0.9333,
+    "tools_enabled_pct": 93.3,
+    "absolute_diff_pct": 0.0,
+    "relative_improvement_pct": 0.0,
+    "tools_disabled_avg_lat_sec": 0.946,
+    "tools_enabled_avg_lat_sec": 1.816,
+    "sub_categories_included": [
+      "SYN_FULL_SUPPORT"
+    ]
+  },
+  "Partial evidence": {
+    "sample_size": 5,
+    "denominator_raw": "N=5",
+    "tools_disabled_success": 0,
+    "tools_disabled_rate": 0.0,
+    "tools_disabled_pct": 0.0,
+    "tools_enabled_success": 0,
+    "tools_enabled_rate": 0.0,
+    "tools_enabled_pct": 0.0,
+    "absolute_diff_pct": 0.0,
+    "relative_improvement_pct": 0.0,
+    "tools_disabled_avg_lat_sec": 0.613,
+    "tools_enabled_avg_lat_sec": 1.496,
+    "sub_categories_included": [
+      "SYN_PARTIAL_SUPPORT"
+    ]
+  },
+  "Contradictory evidence": {
+    "sample_size": 8,
+    "denominator_raw": "N=8",
+    "tools_disabled_success": 0,
+    "tools_disabled_rate": 0.0,
+    "tools_disabled_pct": 0.0,
+    "tools_enabled_success": 0,
+    "tools_enabled_rate": 0.0,
+    "tools_enabled_pct": 0.0,
+    "absolute_diff_pct": 0.0,
+    "relative_improvement_pct": 0.0,
+    "tools_disabled_avg_lat_sec": 0.854,
+    "tools_enabled_avg_lat_sec": 2.092,
+    "sub_categories_included": [
+      "SYN_CONTRADICTORY_EVIDENCE",
+      "MULTITURN_CONTRADICTORY_SOURCES"
+    ]
+  },
+  "Insufficient evidence": {
+    "sample_size": 5,
+    "denominator_raw": "N=5",
+    "tools_disabled_success": 0,
+    "tools_disabled_rate": 0.0,
+    "tools_disabled_pct": 0.0,
+    "tools_enabled_success": 0,
+    "tools_enabled_rate": 0.0,
+    "tools_enabled_pct": 0.0,
+    "absolute_diff_pct": 0.0,
+    "relative_improvement_pct": 0.0,
+    "tools_disabled_avg_lat_sec": 0.622,
+    "tools_enabled_avg_lat_sec": 4.664,
+    "sub_categories_included": [
+      "SYN_INSUFFICIENT_EVIDENCE"
+    ]
+  },
+  "Tool discrimination": {
+    "sample_size": 11,
+    "denominator_raw": "N=11",
+    "tools_disabled_success": 8,
+    "tools_disabled_rate": 0.7273,
+    "tools_disabled_pct": 72.7,
+    "tools_enabled_success": 9,
+    "tools_enabled_rate": 0.8182,
+    "tools_enabled_pct": 81.8,
+    "absolute_diff_pct": 9.1,
+    "relative_improvement_pct": 12.5,
+    "tools_disabled_avg_lat_sec": 1.069,
+    "tools_enabled_avg_lat_sec": 1.802,
+    "sub_categories_included": [
+      "CAL_CONTRASTIVE_PAIRS",
+      "MULTITURN_WEB_SUFFICIENT_DIRECT"
+    ]
+  },
+  "Conversational follow-ups": {
+    "sample_size": 4,
+    "denominator_raw": "N=4",
+    "tools_disabled_success": 1,
+    "tools_disabled_rate": 0.25,
+    "tools_disabled_pct": 25.0,
+    "tools_enabled_success": 4,
+    "tools_enabled_rate": 1.0,
+    "tools_enabled_pct": 100.0,
+    "absolute_diff_pct": 75.0,
+    "relative_improvement_pct": 300.0,
+    "tools_disabled_avg_lat_sec": 3.613,
+    "tools_enabled_avg_lat_sec": 3.365,
+    "sub_categories_included": [
+      "MULTITURN_WEB_FAILURE_RECOVERY"
+    ]
+  }
+}

@@ -259,7 +259,7 @@ export function streamChat(
               } else if (currentEvent === 'error') {
                 if (callbacks.onError) callbacks.onError(new Error(parsed.error || 'Server error'));
               }
-            } catch (parseErr) {
+            } catch {
               console.warn('Failed to parse SSE event payload:', dataStr);
             }
           }

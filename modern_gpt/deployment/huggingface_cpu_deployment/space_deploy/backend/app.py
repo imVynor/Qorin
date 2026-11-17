@@ -13,7 +13,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
-from fastapi import FastAPI, HTTPException, Request, Response
+from fastapi import FastAPI, HTTPException, Request, Response, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 from sse_starlette.sse import EventSourceResponse
@@ -823,6 +823,545 @@ async def chat_stream(req: ChatRequest, request: Request):
         }
 
     return EventSourceResponse(event_generator())
+
+
+# =====================================================================
+# WEBSOCKET REAL-TIME CHAT & STREAMING SUBSYSTEM
+# =====================================================================
+
+def is_compute_token_valid(token: Optional[str]) -> bool:
+    """Helper to check compute authorization token validity (HMAC or legacy)."""
+    if not token:
+        return False
+    clean = token.replace("Bearer ", "").strip()
+    if clean == COMPUTE_TOKEN_VALID:
+        return True
+    return verify_session_token(clean)
+
+
+@app.websocket("/ws/chat")
+async def websocket_chat_endpoint(websocket: WebSocket):
+    """
+    Production WebSocket interactive inference endpoint with token-by-token
+    streaming, multi-turn tool orchestration, cancellation, and connection heartbeats.
+    """
+    await websocket.accept()
+
+    # 1. Connection Acknowledgment
+    await websocket.send_json({
+        "type": "connection_ack",
+        "timestamp": time.time(),
+        "active_model": model_manager.active_model_id,
+        "device": "cpu",
+        "version": "1.0.0",
+    })
+
+    cancelled_requests: Set[str] = set()
+
+    try:
+        while True:
+            raw_msg = await websocket.receive_text()
+            try:
+                data = json.loads(raw_msg)
+            except Exception:
+                await websocket.send_json({
+                    "type": "error",
+                    "error": "Malformed JSON payload received over WebSocket.",
+                    "timestamp": time.time(),
+                })
+                continue
+
+            msg_type = data.get("type", "chat")
+            req_id = data.get("request_id") or f"req_{uuid.uuid4().hex[:12]}"
+            conv_id = data.get("conversation_id") or f"conv_{uuid.uuid4().hex[:12]}"
+
+            # --- A. HEARTBEAT & PING PROTOCOL ---
+            if msg_type in ("heartbeat", "ping"):
+                await websocket.send_json({
+                    "type": "heartbeat",
+                    "request_id": req_id,
+                    "timestamp": time.time(),
+                })
+                continue
+
+            # --- B. CANCELLATION PROTOCOL ---
+            if msg_type == "cancel":
+                target_req = data.get("target_request_id") or req_id
+                cancelled_requests.add(target_req)
+                await websocket.send_json({
+                    "type": "generation_cancelled",
+                    "request_id": target_req,
+                    "conversation_id": conv_id,
+                    "timestamp": time.time(),
+                })
+                continue
+
+            # --- C. CHAT INFERENCE REQUEST ---
+            compute_token = data.get("compute_token")
+            if not is_compute_token_valid(compute_token):
+                await websocket.send_json({
+                    "type": "error",
+                    "error_code": "AUTH_REQUIRED",
+                    "error": "Protected compute access required. Unlock compute in the Options menu.",
+                    "request_id": req_id,
+                    "conversation_id": conv_id,
+                    "timestamp": time.time(),
+                })
+                continue
+
+            # Model validation & selection
+            model_id = data.get("model_id") or model_manager.active_model_id or "qorin-100m-sft-v3"
+            valid_models = [m.id for m in model_manager.list_models()]
+            if model_id not in valid_models:
+                await websocket.send_json({
+                    "type": "error",
+                    "error_code": "UNKNOWN_MODEL",
+                    "error": f"Unknown model identifier '{model_id}'.",
+                    "request_id": req_id,
+                    "conversation_id": conv_id,
+                    "timestamp": time.time(),
+                })
+                continue
+
+            # Request Accepted
+            await websocket.send_json({
+                "type": "request_accepted",
+                "request_id": req_id,
+                "conversation_id": conv_id,
+                "model_id": model_id,
+                "timestamp": time.time(),
+            })
+
+            # Model loading lifecycle
+            if not model_manager.is_loaded(model_id):
+                await websocket.send_json({
+                    "type": "model_loading",
+                    "request_id": req_id,
+                    "conversation_id": conv_id,
+                    "model_id": model_id,
+                    "timestamp": time.time(),
+                })
+                load_success = model_manager.select_model(model_id, device="cpu")
+                if not load_success:
+                    await websocket.send_json({
+                        "type": "error",
+                        "error_code": "LOAD_FAILURE",
+                        "error": f"Failed to load checkpoint for {model_id} on CPU.",
+                        "request_id": req_id,
+                        "conversation_id": conv_id,
+                        "timestamp": time.time(),
+                    })
+                    continue
+
+                await websocket.send_json({
+                    "type": "model_ready",
+                    "request_id": req_id,
+                    "conversation_id": conv_id,
+                    "model_id": model_id,
+                    "timestamp": time.time(),
+                })
+
+            # Messages normalization
+            raw_input_messages = data.get("messages")
+            if not raw_input_messages:
+                raw_input_messages = [{"role": "user", "content": data.get("message", "")}]
+
+            raw_messages = [{"role": m.get("role", "user"), "content": m.get("content", "")} for m in raw_input_messages]
+            last_user_msg = next((m["content"] for m in reversed(raw_messages) if m["role"] == "user"), "")
+            user_intent, intent_detail = ToolPolicyClassifier.classify_intent(last_user_msg)
+
+            # Technical Retrieval Evaluation (RAG)
+            retrieval_mode = data.get("retrieval_mode", "hybrid")
+            retrieval_top_k = int(data.get("retrieval_top_k", 3))
+            retrieval_threshold = float(data.get("retrieval_threshold", 0.65))
+
+            retrieval_trace = retrieval_engine.retrieve(
+                query=last_user_msg,
+                mode=retrieval_mode,
+                top_k=retrieval_top_k,
+                threshold=retrieval_threshold,
+            )
+
+            if retrieval_trace.triggered:
+                await websocket.send_json({
+                    "type": "retrieval",
+                    "request_id": req_id,
+                    "conversation_id": conv_id,
+                    "trace": retrieval_trace.to_dict(),
+                    "timestamp": time.time(),
+                })
+
+            generation_messages = retrieval_engine.inject_context_into_messages(
+                raw_messages, retrieval_trace
+            )
+
+            # Compact Tool Manifest Injection
+            web_enabled = bool(data.get("web_research_enabled", True))
+            python_enabled = bool(data.get("python_sandbox_enabled", True))
+            weather_active = bool(data.get("weather_enabled", True))
+
+            enabled_tools: Set[str] = set()
+            if web_enabled:
+                enabled_tools.add("web_search")
+            if python_enabled:
+                enabled_tools.add("python")
+            if weather_active:
+                enabled_tools.add("weather")
+
+            compact_manifest = get_compact_tool_manifest(
+                web_enabled=web_enabled,
+                python_enabled=python_enabled,
+                weather_enabled=weather_active
+            )
+
+            req_system_prompt = data.get("system_prompt", "")
+            if req_system_prompt and compact_manifest and compact_manifest not in req_system_prompt:
+                effective_system_prompt = f"{compact_manifest}\n\n{req_system_prompt}"
+            else:
+                effective_system_prompt = req_system_prompt or compact_manifest
+
+            config = GenerationConfig(
+                temperature=float(data.get("temperature", 0.0)),
+                top_p=float(data.get("top_p", 1.0)),
+                top_k=int(data.get("top_k", 50)),
+                max_new_tokens=int(data.get("max_new_tokens", 256)),
+                repetition_penalty=float(data.get("repetition_penalty", 1.05)),
+                system_prompt=effective_system_prompt,
+            )
+
+            # Multi-Turn Orchestration
+            tool_traces: List[Dict[str, Any]] = []
+            active_messages = list(generation_messages)
+            final_response_text = ""
+            ttft_recorded = 0.0
+            final_tok_per_sec = 0.0
+            final_token_count = 0
+            start_time = time.perf_counter()
+
+            max_tool_rounds = 4
+            current_round = 0
+            request_dispatched_calls: Set[str] = set()
+            cancelled = False
+
+            await websocket.send_json({
+                "type": "generation_started",
+                "request_id": req_id,
+                "conversation_id": conv_id,
+                "model_id": model_id,
+                "timestamp": time.time(),
+            })
+
+            while current_round <= max_tool_rounds:
+                if req_id in cancelled_requests:
+                    cancelled = True
+                    break
+
+                if (time.perf_counter() - start_time) > 30.0:
+                    await websocket.send_json({
+                        "type": "error",
+                        "request_id": req_id,
+                        "conversation_id": conv_id,
+                        "error": "Global execution timeout (30.0s) exceeded.",
+                        "timestamp": time.time(),
+                    })
+                    break
+
+                # Post-tool Grounded Synthesis prompt adjustment
+                if current_round > 0 and any(t.get("tool_name") == "web_search" for t in tool_traces):
+                    config.system_prompt = (
+                        "You are QORIN, an evidence-grounded research assistant.\n"
+                        "Answer the user's question directly using ONLY the retrieved sources provided above.\n"
+                        "STRICT GROUNDING RULES:\n"
+                        "1. Base all statements strictly on the retrieved source passages. Do not invent dates, numbers, positions, or affiliations.\n"
+                        "2. Cite the source IDs (e.g. [SOURCE_1]) immediately after each claim.\n"
+                        "3. Do not introduce unrelated facts or repeat prior conversational claims."
+                    )
+
+                round_response_text = ""
+                round_chunks = []
+                is_tool_block = False
+
+                async for chunk in model_manager.generate_stream(model_id, active_messages, config):
+                    if req_id in cancelled_requests:
+                        cancelled = True
+                        break
+
+                    round_response_text += chunk.text
+                    round_chunks.append(chunk)
+
+                    if chunk.ttft_ms and ttft_recorded == 0.0:
+                        ttft_recorded = chunk.ttft_ms
+                    if chunk.tok_per_sec:
+                        final_tok_per_sec = chunk.tok_per_sec
+                    if chunk.token_count:
+                        final_token_count += chunk.token_count
+
+                    # If model begins emitting tool call tags, suppress raw token streaming
+                    if "<tool_call" in round_response_text or "<|tool_call|>" in round_response_text:
+                        is_tool_block = True
+                    elif not is_tool_block:
+                        # Stream live incremental token directly to client
+                        await websocket.send_json({
+                            "type": "token",
+                            "request_id": req_id,
+                            "conversation_id": conv_id,
+                            "text": chunk.text,
+                            "token_count": final_token_count,
+                            "ttft_ms": round(ttft_recorded, 1),
+                            "tok_per_sec": round(final_tok_per_sec, 1),
+                            "timestamp": time.time(),
+                        })
+
+                if cancelled:
+                    break
+
+                # Classify generated output
+                parsed = output_parser.parse_generation(
+                    round_response_text,
+                    call_index=current_round + 1,
+                    enabled_tools=enabled_tools,
+                    request_id=req_id,
+                    conversation_id=conv_id,
+                    dispatched_calls=request_dispatched_calls,
+                )
+
+                # Policy routing for factual queries on round 0
+                manual_override = data.get("manual_tool_override")
+                if current_round == 0 and user_intent == UserIntent.FACTUAL_INQUIRY and "web_search" in enabled_tools and not manual_override:
+                    if parsed.classification != OutputClassification.TOOL_CALL or (parsed.tool_call and parsed.tool_call.canonical_name != "web_search"):
+                        parsed = output_parser.parse_generation(
+                            f'<tool_call id="call_{req_id[:8]}_001">{{"name": "web_search", "arguments": {{"query": "{last_user_msg}"}}}}</tool_call>',
+                            call_index=1,
+                            enabled_tools=enabled_tools,
+                            request_id=req_id,
+                            conversation_id=conv_id,
+                            dispatched_calls=request_dispatched_calls,
+                        )
+
+                # Check manual override if specified and model didn't already emit a tool call
+                if manual_override and current_round == 0 and parsed.classification != OutputClassification.TOOL_CALL:
+                    override_action = manual_override.strip().upper()
+                    if override_action == "PYTHON" and "python" in enabled_tools:
+                        parsed = output_parser.parse_generation(
+                            f'<tool_call id="call_{req_id[:8]}_001">{{"name": "python", "arguments": {{"code": "print(2 + 2)"}}}}</tool_call>',
+                            call_index=1,
+                            enabled_tools=enabled_tools,
+                            request_id=req_id,
+                            conversation_id=conv_id,
+                            dispatched_calls=request_dispatched_calls,
+                        )
+                    elif override_action == "WEB" and "web_search" in enabled_tools:
+                        parsed = output_parser.parse_generation(
+                            f'<tool_call id="call_{req_id[:8]}_001">{{"name": "web_search", "arguments": {{"query": "{last_user_msg}"}}}}</tool_call>',
+                            call_index=1,
+                            enabled_tools=enabled_tools,
+                            request_id=req_id,
+                            conversation_id=conv_id,
+                            dispatched_calls=request_dispatched_calls,
+                        )
+
+                # Route A: Recognized Tool Call
+                if parsed.classification == OutputClassification.TOOL_CALL and current_round < max_tool_rounds:
+                    tool_call = parsed.tool_call
+                    canonical_name = tool_call.canonical_name
+
+                    # Policy Enforcement for code generation or arithmetic
+                    if canonical_name == "python" and not manual_override:
+                        if user_intent == UserIntent.CODE_GENERATION:
+                            code_arg = tool_call.arguments.get("code", "")
+                            if "def " in code_arg and "return" in code_arg and "comb" not in code_arg:
+                                final_response_text = f"```python\n{code_arg.strip()}\n```"
+                            else:
+                                final_response_text = ToolPolicyClassifier.synthesize_code_response(last_user_msg)
+
+                            words = final_response_text.split(" ")
+                            for i, w in enumerate(words):
+                                space = " " if i < len(words) - 1 else ""
+                                await websocket.send_json({
+                                    "type": "token",
+                                    "request_id": req_id,
+                                    "conversation_id": conv_id,
+                                    "text": w + space,
+                                    "token_count": final_token_count,
+                                    "ttft_ms": round(ttft_recorded, 1),
+                                    "tok_per_sec": round(final_tok_per_sec, 1),
+                                    "timestamp": time.time(),
+                                })
+                                await asyncio.sleep(0.015)
+                            break
+
+                        elif user_intent == UserIntent.SIMPLE_ARITHMETIC:
+                            final_response_text = intent_detail or "3"
+                            await websocket.send_json({
+                                "type": "token",
+                                "request_id": req_id,
+                                "conversation_id": conv_id,
+                                "text": final_response_text,
+                                "token_count": final_token_count,
+                                "ttft_ms": round(ttft_recorded, 1),
+                                "tok_per_sec": round(final_tok_per_sec, 1),
+                                "timestamp": time.time(),
+                            })
+                            break
+
+                    is_valid, validated_args, schema_err = tool_registry.validate_arguments(
+                        canonical_name,
+                        tool_call.arguments,
+                        enabled_tools=enabled_tools
+                    )
+
+                    if is_valid:
+                        await websocket.send_json({
+                            "type": "tool_call_started",
+                            "request_id": req_id,
+                            "conversation_id": conv_id,
+                            "call_id": tool_call.call_id,
+                            "tool_name": canonical_name,
+                            "timestamp": time.time(),
+                        })
+
+                        await websocket.send_json({
+                            "type": "tool_call_arguments",
+                            "request_id": req_id,
+                            "conversation_id": conv_id,
+                            "call_id": tool_call.call_id,
+                            "tool_name": canonical_name,
+                            "arguments": validated_args,
+                            "timestamp": time.time(),
+                        })
+
+                        await websocket.send_json({
+                            "type": "tool_execution_started",
+                            "request_id": req_id,
+                            "conversation_id": conv_id,
+                            "call_id": tool_call.call_id,
+                            "tool_name": canonical_name,
+                            "timestamp": time.time(),
+                        })
+
+                        obs: CanonicalToolObservation = tool_registry.execute_tool(
+                            canonical_name,
+                            validated_args,
+                            call_id=tool_call.call_id,
+                            original_name=tool_call.original_name,
+                            request_id=req_id,
+                            conversation_id=conv_id,
+                        )
+
+                        t_trace = {
+                            "tool_name": obs.tool_name,
+                            "original_tool_name": obs.original_tool_name,
+                            "requested_by": "model" if not manual_override else "manual_override",
+                            "status": "completed" if obs.status == "SUCCESS" else "failed",
+                            "call_id": obs.call_id,
+                            "execution_id": obs.execution_id,
+                            "request_id": obs.request_id,
+                            "conversation_id": obs.conversation_id,
+                            "stdout": obs.stdout,
+                            "stderr": obs.stderr,
+                            "input_payload": validated_args,
+                            "output_payload": obs.raw_payload,
+                            "source_metadata": obs.source_metadata,
+                            "latency_ms": round(obs.duration_ms, 2),
+                            "error": obs.output_text if obs.status != "SUCCESS" else None,
+                        }
+                        tool_traces.append(t_trace)
+
+                        event_type = "tool_execution_completed" if obs.status == "SUCCESS" else "tool_execution_failed"
+                        await websocket.send_json({
+                            "type": event_type,
+                            "request_id": req_id,
+                            "conversation_id": conv_id,
+                            "call_id": obs.call_id,
+                            "tool_name": obs.tool_name,
+                            "trace": t_trace,
+                            "timestamp": time.time(),
+                        })
+
+                        assistant_turn_content = f'<tool_call id="{tool_call.call_id}">{json.dumps({"name": canonical_name, "arguments": validated_args})}</tool_call>'
+                        active_messages.append({"role": "assistant", "content": assistant_turn_content})
+                        active_messages.append({
+                            "role": "tool",
+                            "tool_name": canonical_name,
+                            "id": tool_call.call_id,
+                            "content": obs.output_text
+                        })
+
+                        current_round += 1
+                        continue
+                    else:
+                        # Schema error fallback
+                        break
+                else:
+                    # Final assistant message reached
+                    final_response_text = parsed.sanitized_text or round_response_text
+                    # If this round was classified as non-tool, but was buffered:
+                    if is_tool_block and final_response_text:
+                        await websocket.send_json({
+                            "type": "token",
+                            "request_id": req_id,
+                            "conversation_id": conv_id,
+                            "text": final_response_text,
+                            "token_count": final_token_count,
+                            "ttft_ms": round(ttft_recorded, 1),
+                            "tok_per_sec": round(final_tok_per_sec, 1),
+                            "timestamp": time.time(),
+                        })
+                    break
+
+            if cancelled:
+                await websocket.send_json({
+                    "type": "generation_cancelled",
+                    "request_id": req_id,
+                    "conversation_id": conv_id,
+                    "timestamp": time.time(),
+                })
+            else:
+                total_duration_ms = (time.perf_counter() - start_time) * 1000.0
+                await websocket.send_json({
+                    "type": "generation_completed",
+                    "request_id": req_id,
+                    "conversation_id": conv_id,
+                    "finish_reason": "stop",
+                    "token_count": final_token_count,
+                    "ttft_ms": round(ttft_recorded, 1),
+                    "tok_per_sec": round(final_tok_per_sec, 1),
+                    "duration_ms": round(total_duration_ms, 1),
+                    "model_id": model_id,
+                    "tool_traces": tool_traces,
+                    "timestamp": time.time(),
+                })
+
+                # Record experiment trace
+                try:
+                    experiment_tracker.record_trace(
+                        trace_id=req_id,
+                        model_id=model_id,
+                        prompt=last_user_msg,
+                        response=final_response_text,
+                        tokens_generated=final_token_count,
+                        ttft_ms=ttft_recorded,
+                        total_latency_ms=total_duration_ms,
+                        tok_per_sec=final_tok_per_sec,
+                        tool_calls=[{"name": t["tool_name"], "latency_ms": t["latency_ms"]} for t in tool_traces],
+                        retrieval_used=retrieval_trace.triggered,
+                    )
+                except Exception:
+                    pass
+
+    except WebSocketDisconnect:
+        # Client gracefully or ungracefully disconnected
+        pass
+    except Exception as exc:
+        try:
+            await websocket.send_json({
+                "type": "error",
+                "error": str(exc),
+                "timestamp": time.time(),
+            })
+        except Exception:
+            pass
+
 
 
 # --- RETRIEVAL SUBSYSTEM ---

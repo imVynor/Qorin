@@ -573,5 +573,43 @@ export const experimentsData: ExperimentRecord[] = [
     "outcome": "Engineered EvidenceGroundingValidator with structured evidence objects ([E1], [E2]), strict proposition matching, conservative cited fallback synthesis, and turn-isolated request registries. Established that runtime harness contracts are essential co-processors to neural weights.",
     "status": "completed",
     "checkpoint": "modern_gpt/experiments/phase2_experiment_f/stage_14_training_pilot/checkpoints/ckpt_pilot_best.pt"
+  },
+  {
+    "experiment_id": "EXP-FINAL-TOOL-ABLATION",
+    "name": "Controlled Tool-Augmentation Ablation (Central Question)",
+    "codename": "controlled_tool_ablation_final",
+    "category": "evaluation",
+    "date": "2026-11-17",
+    "objective": "Formally answer the central research question ('Do external tools actually improve small LM performance holding the underlying model constant?') via a controlled Tools-Disabled vs Tools-Enabled evaluation on the untouched 100-record Stage 13 held-out test split, comparing QORIN-500M against QORIN-100M.",
+    "model_id": "QORIN-500M",
+    "parameter_count": 514389504,
+    "context_length": 2048,
+    "tokenizer": "bpe_32k",
+    "tokenizer_fingerprint": "3559c7435e1d9330",
+    "dataset": "modern_gpt/experiments/phase2_experiment_f/stage_13_dataset/test.jsonl",
+    "training_tokens": 0,
+    "steps": 0,
+    "metrics": {
+      "sample_size": 100,
+      "qorin_500m_tools_disabled_pct": 43.0, // 43/100 (95% CI: [34.0, 53.0])
+      "qorin_500m_tools_enabled_pct": 64.0, // 64/100 (95% CI: [55.0, 74.0])
+      "qorin_500m_net_gain_pct_pts": 21.0, // +21.0% pts absolute (+48.8% relative)
+      "mcnemar_chi2": 12.9032,
+      "mcnemar_p_value": 0.000328, // statistically significant (p < 0.001)
+      "discordant_improved_by_tools": 26,
+      "discordant_regressed_by_tools": 5,
+      "concordant_both_succeeded": 38,
+      "concordant_both_failed": 31,
+      "qorin_100m_tools_disabled_pct": 36.0, // 36/100
+      "qorin_100m_tools_enabled_pct": 29.0, // 29/100 (-7.0% pts regression)
+      "tools_disabled_mean_latency_sec": 1.291,
+      "tools_enabled_mean_latency_sec": 2.483,
+      "latency_overhead_ratio": 1.92,
+      "citation_precision": 0.68,
+      "unnecessary_tool_calls": 0 // 0% false positives on parametric tasks
+    },
+    "outcome": "Conclusive empirical answer to the central research question: External tools DO NOT compensate for insufficient model capacity (at 100M, tools degrade performance from 36% to 29% due to schema parsing errors and token distraction). However, external tools act as a statistically significant capability multiplier once model capacity reaches the 500M threshold (+21.0% pts, p = 0.000328), jumping multi-step reasoning from 36.7% to 66.7% and parametric knowledge from 12.5% to 100.0%.",
+    "status": "completed",
+    "checkpoint": "modern_gpt/experiments/phase2_experiment_f/stage_14_training_pilot/checkpoints/ckpt_pilot_best.pt"
   }
 ];

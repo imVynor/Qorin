@@ -1,0 +1,97 @@
+{
+  "experiment_title": "Controlled Tool-Augmentation Ablation Analysis",
+  "primary_model": "QORIN-500M SFT Experiment F (514M)",
+  "sample_size": 100,
+  "primary_outcome": {
+    "tools_disabled": {
+      "correct_answers": 43,
+      "total_tasks": 100,
+      "success_rate": 0.43,
+      "success_pct": 43.0,
+      "bootstrap_95ci": [
+        34.0,
+        53.0
+      ]
+    },
+    "tools_enabled": {
+      "correct_answers": 64,
+      "total_tasks": 100,
+      "success_rate": 0.64,
+      "success_pct": 64.0,
+      "bootstrap_95ci": [
+        55.0,
+        74.0
+      ]
+    },
+    "net_difference": {
+      "absolute_pct_point_diff": 21.0,
+      "relative_improvement_pct": 48.8,
+      "bootstrap_delta_95ci": [
+        11.0,
+        31.0
+      ]
+    }
+  },
+  "mcnemar_test": {
+    "contingency_counts": {
+      "both_succeeded": 38,
+      "tools_disabled_only_b": 5,
+      "tools_enabled_only_c": 26,
+      "both_failed": 31
+    },
+    "discordant_pairs": 31,
+    "chi2_statistic": 12.9032,
+    "p_value": 0.00032801631501352865,
+    "statistically_significant": true
+  },
+  "two_factor_capacity_ablation": {
+    "qorin_100m": {
+      "tools_disabled": {
+        "success_count": 36,
+        "total": 100,
+        "rate": 0.36,
+        "pct": 36.0
+      },
+      "tools_enabled": {
+        "success_count": 29,
+        "total": 100,
+        "rate": 0.29,
+        "pct": 29.0
+      },
+      "net_tool_gain_pct": -7.0
+    },
+    "qorin_500m": {
+      "tools_disabled": {
+        "success_count": 43,
+        "total": 100,
+        "rate": 0.43,
+        "pct": 43.0
+      },
+      "tools_enabled": {
+        "success_count": 64,
+        "total": 100,
+        "rate": 0.64,
+        "pct": 64.0
+      },
+      "net_tool_gain_pct": 21.0
+    }
+  },
+  "tool_use_and_grounding_metrics": {
+    "total_tool_calls_emitted": 74,
+    "unnecessary_tool_calls": 0,
+    "unnecessary_tool_invocation_rate": 0.0,
+    "citation_precision": 0.68,
+    "unsupported_claims_disabled": 22,
+    "unsupported_claims_enabled": 36,
+    "hallucination_reduction_pct": -63.6
+  },
+  "efficiency_metrics": {
+    "tools_disabled_mean_latency_sec": 1.291,
+    "tools_enabled_mean_latency_sec": 2.483,
+    "mean_model_generation_time_sec": 2.47,
+    "mean_tool_execution_time_sec": 0.013,
+    "tools_disabled_mean_tokens_out": 52.4,
+    "tools_enabled_mean_tokens_out": 80.5,
+    "latency_overhead_ratio": 1.92
+  }
+}

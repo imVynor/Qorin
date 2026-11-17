@@ -179,25 +179,52 @@ export const journeyChaptersData: JourneyChapter[] = [
   {
     id: 8,
     slug: 'what-we-learned',
-    title: 'Chapter 8: What We Learned & Future Frontiers',
-    subtitle: 'Empirical Conclusions from the QORIN Investigation',
-    tag: 'Conclusions',
-    question: 'What are the definitive answers to our central research question, and what remain open unsolved challenges?',
-    keyHypothesis: 'External retrieval and deterministic execution tools can compensate for small model capacity on factual and computational tasks, but cannot substitute for capacity in multi-hop reasoning, epistemic uncertainty, and nuance.',
+    title: 'Chapter 8: What Did We Actually Learn?',
+    subtitle: 'The Empirical Verdict on the Central Research Question',
+    tag: 'Empirical Verdict',
+    question: 'What are the definitive answers to our central research question, and does external retrieval compensate for small model capacity?',
+    keyHypothesis: 'External tools act as a capability multiplier above a critical representational threshold (500M+), but cannot compensate for smaller capacity (100M) where tool schemas cause cognitive overload.',
     evidence: [
-      'Where Tools Compensate: On arithmetic and Python execution, QORIN-500M + Python sandbox achieves 100% computational accuracy, vastly outperforming even multi-billion parameter models operating purely autoregressively.',
-      'Where Tools Compensate: On factual inquiries with explicit sources, QORIN-500M + Web retrieval achieved 100% full-support precision and 0.0% unsupported claims in held-out benchmark synthesis testing.',
-      'Where Capacity Still Matters: On contradictory evidence, subtle entity disambiguation, and multi-turn affirmative reference resolution, small models struggle due to limited attention bandwidth and reasoning depth.'
+      'Empirical Controlled Ablation (N=100 held-out tasks): Tools Disabled = 43.0% (43/100) vs Tools Enabled = 64.0% (64/100) on QORIN-500M, demonstrating a statistically significant +21.0% absolute gain (McNemar χ² = 12.90, p = 0.000328).',
+      'The 100M Ceiling Refutation: On QORIN-100M, enabling tools degraded accuracy from 36.0% down to 29.0% (-7.0% net regression) due to schema parsing errors and token distraction.',
+      'Where Tools Compensate: On parametric knowledge tasks, tools leaped accuracy from 12.5% to 100.0% (+87.5% pts) with 0% false positive tool triggers. In multi-step reasoning, accuracy rose from 36.7% to 66.7% (+30.0% pts).',
+      'Where Capacity Still Dominates: On contradictory evidence (0/8, 0%) and insufficient evidence (0/5, 0%), small models fail across both conditions. Epistemic arbitration requires deeper internal representations.'
     ],
     findings: [
-      '1. Parameter scaling improves language fluency, syntactic adherence, and single-turn comprehension, but does not solve factual hallucination or symbolic arithmetic.',
-      '2. Non-parametric retrieval completely changes the economics of language modeling: A 514M parameter model with a grounding harness can deliver factual accuracy comparable to models 10x-50x larger.',
-      '3. The runtime harness is an essential co-processor that must be evaluated, audited, and isolated with the same rigor as the neural weights.'
+      '1. Direct Answer to the Central Question: External tools DO NOT compensate for inadequate model capacity below the critical threshold (100M models suffer schema breakdown).',
+      '2. Capability Multiplier Effect: Once a model reaches sufficient representational density (500M parameters), external tools unlock dramatic, statistically verified capability leaps (+21.0% pts).',
+      '3. Efficiency Trade-off: Tool augmentation incurs a 1.92× latency cost (1.291s -> 2.483s), driven almost entirely by multi-turn autoregressive token generation across tool observation cycles.'
     ],
     architecturalDecisions: [
-      'Document all active live limitations clearly (repetitive follow-ups, affirmative tool confirmation failure, contradictory source resolution).',
-      'Preserve all checkpoints, training curves, and evaluation logs for full scientific reproducibility.'
+      'Reject the assumption that small models can be arbitrarily scaled down by relying on external APIs.',
+      'Enforce strict runtime evidence grounding ([E1], [E2]) and execution isolation to protect generation fidelity.',
+      'Transparently publish discordant error autopsies (26 improved vs 5 regressed) and document epistemic failure modes.'
     ],
-    es335Takeaway: 'The central research question is answered with empirical nuance: External tools dramatically compensate for small capacity in knowledge acquisition and deterministic computation, but require architectural scaffolding to overcome reasoning bottlenecks.'
+    es335Takeaway: 'The central research question is answered with rigorous scientific clarity: Tools multiply capacity, but cannot substitute for the foundational representational circuits required to ingest them.'
+  },
+  {
+    id: 9,
+    slug: 'five-billion-tokens',
+    title: 'Chapter 9: The Next Question: Five Billion Tokens',
+    subtitle: 'Extending Pretraining to Test the Scale Limits of Tool Augmentation',
+    tag: 'Future Frontier',
+    question: 'Does scaling pretraining from 1.12B to 5.0B tokens provide the internal representational density to resolve epistemic ambiguity, multi-hop reasoning, and contradictory source arbitration natively prior to tool synthesis?',
+    keyHypothesis: 'Chinchilla-compute-optimal pretraining (5.0B tokens on 500M parameters) will eliminate sub-threshold schema fragility, sharpen attention routing over long observation windows, and resolve contradictory source arbitration.',
+    evidence: [
+      'Current Pretraining Gap: QORIN-500M consumed 1.12B tokens (~2.2 tokens per parameter). Chinchilla scaling laws dictate ~20 tokens per parameter (~10B tokens), indicating our base model is substantially undertrained.',
+      'Attention Allocation Limits: At 1.12B tokens, attention heads struggle to route relevance across long retrieval passages without distractibility.',
+      'Epistemic Failure in Held-Out Tests: Contradictory evidence scored 0% success across both tools-disabled and tools-enabled conditions, showing that neither SFT nor retrieval alone imparts epistemic calibration without richer base pretraining.'
+    ],
+    findings: [
+      '1. Formulated Phase 3 research roadmap: Pretrain ModernGPT-S 500M to 5.0 Billion tokens across a curated 4-domain mixture (FineWeb-Edu 45%, Starcoder 25%, Cosmopedia 15%, Wikipedia 15%).',
+      '2. Planned context extension: Native 4,096-token pretraining using YaRN RoPE frequency scaling to accommodate extended multi-turn tool observation chains.',
+      '3. Verifiable Reinforcement Learning: Integrate RLVR (Reinforcement Learning with Verifiable Rewards) using deterministic Python sandbox execution and proposition citation validators as reward functions.'
+    ],
+    architecturalDecisions: [
+      'Preserve and freeze all Phase 2 checkpoints and evaluation artifacts as the verified baseline reference.',
+      'Design reproducible data pipeline for the 5B-token corpus with SHA-256 shard manifests.',
+      'Commit to re-running the exact 100-record controlled ablation protocol on the 5B-token model to measure whether the +21.0% tool advantage expands.'
+    ],
+    es335Takeaway: 'The research monograph concludes not with an assertion of finality, but with a refined, empirically grounded hypothesis: Pretraining depth establishes the cognitive foundation, and tools provide the computational reach.'
   }
 ];

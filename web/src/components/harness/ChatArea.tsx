@@ -10,9 +10,13 @@ import {
   ChevronDown,
   ChevronUp,
   ArrowDown,
+  Lock,
+  Unlock,
+  Loader2,
 } from 'lucide-react';
-import type { ChatMessage, GenerationSettings, ModelInfo, RetrievalTrace, ToolTrace } from '../../types/harness';
-import { streamChat } from '../../services/api';
+import type { GenerationSettings, ModelInfo } from '../../types/harness';
+import { isComputeAuthorized } from '../../services/api';
+import { useStreamingChat } from '../../hooks/useStreamingChat';
 import styles from './Harness.module.css';
 
 interface ChatAreaProps {
@@ -34,20 +38,39 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
   isBackendAvailable = true,
   onRequireComputeAuth,
 }) => {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputPrompt, setInputPrompt] = useState('');
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [liveStreamText, setLiveStreamText] = useState('');
-  const [liveStats, setLiveStats] = useState<{ ttft_ms?: number; tok_per_sec?: number; token_count?: number }>({});
   const [expandedRetrievalId, setExpandedRetrievalId] = useState<string | null>(null);
-  const [activeRetrievalTrace, setActiveRetrievalTrace] = useState<RetrievalTrace | null>(null);
-  const [activeToolTraces, setActiveToolTraces] = useState<ToolTrace[]>([]);
+  const [isAuthorized, setIsAuthorized] = useState<boolean>(isComputeAuthorized());
 
-  const conversationIdRef = useRef<string>(`conv-${Date.now()}`);
-  const abortRef = useRef<(() => void) | null>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isAutoScrollLocked, setIsAutoScrollLocked] = useState(true);
   const [showJumpButton, setShowJumpButton] = useState(false);
+
+  const {
+    messages,
+    isGenerating,
+    liveStreamText,
+    liveStats,
+    activeRetrievalTrace,
+    activeToolTraces,
+    modelLoadingNotice,
+    sendMessage,
+    cancelGeneration,
+    clearConversation,
+  } = useStreamingChat({
+    onRequireComputeAuth,
+    onTraceRecorded,
+    onActivePromptChanged,
+  });
+
+  // Track compute auth changes across windows/events
+  useEffect(() => {
+    const handleAuthChange = () => {
+      setIsAuthorized(isComputeAuthorized());
+    };
+    window.addEventListener('qorin-compute-auth-changed', handleAuthChange);
+    return () => window.removeEventListener('qorin-compute-auth-changed', handleAuthChange);
+  }, []);
 
   const handleScroll = () => {
     if (!scrollContainerRef.current) return;
@@ -78,153 +101,20 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
   const handleSend = () => {
     if (!inputPrompt.trim() || isGenerating) return;
 
-    if (!isBackendAvailable) {
-      const userMsg: ChatMessage = {
-        id: `msg-${Date.now()}`,
-        role: 'user',
-        content: inputPrompt.trim(),
-      };
-      const offlineMsg: ChatMessage = {
-        id: `msg-offline-${Date.now() + 1}`,
-        role: 'assistant',
-        content: `[Backend Inference Service Offline]\n\nLive token streaming and tool dispatch require the local Python FastAPI server (http://127.0.0.1:8000).\n\nThe research monograph, architecture specifications, interactive learning lab, and experiment archives remain fully functional in static mode.\n\nTo run live model generation locally:\n1. Start the API backend: .venv\\Scripts\\python -m uvicorn backend.app:app --port 8000\n2. Click "Sync" in the top telemetry strip to connect.`,
-      };
-      setMessages((prev) => [...prev, userMsg, offlineMsg]);
-      setInputPrompt('');
-      return;
-    }
-
-    if (!selectedModel) return;
-
-    const userMsg: ChatMessage = {
-      id: `msg-${Date.now()}`,
-      role: 'user',
-      content: inputPrompt.trim(),
-    };
-
-    const newHistory = [...messages, userMsg];
-    setMessages(newHistory);
+    sendMessage(inputPrompt, selectedModel, settings, isBackendAvailable);
     setInputPrompt('');
-    setIsGenerating(true);
-    setLiveStreamText('');
-    setLiveStats({});
-    setActiveRetrievalTrace(null);
-    setActiveToolTraces([]);
     setIsAutoScrollLocked(true);
     setShowJumpButton(false);
+
     setTimeout(() => {
       if (scrollContainerRef.current) {
         scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight;
       }
     }, 10);
-
-    if (onActivePromptChanged) {
-      onActivePromptChanged(userMsg.content);
-    }
-
-    const payload = {
-      model_id: selectedModel.id,
-      messages: newHistory.map((m) => ({ role: m.role, content: m.content })),
-      temperature: settings.temperature,
-      top_p: settings.top_p,
-      top_k: settings.top_k,
-      max_new_tokens: settings.max_new_tokens,
-      repetition_penalty: settings.repetition_penalty,
-      system_prompt: settings.system_prompt || undefined,
-      retrieval_mode: settings.retrieval_mode,
-      retrieval_top_k: settings.retrieval_top_k,
-      retrieval_threshold: settings.retrieval_threshold,
-      web_research_enabled: settings.web_research_enabled,
-      python_sandbox_enabled: settings.python_sandbox_enabled,
-      conversation_id: conversationIdRef.current,
-    };
-
-    let fullText = '';
-    let currentRetrieval: RetrievalTrace | null = null;
-    const currentTools: ToolTrace[] = [];
-
-    const stopFn = streamChat(payload, {
-      onRetrieval: (trace) => {
-        currentRetrieval = trace;
-        setActiveRetrievalTrace(trace);
-      },
-      onToolStart: (_toolData) => {
-        // Track tool initiation
-      },
-      onToolResult: (trace) => {
-        currentTools.push(trace);
-        setActiveToolTraces([...currentTools]);
-      },
-      onToken: (tok) => {
-        fullText += tok.text;
-        setLiveStreamText(fullText);
-        setLiveStats({
-          ttft_ms: tok.ttft_ms,
-          tok_per_sec: tok.tok_per_sec,
-          token_count: tok.token_count,
-        });
-      },
-      onDone: (doneData) => {
-        const assistantMsg: ChatMessage = {
-          id: `msg-${Date.now() + 1}`,
-          role: 'assistant',
-          content: fullText,
-          retrieval_trace: currentRetrieval || undefined,
-          tool_traces: currentTools.length > 0 ? currentTools : undefined,
-          ttft_ms: doneData.ttft_ms,
-          tok_per_sec: doneData.tok_per_sec,
-          latency_ms: doneData.total_latency_ms,
-          token_count: doneData.total_tokens,
-        };
-
-        setMessages((prev) => [...prev, assistantMsg]);
-        setIsGenerating(false);
-        setLiveStreamText('');
-        abortRef.current = null;
-        if (onTraceRecorded) onTraceRecorded();
-      },
-      onError: (err) => {
-        const isAuthError =
-          err.message &&
-          (err.message.includes('compute access protected') ||
-            err.message.includes('401') ||
-            err.message.includes('ALL CAPS'));
-
-        const errorMsg: ChatMessage = {
-          id: `msg-err-${Date.now()}`,
-          role: 'assistant',
-          content: isAuthError
-            ? `[Personal Compute Protected]\n\nAccess to the author's local GPU inference and execution runtime is restricted to Prof. Udit Bhatia.\n\nHint: Professor's name in ALL CAPS (____ ______ / XXXX XXXXXX).\n\nPlease authorize compute access to run live inference.`
-            : `[Inference Error: ${err.message}]`,
-        };
-        setMessages((prev) => [...prev, errorMsg]);
-        setIsGenerating(false);
-        abortRef.current = null;
-
-        if (isAuthError && onRequireComputeAuth) {
-          onRequireComputeAuth();
-        }
-      },
-    });
-
-    abortRef.current = stopFn;
-  };
-
-  const handleStop = () => {
-    if (abortRef.current) {
-      abortRef.current();
-      abortRef.current = null;
-    }
-    setIsGenerating(false);
   };
 
   const handleClear = () => {
-    handleStop();
-    conversationIdRef.current = `conv-${Date.now()}`;
-    setMessages([]);
-    setLiveStreamText('');
-    setActiveRetrievalTrace(null);
-    setActiveToolTraces([]);
+    clearConversation();
     setIsAutoScrollLocked(true);
     setShowJumpButton(false);
     setTimeout(() => {
@@ -254,7 +144,7 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
           <div className={styles.emptyState}>
             <div className={styles.emptyTitle}>QORIN Research Inference Harness</div>
             <p style={{ maxWidth: '480px', lineHeight: 1.5, fontSize: '13px' }}>
-              Select a native QORIN model or external test model to investigate raw generation, non-parametric knowledge retrieval, or isolated tool invocation.
+              Select a native QORIN model or external test model to investigate raw generation, non-parametric knowledge retrieval, or isolated tool invocation over real-time WebSockets.
             </p>
 
             <div className={styles.presetGroup}>
@@ -384,6 +274,13 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
         {/* Live Streaming Turn */}
         {isGenerating && (
           <div className={`${styles.messageRow} ${styles.assistantRow}`}>
+            {modelLoadingNotice && (
+              <div className={styles.modelLoadingNotice}>
+                <Loader2 size={12} className={styles.spin} />
+                <span>{modelLoadingNotice}</span>
+              </div>
+            )}
+
             {activeRetrievalTrace && activeRetrievalTrace.triggered && activeRetrievalTrace.retrieved_chunks && activeRetrievalTrace.retrieved_chunks.length > 0 && (
               <div className={styles.inlineCard}>
                 <div className={styles.inlineRetrievalHeader}>
@@ -438,6 +335,27 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
 
       {/* Input Action Bar */}
       <div className={styles.inputBar}>
+        {/* Polite Compute Lock Notice when compute access is not authorized */}
+        {!isAuthorized && (
+          <div className={styles.computeLockBanner}>
+            <div className={styles.computeLockText}>
+              <Lock size={14} className={styles.computeLockIcon} />
+              <span>
+                <strong>Protected Compute Locked:</strong> Live model inference requires compute authorization. Open Options &rarr; Unlock Compute to activate research access.
+              </span>
+            </div>
+            {onRequireComputeAuth && (
+              <button
+                type="button"
+                className={styles.computeUnlockBtn}
+                onClick={onRequireComputeAuth}
+              >
+                <Unlock size={12} /> Unlock Compute
+              </button>
+            )}
+          </div>
+        )}
+
         <div className={styles.inputControlsRow}>
           <span>
             Target: <strong>{selectedModel?.name || 'No Model Loaded'}</strong>
@@ -541,7 +459,7 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
 
         <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 'var(--space-2)' }}>
           {isGenerating ? (
-            <button type="button" className={styles.stopBtn} onClick={handleStop}>
+            <button type="button" className={styles.stopBtn} onClick={cancelGeneration}>
               <Square size={12} /> Stop Generation
             </button>
           ) : (

@@ -10,6 +10,7 @@ import { ContextExtensionChart } from '../components/visualizations/ContextExten
 import { ArchitectureAblationFigure } from '../components/visualizations/ArchitectureAblationFigure';
 import { TokenWeightingFigure } from '../components/visualizations/TokenWeightingFigure';
 import { DatasetCompositionFigure } from '../components/visualizations/DatasetCompositionFigure';
+import { ControlledAblationFigure } from '../components/visualizations/ControlledAblationFigure';
 import { stage15BlindEvalData, stage14PilotCurve } from '../data/chartData';
 import { failureCasesData } from '../data/failuresData';
 import styles from './Experiments.module.css';
@@ -247,6 +248,16 @@ export const Experiments: React.FC = () => {
         'EXP-PHASE2G-STAGE15-EVAL',
         'EXP-PHASE2G-STAGE16-HARNESS',
       ],
+    },
+    {
+      id: 'cluster-final-ablation',
+      number: 'Cluster 09',
+      title: 'Controlled Tool-Augmentation Ablation (Central Question)',
+      lead: 'Definitive controlled comparison testing whether external tools improve performance holding the underlying model constant, and whether retrieval compensates for smaller model capacity.',
+      prose:
+        'We executed a strictly controlled paired ablation across all 100 held-out Stage 13 benchmark tasks comparing Tools Disabled against Tools Enabled for both QORIN-500M and QORIN-100M. The empirical results resolve the central question: At 500M, tools produce a statistically significant +21.0% absolute improvement (43.0% -> 64.0%, McNemar p=0.000328). However, at 100M, tools caused a 7.0% net regression (36.0% -> 29.0%) due to schema parsing errors and token distraction. External tools do not compensate for insufficient parameter capacity below the critical representational threshold; rather, they act as a capability multiplier requiring baseline capacity to unlock.',
+      figure: <ControlledAblationFigure figureNumber={9} />,
+      experimentIds: ['EXP-FINAL-TOOL-ABLATION'],
     },
   ];
 

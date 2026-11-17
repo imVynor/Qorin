@@ -1,0 +1,25 @@
+{
+  "experiment_title": "Controlled Tool-Augmentation Ablation: Tools-Disabled vs. Tools-Enabled",
+  "independent_variables": [
+    "tool_availability (ENABLED vs. DISABLED)",
+    "model_capacity (QORIN-500M vs. QORIN-100M)"
+  ],
+  "controlled_variables": {
+    "decoding_strategy": "greedy",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_new_tokens_per_turn": 160,
+    "precision": "bfloat16",
+    "device": "cuda:0",
+    "gpu_hardware": "NVIDIA GeForce RTX 5060 Laptop GPU (8GB VRAM)",
+    "system_prompt": "You are QORIN, a calibrated, evidence-grounded AI assistant.\nYou have access to the following tools:\n- `web_search`: Searches verified databases for factual information.\n- `python_interpreter`: Executes isolated Python scripts for calculation and data processing.\n\nUse tools only when strictly necessary. When direct knowledge suffices, answer directly. Always ground answers on retrieved evidence with [1], [2] citations."
+  },
+  "evaluation_protocol": {
+    "task_count": 100,
+    "paired_evaluation": true,
+    "statistical_tests": [
+      "McNemar test (paired binary task outcomes)",
+      "Bootstrap 95% confidence intervals (B=2000 paired resamples)"
+    ]
+  }
+}

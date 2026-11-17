@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
   MessageSquare,
-  GitCompare,
-  Activity,
   History,
   Cpu,
   RefreshCw,
@@ -65,42 +63,42 @@ const FALLBACK_MODELS: ModelInfo[] = [
     name: 'QORIN-100M SFT v3 (4K Context)',
     provider: 'qorin',
     generation: '100M',
-    parameters: 100401408,
+    parameters: 120029440,
     context_length: 4096,
     architecture: '14L-12Q-4KV (GQA 3:1), SwiGLU, RMSNorm, RoPE s=8.0',
     status: 'production_sft',
-    description: 'Fine-tuned 100M model with 4,096-token sequence capability and ChatML alignment.',
+    description: 'Flagship 100M model fine-tuned for long-context tool invocation and ChatML conversational alignment.',
     is_native: true,
     supported_params: ['temperature', 'top_p', 'top_k', 'max_new_tokens', 'repetition_penalty'],
     vram_estimate_mb: 650,
   },
   {
-    id: 'qorin-50m-sft',
-    name: 'QORIN-50M SFT v2',
+    id: 'qorin-500m-pretrain-pilot',
+    name: 'QORIN-500M Pretrain Pilot',
     provider: 'qorin',
-    generation: '50M',
-    parameters: 49105408,
-    context_length: 512,
-    architecture: '12L-8Q-4KV (GQA 2:1), SwiGLU, RMSNorm, RoPE base',
+    generation: '500M',
+    parameters: 514389504,
+    context_length: 2048,
+    architecture: '20L-24Q-4KV (GQA 6:1), SwiGLU 3840, RMSNorm, BPE-32k',
     status: 'completed',
-    description: '50M parameter SFT checkpoint fine-tuned on multi-domain instruction mixture.',
+    description: 'Pretrained 500M foundation model checkpoint evaluated prior to instruction tuning and tool adaptation.',
     is_native: true,
-    supported_params: ['temperature', 'top_p', 'top_k', 'max_new_tokens'],
-    vram_estimate_mb: 350,
+    supported_params: ['temperature', 'top_p', 'top_k', 'max_new_tokens', 'repetition_penalty'],
+    vram_estimate_mb: 2100,
   },
   {
-    id: 'qorin-16m-sft',
-    name: 'QORIN-16M SFT Baseline',
+    id: 'qorin-100m-base',
+    name: 'QORIN-100M Baseline Pretrained',
     provider: 'qorin',
-    generation: '16M',
-    parameters: 16768128,
+    generation: '100M',
+    parameters: 113606912,
     context_length: 512,
-    architecture: '6L-6H Standard MHA, GELU, LayerNorm, RoPE base',
+    architecture: '14L-12Q-4KV (GQA 3:1), SwiGLU, RMSNorm, RoPE base',
     status: 'completed',
-    description: 'Lightweight 16M proof-of-concept checkpoint used in capability diagnosis.',
+    description: 'Foundational 100M base model trained on 1.5B tokens at 512 context length.',
     is_native: true,
     supported_params: ['temperature', 'top_p', 'top_k', 'max_new_tokens'],
-    vram_estimate_mb: 180,
+    vram_estimate_mb: 550,
   },
 ];
 
@@ -283,7 +281,7 @@ export const Harness: React.FC = () => {
               <span>Interactive Chat &amp; Tools</span>
             </button>
 
-            <button
+            {/* <button
               type="button"
               className={`${styles.tabBtn} ${activeTab === 'compare' ? styles.tabBtnActive : ''}`}
               onClick={() => setActiveTab('compare')}
@@ -299,7 +297,7 @@ export const Harness: React.FC = () => {
             >
               <Activity size={14} />
               <span>Training Observability</span>
-            </button>
+            </button> */}
 
             <button
               type="button"
@@ -489,7 +487,7 @@ export const Harness: React.FC = () => {
                 selectedModel={selectedModel}
                 settings={settings}
                 onUpdateSettings={handleUpdateSettings}
-                onTraceRecorded={() => {}}
+                onTraceRecorded={() => { }}
                 onActivePromptChanged={(prompt) => setLastStats((prev) => ({ ...prev, injected_prompt: prompt }))}
                 isBackendAvailable={isBackendAvailable}
                 onRequireComputeAuth={() => setAuthModalOpen(true)}

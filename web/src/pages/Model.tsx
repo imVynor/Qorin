@@ -297,6 +297,7 @@ export const Model: React.FC = () => {
               <li><strong>Second-Turn Python Chaining:</strong> 50.0% (15/30) vs 0.0% in parent baseline.</li>
               <li><strong>AST Code Syntax Validity:</strong> 43.3% (13/30) vs 0.0% in parent baseline.</li>
               <li><strong>Evidence-Grounded Synthesis:</strong> 100.0% (15/15) full-support precision and 0.0% unsupported claims when verified by the runtime evidence validator.</li>
+              <li><strong>Controlled Tool Ablation Verdict:</strong> In the paired ablation holding this exact checkpoint constant across all 100 held-out tasks, enabling tools boosted success from <strong>43.0% (43/100)</strong> to <strong>64.0% (64/100)</strong> (<span style={{ color: 'var(--color-accent-sage, #15803d)', fontWeight: 700 }}>+21.0% pts</span>, McNemar χ² = 12.90, p = 0.000328), whereas 100M dropped by 7.0% pts.</li>
             </ul>
           </div>
         </div>

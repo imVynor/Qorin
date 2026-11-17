@@ -1,0 +1,44 @@
+{
+  "benchmark_name": "QORIN_Authoritative_HeldOut_100Task_Evaluation_Split",
+  "source_dataset": "modern_gpt/experiments/phase2_experiment_f/stage_13_dataset/test.jsonl",
+  "sha256": "523ec4962c1de25a515fffc10649d7a06da720006a361540fddfd21c1fcab014",
+  "exact_bytes": 331114,
+  "total_records": 100,
+  "stratified_composition": {
+    "corpus_multiturn": 40,
+    "corpus_calibration": 30,
+    "corpus_synthesis": 30
+  },
+  "sub_category_allocation": {
+    "MULTITURN_STANDARD_WEB_PYTHON": 30,
+    "CAL_DIRECT_CONCEPT": 8,
+    "CAL_DIRECT_FACTUAL_WEB": 8,
+    "CAL_CONTRASTIVE_PAIRS": 8,
+    "CAL_DIRECT_PROVIDED_CALC": 6,
+    "SYN_FULL_SUPPORT": 15,
+    "SYN_PARTIAL_SUPPORT": 5,
+    "SYN_CONTRADICTORY_EVIDENCE": 5,
+    "SYN_INSUFFICIENT_EVIDENCE": 5,
+    "MULTITURN_CONTRADICTORY_SOURCES": 3,
+    "MULTITURN_WEB_SUFFICIENT_DIRECT": 3,
+    "MULTITURN_WEB_FAILURE_RECOVERY": 4
+  },
+  "research_category_mapping": {
+    "Parametric knowledge": ["CAL_DIRECT_CONCEPT"],
+    "Current information": ["CAL_DIRECT_FACTUAL_WEB"],
+    "Numerical computation": ["CAL_DIRECT_PROVIDED_CALC"],
+    "Multi-step reasoning": ["MULTITURN_STANDARD_WEB_PYTHON"],
+    "Evidence synthesis": ["SYN_FULL_SUPPORT"],
+    "Partial evidence": ["SYN_PARTIAL_SUPPORT"],
+    "Contradictory evidence": ["SYN_CONTRADICTORY_EVIDENCE", "MULTITURN_CONTRADICTORY_SOURCES"],
+    "Insufficient evidence": ["SYN_INSUFFICIENT_EVIDENCE"],
+    "Tool discrimination": ["CAL_CONTRASTIVE_PAIRS", "MULTITURN_WEB_SUFFICIENT_DIRECT"],
+    "Conversational follow-ups": ["MULTITURN_WEB_FAILURE_RECOVERY"]
+  },
+  "contamination_audit": {
+    "train_overlap": 0,
+    "val_overlap": 0,
+    "max_jaccard_3gram": 0.333,
+    "status": "ZERO_CONTAMINATION_VERIFIED"
+  }
+}

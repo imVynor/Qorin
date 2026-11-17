@@ -116,5 +116,18 @@ export const failureCasesData: FailureCase[] = [
     status: 'active_limitation',
     investigationContext: 'Interactive Agent Verification',
     scientificTakeaway: 'Demonstrates the gap between single-turn tool calling and conversational multi-turn agency in small language models.'
+  },
+  {
+    id: 'FAIL-09-100M-TOOL-DEGRADATION',
+    title: 'Tool Distraction & Schema Ingestion Breakdown at 100M Scale',
+    category: 'live_limitation',
+    categoryLabel: 'Capacity Threshold',
+    query: 'Controlled 100-record ablation test on QORIN-100M (best_val.pt)',
+    observedOutput: 'Tools Disabled: 36.0% (36/100) -> Tools Enabled: 29.0% (29/100) [Net -7.0% regression]',
+    rootCause: 'At 100M parameters (14L, 768D), the model lacks representational bandwidth to ingest tool schemas, format arguments reliably, and filter retrieved passage noise. Tool availability introduced syntax hallucination and context distraction, degrading accuracy.',
+    remedy: 'Discovered critical capacity threshold: External tools only act as a capability multiplier when base model capacity reaches >=500M parameters (where gain was +21.0% pts).',
+    status: 'active_limitation',
+    investigationContext: 'Controlled Tool-Augmentation Ablation (Central Question)',
+    scientificTakeaway: 'Direct empirical refutation of the compensation hypothesis: External tools do NOT compensate for inadequate model capacity below the critical parametric threshold.'
   }
 ];

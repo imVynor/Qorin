@@ -264,6 +264,48 @@
         "Semantic code bugs in generated snippets: model generates valid Python syntax that runs, but occasionally computes wrong algebraic expressions",
         "Round 2 interpretation is faithful to tool outputs, but lacks mathematical verification or error reflection"
       ]
+    },
+    {
+      "id": "final_tool_ablation",
+      "name": "Controlled Tool-Augmentation Ablation (Central Question)",
+      "phase": "Phase 2g",
+      "status": "completed_and_verified",
+      "parent_checkpoint": "modern_gpt/experiments/phase2_experiment_f/stage_14_training_pilot/checkpoints/ckpt_pilot_best.pt",
+      "checkpoint_path": "modern_gpt/experiments/phase2_experiment_f/stage_14_training_pilot/checkpoints/ckpt_pilot_best.pt",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "architecture": {
+        "parameters": 514389504,
+        "vocab_size": 32768,
+        "context_length": 2048
+      },
+      "evaluation_data": {
+        "dataset_name": "Stage 13 Held-Out Multi-Turn Test Dataset",
+        "dataset_sha256": "523ec4962c1de25a515fffc10649d7a06da720006a361540fddfd21c1fcab014",
+        "sample_size": 100,
+        "contamination_rate": 0.0
+      },
+      "evaluation_metrics": {
+        "tools_disabled_success_pct": 43.0,
+        "tools_enabled_success_pct": 64.0,
+        "absolute_gain_pct_pts": 21.0,
+        "relative_gain_pct": 48.8,
+        "mcnemar_chi2": 12.9032,
+        "mcnemar_p_value": 0.000328,
+        "discordant_improved_by_tools": 26,
+        "discordant_regressed_by_tools": 5,
+        "qorin_100m_tools_disabled_pct": 36.0,
+        "qorin_100m_tools_enabled_pct": 29.0,
+        "qorin_100m_net_delta_pct_pts": -7.0,
+        "tools_disabled_mean_latency_sec": 1.291,
+        "tools_enabled_mean_latency_sec": 2.483,
+        "latency_overhead_ratio": 1.92
+      },
+      "hardware_telemetry": {
+        "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "vram_allocated_mb": 1150.0,
+        "eval_time_minutes": 8.5
+      },
+      "main_conclusion": "Tools do not compensate for small capacity (100M drops by 7% pts with tools). Tools amplify performance by +21.0% pts (p=0.000328) once capacity reaches 500M+."
     }
   ]
 }

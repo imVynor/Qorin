@@ -428,3 +428,190 @@ export const stage15BlindEvalData: Stage15HeldOutComparison[] = [
     interpretation: 'Correctly qualified claims when retrieved evidence is incomplete'
   }
 ];
+
+export interface ControlledAblationCategory {
+  category: string;
+  sampleSize: number;
+  toolsDisabledSuccess: number;
+  toolsDisabledPct: number;
+  toolsEnabledSuccess: number;
+  toolsEnabledPct: number;
+  deltaPct: number;
+  relativeImprovementPct: number;
+  toolsDisabledLatencySec: number;
+  toolsEnabledLatencySec: number;
+}
+
+export const controlledAblationSummary = {
+  primaryModel: 'QORIN-500M (514M params, Step 100 Pilot)',
+  totalTasks: 100,
+  toolsDisabledSuccess: 43,
+  toolsDisabledPct: 43.0,
+  toolsDisabled95CI: [34.0, 53.0],
+  toolsEnabledSuccess: 64,
+  toolsEnabledPct: 64.0,
+  toolsEnabled95CI: [55.0, 74.0],
+  absoluteGainPct: 21.0,
+  relativeGainPct: 48.8,
+  mcnemarChi2: 12.9032,
+  mcnemarPValue: 0.000328,
+  statisticallySignificant: true,
+  contingency: {
+    bothSucceeded: 38,
+    toolsDisabledOnly: 5, // regressed with tools
+    toolsEnabledOnly: 26, // improved with tools
+    bothFailed: 31,
+  },
+  twoFactorCapacity: [
+    {
+      model: 'QORIN-100M (100.4M)',
+      toolsDisabledPct: 36.0,
+      toolsDisabledCount: 36,
+      toolsEnabledPct: 29.0,
+      toolsEnabledCount: 29,
+      deltaPct: -7.0,
+      verdict: 'Tools Degrade (-7.0% pts)',
+      explanation: 'Schema parsing errors & context distraction overload sub-threshold capacity',
+    },
+    {
+      model: 'QORIN-500M (514.4M)',
+      toolsDisabledPct: 43.0,
+      toolsDisabledCount: 43,
+      toolsEnabledPct: 64.0,
+      toolsEnabledCount: 64,
+      deltaPct: 21.0,
+      verdict: 'Tools Amplify (+21.0% pts, p < 0.001)',
+      explanation: 'Sufficient representational density routes tool observations effectively',
+    },
+  ],
+  efficiency: {
+    toolsDisabledMeanLatencySec: 1.291,
+    toolsEnabledMeanLatencySec: 2.483,
+    overheadRatio: 1.92,
+    meanGenerationSec: 2.47,
+    meanToolExecutionSec: 0.013,
+  },
+};
+
+export const controlledAblationCategories: ControlledAblationCategory[] = [
+  {
+    category: 'Parametric knowledge',
+    sampleSize: 8,
+    toolsDisabledSuccess: 1,
+    toolsDisabledPct: 12.5,
+    toolsEnabledSuccess: 8,
+    toolsEnabledPct: 100.0,
+    deltaPct: 87.5,
+    relativeImprovementPct: 700.0,
+    toolsDisabledLatencySec: 0.733,
+    toolsEnabledLatencySec: 1.029,
+  },
+  {
+    category: 'Conversational follow-ups',
+    sampleSize: 4,
+    toolsDisabledSuccess: 1,
+    toolsDisabledPct: 25.0,
+    toolsEnabledSuccess: 4,
+    toolsEnabledPct: 100.0,
+    deltaPct: 75.0,
+    relativeImprovementPct: 300.0,
+    toolsDisabledLatencySec: 3.613,
+    toolsEnabledLatencySec: 3.365,
+  },
+  {
+    category: 'Multi-step reasoning',
+    sampleSize: 30,
+    toolsDisabledSuccess: 11,
+    toolsDisabledPct: 36.7,
+    toolsEnabledSuccess: 20,
+    toolsEnabledPct: 66.7,
+    deltaPct: 30.0,
+    relativeImprovementPct: 81.8,
+    toolsDisabledLatencySec: 1.857,
+    toolsEnabledLatencySec: 4.089,
+  },
+  {
+    category: 'Current information',
+    sampleSize: 8,
+    toolsDisabledSuccess: 6,
+    toolsDisabledPct: 75.0,
+    toolsEnabledSuccess: 7,
+    toolsEnabledPct: 87.5,
+    deltaPct: 12.5,
+    relativeImprovementPct: 16.7,
+    toolsDisabledLatencySec: 0.58,
+    toolsEnabledLatencySec: 0.496,
+  },
+  {
+    category: 'Tool discrimination',
+    sampleSize: 11,
+    toolsDisabledSuccess: 8,
+    toolsDisabledPct: 72.7,
+    toolsEnabledSuccess: 9,
+    toolsEnabledPct: 81.8,
+    deltaPct: 9.1,
+    relativeImprovementPct: 12.5,
+    toolsDisabledLatencySec: 1.069,
+    toolsEnabledLatencySec: 1.802,
+  },
+  {
+    category: 'Numerical computation',
+    sampleSize: 6,
+    toolsDisabledSuccess: 2,
+    toolsDisabledPct: 33.3,
+    toolsEnabledSuccess: 2,
+    toolsEnabledPct: 33.3,
+    deltaPct: 0.0,
+    relativeImprovementPct: 0.0,
+    toolsDisabledLatencySec: 1.58,
+    toolsEnabledLatencySec: 0.895,
+  },
+  {
+    category: 'Evidence synthesis',
+    sampleSize: 15,
+    toolsDisabledSuccess: 14,
+    toolsDisabledPct: 93.3,
+    toolsEnabledSuccess: 14,
+    toolsEnabledPct: 93.3,
+    deltaPct: 0.0,
+    relativeImprovementPct: 0.0,
+    toolsDisabledLatencySec: 0.946,
+    toolsEnabledLatencySec: 1.816,
+  },
+  {
+    category: 'Partial evidence',
+    sampleSize: 5,
+    toolsDisabledSuccess: 0,
+    toolsDisabledPct: 0.0,
+    toolsEnabledSuccess: 0,
+    toolsEnabledPct: 0.0,
+    deltaPct: 0.0,
+    relativeImprovementPct: 0.0,
+    toolsDisabledLatencySec: 0.613,
+    toolsEnabledLatencySec: 1.496,
+  },
+  {
+    category: 'Contradictory evidence',
+    sampleSize: 8,
+    toolsDisabledSuccess: 0,
+    toolsDisabledPct: 0.0,
+    toolsEnabledSuccess: 0,
+    toolsEnabledPct: 0.0,
+    deltaPct: 0.0,
+    relativeImprovementPct: 0.0,
+    toolsDisabledLatencySec: 0.854,
+    toolsEnabledLatencySec: 2.092,
+  },
+  {
+    category: 'Insufficient evidence',
+    sampleSize: 5,
+    toolsDisabledSuccess: 0,
+    toolsDisabledPct: 0.0,
+    toolsEnabledSuccess: 0,
+    toolsEnabledPct: 0.0,
+    deltaPct: 0.0,
+    relativeImprovementPct: 0.0,
+    toolsDisabledLatencySec: 0.622,
+    toolsEnabledLatencySec: 4.664,
+  },
+];

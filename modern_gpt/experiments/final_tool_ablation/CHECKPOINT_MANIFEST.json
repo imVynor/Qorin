@@ -1,0 +1,30 @@
+{
+  "experiment_name": "QORIN_Final_Tool_Ablation_Evaluation",
+  "created_at_utc": "2026-11-17T16:42:00Z",
+  "primary_model": {
+    "name": "QORIN-500M SFT Experiment F (Autonomous Multi-Turn)",
+    "scale": "514M",
+    "architecture": "20L-24Q-4KV (GQA 6:1), SwiGLU, RMSNorm, BPE-32k",
+    "checkpoint_path": "modern_gpt/experiments/phase2_experiment_f/stage_14_training_pilot/checkpoints/ckpt_pilot_best.pt",
+    "sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+    "exact_bytes": 2078616611,
+    "tokenizer_dir": "modern_gpt/artifacts/tokenizer_32k",
+    "vocab_size": 32000,
+    "context_window": 2048,
+    "parent_checkpoint": "modern_gpt/experiments/phase2_experiment_d/stage_3_training/checkpoints/ckpt_experiment_d_best.pt",
+    "parent_sha256": "c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7"
+  },
+  "secondary_model": {
+    "name": "QORIN-100M SFT v3 (4K Context)",
+    "scale": "120M",
+    "architecture": "14L-12Q-4KV (GQA 3:1), SwiGLU, RMSNorm, RoPE s=8.0, BPE-16k",
+    "checkpoint_path": "modern_gpt/checkpoints/modern_gpts_100m_sft_4k_v3/best_val.pt",
+    "sha256": "d771ea9f5465e3bcf2b619a32f7797742e500a01704a4d5f582eb5db4adc7510",
+    "exact_bytes": 617289583,
+    "tokenizer_dir": "modern_gpt/artifacts/tokenizer_16k_v2",
+    "vocab_size": 16000,
+    "context_window": 4096,
+    "parent_checkpoint": "modern_gpt/archive/100m_baseline/checkpoints/step_04_4k_pilot_step2000.pt",
+    "parent_sha256": "63f82e705888a70ff5c47796a56ec39d564fa78a221f731776953ebbb57eb015"
+  }
+}

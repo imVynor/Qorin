@@ -35,9 +35,9 @@ export const Journey: React.FC = () => {
           <div className={styles.kicker}>Chronological Scientific Monograph</div>
           <h1 className={styles.title}>The QORIN Research Journey</h1>
           <div className={styles.lead}>
-            An honest, 8-chapter narrative documenting the evolution of our thinking: why we formulated
+            An honest, 9-chapter narrative documenting the evolution of our thinking: why we formulated
             the research question, how we designed and scaled the Transformer models, why retrieval became mandatory,
-            how the harness evolved, and the critical failure autopsies that guided our engineering.
+            how the harness evolved, the controlled tool ablation verdict, and the next research frontier at five billion tokens.
           </div>
         </div>
       </header>
@@ -46,7 +46,7 @@ export const Journey: React.FC = () => {
         <div className={styles.journeyLayout}>
           {/* Sticky Navigation Timeline */}
           <aside className={styles.timelineNav}>
-            <div className={styles.navHeading}>8 Research Chapters</div>
+            <div className={styles.navHeading}>{journeyChaptersData.length} Research Chapters</div>
             {journeyChaptersData.map((chap) => (
               <a
                 key={chap.id}
@@ -86,7 +86,7 @@ export const Journey: React.FC = () => {
             {journeyChaptersData.map((chap) => (
               <article key={chap.id} id={chap.slug} className={styles.chapterArticle}>
                 <div className={styles.chapterMetaRow}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                     <span style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', fontWeight: 700, color: 'var(--color-accent-indigo)' }}>
                       CHAPTER 0{chap.id}
                     </span>

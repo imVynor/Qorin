@@ -142,3 +142,59 @@
   }
 }
 
+
+/* Team Contributions Section */
+.allocationBadge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-accent-indigo);
+  background: rgba(79, 70, 229, 0.08);
+  border: 1px solid rgba(79, 70, 229, 0.2);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: var(--space-3);
+}
+
+.milestonesBlock {
+  margin: var(--space-3) 0 var(--space-4) 0;
+  padding: var(--space-3);
+  background: var(--color-paper-subtle);
+  border: 1px solid var(--color-rule-subtle);
+  border-radius: var(--radius-xs);
+}
+
+.milestonesHeading {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-muted);
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.milestonesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.milestoneItem {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-ink-primary);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.milestoneCode {
+  color: var(--color-accent-indigo);
+  font-weight: 700;
+  flex-shrink: 0;
+}

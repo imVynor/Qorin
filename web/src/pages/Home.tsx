@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { PretrainLossChart } from '../components/visualizations/PretrainLossChart';
 import { CapabilityBottleneckChart } from '../components/visualizations/CapabilityBottleneckChart';
 import { SFTLossBehavioralChart } from '../components/visualizations/SFTLossBehavioralChart';
+import { ControlledAblationFigure } from '../components/visualizations/ControlledAblationFigure';
 import { journeyChaptersData } from '../data/journeyData';
 import { MathView } from '../components/common/MathView';
 import { BookOpen, Cpu, Terminal, ShieldAlert, Award } from 'lucide-react';
@@ -155,13 +156,49 @@ export const Home: React.FC = () => {
       </section>
 
       {/* =========================================================
-          3. THE 8-CHAPTER RESEARCH JOURNEY OVERVIEW
+          2b. CONTROLLED TOOL-AUGMENTATION ABLATION (THE EMPIRICAL ANSWER)
+          ========================================================= */}
+      <section className={styles.storySection}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <div className={styles.kicker}>Empirical Resolution</div>
+            <h2 className={styles.storyHeading}>Do External Tools Actually Improve Small LMs?</h2>
+          </div>
+
+          <p className={styles.storyParagraph} style={{ maxWidth: 'var(--measure-prose)' }}>
+            We directly answered our central research question through a rigorous controlled ablation, holding checkpoints constant across the 100-record Stage 13 held-out benchmark:
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 'var(--space-4)', margin: 'var(--space-4) 0 var(--space-6) 0' }}>
+            <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-rule)', borderRadius: 'var(--radius-sm)', padding: 'var(--space-4)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', textTransform: 'uppercase', color: 'var(--color-ink-muted)' }}>Primary 500M Finding</div>
+              <div style={{ fontSize: 'var(--text-xl)', fontWeight: 700, color: 'var(--color-accent-sage, #15803d)', margin: '4px 0' }}>+21.0% Absolute Gain</div>
+              <p style={{ fontSize: '12px', color: 'var(--color-ink-secondary)', margin: 0 }}>
+                Tools Disabled: <strong>43.0%</strong> &rarr; Tools Enabled: <strong>64.0%</strong> (relative +48.8%). McNemar's paired test yields χ² = 12.90, p = 0.000328 (statistically significant).
+              </p>
+            </div>
+
+            <div style={{ background: 'var(--color-surface)', border: '1px solid var(--color-rule)', borderRadius: 'var(--radius-sm)', padding: 'var(--space-4)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '11px', textTransform: 'uppercase', color: 'var(--color-ink-muted)' }}>100M Scale Finding</div>
+              <div style={{ fontSize: 'var(--text-xl)', fontWeight: 700, color: 'var(--color-accent-coral, #b91c1c)', margin: '4px 0' }}>-7.0% Net Regression</div>
+              <p style={{ fontSize: '12px', color: 'var(--color-ink-secondary)', margin: 0 }}>
+                Tools Disabled: <strong>36.0%</strong> &rarr; Tools Enabled: <strong>29.0%</strong>. Tools do not compensate for inadequate capacity; sub-threshold models suffer schema parsing breakdown and context distraction.
+              </p>
+            </div>
+          </div>
+
+          <ControlledAblationFigure figureNumber={1} />
+        </div>
+      </section>
+
+      {/* =========================================================
+          3. THE 9-CHAPTER RESEARCH JOURNEY OVERVIEW
           ========================================================= */}
       <section className={styles.storySection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <div className={styles.kicker}>The Scientific Narrative</div>
-            <h2 className={styles.storyHeading}>The 8-Chapter Research Journey</h2>
+            <h2 className={styles.storyHeading}>The 9-Chapter Research Journey</h2>
           </div>
 
           <p className={styles.storyParagraph} style={{ maxWidth: 'var(--measure-prose)' }}>
