@@ -28,11 +28,14 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
+          cache-dependency-path: web/package-lock.json
 
       - name: Install Dependencies
+        working-directory: web
         run: npm ci
 
       - name: Build Web Application
+        working-directory: web
         run: npm run build:pages
 
       - name: Upload GitHub Pages Artifact
