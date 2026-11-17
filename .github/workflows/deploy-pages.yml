@@ -36,6 +36,8 @@ jobs:
 
       - name: Build Web Application
         working-directory: web
+        env:
+          VITE_API_URL: https://vynor-stt4.hf.space/api
         run: npm run build:pages
 
       - name: Upload GitHub Pages Artifact

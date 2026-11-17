@@ -11,16 +11,16 @@ import type { UsageSummaryResponse } from '../types/usage';
 
 // Configurable API base URL via Vite environment variables
 // In development, defaults to '/api' which Vite proxies to http://127.0.0.1:8000
-// In production builds (e.g. GitHub Pages), NEVER silently fall back to '/api' when no backend URL is configured
+// In production builds (GitHub Pages), connects to the authorized remote Hugging Face CPU backend
+const DEFAULT_REMOTE_BACKEND = 'https://vynor-stt4.hf.space/api';
 const configuredEnvUrl = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL;
-
-export const isBackendConfigured: boolean = Boolean(
-  configuredEnvUrl || (import.meta.env.DEV && !import.meta.env.VITE_STATIC_MODE)
-);
+const isExplicitStatic = Boolean(import.meta.env.VITE_STATIC_MODE);
 
 export const API_BASE: string = configuredEnvUrl
   ? configuredEnvUrl.replace(/\/$/, '')
-  : (import.meta.env.DEV && !import.meta.env.VITE_STATIC_MODE ? '/api' : '');
+  : (import.meta.env.DEV ? '/api' : (isExplicitStatic ? '' : DEFAULT_REMOTE_BACKEND));
+
+export const isBackendConfigured: boolean = Boolean(API_BASE && !isExplicitStatic);
 
 export function getApiBaseUrl(): string {
   return API_BASE;
@@ -57,22 +57,14 @@ export function clearComputeToken(): void {
 
 export function isComputeAuthorized(): boolean {
   const token = getComputeToken();
-  return Boolean(token && (token.toUpperCase() === 'UDIT BHATIA' || token.toUpperCase() === 'UDIT_BHATIA_AUTHORIZED'));
+  if (!token) return false;
+  const clean = token.trim();
+  return clean.startsWith('qorin_tok_');
 }
 
 export async function verifyComputeAccess(password: string): Promise<{ success: boolean; token?: string; message: string }> {
   if (!isBackendConfigured || !API_BASE) {
-    // In static mode, validate locally for demonstration
-    const clean = password.trim().toUpperCase();
-    if (clean === 'UDIT BHATIA') {
-      setComputeToken('UDIT_BHATIA_AUTHORIZED');
-      return {
-        success: true,
-        token: 'UDIT_BHATIA_AUTHORIZED',
-        message: 'Compute access authorized: Welcome, Prof. Udit Bhatia! (Static Mode Simulation)',
-      };
-    }
-    throw new Error("Invalid compute access password. Hint: Professor's name in ALL CAPS (____ ______ / XXXX XXXXXX)");
+    throw new Error('Inference backend is not connected. The website is operating in static showcase mode.');
   }
 
   const res = await fetch(`${API_BASE}/auth/verify-compute`, {
@@ -83,7 +75,7 @@ export async function verifyComputeAccess(password: string): Promise<{ success: 
 
   if (!res.ok) {
     const err = await res.json().catch(() => ({ detail: res.statusText }));
-    throw new Error(err.detail || "Invalid compute access password. Hint: Professor's name in ALL CAPS (____ ______ / XXXX XXXXXX)");
+    throw new Error(err.detail || 'Invalid evaluator authorization key.');
   }
 
   const data = await res.json();
@@ -91,6 +83,21 @@ export async function verifyComputeAccess(password: string): Promise<{ success: 
     setComputeToken(data.token);
   }
   return data;
+}
+
+export async function logoutComputeAccess(): Promise<void> {
+  const token = getComputeToken();
+  if (token && isBackendConfigured && API_BASE) {
+    try {
+      await fetch(`${API_BASE}/auth/logout`, {
+        method: 'POST',
+        headers: { 'X-Compute-Token': token },
+      });
+    } catch {
+      // Ignore network errors on logout
+    }
+  }
+  clearComputeToken();
 }
 
 export async function getHealth(): Promise<{ status: string; telemetry: TelemetryInfo }> {

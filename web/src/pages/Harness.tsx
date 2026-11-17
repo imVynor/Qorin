@@ -11,6 +11,7 @@ import {
   AlertCircle,
   Lock,
   Unlock,
+  Loader2,
 } from 'lucide-react';
 import type { ModelInfo, TelemetryInfo, GenerationSettings } from '../types/harness';
 import {
@@ -111,6 +112,8 @@ export const Harness: React.FC = () => {
   const [settings, setSettings] = useState<GenerationSettings>(DEFAULT_SETTINGS);
   const [isLoadingModel, setIsLoadingModel] = useState<boolean>(false);
   const [isBackendAvailable, setIsBackendAvailable] = useState<boolean>(true);
+  const [connectionState, setConnectionState] = useState<'online' | 'offline' | 'waking' | 'checking'>('checking');
+  const [wakeAttempt, setWakeAttempt] = useState<number>(0);
   const [authModalOpen, setAuthModalOpen] = useState<boolean>(false);
   const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
   const [lastStats, setLastStats] = useState<{
@@ -132,14 +135,53 @@ export const Harness: React.FC = () => {
     initHarness();
   }, []);
 
+  const pollAwakening = async () => {
+    setConnectionState('waking');
+    const MAX_ATTEMPTS = 12;
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      setWakeAttempt(attempt);
+      await new Promise((r) => setTimeout(r, 4000));
+      try {
+        const healthData = await getHealth();
+        if (healthData.status === 'healthy') {
+          const modelsList = await getModels().catch(() => []);
+          setIsBackendAvailable(true);
+          setConnectionState('online');
+          setWakeAttempt(0);
+          if (healthData.telemetry) setTelemetry(healthData.telemetry);
+          const activeList = modelsList.length > 0 ? modelsList : FALLBACK_MODELS;
+          setModels(activeList);
+          const defaultM =
+            activeList.find((m) => m.id === 'qorin-500m-sft-exp-f') ||
+            activeList.find((m) => m.id === 'qorin-100m-sft-v3') ||
+            activeList[0] ||
+            null;
+          setSelectedModel(defaultM);
+          return;
+        }
+      } catch {
+        // Space is still awakening, continue polling
+      }
+    }
+
+    setIsBackendAvailable(false);
+    setConnectionState('offline');
+    setWakeAttempt(0);
+    setModels(FALLBACK_MODELS);
+    setSelectedModel(FALLBACK_MODELS[0]);
+  };
+
   const initHarness = async () => {
     if (!isBackendConfigured) {
       setIsBackendAvailable(false);
+      setConnectionState('offline');
       setTelemetry(null);
       setModels(FALLBACK_MODELS);
       setSelectedModel(FALLBACK_MODELS[0]);
       return;
     }
+
+    setConnectionState('checking');
 
     try {
       const [healthData, modelsList] = await Promise.all([
@@ -148,29 +190,34 @@ export const Harness: React.FC = () => {
       ]);
 
       const online = healthData.status === 'healthy' || modelsList.length > 0;
-      setIsBackendAvailable(online);
+      if (online) {
+        setIsBackendAvailable(true);
+        setConnectionState('online');
+        setWakeAttempt(0);
 
-      if (healthData.telemetry) {
-        setTelemetry(healthData.telemetry);
-      } else {
-        setTelemetry(null);
+        if (healthData.telemetry) {
+          setTelemetry(healthData.telemetry);
+        } else {
+          setTelemetry(null);
+        }
+
+        const activeList = modelsList.length > 0 ? modelsList : FALLBACK_MODELS;
+        setModels(activeList);
+
+        const defaultM =
+          activeList.find((m) => m.id === 'qorin-500m-sft-exp-f') ||
+          activeList.find((m) => m.id === 'qorin-100m-sft-v3') ||
+          activeList[0] ||
+          null;
+        setSelectedModel(defaultM);
+        return;
       }
-
-      const activeList = modelsList.length > 0 ? modelsList : FALLBACK_MODELS;
-      setModels(activeList);
-
-      const defaultM =
-        activeList.find((m) => m.id === 'qorin-500m-sft-exp-f') ||
-        activeList.find((m) => m.id === 'qorin-100m-sft-v3') ||
-        activeList[0] ||
-        null;
-      setSelectedModel(defaultM);
     } catch (err) {
-      console.warn('Backend offline; running in static showcase mode:', err);
-      setIsBackendAvailable(false);
-      setModels(FALLBACK_MODELS);
-      setSelectedModel(FALLBACK_MODELS[0]);
+      console.warn('Initial connection probe failed:', err);
     }
+
+    // Configured backend failed initial ping: could be sleeping Hugging Face Space
+    pollAwakening();
   };
 
   const handleSelectModel = async (modelId: string) => {
@@ -309,7 +356,7 @@ export const Harness: React.FC = () => {
                     type="button"
                     onClick={() => setAuthModalOpen(true)}
                     className={styles.telemetryPillAuthUnlocked}
-                    title="Compute Unlocked: Prof. Udit Bhatia. Click to inspect or revoke."
+                    title="Compute Unlocked. Click to inspect or revoke authorization."
                   >
                     <Unlock size={11} />
                     <span>Compute: Authorized</span>
@@ -319,7 +366,7 @@ export const Harness: React.FC = () => {
                     type="button"
                     onClick={() => setAuthModalOpen(true)}
                     className={styles.telemetryPillAuthLocked}
-                    title="Workstation GPU compute locked. Click to enter evaluator password."
+                    title="Compute execution locked. Click to enter evaluator access key."
                   >
                     <Lock size={11} />
                     <span>Compute: Locked</span>
@@ -344,8 +391,37 @@ export const Harness: React.FC = () => {
           </div>
         </div>
 
-        {/* Backend Offline Banner */}
-        {!isBackendAvailable && (
+        {/* Remote Hugging Face Space Awakening Banner */}
+        {connectionState === 'waking' && (
+          <div
+            style={{
+              padding: '10px 14px',
+              marginBottom: 'var(--space-4)',
+              background: 'rgba(99, 102, 241, 0.08)',
+              border: '1px solid rgba(99, 102, 241, 0.25)',
+              borderRadius: 'var(--radius-xs)',
+              fontSize: '12px',
+              lineHeight: 1.5,
+              color: 'var(--color-ink-secondary)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '12px',
+              flexWrap: 'wrap',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <Loader2 size={15} className={styles.spin} style={{ color: 'var(--color-accent-indigo)', flexShrink: 0 }} />
+              <div>
+                <strong style={{ color: 'var(--color-ink-primary)' }}>Awakening Hugging Face CPU Container:</strong>{' '}
+                The remote inference backend is spinning up from idle sleep (probe {wakeAttempt}/12). Container initialization typically takes 30–50 seconds.
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Backend Offline / Static Showcase Banner */}
+        {connectionState !== 'waking' && !isBackendAvailable && (
           <div
             style={{
               padding: '10px 14px',
@@ -367,7 +443,9 @@ export const Harness: React.FC = () => {
               <AlertCircle size={15} style={{ color: 'var(--color-accent-amber)', flexShrink: 0 }} />
               <div>
                 <strong style={{ color: 'var(--color-ink-primary)' }}>Inference Backend Service Offline:</strong>{' '}
-                The website is operating in static mode. Architecture blueprints, experiment archives, and research narratives are fully accessible. To run live local inference, start the Python backend (<code>python -m uvicorn backend.app:app --port 8000</code>).
+                {isBackendConfigured
+                  ? 'Unable to reach the remote Hugging Face CPU backend. The website is operating in static showcase mode.'
+                  : 'The website is operating in static mode. Architecture blueprints, experiment archives, and research narratives are fully accessible.'}
               </div>
             </div>
             <button
@@ -445,7 +523,7 @@ export const Harness: React.FC = () => {
         )}
       </main>
 
-      {/* Compute Access Protection Modal (Prof. Udit Bhatia) */}
+      {/* Evaluator Compute Access Protection Modal */}
       <ComputeAuthModal
         isOpen={authModalOpen}
         onClose={() => setAuthModalOpen(false)}

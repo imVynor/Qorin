@@ -13,7 +13,7 @@ import {
 import {
   isComputeAuthorized,
   verifyComputeAccess,
-  clearComputeToken,
+  logoutComputeAccess,
 } from '../../services/api';
 import styles from './ComputeAuthModal.module.css';
 
@@ -66,18 +66,18 @@ export const ComputeAuthModal: React.FC<ComputeAuthModalProps> = ({
     try {
       const res = await verifyComputeAccess(password);
       setIsAuthorized(true);
-      setSuccessMessage(res.message || 'Compute access authorized: Welcome, Prof. Udit Bhatia!');
+      setSuccessMessage(res.message || 'Evaluator access authorized. Compute capabilities unlocked.');
       setPassword('');
       if (onAuthorized) onAuthorized();
     } catch (err: any) {
-      setErrorMessage(err.message || "Invalid compute access password. Hint: Professor's name in ALL CAPS (____ ______ / XXXX XXXXXX)");
+      setErrorMessage(err.message || 'Invalid evaluator authorization key.');
     } finally {
       setIsVerifying(false);
     }
   };
 
-  const handleRevoke = () => {
-    clearComputeToken();
+  const handleRevoke = async () => {
+    await logoutComputeAccess();
     setIsAuthorized(false);
     setSuccessMessage(null);
     setErrorMessage(null);
@@ -127,7 +127,7 @@ export const ComputeAuthModal: React.FC<ComputeAuthModalProps> = ({
               )}
             </div>
             <h2 id="compute-auth-title" className={styles.title}>
-              Personal Compute Authorization
+              Evaluator Compute Authorization
             </h2>
             <p className={styles.subtitle}>
               Gated execution access for course evaluation &amp; research inspection.
@@ -152,7 +152,7 @@ export const ComputeAuthModal: React.FC<ComputeAuthModalProps> = ({
               <div className={styles.statusContent}>
                 <div className={styles.statusHeading}>Compute Access Authorized</div>
                 <div className={styles.statusDescription}>
-                  {successMessage || 'Welcome, Prof. Udit Bhatia! Personal NVIDIA RTX GPU inference, weight loading, and Python sandbox execution are unlocked.'}
+                  {successMessage || 'Evaluator access authorized. Inference and execution capabilities unlocked.'}
                 </div>
                 <div style={{ marginTop: '8px' }}>
                   <button
@@ -170,27 +170,20 @@ export const ComputeAuthModal: React.FC<ComputeAuthModalProps> = ({
               <div className={styles.statusCardLocked}>
                 <Lock size={18} className={styles.statusIconLocked} />
                 <div className={styles.statusContent}>
-                  <div className={styles.statusHeading}>Workstation GPU Gate Active</div>
+                  <div className={styles.statusHeading}>Evaluator Compute Gate Active</div>
                   <div className={styles.statusDescription}>
-                    To prevent unauthenticated public compute abuse on the author&apos;s personal hardware, live PyTorch model inference and sandbox execution require authorization.
+                    To prevent unauthenticated compute abuse on backend resources, live PyTorch model inference, weight loading, and sandbox execution require authorization.
                   </div>
                 </div>
               </div>
 
-              {/* Password Hint Box with visual blanks */}
+              {/* Informative Security Notice */}
               <div className={styles.hintBox}>
                 <div className={styles.hintHeader}>
-                  <span className={styles.hintLabel}>Password Hint</span>
-                  <span className={styles.hintPattern}>Pattern: XXXX XXXXXX</span>
+                  <span className={styles.hintLabel}>Authorization Notice</span>
                 </div>
-
-                <div className={styles.blanksContainer}>
-                  <div className={styles.blanksWord} title="First name: 4 letters">____</div>
-                  <div className={styles.blanksWord} title="Last name: 6 letters">______</div>
-                </div>
-
                 <div className={styles.hintNote}>
-                  Hint: Professor&apos;s name in ALL CAPS (4 letters, space, 6 letters).
+                  Confidential access credentials are provided separately to course evaluators and reviewers.
                 </div>
               </div>
 
@@ -198,15 +191,15 @@ export const ComputeAuthModal: React.FC<ComputeAuthModalProps> = ({
               <form onSubmit={handleSubmit} className={styles.authForm}>
                 <div className={styles.inputGroup}>
                   <label htmlFor="compute-password-input" className={styles.inputLabel}>
-                    Authorization Password
+                    Evaluator Authorization Key
                   </label>
                   <input
                     id="compute-password-input"
-                    type="text"
+                    type="password"
                     className={styles.inputField}
-                    placeholder="ENTER PASSWORD (ALL CAPS)..."
+                    placeholder="Enter confidential access key..."
                     value={password}
-                    onChange={(e) => setPassword(e.target.value.toUpperCase())}
+                    onChange={(e) => setPassword(e.target.value)}
                     autoComplete="off"
                     autoFocus
                   />
