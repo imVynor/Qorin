@@ -1,0 +1,10 @@
+{
+  "deterministic_test_performed": true,
+  "optimizer_tested": "bnb.optim.AdamW8bit",
+  "step_2_checkpoint": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_b\\stage_1_preflight\\smoke_checkpoints\\disposable_step_2.pt",
+  "loss_difference": 0.0,
+  "max_weight_difference": 0.0,
+  "numerical_tolerance": 0.0001,
+  "exact_match_within_tolerance": true,
+  "status": "PASS"
+}

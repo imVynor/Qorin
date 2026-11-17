@@ -1,0 +1,234 @@
+{
+  "evaluation_name": "ModernGPT-S 500M \u2014 Phase 1D Evaluation Suite",
+  "timestamp_start": "2026-11-13T18:45:15.789579",
+  "timestamp_end": "2026-11-13T18:56:45.642513",
+  "duration_seconds": 689.85,
+  "target_model": {
+    "name": "ModernGPT-S 500M (500M Pretrain Milestone)",
+    "checkpoint_path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\checkpoints\\checkpoint_501M\\ckpt_501m_tokens_501678080.pt",
+    "checkpoint_sha256": "a57556554144bdba52bfc81072e097627280e3d7bc2e580719f071b3521f9122",
+    "parameters_trainable": 514389504,
+    "parameters_total_tensor_elements": 569964032,
+    "architecture": "20L-24Q-4KV GQA (6:1), SwiGLU, RMSNorm, RoPE",
+    "context_length": 2048,
+    "vocab_size": 32768,
+    "tokenizer_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+    "tokens_trained": 501678080,
+    "global_step": 15310
+  },
+  "baseline_100m": {
+    "name": "Base ModernGPT-S 100M Pretrained",
+    "checkpoint_path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\archive\\100m_baseline\\checkpoints\\base_100m_best_val.pt",
+    "parameters": 104807424,
+    "context_length": 512,
+    "vocab_size": 16000,
+    "tokens_trained": 1499987968
+  },
+  "validation_loss": {
+    "overall_loss": 3.0666,
+    "overall_perplexity": 21.47,
+    "total_tokens_evaluated": 358400,
+    "early_tokens_loss": 3.0662,
+    "late_tokens_loss": 2.8642,
+    "domains": {
+      "web": {
+        "loss": 3.5868,
+        "perplexity": 36.12,
+        "tokens_evaluated": 51200,
+        "weight": 0.4
+      },
+      "edu": {
+        "loss": 2.6204,
+        "perplexity": 13.74,
+        "tokens_evaluated": 51200,
+        "weight": 0.15
+      },
+      "code": {
+        "loss": 2.0272,
+        "perplexity": 7.59,
+        "tokens_evaluated": 51200,
+        "weight": 0.15
+      },
+      "wiki": {
+        "loss": 3.5398,
+        "perplexity": 34.46,
+        "tokens_evaluated": 51200,
+        "weight": 0.075
+      },
+      "math": {
+        "loss": 2.8965,
+        "perplexity": 18.11,
+        "tokens_evaluated": 51200,
+        "weight": 0.075
+      },
+      "books": {
+        "loss": 3.4118,
+        "perplexity": 30.32,
+        "tokens_evaluated": 51200,
+        "weight": 0.1
+      },
+      "dialogue": {
+        "loss": 2.2169,
+        "perplexity": 9.18,
+        "tokens_evaluated": 51200,
+        "weight": 0.05
+      }
+    }
+  },
+  "behavioral_evaluation": {
+    "total_cases": 100,
+    "overall_isolated_accuracy_pct": 2.0,
+    "overall_multiturn_accuracy_pct": 3.0,
+    "overall_delta_history_pct": -1.0,
+    "overall_contamination_rate_pct": 23.0,
+    "overall_attractor_rate_pct": 0.0,
+    "by_category": {
+      "topic_switching": {
+        "total": 20,
+        "isolated_accuracy_pct": 0.0,
+        "multiturn_accuracy_pct": 0.0,
+        "delta_history_pct": 0.0,
+        "attractor_rate_pct": 0.0
+      },
+      "irrelevant_context_suppression": {
+        "total": 20,
+        "isolated_accuracy_pct": 0.0,
+        "multiturn_accuracy_pct": 0.0,
+        "delta_history_pct": 0.0,
+        "attractor_rate_pct": 0.0
+      },
+      "relevant_context_retention": {
+        "total": 20,
+        "isolated_accuracy_pct": 10.0,
+        "multiturn_accuracy_pct": 15.0,
+        "delta_history_pct": -5.0,
+        "attractor_rate_pct": 0.0
+      },
+      "returning_to_previous_topics": {
+        "total": 10,
+        "isolated_accuracy_pct": 0.0,
+        "multiturn_accuracy_pct": 0.0,
+        "delta_history_pct": 0.0,
+        "attractor_rate_pct": 0.0
+      },
+      "direct_factual_qa": {
+        "total": 10,
+        "isolated_accuracy_pct": 0.0,
+        "multiturn_accuracy_pct": 0.0,
+        "delta_history_pct": 0.0,
+        "attractor_rate_pct": 0.0
+      },
+      "simple_arithmetic": {
+        "total": 10,
+        "isolated_accuracy_pct": 0.0,
+        "multiturn_accuracy_pct": 0.0,
+        "delta_history_pct": 0.0,
+        "attractor_rate_pct": 0.0
+      },
+      "conversational_appropriateness": {
+        "total": 10,
+        "isolated_accuracy_pct": 0.0,
+        "multiturn_accuracy_pct": 0.0,
+        "delta_history_pct": 0.0,
+        "attractor_rate_pct": 0.0
+      }
+    }
+  },
+  "coding_benchmark": {
+    "total_tasks": 50,
+    "ast_valid_count": 33,
+    "ast_valid_pct": 66.0,
+    "functional_pass_count": 9,
+    "functional_pass_pct": 18.0
+  },
+  "json_benchmark": {
+    "total_tasks": 50,
+    "json_valid_count": 1,
+    "json_valid_pct": 2.0,
+    "schema_valid_count": 0,
+    "schema_valid_pct": 0.0
+  },
+  "math_benchmark": {
+    "total_tasks": 50,
+    "correct_count": 0,
+    "accuracy_pct": 0.0,
+    "by_type": {
+      "arithmetic": {
+        "total": 18,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "percentage": {
+        "total": 6,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "fractions": {
+        "total": 2,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "algebra": {
+        "total": 7,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "sequence": {
+        "total": 6,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "word_problem": {
+        "total": 6,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "order_of_operations": {
+        "total": 5,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      }
+    }
+  },
+  "tool_calling_benchmark": {
+    "total_tasks": 20,
+    "tool_tag_count": 0,
+    "tool_tag_pct": 0.0,
+    "intent_accuracy_pct": 35.0,
+    "note": "ModernGPT-S 500M is a base pretrained checkpoint; formal tool invocation syntax is learned during supervised instruction fine-tuning."
+  },
+  "generation_diagnostics": {
+    "greedy": {
+      "mean_length": 100.0,
+      "distinct_1": 0.237,
+      "distinct_2": 0.31,
+      "repetition_loop_rate_pct": 20.0
+    },
+    "conservative": {
+      "mean_length": 100.0,
+      "distinct_1": 0.531,
+      "distinct_2": 0.689,
+      "repetition_loop_rate_pct": 0.0
+    },
+    "creative": {
+      "mean_length": 100.0,
+      "distinct_1": 0.758,
+      "distinct_2": 0.949,
+      "repetition_loop_rate_pct": 0.0
+    }
+  },
+  "retrieval_matrix": {
+    "scores": {
+      "A_100M_Off": 3,
+      "B_100M_On": 4,
+      "C_500M_Off": 2,
+      "D_500M_On": 2
+    },
+    "accuracy_pct": {
+      "A_100M_Off": 30.0,
+      "B_100M_On": 40.0,
+      "C_500M_Off": 20.0,
+      "D_500M_On": 20.0
+    }
+  }
+}

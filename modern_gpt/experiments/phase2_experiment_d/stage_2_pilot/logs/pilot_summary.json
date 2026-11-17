@@ -1,0 +1,117 @@
+{
+  "experiment": "modern_gpt_experiment_d_pilot",
+  "parent_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_c\\stage_3_training\\checkpoints\\ckpt_experiment_c_final.pt",
+    "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b"
+  },
+  "pilot_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_d\\stage_2_pilot\\checkpoints\\ckpt_pilot_step50.pt",
+    "sha256": "51aaed9c35458b01ea076f2b45026d8e6e3d96ee5f636345119f61b90262a23f",
+    "step": 50
+  },
+  "validation_trajectory": {
+    "step_0": {
+      "val_loss": 1.6415,
+      "total_tokens": 18926,
+      "per_category_loss": {
+        "web_explicit": 1.3157,
+        "direct_conceptual": 3.7326,
+        "python_core": 0.7769,
+        "web_colloquial": 1.3201,
+        "web_question": 1.4198,
+        "error_recovery_web": 1.8613,
+        "selection_discrimination": 1.2599,
+        "multistep_web_python": 1.7418
+      }
+    },
+    "step_25": {
+      "val_loss": 0.5474,
+      "total_tokens": 18926,
+      "per_category_loss": {
+        "web_explicit": 0.1457,
+        "direct_conceptual": 2.9174,
+        "python_core": 0.0598,
+        "web_colloquial": 0.1687,
+        "web_question": 0.1274,
+        "error_recovery_web": 0.6347,
+        "selection_discrimination": 0.1258,
+        "multistep_web_python": 0.5735
+      }
+    },
+    "step_50": {
+      "val_loss": 0.3048,
+      "total_tokens": 18926,
+      "per_category_loss": {
+        "web_explicit": 0.0672,
+        "direct_conceptual": 2.108,
+        "python_core": 0.024,
+        "web_colloquial": 0.0742,
+        "web_question": 0.0559,
+        "error_recovery_web": 0.3166,
+        "selection_discrimination": 0.0503,
+        "multistep_web_python": 0.1934
+      }
+    }
+  },
+  "token_metrics": {
+    "total_conv_tokens_trained": 166284,
+    "total_asst_tokens_trained": 38266,
+    "category_token_tally": {
+      "python_core": {
+        "conv_tokens": 22170,
+        "asst_tokens": 4794,
+        "records": 71
+      },
+      "web_colloquial": {
+        "conv_tokens": 24141,
+        "asst_tokens": 4935,
+        "records": 54
+      },
+      "web_question": {
+        "conv_tokens": 20091,
+        "asst_tokens": 4057,
+        "records": 45
+      },
+      "error_recovery_web": {
+        "conv_tokens": 24130,
+        "asst_tokens": 6628,
+        "records": 40
+      },
+      "selection_discrimination": {
+        "conv_tokens": 22844,
+        "asst_tokens": 4986,
+        "records": 57
+      },
+      "direct_conceptual": {
+        "conv_tokens": 14510,
+        "asst_tokens": 2714,
+        "records": 63
+      },
+      "web_explicit": {
+        "conv_tokens": 9271,
+        "asst_tokens": 1850,
+        "records": 21
+      },
+      "multistep_web_python": {
+        "conv_tokens": 29127,
+        "asst_tokens": 8302,
+        "records": 49
+      }
+    }
+  },
+  "training_dynamics": {
+    "total_updates": 50,
+    "accum_steps": 8,
+    "elapsed_seconds": 1248.6,
+    "elapsed_minutes": 20.81,
+    "avg_throughput_tok_per_sec": 133.18,
+    "val_loss_step_0": 1.6415,
+    "val_loss_step_25": 0.5474,
+    "val_loss_step_50": 0.3048
+  },
+  "thermal_summary": {
+    "max_gpu_temp_c": 82.0,
+    "avg_power_w": 42.38,
+    "max_vram_used_mib": 7748.0
+  }
+}

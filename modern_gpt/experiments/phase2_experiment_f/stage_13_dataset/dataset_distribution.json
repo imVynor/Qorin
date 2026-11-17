@@ -1,0 +1,65 @@
+{
+  "total_records": 1000,
+  "corpus_counts": {
+    "corpus_multiturn": 400,
+    "corpus_calibration": 300,
+    "corpus_synthesis": 300
+  },
+  "split_counts": {
+    "train": 800,
+    "validation": 100,
+    "test": 100
+  },
+  "category_distribution": {
+    "MULTITURN_STANDARD_WEB_PYTHON": 300,
+    "MULTITURN_WEB_SUFFICIENT_DIRECT": 35,
+    "MULTITURN_WEB_FAILURE_RECOVERY": 35,
+    "MULTITURN_CONTRADICTORY_SOURCES": 30,
+    "CAL_DIRECT_CONCEPT": 75,
+    "CAL_DIRECT_PROVIDED_CALC": 75,
+    "CAL_DIRECT_FACTUAL_WEB": 75,
+    "CAL_CONTRASTIVE_PAIRS": 75,
+    "SYN_FULL_SUPPORT": 150,
+    "SYN_PARTIAL_SUPPORT": 50,
+    "SYN_CONTRADICTORY_EVIDENCE": 50,
+    "SYN_INSUFFICIENT_EVIDENCE": 50
+  },
+  "domain_distribution": {
+    "demographics": 30,
+    "geography": 30,
+    "history": 30,
+    "astronomy": 30,
+    "economics": 30,
+    "sports": 30,
+    "technology": 30,
+    "energy_physics": 30,
+    "chemistry": 30,
+    "transportation": 30,
+    "sufficient_direct": 35,
+    "failure_recovery": 35,
+    "contradictory_sources": 30,
+    "foundational_knowledge": 75,
+    "applied_math": 75,
+    "general_knowledge": 75,
+    "decision_calibration": 75,
+    "evidence_synthesis": 300
+  },
+  "multi_turn_tool_sequences": {
+    "web_then_python": 300,
+    "web_sufficient_direct": 35,
+    "web_failure_recovery": 35,
+    "contradictory_sources": 30
+  },
+  "calibration_distribution": {
+    "direct_concept": 75,
+    "provided_calc_python": 75,
+    "factual_web_lookup": 75,
+    "contrastive_pairs": 75
+  },
+  "synthesis_distribution": {
+    "full_support": 150,
+    "partial_support": 50,
+    "contradictory_evidence": 50,
+    "insufficient_evidence": 50
+  }
+}

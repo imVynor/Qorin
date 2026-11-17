@@ -1,0 +1,117 @@
+{
+  "audit_metadata": {
+    "stage": "Stage 11: Evidence-Grounding Evaluator Audit",
+    "historical_vs_corrected_evaluation": {
+      "historical_evaluator_formula": "(SUPPORTED + 0.5 * PARTIALLY_SUPPORTED) / total_claims",
+      "limitations_of_historical_evaluator": [
+        "Token overlap heuristic conflated surface lexical matching with semantic entailment.",
+        "Partial support was heavily rewarded (weight 0.5) even when key numerical figures were missing.",
+        "Citation scoring looked strictly for [SOURCE X] regex without checking whether the prompt actually instructed citation formatting."
+      ]
+    },
+    "citation_rate_forensic_diagnosis": {
+      "reported_rates": {
+        "exp_d_parent": "3.08% (2/65)",
+        "branch_b_best": "4.62% (3/65)",
+        "branch_c_best": "0.00% (0/65)",
+        "branch_d_best": "0.00% (0/65)",
+        "branch_d_terminal": "1.54% (1/65)"
+      },
+      "root_cause_1_prompt_omission": "Neither the canonical system prompt nor the Stage 2 synthesis prompt contained instructions requesting source citations or [SOURCE X] notation.",
+      "root_cause_2_format_mismatch": "Corpus 2 training data used highly artificial structured cards ([SOURCE 1]: https://... \n- ENTITY: ...), whereas live WebResearcher emitted raw summary text.",
+      "root_cause_3_greedy_decoding_suppression": "Under temperature=0.0 greedy decoding, the model generated direct answers without emitting bracketed tokens unless explicitly forced by prompt structure."
+    }
+  },
+  "model_evaluations": {
+    "exp_d_parent": {
+      "total_claims_evaluated": 97,
+      "supported_claims_count": 41,
+      "partially_supported_claims_count": 36,
+      "unsupported_claims_count": 20,
+      "contradicted_claims_count": 0,
+      "strict_supported_precision": 0.4227,
+      "weighted_claim_precision": 0.6082,
+      "partial_support_rate": 0.3711,
+      "unsupported_claim_rate": 0.2062,
+      "contradiction_rate": 0.0,
+      "mean_evidence_coverage": 0.2526,
+      "numerical_extraction_accuracy": 0.1692,
+      "entity_value_association_accuracy": 0.5538,
+      "citation_correctness_rate": 0.0308,
+      "cited_tasks_count": 2,
+      "factual_tasks_total": 65
+    },
+    "branch_b_best": {
+      "total_claims_evaluated": 150,
+      "supported_claims_count": 74,
+      "partially_supported_claims_count": 39,
+      "unsupported_claims_count": 37,
+      "contradicted_claims_count": 0,
+      "strict_supported_precision": 0.4933,
+      "weighted_claim_precision": 0.6233,
+      "partial_support_rate": 0.26,
+      "unsupported_claim_rate": 0.2467,
+      "contradiction_rate": 0.0,
+      "mean_evidence_coverage": 0.2711,
+      "numerical_extraction_accuracy": 0.3154,
+      "entity_value_association_accuracy": 0.5846,
+      "citation_correctness_rate": 0.0462,
+      "cited_tasks_count": 3,
+      "factual_tasks_total": 65
+    },
+    "branch_c_best": {
+      "total_claims_evaluated": 88,
+      "supported_claims_count": 29,
+      "partially_supported_claims_count": 41,
+      "unsupported_claims_count": 18,
+      "contradicted_claims_count": 0,
+      "strict_supported_precision": 0.3295,
+      "weighted_claim_precision": 0.5625,
+      "partial_support_rate": 0.4659,
+      "unsupported_claim_rate": 0.2045,
+      "contradiction_rate": 0.0,
+      "mean_evidence_coverage": 0.1537,
+      "numerical_extraction_accuracy": 0.1385,
+      "entity_value_association_accuracy": 0.4462,
+      "citation_correctness_rate": 0.0,
+      "cited_tasks_count": 0,
+      "factual_tasks_total": 65
+    },
+    "branch_d_best": {
+      "total_claims_evaluated": 82,
+      "supported_claims_count": 38,
+      "partially_supported_claims_count": 28,
+      "unsupported_claims_count": 16,
+      "contradicted_claims_count": 0,
+      "strict_supported_precision": 0.4634,
+      "weighted_claim_precision": 0.6341,
+      "partial_support_rate": 0.3415,
+      "unsupported_claim_rate": 0.1951,
+      "contradiction_rate": 0.0,
+      "mean_evidence_coverage": 0.2268,
+      "numerical_extraction_accuracy": 0.2615,
+      "entity_value_association_accuracy": 0.5692,
+      "citation_correctness_rate": 0.0,
+      "cited_tasks_count": 0,
+      "factual_tasks_total": 65
+    },
+    "branch_d_terminal": {
+      "total_claims_evaluated": 80,
+      "supported_claims_count": 42,
+      "partially_supported_claims_count": 25,
+      "unsupported_claims_count": 13,
+      "contradicted_claims_count": 0,
+      "strict_supported_precision": 0.525,
+      "weighted_claim_precision": 0.6813,
+      "partial_support_rate": 0.3125,
+      "unsupported_claim_rate": 0.1625,
+      "contradiction_rate": 0.0,
+      "mean_evidence_coverage": 0.1351,
+      "numerical_extraction_accuracy": 0.2615,
+      "entity_value_association_accuracy": 0.6,
+      "citation_correctness_rate": 0.0154,
+      "cited_tasks_count": 1,
+      "factual_tasks_total": 65
+    }
+  }
+}

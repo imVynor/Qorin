@@ -1,0 +1,22 @@
+{
+  "experiment": "Experiment B (35M SFT Mixture)",
+  "total_conversation_tokens": 35005757,
+  "total_assistant_target_tokens": 23295662,
+  "supervised_token_density": 0.6655,
+  "total_updates": 7124,
+  "average_tokens_per_update": 4913.8,
+  "total_active_training_sec": 10466.8,
+  "total_active_training_min": 174.45,
+  "total_cooldown_sec": 900.0,
+  "total_cooldown_min": 15.0,
+  "total_wall_clock_sec": 11369.9,
+  "total_wall_clock_min": 189.5,
+  "active_throughput_tok_sec": 3344.4,
+  "effective_wall_throughput_tok_sec": 3078.8,
+  "peak_step_throughput_tok_sec": 4917.5,
+  "p50_step_throughput_tok_sec": 3740.4,
+  "peak_gpu_temp_c": 91.0,
+  "average_gpu_temp_c": 86.3,
+  "peak_vram_allocated_mb": 3962.3,
+  "peak_vram_reserved_mb": 6862.0
+}

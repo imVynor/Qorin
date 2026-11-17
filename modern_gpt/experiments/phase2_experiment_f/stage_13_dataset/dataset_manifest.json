@@ -1,0 +1,44 @@
+{
+  "dataset_name": "QORIN_Experiment_F_MultiTurn_Dataset_Stage13",
+  "created_at": "2026-11-17T13:31:59.541219",
+  "authoritative_target": 1000,
+  "accepted_records": 1000,
+  "splits": {
+    "train": {
+      "file": "train.jsonl",
+      "count": 800
+    },
+    "validation": {
+      "file": "validation.jsonl",
+      "count": 100
+    },
+    "test": {
+      "file": "test.jsonl",
+      "count": 100
+    }
+  },
+  "corpora": {
+    "corpus_a": {
+      "file": "corpus_multiturn.jsonl",
+      "count": 400
+    },
+    "corpus_b": {
+      "file": "corpus_calibration.jsonl",
+      "count": 300
+    },
+    "corpus_c": {
+      "file": "corpus_synthesis.jsonl",
+      "count": 300
+    }
+  },
+  "metadata_files": [
+    "source_provenance.jsonl",
+    "token_accounting.json",
+    "dataset_distribution.json",
+    "leakage_audit.json",
+    "quality_audit.json",
+    "manual_audit.md",
+    "stage_13_dataset_report.md",
+    "SHA256SUMS"
+  ]
+}

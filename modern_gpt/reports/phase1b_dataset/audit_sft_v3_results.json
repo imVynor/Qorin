@@ -1,0 +1,436 @@
+{
+  "tokenizer": {
+    "vocab_size": 16000,
+    "fingerprint": "be6c3d60c5baf217",
+    "eos_token_id": 0
+  },
+  "splits": {
+    "train": {
+      "file_size_bytes": 89885091,
+      "file_size_mb": 85.72,
+      "records_count": 31949,
+      "total_messages": 82869,
+      "total_assistant_messages": 34983,
+      "total_user_messages": 34983,
+      "total_system_messages": 12903,
+      "single_turn_records": 18097,
+      "multi_turn_records": 13852,
+      "single_turn_pct": 56.64,
+      "multi_turn_pct": 43.36,
+      "turn_counts_distribution": {
+        "2": 18097,
+        "3": 12509,
+        "4": 240,
+        "5": 78,
+        "6": 709,
+        "7": 113,
+        "9": 82,
+        "11": 51,
+        "13": 14,
+        "15": 7,
+        "17": 5,
+        "19": 2,
+        "21": 1,
+        "23": 1,
+        "25": 40
+      },
+      "metadata_fields": [
+        "category",
+        "source",
+        "supervised_tokens",
+        "messages",
+        "total_tokens"
+      ],
+      "total_input_tokens": 24081703,
+      "total_supervised_tokens": 3362374,
+      "mean_supervised_tokens": 105.24,
+      "median_supervised_tokens": 45.0,
+      "std_supervised_tokens": 195.78,
+      "min_supervised_tokens": 10,
+      "max_supervised_tokens": 3908,
+      "mean_input_tokens": 753.75,
+      "median_input_tokens": 288.0,
+      "categories_records": {
+        "long_context_retrieval": 9781,
+        "science_commonsense": 8269,
+        "general_conversation": 5162,
+        "coding_python": 2990,
+        "mathematics": 2907,
+        "structured_json": 1895,
+        "multi_turn_dialogue": 945
+      },
+      "categories_supervised_tokens": {
+        "general_conversation": 900010,
+        "multi_turn_dialogue": 580874,
+        "long_context_retrieval": 540077,
+        "coding_python": 448499,
+        "science_commonsense": 360037,
+        "mathematics": 360015,
+        "structured_json": 172862
+      },
+      "categories_input_tokens": {
+        "long_context_retrieval": 17353014,
+        "general_conversation": 1949391,
+        "science_commonsense": 1274275,
+        "structured_json": 1155397,
+        "coding_python": 820783,
+        "multi_turn_dialogue": 801630,
+        "mathematics": 727213
+      },
+      "category_supervised_pcts": {
+        "general_conversation": 26.77,
+        "multi_turn_dialogue": 17.28,
+        "long_context_retrieval": 16.06,
+        "coding_python": 13.34,
+        "science_commonsense": 10.71,
+        "mathematics": 10.71,
+        "structured_json": 5.14
+      },
+      "sources_records": {
+        "synthetic_long_retrieval_v3": 9781,
+        "tau/commonsense_qa:train": 8269,
+        "openai/gsm8k:train": 2729,
+        "local_sft_v2:code_alpaca": 1790,
+        "smoltalk:apigen-80k": 1167,
+        "local_sft_v2:squad": 946,
+        "local_sft_v2:dolly_instruction": 941,
+        "smoltalk:explore-instruct": 916,
+        "smoltalk:openhermes": 894,
+        "smoltalk:self-oss-instruct": 889,
+        "local_sft_v2:json": 728,
+        "smoltalk:systemchats": 656,
+        "smoltalk:smol-rewrite": 460,
+        "smoltalk:smol-magpie-ultra": 323,
+        "local_sft_v2:dolly_qa": 321,
+        "local_sft_v2:mbpp": 311,
+        "curated_context_insulation:topic_switching": 269,
+        "local_sft_v2:gsm8k": 178,
+        "curated_context_insulation:relevant_state_retention": 149,
+        "curated_context_insulation:independent_task_execution": 116,
+        "curated_context_insulation:irrelevant_context_suppression": 73,
+        "curated_direct_qa": 19,
+        "curated_context_insulation:returning_to_earlier_topics": 15,
+        "curated_conversational_diverse": 9
+      },
+      "sources_supervised_tokens": {
+        "synthetic_long_retrieval_v3": 540077,
+        "smoltalk:smol-magpie-ultra": 477575,
+        "smoltalk:systemchats": 387405,
+        "tau/commonsense_qa:train": 360037,
+        "openai/gsm8k:train": 337793,
+        "smoltalk:openhermes": 252463,
+        "smoltalk:self-oss-instruct": 243126,
+        "local_sft_v2:code_alpaca": 174606,
+        "smoltalk:apigen-80k": 118048,
+        "local_sft_v2:dolly_instruction": 111968,
+        "smoltalk:smol-rewrite": 83444,
+        "local_sft_v2:json": 54814,
+        "curated_context_insulation:topic_switching": 51010,
+        "smoltalk:explore-instruct": 33370,
+        "local_sft_v2:mbpp": 30767,
+        "local_sft_v2:gsm8k": 22222,
+        "curated_context_insulation:relevant_state_retention": 19255,
+        "local_sft_v2:dolly_qa": 15680,
+        "curated_context_insulation:irrelevant_context_suppression": 15545,
+        "local_sft_v2:squad": 14716,
+        "curated_context_insulation:independent_task_execution": 13273,
+        "curated_context_insulation:returning_to_earlier_topics": 4216,
+        "curated_direct_qa": 748,
+        "curated_conversational_diverse": 216
+      },
+      "response_buckets": {
+        "<50": 17487,
+        "50-199": 11647,
+        "200-999": 2412,
+        ">=1000": 403
+      },
+      "response_buckets_pct": {
+        "<50": 54.73,
+        "50-199": 36.45,
+        "200-999": 7.55,
+        ">=1000": 1.26
+      },
+      "top_opening_phrases": [
+        [
+          "the correct answer",
+          8271
+        ],
+        [
+          "based on the",
+          3261
+        ],
+        [
+          "the provided text",
+          3248
+        ],
+        [
+          "the orbital frequency",
+          353
+        ],
+        [
+          "the power output",
+          352
+        ],
+        [
+          "the coolant mixture",
+          345
+        ],
+        [
+          "the security badge",
+          339
+        ],
+        [
+          "the settlement value",
+          332
+        ],
+        [
+          "the apogee altitude",
+          330
+        ],
+        [
+          "the submersion depth",
+          328
+        ],
+        [
+          "the access code",
+          319
+        ],
+        [
+          "the coherence time",
+          304
+        ],
+        [
+          "the endurance limit",
+          281
+        ],
+        [
+          "understood! i've noted",
+          149
+        ],
+        [
+          "here's how you",
+          132
+        ]
+      ],
+      "behavioral_counts": {
+        "greetings_detected_in_user_prompt": 296,
+        "email_salutations_in_assistant": 0,
+        "email_bodies_in_assistant": 0,
+        "how_can_i_help_today_in_assistant": 1
+      },
+      "spot_checks_passed": 20
+    },
+    "val": {
+      "file_size_bytes": 9088500,
+      "file_size_mb": 8.67,
+      "records_count": 3277,
+      "total_messages": 8572,
+      "total_assistant_messages": 3634,
+      "total_user_messages": 3634,
+      "total_system_messages": 1304,
+      "single_turn_records": 1855,
+      "multi_turn_records": 1422,
+      "single_turn_pct": 56.61,
+      "multi_turn_pct": 43.39,
+      "turn_counts_distribution": {
+        "2": 1855,
+        "3": 1260,
+        "4": 28,
+        "5": 9,
+        "6": 90,
+        "7": 12,
+        "9": 12,
+        "11": 3,
+        "13": 3,
+        "21": 1,
+        "25": 4
+      },
+      "metadata_fields": [
+        "category",
+        "source",
+        "supervised_tokens",
+        "messages",
+        "total_tokens"
+      ],
+      "total_input_tokens": 2443646,
+      "total_supervised_tokens": 362248,
+      "mean_supervised_tokens": 110.54,
+      "median_supervised_tokens": 47.0,
+      "std_supervised_tokens": 215.39,
+      "min_supervised_tokens": 10,
+      "max_supervised_tokens": 2760,
+      "mean_input_tokens": 745.7,
+      "median_input_tokens": 288.0,
+      "categories_records": {
+        "long_context_retrieval": 971,
+        "science_commonsense": 826,
+        "general_conversation": 525,
+        "coding_python": 343,
+        "mathematics": 294,
+        "structured_json": 200,
+        "multi_turn_dialogue": 118
+      },
+      "categories_supervised_tokens": {
+        "general_conversation": 90852,
+        "multi_turn_dialogue": 73021,
+        "coding_python": 54236,
+        "long_context_retrieval": 54011,
+        "science_commonsense": 36036,
+        "mathematics": 36013,
+        "structured_json": 18079
+      },
+      "categories_input_tokens": {
+        "long_context_retrieval": 1723247,
+        "general_conversation": 199399,
+        "science_commonsense": 127814,
+        "structured_json": 123937,
+        "multi_turn_dialogue": 98140,
+        "coding_python": 97894,
+        "mathematics": 73215
+      },
+      "category_supervised_pcts": {
+        "general_conversation": 25.08,
+        "multi_turn_dialogue": 20.16,
+        "coding_python": 14.97,
+        "long_context_retrieval": 14.91,
+        "science_commonsense": 9.95,
+        "mathematics": 9.94,
+        "structured_json": 4.99
+      },
+      "sources_records": {
+        "synthetic_long_retrieval_v3": 971,
+        "tau/commonsense_qa:train": 826,
+        "openai/gsm8k:train": 275,
+        "local_sft_v2:code_alpaca": 203,
+        "smoltalk:apigen-80k": 128,
+        "smoltalk:openhermes": 105,
+        "smoltalk:self-oss-instruct": 104,
+        "smoltalk:explore-instruct": 96,
+        "local_sft_v2:dolly_instruction": 84,
+        "local_sft_v2:squad": 83,
+        "smoltalk:systemchats": 79,
+        "local_sft_v2:json": 72,
+        "local_sft_v2:mbpp": 36,
+        "smoltalk:smol-rewrite": 34,
+        "smoltalk:smol-magpie-ultra": 33,
+        "local_sft_v2:dolly_qa": 31,
+        "curated_context_insulation:relevant_state_retention": 25,
+        "curated_context_insulation:topic_switching": 24,
+        "local_sft_v2:gsm8k": 19,
+        "curated_context_insulation:independent_task_execution": 18,
+        "curated_context_insulation:irrelevant_context_suppression": 12,
+        "curated_conversational_diverse": 11,
+        "curated_context_insulation:returning_to_earlier_topics": 6,
+        "curated_direct_qa": 2
+      },
+      "sources_supervised_tokens": {
+        "smoltalk:smol-magpie-ultra": 58696,
+        "synthetic_long_retrieval_v3": 54011,
+        "smoltalk:systemchats": 41126,
+        "tau/commonsense_qa:train": 36036,
+        "openai/gsm8k:train": 33475,
+        "smoltalk:self-oss-instruct": 28769,
+        "smoltalk:openhermes": 24670,
+        "local_sft_v2:code_alpaca": 22024,
+        "smoltalk:apigen-80k": 12708,
+        "local_sft_v2:dolly_instruction": 11482,
+        "smoltalk:smol-rewrite": 6396,
+        "local_sft_v2:json": 5371,
+        "curated_context_insulation:topic_switching": 4727,
+        "smoltalk:explore-instruct": 3676,
+        "local_sft_v2:mbpp": 3443,
+        "curated_context_insulation:relevant_state_retention": 3312,
+        "curated_context_insulation:irrelevant_context_suppression": 2599,
+        "local_sft_v2:gsm8k": 2538,
+        "curated_context_insulation:independent_task_execution": 1993,
+        "local_sft_v2:dolly_qa": 1748,
+        "curated_context_insulation:returning_to_earlier_topics": 1694,
+        "local_sft_v2:squad": 1282,
+        "curated_conversational_diverse": 362,
+        "curated_direct_qa": 110
+      },
+      "response_buckets": {
+        "<50": 1741,
+        "50-199": 1219,
+        "200-999": 271,
+        ">=1000": 46
+      },
+      "response_buckets_pct": {
+        "<50": 53.13,
+        "50-199": 37.2,
+        "200-999": 8.27,
+        ">=1000": 1.4
+      },
+      "top_opening_phrases": [
+        [
+          "the correct answer",
+          826
+        ],
+        [
+          "based on the",
+          329
+        ],
+        [
+          "the provided text",
+          324
+        ],
+        [
+          "the settlement value",
+          43
+        ],
+        [
+          "the submersion depth",
+          38
+        ],
+        [
+          "the power output",
+          37
+        ],
+        [
+          "the coherence time",
+          32
+        ],
+        [
+          "the orbital frequency",
+          32
+        ],
+        [
+          "the security badge",
+          31
+        ],
+        [
+          "the coolant mixture",
+          31
+        ],
+        [
+          "the apogee altitude",
+          29
+        ],
+        [
+          "the endurance limit",
+          27
+        ],
+        [
+          "understood! i've noted",
+          25
+        ],
+        [
+          "the access code",
+          20
+        ],
+        [
+          "first find the",
+          17
+        ]
+      ],
+      "behavioral_counts": {
+        "greetings_detected_in_user_prompt": 43,
+        "email_salutations_in_assistant": 0,
+        "email_bodies_in_assistant": 0,
+        "how_can_i_help_today_in_assistant": 0
+      },
+      "spot_checks_passed": 20
+    }
+  },
+  "exact_duplicates_across_dataset": 0
+}

@@ -1,0 +1,77 @@
+# Training Configuration: QORIN Experiment D (Targeted Web Tool-Use Enhancement)
+experiment_id: "phase2_experiment_d"
+project: "QORIN"
+stage: "stage_3_training"
+
+model:
+  name: "QORIN-500M SFT Experiment D"
+  architecture: "QorinForCausalLM"
+  layers: 20
+  hidden_dim: 1536
+  query_heads: 24
+  kv_heads: 4
+  head_dim: 64
+  ffn_dim: 3840
+  vocab_size: 32768
+  context_length: 2048
+  tied_embeddings: true
+  unique_parameters: 514389504
+  gradient_checkpointing: true
+
+parent_checkpoint:
+  path: "modern_gpt/experiments/phase2_experiment_c/stage_3_training/checkpoints/ckpt_experiment_c_final.pt"
+  expected_sha256: "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b"
+  frozen: true
+
+tokenizer:
+  path: "modern_gpt/artifacts/tokenizer_32k/tokenizer.json"
+  expected_sha256: "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59"
+  name: "bpe_32k_production"
+
+dataset:
+  train_path: "modern_gpt/experiments/phase2_experiment_d/stage_1_data/train.jsonl"
+  val_path: "modern_gpt/experiments/phase2_experiment_d/stage_1_data/val.jsonl"
+  manifest_path: "modern_gpt/experiments/phase2_experiment_d/stage_1_data/dataset_manifest.json"
+  train_sha256: "90aebbac462bbad01e3239a51ef4b2c33f9d49faf5d23172060d89ef0d66cd2a"
+  val_sha256: "b7c10807fda6ac5553b1806afe2fb3e25df65949dfd256d13456bf4e3a1af8e6"
+  train_records: 3800
+  val_records: 200
+  max_length: 2048
+
+optimizer:
+  type: "AdamW8bit"
+  package: "bitsandbytes"
+  peak_learning_rate: 1.2e-5
+  min_learning_rate: 1.2e-6
+  weight_decay: 0.05
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+
+scheduler:
+  type: "cosine_with_warmup"
+  warmup_steps: 25
+  total_steps: 475
+
+training:
+  micro_batch_size: 1
+  gradient_accumulation_steps: 8
+  effective_batch_size: 8
+  epochs: 1
+  precision: "bfloat16"
+  loss_masking: "assistant_only"
+  grad_clip_norm: 1.0
+  eval_interval_steps: 50
+  save_interval_steps: 100
+  log_interval_steps: 10
+  seed: 42
+
+hardware:
+  max_continuous_minutes: 105
+  cooldown_minutes: 15
+  thermal_throttle_temp_c: 78
+  track_telemetry: true
+
+pilot:
+  pilot_steps: 50
+  save_pilot_checkpoint: true
+  pilot_eval_interval: 10

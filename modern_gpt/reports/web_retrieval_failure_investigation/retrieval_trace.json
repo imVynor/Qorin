@@ -1,0 +1,45 @@
+{
+  "incident_id": "INC-20261117-WEB-RETRIEVAL-FAIL",
+  "query": "grab info on elon musk",
+  "local_retrieval_rag": {
+    "triggered": false,
+    "mode": "auto",
+    "threshold": 0.35,
+    "decision_reason": "Query did not match technical knowledge base routing threshold.",
+    "latency_ms": 0.01,
+    "retrieved_chunks": []
+  },
+  "web_retrieval_tool": {
+    "status": "not_invoked",
+    "requested_by": null,
+    "tool_name": "web_research",
+    "reason_not_invoked": "First-stage neural inference classified the input query as a direct generation task (action: DIRECT) rather than emitting a <|tool_call|> intent. Consequently, orchestrator dispatch was skipped.",
+    "sources_retrieved": [],
+    "evidence_summary": null,
+    "latency_ms": 0.0
+  },
+  "controlled_diagnostic_verification": {
+    "description": "Execution of identical query directly against WebResearcher component to confirm operational health",
+    "test_query": "grab info on elon musk",
+    "test_status": "operational",
+    "test_latency_ms": 1021.23,
+    "test_sources": [
+      {
+        "title": "Elon Musk - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Elon_Musk",
+        "snippet": "Elon Reeve Musk was born on June 28, 1971, in Pretoria, Transvaal Province..."
+      },
+      {
+        "title": "Elon Musk: Biography, Entrepreneur, SpaceX and Tesla Founder",
+        "url": "https://www.biography.com/business-leaders/elon-musk",
+        "snippet": "Elon Musk is founder of Tesla Motors and SpaceX among other companies..."
+      },
+      {
+        "title": "Who Is Elon Musk? Net Worth, Achievements and Biography",
+        "url": "https://www.investing.com/academy/statistics/elon-musk-facts/",
+        "snippet": "Elon Musk is the CEO of Tesla Motors, X (formerly Twitter) and SpaceX..."
+      }
+    ],
+    "finding": "The WebResearcher backend and DuckDuckGo/Wikipedia APIs are fully operational and capable of retrieving high-quality, verified sources for this query. The failure was strictly localized to Stage A Intent Triggering and model tool selection."
+  }
+}

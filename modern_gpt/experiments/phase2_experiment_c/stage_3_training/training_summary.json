@@ -1,0 +1,78 @@
+{
+  "experiment": "modern_gpt_experiment_c",
+  "phase": "2D",
+  "starting_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\checkpoints\\sft_experiment_b\\ckpt_experiment_b_final.pt",
+    "sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+    "unmutated_post_training": true
+  },
+  "final_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_c\\stage_3_training\\checkpoints\\ckpt_experiment_c_final.pt",
+    "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b",
+    "resume_fidelity_max_diff": 0.0,
+    "resume_fidelity_pass": true
+  },
+  "intermediate_checkpoints": [
+    {
+      "step": 250,
+      "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_c\\stage_3_training\\checkpoints\\ckpt_step_250.pt",
+      "sha256": "ef331a34dc0ff5b08af458bdaf84e8033ed7ab86e9c0a23f15b753ba52bf060d"
+    },
+    {
+      "step": 495,
+      "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_c\\stage_3_training\\checkpoints\\ckpt_experiment_c_final.pt",
+      "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b"
+    }
+  ],
+  "token_metrics": {
+    "total_conv_tokens_trained": 1785635,
+    "total_asst_tokens_trained": 677855,
+    "category_token_tally": {
+      "multistep_and_error_recovery": {
+        "conv_tokens": 422480,
+        "asst_tokens": 107164,
+        "records": 755
+      },
+      "tool_intent_and_no_tool_controls": {
+        "conv_tokens": 221626,
+        "asst_tokens": 33837,
+        "records": 1048
+      },
+      "authentic_tool_execution": {
+        "conv_tokens": 567596,
+        "asst_tokens": 164937,
+        "records": 1504
+      },
+      "general_and_coding_retention": {
+        "conv_tokens": 573933,
+        "asst_tokens": 371917,
+        "records": 655
+      }
+    }
+  },
+  "training_dynamics": {
+    "total_updates": 495,
+    "accum_steps": 8,
+    "elapsed_seconds": 13156.03,
+    "elapsed_minutes": 219.27,
+    "avg_throughput_tok_per_sec": 135.73,
+    "val_loss_step_0": 1.9169,
+    "val_loss_step_250": 1.1807,
+    "val_loss_final": 1.1704
+  },
+  "hyperparameters": {
+    "optimizer": "AdamW8bit (bitsandbytes)",
+    "peak_lr": 2e-05,
+    "min_lr": 2e-06,
+    "warmup_steps": 14,
+    "weight_decay": 0.01,
+    "grad_clip_max_norm": 1.0,
+    "precision": "bfloat16 autocast",
+    "gradient_checkpointing": true
+  },
+  "thermal_summary": {
+    "max_gpu_temp_c": 76.0,
+    "avg_power_w": 41.24,
+    "max_vram_used_mib": 7821.0
+  }
+}

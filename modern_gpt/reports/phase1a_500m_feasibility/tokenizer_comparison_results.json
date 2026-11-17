@@ -1,0 +1,262 @@
+{
+  "tok_16k": {
+    "name": "bpe_16k_v2",
+    "vocab_size": 16000,
+    "overall_compression": {
+      "total_bytes": 6624,
+      "total_chars": 6620,
+      "total_tokens": 1992,
+      "avg_tokens_per_byte": 0.3007,
+      "avg_tokens_per_char": 0.3009,
+      "avg_bytes_per_token": 3.3253
+    },
+    "domain_results": {
+      "1_fineweb_web": {
+        "bytes": 877,
+        "chars": 877,
+        "tokens": 178,
+        "tokens_per_byte": 0.203,
+        "tokens_per_char": 0.203,
+        "bytes_per_token": 4.927
+      },
+      "2_educational_explanatory": {
+        "bytes": 906,
+        "chars": 906,
+        "tokens": 207,
+        "tokens_per_byte": 0.2285,
+        "tokens_per_char": 0.2285,
+        "bytes_per_token": 4.3768
+      },
+      "3_source_code": {
+        "bytes": 1328,
+        "chars": 1328,
+        "tokens": 564,
+        "tokens_per_byte": 0.4247,
+        "tokens_per_char": 0.4247,
+        "bytes_per_token": 2.3546
+      },
+      "4_mathematics_technical": {
+        "bytes": 794,
+        "chars": 794,
+        "tokens": 369,
+        "tokens_per_byte": 0.4647,
+        "tokens_per_char": 0.4647,
+        "bytes_per_token": 2.1518
+      },
+      "5_wikipedia_reference": {
+        "bytes": 794,
+        "chars": 792,
+        "tokens": 173,
+        "tokens_per_byte": 0.2179,
+        "tokens_per_char": 0.2184,
+        "bytes_per_token": 4.5896
+      },
+      "6_books_prose": {
+        "bytes": 911,
+        "chars": 911,
+        "tokens": 231,
+        "tokens_per_byte": 0.2536,
+        "tokens_per_char": 0.2536,
+        "bytes_per_token": 3.9437
+      },
+      "7_natural_dialogue": {
+        "bytes": 1014,
+        "chars": 1012,
+        "tokens": 270,
+        "tokens_per_byte": 0.2663,
+        "tokens_per_char": 0.2668,
+        "bytes_per_token": 3.7556
+      }
+    },
+    "throughput": {
+      "encoding_tokens_per_sec": 872404,
+      "encoding_bytes_per_sec_mb": 2.75,
+      "decoding_tokens_per_sec": 7757856
+    },
+    "code_fragmentation_avg": 10.4,
+    "code_fragmentation_detail": {
+      "getUserProfileById": 7,
+      "calculateMovingAverage": 8,
+      "XMLHttpRequest": 7,
+      "std::vector<int>": 10,
+      "ConcurrentHashMap": 8,
+      "parse_serialized_json": 9,
+      "numpy.linalg.inv": 9,
+      "torch.cuda.is_available": 11,
+      "handle_connection_timeout": 9,
+      "DATABASE_CONNECTION_POOL_MAX_SIZE": 26
+    },
+    "math_fragmentation_avg": 37.75,
+    "rare_word_fragmentation_avg": 5.1,
+    "multilingual_detail": {
+      "French": {
+        "bytes": 104,
+        "tokens": 38,
+        "bytes_per_token": 2.7368
+      },
+      "German": {
+        "bytes": 96,
+        "tokens": 38,
+        "bytes_per_token": 2.5263
+      },
+      "Spanish": {
+        "bytes": 92,
+        "tokens": 30,
+        "bytes_per_token": 3.0667
+      },
+      "Chinese": {
+        "bytes": 96,
+        "tokens": 96,
+        "bytes_per_token": 1.0
+      },
+      "Japanese": {
+        "bytes": 120,
+        "tokens": 119,
+        "bytes_per_token": 1.0084
+      },
+      "Arabic": {
+        "bytes": 137,
+        "tokens": 137,
+        "bytes_per_token": 1.0
+      },
+      "Russian": {
+        "bytes": 163,
+        "tokens": 163,
+        "bytes_per_token": 1.0
+      }
+    }
+  },
+  "tok_32k": {
+    "name": "bpe_32k_candidate",
+    "vocab_size": 32768,
+    "overall_compression": {
+      "total_bytes": 6624,
+      "total_chars": 6620,
+      "total_tokens": 1641,
+      "avg_tokens_per_byte": 0.2477,
+      "avg_tokens_per_char": 0.2479,
+      "avg_bytes_per_token": 4.0366
+    },
+    "domain_results": {
+      "1_fineweb_web": {
+        "bytes": 877,
+        "chars": 877,
+        "tokens": 134,
+        "tokens_per_byte": 0.1528,
+        "tokens_per_char": 0.1528,
+        "bytes_per_token": 6.5448
+      },
+      "2_educational_explanatory": {
+        "bytes": 906,
+        "chars": 906,
+        "tokens": 173,
+        "tokens_per_byte": 0.1909,
+        "tokens_per_char": 0.1909,
+        "bytes_per_token": 5.237
+      },
+      "3_source_code": {
+        "bytes": 1328,
+        "chars": 1328,
+        "tokens": 422,
+        "tokens_per_byte": 0.3178,
+        "tokens_per_char": 0.3178,
+        "bytes_per_token": 3.1469
+      },
+      "4_mathematics_technical": {
+        "bytes": 794,
+        "chars": 794,
+        "tokens": 312,
+        "tokens_per_byte": 0.3929,
+        "tokens_per_char": 0.3929,
+        "bytes_per_token": 2.5449
+      },
+      "5_wikipedia_reference": {
+        "bytes": 794,
+        "chars": 792,
+        "tokens": 161,
+        "tokens_per_byte": 0.2028,
+        "tokens_per_char": 0.2033,
+        "bytes_per_token": 4.9317
+      },
+      "6_books_prose": {
+        "bytes": 911,
+        "chars": 911,
+        "tokens": 198,
+        "tokens_per_byte": 0.2173,
+        "tokens_per_char": 0.2173,
+        "bytes_per_token": 4.601
+      },
+      "7_natural_dialogue": {
+        "bytes": 1014,
+        "chars": 1012,
+        "tokens": 241,
+        "tokens_per_byte": 0.2377,
+        "tokens_per_char": 0.2381,
+        "bytes_per_token": 4.2075
+      }
+    },
+    "throughput": {
+      "encoding_tokens_per_sec": 830360,
+      "encoding_bytes_per_sec_mb": 3.17,
+      "decoding_tokens_per_sec": 8101886
+    },
+    "code_fragmentation_avg": 6.8,
+    "code_fragmentation_detail": {
+      "getUserProfileById": 6,
+      "calculateMovingAverage": 7,
+      "XMLHttpRequest": 4,
+      "std::vector<int>": 6,
+      "ConcurrentHashMap": 5,
+      "parse_serialized_json": 6,
+      "numpy.linalg.inv": 5,
+      "torch.cuda.is_available": 9,
+      "handle_connection_timeout": 5,
+      "DATABASE_CONNECTION_POOL_MAX_SIZE": 15
+    },
+    "math_fragmentation_avg": 31.0,
+    "rare_word_fragmentation_avg": 4.0,
+    "multilingual_detail": {
+      "French": {
+        "bytes": 104,
+        "tokens": 34,
+        "bytes_per_token": 3.0588
+      },
+      "German": {
+        "bytes": 96,
+        "tokens": 29,
+        "bytes_per_token": 3.3103
+      },
+      "Spanish": {
+        "bytes": 92,
+        "tokens": 28,
+        "bytes_per_token": 3.2857
+      },
+      "Chinese": {
+        "bytes": 96,
+        "tokens": 90,
+        "bytes_per_token": 1.0667
+      },
+      "Japanese": {
+        "bytes": 120,
+        "tokens": 93,
+        "bytes_per_token": 1.2903
+      },
+      "Arabic": {
+        "bytes": 137,
+        "tokens": 116,
+        "bytes_per_token": 1.181
+      },
+      "Russian": {
+        "bytes": 163,
+        "tokens": 83,
+        "bytes_per_token": 1.9639
+      }
+    }
+  },
+  "compression_ratio_overall": 0.8238,
+  "token_reduction_pct": 17.62,
+  "embedding_param_cost_16k": 25165824,
+  "embedding_param_cost_32k": 50331648,
+  "embedding_param_increase": 25165824,
+  "embedding_param_increase_pct": 5.14
+}

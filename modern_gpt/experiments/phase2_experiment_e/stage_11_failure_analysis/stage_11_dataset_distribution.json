@@ -1,0 +1,60 @@
+{
+  "audit_metadata": {
+    "stage": "Stage 11: Training Data Diagnostic Audit",
+    "datasets_audited": [
+      "Exp D Train (3,800 records)",
+      "Corpus 1 Calibration (400 records)",
+      "Corpus 2 Synthesis (400 records)"
+    ]
+  },
+  "dataset_summaries": {
+    "experiment_d_train": {
+      "total_records": 3800,
+      "multi_step_web_to_python_records": 0,
+      "multi_turn_records": 0,
+      "tool_failure_recovery_records": 0,
+      "citation_producing_records": 0,
+      "diagnosis": "Zero multi-step or multi-turn tool chaining examples exist in Experiment D."
+    },
+    "corpus1_calibration_train": {
+      "total_records": 400,
+      "category_distribution": {
+        "CAL_DIR_CONCEPT": 150,
+        "CAL_DIR_PARAM": 60,
+        "CAL_DIR_NEG": 40,
+        "CAL_TOOL_WEB": 125,
+        "CAL_TOOL_PY": 25
+      },
+      "direct_answer_records": 250,
+      "tool_call_records": 150,
+      "multi_step_records": 0,
+      "multi_turn_records": 0,
+      "mean_prefix_tokens": 48.1,
+      "mean_target_tokens": 45.1
+    },
+    "corpus2_synthesis_train": {
+      "total_records": 400,
+      "category_distribution": {
+        "SYN_FACT_SINGLE": 120,
+        "SYN_FACT_MULTI": 80,
+        "SYN_CONFLICT": 100,
+        "SYN_INSUFFICIENT": 100
+      },
+      "single_fact_synthesis": 120,
+      "conflict_resolution": 100,
+      "insufficient_evidence_handling": 100,
+      "multi_source_synthesis": 80,
+      "multi_step_web_to_python_records": 0,
+      "multi_turn_records": 0,
+      "unique_template_count": 9,
+      "mean_prefix_tokens": 130.1,
+      "mean_target_tokens": 50.0
+    }
+  },
+  "critical_supervision_deficits": [
+    "Deficit 1 (Sequential Chaining Absence): Not a single example across 4,600 historical training records demonstrates taking an observation from Web search and passing extracted values into Python code.",
+    "Deficit 2 (Turn-2 Anti-Tool Bias): 100% of Corpus 2 training examples supervised the assistant to generate natural language synthesis immediately upon seeing a tool observation, actively discouraging subsequent tool calls.",
+    "Deficit 3 (Template Repetition in Corpus 2): 55% of Corpus 2 consisted of repetitive variants of only 5 base fact queries, leading to rapid memorization and early validation plateauing.",
+    "Deficit 4 (Format Inconsistency): Synthetic training tool results used rigid markdown bullet cards with [SOURCE X] headings, whereas live tool outputs from DuckDuckGo are noisy unstructured text."
+  ]
+}

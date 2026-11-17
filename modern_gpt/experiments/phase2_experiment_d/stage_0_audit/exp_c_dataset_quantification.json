@@ -1,0 +1,30 @@
+{
+  "train": {
+    "total": 3962,
+    "counts": {
+      "python_only": 2183,
+      "direct": 1703,
+      "web_only": 76
+    },
+    "multi_tool": 755,
+    "schemas": {
+      "python_valid": 2938,
+      "web_research_valid": 76
+    },
+    "python_to_web_ratio": 28.72
+  },
+  "val": {
+    "total": 208,
+    "counts": {
+      "direct": 87,
+      "python_only": 117,
+      "web_only": 4
+    },
+    "multi_tool": 45,
+    "schemas": {
+      "python_valid": 162,
+      "web_research_valid": 4
+    }
+  },
+  "train_val_exact_overlap_count": 59
+}

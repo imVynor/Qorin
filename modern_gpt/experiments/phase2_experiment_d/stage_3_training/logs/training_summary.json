@@ -1,0 +1,361 @@
+{
+  "status": "Completed full 475 updates",
+  "early_stopping_triggered": false,
+  "total_updates_completed": 475,
+  "total_epochs_completed": 1.0,
+  "best_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_d\\stage_3_training\\checkpoints\\ckpt_experiment_d_best.pt",
+    "step": 425,
+    "val_loss": 0.0021,
+    "sha256": "c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7"
+  },
+  "final_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_d\\stage_3_training\\checkpoints\\ckpt_experiment_d_final.pt",
+    "step": 475,
+    "val_loss": 0.0021,
+    "sha256": "55b31a7f320d01ed94ac64a74715bf4236366b9242600859ab0b5b1940bbd849"
+  },
+  "parent_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_c\\stage_3_training\\checkpoints\\ckpt_experiment_c_final.pt",
+    "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b",
+    "unmutated": true
+  },
+  "consecutive_evals_without_improvement": 2,
+  "val_loss_history": [
+    [
+      50,
+      0.3048
+    ],
+    [
+      75,
+      0.1402
+    ],
+    [
+      100,
+      0.0605
+    ],
+    [
+      125,
+      0.0207
+    ],
+    [
+      150,
+      0.0101
+    ],
+    [
+      175,
+      0.0068
+    ],
+    [
+      200,
+      0.0046
+    ],
+    [
+      225,
+      0.0042
+    ],
+    [
+      250,
+      0.0033
+    ],
+    [
+      275,
+      0.0031
+    ],
+    [
+      300,
+      0.003
+    ],
+    [
+      325,
+      0.0027
+    ],
+    [
+      350,
+      0.0024
+    ],
+    [
+      375,
+      0.0022
+    ],
+    [
+      400,
+      0.0022
+    ],
+    [
+      425,
+      0.0021
+    ],
+    [
+      450,
+      0.0021
+    ],
+    [
+      475,
+      0.0021
+    ]
+  ],
+  "best_benchmark_metrics": {
+    "intent_recall": 1.0,
+    "intent_precision": 0.9231,
+    "intent_f1": 0.96,
+    "tp": 24,
+    "fp": 2,
+    "tn": 4,
+    "fn": 0,
+    "tool_selection_accuracy": 0.7083,
+    "tool_correct_count": 17,
+    "schema_validity_count": 14,
+    "dispatch_success_count": 14,
+    "execution_success_count": 13,
+    "semantic_correct_count": 9,
+    "semantic_rate": 0.3,
+    "task_results": [
+      {
+        "id": "web_colloquial_01",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": true
+      },
+      {
+        "id": "web_colloquial_02",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "web_colloquial_03",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": true
+      },
+      {
+        "id": "web_colloquial_04",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "web_colloquial_05",
+        "expected_tool": "web_research",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      },
+      {
+        "id": "web_explicit_01",
+        "expected_tool": "web_research",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      },
+      {
+        "id": "web_explicit_02",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "web_explicit_03",
+        "expected_tool": "web_research",
+        "selected_tool": null,
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "web_explicit_04",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "web_explicit_05",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "python_core_01",
+        "expected_tool": "python",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": true
+      },
+      {
+        "id": "python_core_02",
+        "expected_tool": "python",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      },
+      {
+        "id": "python_core_03",
+        "expected_tool": "python",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": true
+      },
+      {
+        "id": "python_core_04",
+        "expected_tool": "python",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": true
+      },
+      {
+        "id": "python_core_05",
+        "expected_tool": "python",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": true
+      },
+      {
+        "id": "direct_conceptual_01",
+        "expected_tool": null,
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "direct_conceptual_02",
+        "expected_tool": null,
+        "selected_tool": null,
+        "has_tool": false,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "direct_conceptual_03",
+        "expected_tool": null,
+        "selected_tool": null,
+        "has_tool": false,
+        "schema_valid": false,
+        "semantic_pass": true
+      },
+      {
+        "id": "direct_conceptual_04",
+        "expected_tool": null,
+        "selected_tool": null,
+        "has_tool": false,
+        "schema_valid": false,
+        "semantic_pass": true
+      },
+      {
+        "id": "direct_conceptual_05",
+        "expected_tool": null,
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      },
+      {
+        "id": "selection_discrim_01",
+        "expected_tool": "python",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      },
+      {
+        "id": "selection_discrim_02",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "selection_discrim_03",
+        "expected_tool": null,
+        "selected_tool": null,
+        "has_tool": false,
+        "schema_valid": false,
+        "semantic_pass": true
+      },
+      {
+        "id": "selection_discrim_04",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "selection_discrim_05",
+        "expected_tool": "python",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      },
+      {
+        "id": "multistep_01",
+        "expected_tool": "web_research",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      },
+      {
+        "id": "multistep_02",
+        "expected_tool": "web_research",
+        "selected_tool": "web_research",
+        "has_tool": true,
+        "schema_valid": false,
+        "semantic_pass": false
+      },
+      {
+        "id": "multistep_03",
+        "expected_tool": "web_research",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      },
+      {
+        "id": "multistep_04",
+        "expected_tool": "web_research",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      },
+      {
+        "id": "multistep_05",
+        "expected_tool": "web_research",
+        "selected_tool": "python",
+        "has_tool": true,
+        "schema_valid": true,
+        "semantic_pass": false
+      }
+    ]
+  },
+  "thermal_summary": {
+    "peak_gpu_temp_c": 83.0,
+    "peak_vram_mib": 7890.0,
+    "total_elapsed_minutes": 99.04
+  }
+}

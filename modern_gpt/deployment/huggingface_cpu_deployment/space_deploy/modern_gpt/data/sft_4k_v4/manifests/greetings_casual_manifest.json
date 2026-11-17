@@ -1,0 +1,30 @@
+{
+  "manifest_name": "greetings_casual_v1_manifest",
+  "version": "1.0.0",
+  "phase": "1B.3A_supplementation",
+  "random_seed": 42,
+  "tokenizer_fingerprint": "be6c3d60c5baf217",
+  "dataset_file": "modern_gpt\\data\\sft_4k_v4\\raw\\greetings_casual_v1.jsonl",
+  "file_sha256": "57cdd4c8474fcd6344bb548d1a9e1604e69eb5da71fe312327272ab5e85d144a",
+  "total_records": 1300,
+  "total_input_tokens": 170377,
+  "total_supervised_tokens": 59493,
+  "mean_supervised_tokens": 45.76,
+  "median_supervised_tokens": 38.0,
+  "std_supervised_tokens": 32.52,
+  "min_supervised_tokens": 12,
+  "max_supervised_tokens": 156,
+  "subtype_distribution": {
+    "casual_qa": 180,
+    "greeting": 150,
+    "social_multiturn": 150,
+    "topic_transition": 120,
+    "acknowledgement": 120,
+    "short_reply": 120,
+    "clarification": 120,
+    "checkin": 120,
+    "sign_off": 110,
+    "uncertainty": 110
+  },
+  "validation_status": "PASSED"
+}

@@ -1,0 +1,167 @@
+{
+  "suite_name": "ModernGPT-S SFT Pre-Training Readiness Evaluation Suite",
+  "version": "1.0.0",
+  "created_at": "2026-11-14T10:35:00Z",
+  "evaluation_domains": {
+    "1_general_instruction_following": [
+      {
+        "id": "eval_gen_01",
+        "prompt": "List exactly 4 renewable energy sources. Format each as a bullet point starting with a dash, and keep each item under 5 words. Do not include an introductory or concluding sentence.",
+        "criteria": {
+          "bullet_count": 4,
+          "starts_with_dash": true,
+          "max_words_per_item": 5,
+          "no_intro_or_outro": true
+        }
+      },
+      {
+        "id": "eval_gen_02",
+        "prompt": "Write a 3-sentence description of photosynthesis. Every sentence must start with the letter 'P'.",
+        "criteria": {
+          "sentence_count": 3,
+          "all_sentences_start_with_P": true
+        }
+      }
+    ],
+    "2_conversational_quality": [
+      {
+        "id": "eval_conv_01",
+        "prompt": "I'm feeling really overwhelmed with my machine learning coursework. Can you help me organize my study plan?",
+        "criteria": {
+          "empathetic_tone": true,
+          "structured_actionable_steps": true,
+          "no_robotic_repetition": true
+        }
+      },
+      {
+        "id": "eval_conv_02",
+        "prompt": "Who are you and what architecture powers your model?",
+        "criteria": {
+          "identifies_as_moderngpt_s": true,
+          "accurate_model_metadata": true
+        }
+      }
+    ],
+    "3_multiturn_consistency": [
+      {
+        "id": "eval_multi_01",
+        "turns": [
+          {"role": "user", "content": "My dog's name is Barnaby and he is a 3-year-old Golden Retriever."},
+          {"role": "assistant", "content": "Barnaby sounds like a wonderful dog! Golden Retrievers are known for their friendly and loyal nature. How can I help you and Barnaby today?"},
+          {"role": "user", "content": "What breed is my dog again, and how old is he?"}
+        ],
+        "expected_facts": ["Golden Retriever", "3"]
+      }
+    ],
+    "4_mathematical_problem_solving": [
+      {
+        "id": "eval_math_01",
+        "prompt": "A bakery sold 48 cupcakes in the morning. In the afternoon, they sold 3/4 as many cupcakes as in the morning. If each cupcake costs $3.50, what was their total revenue for the day?",
+        "ground_truth_answer": 294.0,
+        "calculation_steps": "Morning: 48. Afternoon: 48 * 0.75 = 36. Total: 48 + 36 = 84. Revenue: 84 * 3.50 = 294.0"
+      },
+      {
+        "id": "eval_math_02",
+        "prompt": "Solve for x: 5(2x - 3) + 7 = 3(x + 4) - 2.",
+        "ground_truth_answer": 2.5714,
+        "exact_fraction": "18/7"
+      }
+    ],
+    "5_coding_execution": [
+      {
+        "id": "eval_code_01",
+        "prompt": "Write a Python function `longest_common_prefix(strs: list[str]) -> str` that finds the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string.",
+        "test_code": "assert longest_common_prefix(['flower','flow','flight']) == 'fl'\nassert longest_common_prefix(['dog','racecar','car']) == ''\nassert longest_common_prefix(['interspecies','interstellar','interstate']) == 'inters'\nassert longest_common_prefix([]) == ''"
+      },
+      {
+        "id": "eval_code_02",
+        "prompt": "Write a Python function `is_valid_bracket_sequence(s: str) -> bool` using a stack to check if parentheses '()', brackets '[]', and braces '{}' are closed in the correct order.",
+        "test_code": "assert is_valid_bracket_sequence('()[]{}') == True\nassert is_valid_bracket_sequence('(]') == False\nassert is_valid_bracket_sequence('([)]') == False\nassert is_valid_bracket_sequence('{[]}') == True\nassert is_valid_bracket_sequence('') == True"
+      }
+    ],
+    "6_json_schema_compliance": [
+      {
+        "id": "eval_json_01",
+        "prompt": "Extract the customer information from this email into a valid JSON object with keys 'customer_name', 'order_id', 'items' (list of objects with 'item_name' and 'quantity'), and 'total_amount'. Output ONLY raw JSON:\n'Hi support, I am Alice Walker (Order #89211). I received my 2 mechanical keyboards, but not my 1 USB cable. Total charged was $185.50.'",
+        "schema": {
+          "type": "object",
+          "required": ["customer_name", "order_id", "items", "total_amount"],
+          "properties": {
+            "customer_name": {"type": "string"},
+            "order_id": {"type": "string"},
+            "items": {"type": "array"},
+            "total_amount": {"type": "number"}
+          }
+        }
+      }
+    ],
+    "7_tool_selection": [
+      {
+        "id": "eval_tool_sel_01",
+        "prompt": "Calculate the determinant of this 4x4 matrix: [[3, 1, 4, 1], [5, 9, 2, 6], [5, 3, 5, 8], [9, 7, 9, 3]].",
+        "expected_tool": "python",
+        "should_call_tool": true
+      },
+      {
+        "id": "eval_tool_sel_02",
+        "prompt": "What is the capital of Australia?",
+        "should_call_tool": false
+      }
+    ],
+    "8_tool_argument_validity": [
+      {
+        "id": "eval_tool_arg_01",
+        "prompt": "Use the python interpreter tool to compute 2^64 - 1.",
+        "expected_arguments_schema": {
+          "type": "object",
+          "required": ["code"],
+          "properties": {
+            "code": {"type": "string"}
+          }
+        }
+      }
+    ],
+    "9_tool_result_utilization": [
+      {
+        "id": "eval_tool_util_01",
+        "conversation": [
+          {"role": "user", "content": "Compute the sum of divisors of 360 using Python."},
+          {"role": "assistant", "content": "<tool_call>{\"name\": \"python\", \"arguments\": {\"code\": \"n = 360\\ndivs = [i for i in range(1, n+1) if n % i == 0]\\nprint(sum(divs))\"}}</tool_call>"},
+          {"role": "tool", "content": "{\"stdout\": \"1170\\n\", \"exit_code\": 0}"}
+        ],
+        "expected_answer_contains": ["1170"]
+      }
+    ],
+    "10_multistep_tool_execution": [
+      {
+        "id": "eval_multi_tool_01",
+        "prompt": "First calculate 17 * 19 using Python, then find the square root of that result.",
+        "expected_steps": 2
+      }
+    ],
+    "11_error_recovery": [
+      {
+        "id": "eval_recov_01",
+        "conversation": [
+          {"role": "user", "content": "Calculate the average of [10, 20, 30] using Python."},
+          {"role": "assistant", "content": "<tool_call>{\"name\": \"python\", \"arguments\": {\"code\": \"data = [10, 20, 30]\\nprint(data.average())\"}}</tool_call>"},
+          {"role": "tool", "content": "{\"stderr\": \"AttributeError: 'list' object has no attribute 'average'\\n\", \"exit_code\": 1}"}
+        ],
+        "expected_recovery_tool_call": true,
+        "correct_code_contains": ["sum(data) / len(data)", "statistics.mean"]
+      }
+    ],
+    "12_correct_no_tool_decisions": [
+      {
+        "id": "eval_notool_01",
+        "prompt": "What is the difference between supervised and unsupervised learning?",
+        "should_call_tool": false
+      },
+      {
+        "id": "eval_notool_02",
+        "prompt": "Write a short haiku about autumn.",
+        "should_call_tool": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "experiment": "Experiment B (35M SFT Mixture)",
+  "total_active_training_sec": 10466.8,
+  "total_active_training_min": 174.45,
+  "total_cooldown_sec": 900.0,
+  "total_cooldown_min": 15.0,
+  "total_wall_clock_min": 189.5,
+  "thermal_duty_cycle_max_min": 105.0,
+  "thermal_cooldown_min": 15.0,
+  "cooldown_events_count": 1,
+  "events": [
+    {
+      "event_type": "mandatory_cooldown_break",
+      "at_step": 4208,
+      "conversation_tokens": 20747180,
+      "active_duration_sec": 6300.2,
+      "cooldown_duration_sec": 900.0,
+      "temp_before_c": 88.0,
+      "temp_after_c": 50.0,
+      "timestamp": "2026-11-15T20:50:56.691062+00:00"
+    }
+  ]
+}

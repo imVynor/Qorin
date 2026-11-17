@@ -1,0 +1,41 @@
+{
+  "manifest_version": "1.0.0",
+  "audit_stage": "Stage 10: Final Comparative Evaluation & Forensic Audit",
+  "benchmark_file": "modern_gpt/experiments/phase2_experiment_d/stage_5_generalization_audit/benchmark.jsonl",
+  "sha256": "d8d03073aaff4da55822be3681487fc269cc0893d220c90231b3626db5e257ab",
+  "total_tasks": 150,
+  "category_distribution": {
+    "colloquial_web_research": 30,
+    "python_computation": 25,
+    "direct_conceptual": 25,
+    "current_information": 20,
+    "tool_discrimination": 20,
+    "multistep_web_python": 15,
+    "tool_failure_recovery": 15
+  },
+  "intent_distribution": {
+    "tool_required": 114,
+    "direct_response_required": 36
+  },
+  "expected_tool_distribution": {
+    "web_research": 76,
+    "python": 38,
+    "none_direct": 36
+  },
+  "eval_environment_spec": {
+    "decoding_method": "greedy_argmax",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_new_tokens_stage1": 128,
+    "max_new_tokens_stage2": 160,
+    "max_new_tokens_multistep_stage3": 200,
+    "stop_token_ids": [5, 9],
+    "context_window_limit": 2048,
+    "system_prompt": "You are QORIN, a helpful and precise AI assistant.\nYou have access to external tools:\n1. `python`: Executes Python code in an isolated sandbox. Use for math, calculations, and data processing. Format: <|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"<code_string>\"}}\n2. `web_research`: Searches the web for current factual information. Returns evidence with source URLs. Format: <|tool_call|>{\"name\": \"web_research\", \"arguments\": {\"query\": \"<query_string>\"}}\nWhen a tool is needed, emit ONLY the tool call. If no tool is needed, respond directly to the user.",
+    "tokenizer_path": "modern_gpt/artifacts/tokenizer_32k/tokenizer.json",
+    "tokenizer_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+    "sandbox_security": "ast_whitelist_subprocess_isolation",
+    "retrieval_isolation": "mock_cache_and_live_resilient_web_researcher"
+  },
+  "integrity_status": "VERIFIED_BIT_FOR_BIT_IDENTICAL"
+}

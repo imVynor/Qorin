@@ -1,0 +1,9 @@
+{
+  "verified_at": "2026-11-02 21:03:51 UTC",
+  "protected_val_prompts_checked": 115,
+  "protected_val_responses_checked": 150,
+  "detected_prompt_leaks": 0,
+  "detected_response_leaks": 0,
+  "leakage_isolation_status": "PASSED_STRICT_ZERO_LEAKAGE",
+  "sha256_train_file": "aecdcefaa68c7c217fd3f2c8957a4e740de72c814f0b64096002e640fa386338"
+}

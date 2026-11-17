@@ -1,0 +1,22 @@
+# ModernGPT-S 100M Session Controller & Thermal Guardrails
+session_duration_minutes: 120
+cooling_duration_minutes: 30
+thermal_monitor_interval_seconds: 10
+
+# Temperature thresholds in Celsius (Approved Policy)
+max_gpu_temp_celsius: 95.0
+warn_gpu_temp_celsius: 90.0
+emergency_cooldown_temp_celsius: 70.0
+
+# Session persistence
+auto_resume: true
+checkpoint_path: "checkpoints/modern_gpts_100m/latest.pt"
+best_checkpoint_path: "checkpoints/modern_gpts_100m/best_val.pt"
+backup_dir: "checkpoints/modern_gpts_100m/session_backups"
+backup_retention_count: 5
+
+# Telemetry and logging
+session_log_dir: "logs/sessions"
+thermal_log_file: "logs/sessions/thermal_telemetry.jsonl"
+session_state_file: "checkpoints/modern_gpts_100m/session_state.json"
+

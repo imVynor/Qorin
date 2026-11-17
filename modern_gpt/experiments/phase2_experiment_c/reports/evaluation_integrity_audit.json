@@ -1,0 +1,32 @@
+{
+  "audit_name": "Phase 2D Experiment C Evaluation Integrity & Zero-Leakage Audit",
+  "timestamp": "2026-11-16T17:15:08.234793+00:00",
+  "status": "PASS",
+  "checks": {
+    "prompt_isolation_guarantee": {
+      "train_data": "modern_gpt/experiments/phase2_experiment_c/stage_1_data/train.jsonl",
+      "test_data": "modern_gpt/data_sft_release/splits/test.jsonl",
+      "test_overlaps_found": 0,
+      "leakage_rate": 0.0,
+      "verdict": "PASS (Strict 0-leakage verified)"
+    },
+    "checkpoint_lineage": {
+      "parent_checkpoint": "modern_gpt/checkpoints/sft_experiment_b/ckpt_experiment_b_final.pt",
+      "parent_sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+      "unmutated_post_training": true,
+      "verdict": "PASS"
+    },
+    "deterministic_decoding": {
+      "temperature": 0.0,
+      "strategy": "greedy (argmax)",
+      "repetition_penalty": 1.0,
+      "verdict": "PASS"
+    },
+    "sandbox_execution_contract": {
+      "python_execution": "Isolated subprocess sandbox with timeout & memory bounds",
+      "web_research": "Real-URL evidence fixtures + live search dispatch",
+      "closed_loop_verification": "Two-hop model -> tool -> model synthesis verified",
+      "verdict": "PASS"
+    }
+  }
+}

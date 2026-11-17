@@ -1,0 +1,42 @@
+{
+  "manifest_name": "identity_retention_v1_manifest",
+  "version": "1.0.0",
+  "phase": "1B.3B_identity_retention",
+  "random_seed": 42,
+  "tokenizer_fingerprint": "be6c3d60c5baf217",
+  "dataset_file": "modern_gpt\\data\\sft_4k_v4\\raw\\identity_retention_v1.jsonl",
+  "file_sha256": "e1190c184e2588b6d8b2da96dfa4112a8cced5c40ad31ff82c894e55045b51ea",
+  "total_records": 600,
+  "total_input_tokens": 382370,
+  "total_supervised_tokens": 195184,
+  "mean_supervised_tokens": 325.31,
+  "median_supervised_tokens": 324.0,
+  "std_supervised_tokens": 33.15,
+  "min_supervised_tokens": 237,
+  "max_supervised_tokens": 410,
+  "category_distribution": {
+    "personal_name": 25,
+    "personal_occupation": 25,
+    "personal_location": 25,
+    "personal_field_of_study": 25,
+    "preference_retention": 90,
+    "project_continuity": 90,
+    "constraint_retention": 80,
+    "correction_update": 80,
+    "multiple_fact_retention": 90,
+    "missing_information_uncertainty": 70
+  },
+  "supervised_tokens_by_category": {
+    "personal_name": 7098,
+    "personal_occupation": 7161,
+    "personal_location": 7003,
+    "personal_field_of_study": 7000,
+    "preference_retention": 29266,
+    "project_continuity": 31374,
+    "constraint_retention": 27711,
+    "correction_update": 24574,
+    "multiple_fact_retention": 32444,
+    "missing_information_uncertainty": 21553
+  },
+  "retention_validation_status": "ALL_PASSED_100_PERCENT"
+}

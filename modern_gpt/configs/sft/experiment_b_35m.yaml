@@ -1,0 +1,33 @@
+# Experiment B: Official 35M General + Tool-Use SFT Run
+experiment_name: "phase_2c_experiment_b_35m"
+model_architecture: "ModernGPT-S-500M"
+init_checkpoint: "modern_gpt/checkpoints/500m_pretrain/ckpt_latest.pt"
+tokenizer_path: "modern_gpt/artifacts/tokenizer_32k/tokenizer.json"
+train_dataset_path: "modern_gpt/experiments/phase2_experiment_b/experiment_b_train.jsonl"
+val_dataset_path: "modern_gpt/data_sft_release/splits/val.jsonl"
+output_dir: "modern_gpt/experiments/phase2_experiment_b/run_35m"
+reports_dir: "modern_gpt/reports/phase_2c/experiment_b_35m"
+
+# Training Hyperparameters (Config A)
+optimizer: "adamw_8bit"
+learning_rate: 2.5e-5
+min_learning_rate: 2.5e-6
+weight_decay: 0.01
+warmup_ratio: 0.03
+max_grad_norm: 1.0
+precision: "bfloat16"
+gradient_checkpointing: true
+
+# Batching & Budget Schedule
+microbatch_size: 1
+gradient_accumulation_steps: 8
+max_seq_len: 2048
+max_training_tokens: 35000000 # Strict ceiling: 35M serialized conversation tokens
+num_epochs: 1
+
+# Checkpointing & Telemetry
+logging_steps: 10
+eval_steps: 250
+save_steps: 500
+thermal_cooldown_interval_minutes: 105
+thermal_cooldown_duration_minutes: 15

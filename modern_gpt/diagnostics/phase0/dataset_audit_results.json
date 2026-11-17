@@ -1,0 +1,629 @@
+{
+  "sft_v3_train": {
+    "name": "sft_v3_train",
+    "total_records": 31949,
+    "categories": {
+      "long_context_retrieval": 9781,
+      "science_commonsense": 8269,
+      "general_conversation": 5162,
+      "coding_python": 2990,
+      "mathematics": 2907,
+      "structured_json": 1895,
+      "multi_turn_dialogue": 945
+    },
+    "sources": {
+      "synthetic_long_retrieval_v3": 9781,
+      "tau/commonsense_qa:train": 8269,
+      "openai/gsm8k:train": 2729,
+      "local_sft_v2:code_alpaca": 1790,
+      "smoltalk:apigen-80k": 1167,
+      "local_sft_v2:squad": 946,
+      "local_sft_v2:dolly_instruction": 941,
+      "smoltalk:explore-instruct": 916,
+      "smoltalk:openhermes": 894,
+      "smoltalk:self-oss-instruct": 889,
+      "local_sft_v2:json": 728,
+      "smoltalk:systemchats": 656,
+      "smoltalk:smol-rewrite": 460,
+      "smoltalk:smol-magpie-ultra": 323,
+      "local_sft_v2:dolly_qa": 321
+    },
+    "single_turn_records": 30606,
+    "single_turn_pct": 95.8,
+    "multiturn_records": 1343,
+    "multiturn_pct": 4.2,
+    "turn_distribution": {
+      "1": 30606,
+      "3": 822,
+      "2": 318,
+      "4": 82,
+      "5": 51,
+      "12": 40,
+      "6": 14,
+      "7": 7,
+      "8": 5,
+      "9": 2,
+      "10": 1,
+      "11": 1
+    },
+    "prompt_tokens_stats": {
+      "min": 2,
+      "p25": 46,
+      "median": 72,
+      "p75": 671,
+      "p95": 3090,
+      "max": 3914,
+      "mean": 590.0
+    },
+    "response_tokens_stats": {
+      "min": 1,
+      "p25": 25,
+      "median": 36,
+      "p75": 96,
+      "p95": 285,
+      "max": 11275,
+      "mean": 96.0
+    },
+    "total_tokens_stats": {
+      "min": 11,
+      "p25": 87,
+      "median": 211,
+      "p75": 991,
+      "p95": 3124,
+      "max": 11506,
+      "mean": 686.0
+    },
+    "response_length_buckets": {
+      "<50_tokens": 18119,
+      "50_to_199_tokens": 11251,
+      "200_to_999_tokens": 2200,
+      ">=1000_tokens": 379
+    },
+    "top_openings": {
+      "the correct answer": 8271,
+      "based on the": 3265,
+      "the provided text": 3248,
+      "the orbital frequency": 353,
+      "the power output": 352,
+      "the coolant mixture": 345,
+      "the security badge": 339,
+      "the settlement value": 332,
+      "the apogee altitude": 330,
+      "the submersion depth": 328,
+      "the access code": 319,
+      "the coherence time": 304,
+      "the endurance limit": 281,
+      "understood! i've noted": 149,
+      "here is the": 145
+    },
+    "attractor_matches": {
+      "sure_certainly": 668,
+      "support_rep": 119,
+      "email_boilerplate": 72,
+      "let_me_know": 48,
+      "feel_free": 76,
+      "ai_disclaimer": 4,
+      "assist_help_open": 4
+    },
+    "greetings_found_count": 0,
+    "greeting_samples": [],
+    "email_samples": [
+      {
+        "user": "Can you guide me on the steps and words to use when praying in Christianity?",
+        "assistant": "Sure, here is a basic outline on how to pray in Christianity, specifically in a Protestant context. Please note that the structure of prayer can vary between different Christian denominations.\n\n1. Address God: Begin your prayer by addressing God. You might say, \"Dear Heavenly Father,\" \"Lord,\" or \"Go",
+        "source": "smoltalk:systemchats"
+      },
+      {
+        "user": "Hi Jane,\n\nI hope you're doing well. I wanted to reach out to you regarding a new project that I've been assigned to lead. It's a large-scale wireless network design and implementation for one of our major clients, and I would really appreciate your assistance on this project. Your expertise in network architecture and your recent CCNA certification will be invaluable.\n\nAlso, I've been considering pursuing a more advanced certification, such as the CCNP or CWNA, to further my career. As someone who has recently gone through the certification process, I was wondering if you had any advice or recommendations for preparing for these exams.\n\nLastly, I wanted to discuss the potential adoption of new wireless technologies, such as Wi-Fi 6 and 5G, within our company. We've been tasked with researching these technologies and providing recommendations to the management team. I'd love to hear your thoughts and insights on this matter.\n\nWould you be available for a meeting next week to discuss these topics further? Let me know what works best for your schedule.\n\nBest regards,\nJohn",
+        "assistant": "Hi Jane,\n\nI hope you're well. I'm leading a new project for a major client involving large-scale wireless network design and implementation. Your expertise and recent CCNA certification would be invaluable. Could you assist?\n\nI'm also considering advanced certifications like CCNP or CWNA. Any advice",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "I'm having an issue with my online account. It won't let me log in even though I'm sure my password and username are correct. Can you help me out?",
+        "assistant": "Ah dear adventurer, you seem to have stumbled into the realm of technology, a realm I'm not well-versed in. My abilities lie in guiding you through mystical lands, solving riddles of old, and aiding in epic quests. For your current predicament, I suggest seeking the wisdom of tech support. They are ",
+        "source": "smoltalk:systemchats"
+      },
+      {
+        "user": "I'm having an issue with my online account. It won't let me log in even though I'm sure my password and username are correct. Can you help me out?",
+        "assistant": "Alas, my dear adventurer, I lack the specific knowledge of your realm's technical support details. However, I can guide you through the general steps. In most situations, you would look for a 'Help', 'Support', or 'Contact Us' option on the website or application you're trying to log into. There, yo",
+        "source": "smoltalk:systemchats"
+      },
+      {
+        "user": "Hi Jordan,\n\nI hope you're doing well. I'm a computer science teacher, and I'm currently preparing a lesson on the differences between programming languages and scripting languages. I came across your post on the \"Programming Languages Forum\" and found your explanation to be very insightful.\n\nI was wondering if you could provide some more details on the differences between the two, particularly in terms of their use cases and the level of control they offer developers. I want to ensure that I have a comprehensive understanding of the topic before presenting it to my students.\n\nAny help you can offer would be greatly appreciated!\n\nBest regards,\nAlex Thompson",
+        "assistant": "Hi Jordan,\n\nI hope you're well. I'm a computer science teacher preparing a lesson on the differences between programming languages and scripting languages. Your post on the \"Programming Languages Forum\" was very helpful.\n\nCould you provide more details on their use cases and the level of control the",
+        "source": "smoltalk:smol-rewrite"
+      }
+    ]
+  },
+  "sft_v3_val": {
+    "name": "sft_v3_val",
+    "total_records": 3277,
+    "categories": {
+      "long_context_retrieval": 971,
+      "science_commonsense": 826,
+      "general_conversation": 525,
+      "coding_python": 343,
+      "mathematics": 294,
+      "structured_json": 200,
+      "multi_turn_dialogue": 118
+    },
+    "sources": {
+      "synthetic_long_retrieval_v3": 971,
+      "tau/commonsense_qa:train": 826,
+      "openai/gsm8k:train": 275,
+      "local_sft_v2:code_alpaca": 203,
+      "smoltalk:apigen-80k": 128,
+      "smoltalk:openhermes": 105,
+      "smoltalk:self-oss-instruct": 104,
+      "smoltalk:explore-instruct": 96,
+      "local_sft_v2:dolly_instruction": 84,
+      "local_sft_v2:squad": 83,
+      "smoltalk:systemchats": 79,
+      "local_sft_v2:json": 72,
+      "local_sft_v2:mbpp": 36,
+      "smoltalk:smol-rewrite": 34,
+      "smoltalk:smol-magpie-ultra": 33
+    },
+    "single_turn_records": 3115,
+    "single_turn_pct": 95.06,
+    "multiturn_records": 162,
+    "multiturn_pct": 4.94,
+    "turn_distribution": {
+      "1": 3115,
+      "3": 102,
+      "2": 37,
+      "4": 12,
+      "12": 4,
+      "5": 3,
+      "6": 3,
+      "10": 1
+    },
+    "prompt_tokens_stats": {
+      "min": 1,
+      "p25": 46,
+      "median": 69,
+      "p75": 596,
+      "p95": 3089,
+      "max": 3186,
+      "mean": 576.0
+    },
+    "response_tokens_stats": {
+      "min": 1,
+      "p25": 26,
+      "median": 38,
+      "p75": 97,
+      "p95": 301,
+      "max": 2850,
+      "mean": 101.0
+    },
+    "total_tokens_stats": {
+      "min": 11,
+      "p25": 88,
+      "median": 211,
+      "p75": 947,
+      "p95": 3125,
+      "max": 4933,
+      "mean": 676.9
+    },
+    "response_length_buckets": {
+      "<50_tokens": 1810,
+      "50_to_199_tokens": 1181,
+      "200_to_999_tokens": 240,
+      ">=1000_tokens": 46
+    },
+    "top_openings": {
+      "the correct answer": 826,
+      "based on the": 329,
+      "the provided text": 324,
+      "the settlement value": 43,
+      "the submersion depth": 38,
+      "the power output": 37,
+      "the coherence time": 32,
+      "the orbital frequency": 32,
+      "the security badge": 31,
+      "the coolant mixture": 31,
+      "the apogee altitude": 29,
+      "the endurance limit": 27,
+      "understood! i've noted": 25,
+      "the access code": 20,
+      "here is the": 18
+    },
+    "attractor_matches": {
+      "support_rep": 14,
+      "feel_free": 8,
+      "sure_certainly": 63,
+      "email_boilerplate": 9,
+      "let_me_know": 4
+    },
+    "greetings_found_count": 3,
+    "greeting_samples": [
+      {
+        "user": "Good morning",
+        "assistant": "Good morning! Hope you're having a productive start to your day.",
+        "source": "curated_conversational_diverse",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hello",
+        "assistant": "Hello! Good to meet you. What are you working on today?",
+        "source": "curated_conversational_diverse",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hey",
+        "assistant": "Hey there! What can I help you with?",
+        "source": "curated_conversational_diverse",
+        "category": "general_conversation"
+      }
+    ],
+    "email_samples": [
+      {
+        "user": "Alex,\n\nI am extremely disappointed to hear that the prototype for the AI tool is not ready by the deadline we agreed upon. This is not the first time you've let the team down, and it's becoming a serious issue. We need to see results, or this project might be in jeopardy.\n\nI thought you were better than this. The funding agency is expecting significant progress, and your delays are putting everything at risk. Please address this immediately.\n\nEmily Carter, Ph.D.\nEducational Psychologist",
+        "assistant": "Hi Alex,\n\nI hope you're doing well. I wanted to touch base with you about the AI tool prototype. I noticed that we haven't received it by the agreed-upon deadline, and I must admit, I'm quite concerned. This isn't the first time we've faced a delay, and it's starting to impact our team and the proje",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "Can you find some online drawing classes for beginners that I can sign up for?",
+        "assistant": "As an AI in the context of a medieval role-playing game, I must say that I can't directly help you find online classes as I am designed to provide in-game information and stories. However, in the spirit of your question, let me share a tale.\n\nIn our village, there is a renowned artist, Sir Edwin of ",
+        "source": "smoltalk:systemchats"
+      },
+      {
+        "user": "Alex,\n\nI've reviewed your report on the chemical processes used in gold extraction, and I have to say, I'm extremely disappointed. You've made a mess of this report. The data is incomplete, and there are critical errors that I can't believe I have to point out. I can't afford to have this project delayed because of basic mistakes.\n\nYou should know better at this stage. If this isn't fixed by tomorrow, we'll have to consider your role in this project.\n\nSincerely,\nDr. Emma Thompson",
+        "assistant": "Hi Alex,\n\nI hope you're doing well. I've had a chance to go through your report on the chemical processes used in gold extraction, and I wanted to share some feedback with you. There are a few areas where I think we can improve the quality and completeness of the data. It seems like there might have",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "Alex,\n\nI noticed that you have not submitted the assignment due last week. This is the third time you have missed a deadline, and it is starting to affect your grade significantly. I expect you to submit it by tomorrow, or you will receive a zero.\n\nBest,\nDr. Stone",
+        "assistant": "Hi Alex,\n\nI hope you're doing well. I just wanted to touch base about the assignment that was due last week. I see that it hasn't been submitted yet, and I wanted to check in to see if everything is okay. This is the third time a deadline has been missed, and it's starting to impact your grade.\n\nI r",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "I need you to draft an email for me to the HR department. The subject should be \"Vacation Days Inquiry\" and the body should read, \"Dear HR team, I am planning to take some time off in the upcoming months and I would like to know how many vacation days I have left. Could you please provide this information at your earliest convenience? Thank you, Sam.\"",
+        "assistant": "Subject: \"Vacation Days Inquiry\"\n\nBody:\n\nDear HR Team,\n\nI trust this message finds you well. I am considering the idea of taking a short sabbatical in the coming months and I am currently in the process of organizing my schedule.\n\nTo this effect, I would greatly appreciate if you could assist me by ",
+        "source": "smoltalk:systemchats"
+      }
+    ]
+  },
+  "sft_v2_train": {
+    "name": "sft_v2_train",
+    "total_records": 21647,
+    "categories": {
+      "long_context_retrieval": 8485,
+      "general_conversation": 4304,
+      "coding_python": 3465,
+      "educational_explanations": 2324,
+      "structured_json": 2003,
+      "multi_turn_dialogue": 628,
+      "mathematics": 438
+    },
+    "sources": {
+      "synthetic_long_retrieval_v2": 7077,
+      "local_sft_v2:code_alpaca": 2200,
+      "smoltalk:apigen-80k": 1369,
+      "smoltalk:everyday-conversations": 1226,
+      "smoltalk:openhermes": 1164,
+      "smoltalk:explore-instruct": 1160,
+      "local_sft_v2:squad": 1053,
+      "smoltalk:self-oss-instruct": 994,
+      "smoltalk:systemchats": 867,
+      "smoltalk:smol-rewrite": 830,
+      "local_sft_v2:ultrachat": 675,
+      "local_sft_v2:dolly_instruction": 658,
+      "local_sft_v2:json": 634,
+      "smoltalk:smol-magpie-ultra": 356,
+      "local_sft_v2:dolly_qa": 355
+    },
+    "single_turn_records": 19267,
+    "single_turn_pct": 89.01,
+    "multiturn_records": 2380,
+    "multiturn_pct": 10.99,
+    "turn_distribution": {
+      "1": 19267,
+      "4": 1279,
+      "3": 652,
+      "2": 260,
+      "5": 91,
+      "12": 49,
+      "6": 24,
+      "7": 11,
+      "8": 5,
+      "9": 4,
+      "10": 3,
+      "11": 2
+    },
+    "prompt_tokens_stats": {
+      "min": 1,
+      "p25": 52,
+      "median": 186,
+      "p75": 976,
+      "p95": 3095,
+      "max": 3914,
+      "mean": 663.5
+    },
+    "response_tokens_stats": {
+      "min": 0,
+      "p25": 29,
+      "median": 92,
+      "p75": 134,
+      "p95": 582,
+      "max": 11275,
+      "mean": 156.0
+    },
+    "total_tokens_stats": {
+      "min": 10,
+      "p25": 165,
+      "median": 434,
+      "p75": 1072,
+      "p95": 3157,
+      "max": 11506,
+      "mean": 819.5
+    },
+    "response_length_buckets": {
+      "<50_tokens": 7417,
+      "50_to_199_tokens": 10599,
+      "200_to_999_tokens": 3070,
+      ">=1000_tokens": 561
+    },
+    "top_openings": {
+      "according to the": 1812,
+      "based on the": 1713,
+      "hello! how can": 1220,
+      "the provided text": 909,
+      "i'm sorry for": 170,
+      "here's how you": 149,
+      "yes, there are": 116,
+      "maintenance for project": 107,
+      "satellite echo-12 operates": 104,
+      "the orbital frequency": 103,
+      "consortium alpha operates": 103,
+      "maintenance for reactor": 100,
+      "vessel nautilus-iv operates": 98,
+      "maintenance for consortium": 98,
+      "maintenance for archive": 97
+    },
+    "attractor_matches": {
+      "let_me_know": 78,
+      "sure_certainly": 1055,
+      "assist_help_open": 1336,
+      "feel_free": 140,
+      "email_boilerplate": 389,
+      "support_rep": 191,
+      "ai_disclaimer": 5
+    },
+    "greetings_found_count": 795,
+    "greeting_samples": [
+      {
+        "user": "Hi",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hi",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hi",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hello",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hi",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hi",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hi",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hi",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hello",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      },
+      {
+        "user": "Hello",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "general_conversation"
+      }
+    ],
+    "email_samples": [
+      {
+        "user": "Hey Alex,\n\nHow's it going? I hope you're doing well. I just wanted to shoot you a quick note to get your thoughts on the draft I sent over last week. It's a bit of a doozy, I know, but I think it covers a lot of ground. Let me know what you think, and if you have any suggestions or feedback, I'd be super grateful!\n\nAlso, FYI, the conference submission deadline is coming up, so it would be great if we could sync up soon to discuss this in more detail. What do you say?\n\nThanks a bunch,\nEmily",
+        "assistant": "Dear Alex,\n\nI hope this message finds you well. I am writing to seek your insights on the draft I sent over last week. I acknowledge that it is quite comprehensive, but I believe it addresses a wide range of topics. Your feedback and any suggestions you might have would be greatly appreciated.\n\nAddi",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "Dr. Lee,\n\nI am extremely disappointed to see that the content for the chemistry app has not been submitted as agreed. You've let us down again, and your delays are making everyone else's job harder. I guess the content for the app is not as important as your other projects.\n\nWe need the content by the end of this week, or we'll have to find someone else to work on this.\n\nBest,\nAlex",
+        "assistant": "Hi Dr. Lee,\n\nI hope you're doing well. I wanted to touch base regarding the chemistry app content. We're a bit concerned as we haven't received the material as we had agreed. I understand you might have a lot on your plate, but your contribution is really important to us and to the success of this p",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "Hey David!\n\nHope you're doing well and the sermon prep is going smoothly! I was thinking, what if we combined our expertise to look at the intersection of mental health and religious leadership in youth? Like, how can we use psychosocial interventions to help young leaders in faith communities? I think this could be a game-changer, man!\n\nLet me know what you think. And maybe we can set up a time to chat more about it?\n\nTake care,\nEmily \ud83d\ude0a",
+        "assistant": "Dear David,\n\nI hope this message finds you well and that your sermon preparation is progressing smoothly. I have been contemplating a potential collaboration that I believe could be both impactful and innovative. Specifically, I am interested in exploring the intersection of mental health and religi",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "Hey Maya,\n\nHow\u2019s it going? I hope you\u2019re doing well! I\u2019ve been thinking a lot about that conference we met at last year, and I have this AMAZING idea for a research project on racial equity in public schools. I think it could really make a difference! What do you think?\n\nCan\u2019t wait to hear from you!\n\nJamie",
+        "assistant": "Dear Maya,\n\nI hope this message finds you well. I have been reflecting on our conversation at the conference last year, and I have developed an idea for a research project focused on racial equity in public schools. I believe this project has the potential to make a significant impact. I would great",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "Hey Sarah,\n\nHope you're doing great! I\u2019ve got this new pain management module we need to work on. It\u2019s kinda urgent, like, we need to get it done ASAP. Think you can help me out? I really need someone with your experience and stuff. \n\nOh, and remember that time we did the diabetes module? That was a blast, right? Hope this one is as fun!\n\nThanks a ton,\nEmily",
+        "assistant": "Dear Sarah,\n\nI hope this message finds you well. I am reaching out to discuss a new project concerning a pain management module that requires our immediate attention. Given the urgency of this task, I am seeking your expertise and assistance to ensure its timely completion.\n\nYour experience and skil",
+        "source": "smoltalk:smol-rewrite"
+      }
+    ]
+  },
+  "sft_v1_train": {
+    "name": "sft_v1_train",
+    "total_records": 8764,
+    "categories": {
+      "multi_turn_dialogue": 2238,
+      "general_instruction": 1814,
+      "coding_python": 1802,
+      "long_context_retrieval": 1082,
+      "contextual_qa": 895,
+      "structured_json": 534,
+      "mathematics": 399
+    },
+    "sources": {
+      "local_sft_v2:code_alpaca": 1604,
+      "ultrachat_200k": 1129,
+      "synthetic_long_retrieval": 1082,
+      "smoltalk:smol-magpie-ultra": 1047,
+      "local_sft_v2:squad": 684,
+      "local_sft_v2:structured_json": 534,
+      "local_sft_v2:dolly_instruction": 443,
+      "local_sft_v2:ultrachat": 418,
+      "local_sft_v2:gsm8k": 399,
+      "local_sft_v2:dolly_qa": 211,
+      "local_sft_v2:mbpp": 198,
+      "smoltalk:numina-cot-100k": 167,
+      "smoltalk:smol-summarize": 162,
+      "smoltalk:openhermes-100k": 148,
+      "smoltalk:apigen-80k": 129
+    },
+    "single_turn_records": 6526,
+    "single_turn_pct": 74.46,
+    "multiturn_records": 2238,
+    "multiturn_pct": 25.54,
+    "turn_distribution": {
+      "1": 6526,
+      "3": 1415,
+      "2": 387,
+      "4": 328,
+      "5": 60,
+      "6": 25,
+      "7": 17,
+      "12": 5,
+      "11": 1
+    },
+    "prompt_tokens_stats": {
+      "min": 5,
+      "p25": 40,
+      "median": 99,
+      "p75": 271,
+      "p95": 2075,
+      "max": 5263,
+      "mean": 350.6
+    },
+    "response_tokens_stats": {
+      "min": 1,
+      "p25": 31,
+      "median": 93,
+      "p75": 413,
+      "p95": 1762,
+      "max": 5028,
+      "mean": 397.0
+    },
+    "total_tokens_stats": {
+      "min": 11,
+      "p25": 138,
+      "median": 316,
+      "p75": 1121,
+      "p95": 2539,
+      "max": 9555,
+      "mean": 747.7
+    },
+    "response_length_buckets": {
+      "<50_tokens": 2712,
+      "50_to_199_tokens": 2984,
+      "200_to_999_tokens": 1650,
+      ">=1000_tokens": 1418
+    },
+    "top_openings": {
+      "sure, here are": 207,
+      "the provided text": 185,
+      "certainly! here are": 137,
+      "i do not": 85,
+      "yes, there are": 84,
+      "to find the": 81,
+      "sure! here are": 77,
+      "here's a revised": 62,
+      "{ \"status_code\": 200,": 53,
+      "i don't have": 52,
+      "to solve this": 51,
+      "```python public class": 51,
+      "{ \"status_code\": 404,": 50,
+      "sure, i'd be": 47,
+      "absolutely! here are": 42
+    },
+    "attractor_matches": {
+      "support_rep": 110,
+      "sure_certainly": 1292,
+      "let_me_know": 50,
+      "feel_free": 27,
+      "assist_help_open": 9,
+      "email_boilerplate": 68
+    },
+    "greetings_found_count": 2,
+    "greeting_samples": [
+      {
+        "user": "Hello",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "multi_turn_dialogue"
+      },
+      {
+        "user": "Hi",
+        "assistant": "Hello! How can I help you today?",
+        "source": "smoltalk:everyday-conversations",
+        "category": "multi_turn_dialogue"
+      }
+    ],
+    "email_samples": [
+      {
+        "user": "\"Compose a polite message and text your boss to ask for specific feedback on your presentation given on Friday. Request suggestions on how to improve it, and ask if there was anything particularly impressive about the presentation.\"",
+        "assistant": "Dear [Boss's name],\n\nI hope you're doing well. I was wondering if you had a moment to provide me with feedback on the presentation I gave on Friday. I would greatly appreciate your input and suggestions on how I can improve in the future. Additionally, I would like to know if there was anything you ",
+        "source": "local_sft_v2:ultrachat"
+      },
+      {
+        "user": "Given the text: God Is Available For Us All!\nGod is here right now and is always available.\nThrough Jesus, salvation is freely obtainable!\nGod is here and wants everyone to know him.\nis so sweet and pure.\nHis wondrous love brings a peace that\u2019s secure.\nPlease come and drink of his life giving flow.\nEnjoy the life quenching grace in your soul.\nAllow your soul to enjoy his beauty above.\nBe filled with his mercy, hope and love!\nWhat are some ways for individuals to experience God's mercy, hope, and love, as mentioned in the material?",
+        "assistant": "Certainly, here is a short prayer you can say to seek God's mercy, hope, and love:\n\nDear God, \nThank you for your constant love and mercy. I ask that you fill my heart with hope and joy, that I may see the beauty and goodness in the world around me. Please pour out your grace upon me, and help me to",
+        "source": "ultrachat_200k"
+      },
+      {
+        "user": "Hey David! Long time no see! How's life? I hope you're doing well. I wanted to reach out because we have this awesome project coming up. It's all about creating educational materials on water security for students in low-income regions. Thought you'd be perfect for it! \ud83c\udf89\n\nLet me know what you think! I can send over some more details if you're interested.\n\nTake care,  \nSofia",
+        "assistant": "Dear David,\n\nIt has been quite some time since we last spoke. I trust that you are well. I am reaching out to you regarding an upcoming project that I believe would be of significant interest to you. The project focuses on the development of educational materials concerning water security, specifica",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "Hey Jamie,\n\nJust wanted to give you a heads up on the new circuit breaker specs. We're almost done, but I'm a bit stuck on the thermal relay part. I MEAN, seriously, what's up with these specs? They're all over the place!\n\nAnyway, can you look into it and let me know what you think? Also, I heard you were at the tech conference last week. How was it? Did you check out the new safety protocols? Haha, I bet it was a blast!\n\nThanks a ton,\nAlex",
+        "assistant": "Dear Jamie,\n\nI hope this message finds you well. I am writing to inform you about the progress on the new circuit breaker specifications. We are nearing completion; however, I have encountered some difficulties with the thermal relay section. The specifications provided seem inconsistent and unclear",
+        "source": "smoltalk:smol-rewrite"
+      },
+      {
+        "user": "Write a clear and concise email addressing the IT department and including specific details about the additional computer or software resources you are requesting. Be sure to explain why these resources are necessary and provide any relevant information about the cost, timeline, and other logistical considerations. Use proper email etiquette and a professional tone throughout the message.",
+        "assistant": "Subject: Request for additional computer and software resources\n\nDear IT Department,\n\nI am writing to request additional computer and software resources for my team. We have recently taken over a new project which requires us to use complex design software that is not available on our current system",
+        "source": "local_sft_v2:ultrachat"
+      }
+    ]
+  }
+}

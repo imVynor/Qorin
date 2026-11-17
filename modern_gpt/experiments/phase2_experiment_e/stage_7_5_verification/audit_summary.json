@@ -1,0 +1,106 @@
+{
+  "token_stats": {
+    "corpus1_calibration_train.jsonl": {
+      "record_count": 400,
+      "total_tokens": 37282,
+      "target_tokens": 18046,
+      "prefix_tokens": 19236,
+      "avg_total": 93.2,
+      "avg_target": 45.1
+    },
+    "corpus1_calibration_val.jsonl": {
+      "record_count": 50,
+      "total_tokens": 6523,
+      "target_tokens": 3635,
+      "prefix_tokens": 2888,
+      "avg_total": 130.5,
+      "avg_target": 72.7
+    },
+    "corpus1_calibration_test.jsonl": {
+      "record_count": 50,
+      "total_tokens": 4775,
+      "target_tokens": 1915,
+      "prefix_tokens": 2860,
+      "avg_total": 95.5,
+      "avg_target": 38.3
+    },
+    "corpus2_synthesis_train.jsonl": {
+      "record_count": 400,
+      "total_tokens": 72038,
+      "target_tokens": 19990,
+      "prefix_tokens": 52048,
+      "avg_total": 180.1,
+      "avg_target": 50.0
+    },
+    "corpus2_synthesis_val.jsonl": {
+      "record_count": 50,
+      "total_tokens": 8740,
+      "target_tokens": 2500,
+      "prefix_tokens": 6240,
+      "avg_total": 174.8,
+      "avg_target": 50.0
+    },
+    "corpus2_synthesis_test.jsonl": {
+      "record_count": 50,
+      "total_tokens": 10642,
+      "target_tokens": 3175,
+      "prefix_tokens": 7467,
+      "avg_total": 212.8,
+      "avg_target": 63.5
+    },
+    "combined_train.jsonl": {
+      "record_count": 800,
+      "total_tokens": 109320,
+      "target_tokens": 38036,
+      "prefix_tokens": 71284,
+      "avg_total": 136.7,
+      "avg_target": 47.5
+    },
+    "combined_val.jsonl": {
+      "record_count": 100,
+      "total_tokens": 15263,
+      "target_tokens": 6135,
+      "prefix_tokens": 9128,
+      "avg_total": 152.6,
+      "avg_target": 61.4
+    },
+    "combined_test.jsonl": {
+      "record_count": 100,
+      "total_tokens": 15417,
+      "target_tokens": 5090,
+      "prefix_tokens": 10327,
+      "avg_total": 154.2,
+      "avg_target": 50.9
+    }
+  },
+  "kinematics": {
+    "branch_b_calibration": {
+      "train_records": 400,
+      "optimizer_updates": 200,
+      "effective_epochs": 2.0,
+      "total_token_exposure": 74564.0,
+      "target_token_exposure": 36092.0
+    },
+    "branch_c_synthesis": {
+      "train_records": 400,
+      "optimizer_updates": 200,
+      "effective_epochs": 2.0,
+      "total_token_exposure": 144076.0,
+      "target_token_exposure": 39980.0
+    },
+    "branch_d_combined_full": {
+      "train_records": 800,
+      "optimizer_updates": 400,
+      "effective_epochs": 2.0,
+      "total_token_exposure": 218640.0,
+      "target_token_exposure": 76072.0
+    },
+    "branch_d_matched_updates": {
+      "train_records": 800,
+      "optimizer_updates": 200,
+      "effective_epochs": 1.0,
+      "total_token_exposure": 109320.0,
+      "target_token_exposure": 38036.0
+    }
+  }
+}

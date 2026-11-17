@@ -1,0 +1,598 @@
+{
+  "metadata": {
+    "title": "Isolated Coding Evaluation and Sandbox Correctness",
+    "source_artifacts": [
+      "modern_gpt/experiments/phase2_experiment_c/reports/coding_evaluation.json",
+      "modern_gpt/reports/final_research_audit/extended_prime_audit.json"
+    ]
+  },
+  "summary": {
+    "base_pretrained": {
+      "syntax_valid_pct": 2.0,
+      "pass_at_1_pct": 0.0
+    },
+    "experiment_a": {
+      "syntax_valid_pct": 52.0,
+      "pass_at_1_pct": 14.0
+    },
+    "experiment_b": {
+      "syntax_valid_pct": 92.0,
+      "pass_at_1_pct": 42.0
+    },
+    "experiment_c": {
+      "syntax_valid_pct": 96.0,
+      "pass_at_1_pct": 38.0
+    }
+  },
+  "extended_prime_audit": {
+    "generated_code": "\ndef is_prime(n):\n    if n % 2 == 0:\n        return False\n    else:\n        return True\n",
+    "evaluation": {
+      "total": 37,
+      "correct": 22,
+      "accuracy": 59.46,
+      "results": [
+        {
+          "val": -13,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "negative"
+        },
+        {
+          "val": -7,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "negative"
+        },
+        {
+          "val": -2,
+          "expected": false,
+          "actual": false,
+          "correct": true,
+          "category": "negative"
+        },
+        {
+          "val": -1,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "negative"
+        },
+        {
+          "val": 0,
+          "expected": false,
+          "actual": false,
+          "correct": true,
+          "category": "boundary"
+        },
+        {
+          "val": 1,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "boundary"
+        },
+        {
+          "val": 2,
+          "expected": true,
+          "actual": false,
+          "correct": false,
+          "category": "even_prime"
+        },
+        {
+          "val": 3,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 5,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 7,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 11,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 13,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 17,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 19,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 23,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 29,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 31,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "small_prime"
+        },
+        {
+          "val": 4,
+          "expected": false,
+          "actual": false,
+          "correct": true,
+          "category": "small_composite"
+        },
+        {
+          "val": 6,
+          "expected": false,
+          "actual": false,
+          "correct": true,
+          "category": "small_composite"
+        },
+        {
+          "val": 8,
+          "expected": false,
+          "actual": false,
+          "correct": true,
+          "category": "small_composite"
+        },
+        {
+          "val": 9,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "odd_composite"
+        },
+        {
+          "val": 15,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "odd_composite"
+        },
+        {
+          "val": 21,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "odd_composite"
+        },
+        {
+          "val": 25,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "odd_square"
+        },
+        {
+          "val": 27,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "odd_cube"
+        },
+        {
+          "val": 35,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "semiprime"
+        },
+        {
+          "val": 49,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "semiprime"
+        },
+        {
+          "val": 97,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "two_digit_prime"
+        },
+        {
+          "val": 100,
+          "expected": false,
+          "actual": false,
+          "correct": true,
+          "category": "even_composite"
+        },
+        {
+          "val": 101,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "three_digit_prime"
+        },
+        {
+          "val": 119,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "semiprime_7x17"
+        },
+        {
+          "val": 127,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "three_digit_prime"
+        },
+        {
+          "val": 541,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "three_digit_prime"
+        },
+        {
+          "val": 561,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "carmichael_number"
+        },
+        {
+          "val": 1000,
+          "expected": false,
+          "actual": false,
+          "correct": true,
+          "category": "power_of_10"
+        },
+        {
+          "val": 1009,
+          "expected": true,
+          "actual": true,
+          "correct": true,
+          "category": "four_digit_prime"
+        },
+        {
+          "val": 1105,
+          "expected": false,
+          "actual": true,
+          "correct": false,
+          "category": "carmichael_number"
+        }
+      ]
+    }
+  },
+  "tasks": [
+    {
+      "id": "code_00",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_01",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_02",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_03",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_04",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_05",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_06",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_07",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_08",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_09",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_10",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_11",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_12",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_13",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_14",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_15",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_16",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_17",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_18",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_19",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_20",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_21",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_22",
+      "syntax_ok": false,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_23",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_24",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_25",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_26",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_27",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_28",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_29",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_30",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_31",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_32",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_33",
+      "syntax_ok": false,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_34",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_35",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_36",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_37",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_38",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_39",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_40",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_41",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_42",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_43",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_44",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_45",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_46",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_47",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_48",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_49",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    }
+  ]
+}

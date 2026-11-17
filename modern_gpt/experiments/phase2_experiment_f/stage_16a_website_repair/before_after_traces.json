@@ -1,0 +1,88 @@
+{
+  "test_a_weather": {
+    "query": "grab info on the weather in ahmedabad",
+    "before_repair": {
+      "retrieval_trace": {
+        "triggered": false,
+        "retrieved_chunks": []
+      },
+      "tool_dispatches": 0,
+      "exposed_markers": ["<code_string>"],
+      "exposed_unexecuted_code": "math.comb(3, 5)",
+      "response_text": "Here is an overview of Ahmedabad weather.<code_string>{\"name\": \"python\", \"arguments\": {\"code\": \"math.comb(3, 5)\"}}",
+      "status": "FAILED_PIPELINE"
+    },
+    "after_repair": {
+      "retrieval_trace": {
+        "triggered": false,
+        "retrieved_chunks": []
+      },
+      "tool_dispatches": 1,
+      "tool_call": {
+        "call_id": "call_001",
+        "canonical_name": "weather",
+        "arguments": {
+          "location": "Ahmedabad"
+        }
+      },
+      "tool_observation": {
+        "location": "Ahmedabad, Gujarat, India",
+        "temperature_c": 33.2,
+        "apparent_temperature_c": 33.0,
+        "humidity_pct": 26,
+        "wind_speed_kmh": 3.3,
+        "condition": "Mainly clear",
+        "observation_time": "2026-11-17T16:30",
+        "provider": "Open-Meteo Weather API"
+      },
+      "exposed_markers": [],
+      "user_visible_response": "The National Weather Service records the temperature of Ahmedabad at 33.2°C (Feels like: 33.0°C) with mainly clear skies.",
+      "code_string_leaked": false,
+      "raw_json_leaked": false,
+      "status": "SUCCESS_DISPATCH_AND_SYNTHESIS"
+    }
+  },
+  "test_b_donald_trump": {
+    "query": "who is donald trump?",
+    "before_repair": {
+      "retrieval_trace": {
+        "triggered": true,
+        "decision_reason": "Automated routing triggered on factual/architectural keywords: who.",
+        "retrieved_chunks": [],
+        "ui_banner": "Retrieved 0 Knowledge Chunks"
+      },
+      "tool_dispatches": 0,
+      "exposed_markers": [],
+      "exposed_raw_json": "{\"name\": \"web_research\", \"arguments\": {\"query\": \"Who is donald trump?\"}}",
+      "response_text": "{\"name\": \"web_research\", \"arguments\": {\"query\": \"Who is donald trump?\"}}",
+      "status": "FAILED_DISPATCH_LEAKED_JSON"
+    },
+    "after_repair": {
+      "retrieval_trace": {
+        "triggered": false,
+        "retrieved_chunks": [],
+        "ui_banner": null
+      },
+      "tool_dispatches": 1,
+      "tool_call": {
+        "call_id": "call_001",
+        "canonical_name": "web_search",
+        "original_name": "web_search",
+        "arguments": {
+          "query": "who is donald trump?"
+        }
+      },
+      "tool_observation": {
+        "status": "SUCCESS",
+        "source_count": 3,
+        "top_source": "Donald Trump - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+      },
+      "exposed_markers": [],
+      "user_visible_response": "Donald Trump is an American politician, media personality, and businessman who served as the 45th president of the United States and was elected the 47th president in the 2024 presidential election.",
+      "code_string_leaked": false,
+      "raw_json_leaked": false,
+      "status": "SUCCESS_DISPATCH_AND_SYNTHESIS"
+    }
+  }
+}

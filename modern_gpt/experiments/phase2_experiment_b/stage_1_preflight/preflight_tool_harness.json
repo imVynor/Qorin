@@ -1,0 +1,78 @@
+{
+  "sandbox_status": "OPERATIONAL",
+  "orchestrator_status": "OPERATIONAL",
+  "all_tests_passed": true,
+  "tests": [
+    {
+      "test_id": "test_01_valid_execution",
+      "description": "Harmless deterministic Python expression",
+      "passed": true,
+      "stdout": "84",
+      "exit_code": 0,
+      "execution_time_ms": 65.34889999602456
+    },
+    {
+      "test_id": "test_02_syntax_error",
+      "description": "Malformed Python syntax failure safety",
+      "passed": true,
+      "stderr_captured": true,
+      "exit_code": 1
+    },
+    {
+      "test_id": "test_03_runtime_exception",
+      "description": "Harmless runtime exception (ZeroDivisionError)",
+      "passed": true,
+      "stderr_captured": true,
+      "exit_code": 1
+    },
+    {
+      "test_id": "test_04_timeout",
+      "description": "Subprocess timeout kill (configured at 5.0s)",
+      "passed": true,
+      "timed_out": true,
+      "execution_time_ms": 5012.01189999847
+    },
+    {
+      "test_id": "test_05_restricted_imports",
+      "description": "Block restricted modules (socket, subprocess, etc.)",
+      "passed": true,
+      "exit_code": 1,
+      "blocked_verified": true
+    },
+    {
+      "test_id": "test_06_malformed_tool_calls",
+      "description": "Graceful rejection of invalid JSON and missing fields",
+      "passed": true,
+      "invalid_json_handled": true,
+      "missing_name_handled": true
+    },
+    {
+      "test_id": "test_07_multistep_interaction",
+      "description": "Sequential two-step tool interaction with state propagation",
+      "passed": true,
+      "step_1_stdout": "40",
+      "step_2_stdout": "80"
+    },
+    {
+      "test_id": "test_08_no_tool_control",
+      "description": "Correct rejection of tool invocation when none is required",
+      "passed": true,
+      "tool_parsed": null
+    },
+    {
+      "test_id": "test_09_end_to_end_protocol",
+      "description": "Full Assistant Tool Call -> Parse -> Execute -> Result -> Continuation cycle",
+      "passed": true,
+      "tool_call_parsed": [
+        "python",
+        {
+          "code": "import math\nprint(math.sqrt(144))"
+        }
+      ],
+      "tool_result_turn": "<|im_start|>tool\n<|tool_result|>12.0<|im_end|>",
+      "assistant_continuation": "<|im_start|>assistant\nThe square root of 144 is 12.0.<|im_end|>"
+    }
+  ],
+  "web_researcher_boundary": "Inspected; live queries disabled during smoke test per protocol.",
+  "status": "PASS"
+}

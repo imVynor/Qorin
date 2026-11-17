@@ -1,0 +1,74 @@
+{
+  "manifest_version": "1.0.0",
+  "audit_stage": "Stage 10: Final Comparative Evaluation & Forensic Audit",
+  "training_run": "branch_d_combined",
+  "optimizer_updates": {
+    "planned": 200,
+    "actual_executed": 150,
+    "early_stopping_fired_at_step": 150,
+    "best_step": 25
+  },
+  "sequence_presentation_accounting": {
+    "effective_batch_size": 4,
+    "micro_batch_size": 2,
+    "accumulation_substeps": 2,
+    "total_sequence_presentations": 600,
+    "unique_records_seen": 600,
+    "records_repeated": 0,
+    "dataset_total_records": 800,
+    "effective_epochs_completed": 0.75,
+    "per_corpus_breakdown": {
+      "corpus1_calibration": {
+        "dataset_records": 400,
+        "unique_records_presented": 300,
+        "repetitions": 0,
+        "effective_epochs": 0.75,
+        "sampling_ratio": 0.5
+      },
+      "corpus2_synthesis": {
+        "dataset_records": 400,
+        "unique_records_presented": 300,
+        "repetitions": 0,
+        "effective_epochs": 0.75,
+        "sampling_ratio": 0.5
+      }
+    }
+  },
+  "token_accounting": {
+    "total_tokens_processed": 89606,
+    "supervisory_target_tokens_processed": 28518,
+    "prompt_tokens_masked": 61088,
+    "loss_masking_standard": "assistant_target_only_minus_100_masked"
+  },
+  "validation_trajectory": {
+    "step_0": {"total_val_loss": 2.1071, "cal_component": 1.9755, "syn_component": 2.2985},
+    "step_25": {"total_val_loss": 1.2546, "cal_component": 0.7725, "syn_component": 1.9556, "is_best": true},
+    "step_50": {"total_val_loss": 1.2850, "cal_component": 0.7712, "syn_component": 2.0514, "eval_no_improve": 1},
+    "step_75": {"total_val_loss": 1.2841, "cal_component": 0.8202, "syn_component": 2.0125, "eval_no_improve": 2},
+    "step_100": {"total_val_loss": 1.3112, "cal_component": 0.8144, "syn_component": 2.0747, "eval_no_improve": 3},
+    "step_125": {"total_val_loss": 1.3108, "cal_component": 0.8654, "syn_component": 2.0305, "eval_no_improve": 4},
+    "step_150": {"total_val_loss": 1.3370, "cal_component": 0.8687, "syn_component": 2.0831, "eval_no_improve": 5, "triggered_stop": true}
+  },
+  "safeguard_triggers": {
+    "trigger_type": "plateau_patience_exhaustion",
+    "rule": "Stop training if validation loss has not improved for 5 consecutive evaluation points",
+    "consecutive_non_improving_evaluations": 5,
+    "min_loss_at_trigger": 1.2546,
+    "loss_at_trigger": 1.3370,
+    "thermal_events": 0,
+    "gradient_anomalies": 0
+  },
+  "checkpoint_reconciliation": {
+    "best_checkpoint": {
+      "filename": "ckpt_branch_d_best.pt",
+      "step": 25,
+      "sha256": "7322b9aee559945c32f02f59835e7143534c3982178b5aacf4b31470934f9dcc"
+    },
+    "terminal_checkpoint": {
+      "filename": "ckpt_branch_d_step200.pt",
+      "actual_step": 150,
+      "sha256": "78f8ca6b8c8e08471805c03d60a61884dc10e676eeb0f20a4c668e4fc0068eb8",
+      "reconciliation_explanation": "File was created by the Stage 9 runner as the final milestone file. Due to the 5-eval early-stopping rule firing at Step 150, the training loop exited and saved current state (Step 150) into this destination path without running steps 151-200. The checkpoint is preserved under its exact original filename and SHA-256 to guarantee audit trail continuity."
+    }
+  }
+}

@@ -1,0 +1,2706 @@
+{
+  "request": {
+    "model_id": "qorin-500m-sft-exp-c",
+    "query": "grab info on elon musk",
+    "capabilities": {
+      "web_research_enabled": true,
+      "python_sandbox_enabled": true
+    },
+    "generation_config": {
+      "temperature": 0.7,
+      "top_p": 0.9,
+      "top_k": 40,
+      "max_new_tokens": 256,
+      "repetition_penalty": 1.15
+    }
+  },
+  "total_events": 223,
+  "event_breakdown": {
+    "retrieval": 1,
+    "tool_start": 0,
+    "tool_result": 0,
+    "token": 221,
+    "done": 1,
+    "error": 0
+  },
+  "events": [
+    {
+      "sequence_id": 1,
+      "event": "retrieval",
+      "data": {
+        "triggered": false,
+        "mode": "auto",
+        "decision_reason": "Query did not match technical knowledge base routing threshold.",
+        "query": "grab info on elon musk",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 0.01
+      }
+    },
+    {
+      "sequence_id": 2,
+      "event": "token",
+      "data": {
+        "text": "el",
+        "is_finished": false,
+        "token_count": 1,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 8.6,
+        "elapsed_ms": 116.6
+      }
+    },
+    {
+      "sequence_id": 3,
+      "event": "token",
+      "data": {
+        "text": "on",
+        "is_finished": false,
+        "token_count": 2,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 15.0,
+        "elapsed_ms": 132.9
+      }
+    },
+    {
+      "sequence_id": 4,
+      "event": "token",
+      "data": {
+        "text": " mus",
+        "is_finished": false,
+        "token_count": 3,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 20.2,
+        "elapsed_ms": 148.6
+      }
+    },
+    {
+      "sequence_id": 5,
+      "event": "token",
+      "data": {
+        "text": "k",
+        "is_finished": false,
+        "token_count": 4,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 24.3,
+        "elapsed_ms": 164.6
+      }
+    },
+    {
+      "sequence_id": 6,
+      "event": "token",
+      "data": {
+        "text": " is",
+        "is_finished": false,
+        "token_count": 5,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 27.6,
+        "elapsed_ms": 181.5
+      }
+    },
+    {
+      "sequence_id": 7,
+      "event": "token",
+      "data": {
+        "text": " a",
+        "is_finished": false,
+        "token_count": 6,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 30.3,
+        "elapsed_ms": 197.7
+      }
+    },
+    {
+      "sequence_id": 8,
+      "event": "token",
+      "data": {
+        "text": " language",
+        "is_finished": false,
+        "token_count": 7,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 32.7,
+        "elapsed_ms": 214.0
+      }
+    },
+    {
+      "sequence_id": 9,
+      "event": "token",
+      "data": {
+        "text": " model",
+        "is_finished": false,
+        "token_count": 8,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 34.7,
+        "elapsed_ms": 230.8
+      }
+    },
+    {
+      "sequence_id": 10,
+      "event": "token",
+      "data": {
+        "text": " research",
+        "is_finished": false,
+        "token_count": 9,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 36.5,
+        "elapsed_ms": 246.4
+      }
+    },
+    {
+      "sequence_id": 11,
+      "event": "token",
+      "data": {
+        "text": " assistant",
+        "is_finished": false,
+        "token_count": 10,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 38.1,
+        "elapsed_ms": 262.3
+      }
+    },
+    {
+      "sequence_id": 12,
+      "event": "token",
+      "data": {
+        "text": " developed",
+        "is_finished": false,
+        "token_count": 11,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 39.6,
+        "elapsed_ms": 277.9
+      }
+    },
+    {
+      "sequence_id": 13,
+      "event": "token",
+      "data": {
+        "text": " by",
+        "is_finished": false,
+        "token_count": 12,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 40.9,
+        "elapsed_ms": 293.6
+      }
+    },
+    {
+      "sequence_id": 14,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 13,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 42.0,
+        "elapsed_ms": 309.5
+      }
+    },
+    {
+      "sequence_id": 15,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 14,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 42.9,
+        "elapsed_ms": 326.0
+      }
+    },
+    {
+      "sequence_id": 16,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 15,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 43.6,
+        "elapsed_ms": 344.1
+      }
+    },
+    {
+      "sequence_id": 17,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 16,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 44.3,
+        "elapsed_ms": 360.8
+      }
+    },
+    {
+      "sequence_id": 18,
+      "event": "token",
+      "data": {
+        "text": " research",
+        "is_finished": false,
+        "token_count": 17,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 45.0,
+        "elapsed_ms": 377.8
+      }
+    },
+    {
+      "sequence_id": 19,
+      "event": "token",
+      "data": {
+        "text": " project",
+        "is_finished": false,
+        "token_count": 18,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 45.6,
+        "elapsed_ms": 394.9
+      }
+    },
+    {
+      "sequence_id": 20,
+      "event": "token",
+      "data": {
+        "text": ".",
+        "is_finished": false,
+        "token_count": 19,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 46.0,
+        "elapsed_ms": 413.0
+      }
+    },
+    {
+      "sequence_id": 21,
+      "event": "token",
+      "data": {
+        "text": " The",
+        "is_finished": false,
+        "token_count": 20,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 46.6,
+        "elapsed_ms": 429.4
+      }
+    },
+    {
+      "sequence_id": 22,
+      "event": "token",
+      "data": {
+        "text": " language",
+        "is_finished": false,
+        "token_count": 21,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 47.0,
+        "elapsed_ms": 446.5
+      }
+    },
+    {
+      "sequence_id": 23,
+      "event": "token",
+      "data": {
+        "text": " model",
+        "is_finished": false,
+        "token_count": 22,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 47.5,
+        "elapsed_ms": 463.3
+      }
+    },
+    {
+      "sequence_id": 24,
+      "event": "token",
+      "data": {
+        "text": " is",
+        "is_finished": false,
+        "token_count": 23,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.0,
+        "elapsed_ms": 479.6
+      }
+    },
+    {
+      "sequence_id": 25,
+      "event": "token",
+      "data": {
+        "text": " a",
+        "is_finished": false,
+        "token_count": 24,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.4,
+        "elapsed_ms": 495.9
+      }
+    },
+    {
+      "sequence_id": 26,
+      "event": "token",
+      "data": {
+        "text": " statistical",
+        "is_finished": false,
+        "token_count": 25,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.8,
+        "elapsed_ms": 512.8
+      }
+    },
+    {
+      "sequence_id": 27,
+      "event": "token",
+      "data": {
+        "text": " tool",
+        "is_finished": false,
+        "token_count": 26,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.2,
+        "elapsed_ms": 528.5
+      }
+    },
+    {
+      "sequence_id": 28,
+      "event": "token",
+      "data": {
+        "text": " that",
+        "is_finished": false,
+        "token_count": 27,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.6,
+        "elapsed_ms": 544.7
+      }
+    },
+    {
+      "sequence_id": 29,
+      "event": "token",
+      "data": {
+        "text": " uses",
+        "is_finished": false,
+        "token_count": 28,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.9,
+        "elapsed_ms": 560.6
+      }
+    },
+    {
+      "sequence_id": 30,
+      "event": "token",
+      "data": {
+        "text": " linear",
+        "is_finished": false,
+        "token_count": 29,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.3,
+        "elapsed_ms": 576.4
+      }
+    },
+    {
+      "sequence_id": 31,
+      "event": "token",
+      "data": {
+        "text": " regression",
+        "is_finished": false,
+        "token_count": 30,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.6,
+        "elapsed_ms": 592.3
+      }
+    },
+    {
+      "sequence_id": 32,
+      "event": "token",
+      "data": {
+        "text": " to",
+        "is_finished": false,
+        "token_count": 31,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.0,
+        "elapsed_ms": 608.0
+      }
+    },
+    {
+      "sequence_id": 33,
+      "event": "token",
+      "data": {
+        "text": " predict",
+        "is_finished": false,
+        "token_count": 32,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.2,
+        "elapsed_ms": 624.8
+      }
+    },
+    {
+      "sequence_id": 34,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 33,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.5,
+        "elapsed_ms": 640.8
+      }
+    },
+    {
+      "sequence_id": 35,
+      "event": "token",
+      "data": {
+        "text": " behavior",
+        "is_finished": false,
+        "token_count": 34,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.7,
+        "elapsed_ms": 657.3
+      }
+    },
+    {
+      "sequence_id": 36,
+      "event": "token",
+      "data": {
+        "text": " of",
+        "is_finished": false,
+        "token_count": 35,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.9,
+        "elapsed_ms": 673.9
+      }
+    },
+    {
+      "sequence_id": 37,
+      "event": "token",
+      "data": {
+        "text": " individual",
+        "is_finished": false,
+        "token_count": 36,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.1,
+        "elapsed_ms": 690.7
+      }
+    },
+    {
+      "sequence_id": 38,
+      "event": "token",
+      "data": {
+        "text": " neurons",
+        "is_finished": false,
+        "token_count": 37,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.3,
+        "elapsed_ms": 707.4
+      }
+    },
+    {
+      "sequence_id": 39,
+      "event": "token",
+      "data": {
+        "text": " in",
+        "is_finished": false,
+        "token_count": 38,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.4,
+        "elapsed_ms": 725.3
+      }
+    },
+    {
+      "sequence_id": 40,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 39,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.5,
+        "elapsed_ms": 743.5
+      }
+    },
+    {
+      "sequence_id": 41,
+      "event": "token",
+      "data": {
+        "text": " brain",
+        "is_finished": false,
+        "token_count": 40,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.6,
+        "elapsed_ms": 760.8
+      }
+    },
+    {
+      "sequence_id": 42,
+      "event": "token",
+      "data": {
+        "text": ".",
+        "is_finished": false,
+        "token_count": 41,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.7,
+        "elapsed_ms": 777.4
+      }
+    },
+    {
+      "sequence_id": 43,
+      "event": "token",
+      "data": {
+        "text": " El",
+        "is_finished": false,
+        "token_count": 42,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.9,
+        "elapsed_ms": 794.2
+      }
+    },
+    {
+      "sequence_id": 44,
+      "event": "token",
+      "data": {
+        "text": "on",
+        "is_finished": false,
+        "token_count": 43,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.0,
+        "elapsed_ms": 811.0
+      }
+    },
+    {
+      "sequence_id": 45,
+      "event": "token",
+      "data": {
+        "text": " Mus",
+        "is_finished": false,
+        "token_count": 44,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.2,
+        "elapsed_ms": 827.8
+      }
+    },
+    {
+      "sequence_id": 46,
+      "event": "token",
+      "data": {
+        "text": "k",
+        "is_finished": false,
+        "token_count": 45,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.3,
+        "elapsed_ms": 844.4
+      }
+    },
+    {
+      "sequence_id": 47,
+      "event": "token",
+      "data": {
+        "text": " has",
+        "is_finished": false,
+        "token_count": 46,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.4,
+        "elapsed_ms": 861.3
+      }
+    },
+    {
+      "sequence_id": 48,
+      "event": "token",
+      "data": {
+        "text": " been",
+        "is_finished": false,
+        "token_count": 47,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.5,
+        "elapsed_ms": 878.8
+      }
+    },
+    {
+      "sequence_id": 49,
+      "event": "token",
+      "data": {
+        "text": " working",
+        "is_finished": false,
+        "token_count": 48,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.6,
+        "elapsed_ms": 896.3
+      }
+    },
+    {
+      "sequence_id": 50,
+      "event": "token",
+      "data": {
+        "text": " with",
+        "is_finished": false,
+        "token_count": 49,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.6,
+        "elapsed_ms": 913.9
+      }
+    },
+    {
+      "sequence_id": 51,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 50,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.7,
+        "elapsed_ms": 931.5
+      }
+    },
+    {
+      "sequence_id": 52,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 51,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.8,
+        "elapsed_ms": 948.8
+      }
+    },
+    {
+      "sequence_id": 53,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 52,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.8,
+        "elapsed_ms": 966.3
+      }
+    },
+    {
+      "sequence_id": 54,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 53,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.9,
+        "elapsed_ms": 983.6
+      }
+    },
+    {
+      "sequence_id": 55,
+      "event": "token",
+      "data": {
+        "text": " data",
+        "is_finished": false,
+        "token_count": 54,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.9,
+        "elapsed_ms": 1001.2
+      }
+    },
+    {
+      "sequence_id": 56,
+      "event": "token",
+      "data": {
+        "text": " for",
+        "is_finished": false,
+        "token_count": 55,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.0,
+        "elapsed_ms": 1019.1
+      }
+    },
+    {
+      "sequence_id": 57,
+      "event": "token",
+      "data": {
+        "text": " over",
+        "is_finished": false,
+        "token_count": 56,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.0,
+        "elapsed_ms": 1036.5
+      }
+    },
+    {
+      "sequence_id": 58,
+      "event": "token",
+      "data": {
+        "text": " 30",
+        "is_finished": false,
+        "token_count": 57,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.1,
+        "elapsed_ms": 1054.1
+      }
+    },
+    {
+      "sequence_id": 59,
+      "event": "token",
+      "data": {
+        "text": " years",
+        "is_finished": false,
+        "token_count": 58,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.1,
+        "elapsed_ms": 1071.5
+      }
+    },
+    {
+      "sequence_id": 60,
+      "event": "token",
+      "data": {
+        "text": " and",
+        "is_finished": false,
+        "token_count": 59,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.2,
+        "elapsed_ms": 1089.1
+      }
+    },
+    {
+      "sequence_id": 61,
+      "event": "token",
+      "data": {
+        "text": " has",
+        "is_finished": false,
+        "token_count": 60,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.2,
+        "elapsed_ms": 1106.8
+      }
+    },
+    {
+      "sequence_id": 62,
+      "event": "token",
+      "data": {
+        "text": " been",
+        "is_finished": false,
+        "token_count": 61,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.2,
+        "elapsed_ms": 1124.6
+      }
+    },
+    {
+      "sequence_id": 63,
+      "event": "token",
+      "data": {
+        "text": " trained",
+        "is_finished": false,
+        "token_count": 62,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1142.6
+      }
+    },
+    {
+      "sequence_id": 64,
+      "event": "token",
+      "data": {
+        "text": " on",
+        "is_finished": false,
+        "token_count": 63,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1160.8
+      }
+    },
+    {
+      "sequence_id": 65,
+      "event": "token",
+      "data": {
+        "text": " more",
+        "is_finished": false,
+        "token_count": 64,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1179.0
+      }
+    },
+    {
+      "sequence_id": 66,
+      "event": "token",
+      "data": {
+        "text": " than",
+        "is_finished": false,
+        "token_count": 65,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1197.2
+      }
+    },
+    {
+      "sequence_id": 67,
+      "event": "token",
+      "data": {
+        "text": " 400",
+        "is_finished": false,
+        "token_count": 66,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1215.1
+      }
+    },
+    {
+      "sequence_id": 68,
+      "event": "token",
+      "data": {
+        "text": ",",
+        "is_finished": false,
+        "token_count": 67,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1233.1
+      }
+    },
+    {
+      "sequence_id": 69,
+      "event": "token",
+      "data": {
+        "text": "000",
+        "is_finished": false,
+        "token_count": 68,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1251.1
+      }
+    },
+    {
+      "sequence_id": 70,
+      "event": "token",
+      "data": {
+        "text": " neurons",
+        "is_finished": false,
+        "token_count": 69,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1269.3
+      }
+    },
+    {
+      "sequence_id": 71,
+      "event": "token",
+      "data": {
+        "text": " in",
+        "is_finished": false,
+        "token_count": 70,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1287.6
+      }
+    },
+    {
+      "sequence_id": 72,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 71,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1305.8
+      }
+    },
+    {
+      "sequence_id": 73,
+      "event": "token",
+      "data": {
+        "text": " brain",
+        "is_finished": false,
+        "token_count": 72,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1324.1
+      }
+    },
+    {
+      "sequence_id": 74,
+      "event": "token",
+      "data": {
+        "text": ".",
+        "is_finished": false,
+        "token_count": 73,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1342.2
+      }
+    },
+    {
+      "sequence_id": 75,
+      "event": "token",
+      "data": {
+        "text": "\n",
+        "is_finished": false,
+        "token_count": 74,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1360.3
+      }
+    },
+    {
+      "sequence_id": 76,
+      "event": "token",
+      "data": {
+        "text": "The",
+        "is_finished": false,
+        "token_count": 75,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1378.7
+      }
+    },
+    {
+      "sequence_id": 77,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 76,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1396.9
+      }
+    },
+    {
+      "sequence_id": 78,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 77,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1415.3
+      }
+    },
+    {
+      "sequence_id": 79,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 78,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1433.6
+      }
+    },
+    {
+      "sequence_id": 80,
+      "event": "token",
+      "data": {
+        "text": " platform",
+        "is_finished": false,
+        "token_count": 79,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1452.4
+      }
+    },
+    {
+      "sequence_id": 81,
+      "event": "token",
+      "data": {
+        "text": " is",
+        "is_finished": false,
+        "token_count": 80,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1471.3
+      }
+    },
+    {
+      "sequence_id": 82,
+      "event": "token",
+      "data": {
+        "text": " designed",
+        "is_finished": false,
+        "token_count": 81,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.4,
+        "elapsed_ms": 1490.2
+      }
+    },
+    {
+      "sequence_id": 83,
+      "event": "token",
+      "data": {
+        "text": " for",
+        "is_finished": false,
+        "token_count": 82,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1509.0
+      }
+    },
+    {
+      "sequence_id": 84,
+      "event": "token",
+      "data": {
+        "text": " large",
+        "is_finished": false,
+        "token_count": 83,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1528.3
+      }
+    },
+    {
+      "sequence_id": 85,
+      "event": "token",
+      "data": {
+        "text": "-",
+        "is_finished": false,
+        "token_count": 84,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1547.1
+      }
+    },
+    {
+      "sequence_id": 86,
+      "event": "token",
+      "data": {
+        "text": "scale",
+        "is_finished": false,
+        "token_count": 85,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1565.9
+      }
+    },
+    {
+      "sequence_id": 87,
+      "event": "token",
+      "data": {
+        "text": " analysis",
+        "is_finished": false,
+        "token_count": 86,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.3,
+        "elapsed_ms": 1585.1
+      }
+    },
+    {
+      "sequence_id": 88,
+      "event": "token",
+      "data": {
+        "text": ",",
+        "is_finished": false,
+        "token_count": 87,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.2,
+        "elapsed_ms": 1604.0
+      }
+    },
+    {
+      "sequence_id": 89,
+      "event": "token",
+      "data": {
+        "text": " including",
+        "is_finished": false,
+        "token_count": 88,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.2,
+        "elapsed_ms": 1622.9
+      }
+    },
+    {
+      "sequence_id": 90,
+      "event": "token",
+      "data": {
+        "text": " multi",
+        "is_finished": false,
+        "token_count": 89,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.2,
+        "elapsed_ms": 1641.7
+      }
+    },
+    {
+      "sequence_id": 91,
+      "event": "token",
+      "data": {
+        "text": "-",
+        "is_finished": false,
+        "token_count": 90,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.2,
+        "elapsed_ms": 1661.2
+      }
+    },
+    {
+      "sequence_id": 92,
+      "event": "token",
+      "data": {
+        "text": "layer",
+        "is_finished": false,
+        "token_count": 91,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.2,
+        "elapsed_ms": 1680.3
+      }
+    },
+    {
+      "sequence_id": 93,
+      "event": "token",
+      "data": {
+        "text": " classification",
+        "is_finished": false,
+        "token_count": 92,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.1,
+        "elapsed_ms": 1699.4
+      }
+    },
+    {
+      "sequence_id": 94,
+      "event": "token",
+      "data": {
+        "text": ",",
+        "is_finished": false,
+        "token_count": 93,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.1,
+        "elapsed_ms": 1718.2
+      }
+    },
+    {
+      "sequence_id": 95,
+      "event": "token",
+      "data": {
+        "text": " classification",
+        "is_finished": false,
+        "token_count": 94,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.1,
+        "elapsed_ms": 1737.3
+      }
+    },
+    {
+      "sequence_id": 96,
+      "event": "token",
+      "data": {
+        "text": ",",
+        "is_finished": false,
+        "token_count": 95,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.1,
+        "elapsed_ms": 1756.4
+      }
+    },
+    {
+      "sequence_id": 97,
+      "event": "token",
+      "data": {
+        "text": " and",
+        "is_finished": false,
+        "token_count": 96,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.1,
+        "elapsed_ms": 1775.2
+      }
+    },
+    {
+      "sequence_id": 98,
+      "event": "token",
+      "data": {
+        "text": " prediction",
+        "is_finished": false,
+        "token_count": 97,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.1,
+        "elapsed_ms": 1794.6
+      }
+    },
+    {
+      "sequence_id": 99,
+      "event": "token",
+      "data": {
+        "text": ".",
+        "is_finished": false,
+        "token_count": 98,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.0,
+        "elapsed_ms": 1813.7
+      }
+    },
+    {
+      "sequence_id": 100,
+      "event": "token",
+      "data": {
+        "text": " This",
+        "is_finished": false,
+        "token_count": 99,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.0,
+        "elapsed_ms": 1832.9
+      }
+    },
+    {
+      "sequence_id": 101,
+      "event": "token",
+      "data": {
+        "text": " language",
+        "is_finished": false,
+        "token_count": 100,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.0,
+        "elapsed_ms": 1852.2
+      }
+    },
+    {
+      "sequence_id": 102,
+      "event": "token",
+      "data": {
+        "text": " model",
+        "is_finished": false,
+        "token_count": 101,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.0,
+        "elapsed_ms": 1871.3
+      }
+    },
+    {
+      "sequence_id": 103,
+      "event": "token",
+      "data": {
+        "text": " is",
+        "is_finished": false,
+        "token_count": 102,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 54.0,
+        "elapsed_ms": 1890.4
+      }
+    },
+    {
+      "sequence_id": 104,
+      "event": "token",
+      "data": {
+        "text": " highly",
+        "is_finished": false,
+        "token_count": 103,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.9,
+        "elapsed_ms": 1909.5
+      }
+    },
+    {
+      "sequence_id": 105,
+      "event": "token",
+      "data": {
+        "text": " sensitive",
+        "is_finished": false,
+        "token_count": 104,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.9,
+        "elapsed_ms": 1928.8
+      }
+    },
+    {
+      "sequence_id": 106,
+      "event": "token",
+      "data": {
+        "text": " and",
+        "is_finished": false,
+        "token_count": 105,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.9,
+        "elapsed_ms": 1947.9
+      }
+    },
+    {
+      "sequence_id": 107,
+      "event": "token",
+      "data": {
+        "text": " can",
+        "is_finished": false,
+        "token_count": 106,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.9,
+        "elapsed_ms": 1967.3
+      }
+    },
+    {
+      "sequence_id": 108,
+      "event": "token",
+      "data": {
+        "text": " accurately",
+        "is_finished": false,
+        "token_count": 107,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.9,
+        "elapsed_ms": 1986.9
+      }
+    },
+    {
+      "sequence_id": 109,
+      "event": "token",
+      "data": {
+        "text": " predict",
+        "is_finished": false,
+        "token_count": 108,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.8,
+        "elapsed_ms": 2006.1
+      }
+    },
+    {
+      "sequence_id": 110,
+      "event": "token",
+      "data": {
+        "text": " a",
+        "is_finished": false,
+        "token_count": 109,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.8,
+        "elapsed_ms": 2025.3
+      }
+    },
+    {
+      "sequence_id": 111,
+      "event": "token",
+      "data": {
+        "text": " wide",
+        "is_finished": false,
+        "token_count": 110,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.8,
+        "elapsed_ms": 2044.6
+      }
+    },
+    {
+      "sequence_id": 112,
+      "event": "token",
+      "data": {
+        "text": " range",
+        "is_finished": false,
+        "token_count": 111,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.7,
+        "elapsed_ms": 2065.6
+      }
+    },
+    {
+      "sequence_id": 113,
+      "event": "token",
+      "data": {
+        "text": " of",
+        "is_finished": false,
+        "token_count": 112,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.7,
+        "elapsed_ms": 2087.0
+      }
+    },
+    {
+      "sequence_id": 114,
+      "event": "token",
+      "data": {
+        "text": " biological",
+        "is_finished": false,
+        "token_count": 113,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.6,
+        "elapsed_ms": 2108.3
+      }
+    },
+    {
+      "sequence_id": 115,
+      "event": "token",
+      "data": {
+        "text": " systems",
+        "is_finished": false,
+        "token_count": 114,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.5,
+        "elapsed_ms": 2129.9
+      }
+    },
+    {
+      "sequence_id": 116,
+      "event": "token",
+      "data": {
+        "text": ",",
+        "is_finished": false,
+        "token_count": 115,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.5,
+        "elapsed_ms": 2151.1
+      }
+    },
+    {
+      "sequence_id": 117,
+      "event": "token",
+      "data": {
+        "text": " including",
+        "is_finished": false,
+        "token_count": 116,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.4,
+        "elapsed_ms": 2172.5
+      }
+    },
+    {
+      "sequence_id": 118,
+      "event": "token",
+      "data": {
+        "text": " neurological",
+        "is_finished": false,
+        "token_count": 117,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.3,
+        "elapsed_ms": 2193.5
+      }
+    },
+    {
+      "sequence_id": 119,
+      "event": "token",
+      "data": {
+        "text": " disorders",
+        "is_finished": false,
+        "token_count": 118,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.3,
+        "elapsed_ms": 2215.0
+      }
+    },
+    {
+      "sequence_id": 120,
+      "event": "token",
+      "data": {
+        "text": " such",
+        "is_finished": false,
+        "token_count": 119,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.2,
+        "elapsed_ms": 2236.2
+      }
+    },
+    {
+      "sequence_id": 121,
+      "event": "token",
+      "data": {
+        "text": " as",
+        "is_finished": false,
+        "token_count": 120,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.2,
+        "elapsed_ms": 2257.3
+      }
+    },
+    {
+      "sequence_id": 122,
+      "event": "token",
+      "data": {
+        "text": " Alzheimer",
+        "is_finished": false,
+        "token_count": 121,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.1,
+        "elapsed_ms": 2278.5
+      }
+    },
+    {
+      "sequence_id": 123,
+      "event": "token",
+      "data": {
+        "text": "'s",
+        "is_finished": false,
+        "token_count": 122,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.1,
+        "elapsed_ms": 2299.7
+      }
+    },
+    {
+      "sequence_id": 124,
+      "event": "token",
+      "data": {
+        "text": " disease",
+        "is_finished": false,
+        "token_count": 123,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 53.0,
+        "elapsed_ms": 2321.1
+      }
+    },
+    {
+      "sequence_id": 125,
+      "event": "token",
+      "data": {
+        "text": ",",
+        "is_finished": false,
+        "token_count": 124,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.9,
+        "elapsed_ms": 2342.3
+      }
+    },
+    {
+      "sequence_id": 126,
+      "event": "token",
+      "data": {
+        "text": " Alzheimer",
+        "is_finished": false,
+        "token_count": 125,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.9,
+        "elapsed_ms": 2363.8
+      }
+    },
+    {
+      "sequence_id": 127,
+      "event": "token",
+      "data": {
+        "text": "'s",
+        "is_finished": false,
+        "token_count": 126,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.8,
+        "elapsed_ms": 2385.2
+      }
+    },
+    {
+      "sequence_id": 128,
+      "event": "token",
+      "data": {
+        "text": " disease",
+        "is_finished": false,
+        "token_count": 127,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.8,
+        "elapsed_ms": 2406.6
+      }
+    },
+    {
+      "sequence_id": 129,
+      "event": "token",
+      "data": {
+        "text": ",",
+        "is_finished": false,
+        "token_count": 128,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.7,
+        "elapsed_ms": 2428.0
+      }
+    },
+    {
+      "sequence_id": 130,
+      "event": "token",
+      "data": {
+        "text": " and",
+        "is_finished": false,
+        "token_count": 129,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.7,
+        "elapsed_ms": 2449.5
+      }
+    },
+    {
+      "sequence_id": 131,
+      "event": "token",
+      "data": {
+        "text": " multiple",
+        "is_finished": false,
+        "token_count": 130,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.6,
+        "elapsed_ms": 2471.1
+      }
+    },
+    {
+      "sequence_id": 132,
+      "event": "token",
+      "data": {
+        "text": " sclerosis",
+        "is_finished": false,
+        "token_count": 131,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.6,
+        "elapsed_ms": 2492.5
+      }
+    },
+    {
+      "sequence_id": 133,
+      "event": "token",
+      "data": {
+        "text": ".",
+        "is_finished": false,
+        "token_count": 132,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.5,
+        "elapsed_ms": 2514.2
+      }
+    },
+    {
+      "sequence_id": 134,
+      "event": "token",
+      "data": {
+        "text": "\n",
+        "is_finished": false,
+        "token_count": 133,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.4,
+        "elapsed_ms": 2536.0
+      }
+    },
+    {
+      "sequence_id": 135,
+      "event": "token",
+      "data": {
+        "text": "The",
+        "is_finished": false,
+        "token_count": 134,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.4,
+        "elapsed_ms": 2557.5
+      }
+    },
+    {
+      "sequence_id": 136,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 135,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.3,
+        "elapsed_ms": 2579.2
+      }
+    },
+    {
+      "sequence_id": 137,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 136,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.3,
+        "elapsed_ms": 2600.6
+      }
+    },
+    {
+      "sequence_id": 138,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 137,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.2,
+        "elapsed_ms": 2622.2
+      }
+    },
+    {
+      "sequence_id": 139,
+      "event": "token",
+      "data": {
+        "text": " platform",
+        "is_finished": false,
+        "token_count": 138,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.2,
+        "elapsed_ms": 2644.0
+      }
+    },
+    {
+      "sequence_id": 140,
+      "event": "token",
+      "data": {
+        "text": " provides",
+        "is_finished": false,
+        "token_count": 139,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.1,
+        "elapsed_ms": 2665.6
+      }
+    },
+    {
+      "sequence_id": 141,
+      "event": "token",
+      "data": {
+        "text": " a",
+        "is_finished": false,
+        "token_count": 140,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.1,
+        "elapsed_ms": 2687.1
+      }
+    },
+    {
+      "sequence_id": 142,
+      "event": "token",
+      "data": {
+        "text": " powerful",
+        "is_finished": false,
+        "token_count": 141,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.0,
+        "elapsed_ms": 2709.1
+      }
+    },
+    {
+      "sequence_id": 143,
+      "event": "token",
+      "data": {
+        "text": " tool",
+        "is_finished": false,
+        "token_count": 142,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.0,
+        "elapsed_ms": 2730.8
+      }
+    },
+    {
+      "sequence_id": 144,
+      "event": "token",
+      "data": {
+        "text": " for",
+        "is_finished": false,
+        "token_count": 143,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 52.0,
+        "elapsed_ms": 2752.6
+      }
+    },
+    {
+      "sequence_id": 145,
+      "event": "token",
+      "data": {
+        "text": " predicting",
+        "is_finished": false,
+        "token_count": 144,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.9,
+        "elapsed_ms": 2774.3
+      }
+    },
+    {
+      "sequence_id": 146,
+      "event": "token",
+      "data": {
+        "text": " complex",
+        "is_finished": false,
+        "token_count": 145,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.9,
+        "elapsed_ms": 2795.9
+      }
+    },
+    {
+      "sequence_id": 147,
+      "event": "token",
+      "data": {
+        "text": " neural",
+        "is_finished": false,
+        "token_count": 146,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.8,
+        "elapsed_ms": 2817.4
+      }
+    },
+    {
+      "sequence_id": 148,
+      "event": "token",
+      "data": {
+        "text": " networks",
+        "is_finished": false,
+        "token_count": 147,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.8,
+        "elapsed_ms": 2838.9
+      }
+    },
+    {
+      "sequence_id": 149,
+      "event": "token",
+      "data": {
+        "text": " with",
+        "is_finished": false,
+        "token_count": 148,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.7,
+        "elapsed_ms": 2860.6
+      }
+    },
+    {
+      "sequence_id": 150,
+      "event": "token",
+      "data": {
+        "text": " high",
+        "is_finished": false,
+        "token_count": 149,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.7,
+        "elapsed_ms": 2882.7
+      }
+    },
+    {
+      "sequence_id": 151,
+      "event": "token",
+      "data": {
+        "text": " accuracy",
+        "is_finished": false,
+        "token_count": 150,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.6,
+        "elapsed_ms": 2904.6
+      }
+    },
+    {
+      "sequence_id": 152,
+      "event": "token",
+      "data": {
+        "text": " and",
+        "is_finished": false,
+        "token_count": 151,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.6,
+        "elapsed_ms": 2927.0
+      }
+    },
+    {
+      "sequence_id": 153,
+      "event": "token",
+      "data": {
+        "text": " efficiency",
+        "is_finished": false,
+        "token_count": 152,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.5,
+        "elapsed_ms": 2949.0
+      }
+    },
+    {
+      "sequence_id": 154,
+      "event": "token",
+      "data": {
+        "text": ".",
+        "is_finished": false,
+        "token_count": 153,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.5,
+        "elapsed_ms": 2971.3
+      }
+    },
+    {
+      "sequence_id": 155,
+      "event": "token",
+      "data": {
+        "text": " In",
+        "is_finished": false,
+        "token_count": 154,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.4,
+        "elapsed_ms": 2993.4
+      }
+    },
+    {
+      "sequence_id": 156,
+      "event": "token",
+      "data": {
+        "text": " this",
+        "is_finished": false,
+        "token_count": 155,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.4,
+        "elapsed_ms": 3015.5
+      }
+    },
+    {
+      "sequence_id": 157,
+      "event": "token",
+      "data": {
+        "text": " case",
+        "is_finished": false,
+        "token_count": 156,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.4,
+        "elapsed_ms": 3037.6
+      }
+    },
+    {
+      "sequence_id": 158,
+      "event": "token",
+      "data": {
+        "text": ",",
+        "is_finished": false,
+        "token_count": 157,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.3,
+        "elapsed_ms": 3059.6
+      }
+    },
+    {
+      "sequence_id": 159,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 158,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.3,
+        "elapsed_ms": 3082.1
+      }
+    },
+    {
+      "sequence_id": 160,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 159,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.2,
+        "elapsed_ms": 3104.2
+      }
+    },
+    {
+      "sequence_id": 161,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 160,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.2,
+        "elapsed_ms": 3126.4
+      }
+    },
+    {
+      "sequence_id": 162,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 161,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.1,
+        "elapsed_ms": 3148.6
+      }
+    },
+    {
+      "sequence_id": 163,
+      "event": "token",
+      "data": {
+        "text": " machine",
+        "is_finished": false,
+        "token_count": 162,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.1,
+        "elapsed_ms": 3171.0
+      }
+    },
+    {
+      "sequence_id": 164,
+      "event": "token",
+      "data": {
+        "text": " learning",
+        "is_finished": false,
+        "token_count": 163,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.0,
+        "elapsed_ms": 3193.0
+      }
+    },
+    {
+      "sequence_id": 165,
+      "event": "token",
+      "data": {
+        "text": " model",
+        "is_finished": false,
+        "token_count": 164,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.0,
+        "elapsed_ms": 3215.5
+      }
+    },
+    {
+      "sequence_id": 166,
+      "event": "token",
+      "data": {
+        "text": " was",
+        "is_finished": false,
+        "token_count": 165,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 51.0,
+        "elapsed_ms": 3238.1
+      }
+    },
+    {
+      "sequence_id": 167,
+      "event": "token",
+      "data": {
+        "text": " developed",
+        "is_finished": false,
+        "token_count": 166,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.9,
+        "elapsed_ms": 3260.5
+      }
+    },
+    {
+      "sequence_id": 168,
+      "event": "token",
+      "data": {
+        "text": " using",
+        "is_finished": false,
+        "token_count": 167,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.9,
+        "elapsed_ms": 3283.0
+      }
+    },
+    {
+      "sequence_id": 169,
+      "event": "token",
+      "data": {
+        "text": " a",
+        "is_finished": false,
+        "token_count": 168,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.8,
+        "elapsed_ms": 3305.7
+      }
+    },
+    {
+      "sequence_id": 170,
+      "event": "token",
+      "data": {
+        "text": " combination",
+        "is_finished": false,
+        "token_count": 169,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.8,
+        "elapsed_ms": 3328.0
+      }
+    },
+    {
+      "sequence_id": 171,
+      "event": "token",
+      "data": {
+        "text": " of",
+        "is_finished": false,
+        "token_count": 170,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.7,
+        "elapsed_ms": 3350.3
+      }
+    },
+    {
+      "sequence_id": 172,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 171,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.7,
+        "elapsed_ms": 3372.8
+      }
+    },
+    {
+      "sequence_id": 173,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 172,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.7,
+        "elapsed_ms": 3395.5
+      }
+    },
+    {
+      "sequence_id": 174,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 173,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.6,
+        "elapsed_ms": 3418.6
+      }
+    },
+    {
+      "sequence_id": 175,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 174,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.6,
+        "elapsed_ms": 3441.2
+      }
+    },
+    {
+      "sequence_id": 176,
+      "event": "token",
+      "data": {
+        "text": " model",
+        "is_finished": false,
+        "token_count": 175,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.5,
+        "elapsed_ms": 3466.0
+      }
+    },
+    {
+      "sequence_id": 177,
+      "event": "token",
+      "data": {
+        "text": " and",
+        "is_finished": false,
+        "token_count": 176,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.4,
+        "elapsed_ms": 3490.6
+      }
+    },
+    {
+      "sequence_id": 178,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 177,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.3,
+        "elapsed_ms": 3515.5
+      }
+    },
+    {
+      "sequence_id": 179,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 178,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.3,
+        "elapsed_ms": 3540.4
+      }
+    },
+    {
+      "sequence_id": 180,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 179,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.2,
+        "elapsed_ms": 3565.3
+      }
+    },
+    {
+      "sequence_id": 181,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 180,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.1,
+        "elapsed_ms": 3590.1
+      }
+    },
+    {
+      "sequence_id": 182,
+      "event": "token",
+      "data": {
+        "text": " dataset",
+        "is_finished": false,
+        "token_count": 181,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.1,
+        "elapsed_ms": 3615.2
+      }
+    },
+    {
+      "sequence_id": 183,
+      "event": "token",
+      "data": {
+        "text": ".",
+        "is_finished": false,
+        "token_count": 182,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 50.0,
+        "elapsed_ms": 3640.3
+      }
+    },
+    {
+      "sequence_id": 184,
+      "event": "token",
+      "data": {
+        "text": " The",
+        "is_finished": false,
+        "token_count": 183,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.9,
+        "elapsed_ms": 3665.4
+      }
+    },
+    {
+      "sequence_id": 185,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 184,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.9,
+        "elapsed_ms": 3690.4
+      }
+    },
+    {
+      "sequence_id": 186,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 185,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.8,
+        "elapsed_ms": 3715.6
+      }
+    },
+    {
+      "sequence_id": 187,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 186,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.7,
+        "elapsed_ms": 3740.9
+      }
+    },
+    {
+      "sequence_id": 188,
+      "event": "token",
+      "data": {
+        "text": " model",
+        "is_finished": false,
+        "token_count": 187,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.7,
+        "elapsed_ms": 3766.1
+      }
+    },
+    {
+      "sequence_id": 189,
+      "event": "token",
+      "data": {
+        "text": " allows",
+        "is_finished": false,
+        "token_count": 188,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.6,
+        "elapsed_ms": 3791.4
+      }
+    },
+    {
+      "sequence_id": 190,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 189,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.5,
+        "elapsed_ms": 3816.8
+      }
+    },
+    {
+      "sequence_id": 191,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 190,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.5,
+        "elapsed_ms": 3842.0
+      }
+    },
+    {
+      "sequence_id": 192,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 191,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.4,
+        "elapsed_ms": 3867.4
+      }
+    },
+    {
+      "sequence_id": 193,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 192,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.3,
+        "elapsed_ms": 3892.7
+      }
+    },
+    {
+      "sequence_id": 194,
+      "event": "token",
+      "data": {
+        "text": " dataset",
+        "is_finished": false,
+        "token_count": 193,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.3,
+        "elapsed_ms": 3918.1
+      }
+    },
+    {
+      "sequence_id": 195,
+      "event": "token",
+      "data": {
+        "text": " to",
+        "is_finished": false,
+        "token_count": 194,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.2,
+        "elapsed_ms": 3943.2
+      }
+    },
+    {
+      "sequence_id": 196,
+      "event": "token",
+      "data": {
+        "text": " be",
+        "is_finished": false,
+        "token_count": 195,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.1,
+        "elapsed_ms": 3968.6
+      }
+    },
+    {
+      "sequence_id": 197,
+      "event": "token",
+      "data": {
+        "text": " used",
+        "is_finished": false,
+        "token_count": 196,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.1,
+        "elapsed_ms": 3993.9
+      }
+    },
+    {
+      "sequence_id": 198,
+      "event": "token",
+      "data": {
+        "text": " for",
+        "is_finished": false,
+        "token_count": 197,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.0,
+        "elapsed_ms": 4019.4
+      }
+    },
+    {
+      "sequence_id": 199,
+      "event": "token",
+      "data": {
+        "text": " statistical",
+        "is_finished": false,
+        "token_count": 198,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 49.0,
+        "elapsed_ms": 4044.6
+      }
+    },
+    {
+      "sequence_id": 200,
+      "event": "token",
+      "data": {
+        "text": " analysis",
+        "is_finished": false,
+        "token_count": 199,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.9,
+        "elapsed_ms": 4070.2
+      }
+    },
+    {
+      "sequence_id": 201,
+      "event": "token",
+      "data": {
+        "text": " of",
+        "is_finished": false,
+        "token_count": 200,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.8,
+        "elapsed_ms": 4095.6
+      }
+    },
+    {
+      "sequence_id": 202,
+      "event": "token",
+      "data": {
+        "text": " biological",
+        "is_finished": false,
+        "token_count": 201,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.8,
+        "elapsed_ms": 4121.2
+      }
+    },
+    {
+      "sequence_id": 203,
+      "event": "token",
+      "data": {
+        "text": " systems",
+        "is_finished": false,
+        "token_count": 202,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.7,
+        "elapsed_ms": 4146.6
+      }
+    },
+    {
+      "sequence_id": 204,
+      "event": "token",
+      "data": {
+        "text": ",",
+        "is_finished": false,
+        "token_count": 203,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.7,
+        "elapsed_ms": 4172.1
+      }
+    },
+    {
+      "sequence_id": 205,
+      "event": "token",
+      "data": {
+        "text": " while",
+        "is_finished": false,
+        "token_count": 204,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.6,
+        "elapsed_ms": 4197.5
+      }
+    },
+    {
+      "sequence_id": 206,
+      "event": "token",
+      "data": {
+        "text": " the",
+        "is_finished": false,
+        "token_count": 205,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.5,
+        "elapsed_ms": 4223.0
+      }
+    },
+    {
+      "sequence_id": 207,
+      "event": "token",
+      "data": {
+        "text": " Q",
+        "is_finished": false,
+        "token_count": 206,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.5,
+        "elapsed_ms": 4248.6
+      }
+    },
+    {
+      "sequence_id": 208,
+      "event": "token",
+      "data": {
+        "text": "OR",
+        "is_finished": false,
+        "token_count": 207,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.4,
+        "elapsed_ms": 4273.6
+      }
+    },
+    {
+      "sequence_id": 209,
+      "event": "token",
+      "data": {
+        "text": "IN",
+        "is_finished": false,
+        "token_count": 208,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.4,
+        "elapsed_ms": 4299.1
+      }
+    },
+    {
+      "sequence_id": 210,
+      "event": "token",
+      "data": {
+        "text": " dataset",
+        "is_finished": false,
+        "token_count": 209,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.3,
+        "elapsed_ms": 4324.3
+      }
+    },
+    {
+      "sequence_id": 211,
+      "event": "token",
+      "data": {
+        "text": " provides",
+        "is_finished": false,
+        "token_count": 210,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.3,
+        "elapsed_ms": 4349.4
+      }
+    },
+    {
+      "sequence_id": 212,
+      "event": "token",
+      "data": {
+        "text": " a",
+        "is_finished": false,
+        "token_count": 211,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.2,
+        "elapsed_ms": 4374.8
+      }
+    },
+    {
+      "sequence_id": 213,
+      "event": "token",
+      "data": {
+        "text": " better",
+        "is_finished": false,
+        "token_count": 212,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.2,
+        "elapsed_ms": 4400.0
+      }
+    },
+    {
+      "sequence_id": 214,
+      "event": "token",
+      "data": {
+        "text": " understanding",
+        "is_finished": false,
+        "token_count": 213,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.1,
+        "elapsed_ms": 4425.4
+      }
+    },
+    {
+      "sequence_id": 215,
+      "event": "token",
+      "data": {
+        "text": " of",
+        "is_finished": false,
+        "token_count": 214,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.1,
+        "elapsed_ms": 4450.4
+      }
+    },
+    {
+      "sequence_id": 216,
+      "event": "token",
+      "data": {
+        "text": " complex",
+        "is_finished": false,
+        "token_count": 215,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.0,
+        "elapsed_ms": 4475.9
+      }
+    },
+    {
+      "sequence_id": 217,
+      "event": "token",
+      "data": {
+        "text": " systems",
+        "is_finished": false,
+        "token_count": 216,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 48.0,
+        "elapsed_ms": 4501.5
+      }
+    },
+    {
+      "sequence_id": 218,
+      "event": "token",
+      "data": {
+        "text": " with",
+        "is_finished": false,
+        "token_count": 217,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 47.9,
+        "elapsed_ms": 4526.7
+      }
+    },
+    {
+      "sequence_id": 219,
+      "event": "token",
+      "data": {
+        "text": " high",
+        "is_finished": false,
+        "token_count": 218,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 47.9,
+        "elapsed_ms": 4551.9
+      }
+    },
+    {
+      "sequence_id": 220,
+      "event": "token",
+      "data": {
+        "text": " performance",
+        "is_finished": false,
+        "token_count": 219,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 47.8,
+        "elapsed_ms": 4577.4
+      }
+    },
+    {
+      "sequence_id": 221,
+      "event": "token",
+      "data": {
+        "text": ".",
+        "is_finished": false,
+        "token_count": 220,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 47.8,
+        "elapsed_ms": 4602.6
+      }
+    },
+    {
+      "sequence_id": 222,
+      "event": "token",
+      "data": {
+        "text": "",
+        "is_finished": true,
+        "token_count": 221,
+        "ttft_ms": 116.6,
+        "tok_per_sec": 47.7,
+        "elapsed_ms": 4628.8
+      }
+    },
+    {
+      "sequence_id": 223,
+      "event": "done",
+      "data": {
+        "trace_id": "a973f11b-7551-4742-955f-1623185b3157",
+        "total_tokens": 24531,
+        "ttft_ms": 116.59,
+        "total_latency_ms": 4632.51,
+        "tok_per_sec": 47.74,
+        "retrieval_triggered": false,
+        "tools_executed": 0
+      }
+    }
+  ]
+}

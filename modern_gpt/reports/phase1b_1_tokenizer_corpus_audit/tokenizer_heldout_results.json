@@ -1,0 +1,391 @@
+{
+  "metadata": {
+    "tok_16k_name": "bpe_16k_v2",
+    "tok_16k_vocab": 16000,
+    "tok_16k_fingerprint": "be6c3d60c5baf217",
+    "tok_32k_name": "bpe_32k_candidate",
+    "tok_32k_vocab": 32768,
+    "tok_32k_fingerprint": "a1274e6fd57b5b63"
+  },
+  "category_metrics": {
+    "1_general_web_prose": {
+      "doc_count": 50,
+      "total_bytes": 89091,
+      "total_chars": 88556,
+      "tokens_16k": 22091,
+      "tokens_32k": 19176,
+      "reduction_pct": 13.2,
+      "tokens_per_char_16k": 0.2495,
+      "tokens_per_char_32k": 0.2165,
+      "bytes_per_token_16k": 4.0329,
+      "bytes_per_token_32k": 4.646,
+      "mean_doc_tokens_16k": 441.8,
+      "mean_doc_tokens_32k": 383.5,
+      "median_doc_tokens_16k": 466.0,
+      "median_doc_tokens_32k": 407.0,
+      "p95_doc_tokens_16k": 554.6,
+      "p95_doc_tokens_32k": 494.6
+    },
+    "2_educational_textbook": {
+      "doc_count": 50,
+      "total_bytes": 99526,
+      "total_chars": 99486,
+      "tokens_16k": 22995,
+      "tokens_32k": 20106,
+      "reduction_pct": 12.56,
+      "tokens_per_char_16k": 0.2311,
+      "tokens_per_char_32k": 0.2021,
+      "bytes_per_token_16k": 4.3282,
+      "bytes_per_token_32k": 4.9501,
+      "mean_doc_tokens_16k": 459.9,
+      "mean_doc_tokens_32k": 402.1,
+      "median_doc_tokens_16k": 449.0,
+      "median_doc_tokens_32k": 399.5,
+      "p95_doc_tokens_16k": 578.6,
+      "p95_doc_tokens_32k": 467.6
+    },
+    "3_source_code": {
+      "doc_count": 50,
+      "total_bytes": 92224,
+      "total_chars": 92209,
+      "tokens_16k": 40563,
+      "tokens_32k": 27184,
+      "reduction_pct": 32.98,
+      "tokens_per_char_16k": 0.4399,
+      "tokens_per_char_32k": 0.2948,
+      "bytes_per_token_16k": 2.2736,
+      "bytes_per_token_32k": 3.3926,
+      "mean_doc_tokens_16k": 811.3,
+      "mean_doc_tokens_32k": 543.7,
+      "median_doc_tokens_16k": 831.5,
+      "median_doc_tokens_32k": 560.5,
+      "p95_doc_tokens_16k": 1021.1,
+      "p95_doc_tokens_32k": 675.9
+    },
+    "4_mathematics_technical": {
+      "doc_count": 50,
+      "total_bytes": 24302,
+      "total_chars": 24290,
+      "tokens_16k": 8327,
+      "tokens_32k": 7300,
+      "reduction_pct": 12.33,
+      "tokens_per_char_16k": 0.3428,
+      "tokens_per_char_32k": 0.3005,
+      "bytes_per_token_16k": 2.9185,
+      "bytes_per_token_32k": 3.329,
+      "mean_doc_tokens_16k": 166.5,
+      "mean_doc_tokens_32k": 146.0,
+      "median_doc_tokens_16k": 165.5,
+      "median_doc_tokens_32k": 136.5,
+      "p95_doc_tokens_16k": 261.8,
+      "p95_doc_tokens_32k": 226.7
+    },
+    "5_wikipedia_reference": {
+      "doc_count": 50,
+      "total_bytes": 16483,
+      "total_chars": 16483,
+      "tokens_16k": 4213,
+      "tokens_32k": 3895,
+      "reduction_pct": 7.55,
+      "tokens_per_char_16k": 0.2556,
+      "tokens_per_char_32k": 0.2363,
+      "bytes_per_token_16k": 3.9124,
+      "bytes_per_token_32k": 4.2318,
+      "mean_doc_tokens_16k": 84.3,
+      "mean_doc_tokens_32k": 77.9,
+      "median_doc_tokens_16k": 83.0,
+      "median_doc_tokens_32k": 77.0,
+      "p95_doc_tokens_16k": 100.5,
+      "p95_doc_tokens_32k": 91.1
+    },
+    "6_book_style_prose": {
+      "doc_count": 50,
+      "total_bytes": 98575,
+      "total_chars": 98515,
+      "tokens_16k": 22870,
+      "tokens_32k": 19803,
+      "reduction_pct": 13.41,
+      "tokens_per_char_16k": 0.2321,
+      "tokens_per_char_32k": 0.201,
+      "bytes_per_token_16k": 4.3102,
+      "bytes_per_token_32k": 4.9778,
+      "mean_doc_tokens_16k": 457.4,
+      "mean_doc_tokens_32k": 396.1,
+      "median_doc_tokens_16k": 445.5,
+      "median_doc_tokens_32k": 390.0,
+      "p95_doc_tokens_16k": 611.7,
+      "p95_doc_tokens_32k": 472.4
+    },
+    "7_conversational_dialogue": {
+      "doc_count": 50,
+      "total_bytes": 10661,
+      "total_chars": 10655,
+      "tokens_16k": 2876,
+      "tokens_32k": 2525,
+      "reduction_pct": 12.2,
+      "tokens_per_char_16k": 0.2699,
+      "tokens_per_char_32k": 0.237,
+      "bytes_per_token_16k": 3.7069,
+      "bytes_per_token_32k": 4.2222,
+      "mean_doc_tokens_16k": 57.5,
+      "mean_doc_tokens_32k": 50.5,
+      "median_doc_tokens_16k": 54.0,
+      "median_doc_tokens_32k": 49.5,
+      "p95_doc_tokens_16k": 128.6,
+      "p95_doc_tokens_32k": 116.1
+    },
+    "8_multilingual": {
+      "doc_count": 15,
+      "total_bytes": 2837,
+      "total_chars": 1846,
+      "tokens_16k": 2203,
+      "tokens_32k": 1583,
+      "reduction_pct": 28.14,
+      "tokens_per_char_16k": 1.1934,
+      "tokens_per_char_32k": 0.8575,
+      "bytes_per_token_16k": 1.2878,
+      "bytes_per_token_32k": 1.7922,
+      "mean_doc_tokens_16k": 146.9,
+      "mean_doc_tokens_32k": 105.5,
+      "median_doc_tokens_16k": 140.0,
+      "median_doc_tokens_32k": 119.0,
+      "p95_doc_tokens_16k": 278.9,
+      "p95_doc_tokens_32k": 178.6
+    }
+  },
+  "multilingual_breakdown": {
+    "French": {
+      "script": "Latin",
+      "bytes": 370,
+      "chars": 360,
+      "tokens_16k": 122,
+      "tokens_32k": 106,
+      "bytes_per_token_16k": 3.03,
+      "bytes_per_token_32k": 3.49,
+      "reduction_pct": 13.11
+    },
+    "German": {
+      "script": "Latin",
+      "bytes": 315,
+      "chars": 311,
+      "tokens_16k": 136,
+      "tokens_32k": 116,
+      "bytes_per_token_16k": 2.32,
+      "bytes_per_token_32k": 2.72,
+      "reduction_pct": 14.71
+    },
+    "Spanish": {
+      "script": "Latin",
+      "bytes": 316,
+      "chars": 312,
+      "tokens_16k": 112,
+      "tokens_32k": 97,
+      "bytes_per_token_16k": 2.82,
+      "bytes_per_token_32k": 3.26,
+      "reduction_pct": 13.39
+    },
+    "Russian": {
+      "script": "Cyrillic",
+      "bytes": 833,
+      "chars": 440,
+      "tokens_16k": 833,
+      "tokens_32k": 425,
+      "bytes_per_token_16k": 1.0,
+      "bytes_per_token_32k": 1.96,
+      "reduction_pct": 48.98
+    },
+    "Chinese": {
+      "script": "Simplified Han",
+      "bytes": 270,
+      "chars": 90,
+      "tokens_16k": 268,
+      "tokens_32k": 252,
+      "bytes_per_token_16k": 1.01,
+      "bytes_per_token_32k": 1.07,
+      "reduction_pct": 5.97
+    },
+    "Japanese": {
+      "script": "Kanji/Kana",
+      "bytes": 303,
+      "chars": 101,
+      "tokens_16k": 302,
+      "tokens_32k": 229,
+      "bytes_per_token_16k": 1.0,
+      "bytes_per_token_32k": 1.32,
+      "reduction_pct": 24.17
+    },
+    "Arabic": {
+      "script": "Arabic",
+      "bytes": 430,
+      "chars": 232,
+      "tokens_16k": 430,
+      "tokens_32k": 358,
+      "bytes_per_token_16k": 1.0,
+      "bytes_per_token_32k": 1.2,
+      "reduction_pct": 16.74
+    }
+  },
+  "code_fragmentation_metrics": {
+    "identifiers": {
+      "getUserProfileById": {
+        "tokens_16k": 7,
+        "tokens_32k": 6,
+        "delta": 1
+      },
+      "calculateMovingAverage": {
+        "tokens_16k": 8,
+        "tokens_32k": 7,
+        "delta": 1
+      },
+      "XMLHttpRequest": {
+        "tokens_16k": 7,
+        "tokens_32k": 4,
+        "delta": 3
+      },
+      "std::vector<int>": {
+        "tokens_16k": 10,
+        "tokens_32k": 6,
+        "delta": 4
+      },
+      "ConcurrentHashMap": {
+        "tokens_16k": 8,
+        "tokens_32k": 5,
+        "delta": 3
+      },
+      "parse_serialized_json": {
+        "tokens_16k": 9,
+        "tokens_32k": 6,
+        "delta": 3
+      },
+      "numpy.linalg.inv": {
+        "tokens_16k": 9,
+        "tokens_32k": 5,
+        "delta": 4
+      },
+      "torch.cuda.is_available": {
+        "tokens_16k": 11,
+        "tokens_32k": 9,
+        "delta": 2
+      },
+      "handle_connection_timeout": {
+        "tokens_16k": 9,
+        "tokens_32k": 5,
+        "delta": 4
+      },
+      "DATABASE_CONNECTION_POOL_MAX_SIZE": {
+        "tokens_16k": 26,
+        "tokens_32k": 15,
+        "delta": 11
+      },
+      "AbstractSingletonProxyFactoryBean": {
+        "tokens_16k": 11,
+        "tokens_32k": 10,
+        "delta": 1
+      },
+      "read_uncommitted_isolation_level": {
+        "tokens_16k": 10,
+        "tokens_32k": 10,
+        "delta": 0
+      },
+      "AES_256_GCM_SHA384": {
+        "tokens_16k": 16,
+        "tokens_32k": 12,
+        "delta": 4
+      },
+      "__init_subclass__": {
+        "tokens_16k": 8,
+        "tokens_32k": 6,
+        "delta": 2
+      },
+      "async_generator_context_manager": {
+        "tokens_16k": 12,
+        "tokens_32k": 7,
+        "delta": 5
+      }
+    },
+    "mean_subwords_per_identifier_16k": 10.73,
+    "mean_subwords_per_identifier_32k": 7.53,
+    "identifier_subword_reduction_pct": 29.81,
+    "syntax_snippets": {
+      "for (int i = 0; i < n; ++i) {": {
+        "tokens_16k": 17,
+        "tokens_32k": 16
+      },
+      "if (!err && response.statusCode === 200) {": {
+        "tokens_16k": 20,
+        "tokens_32k": 15
+      },
+      "match result { Ok(val) => Some(val), Err(_) => None }": {
+        "tokens_16k": 28,
+        "tokens_32k": 19
+      },
+      "SELECT u.id, u.email, COUNT(p.id) FROM users u LEFT JOIN posts p ON u.id = p.user_id GROUP BY u.id;": {
+        "tokens_16k": 54,
+        "tokens_32k": 44
+      },
+      "lambda x, y: x * np.exp(-y ** 2 / 2.0)": {
+        "tokens_16k": 25,
+        "tokens_32k": 19
+      }
+    },
+    "numeric_literals": {
+      "1000000": {
+        "tokens_16k": 4,
+        "tokens_32k": 2
+      },
+      "0.00001": {
+        "tokens_16k": 5,
+        "tokens_32k": 4
+      },
+      "3.1415926535": {
+        "tokens_16k": 7,
+        "tokens_32k": 8
+      },
+      "0x7FFFFFFF": {
+        "tokens_16k": 10,
+        "tokens_32k": 7
+      },
+      "1.602e-19": {
+        "tokens_16k": 7,
+        "tokens_32k": 7
+      },
+      "65536": {
+        "tokens_16k": 3,
+        "tokens_32k": 3
+      }
+    }
+  },
+  "overall_summary": {
+    "total_benchmark_docs": 365,
+    "total_bytes": 433699,
+    "total_chars": 432040,
+    "total_tokens_16k": 126138,
+    "total_tokens_32k": 101572,
+    "global_sequence_reduction_pct": 19.48,
+    "bytes_per_token_16k": 3.4383,
+    "bytes_per_token_32k": 4.2699,
+    "effective_context_words_2048_16k": 1403,
+    "effective_context_words_2048_32k": 1742,
+    "context_coverage_expansion_pct": 24.19,
+    "vocab_utilization_in_benchmark_16k": "7902 / 16000 (49.4%)",
+    "vocab_utilization_in_benchmark_32k": "11691 / 32768 (35.7%)",
+    "throughput_16k": {
+      "tokens_per_sec": 879979,
+      "mb_per_sec": 3.43
+    },
+    "throughput_32k": {
+      "tokens_per_sec": 691329,
+      "mb_per_sec": 3.09
+    }
+  },
+  "correctness_tests": {
+    "round_trip_regular_text_16k_passed": true,
+    "round_trip_regular_text_32k_passed": true,
+    "round_trip_special_tokens_skip_false_passed": true,
+    "determinism_16k_passed": true,
+    "determinism_32k_passed": true,
+    "vocab_unique_ids": true,
+    "vocab_id_range": true,
+    "vocab_exact_size": 32768
+  }
+}

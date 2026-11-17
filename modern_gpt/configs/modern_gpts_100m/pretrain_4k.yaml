@@ -1,0 +1,46 @@
+# ModernGPT-S 100M Context Extension (4K Context Window) Configuration
+experiment_id: "context_ext_100m_4k"
+experiment_name: "ModernGPT-S-100M-Context-Extension-4K"
+category: "context_extension"
+
+# Model architecture reference
+model_config_file: "configs/modern_gpts_100m/model_4k.yaml"
+base_checkpoint: "checkpoints/modern_gpts_100m/best_val.pt"
+
+# Target context & RoPE configuration
+context_length: 4096
+rope_scale: 8.0
+rope_type: "linear"
+
+# Training schedule & batching (Micro-batch 1, Grad accum 8 = 32,768 tokens per optimizer update)
+micro_batch_size: 1
+gradient_accumulation_steps: 8
+effective_batch_size: 8
+tokens_per_step: 32768
+target_pilot_steps: 2000
+target_pilot_tokens: 65536000  # 65.5M tokens for adaptation
+
+# Optimization
+optimizer: "AdamW"
+learning_rate: 0.00005        # 5e-5 peak LR (20% of pretraining peak LR 2.5e-4)
+min_learning_rate: 0.000005   # 5e-6 min LR
+weight_decay: 0.1
+beta1: 0.9
+beta2: 0.95
+eps: 1.0e-8
+grad_clip_norm: 1.0
+warmup_steps: 100             # Fast warmup for continued pretraining
+lr_schedule: "cosine"
+precision: "bf16"
+
+# Checkpoint & Evaluation Cadence
+eval_interval_steps: 100
+save_interval_steps: 100
+eval_batches: 20
+
+# Output Paths (Completely separate from original 100M checkpoints)
+output_dir: "checkpoints/modern_gpts_100m_4k"
+session_backup_dir: "checkpoints/modern_gpts_100m_4k/session_backups"
+log_dir: "logs/pretrain_100m_4k"
+metrics_file: "logs/pretrain_100m_4k/training_metrics.jsonl"
+

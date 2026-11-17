@@ -1,0 +1,70 @@
+# ModernGPT-S 100M: Step 4 — Controlled 4K Continued-Pretraining Pilot Configuration
+experiment_id: "modern_gpts_100m_4k_pilot"
+experiment_name: "ModernGPT-S-100M-4K-Continued-Pretraining-Pilot"
+category: "context_extension_pilot"
+
+# Checkpoint references
+init_checkpoint: "checkpoints/modern_gpts_100m_4k/init_4k.pt"
+base_reference_checkpoint: "checkpoints/modern_gpts_100m/best_val.pt"
+
+# Model architecture reference
+model_config:
+  architecture_name: "ModernGPT-S-100M-GQA4-4K"
+  parameter_count: 100401408
+  vocab_size: 16000
+  context_length: 4096
+  rope_scale: 8.0
+  rope_type: "linear"
+  emb_dim: 768
+  n_heads: 12
+  num_kv_heads: 4
+  head_dim: 64
+  n_layers: 14
+  ffn_hidden_dim: 2048
+  dropout: 0.0
+  qkv_bias: false
+  rope_theta: 10000.0
+  precision: "bf16"
+
+# Token budget & schedule
+# 2,000 steps * 32,768 tokens/step = 65,536,000 tokens maximum
+total_steps: 2000
+max_tokens: 65536000
+context_length: 4096
+micro_batch_size: 1
+gradient_accumulation_steps: 8
+effective_batch_size: 8
+tokens_per_step: 32768
+
+# Optimization parameters
+optimizer: "AdamW"
+learning_rate: 0.00005        # 5e-5 peak LR
+min_learning_rate: 0.000005   # 5e-6 minimum LR (10% of peak)
+warmup_steps: 100             # 100 steps warmup (3.28M tokens)
+lr_schedule: "cosine"
+weight_decay: 0.1
+beta1: 0.9
+beta2: 0.95
+eps: 1.0e-8
+grad_clip_norm: 1.0
+precision: "bf16"
+
+# Checkpoint and evaluation cadence
+eval_milestones: [0, 100, 250, 500, 1000, 1500, 2000]
+save_interval_steps: 250
+eval_batches: 50              # 50 batches per evaluation milestone (204,800 tokens at 4K)
+passkey_eval_milestones: [0, 500, 1000, 2000]
+
+# Thermal safety guardrails
+warn_temp_celsius: 85.0
+pause_temp_celsius: 90.0
+emergency_temp_celsius: 95.0
+cooldown_temp_celsius: 70.0
+
+# Dedicated directories
+output_dir: "checkpoints/modern_gpts_100m_4k_pilot"
+session_backup_dir: "checkpoints/modern_gpts_100m_4k_pilot/session_backups"
+log_dir: "logs/pretrain_100m_4k_pilot"
+metrics_file: "artifacts/experiments/modern_gpts_100m_4k_pilot/training_metrics.jsonl"
+artifacts_dir: "artifacts/experiments/modern_gpts_100m_4k_pilot"
+

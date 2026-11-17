@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "title": "Seven-Domain Language Modeling Retention",
+    "source_artifact": "modern_gpt/experiments/phase2_experiment_c/reports/pretraining_retention.json",
+    "evaluation_corpus": "Held-Out 500M Validation Split (10,000 sequences)",
+    "methodology": "Teacher-forced cross-entropy loss and perplexity across weighted domains"
+  },
+  "domain_weights": {
+    "web": 0.4,
+    "edu": 0.15,
+    "code": 0.15,
+    "wiki": 0.075,
+    "math": 0.075,
+    "books": 0.1,
+    "dialogue": 0.05
+  },
+  "results": {
+    "weighted_loss": 2.8651,
+    "weighted_ppl": 17.55,
+    "domains": {
+      "web": {
+        "loss": 3.3844,
+        "ppl": 29.5
+      },
+      "edu": {
+        "loss": 2.3565,
+        "ppl": 10.55
+      },
+      "code": {
+        "loss": 1.8791,
+        "ppl": 6.55
+      },
+      "wiki": {
+        "loss": 3.2806,
+        "ppl": 26.59
+      },
+      "math": {
+        "loss": 2.8736,
+        "ppl": 17.7
+      },
+      "books": {
+        "loss": 3.117,
+        "ppl": 22.58
+      },
+      "dialogue": {
+        "loss": 2.056,
+        "ppl": 7.81
+      }
+    }
+  }
+}

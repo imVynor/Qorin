@@ -1,0 +1,82 @@
+{
+  "specification_version": "1.0.0",
+  "project": "ModernGPT-S / QORIN Phase 2D Experiment C",
+  "tokenizer": "bpe_32k_production",
+  "tokenizer_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+  "protocol_delimiters": {
+    "im_start": "<|im_start|>",
+    "im_start_id": 4,
+    "im_end": "<|im_end|>",
+    "im_end_id": 5,
+    "tool_call": "<|tool_call|>",
+    "tool_call_id": 6,
+    "tool_result": "<|tool_result|>",
+    "tool_result_id": 7,
+    "tool_error": "<|tool_error|>",
+    "tool_error_id": 8,
+    "endoftext": "<|endoftext|>",
+    "endoftext_id": 9
+  },
+  "runtime_policy": {
+    "max_tool_rounds_per_turn": 2,
+    "python_sandbox_timeout_seconds": 5.0,
+    "web_research_timeout_seconds": 4.0,
+    "max_output_bytes": 50000,
+    "blocked_python_modules": [
+      "socket",
+      "urllib",
+      "http",
+      "ftplib",
+      "smtplib",
+      "webbrowser",
+      "subprocess",
+      "shutil"
+    ]
+  },
+  "tools": {
+    "python": {
+      "name": "python",
+      "aliases": ["python", "python_interpreter", "run_code"],
+      "description": "Executes Python code in an isolated subprocess sandbox. Use for arithmetic, mathematics, statistics, data processing, and algorithmic problem solving.",
+      "when_to_use": "When calculation, data transformation, or numerical verification is required. Do NOT use for basic arithmetic that can be answered directly.",
+      "argument_schema": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Valid Python code to execute. Must print results to stdout to be observed."
+          }
+        },
+        "required": ["code"]
+      },
+      "call_format": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"<python_code>\"}}<|im_end|>",
+      "result_format": "<|tool_result|>{\"stdout\": \"<stdout_str>\", \"stderr\": \"<stderr_str>\", \"exit_code\": 0, \"execution_time_ms\": <float>}",
+      "error_format": "<|tool_error|>{\"stderr\": \"<error_trace_str>\", \"exit_code\": 1, \"error\": \"<diagnostic_str>\"}"
+    },
+    "web_research": {
+      "name": "web_research",
+      "aliases": ["web_research", "web_search", "search"],
+      "description": "Searches the live web for current, factual, or verifiable external information. Returns retrieved evidence snippets and source URLs.",
+      "when_to_use": "When recent factual information, documentation, news, or external verification is required. Do NOT use when the user provides all necessary context or for ordinary conversational queries.",
+      "argument_schema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Targeted search query string."
+          }
+        },
+        "required": ["query"]
+      },
+      "call_format": "<|tool_call|>{\"name\": \"web_research\", \"arguments\": {\"query\": \"<search_query>\"}}<|im_end|>",
+      "result_format": "<|tool_result|>{\"query\": \"<query>\", \"sources\": [{\"title\": \"...\", \"url\": \"...\", \"snippet\": \"...\"}], \"summary\": \"<summary_text>\", \"latency_ms\": <float>}",
+      "error_format": "<|tool_error|>{\"query\": \"<query>\", \"error\": \"<diagnostic_str>\"}"
+    }
+  },
+  "compact_manifests": {
+    "two_tool_manifest": "You are ModernGPT-S, a helpful and precise AI assistant.\nYou have access to external tools:\n1. `python`: Executes Python code in an isolated sandbox. Use for math, calculations, and data processing. Format: <|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"<code_string>\"}}\n2. `web_research`: Searches the web for current factual information. Returns evidence with source URLs. Format: <|tool_call|>{\"name\": \"web_research\", \"arguments\": {\"query\": \"<query_string>\"}}\nWhen a tool is needed, emit ONLY the tool call. If no tool is needed, respond directly to the user.",
+    "python_only_manifest": "You are ModernGPT-S, a helpful and precise AI assistant.\nYou have access to external tools:\n1. `python`: Executes Python code in an isolated sandbox. Use for math, calculations, and data processing. Format: <|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"<code_string>\"}}\nWhen a tool is needed, emit ONLY the tool call. If no tool is needed, respond directly to the user.",
+    "web_only_manifest": "You are ModernGPT-S, a helpful and precise AI assistant.\nYou have access to external tools:\n1. `web_research`: Searches the web for current factual information. Returns evidence with source URLs. Format: <|tool_call|>{\"name\": \"web_research\", \"arguments\": {\"query\": \"<query_string>\"}}\nWhen a tool is needed, emit ONLY the tool call. If no tool is needed, respond directly to the user.",
+    "standalone_manifest": "You are ModernGPT-S, a helpful and precise AI assistant."
+  }
+}

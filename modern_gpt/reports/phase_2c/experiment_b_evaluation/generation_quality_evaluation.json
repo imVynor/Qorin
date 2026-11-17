@@ -1,0 +1,26 @@
+{
+  "base_pretrained": {
+    "distinct_1": 0.4877,
+    "distinct_2": 0.5901,
+    "distinct_3": 0.6283,
+    "repetition_4_rate": 0.3443,
+    "prompt_echo_rate_pct": 5.0,
+    "empty_rate_pct": 0.0
+  },
+  "experiment_a": {
+    "distinct_1": 0.4878,
+    "distinct_2": 0.6163,
+    "distinct_3": 0.6614,
+    "repetition_4_rate": 0.3079,
+    "prompt_echo_rate_pct": 0.33,
+    "empty_rate_pct": 0.0
+  },
+  "experiment_b": {
+    "distinct_1": 0.5075,
+    "distinct_2": 0.6312,
+    "distinct_3": 0.6743,
+    "repetition_4_rate": 0.2933,
+    "prompt_echo_rate_pct": 0.83,
+    "empty_rate_pct": 0.0
+  }
+}

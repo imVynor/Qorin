@@ -1,0 +1,21 @@
+beta1: 0.9
+beta2: 0.95
+context_length: 2048
+device: NVIDIA GeForce RTX 5060 Laptop GPU
+effective_batch_size: 4
+experiment: Experiment_F_Stage14_Pilot
+grad_accum_steps: 4
+grad_clip_norm: 1.0
+micro_batch_size: 1
+min_lr: 1.5e-06
+optimizer: AdamW8bit
+parent_checkpoint: C:\Users\Anish\Desktop\Projects\ML-course\modern_gpt\experiments\phase2_experiment_d\stage_3_training\checkpoints\ckpt_experiment_d_best.pt
+parent_sha256: c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7
+peak_lr: 1.5e-05
+precision: BF16
+seed: 42
+timestamp: 1794904781.0919192
+tokenizer_sha256: d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59
+total_updates: 100
+warmup_updates: 20
+weight_decay: 0.1

@@ -1,0 +1,68 @@
+{
+  "model_tag": "branch_b",
+  "checkpoint": "ckpt_branch_best.pt",
+  "total_tasks": 150,
+  "intent_metrics": {
+    "tp": 107,
+    "fp": 4,
+    "tn": 32,
+    "fn": 7,
+    "precision": 0.964,
+    "precision_ci": [
+      0.911,
+      0.9859
+    ],
+    "recall": 0.9386,
+    "recall_ci": [
+      0.8787,
+      0.9699
+    ],
+    "f1": 0.9511,
+    "accuracy": 0.9267,
+    "accuracy_ci": [
+      0.8735,
+      0.9586
+    ]
+  },
+  "branch_b_calibration_metrics": {
+    "direct_task_fpr": 0.1111,
+    "direct_task_fpr_ci": [
+      0.0441,
+      0.2531
+    ],
+    "direct_fp_count": 4,
+    "direct_total": 36,
+    "web_recall": 0.7237,
+    "web_recall_ci": [
+      0.6142,
+      0.8116
+    ],
+    "web_correct": 55,
+    "web_total": 76,
+    "python_recall": 0.9211,
+    "python_recall_ci": [
+      0.792,
+      0.9728
+    ],
+    "python_correct": 35,
+    "python_total": 38,
+    "tool_selection_accuracy": 0.7895,
+    "end_to_end_semantic_success": 0.2333,
+    "semantic_success_ci": [
+      0.1728,
+      0.3072
+    ]
+  },
+  "branch_c_synthesis_metrics": {
+    "factual_semantic_rate": 0.32,
+    "unsupported_claim_rate": 0.68,
+    "evidence_coverage": 0.0,
+    "citation_rate": 0.0,
+    "numerical_extraction_accuracy": 0.16,
+    "end_to_end_semantic_success": 0.2333,
+    "semantic_success_ci": [
+      0.1728,
+      0.3072
+    ]
+  }
+}

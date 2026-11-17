@@ -1,0 +1,64 @@
+{
+  "incident_id": "INC-20261117-WEB-RETRIEVAL-FAIL",
+  "timestamp": "2026-11-17T02:23:45+05:30",
+  "model_identity": {
+    "model_id": "qorin-500m-sft-exp-c",
+    "checkpoint": "modern_gpt/experiments/phase2_experiment_c/stage_3_training/checkpoints/ckpt_experiment_c_final.pt",
+    "checkpoint_sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b",
+    "parameters": 514389504,
+    "architecture": "QorinForCausalLM (20 layers, 1536 dim, 24 query heads, 4 KV heads, 2048 ctx)"
+  },
+  "runtime_settings": {
+    "web_research_enabled": true,
+    "python_sandbox_enabled": true,
+    "manual_tool_override": null,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 40,
+    "max_new_tokens": 256,
+    "repetition_penalty": 1.15
+  },
+  "input_query": "grab info on elon musk",
+  "step_1_local_knowledge_retrieval": {
+    "triggered": false,
+    "decision_reason": "Query did not match technical knowledge base routing threshold.",
+    "similarity_score": 0.0,
+    "chunks_injected": 0
+  },
+  "step_2_manifest_injection": {
+    "system_prompt_type": "compact_manifest (two_tool_manifest)",
+    "tools_advertised": [
+      "python",
+      "web_research"
+    ],
+    "protocol_version": "1.0.0"
+  },
+  "step_3_stage_a_first_round_generation": {
+    "raw_output_text": "elon musk is a language model research assistant developed by the QORIN research project. The language model is a statistical tool that uses linear regression to predict the behavior of individual neurons in the brain. Elon Musk has been working with the QORIN data for over 30 years and has been trained on more than 400,000 neurons in the brain.\nThe QORIN platform is designed for large-scale analysis, including multi-layer classification, classification, and prediction. This language model is highly sensitive and can accurately predict a wide range of biological systems, including neurological disorders such as Alzheimer's disease, Alzheimer's disease, and multiple sclerosis.\nThe QORIN platform provides a powerful tool for predicting complex neural networks with high accuracy and efficiency. In this case, the QORIN machine learning model was developed using a combination of the QORIN model and the QORIN dataset. The QORIN model allows the QORIN dataset to be used for statistical analysis of biological systems, while the QORIN dataset provides a better understanding of complex systems with high performance.",
+    "tool_call_emitted": false,
+    "contains_tool_delimiters": false,
+    "emitted_delimiters_detected": [],
+    "parsed_tool_candidate": null,
+    "parsed_arguments": null,
+    "determined_action": "DIRECT",
+    "action_decision_reason": "Model generation contained no <|tool_call|> delimiters or structured tool tags; evaluated as direct conversational completion."
+  },
+  "step_4_stage_b_dispatch_decision": {
+    "dispatch_status": "skipped",
+    "skip_reason": "Action determined as DIRECT. No tool execution requested by model or user override.",
+    "web_researcher_invoked": false,
+    "python_sandbox_invoked": false
+  },
+  "step_5_stage_c_synthesis_and_presentation": {
+    "second_stage_executed": false,
+    "streamed_mode": "direct_first_stage_tokens",
+    "frontend_presentation": "Single assistant message bubble with no tool trace cards, no knowledge pills, and zero citation URLs.",
+    "factual_grounding": "Ungrounded neural hallucination (model conflated Elon Musk with an analytical research model / biological dataset)."
+  },
+  "performance_metrics": {
+    "ttft_ms": 116.59,
+    "tok_per_sec": 47.74,
+    "total_latency_ms": 4632.51,
+    "tokens_generated": 221
+  }
+}

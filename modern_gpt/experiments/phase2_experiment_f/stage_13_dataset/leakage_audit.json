@@ -1,0 +1,17 @@
+{
+  "audit_timestamp": "2026-11-17T13:31:59.541219",
+  "benchmark_file": "benchmark.jsonl",
+  "benchmark_records_checked": 150,
+  "dataset_records_checked": 1000,
+  "held_out_multistep_tasks_checked": 15,
+  "exact_matches_found": 0,
+  "ngram_leakage_found": 0,
+  "max_observed_jaccard": 0.3333,
+  "jaccard_threshold": 0.4,
+  "split_cross_contamination": {
+    "train_val_overlap": 0,
+    "train_test_overlap": 0,
+    "val_test_overlap": 0
+  },
+  "decontamination_verdict": "PASSED_100_PERCENT_CLEAN"
+}

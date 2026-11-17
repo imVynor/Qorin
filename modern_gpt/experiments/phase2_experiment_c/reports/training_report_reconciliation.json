@@ -1,0 +1,50 @@
+{
+  "audit_title": "ModernGPT-S Phase 2D \u2014 Experiment C Training Run Reconciliation",
+  "experiment_id": "phase2_experiment_c_targeted_tool_learning",
+  "token_budget_reconciliation": {
+    "nominal_budget": 1885000,
+    "actual_conversation_tokens_processed": 1785635,
+    "actual_assistant_target_tokens": 677855,
+    "total_updates": 495,
+    "accum_steps": 8,
+    "supervised_density": 0.3796,
+    "protocol_compliance": "PASSED. Exactly 495 updates executed matching the approved token budget."
+  },
+  "checkpoint_integrity_audit": {
+    "starting_checkpoint": {
+      "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\checkpoints\\sft_experiment_b\\ckpt_experiment_b_final.pt",
+      "sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+      "unmutated_post_training": true
+    },
+    "final_checkpoint": {
+      "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_c\\stage_3_training\\checkpoints\\ckpt_experiment_c_final.pt",
+      "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b",
+      "resume_fidelity_max_diff": 0.0,
+      "resume_fidelity_pass": true
+    },
+    "intermediate_checkpoints": [
+      {
+        "step": 250,
+        "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_c\\stage_3_training\\checkpoints\\ckpt_step_250.pt",
+        "sha256": "ef331a34dc0ff5b08af458bdaf84e8033ed7ab86e9c0a23f15b753ba52bf060d"
+      },
+      {
+        "step": 495,
+        "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_c\\stage_3_training\\checkpoints\\ckpt_experiment_c_final.pt",
+        "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b"
+      }
+    ],
+    "zero_mutation_verified": true
+  },
+  "validation_trajectory": {
+    "step_0_val_loss": 1.9169,
+    "step_250_val_loss": 1.1807,
+    "final_step_495_val_loss": 1.1704,
+    "net_loss_delta": -0.7465
+  },
+  "thermal_and_hardware_profile": {
+    "max_gpu_temp_c": 76.0,
+    "avg_power_w": 41.24,
+    "max_vram_used_mib": 7821.0
+  }
+}

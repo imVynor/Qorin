@@ -1,0 +1,17 @@
+benchmark,metric,value,unit
+validation_loss,overall_loss,3.0666,ce_loss
+validation_loss,overall_ppl,21.47,ppl
+behavioral,isolated_accuracy,2.0,percent
+behavioral,multiturn_accuracy,3.0,percent
+behavioral,contamination_rate,23.0,percent
+behavioral,attractor_rate,0.0,percent
+coding,ast_valid,66.0,percent
+coding,functional_pass,18.0,percent
+json,json_valid,2.0,percent
+json,schema_valid,0.0,percent
+math,accuracy,0.0,percent
+tools,intent_accuracy,35.0,percent
+retrieval_matrix,100m_off,30.0,percent
+retrieval_matrix,100m_on,40.0,percent
+retrieval_matrix,500m_off,20.0,percent
+retrieval_matrix,500m_on,20.0,percent

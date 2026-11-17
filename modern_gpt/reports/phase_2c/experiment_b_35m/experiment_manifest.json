@@ -1,0 +1,83 @@
+{
+  "experiment_id": "phase_2c_experiment_b_35m",
+  "model_name": "ModernGPT-S 500M",
+  "initialization_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\checkpoints\\500m_pretrain\\ckpt_latest.pt",
+    "sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+    "pretraining_tokens": 1121648640
+  },
+  "final_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_b\\run_35m\\checkpoints\\ckpt_experiment_b_final.pt",
+    "sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+    "total_updates": 7124,
+    "conversation_tokens": 35005757,
+    "assistant_target_tokens": 23295662
+  },
+  "training_hyperparameters": {
+    "optimizer": "bnb.optim.AdamW8bit",
+    "learning_rate": 2.5e-05,
+    "min_learning_rate": 2.5e-06,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.03,
+    "max_grad_norm": 1.0,
+    "microbatch_size": 1,
+    "gradient_accumulation_steps": 8,
+    "precision": "bfloat16",
+    "gradient_checkpointing": true
+  },
+  "dataset": {
+    "curated_train_path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_b\\experiment_b_train.jsonl",
+    "target_mixture": {
+      "general_instructions": "50%",
+      "reasoning": "20%",
+      "coding": "15%",
+      "tool_use": "15%"
+    },
+    "category_accounting": {
+      "conversation_tokens": {
+        "general_instructions": 10863442,
+        "reasoning": 9828886,
+        "coding": 9116635,
+        "tool_use": 5171747
+      },
+      "assistant_tokens": {
+        "general_instructions": 7540977,
+        "reasoning": 6623751,
+        "coding": 6018626,
+        "tool_use": 3087456
+      }
+    },
+    "authentic_tool_coverage": "100% (all 747 authentic records included)"
+  },
+  "validation_metrics": {
+    "baseline_loss": 1.9412,
+    "baseline_ppl": 6.97,
+    "final_loss": 1.5376,
+    "final_ppl": 4.65,
+    "loss_delta_percent": -20.79,
+    "best_loss": 1.5852
+  },
+  "runtime_performance": {
+    "experiment": "Experiment B (35M SFT Mixture)",
+    "total_conversation_tokens": 35005757,
+    "total_assistant_target_tokens": 23295662,
+    "supervised_token_density": 0.6655,
+    "total_updates": 7124,
+    "average_tokens_per_update": 4913.8,
+    "total_active_training_sec": 10466.8,
+    "total_active_training_min": 174.45,
+    "total_cooldown_sec": 900.0,
+    "total_cooldown_min": 15.0,
+    "total_wall_clock_sec": 11369.9,
+    "total_wall_clock_min": 189.5,
+    "active_throughput_tok_sec": 3344.4,
+    "effective_wall_throughput_tok_sec": 3078.8,
+    "peak_step_throughput_tok_sec": 4917.5,
+    "p50_step_throughput_tok_sec": 3740.4,
+    "peak_gpu_temp_c": 91.0,
+    "average_gpu_temp_c": 86.3,
+    "peak_vram_allocated_mb": 3962.3,
+    "peak_vram_reserved_mb": 6862.0
+  },
+  "completion_timestamp": "2026-11-15T22:00:31.765049+00:00"
+}

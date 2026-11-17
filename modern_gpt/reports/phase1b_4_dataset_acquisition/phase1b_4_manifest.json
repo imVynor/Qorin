@@ -1,0 +1,115 @@
+{
+  "phase": "1B.4",
+  "title": "ModernGPT-S 500M Dataset Acquisition & Supply Expansion Manifest",
+  "status": "PARTIALLY_COMPLETE_BLOCKED_ON_BANDWIDTH_LIMITS",
+  "timestamp_iso": "2026-11-10T21:39:37.216922+00:00",
+  "tokenizer": {
+    "tokenizer.json": {
+      "bytes": 2326260,
+      "sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59"
+    },
+    "tokenizer_config.json": {
+      "bytes": 296,
+      "sha256": "b803c75253c44fd9a0745e83df72e9830335b9535c4d3fefc74f3381cb5e45ac"
+    },
+    "tokenizer_manifest.json": {
+      "bytes": 1528,
+      "sha256": "467bce0143ff0ef956cf2d49ce38951690fa6b6bb4fe3b0e5d846b339be26709"
+    }
+  },
+  "reports": {
+    "dataset_license_audit.md": {
+      "bytes": 5601,
+      "sha256": "87c8bcdd2e0fd19ab6555e2336a690ef8995a74ef783e186349b8ea85d024796"
+    },
+    "dataset_source_register.md": {
+      "bytes": 4018,
+      "sha256": "624d373b38f573842ff8fcc429cb20243933ded701f626266a525fff9aa680f8"
+    },
+    "decisions_and_risks.md": {
+      "bytes": 3635,
+      "sha256": "a351682684d172adf574269d526ade5b3b96d5029f2139a552357c9ef0db00df"
+    },
+    "document_boundary_and_loss_semantics.md": {
+      "bytes": 4573,
+      "sha256": "50270f11f47bfd7c1c4c5ff0808b5386073cf63a0528345f4fa3cd16c59637ff"
+    },
+    "domain_supply_accounting.md": {
+      "bytes": 3804,
+      "sha256": "09f8fe6f5ad631f48d32a47b90a14da01861836f99f0670ba91ba2d22ab9a366"
+    },
+    "download_log.md": {
+      "bytes": 2978,
+      "sha256": "4571d1dbec1e5320deca58ba4114c13b4f702af30642cb80130cc8fdf2062717"
+    },
+    "filtering_and_deduplication_report.md": {
+      "bytes": 3492,
+      "sha256": "e68eba84004854a5b493a12ded7a1e817d37948d5028c4ffd477c843b8cecd69"
+    },
+    "pre_acquisition_audit.md": {
+      "bytes": 4317,
+      "sha256": "934094edba0c26f29018540fa0fcc41e5db95f0483e6892d90f87077de743824"
+    },
+    "README.md": {
+      "bytes": 5508,
+      "sha256": "3bda09e982a55aa10105ac6c63abc21f528a9186e03be815a771900c80afda3e"
+    },
+    "reproducibility_report.md": {
+      "bytes": 2955,
+      "sha256": "7b477a8432a81e1fd9901e72fc394c67eaaa48c9deb8f22dab4a7d4cd3047e1a"
+    },
+    "resource_usage_report.md": {
+      "bytes": 2690,
+      "sha256": "b99890b11a68400637b853b8ce8e05fa69b27b34873ebafdf9ef6cb927d8b5fc"
+    },
+    "train_validation_partition_report.md": {
+      "bytes": 3086,
+      "sha256": "c9b2795863fff10b43c196e15a3b4e47a7a033b7cf8161d700119fad8c16eef2"
+    }
+  },
+  "acquired_datasets": {
+    "acquired_books.jsonl": {
+      "bytes": 6276070,
+      "sha256": "43c755c59a92c2face2b09f0cb49a1655d00461c569cf82a69ac71a18182ed56"
+    },
+    "acquired_code.jsonl": {
+      "bytes": 6453444,
+      "sha256": "4d829bd4597b384d2990dabdd78e1c1619e20f94ca5a28f62941a881db873126"
+    },
+    "acquired_dialogue.jsonl": {
+      "bytes": 6217599,
+      "sha256": "888cbd0f1f4554b0cb20a583976aa8126d5dfe2afce81f060aa4b65b22ffa8f2"
+    },
+    "acquired_edu.jsonl": {
+      "bytes": 4283934,
+      "sha256": "289413bdaa131feb1991753940623eb7af45e972a7d73d01227a7daf4b1c0640"
+    },
+    "acquired_math.jsonl": {
+      "bytes": 6781000,
+      "sha256": "f2a86e1b479f4f843844cbc2e612fef76d12b82250ff22cb654454830ac2d08f"
+    },
+    "acquired_web.jsonl": {
+      "bytes": 6636181,
+      "sha256": "39bfab4d174828a55151e8a00d5abd3cb2d2b0bae44ee18942ff3ec374d0befb"
+    },
+    "acquired_wiki.jsonl": {
+      "bytes": 23589959,
+      "sha256": "ac562f7b0d7ae8a33bb8e9897ecc104e7bcc85810339db4bc313dcd0f4b0fb0f"
+    },
+    "acquisition_master_summary.json": {
+      "bytes": 8689,
+      "sha256": "14de643c8ee2872c70595dd0f1bda3b2b337008f4cabe2a8b3edddf85e3c47c9"
+    }
+  },
+  "summary_metrics": {
+    "newly_acquired_documents": 6280,
+    "newly_acquired_tokens": 13692026,
+    "newly_acquired_bytes": 60238187,
+    "total_available_unique_clean_tokens": 242301147,
+    "target_tokens": 1000000000,
+    "remaining_shortfall_tokens": 757698853,
+    "coverage_pct": 24.23,
+    "validation_leakage_collisions_intercepted": 312,
+    "train_val_leakage_rate": "0.00%"
+  }
+}

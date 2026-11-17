@@ -1,0 +1,21 @@
+{
+  "total_examples": 9738,
+  "train_examples": 8764,
+  "val_examples": 974,
+  "total_serialized_tokens": 8117073,
+  "total_supervised_tokens": 3967507,
+  "avg_sequence_length": 833.5,
+  "max_sequence_length": 4096,
+  "long_context_tokens_2k_plus": 3213594,
+  "pct_tokens_from_2k_plus_examples": 39.59,
+  "category_distribution": {
+    "multi_turn_dialogue": 2500,
+    "coding_python": 2000,
+    "general_instruction": 2000,
+    "long_context_retrieval": 1200,
+    "educational_explanations": 0,
+    "contextual_qa": 1000,
+    "structured_json": 595,
+    "mathematics": 443
+  }
+}

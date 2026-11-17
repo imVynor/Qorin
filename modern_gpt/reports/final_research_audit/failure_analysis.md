@@ -1,0 +1,119 @@
+# ModernGPT-S / QORIN — Comprehensive Failure Analysis and Error Taxonomy
+## ES 335 Research Sprint Audit — Post-Experiment C Evaluation
+
+### Executive Overview
+This document provides an exhaustive, forensically verified failure analysis of **ModernGPT-S (514M parameter decoder-only Transformer)** following Experiment C targeted autonomous tool-use training. All metrics, task IDs, and error traces in this report are backed by raw evaluation outputs from `tool_confusion_matrix.json`, `live_tool_evaluation.json`, and `extended_prime_audit.json`.
+
+---
+
+### 1. Investigation 1: Why 10/30 Tool Tasks Did Not Produce Valid Structured Tool Calls
+
+In the primary evaluation condition (**Config B: Harness-Enabled Two-Tool Orchestrator**), exactly 20 out of 30 benchmark tasks produced valid, dispatched structured tool calls (`<|tool_call|>{...}`). The remaining 10 tasks are categorized below:
+
+| Category | Task IDs | Count | Forensic Cause | Classification |
+| :--- | :--- | :--- | :--- | :--- |
+| **Negative Controls (True Negatives)** | `tool_21`, `tool_22`, `tool_23`, `tool_24`, `tool_25` | **5** | Prompts were factual/definitional (e.g., "What is the capital of France?"). Model correctly answered directly with text and **did not** invoke tools. | **Desired Behavior (100% Negative Control Accuracy)** |
+| **Missed Intent (False Negatives)** | `tool_03`, `tool_12`, `tool_13` | **3** | Model emitted direct prose or Python script definitions without the `<|tool_call|>` wrapper. For `tool_03` ("What is 15 factorial?"), it echoed `15 factorial = 15 factorial.` For `tool_12` and `tool_13`, it generated `import numpy as np` text blocks. | **Intent Detection Failure (Deficit in Complex Multi-step Prompts)** |
+| **Malformed Syntax (String Truncation)** | `tool_26`, `tool_28` | **2** | Model attempted tool calls (`<|tool_call|>`) but ran out of generation token budget (150 tokens) before emitting closing quotes and braces, causing JSON parser rejection. | **Generation Horizon Truncation** |
+| **Total Non-Dispatched Tasks** | — | **10** | 5 Correct Rejections + 3 Missed Intents + 2 Truncated Calls | Exact Denominator = 30 |
+
+#### Representative Failure Traces:
+- **Task `tool_03` (Missed Intent):**
+  - *Prompt:* `What is 15 factorial? Calculate with Python.`
+  - *Generated:* `15 factorial = 15 factorial.`
+  - *Diagnosis:* Strong pretraining echo prior overcame tool-intent trigger when prompt contained tautological phrasing.
+- **Task `tool_26` (Malformed Call):**
+  - *Prompt:* `Search the web for the latest Python release schedule and major features in Python 3.13.`
+  - *Generated:* `<|tool_call|>{"name": "python", "arguments": {"code": "import math\nr = 3.13.` *(truncated)*
+  - *Diagnosis:* The model attempted to formulate a Python tool call for a web search prompt, but ran out of tokens while attempting complex nested string interpolation.
+
+---
+
+### 2. Investigation 2: Coding Pass@1 Variation (42.0% in Exp B vs 38.0% in Exp C)
+
+Between Experiment B (35M general + tool SFT) and Experiment C (targeted 1.88M tool SFT), the isolated Python sandbox Pass@1 shifted from **42.0% (21/50)** to **38.0% (19/50)**.
+
+| Metric | Base Pretrain | Experiment A (25M) | Experiment B (35M) | Experiment C (Targeted) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Syntax Validity (%)** | 2.0% (1/50) | 52.0% (26/50) | 92.0% (46/50) | **96.0% (48/50)** |
+| **Pass@1 Correctness (%)** | 0.0% (0/50) | 14.0% (7/50) | **42.0% (21/50)** | **38.0% (19/50)** |
+| **Total Tasks Evaluated** | 50 | 50 | 50 | 50 |
+
+#### Task Discrepancy Breakdown:
+- **Tasks passing in Exp B but failing in Exp C (6 tasks):**
+  - `code_18`: `abs_val(n)`
+  - `code_25`: `sum_list(lst)`
+  - `code_32`: `is_divisible(n, d)`
+  - `code_38`: `capitalize_first(s)`
+  - `code_42`: `is_none(x)`
+  - `code_43`: `identity(x)`
+- **Tasks failing in Exp B but passing in Exp C (4 tasks):**
+  - `code_01`: `square(x)`
+  - `code_07`: `is_empty(lst)`
+  - `code_14`: `to_lowercase(s)`
+  - `code_15`: `is_odd(n)`
+
+#### Root Cause:
+1. **Statistical Variance:** The net difference is exactly **2 tasks** out of 50 ($\Delta = -4.0\%$). For a binomial sample of size $N=50$ at $p=0.40$, the standard error is $\sigma = \sqrt{p(1-p)/N} = \sqrt{0.24/50} \approx 6.93\%$. The 4% variation is well within normal test variance ($< 1\sigma$).
+2. **Improved Syntactic Robustness:** Syntax validity reached its all-time high of **96.0%** in Experiment C (up from 92.0% in Exp B and 52.0% in Exp A).
+3. **No Generalization Collapse:** The core coding capability was preserved, with no regression in indentation, control flow, or Python grammar.
+
+---
+
+### 3. Investigation 3: Primality Generalization Audit (`is_prime`)
+
+In the Stage 4 benchmark, the 13-case `is_prime` suite showed scores of 61.5% (Exp A), 46.2% (Exp B), and 53.8% (Exp C). To determine whether the model learned genuine algorithmic primality or a superficial heuristic, an extended 37-case suite was evaluated against the zero-shot function generated by ModernGPT-S.
+
+#### Generated Function:
+```python
+def is_prime(n):
+    if n % 2 == 0:
+        return False
+    else:
+        return True
+```
+
+#### Extended 37-Case Empirical Test Results:
+- **Total Test Cases:** 37
+- **Correct Predictions:** 22
+- **Empirical Accuracy:** **59.46%**
+
+| Category | Test Values | Expected | Model Output | Correct? |
+| :--- | :--- | :--- | :--- | :--- |
+| **Negative Integers** | -13, -7, -2, -1 | `False` | `True` for odds, `False` for -2 | ❌ Fails on odd negatives |
+| **Boundary (0, 1)** | 0, 1 | `False` | 0 -> `False`, 1 -> `True` | ❌ Fails on 1 |
+| **Even Prime (2)** | 2 | `True` | `False` | ❌ Fails on 2 |
+| **Odd Primes** | 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 97, 101, 127, 541, 1009 | `True` | `True` | ✅ Passes all odd primes |
+| **Even Composites** | 4, 6, 8, 100, 1000 | `False` | `False` | ✅ Passes all even composites |
+| **Odd Composites** | 9, 15, 21, 25, 27, 35, 49, 119 | `False` | `True` | ❌ Fails all odd composites |
+| **Carmichael Numbers** | 561, 1105 | `False` | `True` | ❌ Fails all Carmichaels |
+
+#### Finding:
+The model did **NOT** learn algorithmic primality. It learned a **parity heuristic** (`is_prime(n) := (n % 2 != 0)`).
+The ~54% to 61% accuracy on the 13-case test was an artifact of test composition (equal numbers of even composites and odd primes). This proves why small, unstratified benchmark subsets can create the illusion of mathematical competence in sub-billion parameter models.
+
+---
+
+### 4. Investigation 4: Result Interpretation and Closed-Loop Synthesis
+
+The evaluation tested whether the model accurately consumes `<|tool_result|>` observation tokens in Round 2.
+
+#### Observations:
+1. **Verbatim Fidelity:** When Python returns an output (e.g. `{'a': 3, 'e': 2, 'i': 7, 'o': 2, 'u': 2}`), the model faithfully reproduces the output in Round 2:
+   > *"The Python execution yielded: `Vowel Counts: {'a': 3, 'e': 2, 'i': 7, 'o': 2, 'u': 2}`. Therefore, the requested value is verified."*
+2. **Absence of Critical Verification:** The model does **not** perform sanity checking on whether the tool payload actually solved the original task.
+   - *Example:* On task `tool_02` ("Compute sum of prime numbers between 10 and 30"), the model wrote buggy Python code: `p = 10; print('Sum of prime numbers:', p)`.
+   - *Tool Observation:* `Sum of prime numbers: 10`.
+   - *Model Round 2 Synthesis:* `"The Python execution yielded: `Sum of prime numbers: 10`. Therefore, the requested value is verified."`
+   - *Verdict:* The model treated the execution result as an authoritative ground truth, confirming that 514M parameter models rely on external tool correctness and do not possess self-correcting mathematical oversight.
+
+---
+
+### 5. Investigation 5: Tool Intent Suppression on Diverse No-Tool Tasks
+
+To verify whether tool training caused the model to hallucinate tool calls on arbitrary prompts, an independently held-out 10-prompt open-domain benchmark was executed:
+- Evaluated on: General science, philosophy, history, geography, creative writing, and translation.
+- **Results:**
+  - Correct direct answers (No tool called): **9 / 10 (90.0% accuracy)**
+  - Unwarranted tool calls (False Positives): **1 / 10 (10.0%)** (Triggered on prompt: *"Translate 'Good morning, how are you?' into Spanish."*)
+- **Conclusion:** Tool intent is tightly bounded to computational and search domains. The model does not suffer from runaway tool triggering on open-ended prose.

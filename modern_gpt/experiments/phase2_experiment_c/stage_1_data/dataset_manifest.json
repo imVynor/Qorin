@@ -1,0 +1,39 @@
+{
+  "dataset_name": "modern_gpt_experiment_c_v1.0",
+  "release_version": "1.0.0-experiment-c",
+  "total_records": 4170,
+  "train_records": 3962,
+  "val_records": 208,
+  "total_conversation_tokens": 1884402,
+  "total_assistant_tokens": 717510,
+  "category_distribution": {
+    "multistep_and_error_recovery": {
+      "records": 800,
+      "conv_tokens": 447727,
+      "asst_tokens": 113529
+    },
+    "tool_intent_and_no_tool_controls": {
+      "records": 1100,
+      "conv_tokens": 232732,
+      "asst_tokens": 35635
+    },
+    "authentic_tool_execution": {
+      "records": 1580,
+      "conv_tokens": 596019,
+      "asst_tokens": 173097
+    },
+    "general_and_coding_retention": {
+      "records": 690,
+      "conv_tokens": 607924,
+      "asst_tokens": 395249
+    }
+  },
+  "train_sha256": "0db77dab91cc04dd2d4bea6d6d9036ab081a2fbd0f31af0e3e5654f41d8150dc",
+  "val_sha256": "54255a28adfb35580ca9d17a7ba1f22a1a03ebe094333c6c1d553762ebb86727",
+  "tool_inventory": [
+    "python",
+    "web_research"
+  ],
+  "prompt_isolation_verified": true,
+  "notes": "Strictly purged all overlaps with protected test split. 100% zero-leakage guarantee."
+}

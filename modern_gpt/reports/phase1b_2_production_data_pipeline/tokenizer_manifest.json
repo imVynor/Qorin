@@ -1,0 +1,70 @@
+{
+  "name": "bpe_32k_production",
+  "version": "1.0.0",
+  "vocab_size": 32768,
+  "fingerprint": "3559c7435e1d9330",
+  "training_date": "2026-11-11",
+  "training_source": "modern_gpt/artifacts/corpus_100m/train_documents.jsonl (docs 0-24999)",
+  "special_tokens": {
+    "<|pad|>": {
+      "id": 0,
+      "role": "boundary",
+      "loss_mask": 0
+    },
+    "<|unk|>": {
+      "id": 1,
+      "role": "boundary",
+      "loss_mask": 0
+    },
+    "<|bos|>": {
+      "id": 2,
+      "role": "boundary",
+      "loss_mask": 0
+    },
+    "<|eos|>": {
+      "id": 3,
+      "role": "boundary",
+      "loss_mask": 1
+    },
+    "<|im_start|>": {
+      "id": 4,
+      "role": "control",
+      "loss_mask": 1
+    },
+    "<|im_end|>": {
+      "id": 5,
+      "role": "control",
+      "loss_mask": 1
+    },
+    "<|tool_call|>": {
+      "id": 6,
+      "role": "control",
+      "loss_mask": 1
+    },
+    "<|tool_result|>": {
+      "id": 7,
+      "role": "control",
+      "loss_mask": 0
+    },
+    "<|tool_error|>": {
+      "id": 8,
+      "role": "control",
+      "loss_mask": 0
+    },
+    "<|endoftext|>": {
+      "id": 9,
+      "role": "boundary",
+      "loss_mask": 1
+    }
+  },
+  "artifacts": {
+    "tokenizer.json": {
+      "bytes": 2326260,
+      "sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59"
+    },
+    "tokenizer_config.json": {
+      "bytes": 296,
+      "sha256": "b803c75253c44fd9a0745e83df72e9830335b9535c4d3fefc74f3381cb5e45ac"
+    }
+  }
+}

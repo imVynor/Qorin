@@ -1,0 +1,11 @@
+{
+  "total_prompts": 200,
+  "empty_rate_pct": 0.0,
+  "echo_rate_pct": 1.0,
+  "mean_word_count": 65.5,
+  "distinct_1": 0.5067,
+  "distinct_2": 0.6279,
+  "distinct_3": 0.6676,
+  "repetition_4_rate": 0.2951,
+  "elapsed_sec": 391.6
+}

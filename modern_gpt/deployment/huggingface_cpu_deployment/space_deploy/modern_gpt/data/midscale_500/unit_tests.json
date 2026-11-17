@@ -1,0 +1,6437 @@
+{
+  "python_tests": {
+    "py_01_01_add": {
+      "function_name": "add",
+      "tests": [
+        [
+          "add",
+          [
+            2,
+            3
+          ],
+          5
+        ],
+        [
+          "add",
+          [
+            0,
+            0
+          ],
+          0
+        ],
+        [
+          "add",
+          [
+            -4,
+            7
+          ],
+          3
+        ],
+        [
+          "add",
+          [
+            -5,
+            -5
+          ],
+          -10
+        ]
+      ]
+    },
+    "py_01_02_subtract": {
+      "function_name": "subtract",
+      "tests": [
+        [
+          "subtract",
+          [
+            10,
+            4
+          ],
+          6
+        ],
+        [
+          "subtract",
+          [
+            0,
+            5
+          ],
+          -5
+        ],
+        [
+          "subtract",
+          [
+            -3,
+            -3
+          ],
+          0
+        ]
+      ]
+    },
+    "py_01_03_multiply": {
+      "function_name": "multiply",
+      "tests": [
+        [
+          "multiply",
+          [
+            4,
+            5
+          ],
+          20
+        ],
+        [
+          "multiply",
+          [
+            0,
+            100
+          ],
+          0
+        ],
+        [
+          "multiply",
+          [
+            -3,
+            6
+          ],
+          -18
+        ],
+        [
+          "multiply",
+          [
+            -2,
+            -4
+          ],
+          8
+        ]
+      ]
+    },
+    "py_01_04_int_divide": {
+      "function_name": "int_divide",
+      "tests": [
+        [
+          "int_divide",
+          [
+            14,
+            3
+          ],
+          4
+        ],
+        [
+          "int_divide",
+          [
+            9,
+            3
+          ],
+          3
+        ],
+        [
+          "int_divide",
+          [
+            -10,
+            3
+          ],
+          -4
+        ]
+      ]
+    },
+    "py_01_05_modulo": {
+      "function_name": "modulo",
+      "tests": [
+        [
+          "modulo",
+          [
+            14,
+            3
+          ],
+          2
+        ],
+        [
+          "modulo",
+          [
+            10,
+            5
+          ],
+          0
+        ],
+        [
+          "modulo",
+          [
+            7,
+            4
+          ],
+          3
+        ]
+      ]
+    },
+    "py_01_06_negate": {
+      "function_name": "negate",
+      "tests": [
+        [
+          "negate",
+          10,
+          -10
+        ],
+        [
+          "negate",
+          0,
+          0
+        ],
+        [
+          "negate",
+          -25,
+          25
+        ]
+      ]
+    },
+    "py_01_07_double": {
+      "function_name": "double",
+      "tests": [
+        [
+          "double",
+          8,
+          16
+        ],
+        [
+          "double",
+          0,
+          0
+        ],
+        [
+          "double",
+          -7,
+          -14
+        ]
+      ]
+    },
+    "py_01_08_triple": {
+      "function_name": "triple",
+      "tests": [
+        [
+          "triple",
+          4,
+          12
+        ],
+        [
+          "triple",
+          0,
+          0
+        ],
+        [
+          "triple",
+          -5,
+          -15
+        ]
+      ]
+    },
+    "py_02_01_square": {
+      "function_name": "square",
+      "tests": [
+        [
+          "square",
+          5,
+          25
+        ],
+        [
+          "square",
+          0,
+          0
+        ],
+        [
+          "square",
+          -6,
+          36
+        ]
+      ]
+    },
+    "py_02_02_cube": {
+      "function_name": "cube",
+      "tests": [
+        [
+          "cube",
+          3,
+          27
+        ],
+        [
+          "cube",
+          0,
+          0
+        ],
+        [
+          "cube",
+          -3,
+          -27
+        ]
+      ]
+    },
+    "py_02_03_power": {
+      "function_name": "power",
+      "tests": [
+        [
+          "power",
+          [
+            2,
+            3
+          ],
+          8
+        ],
+        [
+          "power",
+          [
+            5,
+            0
+          ],
+          1
+        ],
+        [
+          "power",
+          [
+            10,
+            2
+          ],
+          100
+        ]
+      ]
+    },
+    "py_02_04_power_four": {
+      "function_name": "power_four",
+      "tests": [
+        [
+          "power_four",
+          2,
+          16
+        ],
+        [
+          "power_four",
+          1,
+          1
+        ],
+        [
+          "power_four",
+          -2,
+          16
+        ]
+      ]
+    },
+    "py_02_05_is_square_zero": {
+      "function_name": "is_square_zero",
+      "tests": [
+        [
+          "is_square_zero",
+          0,
+          true
+        ],
+        [
+          "is_square_zero",
+          4,
+          false
+        ],
+        [
+          "is_square_zero",
+          -2,
+          false
+        ]
+      ]
+    },
+    "py_02_06_square_add": {
+      "function_name": "square_add",
+      "tests": [
+        [
+          "square_add",
+          [
+            3,
+            4
+          ],
+          13
+        ],
+        [
+          "square_add",
+          [
+            0,
+            5
+          ],
+          5
+        ],
+        [
+          "square_add",
+          [
+            -2,
+            6
+          ],
+          10
+        ]
+      ]
+    },
+    "py_02_07_cube_sub": {
+      "function_name": "cube_sub",
+      "tests": [
+        [
+          "cube_sub",
+          [
+            2,
+            3
+          ],
+          5
+        ],
+        [
+          "cube_sub",
+          [
+            0,
+            4
+          ],
+          -4
+        ],
+        [
+          "cube_sub",
+          [
+            -1,
+            2
+          ],
+          -3
+        ]
+      ]
+    },
+    "py_02_08_half_val": {
+      "function_name": "half_val",
+      "tests": [
+        [
+          "half_val",
+          10,
+          5.0
+        ],
+        [
+          "half_val",
+          0,
+          0.0
+        ],
+        [
+          "half_val",
+          -6,
+          -3.0
+        ]
+      ]
+    },
+    "py_03_01_is_even": {
+      "function_name": "is_even",
+      "tests": [
+        [
+          "is_even",
+          4,
+          true
+        ],
+        [
+          "is_even",
+          7,
+          false
+        ],
+        [
+          "is_even",
+          0,
+          true
+        ],
+        [
+          "is_even",
+          -2,
+          true
+        ],
+        [
+          "is_even",
+          -5,
+          false
+        ]
+      ]
+    },
+    "py_03_02_is_odd": {
+      "function_name": "is_odd",
+      "tests": [
+        [
+          "is_odd",
+          3,
+          true
+        ],
+        [
+          "is_odd",
+          8,
+          false
+        ],
+        [
+          "is_odd",
+          0,
+          false
+        ],
+        [
+          "is_odd",
+          -3,
+          true
+        ]
+      ]
+    },
+    "py_03_03_is_positive": {
+      "function_name": "is_positive",
+      "tests": [
+        [
+          "is_positive",
+          5,
+          true
+        ],
+        [
+          "is_positive",
+          0,
+          false
+        ],
+        [
+          "is_positive",
+          -4,
+          false
+        ]
+      ]
+    },
+    "py_03_04_is_negative": {
+      "function_name": "is_negative",
+      "tests": [
+        [
+          "is_negative",
+          -5,
+          true
+        ],
+        [
+          "is_negative",
+          0,
+          false
+        ],
+        [
+          "is_negative",
+          3,
+          false
+        ]
+      ]
+    },
+    "py_03_05_is_zero": {
+      "function_name": "is_zero",
+      "tests": [
+        [
+          "is_zero",
+          0,
+          true
+        ],
+        [
+          "is_zero",
+          1,
+          false
+        ],
+        [
+          "is_zero",
+          -1,
+          false
+        ]
+      ]
+    },
+    "py_03_06_is_non_zero": {
+      "function_name": "is_non_zero",
+      "tests": [
+        [
+          "is_non_zero",
+          5,
+          true
+        ],
+        [
+          "is_non_zero",
+          0,
+          false
+        ],
+        [
+          "is_non_zero",
+          -8,
+          true
+        ]
+      ]
+    },
+    "py_03_07_is_equal_to": {
+      "function_name": "is_equal_to",
+      "tests": [
+        [
+          "is_equal_to",
+          [
+            5,
+            5
+          ],
+          true
+        ],
+        [
+          "is_equal_to",
+          [
+            4,
+            7
+          ],
+          false
+        ],
+        [
+          "is_equal_to",
+          [
+            -2,
+            -2
+          ],
+          true
+        ]
+      ]
+    },
+    "py_03_08_is_strictly_between": {
+      "function_name": "is_strictly_between",
+      "tests": [
+        [
+          "is_strictly_between",
+          [
+            5,
+            1,
+            10
+          ],
+          true
+        ],
+        [
+          "is_strictly_between",
+          [
+            1,
+            1,
+            10
+          ],
+          false
+        ],
+        [
+          "is_strictly_between",
+          [
+            12,
+            1,
+            10
+          ],
+          false
+        ]
+      ]
+    },
+    "py_04_01_min_two": {
+      "function_name": "min_two",
+      "tests": [
+        [
+          "min_two",
+          [
+            3,
+            7
+          ],
+          3
+        ],
+        [
+          "min_two",
+          [
+            9,
+            2
+          ],
+          2
+        ],
+        [
+          "min_two",
+          [
+            -4,
+            -1
+          ],
+          -4
+        ]
+      ]
+    },
+    "py_04_02_max_two": {
+      "function_name": "max_two",
+      "tests": [
+        [
+          "max_two",
+          [
+            3,
+            7
+          ],
+          7
+        ],
+        [
+          "max_two",
+          [
+            9,
+            2
+          ],
+          9
+        ],
+        [
+          "max_two",
+          [
+            -4,
+            -1
+          ],
+          -1
+        ]
+      ]
+    },
+    "py_04_03_min_three": {
+      "function_name": "min_three",
+      "tests": [
+        [
+          "min_three",
+          [
+            5,
+            2,
+            8
+          ],
+          2
+        ],
+        [
+          "min_three",
+          [
+            1,
+            9,
+            3
+          ],
+          1
+        ],
+        [
+          "min_three",
+          [
+            -1,
+            -5,
+            0
+          ],
+          -5
+        ]
+      ]
+    },
+    "py_04_04_max_three": {
+      "function_name": "max_three",
+      "tests": [
+        [
+          "max_three",
+          [
+            5,
+            2,
+            8
+          ],
+          8
+        ],
+        [
+          "max_three",
+          [
+            1,
+            9,
+            3
+          ],
+          9
+        ],
+        [
+          "max_three",
+          [
+            -1,
+            -5,
+            0
+          ],
+          0
+        ]
+      ]
+    },
+    "py_04_05_clamp": {
+      "function_name": "clamp",
+      "tests": [
+        [
+          "clamp",
+          [
+            5,
+            0,
+            10
+          ],
+          5
+        ],
+        [
+          "clamp",
+          [
+            -3,
+            0,
+            10
+          ],
+          0
+        ],
+        [
+          "clamp",
+          [
+            15,
+            0,
+            10
+          ],
+          10
+        ]
+      ]
+    },
+    "py_04_06_is_within_bounds": {
+      "function_name": "is_within_bounds",
+      "tests": [
+        [
+          "is_within_bounds",
+          [
+            5,
+            0,
+            10
+          ],
+          true
+        ],
+        [
+          "is_within_bounds",
+          [
+            0,
+            0,
+            10
+          ],
+          true
+        ],
+        [
+          "is_within_bounds",
+          [
+            -1,
+            0,
+            10
+          ],
+          false
+        ]
+      ]
+    },
+    "py_04_07_diff_max_min_two": {
+      "function_name": "diff_max_min_two",
+      "tests": [
+        [
+          "diff_max_min_two",
+          [
+            10,
+            4
+          ],
+          6
+        ],
+        [
+          "diff_max_min_two",
+          [
+            3,
+            8
+          ],
+          5
+        ],
+        [
+          "diff_max_min_two",
+          [
+            -2,
+            2
+          ],
+          4
+        ]
+      ]
+    },
+    "py_04_08_abs_diff": {
+      "function_name": "abs_diff",
+      "tests": [
+        [
+          "abs_diff",
+          [
+            5,
+            9
+          ],
+          4
+        ],
+        [
+          "abs_diff",
+          [
+            9,
+            5
+          ],
+          4
+        ],
+        [
+          "abs_diff",
+          [
+            -3,
+            3
+          ],
+          6
+        ]
+      ]
+    },
+    "py_05_01_abs_val": {
+      "function_name": "abs_val",
+      "tests": [
+        [
+          "abs_val",
+          10,
+          10
+        ],
+        [
+          "abs_val",
+          0,
+          0
+        ],
+        [
+          "abs_val",
+          -15,
+          15
+        ]
+      ]
+    },
+    "py_05_02_sign_num": {
+      "function_name": "sign_num",
+      "tests": [
+        [
+          "sign_num",
+          42,
+          1
+        ],
+        [
+          "sign_num",
+          -12,
+          -1
+        ],
+        [
+          "sign_num",
+          0,
+          0
+        ]
+      ]
+    },
+    "py_05_03_negate_bool": {
+      "function_name": "negate_bool",
+      "tests": [
+        [
+          "negate_bool",
+          true,
+          false
+        ],
+        [
+          "negate_bool",
+          false,
+          true
+        ]
+      ]
+    },
+    "py_05_04_both_true": {
+      "function_name": "both_true",
+      "tests": [
+        [
+          "both_true",
+          [
+            true,
+            true
+          ],
+          true
+        ],
+        [
+          "both_true",
+          [
+            true,
+            false
+          ],
+          false
+        ],
+        [
+          "both_true",
+          [
+            false,
+            false
+          ],
+          false
+        ]
+      ]
+    },
+    "py_05_05_either_true": {
+      "function_name": "either_true",
+      "tests": [
+        [
+          "either_true",
+          [
+            true,
+            false
+          ],
+          true
+        ],
+        [
+          "either_true",
+          [
+            false,
+            false
+          ],
+          false
+        ],
+        [
+          "either_true",
+          [
+            true,
+            true
+          ],
+          true
+        ]
+      ]
+    },
+    "py_05_06_neither_true": {
+      "function_name": "neither_true",
+      "tests": [
+        [
+          "neither_true",
+          [
+            false,
+            false
+          ],
+          true
+        ],
+        [
+          "neither_true",
+          [
+            true,
+            false
+          ],
+          false
+        ]
+      ]
+    },
+    "py_05_07_xor_bool": {
+      "function_name": "xor_bool",
+      "tests": [
+        [
+          "xor_bool",
+          [
+            true,
+            false
+          ],
+          true
+        ],
+        [
+          "xor_bool",
+          [
+            false,
+            true
+          ],
+          true
+        ],
+        [
+          "xor_bool",
+          [
+            true,
+            true
+          ],
+          false
+        ],
+        [
+          "xor_bool",
+          [
+            false,
+            false
+          ],
+          false
+        ]
+      ]
+    },
+    "py_05_08_same_sign": {
+      "function_name": "same_sign",
+      "tests": [
+        [
+          "same_sign",
+          [
+            3,
+            5
+          ],
+          true
+        ],
+        [
+          "same_sign",
+          [
+            -2,
+            -7
+          ],
+          true
+        ],
+        [
+          "same_sign",
+          [
+            -2,
+            4
+          ],
+          false
+        ],
+        [
+          "same_sign",
+          [
+            0,
+            5
+          ],
+          false
+        ]
+      ]
+    },
+    "py_06_01_string_len": {
+      "function_name": "string_len",
+      "tests": [
+        [
+          "string_len",
+          "hello",
+          5
+        ],
+        [
+          "string_len",
+          "",
+          0
+        ],
+        [
+          "string_len",
+          "abc 123",
+          7
+        ]
+      ]
+    },
+    "py_06_02_is_empty_str": {
+      "function_name": "is_empty_str",
+      "tests": [
+        [
+          "is_empty_str",
+          "",
+          true
+        ],
+        [
+          "is_empty_str",
+          "a",
+          false
+        ],
+        [
+          "is_empty_str",
+          " ",
+          false
+        ]
+      ]
+    },
+    "py_06_03_is_non_empty_str": {
+      "function_name": "is_non_empty_str",
+      "tests": [
+        [
+          "is_non_empty_str",
+          "hello",
+          true
+        ],
+        [
+          "is_non_empty_str",
+          "",
+          false
+        ]
+      ]
+    },
+    "py_06_04_starts_with_char": {
+      "function_name": "starts_with_char",
+      "tests": [
+        [
+          "starts_with_char",
+          [
+            "apple",
+            "a"
+          ],
+          true
+        ],
+        [
+          "starts_with_char",
+          [
+            "apple",
+            "b"
+          ],
+          false
+        ],
+        [
+          "starts_with_char",
+          [
+            "",
+            "a"
+          ],
+          false
+        ]
+      ]
+    },
+    "py_06_05_ends_with_char": {
+      "function_name": "ends_with_char",
+      "tests": [
+        [
+          "ends_with_char",
+          [
+            "python",
+            "n"
+          ],
+          true
+        ],
+        [
+          "ends_with_char",
+          [
+            "python",
+            "x"
+          ],
+          false
+        ],
+        [
+          "ends_with_char",
+          [
+            "",
+            "n"
+          ],
+          false
+        ]
+      ]
+    },
+    "py_06_06_contains_char": {
+      "function_name": "contains_char",
+      "tests": [
+        [
+          "contains_char",
+          [
+            "cat",
+            "a"
+          ],
+          true
+        ],
+        [
+          "contains_char",
+          [
+            "cat",
+            "z"
+          ],
+          false
+        ],
+        [
+          "contains_char",
+          [
+            "",
+            "a"
+          ],
+          false
+        ]
+      ]
+    },
+    "py_06_07_count_char": {
+      "function_name": "count_char",
+      "tests": [
+        [
+          "count_char",
+          [
+            "banana",
+            "a"
+          ],
+          3
+        ],
+        [
+          "count_char",
+          [
+            "banana",
+            "b"
+          ],
+          1
+        ],
+        [
+          "count_char",
+          [
+            "banana",
+            "z"
+          ],
+          0
+        ]
+      ]
+    },
+    "py_06_08_first_char": {
+      "function_name": "first_char",
+      "tests": [
+        [
+          "first_char",
+          "hello",
+          "h"
+        ],
+        [
+          "first_char",
+          "world",
+          "w"
+        ],
+        [
+          "first_char",
+          "a",
+          "a"
+        ]
+      ]
+    },
+    "py_07_01_concat_two": {
+      "function_name": "concat_two",
+      "tests": [
+        [
+          "concat_two",
+          [
+            "foo",
+            "bar"
+          ],
+          "foobar"
+        ],
+        [
+          "concat_two",
+          [
+            "",
+            "test"
+          ],
+          "test"
+        ],
+        [
+          "concat_two",
+          [
+            "a",
+            ""
+          ],
+          "a"
+        ]
+      ]
+    },
+    "py_07_02_concat_three": {
+      "function_name": "concat_three",
+      "tests": [
+        [
+          "concat_three",
+          [
+            "x",
+            "y",
+            "z"
+          ],
+          "xyz"
+        ],
+        [
+          "concat_three",
+          [
+            "a",
+            "-",
+            "b"
+          ],
+          "a-b"
+        ]
+      ]
+    },
+    "py_07_03_repeat_str": {
+      "function_name": "repeat_str",
+      "tests": [
+        [
+          "repeat_str",
+          [
+            "ha",
+            3
+          ],
+          "hahaha"
+        ],
+        [
+          "repeat_str",
+          [
+            "x",
+            0
+          ],
+          ""
+        ],
+        [
+          "repeat_str",
+          [
+            "abc",
+            1
+          ],
+          "abc"
+        ]
+      ]
+    },
+    "py_07_04_wrap_brackets": {
+      "function_name": "wrap_brackets",
+      "tests": [
+        [
+          "wrap_brackets",
+          "item",
+          "[item]"
+        ],
+        [
+          "wrap_brackets",
+          "",
+          "[]"
+        ]
+      ]
+    },
+    "py_07_05_wrap_quotes": {
+      "function_name": "wrap_quotes",
+      "tests": [
+        [
+          "wrap_quotes",
+          "hello",
+          "\"hello\""
+        ],
+        [
+          "wrap_quotes",
+          "",
+          "\"\""
+        ]
+      ]
+    },
+    "py_07_06_prepend_str": {
+      "function_name": "prepend_str",
+      "tests": [
+        [
+          "prepend_str",
+          [
+            "pre_",
+            "fix"
+          ],
+          "pre_fix"
+        ],
+        [
+          "prepend_str",
+          [
+            "",
+            "text"
+          ],
+          "text"
+        ]
+      ]
+    },
+    "py_07_07_append_str": {
+      "function_name": "append_str",
+      "tests": [
+        [
+          "append_str",
+          [
+            "run",
+            "_fast"
+          ],
+          "run_fast"
+        ],
+        [
+          "append_str",
+          [
+            "base",
+            ""
+          ],
+          "base"
+        ]
+      ]
+    },
+    "py_07_08_format_greeting": {
+      "function_name": "format_greeting",
+      "tests": [
+        [
+          "format_greeting",
+          "Alice",
+          "Hello, Alice!"
+        ],
+        [
+          "format_greeting",
+          "Bob",
+          "Hello, Bob!"
+        ]
+      ]
+    },
+    "py_08_01_to_upper": {
+      "function_name": "to_upper",
+      "tests": [
+        [
+          "to_upper",
+          "abc",
+          "ABC"
+        ],
+        [
+          "to_upper",
+          "Hello",
+          "HELLO"
+        ],
+        [
+          "to_upper",
+          "",
+          ""
+        ]
+      ]
+    },
+    "py_08_02_to_lower": {
+      "function_name": "to_lower",
+      "tests": [
+        [
+          "to_lower",
+          "ABC",
+          "abc"
+        ],
+        [
+          "to_lower",
+          "World",
+          "world"
+        ],
+        [
+          "to_lower",
+          "",
+          ""
+        ]
+      ]
+    },
+    "py_08_03_is_upper_char": {
+      "function_name": "is_upper_char",
+      "tests": [
+        [
+          "is_upper_char",
+          "A",
+          true
+        ],
+        [
+          "is_upper_char",
+          "a",
+          false
+        ],
+        [
+          "is_upper_char",
+          "1",
+          false
+        ]
+      ]
+    },
+    "py_08_04_is_lower_char": {
+      "function_name": "is_lower_char",
+      "tests": [
+        [
+          "is_lower_char",
+          "z",
+          true
+        ],
+        [
+          "is_lower_char",
+          "Z",
+          false
+        ],
+        [
+          "is_lower_char",
+          "!",
+          false
+        ]
+      ]
+    },
+    "py_08_05_capitalize_word": {
+      "function_name": "capitalize_word",
+      "tests": [
+        [
+          "capitalize_word",
+          "apple",
+          "Apple"
+        ],
+        [
+          "capitalize_word",
+          "BANANA",
+          "Banana"
+        ]
+      ]
+    },
+    "py_08_06_swap_case_str": {
+      "function_name": "swap_case_str",
+      "tests": [
+        [
+          "swap_case_str",
+          "aBc",
+          "AbC"
+        ],
+        [
+          "swap_case_str",
+          "HELLO",
+          "hello"
+        ]
+      ]
+    },
+    "py_08_07_is_alpha_str": {
+      "function_name": "is_alpha_str",
+      "tests": [
+        [
+          "is_alpha_str",
+          "Python",
+          true
+        ],
+        [
+          "is_alpha_str",
+          "py3",
+          false
+        ],
+        [
+          "is_alpha_str",
+          "",
+          false
+        ]
+      ]
+    },
+    "py_08_08_is_digit_str": {
+      "function_name": "is_digit_str",
+      "tests": [
+        [
+          "is_digit_str",
+          "1234",
+          true
+        ],
+        [
+          "is_digit_str",
+          "12a",
+          false
+        ],
+        [
+          "is_digit_str",
+          "",
+          false
+        ]
+      ]
+    },
+    "py_09_01_first_item": {
+      "function_name": "first_item",
+      "tests": [
+        [
+          "first_item",
+          [
+            10,
+            20,
+            30
+          ],
+          10
+        ],
+        [
+          "first_item",
+          [
+            "a",
+            "b"
+          ],
+          "a"
+        ]
+      ]
+    },
+    "py_09_02_last_item": {
+      "function_name": "last_item",
+      "tests": [
+        [
+          "last_item",
+          [
+            10,
+            20,
+            30
+          ],
+          30
+        ],
+        [
+          "last_item",
+          [
+            "x"
+          ],
+          "x"
+        ]
+      ]
+    },
+    "py_09_03_second_item": {
+      "function_name": "second_item",
+      "tests": [
+        [
+          "second_item",
+          [
+            10,
+            20,
+            30
+          ],
+          20
+        ],
+        [
+          "second_item",
+          [
+            1,
+            2
+          ],
+          2
+        ]
+      ]
+    },
+    "py_09_04_item_at_index": {
+      "function_name": "item_at_index",
+      "tests": [
+        [
+          "item_at_index",
+          [
+            [
+              10,
+              20,
+              30
+            ],
+            2
+          ],
+          30
+        ],
+        [
+          "item_at_index",
+          [
+            [
+              5,
+              6,
+              7
+            ],
+            0
+          ],
+          5
+        ]
+      ]
+    },
+    "py_09_05_get_first_two": {
+      "function_name": "get_first_two",
+      "tests": [
+        [
+          "get_first_two",
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "get_first_two",
+          [
+            5
+          ],
+          [
+            5
+          ]
+        ]
+      ]
+    },
+    "py_09_06_get_last_two": {
+      "function_name": "get_last_two",
+      "tests": [
+        [
+          "get_last_two",
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          "get_last_two",
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            8
+          ]
+        ]
+      ]
+    },
+    "py_09_07_swap_two_items": {
+      "function_name": "swap_two_items",
+      "tests": [
+        [
+          "swap_two_items",
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          "swap_two_items",
+          [
+            "a",
+            "b"
+          ],
+          [
+            "b",
+            "a"
+          ]
+        ]
+      ]
+    },
+    "py_09_08_penultimate_item": {
+      "function_name": "penultimate_item",
+      "tests": [
+        [
+          "penultimate_item",
+          [
+            10,
+            20,
+            30
+          ],
+          20
+        ],
+        [
+          "penultimate_item",
+          [
+            1,
+            2
+          ],
+          1
+        ]
+      ]
+    },
+    "py_10_01_list_len": {
+      "function_name": "list_len",
+      "tests": [
+        [
+          "list_len",
+          [
+            1,
+            2,
+            3
+          ],
+          3
+        ],
+        [
+          "list_len",
+          [],
+          0
+        ],
+        [
+          "list_len",
+          [
+            9
+          ],
+          1
+        ]
+      ]
+    },
+    "py_10_02_is_list_empty": {
+      "function_name": "is_list_empty",
+      "tests": [
+        [
+          "is_list_empty",
+          [],
+          true
+        ],
+        [
+          "is_list_empty",
+          [
+            1
+          ],
+          false
+        ]
+      ]
+    },
+    "py_10_03_is_list_non_empty": {
+      "function_name": "is_list_non_empty",
+      "tests": [
+        [
+          "is_list_non_empty",
+          [
+            1,
+            2
+          ],
+          true
+        ],
+        [
+          "is_list_non_empty",
+          [],
+          false
+        ]
+      ]
+    },
+    "py_10_04_sum_two_items": {
+      "function_name": "sum_two_items",
+      "tests": [
+        [
+          "sum_two_items",
+          [
+            3,
+            7
+          ],
+          10
+        ],
+        [
+          "sum_two_items",
+          [
+            -2,
+            5
+          ],
+          3
+        ]
+      ]
+    },
+    "py_10_05_sum_three_items": {
+      "function_name": "sum_three_items",
+      "tests": [
+        [
+          "sum_three_items",
+          [
+            1,
+            2,
+            3
+          ],
+          6
+        ],
+        [
+          "sum_three_items",
+          [
+            -1,
+            0,
+            1
+          ],
+          0
+        ]
+      ]
+    },
+    "py_10_06_sum_list": {
+      "function_name": "sum_list",
+      "tests": [
+        [
+          "sum_list",
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          10
+        ],
+        [
+          "sum_list",
+          [],
+          0
+        ],
+        [
+          "sum_list",
+          [
+            -5,
+            5
+          ],
+          0
+        ]
+      ]
+    },
+    "py_10_07_count_in_list": {
+      "function_name": "count_in_list",
+      "tests": [
+        [
+          "count_in_list",
+          [
+            [
+              1,
+              2,
+              2,
+              3
+            ],
+            2
+          ],
+          2
+        ],
+        [
+          "count_in_list",
+          [
+            [
+              1,
+              2,
+              3
+            ],
+            9
+          ],
+          0
+        ],
+        [
+          "count_in_list",
+          [
+            [],
+            1
+          ],
+          0
+        ]
+      ]
+    },
+    "py_10_08_has_single_item": {
+      "function_name": "has_single_item",
+      "tests": [
+        [
+          "has_single_item",
+          [
+            5
+          ],
+          true
+        ],
+        [
+          "has_single_item",
+          [],
+          false
+        ],
+        [
+          "has_single_item",
+          [
+            1,
+            2
+          ],
+          false
+        ]
+      ]
+    },
+    "py_11_01_list_min": {
+      "function_name": "list_min",
+      "tests": [
+        [
+          "list_min",
+          [
+            3,
+            1,
+            4
+          ],
+          1
+        ],
+        [
+          "list_min",
+          [
+            -5,
+            2,
+            0
+          ],
+          -5
+        ],
+        [
+          "list_min",
+          [
+            9
+          ],
+          9
+        ]
+      ]
+    },
+    "py_11_02_list_max": {
+      "function_name": "list_max",
+      "tests": [
+        [
+          "list_max",
+          [
+            3,
+            1,
+            4
+          ],
+          4
+        ],
+        [
+          "list_max",
+          [
+            -5,
+            -2,
+            -9
+          ],
+          -2
+        ],
+        [
+          "list_max",
+          [
+            7
+          ],
+          7
+        ]
+      ]
+    },
+    "py_11_03_list_span": {
+      "function_name": "list_span",
+      "tests": [
+        [
+          "list_span",
+          [
+            1,
+            5,
+            10
+          ],
+          9
+        ],
+        [
+          "list_span",
+          [
+            4,
+            4
+          ],
+          0
+        ],
+        [
+          "list_span",
+          [
+            -2,
+            6
+          ],
+          8
+        ]
+      ]
+    },
+    "py_11_04_min_index_two": {
+      "function_name": "min_index_two",
+      "tests": [
+        [
+          "min_index_two",
+          [
+            3,
+            7
+          ],
+          0
+        ],
+        [
+          "min_index_two",
+          [
+            8,
+            2
+          ],
+          1
+        ],
+        [
+          "min_index_two",
+          [
+            4,
+            4
+          ],
+          0
+        ]
+      ]
+    },
+    "py_11_05_max_index_two": {
+      "function_name": "max_index_two",
+      "tests": [
+        [
+          "max_index_two",
+          [
+            3,
+            7
+          ],
+          1
+        ],
+        [
+          "max_index_two",
+          [
+            8,
+            2
+          ],
+          0
+        ],
+        [
+          "max_index_two",
+          [
+            4,
+            4
+          ],
+          0
+        ]
+      ]
+    },
+    "py_11_06_is_first_min": {
+      "function_name": "is_first_min",
+      "tests": [
+        [
+          "is_first_min",
+          [
+            1,
+            2,
+            3
+          ],
+          true
+        ],
+        [
+          "is_first_min",
+          [
+            3,
+            1,
+            2
+          ],
+          false
+        ]
+      ]
+    },
+    "py_11_07_is_last_max": {
+      "function_name": "is_last_max",
+      "tests": [
+        [
+          "is_last_max",
+          [
+            1,
+            2,
+            5
+          ],
+          true
+        ],
+        [
+          "is_last_max",
+          [
+            5,
+            2,
+            1
+          ],
+          false
+        ]
+      ]
+    },
+    "py_11_08_abs_max": {
+      "function_name": "abs_max",
+      "tests": [
+        [
+          "abs_max",
+          [
+            1,
+            -7,
+            3
+          ],
+          7
+        ],
+        [
+          "abs_max",
+          [
+            0,
+            4
+          ],
+          4
+        ],
+        [
+          "abs_max",
+          [
+            -10,
+            10
+          ],
+          10
+        ]
+      ]
+    },
+    "py_12_01_append_item": {
+      "function_name": "append_item",
+      "tests": [
+        [
+          "append_item",
+          [
+            [
+              1,
+              2
+            ],
+            3
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "append_item",
+          [
+            [],
+            "a"
+          ],
+          [
+            "a"
+          ]
+        ]
+      ]
+    },
+    "py_12_02_prepend_item": {
+      "function_name": "prepend_item",
+      "tests": [
+        [
+          "prepend_item",
+          [
+            [
+              2,
+              3
+            ],
+            1
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ],
+        [
+          "prepend_item",
+          [
+            [],
+            9
+          ],
+          [
+            9
+          ]
+        ]
+      ]
+    },
+    "py_12_03_reverse_two": {
+      "function_name": "reverse_two",
+      "tests": [
+        [
+          "reverse_two",
+          [
+            4,
+            8
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        [
+          "reverse_two",
+          [
+            "x",
+            "y"
+          ],
+          [
+            "y",
+            "x"
+          ]
+        ]
+      ]
+    },
+    "py_12_04_reverse_three": {
+      "function_name": "reverse_three",
+      "tests": [
+        [
+          "reverse_three",
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            3,
+            2,
+            1
+          ]
+        ],
+        [
+          "reverse_three",
+          [
+            "a",
+            "b",
+            "c"
+          ],
+          [
+            "c",
+            "b",
+            "a"
+          ]
+        ]
+      ]
+    },
+    "py_12_05_drop_first_item": {
+      "function_name": "drop_first_item",
+      "tests": [
+        [
+          "drop_first_item",
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        [
+          "drop_first_item",
+          [
+            5
+          ],
+          []
+        ]
+      ]
+    },
+    "py_12_06_drop_last_item": {
+      "function_name": "drop_last_item",
+      "tests": [
+        [
+          "drop_last_item",
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "drop_last_item",
+          [
+            7
+          ],
+          []
+        ]
+      ]
+    },
+    "py_12_07_double_items_two": {
+      "function_name": "double_items_two",
+      "tests": [
+        [
+          "double_items_two",
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            10
+          ]
+        ],
+        [
+          "double_items_two",
+          [
+            0,
+            -3
+          ],
+          [
+            0,
+            -6
+          ]
+        ]
+      ]
+    },
+    "py_12_08_repeat_list_twice": {
+      "function_name": "repeat_list_twice",
+      "tests": [
+        [
+          "repeat_list_twice",
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            1,
+            2
+          ]
+        ],
+        [
+          "repeat_list_twice",
+          [],
+          []
+        ]
+      ]
+    },
+    "py_13_01_has_item": {
+      "function_name": "has_item",
+      "tests": [
+        [
+          "has_item",
+          [
+            [
+              1,
+              2,
+              3
+            ],
+            2
+          ],
+          true
+        ],
+        [
+          "has_item",
+          [
+            [
+              1,
+              2,
+              3
+            ],
+            9
+          ],
+          false
+        ],
+        [
+          "has_item",
+          [
+            [],
+            5
+          ],
+          false
+        ]
+      ]
+    },
+    "py_13_02_all_positive": {
+      "function_name": "all_positive",
+      "tests": [
+        [
+          "all_positive",
+          [
+            1,
+            2,
+            3
+          ],
+          true
+        ],
+        [
+          "all_positive",
+          [
+            1,
+            -2,
+            3
+          ],
+          false
+        ],
+        [
+          "all_positive",
+          [],
+          true
+        ]
+      ]
+    },
+    "py_13_03_any_negative": {
+      "function_name": "any_negative",
+      "tests": [
+        [
+          "any_negative",
+          [
+            1,
+            -2,
+            3
+          ],
+          true
+        ],
+        [
+          "any_negative",
+          [
+            1,
+            2,
+            3
+          ],
+          false
+        ],
+        [
+          "any_negative",
+          [],
+          false
+        ]
+      ]
+    },
+    "py_13_04_all_zeros": {
+      "function_name": "all_zeros",
+      "tests": [
+        [
+          "all_zeros",
+          [
+            0,
+            0,
+            0
+          ],
+          true
+        ],
+        [
+          "all_zeros",
+          [
+            0,
+            1
+          ],
+          false
+        ],
+        [
+          "all_zeros",
+          [],
+          false
+        ]
+      ]
+    },
+    "py_13_05_is_len_two": {
+      "function_name": "is_len_two",
+      "tests": [
+        [
+          "is_len_two",
+          [
+            1,
+            2
+          ],
+          true
+        ],
+        [
+          "is_len_two",
+          [
+            1
+          ],
+          false
+        ],
+        [
+          "is_len_two",
+          [
+            1,
+            2,
+            3
+          ],
+          false
+        ]
+      ]
+    },
+    "py_13_06_is_len_three": {
+      "function_name": "is_len_three",
+      "tests": [
+        [
+          "is_len_three",
+          [
+            1,
+            2,
+            3
+          ],
+          true
+        ],
+        [
+          "is_len_three",
+          [
+            1,
+            2
+          ],
+          false
+        ]
+      ]
+    },
+    "py_13_07_first_equals_last": {
+      "function_name": "first_equals_last",
+      "tests": [
+        [
+          "first_equals_last",
+          [
+            1,
+            2,
+            1
+          ],
+          true
+        ],
+        [
+          "first_equals_last",
+          [
+            1,
+            2,
+            3
+          ],
+          false
+        ],
+        [
+          "first_equals_last",
+          [],
+          false
+        ]
+      ]
+    },
+    "py_13_08_are_items_unique_two": {
+      "function_name": "are_items_unique_two",
+      "tests": [
+        [
+          "are_items_unique_two",
+          [
+            1,
+            2
+          ],
+          true
+        ],
+        [
+          "are_items_unique_two",
+          [
+            5,
+            5
+          ],
+          false
+        ]
+      ]
+    },
+    "py_14_01_get_val": {
+      "function_name": "get_val",
+      "tests": [
+        [
+          "get_val",
+          [
+            {
+              "a": 1,
+              "b": 2
+            },
+            "a"
+          ],
+          1
+        ],
+        [
+          "get_val",
+          [
+            {
+              "x": 10
+            },
+            "x"
+          ],
+          10
+        ]
+      ]
+    },
+    "py_14_02_has_key": {
+      "function_name": "has_key",
+      "tests": [
+        [
+          "has_key",
+          [
+            {
+              "a": 1
+            },
+            "a"
+          ],
+          true
+        ],
+        [
+          "has_key",
+          [
+            {
+              "a": 1
+            },
+            "b"
+          ],
+          false
+        ],
+        [
+          "has_key",
+          [
+            {},
+            "a"
+          ],
+          false
+        ]
+      ]
+    },
+    "py_14_03_dict_len": {
+      "function_name": "dict_len",
+      "tests": [
+        [
+          "dict_len",
+          {
+            "a": 1,
+            "b": 2
+          },
+          2
+        ],
+        [
+          "dict_len",
+          {},
+          0
+        ]
+      ]
+    },
+    "py_14_04_is_dict_empty": {
+      "function_name": "is_dict_empty",
+      "tests": [
+        [
+          "is_dict_empty",
+          {},
+          true
+        ],
+        [
+          "is_dict_empty",
+          {
+            "a": 1
+          },
+          false
+        ]
+      ]
+    },
+    "py_14_05_get_val_default": {
+      "function_name": "get_val_default",
+      "tests": [
+        [
+          "get_val_default",
+          [
+            {
+              "a": 1
+            },
+            "a",
+            0
+          ],
+          1
+        ],
+        [
+          "get_val_default",
+          [
+            {
+              "a": 1
+            },
+            "b",
+            99
+          ],
+          99
+        ]
+      ]
+    },
+    "py_14_06_keys_count_two": {
+      "function_name": "keys_count_two",
+      "tests": [
+        [
+          "keys_count_two",
+          {
+            "a": 1,
+            "b": 2
+          },
+          true
+        ],
+        [
+          "keys_count_two",
+          {
+            "a": 1
+          },
+          false
+        ]
+      ]
+    },
+    "py_14_07_key_in_both": {
+      "function_name": "key_in_both",
+      "tests": [
+        [
+          "key_in_both",
+          [
+            {
+              "a": 1
+            },
+            {
+              "a": 2
+            },
+            "a"
+          ],
+          true
+        ],
+        [
+          "key_in_both",
+          [
+            {
+              "a": 1
+            },
+            {
+              "b": 2
+            },
+            "a"
+          ],
+          false
+        ]
+      ]
+    },
+    "py_14_08_first_dict_key": {
+      "function_name": "first_dict_key",
+      "tests": [
+        [
+          "first_dict_key",
+          {
+            "name": "Alice"
+          },
+          "name"
+        ],
+        [
+          "first_dict_key",
+          {
+            "id": 1,
+            "val": 2
+          },
+          "id"
+        ]
+      ]
+    },
+    "py_15_01_extract_keys": {
+      "function_name": "extract_keys",
+      "tests": [
+        [
+          "extract_keys",
+          {
+            "a": 1,
+            "b": 2
+          },
+          [
+            "a",
+            "b"
+          ]
+        ],
+        [
+          "extract_keys",
+          {},
+          []
+        ]
+      ]
+    },
+    "py_15_02_extract_vals": {
+      "function_name": "extract_vals",
+      "tests": [
+        [
+          "extract_vals",
+          {
+            "a": 1,
+            "b": 2
+          },
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "extract_vals",
+          {},
+          []
+        ]
+      ]
+    },
+    "py_15_03_add_pair": {
+      "function_name": "add_pair",
+      "tests": [
+        [
+          "add_pair",
+          [
+            {
+              "a": 1
+            },
+            "b",
+            2
+          ],
+          {
+            "a": 1,
+            "b": 2
+          }
+        ],
+        [
+          "add_pair",
+          [
+            {},
+            "x",
+            10
+          ],
+          {
+            "x": 10
+          }
+        ]
+      ]
+    },
+    "py_15_04_has_value": {
+      "function_name": "has_value",
+      "tests": [
+        [
+          "has_value",
+          [
+            {
+              "a": 10,
+              "b": 20
+            },
+            20
+          ],
+          true
+        ],
+        [
+          "has_value",
+          [
+            {
+              "a": 10
+            },
+            99
+          ],
+          false
+        ]
+      ]
+    },
+    "py_15_05_sum_dict_vals": {
+      "function_name": "sum_dict_vals",
+      "tests": [
+        [
+          "sum_dict_vals",
+          {
+            "a": 10,
+            "b": 20
+          },
+          30
+        ],
+        [
+          "sum_dict_vals",
+          {},
+          0
+        ]
+      ]
+    },
+    "py_15_06_max_dict_val": {
+      "function_name": "max_dict_val",
+      "tests": [
+        [
+          "max_dict_val",
+          {
+            "a": 10,
+            "b": 50,
+            "c": 20
+          },
+          50
+        ],
+        [
+          "max_dict_val",
+          {
+            "x": -5
+          },
+          -5
+        ]
+      ]
+    },
+    "py_15_07_dict_has_matching_kv": {
+      "function_name": "dict_has_matching_kv",
+      "tests": [
+        [
+          "dict_has_matching_kv",
+          [
+            {
+              "a": 1
+            },
+            "a",
+            1
+          ],
+          true
+        ],
+        [
+          "dict_has_matching_kv",
+          [
+            {
+              "a": 1
+            },
+            "a",
+            2
+          ],
+          false
+        ]
+      ]
+    },
+    "py_15_08_invert_pair_dict": {
+      "function_name": "invert_pair_dict",
+      "tests": [
+        [
+          "invert_pair_dict",
+          {
+            "a": "b"
+          },
+          {
+            "b": "a"
+          }
+        ],
+        [
+          "invert_pair_dict",
+          {
+            "hello": "world"
+          },
+          {
+            "world": "hello"
+          }
+        ]
+      ]
+    },
+    "py_16_01_rect_area": {
+      "function_name": "rect_area",
+      "tests": [
+        [
+          "rect_area",
+          [
+            4,
+            5
+          ],
+          20
+        ],
+        [
+          "rect_area",
+          [
+            0,
+            10
+          ],
+          0
+        ],
+        [
+          "rect_area",
+          [
+            7,
+            3
+          ],
+          21
+        ]
+      ]
+    },
+    "py_16_02_rect_perimeter": {
+      "function_name": "rect_perimeter",
+      "tests": [
+        [
+          "rect_perimeter",
+          [
+            4,
+            5
+          ],
+          18
+        ],
+        [
+          "rect_perimeter",
+          [
+            10,
+            2
+          ],
+          24
+        ]
+      ]
+    },
+    "py_16_03_square_area": {
+      "function_name": "square_area",
+      "tests": [
+        [
+          "square_area",
+          6,
+          36
+        ],
+        [
+          "square_area",
+          0,
+          0
+        ]
+      ]
+    },
+    "py_16_04_square_perimeter": {
+      "function_name": "square_perimeter",
+      "tests": [
+        [
+          "square_perimeter",
+          5,
+          20
+        ],
+        [
+          "square_perimeter",
+          8,
+          32
+        ]
+      ]
+    },
+    "py_16_05_triangle_area": {
+      "function_name": "triangle_area",
+      "tests": [
+        [
+          "triangle_area",
+          [
+            10,
+            4
+          ],
+          20.0
+        ],
+        [
+          "triangle_area",
+          [
+            6,
+            5
+          ],
+          15.0
+        ]
+      ]
+    },
+    "py_16_06_box_volume": {
+      "function_name": "box_volume",
+      "tests": [
+        [
+          "box_volume",
+          [
+            2,
+            3,
+            4
+          ],
+          24
+        ],
+        [
+          "box_volume",
+          [
+            5,
+            5,
+            2
+          ],
+          50
+        ]
+      ]
+    },
+    "py_16_07_circle_circumference_approx": {
+      "function_name": "circle_circumference_approx",
+      "tests": [
+        [
+          "circle_circumference_approx",
+          10,
+          62.8
+        ],
+        [
+          "circle_circumference_approx",
+          0,
+          0.0
+        ]
+      ]
+    },
+    "py_16_08_circle_area_approx": {
+      "function_name": "circle_area_approx",
+      "tests": [
+        [
+          "circle_area_approx",
+          10,
+          314.0
+        ],
+        [
+          "circle_area_approx",
+          0,
+          0.0
+        ]
+      ]
+    },
+    "py_17_01_c_to_f": {
+      "function_name": "c_to_f",
+      "tests": [
+        [
+          "c_to_f",
+          0,
+          32.0
+        ],
+        [
+          "c_to_f",
+          100,
+          212.0
+        ],
+        [
+          "c_to_f",
+          -40,
+          -40.0
+        ]
+      ]
+    },
+    "py_17_02_f_to_c": {
+      "function_name": "f_to_c",
+      "tests": [
+        [
+          "f_to_c",
+          32,
+          0.0
+        ],
+        [
+          "f_to_c",
+          212,
+          100.0
+        ],
+        [
+          "f_to_c",
+          -40,
+          -40.0
+        ]
+      ]
+    },
+    "py_17_03_km_to_m": {
+      "function_name": "km_to_m",
+      "tests": [
+        [
+          "km_to_m",
+          5,
+          5000
+        ],
+        [
+          "km_to_m",
+          0,
+          0
+        ],
+        [
+          "km_to_m",
+          2.5,
+          2500.0
+        ]
+      ]
+    },
+    "py_17_04_m_to_cm": {
+      "function_name": "m_to_cm",
+      "tests": [
+        [
+          "m_to_cm",
+          3,
+          300
+        ],
+        [
+          "m_to_cm",
+          0.5,
+          50.0
+        ]
+      ]
+    },
+    "py_17_05_hours_to_mins": {
+      "function_name": "hours_to_mins",
+      "tests": [
+        [
+          "hours_to_mins",
+          2,
+          120
+        ],
+        [
+          "hours_to_mins",
+          0,
+          0
+        ],
+        [
+          "hours_to_mins",
+          1.5,
+          90.0
+        ]
+      ]
+    },
+    "py_17_06_mins_to_secs": {
+      "function_name": "mins_to_secs",
+      "tests": [
+        [
+          "mins_to_secs",
+          5,
+          300
+        ],
+        [
+          "mins_to_secs",
+          1,
+          60
+        ]
+      ]
+    },
+    "py_17_07_days_to_hours": {
+      "function_name": "days_to_hours",
+      "tests": [
+        [
+          "days_to_hours",
+          3,
+          72
+        ],
+        [
+          "days_to_hours",
+          1,
+          24
+        ]
+      ]
+    },
+    "py_17_08_weeks_to_days": {
+      "function_name": "weeks_to_days",
+      "tests": [
+        [
+          "weeks_to_days",
+          2,
+          14
+        ],
+        [
+          "weeks_to_days",
+          0,
+          0
+        ]
+      ]
+    },
+    "py_18_01_swap_pair": {
+      "function_name": "swap_pair",
+      "tests": [
+        [
+          "swap_pair",
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        [
+          "swap_pair",
+          [
+            "a",
+            "b"
+          ],
+          [
+            "b",
+            "a"
+          ]
+        ]
+      ]
+    },
+    "py_18_02_pair_sum": {
+      "function_name": "pair_sum",
+      "tests": [
+        [
+          "pair_sum",
+          [
+            4,
+            6
+          ],
+          10
+        ],
+        [
+          "pair_sum",
+          [
+            -3,
+            3
+          ],
+          0
+        ]
+      ]
+    },
+    "py_18_03_pair_product": {
+      "function_name": "pair_product",
+      "tests": [
+        [
+          "pair_product",
+          [
+            5,
+            6
+          ],
+          30
+        ],
+        [
+          "pair_product",
+          [
+            -2,
+            4
+          ],
+          -8
+        ]
+      ]
+    },
+    "py_18_04_pair_diff": {
+      "function_name": "pair_diff",
+      "tests": [
+        [
+          "pair_diff",
+          [
+            10,
+            4
+          ],
+          6
+        ],
+        [
+          "pair_diff",
+          [
+            3,
+            9
+          ],
+          -6
+        ]
+      ]
+    },
+    "py_18_05_pair_distance": {
+      "function_name": "pair_distance",
+      "tests": [
+        [
+          "pair_distance",
+          [
+            10,
+            4
+          ],
+          6
+        ],
+        [
+          "pair_distance",
+          [
+            3,
+            9
+          ],
+          6
+        ]
+      ]
+    },
+    "py_18_06_pair_midpoint": {
+      "function_name": "pair_midpoint",
+      "tests": [
+        [
+          "pair_midpoint",
+          [
+            2,
+            6
+          ],
+          4.0
+        ],
+        [
+          "pair_midpoint",
+          [
+            0,
+            10
+          ],
+          5.0
+        ]
+      ]
+    },
+    "py_18_07_pair_has_zero": {
+      "function_name": "pair_has_zero",
+      "tests": [
+        [
+          "pair_has_zero",
+          [
+            0,
+            5
+          ],
+          true
+        ],
+        [
+          "pair_has_zero",
+          [
+            4,
+            0
+          ],
+          true
+        ],
+        [
+          "pair_has_zero",
+          [
+            3,
+            4
+          ],
+          false
+        ]
+      ]
+    },
+    "py_18_08_is_pair_equal": {
+      "function_name": "is_pair_equal",
+      "tests": [
+        [
+          "is_pair_equal",
+          [
+            5,
+            5
+          ],
+          true
+        ],
+        [
+          "is_pair_equal",
+          [
+            4,
+            7
+          ],
+          false
+        ]
+      ]
+    },
+    "py_19_01_count_evens": {
+      "function_name": "count_evens",
+      "tests": [
+        [
+          "count_evens",
+          [
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          3
+        ],
+        [
+          "count_evens",
+          [
+            1,
+            3,
+            5
+          ],
+          0
+        ],
+        [
+          "count_evens",
+          [],
+          0
+        ]
+      ]
+    },
+    "py_19_02_count_odds": {
+      "function_name": "count_odds",
+      "tests": [
+        [
+          "count_odds",
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          2
+        ],
+        [
+          "count_odds",
+          [
+            2,
+            4
+          ],
+          0
+        ]
+      ]
+    },
+    "py_19_03_count_positives": {
+      "function_name": "count_positives",
+      "tests": [
+        [
+          "count_positives",
+          [
+            1,
+            -2,
+            3,
+            0
+          ],
+          2
+        ],
+        [
+          "count_positives",
+          [
+            -1,
+            -2
+          ],
+          0
+        ]
+      ]
+    },
+    "py_19_04_count_negatives": {
+      "function_name": "count_negatives",
+      "tests": [
+        [
+          "count_negatives",
+          [
+            1,
+            -2,
+            -3,
+            0
+          ],
+          2
+        ],
+        [
+          "count_negatives",
+          [
+            1,
+            2
+          ],
+          0
+        ]
+      ]
+    },
+    "py_19_05_count_zeros": {
+      "function_name": "count_zeros",
+      "tests": [
+        [
+          "count_zeros",
+          [
+            0,
+            1,
+            0,
+            2
+          ],
+          2
+        ],
+        [
+          "count_zeros",
+          [
+            1,
+            2,
+            3
+          ],
+          0
+        ]
+      ]
+    },
+    "py_19_06_count_greater_than": {
+      "function_name": "count_greater_than",
+      "tests": [
+        [
+          "count_greater_than",
+          [
+            [
+              1,
+              5,
+              8,
+              2
+            ],
+            4
+          ],
+          2
+        ],
+        [
+          "count_greater_than",
+          [
+            [
+              1,
+              2
+            ],
+            5
+          ],
+          0
+        ]
+      ]
+    },
+    "py_19_07_count_less_than": {
+      "function_name": "count_less_than",
+      "tests": [
+        [
+          "count_less_than",
+          [
+            [
+              1,
+              5,
+              8,
+              2
+            ],
+            4
+          ],
+          2
+        ],
+        [
+          "count_less_than",
+          [
+            [
+              5,
+              8
+            ],
+            2
+          ],
+          0
+        ]
+      ]
+    },
+    "py_19_08_count_equal_to": {
+      "function_name": "count_equal_to",
+      "tests": [
+        [
+          "count_equal_to",
+          [
+            [
+              4,
+              2,
+              4,
+              4
+            ],
+            4
+          ],
+          3
+        ],
+        [
+          "count_equal_to",
+          [
+            [
+              1,
+              2
+            ],
+            9
+          ],
+          0
+        ]
+      ]
+    },
+    "py_20_01_is_asc_two": {
+      "function_name": "is_asc_two",
+      "tests": [
+        [
+          "is_asc_two",
+          [
+            2,
+            5
+          ],
+          true
+        ],
+        [
+          "is_asc_two",
+          [
+            5,
+            2
+          ],
+          false
+        ],
+        [
+          "is_asc_two",
+          [
+            3,
+            3
+          ],
+          true
+        ]
+      ]
+    },
+    "py_20_02_is_desc_two": {
+      "function_name": "is_desc_two",
+      "tests": [
+        [
+          "is_desc_two",
+          [
+            5,
+            2
+          ],
+          true
+        ],
+        [
+          "is_desc_two",
+          [
+            2,
+            5
+          ],
+          false
+        ],
+        [
+          "is_desc_two",
+          [
+            3,
+            3
+          ],
+          true
+        ]
+      ]
+    },
+    "py_20_03_is_asc_three": {
+      "function_name": "is_asc_three",
+      "tests": [
+        [
+          "is_asc_three",
+          [
+            1,
+            2,
+            3
+          ],
+          true
+        ],
+        [
+          "is_asc_three",
+          [
+            1,
+            3,
+            2
+          ],
+          false
+        ]
+      ]
+    },
+    "py_20_04_is_desc_three": {
+      "function_name": "is_desc_three",
+      "tests": [
+        [
+          "is_desc_three",
+          [
+            3,
+            2,
+            1
+          ],
+          true
+        ],
+        [
+          "is_desc_three",
+          [
+            1,
+            2,
+            3
+          ],
+          false
+        ]
+      ]
+    },
+    "py_20_05_are_equal_two": {
+      "function_name": "are_equal_two",
+      "tests": [
+        [
+          "are_equal_two",
+          [
+            7,
+            7
+          ],
+          true
+        ],
+        [
+          "are_equal_two",
+          [
+            7,
+            8
+          ],
+          false
+        ]
+      ]
+    },
+    "py_20_06_are_equal_three": {
+      "function_name": "are_equal_three",
+      "tests": [
+        [
+          "are_equal_three",
+          [
+            4,
+            4,
+            4
+          ],
+          true
+        ],
+        [
+          "are_equal_three",
+          [
+            4,
+            4,
+            5
+          ],
+          false
+        ]
+      ]
+    },
+    "py_20_07_are_distinct_two": {
+      "function_name": "are_distinct_two",
+      "tests": [
+        [
+          "are_distinct_two",
+          [
+            1,
+            2
+          ],
+          true
+        ],
+        [
+          "are_distinct_two",
+          [
+            3,
+            3
+          ],
+          false
+        ]
+      ]
+    },
+    "py_20_08_are_distinct_three": {
+      "function_name": "are_distinct_three",
+      "tests": [
+        [
+          "are_distinct_three",
+          [
+            1,
+            2,
+            3
+          ],
+          true
+        ],
+        [
+          "are_distinct_three",
+          [
+            1,
+            2,
+            1
+          ],
+          false
+        ]
+      ]
+    },
+    "py_21_01_set_size": {
+      "function_name": "set_size",
+      "tests": [
+        [
+          "set_size",
+          [
+            1,
+            2,
+            3
+          ],
+          3
+        ],
+        [
+          "set_size",
+          [],
+          0
+        ]
+      ]
+    },
+    "py_21_02_set_has": {
+      "function_name": "set_has",
+      "tests": [
+        [
+          "set_has",
+          [
+            [
+              1,
+              2
+            ],
+            1
+          ],
+          true
+        ],
+        [
+          "set_has",
+          [
+            [
+              1,
+              2
+            ],
+            9
+          ],
+          false
+        ]
+      ]
+    },
+    "py_21_03_set_union_size": {
+      "function_name": "set_union_size",
+      "tests": [
+        [
+          "set_union_size",
+          [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          3
+        ],
+        [
+          "set_union_size",
+          [
+            [],
+            [
+              1
+            ]
+          ],
+          1
+        ]
+      ]
+    },
+    "py_21_04_set_inter_size": {
+      "function_name": "set_inter_size",
+      "tests": [
+        [
+          "set_inter_size",
+          [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          1
+        ],
+        [
+          "set_inter_size",
+          [
+            [
+              1
+            ],
+            [
+              2
+            ]
+          ],
+          0
+        ]
+      ]
+    },
+    "py_21_05_set_diff_size": {
+      "function_name": "set_diff_size",
+      "tests": [
+        [
+          "set_diff_size",
+          [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2
+            ]
+          ],
+          2
+        ],
+        [
+          "set_diff_size",
+          [
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          0
+        ]
+      ]
+    },
+    "py_21_06_is_subset_of": {
+      "function_name": "is_subset_of",
+      "tests": [
+        [
+          "is_subset_of",
+          [
+            [
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          true
+        ],
+        [
+          "is_subset_of",
+          [
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          false
+        ]
+      ]
+    },
+    "py_21_07_are_disjoint": {
+      "function_name": "are_disjoint",
+      "tests": [
+        [
+          "are_disjoint",
+          [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          true
+        ],
+        [
+          "are_disjoint",
+          [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          false
+        ]
+      ]
+    },
+    "py_21_08_is_set_empty": {
+      "function_name": "is_set_empty",
+      "tests": [
+        [
+          "is_set_empty",
+          [],
+          true
+        ],
+        [
+          "is_set_empty",
+          [
+            1
+          ],
+          false
+        ]
+      ]
+    },
+    "py_22_01_is_palindrome_simple": {
+      "function_name": "is_palindrome_simple",
+      "tests": [
+        [
+          "is_palindrome_simple",
+          "radar",
+          true
+        ],
+        [
+          "is_palindrome_simple",
+          "hello",
+          false
+        ],
+        [
+          "is_palindrome_simple",
+          "",
+          true
+        ]
+      ]
+    },
+    "py_22_02_count_vowels_basic": {
+      "function_name": "count_vowels_basic",
+      "tests": [
+        [
+          "count_vowels_basic",
+          "apple",
+          2
+        ],
+        [
+          "count_vowels_basic",
+          "sky",
+          0
+        ],
+        [
+          "count_vowels_basic",
+          "EDUCATION",
+          5
+        ]
+      ]
+    },
+    "py_22_03_has_whitespace": {
+      "function_name": "has_whitespace",
+      "tests": [
+        [
+          "has_whitespace",
+          "hello world",
+          true
+        ],
+        [
+          "has_whitespace",
+          "nospace",
+          false
+        ]
+      ]
+    },
+    "py_22_04_remove_spaces_simple": {
+      "function_name": "remove_spaces_simple",
+      "tests": [
+        [
+          "remove_spaces_simple",
+          "a b c",
+          "abc"
+        ],
+        [
+          "remove_spaces_simple",
+          "test",
+          "test"
+        ]
+      ]
+    },
+    "py_22_05_count_words_space": {
+      "function_name": "count_words_space",
+      "tests": [
+        [
+          "count_words_space",
+          "one two three",
+          3
+        ],
+        [
+          "count_words_space",
+          "",
+          0
+        ]
+      ]
+    },
+    "py_22_06_join_with_dash": {
+      "function_name": "join_with_dash",
+      "tests": [
+        [
+          "join_with_dash",
+          [
+            "a",
+            "b",
+            "c"
+          ],
+          "a-b-c"
+        ],
+        [
+          "join_with_dash",
+          [
+            "single"
+          ],
+          "single"
+        ]
+      ]
+    },
+    "py_22_07_join_with_space": {
+      "function_name": "join_with_space",
+      "tests": [
+        [
+          "join_with_space",
+          [
+            "hello",
+            "world"
+          ],
+          "hello world"
+        ],
+        [
+          "join_with_space",
+          [],
+          ""
+        ]
+      ]
+    },
+    "py_22_08_reverse_string": {
+      "function_name": "reverse_string",
+      "tests": [
+        [
+          "reverse_string",
+          "abc",
+          "cba"
+        ],
+        [
+          "reverse_string",
+          "",
+          ""
+        ]
+      ]
+    },
+    "py_23_01_take_n": {
+      "function_name": "take_n",
+      "tests": [
+        [
+          "take_n",
+          [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        [
+          "take_n",
+          [
+            [
+              1,
+              2
+            ],
+            5
+          ],
+          [
+            1,
+            2
+          ]
+        ]
+      ]
+    },
+    "py_23_02_drop_n": {
+      "function_name": "drop_n",
+      "tests": [
+        [
+          "drop_n",
+          [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        [
+          "drop_n",
+          [
+            [
+              1,
+              2
+            ],
+            5
+          ],
+          []
+        ]
+      ]
+    },
+    "py_23_03_slice_range": {
+      "function_name": "slice_range",
+      "tests": [
+        [
+          "slice_range",
+          [
+            [
+              10,
+              20,
+              30,
+              40,
+              50
+            ],
+            1,
+            4
+          ],
+          [
+            20,
+            30,
+            40
+          ]
+        ],
+        [
+          "slice_range",
+          [
+            [
+              1,
+              2
+            ],
+            0,
+            1
+          ],
+          [
+            1
+          ]
+        ]
+      ]
+    },
+    "py_23_04_middle_item_three": {
+      "function_name": "middle_item_three",
+      "tests": [
+        [
+          "middle_item_three",
+          [
+            10,
+            20,
+            30
+          ],
+          20
+        ],
+        [
+          "middle_item_three",
+          [
+            "a",
+            "b",
+            "c"
+          ],
+          "b"
+        ]
+      ]
+    },
+    "py_23_05_repeat_elements_two": {
+      "function_name": "repeat_elements_two",
+      "tests": [
+        [
+          "repeat_elements_two",
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1,
+            2,
+            2
+          ]
+        ],
+        [
+          "repeat_elements_two",
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "a",
+            "b",
+            "b"
+          ]
+        ]
+      ]
+    },
+    "py_23_06_are_lists_equal": {
+      "function_name": "are_lists_equal",
+      "tests": [
+        [
+          "are_lists_equal",
+          [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          true
+        ],
+        [
+          "are_lists_equal",
+          [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          false
+        ]
+      ]
+    },
+    "py_23_07_combine_lists": {
+      "function_name": "combine_lists",
+      "tests": [
+        [
+          "combine_lists",
+          [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        [
+          "combine_lists",
+          [
+            [],
+            [
+              5
+            ]
+          ],
+          [
+            5
+          ]
+        ]
+      ]
+    },
+    "py_23_08_get_edges": {
+      "function_name": "get_edges",
+      "tests": [
+        [
+          "get_edges",
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        [
+          "get_edges",
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            8
+          ]
+        ]
+      ]
+    },
+    "py_24_01_div_rem_tuple": {
+      "function_name": "div_rem_tuple",
+      "tests": [
+        [
+          "div_rem_tuple",
+          [
+            14,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        [
+          "div_rem_tuple",
+          [
+            10,
+            5
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      ]
+    },
+    "py_24_02_is_divisible_by": {
+      "function_name": "is_divisible_by",
+      "tests": [
+        [
+          "is_divisible_by",
+          [
+            15,
+            5
+          ],
+          true
+        ],
+        [
+          "is_divisible_by",
+          [
+            14,
+            5
+          ],
+          false
+        ]
+      ]
+    },
+    "py_24_03_is_multiple_of_ten": {
+      "function_name": "is_multiple_of_ten",
+      "tests": [
+        [
+          "is_multiple_of_ten",
+          100,
+          true
+        ],
+        [
+          "is_multiple_of_ten",
+          45,
+          false
+        ],
+        [
+          "is_multiple_of_ten",
+          0,
+          true
+        ]
+      ]
+    },
+    "py_24_04_next_multiple_of_five": {
+      "function_name": "next_multiple_of_five",
+      "tests": [
+        [
+          "next_multiple_of_five",
+          10,
+          10
+        ],
+        [
+          "next_multiple_of_five",
+          12,
+          15
+        ],
+        [
+          "next_multiple_of_five",
+          16,
+          20
+        ]
+      ]
+    },
+    "py_24_05_int_average_two": {
+      "function_name": "int_average_two",
+      "tests": [
+        [
+          "int_average_two",
+          [
+            10,
+            20
+          ],
+          15
+        ],
+        [
+          "int_average_two",
+          [
+            5,
+            6
+          ],
+          5
+        ]
+      ]
+    },
+    "py_24_06_last_digit": {
+      "function_name": "last_digit",
+      "tests": [
+        [
+          "last_digit",
+          147,
+          7
+        ],
+        [
+          "last_digit",
+          -29,
+          9
+        ],
+        [
+          "last_digit",
+          0,
+          0
+        ]
+      ]
+    },
+    "py_24_07_remove_last_digit": {
+      "function_name": "remove_last_digit",
+      "tests": [
+        [
+          "remove_last_digit",
+          147,
+          14
+        ],
+        [
+          "remove_last_digit",
+          9,
+          0
+        ]
+      ]
+    },
+    "py_24_08_is_factor_of": {
+      "function_name": "is_factor_of",
+      "tests": [
+        [
+          "is_factor_of",
+          [
+            3,
+            12
+          ],
+          true
+        ],
+        [
+          "is_factor_of",
+          [
+            5,
+            12
+          ],
+          false
+        ]
+      ]
+    },
+    "py_25_01_mean_two": {
+      "function_name": "mean_two",
+      "tests": [
+        [
+          "mean_two",
+          [
+            4,
+            8
+          ],
+          6.0
+        ],
+        [
+          "mean_two",
+          [
+            0,
+            10
+          ],
+          5.0
+        ]
+      ]
+    },
+    "py_25_02_mean_three": {
+      "function_name": "mean_three",
+      "tests": [
+        [
+          "mean_three",
+          [
+            3,
+            6,
+            9
+          ],
+          6.0
+        ],
+        [
+          "mean_three",
+          [
+            0,
+            0,
+            0
+          ],
+          0.0
+        ]
+      ]
+    },
+    "py_25_03_midrange_two": {
+      "function_name": "midrange_two",
+      "tests": [
+        [
+          "midrange_two",
+          [
+            2,
+            8
+          ],
+          5.0
+        ],
+        [
+          "midrange_two",
+          [
+            -4,
+            4
+          ],
+          0.0
+        ]
+      ]
+    },
+    "py_25_04_range_three": {
+      "function_name": "range_three",
+      "tests": [
+        [
+          "range_three",
+          [
+            1,
+            5,
+            9
+          ],
+          8
+        ],
+        [
+          "range_three",
+          [
+            4,
+            4,
+            4
+          ],
+          0
+        ]
+      ]
+    },
+    "py_25_05_median_three": {
+      "function_name": "median_three",
+      "tests": [
+        [
+          "median_three",
+          [
+            1,
+            9,
+            5
+          ],
+          5
+        ],
+        [
+          "median_three",
+          [
+            8,
+            2,
+            4
+          ],
+          4
+        ]
+      ]
+    },
+    "py_25_06_sum_squares_two": {
+      "function_name": "sum_squares_two",
+      "tests": [
+        [
+          "sum_squares_two",
+          [
+            3,
+            4
+          ],
+          25
+        ],
+        [
+          "sum_squares_two",
+          [
+            0,
+            5
+          ],
+          25
+        ]
+      ]
+    },
+    "py_25_07_diff_of_squares": {
+      "function_name": "diff_of_squares",
+      "tests": [
+        [
+          "diff_of_squares",
+          [
+            5,
+            4
+          ],
+          9
+        ],
+        [
+          "diff_of_squares",
+          [
+            3,
+            3
+          ],
+          0
+        ]
+      ]
+    },
+    "py_25_08_variance_two_approx": {
+      "function_name": "variance_two_approx",
+      "tests": [
+        [
+          "variance_two_approx",
+          [
+            2,
+            6
+          ],
+          8.0
+        ],
+        [
+          "variance_two_approx",
+          [
+            4,
+            4
+          ],
+          0.0
+        ]
+      ]
+    }
+  },
+  "json_schemas": {
+    "json_01_01_user_account": {
+      "required_keys": [
+        "user_id",
+        "username",
+        "email",
+        "role"
+      ]
+    },
+    "json_01_02_user_account": {
+      "required_keys": [
+        "user_id",
+        "username",
+        "email",
+        "role"
+      ]
+    },
+    "json_01_03_user_account": {
+      "required_keys": [
+        "user_id",
+        "username",
+        "email",
+        "role"
+      ]
+    },
+    "json_01_04_user_account": {
+      "required_keys": [
+        "user_id",
+        "username",
+        "email",
+        "role"
+      ]
+    },
+    "json_01_05_user_account": {
+      "required_keys": [
+        "user_id",
+        "username",
+        "email",
+        "role"
+      ]
+    },
+    "json_01_06_user_account": {
+      "required_keys": [
+        "user_id",
+        "username",
+        "email",
+        "role"
+      ]
+    },
+    "json_01_07_user_account": {
+      "required_keys": [
+        "user_id",
+        "username",
+        "email",
+        "role"
+      ]
+    },
+    "json_01_08_user_account": {
+      "required_keys": [
+        "user_id",
+        "username",
+        "email",
+        "role"
+      ]
+    },
+    "json_02_01_server_node": {
+      "required_keys": [
+        "host",
+        "port",
+        "status",
+        "is_primary"
+      ]
+    },
+    "json_02_02_server_node": {
+      "required_keys": [
+        "host",
+        "port",
+        "status",
+        "is_primary"
+      ]
+    },
+    "json_02_03_server_node": {
+      "required_keys": [
+        "host",
+        "port",
+        "status",
+        "is_primary"
+      ]
+    },
+    "json_02_04_server_node": {
+      "required_keys": [
+        "host",
+        "port",
+        "status",
+        "is_primary"
+      ]
+    },
+    "json_02_05_server_node": {
+      "required_keys": [
+        "host",
+        "port",
+        "status",
+        "is_primary"
+      ]
+    },
+    "json_02_06_server_node": {
+      "required_keys": [
+        "host",
+        "port",
+        "status",
+        "is_primary"
+      ]
+    },
+    "json_02_07_server_node": {
+      "required_keys": [
+        "host",
+        "port",
+        "status",
+        "is_primary"
+      ]
+    },
+    "json_02_08_server_node": {
+      "required_keys": [
+        "host",
+        "port",
+        "status",
+        "is_primary"
+      ]
+    },
+    "json_03_01_database_profile": {
+      "required_keys": [
+        "database_name",
+        "engine",
+        "port",
+        "max_connections"
+      ]
+    },
+    "json_03_02_database_profile": {
+      "required_keys": [
+        "database_name",
+        "engine",
+        "port",
+        "max_connections"
+      ]
+    },
+    "json_03_03_database_profile": {
+      "required_keys": [
+        "database_name",
+        "engine",
+        "port",
+        "max_connections"
+      ]
+    },
+    "json_03_04_database_profile": {
+      "required_keys": [
+        "database_name",
+        "engine",
+        "port",
+        "max_connections"
+      ]
+    },
+    "json_03_05_database_profile": {
+      "required_keys": [
+        "database_name",
+        "engine",
+        "port",
+        "max_connections"
+      ]
+    },
+    "json_03_06_database_profile": {
+      "required_keys": [
+        "database_name",
+        "engine",
+        "port",
+        "max_connections"
+      ]
+    },
+    "json_03_07_database_profile": {
+      "required_keys": [
+        "database_name",
+        "engine",
+        "port",
+        "max_connections"
+      ]
+    },
+    "json_03_08_database_profile": {
+      "required_keys": [
+        "database_name",
+        "engine",
+        "port",
+        "max_connections"
+      ]
+    },
+    "json_04_01_product_inventory": {
+      "required_keys": [
+        "sku",
+        "name",
+        "price",
+        "in_stock"
+      ]
+    },
+    "json_04_02_product_inventory": {
+      "required_keys": [
+        "sku",
+        "name",
+        "price",
+        "in_stock"
+      ]
+    },
+    "json_04_03_product_inventory": {
+      "required_keys": [
+        "sku",
+        "name",
+        "price",
+        "in_stock"
+      ]
+    },
+    "json_04_04_product_inventory": {
+      "required_keys": [
+        "sku",
+        "name",
+        "price",
+        "in_stock"
+      ]
+    },
+    "json_04_05_product_inventory": {
+      "required_keys": [
+        "sku",
+        "name",
+        "price",
+        "in_stock"
+      ]
+    },
+    "json_04_06_product_inventory": {
+      "required_keys": [
+        "sku",
+        "name",
+        "price",
+        "in_stock"
+      ]
+    },
+    "json_04_07_product_inventory": {
+      "required_keys": [
+        "sku",
+        "name",
+        "price",
+        "in_stock"
+      ]
+    },
+    "json_04_08_product_inventory": {
+      "required_keys": [
+        "sku",
+        "name",
+        "price",
+        "in_stock"
+      ]
+    },
+    "json_05_01_weather_metric": {
+      "required_keys": [
+        "city",
+        "temp_c",
+        "condition",
+        "humidity_pct"
+      ]
+    },
+    "json_05_02_weather_metric": {
+      "required_keys": [
+        "city",
+        "temp_c",
+        "condition",
+        "humidity_pct"
+      ]
+    },
+    "json_05_03_weather_metric": {
+      "required_keys": [
+        "city",
+        "temp_c",
+        "condition",
+        "humidity_pct"
+      ]
+    },
+    "json_05_04_weather_metric": {
+      "required_keys": [
+        "city",
+        "temp_c",
+        "condition",
+        "humidity_pct"
+      ]
+    },
+    "json_05_05_weather_metric": {
+      "required_keys": [
+        "city",
+        "temp_c",
+        "condition",
+        "humidity_pct"
+      ]
+    },
+    "json_05_06_weather_metric": {
+      "required_keys": [
+        "city",
+        "temp_c",
+        "condition",
+        "humidity_pct"
+      ]
+    },
+    "json_05_07_weather_metric": {
+      "required_keys": [
+        "city",
+        "temp_c",
+        "condition",
+        "humidity_pct"
+      ]
+    },
+    "json_05_08_weather_metric": {
+      "required_keys": [
+        "city",
+        "temp_c",
+        "condition",
+        "humidity_pct"
+      ]
+    },
+    "json_06_01_book_catalog": {
+      "required_keys": [
+        "isbn",
+        "title",
+        "author",
+        "year"
+      ]
+    },
+    "json_06_02_book_catalog": {
+      "required_keys": [
+        "isbn",
+        "title",
+        "author",
+        "year"
+      ]
+    },
+    "json_06_03_book_catalog": {
+      "required_keys": [
+        "isbn",
+        "title",
+        "author",
+        "year"
+      ]
+    },
+    "json_06_04_book_catalog": {
+      "required_keys": [
+        "isbn",
+        "title",
+        "author",
+        "year"
+      ]
+    },
+    "json_06_05_book_catalog": {
+      "required_keys": [
+        "isbn",
+        "title",
+        "author",
+        "year"
+      ]
+    },
+    "json_06_06_book_catalog": {
+      "required_keys": [
+        "isbn",
+        "title",
+        "author",
+        "year"
+      ]
+    },
+    "json_06_07_book_catalog": {
+      "required_keys": [
+        "isbn",
+        "title",
+        "author",
+        "year"
+      ]
+    },
+    "json_06_08_book_catalog": {
+      "required_keys": [
+        "isbn",
+        "title",
+        "author",
+        "year"
+      ]
+    },
+    "json_07_01_point_3d": {
+      "required_keys": [
+        "point_id",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "json_07_02_point_3d": {
+      "required_keys": [
+        "point_id",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "json_07_03_point_3d": {
+      "required_keys": [
+        "point_id",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "json_07_04_point_3d": {
+      "required_keys": [
+        "point_id",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "json_07_05_point_3d": {
+      "required_keys": [
+        "point_id",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "json_07_06_point_3d": {
+      "required_keys": [
+        "point_id",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "json_07_07_point_3d": {
+      "required_keys": [
+        "point_id",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "json_07_08_point_3d": {
+      "required_keys": [
+        "point_id",
+        "x",
+        "y",
+        "z"
+      ]
+    },
+    "json_08_01_order_record": {
+      "required_keys": [
+        "order_id",
+        "customer",
+        "total_usd",
+        "items_count"
+      ]
+    },
+    "json_08_02_order_record": {
+      "required_keys": [
+        "order_id",
+        "customer",
+        "total_usd",
+        "items_count"
+      ]
+    },
+    "json_08_03_order_record": {
+      "required_keys": [
+        "order_id",
+        "customer",
+        "total_usd",
+        "items_count"
+      ]
+    },
+    "json_08_04_order_record": {
+      "required_keys": [
+        "order_id",
+        "customer",
+        "total_usd",
+        "items_count"
+      ]
+    },
+    "json_08_05_order_record": {
+      "required_keys": [
+        "order_id",
+        "customer",
+        "total_usd",
+        "items_count"
+      ]
+    },
+    "json_08_06_order_record": {
+      "required_keys": [
+        "order_id",
+        "customer",
+        "total_usd",
+        "items_count"
+      ]
+    },
+    "json_08_07_order_record": {
+      "required_keys": [
+        "order_id",
+        "customer",
+        "total_usd",
+        "items_count"
+      ]
+    },
+    "json_08_08_order_record": {
+      "required_keys": [
+        "order_id",
+        "customer",
+        "total_usd",
+        "items_count"
+      ]
+    },
+    "json_09_01_device_config": {
+      "required_keys": [
+        "device_name",
+        "volume",
+        "brightness",
+        "bluetooth_on"
+      ]
+    },
+    "json_09_02_device_config": {
+      "required_keys": [
+        "device_name",
+        "volume",
+        "brightness",
+        "bluetooth_on"
+      ]
+    },
+    "json_09_03_device_config": {
+      "required_keys": [
+        "device_name",
+        "volume",
+        "brightness",
+        "bluetooth_on"
+      ]
+    },
+    "json_09_04_device_config": {
+      "required_keys": [
+        "device_name",
+        "volume",
+        "brightness",
+        "bluetooth_on"
+      ]
+    },
+    "json_09_05_device_config": {
+      "required_keys": [
+        "device_name",
+        "volume",
+        "brightness",
+        "bluetooth_on"
+      ]
+    },
+    "json_09_06_device_config": {
+      "required_keys": [
+        "device_name",
+        "volume",
+        "brightness",
+        "bluetooth_on"
+      ]
+    },
+    "json_09_07_device_config": {
+      "required_keys": [
+        "device_name",
+        "volume",
+        "brightness",
+        "bluetooth_on"
+      ]
+    },
+    "json_09_08_device_config": {
+      "required_keys": [
+        "device_name",
+        "volume",
+        "brightness",
+        "bluetooth_on"
+      ]
+    },
+    "json_10_01_network_route": {
+      "required_keys": [
+        "protocol",
+        "domain",
+        "port",
+        "secure"
+      ]
+    },
+    "json_10_02_network_route": {
+      "required_keys": [
+        "protocol",
+        "domain",
+        "port",
+        "secure"
+      ]
+    },
+    "json_10_03_network_route": {
+      "required_keys": [
+        "protocol",
+        "domain",
+        "port",
+        "secure"
+      ]
+    },
+    "json_10_04_network_route": {
+      "required_keys": [
+        "protocol",
+        "domain",
+        "port",
+        "secure"
+      ]
+    },
+    "json_10_05_network_route": {
+      "required_keys": [
+        "protocol",
+        "domain",
+        "port",
+        "secure"
+      ]
+    },
+    "json_10_06_network_route": {
+      "required_keys": [
+        "protocol",
+        "domain",
+        "port",
+        "secure"
+      ]
+    },
+    "json_10_07_network_route": {
+      "required_keys": [
+        "protocol",
+        "domain",
+        "port",
+        "secure"
+      ]
+    },
+    "json_10_08_network_route": {
+      "required_keys": [
+        "protocol",
+        "domain",
+        "port",
+        "secure"
+      ]
+    },
+    "json_11_01_student_score": {
+      "required_keys": [
+        "student_id",
+        "course",
+        "score",
+        "passed"
+      ]
+    },
+    "json_11_02_student_score": {
+      "required_keys": [
+        "student_id",
+        "course",
+        "score",
+        "passed"
+      ]
+    },
+    "json_11_03_student_score": {
+      "required_keys": [
+        "student_id",
+        "course",
+        "score",
+        "passed"
+      ]
+    },
+    "json_11_04_student_score": {
+      "required_keys": [
+        "student_id",
+        "course",
+        "score",
+        "passed"
+      ]
+    },
+    "json_11_05_student_score": {
+      "required_keys": [
+        "student_id",
+        "course",
+        "score",
+        "passed"
+      ]
+    },
+    "json_11_06_student_score": {
+      "required_keys": [
+        "student_id",
+        "course",
+        "score",
+        "passed"
+      ]
+    },
+    "json_11_07_student_score": {
+      "required_keys": [
+        "student_id",
+        "course",
+        "score",
+        "passed"
+      ]
+    },
+    "json_11_08_student_score": {
+      "required_keys": [
+        "student_id",
+        "course",
+        "score",
+        "passed"
+      ]
+    },
+    "json_12_01_vehicle_spec": {
+      "required_keys": [
+        "vin",
+        "make",
+        "model",
+        "electric"
+      ]
+    },
+    "json_12_02_vehicle_spec": {
+      "required_keys": [
+        "vin",
+        "make",
+        "model",
+        "electric"
+      ]
+    },
+    "json_12_03_vehicle_spec": {
+      "required_keys": [
+        "vin",
+        "make",
+        "model",
+        "electric"
+      ]
+    },
+    "json_12_04_vehicle_spec": {
+      "required_keys": [
+        "vin",
+        "make",
+        "model",
+        "electric"
+      ]
+    },
+    "json_12_05_vehicle_spec": {
+      "required_keys": [
+        "vin",
+        "make",
+        "model",
+        "electric"
+      ]
+    },
+    "json_12_06_vehicle_spec": {
+      "required_keys": [
+        "vin",
+        "make",
+        "model",
+        "electric"
+      ]
+    },
+    "json_12_07_vehicle_spec": {
+      "required_keys": [
+        "vin",
+        "make",
+        "model",
+        "electric"
+      ]
+    },
+    "json_12_08_vehicle_spec": {
+      "required_keys": [
+        "vin",
+        "make",
+        "model",
+        "electric"
+      ]
+    },
+    "json_13_01_color_palette": {
+      "required_keys": [
+        "name",
+        "hex_code",
+        "rgb",
+        "is_dark"
+      ]
+    },
+    "json_13_02_color_palette": {
+      "required_keys": [
+        "name",
+        "hex_code",
+        "rgb",
+        "is_dark"
+      ]
+    },
+    "json_13_03_color_palette": {
+      "required_keys": [
+        "name",
+        "hex_code",
+        "rgb",
+        "is_dark"
+      ]
+    },
+    "json_13_04_color_palette": {
+      "required_keys": [
+        "name",
+        "hex_code",
+        "rgb",
+        "is_dark"
+      ]
+    },
+    "json_13_05_color_palette": {
+      "required_keys": [
+        "name",
+        "hex_code",
+        "rgb",
+        "is_dark"
+      ]
+    },
+    "json_13_06_color_palette": {
+      "required_keys": [
+        "name",
+        "hex_code",
+        "rgb",
+        "is_dark"
+      ]
+    },
+    "json_13_07_color_palette": {
+      "required_keys": [
+        "name",
+        "hex_code",
+        "rgb",
+        "is_dark"
+      ]
+    },
+    "json_13_08_color_palette": {
+      "required_keys": [
+        "name",
+        "hex_code",
+        "rgb",
+        "is_dark"
+      ]
+    },
+    "json_14_01_task_entry": {
+      "required_keys": [
+        "task_id",
+        "title",
+        "priority",
+        "completed"
+      ]
+    },
+    "json_14_02_task_entry": {
+      "required_keys": [
+        "task_id",
+        "title",
+        "priority",
+        "completed"
+      ]
+    },
+    "json_14_03_task_entry": {
+      "required_keys": [
+        "task_id",
+        "title",
+        "priority",
+        "completed"
+      ]
+    },
+    "json_14_04_task_entry": {
+      "required_keys": [
+        "task_id",
+        "title",
+        "priority",
+        "completed"
+      ]
+    },
+    "json_14_05_task_entry": {
+      "required_keys": [
+        "task_id",
+        "title",
+        "priority",
+        "completed"
+      ]
+    },
+    "json_14_06_task_entry": {
+      "required_keys": [
+        "task_id",
+        "title",
+        "priority",
+        "completed"
+      ]
+    },
+    "json_14_07_task_entry": {
+      "required_keys": [
+        "task_id",
+        "title",
+        "priority",
+        "completed"
+      ]
+    },
+    "json_14_08_task_entry": {
+      "required_keys": [
+        "task_id",
+        "title",
+        "priority",
+        "completed"
+      ]
+    },
+    "json_15_01_sensor_telemetry": {
+      "required_keys": [
+        "sensor_id",
+        "metric",
+        "value",
+        "healthy"
+      ]
+    },
+    "json_15_02_sensor_telemetry": {
+      "required_keys": [
+        "sensor_id",
+        "metric",
+        "value",
+        "healthy"
+      ]
+    },
+    "json_15_03_sensor_telemetry": {
+      "required_keys": [
+        "sensor_id",
+        "metric",
+        "value",
+        "healthy"
+      ]
+    },
+    "json_15_04_sensor_telemetry": {
+      "required_keys": [
+        "sensor_id",
+        "metric",
+        "value",
+        "healthy"
+      ]
+    },
+    "json_15_05_sensor_telemetry": {
+      "required_keys": [
+        "sensor_id",
+        "metric",
+        "value",
+        "healthy"
+      ]
+    },
+    "json_15_06_sensor_telemetry": {
+      "required_keys": [
+        "sensor_id",
+        "metric",
+        "value",
+        "healthy"
+      ]
+    },
+    "json_15_07_sensor_telemetry": {
+      "required_keys": [
+        "sensor_id",
+        "metric",
+        "value",
+        "healthy"
+      ]
+    },
+    "json_15_08_sensor_telemetry": {
+      "required_keys": [
+        "sensor_id",
+        "metric",
+        "value",
+        "healthy"
+      ]
+    },
+    "json_16_01_support_ticket": {
+      "required_keys": [
+        "ticket_id",
+        "urgency",
+        "category",
+        "resolved"
+      ]
+    },
+    "json_16_02_support_ticket": {
+      "required_keys": [
+        "ticket_id",
+        "urgency",
+        "category",
+        "resolved"
+      ]
+    },
+    "json_16_03_support_ticket": {
+      "required_keys": [
+        "ticket_id",
+        "urgency",
+        "category",
+        "resolved"
+      ]
+    },
+    "json_16_04_support_ticket": {
+      "required_keys": [
+        "ticket_id",
+        "urgency",
+        "category",
+        "resolved"
+      ]
+    },
+    "json_16_05_support_ticket": {
+      "required_keys": [
+        "ticket_id",
+        "urgency",
+        "category",
+        "resolved"
+      ]
+    },
+    "json_16_06_support_ticket": {
+      "required_keys": [
+        "ticket_id",
+        "urgency",
+        "category",
+        "resolved"
+      ]
+    },
+    "json_16_07_support_ticket": {
+      "required_keys": [
+        "ticket_id",
+        "urgency",
+        "category",
+        "resolved"
+      ]
+    },
+    "json_16_08_support_ticket": {
+      "required_keys": [
+        "ticket_id",
+        "urgency",
+        "category",
+        "resolved"
+      ]
+    },
+    "json_17_01_api_rate_limit": {
+      "required_keys": [
+        "tier_name",
+        "rate_limit",
+        "window_sec",
+        "active"
+      ]
+    },
+    "json_17_02_api_rate_limit": {
+      "required_keys": [
+        "tier_name",
+        "rate_limit",
+        "window_sec",
+        "active"
+      ]
+    },
+    "json_17_03_api_rate_limit": {
+      "required_keys": [
+        "tier_name",
+        "rate_limit",
+        "window_sec",
+        "active"
+      ]
+    },
+    "json_17_04_api_rate_limit": {
+      "required_keys": [
+        "tier_name",
+        "rate_limit",
+        "window_sec",
+        "active"
+      ]
+    },
+    "json_17_05_api_rate_limit": {
+      "required_keys": [
+        "tier_name",
+        "rate_limit",
+        "window_sec",
+        "active"
+      ]
+    },
+    "json_17_06_api_rate_limit": {
+      "required_keys": [
+        "tier_name",
+        "rate_limit",
+        "window_sec",
+        "active"
+      ]
+    },
+    "json_17_07_api_rate_limit": {
+      "required_keys": [
+        "tier_name",
+        "rate_limit",
+        "window_sec",
+        "active"
+      ]
+    },
+    "json_17_08_api_rate_limit": {
+      "required_keys": [
+        "tier_name",
+        "rate_limit",
+        "window_sec",
+        "active"
+      ]
+    },
+    "json_18_01_file_meta": {
+      "required_keys": [
+        "filename",
+        "size_kb",
+        "file_type",
+        "read_only"
+      ]
+    },
+    "json_18_02_file_meta": {
+      "required_keys": [
+        "filename",
+        "size_kb",
+        "file_type",
+        "read_only"
+      ]
+    },
+    "json_18_03_file_meta": {
+      "required_keys": [
+        "filename",
+        "size_kb",
+        "file_type",
+        "read_only"
+      ]
+    },
+    "json_18_04_file_meta": {
+      "required_keys": [
+        "filename",
+        "size_kb",
+        "file_type",
+        "read_only"
+      ]
+    },
+    "json_18_05_file_meta": {
+      "required_keys": [
+        "filename",
+        "size_kb",
+        "file_type",
+        "read_only"
+      ]
+    },
+    "json_18_06_file_meta": {
+      "required_keys": [
+        "filename",
+        "size_kb",
+        "file_type",
+        "read_only"
+      ]
+    },
+    "json_18_07_file_meta": {
+      "required_keys": [
+        "filename",
+        "size_kb",
+        "file_type",
+        "read_only"
+      ]
+    },
+    "json_18_08_file_meta": {
+      "required_keys": [
+        "filename",
+        "size_kb",
+        "file_type",
+        "read_only"
+      ]
+    },
+    "json_19_01_payment_log": {
+      "required_keys": [
+        "payment_id",
+        "amount",
+        "currency",
+        "confirmed"
+      ]
+    },
+    "json_19_02_payment_log": {
+      "required_keys": [
+        "payment_id",
+        "amount",
+        "currency",
+        "confirmed"
+      ]
+    },
+    "json_19_03_payment_log": {
+      "required_keys": [
+        "payment_id",
+        "amount",
+        "currency",
+        "confirmed"
+      ]
+    },
+    "json_19_04_payment_log": {
+      "required_keys": [
+        "payment_id",
+        "amount",
+        "currency",
+        "confirmed"
+      ]
+    },
+    "json_19_05_payment_log": {
+      "required_keys": [
+        "payment_id",
+        "amount",
+        "currency",
+        "confirmed"
+      ]
+    },
+    "json_19_06_payment_log": {
+      "required_keys": [
+        "payment_id",
+        "amount",
+        "currency",
+        "confirmed"
+      ]
+    },
+    "json_19_07_payment_log": {
+      "required_keys": [
+        "payment_id",
+        "amount",
+        "currency",
+        "confirmed"
+      ]
+    },
+    "json_19_08_payment_log": {
+      "required_keys": [
+        "payment_id",
+        "amount",
+        "currency",
+        "confirmed"
+      ]
+    },
+    "json_20_01_flight_card": {
+      "required_keys": [
+        "flight_code",
+        "origin",
+        "destination",
+        "delayed"
+      ]
+    },
+    "json_20_02_flight_card": {
+      "required_keys": [
+        "flight_code",
+        "origin",
+        "destination",
+        "delayed"
+      ]
+    },
+    "json_20_03_flight_card": {
+      "required_keys": [
+        "flight_code",
+        "origin",
+        "destination",
+        "delayed"
+      ]
+    },
+    "json_20_04_flight_card": {
+      "required_keys": [
+        "flight_code",
+        "origin",
+        "destination",
+        "delayed"
+      ]
+    },
+    "json_20_05_flight_card": {
+      "required_keys": [
+        "flight_code",
+        "origin",
+        "destination",
+        "delayed"
+      ]
+    },
+    "json_20_06_flight_card": {
+      "required_keys": [
+        "flight_code",
+        "origin",
+        "destination",
+        "delayed"
+      ]
+    },
+    "json_20_07_flight_card": {
+      "required_keys": [
+        "flight_code",
+        "origin",
+        "destination",
+        "delayed"
+      ]
+    },
+    "json_20_08_flight_card": {
+      "required_keys": [
+        "flight_code",
+        "origin",
+        "destination",
+        "delayed"
+      ]
+    },
+    "json_21_01_movie_entry": {
+      "required_keys": [
+        "title",
+        "director",
+        "runtime_mins",
+        "in_theaters"
+      ]
+    },
+    "json_21_02_movie_entry": {
+      "required_keys": [
+        "title",
+        "director",
+        "runtime_mins",
+        "in_theaters"
+      ]
+    },
+    "json_21_03_movie_entry": {
+      "required_keys": [
+        "title",
+        "director",
+        "runtime_mins",
+        "in_theaters"
+      ]
+    },
+    "json_21_04_movie_entry": {
+      "required_keys": [
+        "title",
+        "director",
+        "runtime_mins",
+        "in_theaters"
+      ]
+    },
+    "json_21_05_movie_entry": {
+      "required_keys": [
+        "title",
+        "director",
+        "runtime_mins",
+        "in_theaters"
+      ]
+    },
+    "json_21_06_movie_entry": {
+      "required_keys": [
+        "title",
+        "director",
+        "runtime_mins",
+        "in_theaters"
+      ]
+    },
+    "json_21_07_movie_entry": {
+      "required_keys": [
+        "title",
+        "director",
+        "runtime_mins",
+        "in_theaters"
+      ]
+    },
+    "json_21_08_movie_entry": {
+      "required_keys": [
+        "title",
+        "director",
+        "runtime_mins",
+        "in_theaters"
+      ]
+    },
+    "json_22_01_recipe_card": {
+      "required_keys": [
+        "recipe_name",
+        "servings",
+        "prep_mins",
+        "vegetarian"
+      ]
+    },
+    "json_22_02_recipe_card": {
+      "required_keys": [
+        "recipe_name",
+        "servings",
+        "prep_mins",
+        "vegetarian"
+      ]
+    },
+    "json_22_03_recipe_card": {
+      "required_keys": [
+        "recipe_name",
+        "servings",
+        "prep_mins",
+        "vegetarian"
+      ]
+    },
+    "json_22_04_recipe_card": {
+      "required_keys": [
+        "recipe_name",
+        "servings",
+        "prep_mins",
+        "vegetarian"
+      ]
+    },
+    "json_22_05_recipe_card": {
+      "required_keys": [
+        "recipe_name",
+        "servings",
+        "prep_mins",
+        "vegetarian"
+      ]
+    },
+    "json_22_06_recipe_card": {
+      "required_keys": [
+        "recipe_name",
+        "servings",
+        "prep_mins",
+        "vegetarian"
+      ]
+    },
+    "json_22_07_recipe_card": {
+      "required_keys": [
+        "recipe_name",
+        "servings",
+        "prep_mins",
+        "vegetarian"
+      ]
+    },
+    "json_22_08_recipe_card": {
+      "required_keys": [
+        "recipe_name",
+        "servings",
+        "prep_mins",
+        "vegetarian"
+      ]
+    },
+    "json_23_01_auth_claims": {
+      "required_keys": [
+        "subject_id",
+        "issuer",
+        "expires_epoch",
+        "is_admin"
+      ]
+    },
+    "json_23_02_auth_claims": {
+      "required_keys": [
+        "subject_id",
+        "issuer",
+        "expires_epoch",
+        "is_admin"
+      ]
+    },
+    "json_23_03_auth_claims": {
+      "required_keys": [
+        "subject_id",
+        "issuer",
+        "expires_epoch",
+        "is_admin"
+      ]
+    },
+    "json_23_04_auth_claims": {
+      "required_keys": [
+        "subject_id",
+        "issuer",
+        "expires_epoch",
+        "is_admin"
+      ]
+    },
+    "json_23_05_auth_claims": {
+      "required_keys": [
+        "subject_id",
+        "issuer",
+        "expires_epoch",
+        "is_admin"
+      ]
+    },
+    "json_23_06_auth_claims": {
+      "required_keys": [
+        "subject_id",
+        "issuer",
+        "expires_epoch",
+        "is_admin"
+      ]
+    },
+    "json_23_07_auth_claims": {
+      "required_keys": [
+        "subject_id",
+        "issuer",
+        "expires_epoch",
+        "is_admin"
+      ]
+    },
+    "json_23_08_auth_claims": {
+      "required_keys": [
+        "subject_id",
+        "issuer",
+        "expires_epoch",
+        "is_admin"
+      ]
+    },
+    "json_24_01_hardware_stats": {
+      "required_keys": [
+        "cpu_pct",
+        "memory_used_mb",
+        "fan_rpm",
+        "throttling"
+      ]
+    },
+    "json_24_02_hardware_stats": {
+      "required_keys": [
+        "cpu_pct",
+        "memory_used_mb",
+        "fan_rpm",
+        "throttling"
+      ]
+    },
+    "json_24_03_hardware_stats": {
+      "required_keys": [
+        "cpu_pct",
+        "memory_used_mb",
+        "fan_rpm",
+        "throttling"
+      ]
+    },
+    "json_24_04_hardware_stats": {
+      "required_keys": [
+        "cpu_pct",
+        "memory_used_mb",
+        "fan_rpm",
+        "throttling"
+      ]
+    },
+    "json_24_05_hardware_stats": {
+      "required_keys": [
+        "cpu_pct",
+        "memory_used_mb",
+        "fan_rpm",
+        "throttling"
+      ]
+    },
+    "json_24_06_hardware_stats": {
+      "required_keys": [
+        "cpu_pct",
+        "memory_used_mb",
+        "fan_rpm",
+        "throttling"
+      ]
+    },
+    "json_24_07_hardware_stats": {
+      "required_keys": [
+        "cpu_pct",
+        "memory_used_mb",
+        "fan_rpm",
+        "throttling"
+      ]
+    },
+    "json_24_08_hardware_stats": {
+      "required_keys": [
+        "cpu_pct",
+        "memory_used_mb",
+        "fan_rpm",
+        "throttling"
+      ]
+    },
+    "json_25_01_git_commit": {
+      "required_keys": [
+        "commit_hash",
+        "author_name",
+        "files_modified",
+        "is_merge"
+      ]
+    },
+    "json_25_02_git_commit": {
+      "required_keys": [
+        "commit_hash",
+        "author_name",
+        "files_modified",
+        "is_merge"
+      ]
+    },
+    "json_25_03_git_commit": {
+      "required_keys": [
+        "commit_hash",
+        "author_name",
+        "files_modified",
+        "is_merge"
+      ]
+    },
+    "json_25_04_git_commit": {
+      "required_keys": [
+        "commit_hash",
+        "author_name",
+        "files_modified",
+        "is_merge"
+      ]
+    },
+    "json_25_05_git_commit": {
+      "required_keys": [
+        "commit_hash",
+        "author_name",
+        "files_modified",
+        "is_merge"
+      ]
+    },
+    "json_25_06_git_commit": {
+      "required_keys": [
+        "commit_hash",
+        "author_name",
+        "files_modified",
+        "is_merge"
+      ]
+    },
+    "json_25_07_git_commit": {
+      "required_keys": [
+        "commit_hash",
+        "author_name",
+        "files_modified",
+        "is_merge"
+      ]
+    },
+    "json_25_08_git_commit": {
+      "required_keys": [
+        "commit_hash",
+        "author_name",
+        "files_modified",
+        "is_merge"
+      ]
+    }
+  }
+}

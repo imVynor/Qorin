@@ -1,0 +1,637 @@
+{
+  "exp_d_parent": {
+    "tag": "exp_d_parent",
+    "name": "Experiment D Parent",
+    "step": 425,
+    "checkpoint": "ckpt_experiment_d_best.pt",
+    "sha256": "c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7",
+    "total_tasks": 150,
+    "intent_recognition": {
+      "tp": 114,
+      "fp": 18,
+      "tn": 18,
+      "fn": 0,
+      "precision": 0.8636,
+      "precision_ci": [
+        0.7947,
+        0.912
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        0.9674,
+        1.0
+      ],
+      "f1": 0.9268,
+      "accuracy": 0.88,
+      "accuracy_ci": [
+        0.8183,
+        0.9227
+      ],
+      "direct_task_fpr": 0.5,
+      "direct_task_fpr_ci": [
+        0.3447,
+        0.6553
+      ],
+      "direct_fp_count": 18,
+      "direct_total": 36
+    },
+    "tool_selection": {
+      "python_selection_recall": 0.9211,
+      "python_selection_recall_ci": [
+        0.792,
+        0.9728
+      ],
+      "python_correct": 35,
+      "python_total": 38,
+      "web_selection_recall": 0.8026,
+      "web_selection_recall_ci": [
+        0.6996,
+        0.8766
+      ],
+      "web_correct": 61,
+      "web_total": 76,
+      "correct_tool_selection_accuracy": 0.8421,
+      "correct_tool_selection_accuracy_ci": [
+        0.7642,
+        0.8977
+      ],
+      "correct_tools_count": 96,
+      "tool_tasks_total": 114,
+      "incorrect_tool_selection_count": 18,
+      "unnecessary_tool_calls_count": 18,
+      "missed_tool_calls_count": 0
+    },
+    "argument_and_execution_quality": {
+      "calls_attempted": 132,
+      "schema_validity_count": 123,
+      "schema_validity_rate": 0.9318,
+      "semantic_args_validity_count": 123,
+      "semantic_args_validity_rate": 0.9318,
+      "dispatched_count": 123,
+      "dispatch_rate": 0.9318,
+      "execution_success_count": 29,
+      "execution_success_rate": 0.2358,
+      "failure_categories": {
+        "network_timeout": 79,
+        "runtime_error": 15,
+        "schema_error": 9
+      },
+      "recovery_after_tool_errors": 0.0
+    },
+    "evidence_grounded_synthesis": {
+      "total_claims_evaluated": 97,
+      "supported_claims": 41,
+      "partially_supported_claims": 36,
+      "unsupported_claims": 20,
+      "contradicted_claims": 0,
+      "claim_precision": 0.6082,
+      "claim_evidence_coverage": 0.2526,
+      "unsupported_factual_claim_rate": 0.2062,
+      "contradiction_rate": 0.0,
+      "numerical_extraction_accuracy": 0.1692,
+      "entity_value_association_accuracy": 0.5538,
+      "citation_correctness_rate": 0.0308,
+      "citation_tasks_count": 2,
+      "factual_tasks_total": 65
+    },
+    "autonomous_multistep": {
+      "total_multistep_tasks": 15,
+      "fully_autonomous_success_count": 0,
+      "fully_autonomous_success_rate": 0.0,
+      "stage_completion_counts": {
+        "stage1_web_dispatched": 0,
+        "stage2_web_valid_args": 0,
+        "stage3_evidence_extracted": 1,
+        "stage4_python_dispatched": 0,
+        "stage5_python_valid_args": 0,
+        "stage6_python_executed": 0,
+        "stage7_final_grounded": 2
+      },
+      "stage_completion_rates": {
+        "stage1_web_dispatched": 0.0,
+        "stage2_web_valid_args": 0.0,
+        "stage3_evidence_extracted": 0.0667,
+        "stage4_python_dispatched": 0.0,
+        "stage5_python_valid_args": 0.0,
+        "stage6_python_executed": 0.0,
+        "stage7_final_grounded": 0.1333
+      }
+    },
+    "overall_performance": {
+      "end_to_end_semantic_success_count": 33,
+      "end_to_end_semantic_success_rate": 0.22,
+      "semantic_success_ci": [
+        0.1612,
+        0.2928
+      ]
+    }
+  },
+  "branch_b_best": {
+    "tag": "branch_b_best",
+    "name": "Branch B Best (Calibration)",
+    "step": 25,
+    "checkpoint": "ckpt_branch_best.pt",
+    "sha256": "beec486831406acf3a6ac315cc188a1f2f97a5c978361ddfa7727d69a39436f6",
+    "total_tasks": 150,
+    "intent_recognition": {
+      "tp": 107,
+      "fp": 4,
+      "tn": 32,
+      "fn": 7,
+      "precision": 0.964,
+      "precision_ci": [
+        0.911,
+        0.9859
+      ],
+      "recall": 0.9386,
+      "recall_ci": [
+        0.8787,
+        0.9699
+      ],
+      "f1": 0.9511,
+      "accuracy": 0.9267,
+      "accuracy_ci": [
+        0.8735,
+        0.9586
+      ],
+      "direct_task_fpr": 0.1111,
+      "direct_task_fpr_ci": [
+        0.0441,
+        0.2531
+      ],
+      "direct_fp_count": 4,
+      "direct_total": 36
+    },
+    "tool_selection": {
+      "python_selection_recall": 0.9211,
+      "python_selection_recall_ci": [
+        0.792,
+        0.9728
+      ],
+      "python_correct": 35,
+      "python_total": 38,
+      "web_selection_recall": 0.7237,
+      "web_selection_recall_ci": [
+        0.6142,
+        0.8116
+      ],
+      "web_correct": 55,
+      "web_total": 76,
+      "correct_tool_selection_accuracy": 0.7895,
+      "correct_tool_selection_accuracy_ci": [
+        0.7058,
+        0.8542
+      ],
+      "correct_tools_count": 90,
+      "tool_tasks_total": 114,
+      "incorrect_tool_selection_count": 17,
+      "unnecessary_tool_calls_count": 4,
+      "missed_tool_calls_count": 7
+    },
+    "argument_and_execution_quality": {
+      "calls_attempted": 111,
+      "schema_validity_count": 101,
+      "schema_validity_rate": 0.9099,
+      "semantic_args_validity_count": 101,
+      "semantic_args_validity_rate": 0.9099,
+      "dispatched_count": 101,
+      "dispatch_rate": 0.9099,
+      "execution_success_count": 36,
+      "execution_success_rate": 0.3564,
+      "failure_categories": {
+        "network_timeout": 51,
+        "runtime_error": 14,
+        "schema_error": 10
+      },
+      "recovery_after_tool_errors": 0.0
+    },
+    "evidence_grounded_synthesis": {
+      "total_claims_evaluated": 150,
+      "supported_claims": 74,
+      "partially_supported_claims": 39,
+      "unsupported_claims": 37,
+      "contradicted_claims": 0,
+      "claim_precision": 0.6233,
+      "claim_evidence_coverage": 0.2711,
+      "unsupported_factual_claim_rate": 0.2467,
+      "contradiction_rate": 0.0,
+      "numerical_extraction_accuracy": 0.3154,
+      "entity_value_association_accuracy": 0.5846,
+      "citation_correctness_rate": 0.0462,
+      "citation_tasks_count": 3,
+      "factual_tasks_total": 65
+    },
+    "autonomous_multistep": {
+      "total_multistep_tasks": 15,
+      "fully_autonomous_success_count": 0,
+      "fully_autonomous_success_rate": 0.0,
+      "stage_completion_counts": {
+        "stage1_web_dispatched": 0,
+        "stage2_web_valid_args": 0,
+        "stage3_evidence_extracted": 4,
+        "stage4_python_dispatched": 0,
+        "stage5_python_valid_args": 0,
+        "stage6_python_executed": 0,
+        "stage7_final_grounded": 1
+      },
+      "stage_completion_rates": {
+        "stage1_web_dispatched": 0.0,
+        "stage2_web_valid_args": 0.0,
+        "stage3_evidence_extracted": 0.2667,
+        "stage4_python_dispatched": 0.0,
+        "stage5_python_valid_args": 0.0,
+        "stage6_python_executed": 0.0,
+        "stage7_final_grounded": 0.0667
+      }
+    },
+    "overall_performance": {
+      "end_to_end_semantic_success_count": 35,
+      "end_to_end_semantic_success_rate": 0.2333,
+      "semantic_success_ci": [
+        0.1728,
+        0.3072
+      ]
+    }
+  },
+  "branch_c_best": {
+    "tag": "branch_c_best",
+    "name": "Branch C Best (Synthesis)",
+    "step": 25,
+    "checkpoint": "ckpt_branch_best.pt",
+    "sha256": "e1ae15ca223a30ecc7a3b56b54062244ff7a2e58e969dad86e64124065a45e0e",
+    "total_tasks": 150,
+    "intent_recognition": {
+      "tp": 114,
+      "fp": 7,
+      "tn": 29,
+      "fn": 0,
+      "precision": 0.9421,
+      "precision_ci": [
+        0.8854,
+        0.9717
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        0.9674,
+        1.0
+      ],
+      "f1": 0.9702,
+      "accuracy": 0.9533,
+      "accuracy_ci": [
+        0.9068,
+        0.9772
+      ],
+      "direct_task_fpr": 0.1944,
+      "direct_task_fpr_ci": [
+        0.0975,
+        0.3503
+      ],
+      "direct_fp_count": 7,
+      "direct_total": 36
+    },
+    "tool_selection": {
+      "python_selection_recall": 0.8421,
+      "python_selection_recall_ci": [
+        0.6958,
+        0.9256
+      ],
+      "python_correct": 32,
+      "python_total": 38,
+      "web_selection_recall": 0.8289,
+      "web_selection_recall_ci": [
+        0.729,
+        0.8972
+      ],
+      "web_correct": 63,
+      "web_total": 76,
+      "correct_tool_selection_accuracy": 0.8333,
+      "correct_tool_selection_accuracy_ci": [
+        0.7543,
+        0.8906
+      ],
+      "correct_tools_count": 95,
+      "tool_tasks_total": 114,
+      "incorrect_tool_selection_count": 19,
+      "unnecessary_tool_calls_count": 7,
+      "missed_tool_calls_count": 0
+    },
+    "argument_and_execution_quality": {
+      "calls_attempted": 121,
+      "schema_validity_count": 105,
+      "schema_validity_rate": 0.8678,
+      "semantic_args_validity_count": 105,
+      "semantic_args_validity_rate": 0.8678,
+      "dispatched_count": 105,
+      "dispatch_rate": 0.8678,
+      "execution_success_count": 16,
+      "execution_success_rate": 0.1524,
+      "failure_categories": {
+        "network_timeout": 75,
+        "runtime_error": 14,
+        "schema_error": 16
+      },
+      "recovery_after_tool_errors": 0.0
+    },
+    "evidence_grounded_synthesis": {
+      "total_claims_evaluated": 88,
+      "supported_claims": 29,
+      "partially_supported_claims": 41,
+      "unsupported_claims": 18,
+      "contradicted_claims": 0,
+      "claim_precision": 0.5625,
+      "claim_evidence_coverage": 0.1537,
+      "unsupported_factual_claim_rate": 0.2045,
+      "contradiction_rate": 0.0,
+      "numerical_extraction_accuracy": 0.1385,
+      "entity_value_association_accuracy": 0.4462,
+      "citation_correctness_rate": 0.0,
+      "citation_tasks_count": 0,
+      "factual_tasks_total": 65
+    },
+    "autonomous_multistep": {
+      "total_multistep_tasks": 15,
+      "fully_autonomous_success_count": 0,
+      "fully_autonomous_success_rate": 0.0,
+      "stage_completion_counts": {
+        "stage1_web_dispatched": 2,
+        "stage2_web_valid_args": 2,
+        "stage3_evidence_extracted": 1,
+        "stage4_python_dispatched": 0,
+        "stage5_python_valid_args": 0,
+        "stage6_python_executed": 0,
+        "stage7_final_grounded": 3
+      },
+      "stage_completion_rates": {
+        "stage1_web_dispatched": 0.1333,
+        "stage2_web_valid_args": 0.1333,
+        "stage3_evidence_extracted": 0.0667,
+        "stage4_python_dispatched": 0.0,
+        "stage5_python_valid_args": 0.0,
+        "stage6_python_executed": 0.0,
+        "stage7_final_grounded": 0.2
+      }
+    },
+    "overall_performance": {
+      "end_to_end_semantic_success_count": 34,
+      "end_to_end_semantic_success_rate": 0.2267,
+      "semantic_success_ci": [
+        0.167,
+        0.3
+      ]
+    }
+  },
+  "branch_d_best": {
+    "tag": "branch_d_best",
+    "name": "Branch D Best (Combined)",
+    "step": 25,
+    "checkpoint": "ckpt_branch_d_best.pt",
+    "sha256": "7322b9aee559945c32f02f59835e7143534c3982178b5aacf4b31470934f9dcc",
+    "total_tasks": 150,
+    "intent_recognition": {
+      "tp": 111,
+      "fp": 15,
+      "tn": 21,
+      "fn": 3,
+      "precision": 0.881,
+      "precision_ci": [
+        0.8129,
+        0.9265
+      ],
+      "recall": 0.9737,
+      "recall_ci": [
+        0.9255,
+        0.991
+      ],
+      "f1": 0.925,
+      "accuracy": 0.88,
+      "accuracy_ci": [
+        0.8183,
+        0.9227
+      ],
+      "direct_task_fpr": 0.4167,
+      "direct_task_fpr_ci": [
+        0.2714,
+        0.578
+      ],
+      "direct_fp_count": 15,
+      "direct_total": 36
+    },
+    "tool_selection": {
+      "python_selection_recall": 0.9474,
+      "python_selection_recall_ci": [
+        0.8271,
+        0.9854
+      ],
+      "python_correct": 36,
+      "python_total": 38,
+      "web_selection_recall": 0.7632,
+      "web_selection_recall_ci": [
+        0.6564,
+        0.8446
+      ],
+      "web_correct": 58,
+      "web_total": 76,
+      "correct_tool_selection_accuracy": 0.8246,
+      "correct_tool_selection_accuracy_ci": [
+        0.7445,
+        0.8835
+      ],
+      "correct_tools_count": 94,
+      "tool_tasks_total": 114,
+      "incorrect_tool_selection_count": 17,
+      "unnecessary_tool_calls_count": 15,
+      "missed_tool_calls_count": 3
+    },
+    "argument_and_execution_quality": {
+      "calls_attempted": 126,
+      "schema_validity_count": 118,
+      "schema_validity_rate": 0.9365,
+      "semantic_args_validity_count": 118,
+      "semantic_args_validity_rate": 0.9365,
+      "dispatched_count": 118,
+      "dispatch_rate": 0.9365,
+      "execution_success_count": 27,
+      "execution_success_rate": 0.2288,
+      "failure_categories": {
+        "network_timeout": 70,
+        "runtime_error": 21,
+        "schema_error": 8
+      },
+      "recovery_after_tool_errors": 0.0
+    },
+    "evidence_grounded_synthesis": {
+      "total_claims_evaluated": 82,
+      "supported_claims": 38,
+      "partially_supported_claims": 28,
+      "unsupported_claims": 16,
+      "contradicted_claims": 0,
+      "claim_precision": 0.6341,
+      "claim_evidence_coverage": 0.2268,
+      "unsupported_factual_claim_rate": 0.1951,
+      "contradiction_rate": 0.0,
+      "numerical_extraction_accuracy": 0.2615,
+      "entity_value_association_accuracy": 0.5692,
+      "citation_correctness_rate": 0.0,
+      "citation_tasks_count": 0,
+      "factual_tasks_total": 65
+    },
+    "autonomous_multistep": {
+      "total_multistep_tasks": 15,
+      "fully_autonomous_success_count": 0,
+      "fully_autonomous_success_rate": 0.0,
+      "stage_completion_counts": {
+        "stage1_web_dispatched": 0,
+        "stage2_web_valid_args": 0,
+        "stage3_evidence_extracted": 3,
+        "stage4_python_dispatched": 0,
+        "stage5_python_valid_args": 0,
+        "stage6_python_executed": 0,
+        "stage7_final_grounded": 1
+      },
+      "stage_completion_rates": {
+        "stage1_web_dispatched": 0.0,
+        "stage2_web_valid_args": 0.0,
+        "stage3_evidence_extracted": 0.2,
+        "stage4_python_dispatched": 0.0,
+        "stage5_python_valid_args": 0.0,
+        "stage6_python_executed": 0.0,
+        "stage7_final_grounded": 0.0667
+      }
+    },
+    "overall_performance": {
+      "end_to_end_semantic_success_count": 34,
+      "end_to_end_semantic_success_rate": 0.2267,
+      "semantic_success_ci": [
+        0.167,
+        0.3
+      ]
+    }
+  },
+  "branch_d_terminal": {
+    "tag": "branch_d_terminal",
+    "name": "Branch D Terminal Gate (Step 150)",
+    "step": 150,
+    "checkpoint": "ckpt_branch_d_step200.pt",
+    "sha256": "78f8ca6b8c8e08471805c03d60a61884dc10e676eeb0f20a4c668e4fc0068eb8",
+    "total_tasks": 150,
+    "intent_recognition": {
+      "tp": 106,
+      "fp": 7,
+      "tn": 29,
+      "fn": 8,
+      "precision": 0.9381,
+      "precision_ci": [
+        0.8776,
+        0.9697
+      ],
+      "recall": 0.9298,
+      "recall_ci": [
+        0.8676,
+        0.964
+      ],
+      "f1": 0.9339,
+      "accuracy": 0.9,
+      "accuracy_ci": [
+        0.8416,
+        0.9385
+      ],
+      "direct_task_fpr": 0.1944,
+      "direct_task_fpr_ci": [
+        0.0975,
+        0.3503
+      ],
+      "direct_fp_count": 7,
+      "direct_total": 36
+    },
+    "tool_selection": {
+      "python_selection_recall": 0.9737,
+      "python_selection_recall_ci": [
+        0.8651,
+        0.9953
+      ],
+      "python_correct": 37,
+      "python_total": 38,
+      "web_selection_recall": 0.7368,
+      "web_selection_recall_ci": [
+        0.6282,
+        0.8227
+      ],
+      "web_correct": 56,
+      "web_total": 76,
+      "correct_tool_selection_accuracy": 0.8158,
+      "correct_tool_selection_accuracy_ci": [
+        0.7348,
+        0.8762
+      ],
+      "correct_tools_count": 93,
+      "tool_tasks_total": 114,
+      "incorrect_tool_selection_count": 13,
+      "unnecessary_tool_calls_count": 7,
+      "missed_tool_calls_count": 8
+    },
+    "argument_and_execution_quality": {
+      "calls_attempted": 113,
+      "schema_validity_count": 95,
+      "schema_validity_rate": 0.8407,
+      "semantic_args_validity_count": 95,
+      "semantic_args_validity_rate": 0.8407,
+      "dispatched_count": 95,
+      "dispatch_rate": 0.8407,
+      "execution_success_count": 22,
+      "execution_success_rate": 0.2316,
+      "failure_categories": {
+        "network_timeout": 56,
+        "schema_error": 18,
+        "runtime_error": 17
+      },
+      "recovery_after_tool_errors": 0.0
+    },
+    "evidence_grounded_synthesis": {
+      "total_claims_evaluated": 80,
+      "supported_claims": 42,
+      "partially_supported_claims": 25,
+      "unsupported_claims": 13,
+      "contradicted_claims": 0,
+      "claim_precision": 0.6813,
+      "claim_evidence_coverage": 0.1351,
+      "unsupported_factual_claim_rate": 0.1625,
+      "contradiction_rate": 0.0,
+      "numerical_extraction_accuracy": 0.2615,
+      "entity_value_association_accuracy": 0.6,
+      "citation_correctness_rate": 0.0154,
+      "citation_tasks_count": 1,
+      "factual_tasks_total": 65
+    },
+    "autonomous_multistep": {
+      "total_multistep_tasks": 15,
+      "fully_autonomous_success_count": 0,
+      "fully_autonomous_success_rate": 0.0,
+      "stage_completion_counts": {
+        "stage1_web_dispatched": 2,
+        "stage2_web_valid_args": 2,
+        "stage3_evidence_extracted": 1,
+        "stage4_python_dispatched": 0,
+        "stage5_python_valid_args": 0,
+        "stage6_python_executed": 0,
+        "stage7_final_grounded": 3
+      },
+      "stage_completion_rates": {
+        "stage1_web_dispatched": 0.1333,
+        "stage2_web_valid_args": 0.1333,
+        "stage3_evidence_extracted": 0.0667,
+        "stage4_python_dispatched": 0.0,
+        "stage5_python_valid_args": 0.0,
+        "stage6_python_executed": 0.0,
+        "stage7_final_grounded": 0.2
+      }
+    },
+    "overall_performance": {
+      "end_to_end_semantic_success_count": 38,
+      "end_to_end_semantic_success_rate": 0.2533,
+      "semantic_success_ci": [
+        0.1905,
+        0.3285
+      ]
+    }
+  }
+}

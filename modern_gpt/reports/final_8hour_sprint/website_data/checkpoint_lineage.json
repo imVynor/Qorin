@@ -1,0 +1,79 @@
+{
+  "metadata": {
+    "title": "ModernGPT-S Checkpoint Lineage Graph",
+    "source_artifacts": [
+      "modern_gpt/checkpoints/500m_pretrain/ckpt_latest.pt",
+      "modern_gpt/checkpoints/sft_500m_pilot_25m/ckpt_latest.pt",
+      "modern_gpt/experiments/phase2_experiment_b/stage_4_release/release_checkpoint/ckpt_experiment_b_final.pt",
+      "modern_gpt/experiments/phase2_experiment_c/stage_3_training/checkpoints/ckpt_experiment_c_final.pt"
+    ],
+    "model": "QORIN (514M parameters)",
+    "sprint": "Final 8-Hour Sprint: Reliability and Research Showcase",
+    "two_stage_protocol_enabled": true
+  },
+  "nodes": [
+    {
+      "id": "base_pretrained",
+      "label": "ModernGPT-S Base Pretrained (1.12B Tokens)",
+      "checkpoint": "ckpt_latest.pt",
+      "sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+      "parameters": 514480128,
+      "parent": null,
+      "training_loss": 2.741,
+      "retention_ppl": 17.5
+    },
+    {
+      "id": "experiment_a",
+      "label": "Experiment A (General SFT Pilot 25M)",
+      "checkpoint": "ckpt_latest.pt",
+      "sha256": "249fb467a9cf76e732890cc0501ec39a443756cb2f1c86c66402960f4abbadc4",
+      "parameters": 514480128,
+      "parent": "base_pretrained",
+      "training_loss": 1.621,
+      "coding_syntax": 52.0,
+      "pass_at_1": 14.0
+    },
+    {
+      "id": "experiment_b",
+      "label": "Experiment B (General + Tool SFT 35M)",
+      "checkpoint": "ckpt_experiment_b_final.pt",
+      "sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+      "parameters": 514480128,
+      "parent": "base_pretrained",
+      "training_loss": 1.4883,
+      "coding_syntax": 92.0,
+      "pass_at_1": 42.0,
+      "tool_intent_recall": 0.0
+    },
+    {
+      "id": "experiment_c",
+      "label": "Experiment C (Targeted Autonomous Tool SFT)",
+      "checkpoint": "ckpt_experiment_c_final.pt",
+      "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b",
+      "parameters": 514480128,
+      "parent": "experiment_b",
+      "training_loss": 1.1704,
+      "coding_syntax": 96.0,
+      "pass_at_1": 38.0,
+      "tool_intent_recall": 80.0,
+      "tool_intent_f1": 0.8889
+    }
+  ],
+  "edges": [
+    {
+      "from": "base_pretrained",
+      "to": "experiment_a",
+      "relation": "sft_branch_a"
+    },
+    {
+      "from": "base_pretrained",
+      "to": "experiment_b",
+      "relation": "sft_branch_b"
+    },
+    {
+      "from": "experiment_b",
+      "to": "experiment_c",
+      "relation": "targeted_sft_branch_c"
+    }
+  ]
+}

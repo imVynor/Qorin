@@ -1,0 +1,41 @@
+{
+  "base_pretrained": {
+    "total_prompts": 600,
+    "empty_response_count": 0,
+    "empty_rate_pct": 0.0,
+    "prompt_echo_count": 30,
+    "prompt_echo_rate_pct": 5.0,
+    "mean_word_count": 66.8,
+    "mean_distinct_1": 0.4877,
+    "mean_distinct_2": 0.5901,
+    "mean_distinct_3": 0.6283,
+    "mean_repetition_4_rate": 0.3443,
+    "elapsed_sec": 936.6
+  },
+  "experiment_a": {
+    "total_prompts": 600,
+    "empty_response_count": 0,
+    "empty_rate_pct": 0.0,
+    "prompt_echo_count": 2,
+    "prompt_echo_rate_pct": 0.33,
+    "mean_word_count": 68.5,
+    "mean_distinct_1": 0.4878,
+    "mean_distinct_2": 0.6163,
+    "mean_distinct_3": 0.6614,
+    "mean_repetition_4_rate": 0.3079,
+    "elapsed_sec": 957.6
+  },
+  "experiment_b": {
+    "total_prompts": 600,
+    "empty_response_count": 0,
+    "empty_rate_pct": 0.0,
+    "prompt_echo_count": 5,
+    "prompt_echo_rate_pct": 0.83,
+    "mean_word_count": 65.3,
+    "mean_distinct_1": 0.5075,
+    "mean_distinct_2": 0.6312,
+    "mean_distinct_3": 0.6743,
+    "mean_repetition_4_rate": 0.2933,
+    "elapsed_sec": 888.8
+  }
+}

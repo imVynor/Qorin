@@ -1,0 +1,69 @@
+sequenceDiagram
+    autonumber
+    actor User
+    participant SM as MultiTurnStateMachine
+    participant Model as QORIN Model
+    participant PV as ToolValidator
+    participant Provider as Web/Python Provider
+    participant Cache as SQLiteCache
+
+    User->>SM: run_session(user_prompt)
+    Note over SM: State: RECEIVE_USER_REQUEST<br/>Initialize Session & ChatML Context
+    SM->>SM: Transition to MODEL_DECISION
+    
+    rect rgb(240, 248, 255)
+        Note over SM,Model: Turn 1: Initial Tool Selection
+        SM->>Model: generate(context_tokens)
+        Model-->>SM: <tool_call id="call_001">{"name": "web_search", "arguments": {"query": "..."}}</tool_call>
+        SM->>SM: Transition to VALIDATE_TOOL_CALL
+        SM->>PV: validate_call(name, arguments)
+        PV-->>SM: Schema Valid
+        SM->>SM: Transition to EXECUTE_TOOL
+        
+        alt Tool is Web Search
+            SM->>Cache: get(query)
+            alt Cache Hit
+                Cache-->>SM: cached EvidenceBundle
+            else Cache Miss
+                SM->>Provider: DuckDuckGoProvider.search(query)
+                Provider-->>SM: EvidenceBundle
+                SM->>Cache: set(query, bundle)
+            end
+        else Tool is Python
+            SM->>Provider: PythonExecutionContract.execute(code)
+            Provider-->>SM: PythonExecutionResult
+        end
+        
+        SM->>SM: Transition to APPEND_TOOL_OBSERVATION
+        Note over SM: Format observation matching call_001<br/>Append to session.history
+        SM->>SM: Transition to MODEL_FOLLOWUP_DECISION
+    end
+
+    rect rgb(255, 250, 240)
+        Note over SM,Model: Turn 2: Followup Tool Selection (Chaining)
+        SM->>Model: generate(multi_turn_context_tokens)
+        alt Model Decides Another Tool (e.g. Python)
+            Model-->>SM: <tool_call id="call_002">{"name": "python_interpreter", "arguments": {"code": "..."}}</tool_call>
+            SM->>SM: Transition to VALIDATE_TOOL_CALL
+            SM->>PV: validate_call(name, arguments)
+            PV-->>SM: Schema Valid
+            SM->>SM: Transition to EXECUTE_TOOL
+            SM->>Provider: PythonExecutionContract.execute(code)
+            Provider-->>SM: PythonExecutionResult
+            SM->>SM: Transition to APPEND_TOOL_OBSERVATION
+            SM->>SM: Transition to MODEL_FOLLOWUP_DECISION
+        else Model Synthesizes Final Answer Directly
+            Model-->>SM: Final grounded natural language answer
+            SM->>SM: Transition to FINAL_SYNTHESIS
+        end
+    end
+
+    alt Followup Model Inference
+        SM->>Model: generate(full_trajectory_tokens)
+        Model-->>SM: Final answer with citations
+        SM->>SM: Transition to FINAL_SYNTHESIS
+    end
+
+    Note over SM: State: FINAL_SYNTHESIS<br/>Verify grounded response
+    SM->>SM: Transition to COMPLETE
+    SM-->>User: SessionResult(response, history, total_calls, execution_time)

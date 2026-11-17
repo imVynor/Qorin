@@ -1,0 +1,63 @@
+{
+  "summary": {
+    "total_tests": 8,
+    "passed_tests": 8,
+    "failed_tests": 0,
+    "pass_rate": "100%",
+    "execution_timestamp": "2026-11-17 12:22:12 UTC",
+    "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4"
+  },
+  "cases": {
+    "test_1_jensen_huang": {
+      "prompt": "Who is Jensen Huang?",
+      "final_text": "Based on verified sources ([SOURCE_2]): Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA) [SOURCE_2].",
+      "attribution_correct": true,
+      "tools_executed": 2,
+      "status": "PASSED"
+    },
+    "test_2_donald_trump": {
+      "prompt": "Who is Donald Trump?",
+      "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "attribution_correct": true,
+      "tools_executed": 2,
+      "status": "PASSED"
+    },
+    "test_3_current_president": {
+      "prompt": "Who is the current president of the United States?",
+      "final_text": "Based on verified sources ([SOURCE_3]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States  [SOURCE_3].",
+      "tools_executed": 2,
+      "status": "PASSED"
+    },
+    "test_4_capital_australia": {
+      "prompt": "What is the capital of Australia?",
+      "final_text": "Based on verified sources ([SOURCE_1]): As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus [SOURCE_1].",
+      "tools_executed": 2,
+      "status": "PASSED"
+    },
+    "test_5_sequential_same_conversation": {
+      "turn_1_prompt": "Who is Jensen Huang?",
+      "turn_1_text": "Based on verified sources ([SOURCE_2]): Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA) [SOURCE_2].",
+      "turn_2_prompt": "Who is Donald Trump?",
+      "turn_2_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "cross_turn_contamination_detected": false,
+      "status": "PASSED"
+    },
+    "test_6_separate_conversations": {
+      "jensen_text": "Based on verified sources ([SOURCE_2]): Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA) [SOURCE_2].",
+      "trump_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "cross_conversation_contamination_detected": false,
+      "status": "PASSED"
+    },
+    "test_7_rag_modes": {
+      "rag_off_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "rag_auto_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "rag_always_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "status": "PASSED"
+    },
+    "test_8_repeat_query_same_conversation": {
+      "turn_1_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "turn_2_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "status": "PASSED"
+    }
+  }
+}

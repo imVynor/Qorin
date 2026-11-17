@@ -1,0 +1,166 @@
+{
+  "test_weather": {
+    "query": "grab info on the weather in ahmedabad",
+    "tool_starts": [
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_search",
+        "status": "started",
+        "call_id": "call_001",
+        "args": {
+          "query": "grab information on the weather in ahmedabad"
+        }
+      }
+    ],
+    "tool_results": [
+      {
+        "tool_name": "weather",
+        "original_tool_name": "web_search",
+        "requested_by": "model",
+        "status": "completed",
+        "call_id": "call_001",
+        "input_payload": {
+          "query": "grab information on the weather in ahmedabad"
+        },
+        "output_payload": {
+          "location_name": "Ahmedabad",
+          "country": "India",
+          "admin1": "Gujarat",
+          "latitude": 23.02579,
+          "longitude": 72.58727,
+          "temperature_c": 33.2,
+          "apparent_temperature_c": 33.0,
+          "relative_humidity_pct": 26,
+          "wind_speed_kmh": 3.3,
+          "weather_condition": "Mainly clear",
+          "weather_code": 1,
+          "observation_time": "2026-11-17T16:30",
+          "source": "Open-Meteo Weather API (lat: 23.0258, lon: 72.5873)",
+          "source_url": "https://open-meteo.com",
+          "is_cached": false,
+          "sources": [
+            {
+              "title": "Open-Meteo Weather API (lat: 23.0258, lon: 72.5873)",
+              "url": "https://open-meteo.com"
+            }
+          ]
+        },
+        "source_metadata": {
+          "provider": "Open-Meteo Weather API (lat: 23.0258, lon: 72.5873)",
+          "url": "https://open-meteo.com",
+          "location": "Ahmedabad, Gujarat, India",
+          "coordinates": "23.0258, 72.5873",
+          "observation_time": "2026-11-17T16:30"
+        },
+        "latency_ms": 1350.98,
+        "error": null
+      }
+    ],
+    "user_visible_response": "The National Weather Service [1] records the temperature of 23.0258 in ahmedabad at 3.3\u00b0C (Feels like: 33.5873).",
+    "code_string_leaked": false,
+    "raw_json_leaked": false
+  },
+  "test_trump": {
+    "query": "who is donald trump?",
+    "tool_starts": [
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_search",
+        "status": "started",
+        "call_id": "call_001",
+        "args": {
+          "query": "who is donald trump?"
+        }
+      }
+    ],
+    "tool_results": [
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_search",
+        "requested_by": "model",
+        "status": "completed",
+        "call_id": "call_001",
+        "input_payload": {
+          "query": "who is donald trump?"
+        },
+        "output_payload": {
+          "query": "who is donald trump?",
+          "latency_ms": 0.5,
+          "provider_name": "duckduckgo_lite",
+          "error": null,
+          "records": [
+            {
+              "evidence_id": "SOURCE_1",
+              "source_title": "Donald Trump - Wikipedia",
+              "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+              "source_snippet": "DonaldJohnTrump(born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+              "retrieval_timestamp": 1794912999.0775843,
+              "search_query": "who is donald trump?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "evidence_id": "SOURCE_2",
+              "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+              "source_url": "https://www.britannica.com/biography/Donald-Trump",
+              "source_snippet": "DonaldTrumpisthe 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025,Trumpbecame only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+              "retrieval_timestamp": 1794912999.0775843,
+              "search_query": "who is donald trump?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "evidence_id": "SOURCE_3",
+              "source_title": "President Donald J. Trump",
+              "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+              "source_snippet": "After a landslide election victory in 2024, PresidentDonaldJ.Trumpisreturning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+              "retrieval_timestamp": 1794912999.0775843,
+              "search_query": "who is donald trump?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            }
+          ],
+          "sources": [
+            {
+              "title": "Donald Trump - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+            },
+            {
+              "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+              "url": "https://www.britannica.com/biography/Donald-Trump"
+            },
+            {
+              "title": "President Donald J. Trump",
+              "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+            }
+          ]
+        },
+        "source_metadata": {
+          "source_count": 3,
+          "sources": [
+            {
+              "title": "Donald Trump - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+            },
+            {
+              "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+              "url": "https://www.britannica.com/biography/Donald-Trump"
+            },
+            {
+              "title": "President Donald J. Trump",
+              "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+            }
+          ]
+        },
+        "latency_ms": 12.05,
+        "error": null
+      }
+    ],
+    "user_visible_response": "The White House election victory in 2024 was a historic moment for the United States, marking the beginning of a new era in American politics. The presidential election was a pivotal moment in American history, and President Donald Trump's administration sought to address the nation's growing discontent with the ruling Democratic Party and its policies.",
+    "code_string_leaked": false,
+    "raw_json_leaked": false
+  }
+}

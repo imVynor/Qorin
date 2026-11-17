@@ -1,0 +1,79 @@
+[
+  {
+    "chunk_id": "doc-model-1",
+    "doc_title": "QORIN Model Architecture Specifications",
+    "doc_source": "web/src/data/modelsData.ts",
+    "content": "QORIN-16M contains 16,768,128 parameters (23,305,344 checkpoint tensors including tied embeddings), 6 layers, 384 hidden dimension, 6 attention heads, standard GELU feed-forward network with 1024 intermediate dimension, 512 context length, trained on 150M tokens. It confirmed the syntax-execution capability bottleneck.",
+    "section": "QORIN-16M Proof of Concept",
+    "token_count": 50,
+    "metadata": {
+      "type": "architecture_spec"
+    }
+  },
+  {
+    "chunk_id": "doc-model-2",
+    "doc_title": "QORIN Model Architecture Specifications",
+    "doc_source": "web/src/data/modelsData.ts",
+    "content": "QORIN-50M contains 48,934,912 parameters (58,083,840 checkpoint tensors), 12 layers, 512 hidden dimension, 8 query heads, 4 KV heads (2:1 Grouped-Query Attention ratio), SwiGLU activation with 1376 intermediate dimension, 512 context length. In iso-data ablation on 250M tokens, GQA halved KV-cache memory while preserving 99.4% perplexity.",
+    "section": "QORIN-50M Iso-Data Architecture Champion",
+    "token_count": 58,
+    "metadata": {
+      "type": "architecture_spec"
+    }
+  },
+  {
+    "chunk_id": "doc-model-3",
+    "doc_title": "QORIN Model Architecture Specifications",
+    "doc_source": "web/src/data/modelsData.ts",
+    "content": "QORIN-100M contains 104,807,424 parameters (120,029,440 checkpoint tensors), 14 layers, 768 hidden dimension, 12 query heads, 4 KV heads (3:1 Grouped-Query Attention ratio), SwiGLU activation with 2048 intermediate dimension. In the 4K context pilot, context length was extended from 512 to 4096 tokens using linear RoPE frequency scaling (s = 8.0). Passkey needle-in-a-haystack retrieval collapsed to 4.0% across 4K tokens despite stable perplexity.",
+    "section": "QORIN-100M Baseline & 4K Context Extension",
+    "token_count": 80,
+    "metadata": {
+      "type": "architecture_spec"
+    }
+  },
+  {
+    "chunk_id": "doc-model-4",
+    "doc_title": "QORIN Model Architecture Specifications",
+    "doc_source": "web/src/data/modelsData.ts",
+    "content": "QORIN-500M contains 514,389,504 parameters (569,964,032 checkpoint tensors), 20 layers, 1536 hidden dimension, 24 query heads, 4 KV heads (6:1 Grouped-Query Attention ratio), SwiGLU activation with 3840 intermediate dimension, 2048 context length, trained on a 5B-token corpus across 101 binary shards with token-weighted loss.",
+    "section": "QORIN-500M Pretraining Campaign Target",
+    "token_count": 55,
+    "metadata": {
+      "type": "architecture_spec"
+    }
+  },
+  {
+    "chunk_id": "doc-hw-5",
+    "doc_title": "Hardware & GPU Duty Cycle Specification",
+    "doc_source": "modern_gpt/reports/phase1c_pretraining/gpu_cycle_log.jsonl",
+    "content": "QORIN pretraining and fine-tuning execute on a single physical consumer laptop machine with an NVIDIA GeForce RTX 5060 Laptop GPU (8GB GDDR7 dedicated VRAM). Under PyTorch 2.16 with CUDA and BF16 mixed-precision, sustained throughput is ~5,054 tokens/sec during 500M pretraining (micro-batch size 1, gradient accumulation 16, sequence length 2048). Hardware duty cycle enforces 105 minutes active training followed by 15 minutes idle cooldown to maintain junction temp below 88\u00b0C.",
+    "section": "Hardware Environment",
+    "token_count": 89,
+    "metadata": {
+      "type": "hardware_telemetry"
+    }
+  },
+  {
+    "chunk_id": "doc-data-6",
+    "doc_title": "5B Token Pretraining Mixture & Licensing Compliance",
+    "doc_source": "web/src/data/datasetsData.ts",
+    "content": "The 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curated Literature (10.0%, Public Domain/CC0), Wikipedia Clean English (7.5%, CC-BY-SA-4.0), OpenWebMath (7.5%, ODC-By/Apache-2.0), and UltraChat 200k (strictly capped at 5.0%, MIT). The isolated validation split consists of 20,025,153 tokens with 0.00% training contamination verified by 25,137 document SHA-256 hashes.",
+    "section": "Pretraining Corpus",
+    "token_count": 85,
+    "metadata": {
+      "type": "data_manifest"
+    }
+  },
+  {
+    "chunk_id": "doc-sft-7",
+    "doc_title": "SFT Failure Forensics: Sycophancy & Greeting Collapse",
+    "doc_source": "modern_gpt/reports/phase1b_dataset/audit_sft_v3_results.json",
+    "content": "In SFT 4K v3, the model achieved an all-time low validation loss (0.765 nats) but suffered catastrophic conversational collapse. Forensic inspection revealed that unmasked conversational dialogue turns in UltraChat (80.3% of the dataset) caused severe template lock-in. The unmasked greeting density was uncovered at exactly 0.026% (9 records out of 34,700), causing the model to loop assistant tags instead of returning greetings. This motivated SFT 4K v4 with strict dialogue capping and token-weighted loss.",
+    "section": "SFT Alignment Forensics",
+    "token_count": 96,
+    "metadata": {
+      "type": "forensics"
+    }
+  }
+]

@@ -1,0 +1,135 @@
+{
+  "timestamp": 1794909377.712195,
+  "baseline": {
+    "model_name": "baseline",
+    "step": 425,
+    "corpus_a_multiturn": {
+      "first_turn_web_selection_acc": 0.175,
+      "first_turn_web_selection_raw": "7/40",
+      "second_turn_python_selection_acc": 0.0,
+      "second_turn_python_selection_raw": "0/30",
+      "python_argument_validity_acc": 0.0,
+      "python_argument_validity_raw": "0/30",
+      "value_extraction_accuracy": 0.0,
+      "value_extraction_raw": "0/30",
+      "python_execution_success_rate": 0.0,
+      "python_execution_success_raw": "0/30",
+      "numerical_answer_correctness": 0.3667,
+      "numerical_answer_raw": "11/30",
+      "final_evidence_synthesis_acc": 0.0,
+      "final_evidence_synthesis_raw": "0/30",
+      "complete_end_to_end_trajectory_rate": 0.0,
+      "complete_end_to_end_trajectory_raw": "0/30",
+      "sub_categories": {
+        "standard_web_python_success": "0/30",
+        "web_sufficient_direct_success": "3/3",
+        "web_failure_recovery_success": "4/4",
+        "contradictory_sources_success": "0/3"
+      }
+    },
+    "corpus_b_calibration": {
+      "conceptual_direct_fpr": 0.125,
+      "conceptual_direct_fpr_raw": "1/8",
+      "correct_direct_answer_rate": 0.875,
+      "correct_direct_answer_raw": "7/8",
+      "required_web_call_recall": 1.0,
+      "required_web_call_recall_raw": "8/8",
+      "required_python_call_recall": 0.2857,
+      "required_python_call_recall_raw": "4/14",
+      "unnecessary_tool_calls_count": 1,
+      "missed_tool_calls_count": 10
+    },
+    "corpus_c_synthesis": {
+      "claim_level_supported_precision": 0.3333,
+      "claim_level_supported_raw": "5/15",
+      "citation_correctness_rate": 0.0,
+      "citation_correctness_raw": "0/15",
+      "unsupported_claim_rate": 0.6667,
+      "unsupported_claim_raw": "10/15",
+      "partial_support_handling_rate": 0.0,
+      "partial_support_raw": "0/5",
+      "contradiction_handling_rate": 0.0,
+      "contradiction_handling_raw": "0/5",
+      "numerical_extraction_accuracy": 0.3333,
+      "numerical_extraction_raw": "5/15",
+      "final_answer_semantic_success_rate": 0.1667,
+      "final_answer_semantic_success_raw": "5/30"
+    }
+  },
+  "candidate": {
+    "model_name": "candidate",
+    "step": 100,
+    "corpus_a_multiturn": {
+      "first_turn_web_selection_acc": 0.7,
+      "first_turn_web_selection_raw": "28/40",
+      "second_turn_python_selection_acc": 0.5,
+      "second_turn_python_selection_raw": "15/30",
+      "python_argument_validity_acc": 0.4333,
+      "python_argument_validity_raw": "13/30",
+      "value_extraction_accuracy": 0.2333,
+      "value_extraction_raw": "7/30",
+      "python_execution_success_rate": 0.0667,
+      "python_execution_success_raw": "2/30",
+      "numerical_answer_correctness": 0.7,
+      "numerical_answer_raw": "21/30",
+      "final_evidence_synthesis_acc": 0.5333,
+      "final_evidence_synthesis_raw": "16/30",
+      "complete_end_to_end_trajectory_rate": 0.0333,
+      "complete_end_to_end_trajectory_raw": "1/30",
+      "sub_categories": {
+        "standard_web_python_success": "1/30",
+        "web_sufficient_direct_success": "0/3",
+        "web_failure_recovery_success": "1/4",
+        "contradictory_sources_success": "3/3"
+      }
+    },
+    "corpus_b_calibration": {
+      "conceptual_direct_fpr": 0.0,
+      "conceptual_direct_fpr_raw": "0/8",
+      "correct_direct_answer_rate": 1.0,
+      "correct_direct_answer_raw": "8/8",
+      "required_web_call_recall": 0.0,
+      "required_web_call_recall_raw": "0/8",
+      "required_python_call_recall": 0.0714,
+      "required_python_call_recall_raw": "1/14",
+      "unnecessary_tool_calls_count": 0,
+      "missed_tool_calls_count": 21
+    },
+    "corpus_c_synthesis": {
+      "claim_level_supported_precision": 1.0,
+      "claim_level_supported_raw": "15/15",
+      "citation_correctness_rate": 0.9333,
+      "citation_correctness_raw": "14/15",
+      "unsupported_claim_rate": 0.0,
+      "unsupported_claim_raw": "0/15",
+      "partial_support_handling_rate": 1.0,
+      "partial_support_raw": "5/5",
+      "contradiction_handling_rate": 0.0,
+      "contradiction_handling_raw": "0/5",
+      "numerical_extraction_accuracy": 1.0,
+      "numerical_extraction_raw": "15/15",
+      "final_answer_semantic_success_rate": 0.6667,
+      "final_answer_semantic_success_raw": "20/30"
+    }
+  },
+  "smoke_test": [
+    {
+      "id": "smoke_001",
+      "prompt": "What is the equatorial radius of planet Saturn in kilometers?",
+      "generation": "The equatorial radius is the distance from the Sun to the Earth's orbit.",
+      "emitted_web_call": false
+    },
+    {
+      "id": "smoke_002",
+      "prompt": "What is the speed of sound in dry air at 20 degrees Celsius in m/s?",
+      "generation": "The speed of sound in dry air at 20 degrees Celsius is 20-30 degrees Celsius.",
+      "emitted_web_call": false
+    },
+    {
+      "id": "smoke_003",
+      "prompt": "Who won the FIFA Men's World Cup in 2022?",
+      "generation": "<toolbox: [1]\n<toolbox: [1]\n<toolbox: [1]\n<toolbox: [1]\n<toolbox: [1]\n<toolbox: [1]\n<toolbox: [1]\n<toolbox: [1]\n<toolbox",
+      "emitted_web_call": false
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "ckpt_501m": {
+    "passkey_accuracy_pct": 5.56,
+    "total_tests": 18,
+    "passed_tests": 1,
+    "by_length_and_depth": {
+      "128": {
+        "depth_10": {
+          "passkey": "93810",
+          "generated": "a type of mechanical device that is designed to detect",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "23434",
+          "generated": "a special type of laser that is used to detect",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "13905",
+          "generated": "13\n\nQuestion: What is the secret emergency",
+          "success": false
+        }
+      },
+      "256": {
+        "depth_10": {
+          "passkey": "13478",
+          "generated": "a combination of two different types of light. The",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "46421",
+          "generated": "a mathematical formula that describes the motion of a substance",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "15695",
+          "generated": "15695.\n\nQuestion: What is",
+          "success": true
+        }
+      },
+      "512": {
+        "depth_10": {
+          "passkey": "19116",
+          "generated": "a combination of two different types of energy. The",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "38785",
+          "generated": "a mathematical formula that describes the motion of a substance",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "62350",
+          "generated": "a type of emergency passkey that is used to",
+          "success": false
+        }
+      },
+      "1024": {
+        "depth_10": {
+          "passkey": "44973",
+          "generated": "a historical figure who was a great navigator and",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "80686",
+          "generated": "a type of emergency passkey that is used to",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "24322",
+          "generated": "a combination of the two terms. The secret emergency",
+          "success": false
+        }
+      },
+      "1536": {
+        "depth_10": {
+          "passkey": "17455",
+          "generated": "a type of emergency passkey that is used to",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "76244",
+          "generated": "a historical document that describes the motion of viscous",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "33405",
+          "generated": "a type of signal that is used to signal the",
+          "success": false
+        }
+      },
+      "2048": {
+        "depth_10": {
+          "passkey": "42092",
+          "generated": "a type of emergency passkey that is used to",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "96900",
+          "generated": "a crucial element in the C4 plant. The",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "54092",
+          "generated": "a secret emergency passkey. It is a secret",
+          "success": false
+        }
+      }
+    }
+  },
+  "ckpt_latest": {
+    "passkey_accuracy_pct": 27.78,
+    "total_tests": 18,
+    "passed_tests": 5,
+    "by_length_and_depth": {
+      "128": {
+        "depth_10": {
+          "passkey": "93810",
+          "generated": "the secret emergency passkey.\n\nQuestion:",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "23434",
+          "generated": "a key component of the\n\nQuestion: What",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "13905",
+          "generated": "13\n\nQuestion: What is the secret emergency",
+          "success": false
+        }
+      },
+      "256": {
+        "depth_10": {
+          "passkey": "13478",
+          "generated": "13478.\n\nQuestion: What is",
+          "success": true
+        },
+        "depth_50": {
+          "passkey": "46421",
+          "generated": "46421.\n\nQuestion: What is",
+          "success": true
+        },
+        "depth_90": {
+          "passkey": "15695",
+          "generated": "15695.\n\nQuestion: What is",
+          "success": true
+        }
+      },
+      "512": {
+        "depth_10": {
+          "passkey": "19116",
+          "generated": "a key component of the C4 system. It",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "38785",
+          "generated": "38785.\n\nQuestion: What is",
+          "success": true
+        },
+        "depth_90": {
+          "passkey": "62350",
+          "generated": "a secret emergency passkey.\n\nQuestion:",
+          "success": false
+        }
+      },
+      "1024": {
+        "depth_10": {
+          "passkey": "44973",
+          "generated": "44973.\n\nQuestion: What is",
+          "success": true
+        },
+        "depth_50": {
+          "passkey": "80686",
+          "generated": "a key component of the Navier-Sto",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "24322",
+          "generated": "a secret emergency passkey.\n\nQuestion:",
+          "success": false
+        }
+      },
+      "1536": {
+        "depth_10": {
+          "passkey": "17455",
+          "generated": "a secret emergency passkey.\n\nQuestion:",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "76244",
+          "generated": "a secret emergency passkey.\n\nThe secret",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "33405",
+          "generated": "a secret emergency passkey.\n\nQuestion:",
+          "success": false
+        }
+      },
+      "2048": {
+        "depth_10": {
+          "passkey": "42092",
+          "generated": "a secret key that is used to access the secret",
+          "success": false
+        },
+        "depth_50": {
+          "passkey": "96900",
+          "generated": "a powerful algorithm that can minimize photorespiration by",
+          "success": false
+        },
+        "depth_90": {
+          "passkey": "54092",
+          "generated": "a secret emergency passkey.\n\nQuestion:",
+          "success": false
+        }
+      }
+    }
+  }
+}

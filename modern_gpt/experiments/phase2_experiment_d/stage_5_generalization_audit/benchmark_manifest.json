@@ -1,0 +1,25 @@
+{
+  "manifest_version": "1.0",
+  "created_at": "2026-11-17T08:24:49+0530",
+  "total_tasks": 150,
+  "benchmark_file": "benchmark.jsonl",
+  "benchmark_sha256": "d8d03073aaff4da55822be3681487fc269cc0893d220c90231b3626db5e257ab",
+  "categories": {
+    "colloquial_web_research": 30,
+    "current_information": 20,
+    "python_computation": 25,
+    "direct_conceptual": 25,
+    "tool_discrimination": 20,
+    "multistep_web_python": 15,
+    "tool_failure_recovery": 15
+  },
+  "negative_controls_count": 36,
+  "uncertainty_tasks_count": 9,
+  "tool_expected_count": 114,
+  "direct_expected_count": 36,
+  "leakage_audit_summary": {
+    "status": "CLEAN - ZERO CONTAMINATION",
+    "exact_train_matches": 0,
+    "exact_val_matches": 0
+  }
+}

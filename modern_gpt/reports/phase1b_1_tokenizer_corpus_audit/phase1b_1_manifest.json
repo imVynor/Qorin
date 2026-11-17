@@ -1,0 +1,60 @@
+{
+  "phase": "Phase 1B.1",
+  "title": "ModernGPT-S 500M Tokenizer Finalization and Pretraining Corpus Audit",
+  "date": "2026-11-11",
+  "status": "AUDITED & VALIDATED - READY FOR PHASE 1B.2",
+  "artifacts": {
+    "corpus_pipeline_design.md": {
+      "bytes": 5510,
+      "sha256": "42d3da198c76558874e318b48b149d96821a644b78dcdee1c8a935ca04ae5aa0"
+    },
+    "data_quality_filtering_spec.md": {
+      "bytes": 6204,
+      "sha256": "90b9df0e11da462c0b8ebe1802178b174041c8f6663bf5f8bc7fc8e8a00a298c"
+    },
+    "decisions_and_risks.md": {
+      "bytes": 3878,
+      "sha256": "251e3511e6c673092a3cffee621b33c588c29edbc31172dcfe62741cd6c3ac1b"
+    },
+    "deduplication_spec.md": {
+      "bytes": 5647,
+      "sha256": "041a97bea32c1fca95cf355b6a967b0444781c6cbaf8765ea88ec9169bf8864b"
+    },
+    "pretraining_dataset_inventory.md": {
+      "bytes": 6500,
+      "sha256": "c8659c02a9a2883a89ea00e38a217a7df896e19335e22f2eafc3b21171bd1b6d"
+    },
+    "pretraining_mixture_feasibility.md": {
+      "bytes": 6120,
+      "sha256": "05196ad1ddcacc6bea081ba1be8384e15de10b6690d301c149c63a5f93faac12"
+    },
+    "README.md": {
+      "bytes": 9195,
+      "sha256": "aaa327fe9762933e100964afa67ced72881b73d40fd2803b093088cb0d48e3f2"
+    },
+    "repository_inspection.md": {
+      "bytes": 8186,
+      "sha256": "87e72b45273f68f287d977319635d2c909724f39c2644cc50cadf58cf9c9bda7"
+    },
+    "sft_v4_reuse_audit.md": {
+      "bytes": 5519,
+      "sha256": "61531945aaa91e581c757636560218df2403fba7a148659ebb1a8dff3ab02cea"
+    },
+    "tokenizer_correctness_report.md": {
+      "bytes": 6620,
+      "sha256": "fcc514a062139d72db589d232eb90d4b804f64cf87bd6abf1faa8f51cc398334"
+    },
+    "tokenizer_finalization_report.md": {
+      "bytes": 6282,
+      "sha256": "3114524e5326cb57fb004a4c8ac51b040e9e2ea68290f1dc4951f5355ce5aa8c"
+    },
+    "tokenizer_heldout_benchmark.md": {
+      "bytes": 9968,
+      "sha256": "4f072c057387fd090391750bc0d7342015bc68a8e1ac841285b90ab281392a05"
+    },
+    "tokenizer_heldout_results.json": {
+      "bytes": 11003,
+      "sha256": "354970f7351049b5bc949788c60ae7d44a5d6431c06ff8f521001bab6bb1fb04"
+    }
+  }
+}

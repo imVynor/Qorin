@@ -1,0 +1,182 @@
+[
+  {
+    "config": "Config A (Standalone: No Manifest)",
+    "task_id": "calc_01",
+    "category": "python_math",
+    "prompt": "Calculate the square root of 9801 minus 45 using Python.",
+    "model_output": "The square root of 9801 minus 45 is 0.5.",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config A (Standalone: No Manifest)",
+    "task_id": "calc_02",
+    "category": "python_math",
+    "prompt": "Compute the sum of the cubes of integers from 1 to 25.",
+    "model_output": "To solve the sum of the cubes of integers from 1 to 25, we need to find the sum of the cubes of integers from 1 to 25.\n\nFirst, we need to find the sum of the cubes of integers from 1 to 25. We can do this by dividing the number of cubes by the number of integers from 1 to 25.\n\nNext, we can find the sum of the cubes of integers from 1 to 25. We can do this by dividing the number of cubes by the number of integers from 1 to 25.\n\nFinally, we can find the sum of the cubes of integers from 1 to 25.",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config A (Standalone: No Manifest)",
+    "task_id": "web_01",
+    "category": "web_research",
+    "prompt": "Who won the 2024 Nobel Prize in Physics and for what discovery?",
+    "model_output": "The Nobel Prize in Physics and for what discovery?",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config A (Standalone: No Manifest)",
+    "task_id": "direct_01",
+    "category": "no_tool",
+    "prompt": "What is the difference between supervised and unsupervised learning?",
+    "model_output": "1. **Conducted learning**: This is the process of learning from experience, which is the process of acquiring knowledge and skills.\n2. **Conducted learning**: This is the process of acquiring knowledge and skills, which is the process of acquiring knowledge and skills.\n3. **Conducted learning**: This is the process of acquiring knowledge and skills, which is the process of acquiring knowledge and skills.\n4. **Conducted learning**: This is the process of acquiring knowledge and skills, which is the process of acquiring knowledge and skills.\n5. **Conducted learning**: This is the process of",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config A (Standalone: No Manifest)",
+    "task_id": "direct_02",
+    "category": "no_tool",
+    "prompt": "What is 2 + 2?",
+    "model_output": "2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config B (Harness Enabled: Full Two-Tool Manifest)",
+    "task_id": "calc_01",
+    "category": "python_math",
+    "prompt": "Calculate the square root of 9801 minus 45 using Python.",
+    "model_output": "To calculate the square root of 9801 minus 45 using Python, you can use the `sqrt` function from the `numpy` library.",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config B (Harness Enabled: Full Two-Tool Manifest)",
+    "task_id": "calc_02",
+    "category": "python_math",
+    "prompt": "Compute the sum of the cubes of integers from 1 to 25.",
+    "model_output": "To compute the sum of the cubes of integers from 1 to 25, we need to calculate the sum of the cubes of integers from 1 to 25.\n\nHere's how we can implement this:\n\n```python\ndef compute_sum(numbers):\n    return sum(numbers)\n```",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config B (Harness Enabled: Full Two-Tool Manifest)",
+    "task_id": "web_01",
+    "category": "web_research",
+    "prompt": "Who won the 2024 Nobel Prize in Physics and for what discovery?",
+    "model_output": "The Nobel Prize in Physics and for what discovery?",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config B (Harness Enabled: Full Two-Tool Manifest)",
+    "task_id": "direct_01",
+    "category": "no_tool",
+    "prompt": "What is the difference between supervised and unsupervised learning?",
+    "model_output": "To solve this problem, we need to define a function that takes a training dataset and a test set as input. The function should return the predicted output for each test set.\n\nHere's how we can implement the function:\n\n```python\ndef supervised_learning(train_set, test_set):\n    \"\"\"\n    Sets the training set and the test set.\n\n    Args:\n        train_set: A list of training datasets.\n        test_set: A list of test sets.\n    Returns:\n        A list of `Tensor`s.\n    \"\"\"\n    train_set = []\n    test_set = []",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config B (Harness Enabled: Full Two-Tool Manifest)",
+    "task_id": "direct_02",
+    "category": "no_tool",
+    "prompt": "What is 2 + 2?",
+    "model_output": "2 + 2 is a basic tool that can be used to perform calculations, calculations, and algorithms. It is a tool that can be used to perform calculations, calculations, and algorithms. It is also a tool that can be used to perform algorithms, calculations, and algorithms.",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C1 (Partial: Python Only Manifest)",
+    "task_id": "calc_01",
+    "category": "python_math",
+    "prompt": "Calculate the square root of 9801 minus 45 using Python.",
+    "model_output": "To calculate the square root of 9801 minus 45 using Python, you can use the `sqrt` function from the `numpy` library.",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C1 (Partial: Python Only Manifest)",
+    "task_id": "calc_02",
+    "category": "python_math",
+    "prompt": "Compute the sum of the cubes of integers from 1 to 25.",
+    "model_output": "To compute the sum of the cubes of integers from 1 to 25, we need to calculate the sum of the cubes of integers from 1 to 25.\n\nHere's how we can implement this:\n\n```python\ndef compute_sum(numbers):\n    sum = 0\n    for num in numbers:\n        sum += num\n    return sum\n```",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C1 (Partial: Python Only Manifest)",
+    "task_id": "web_01",
+    "category": "web_research",
+    "prompt": "Who won the 2024 Nobel Prize in Physics and for what discovery?",
+    "model_output": "The 2024 Nobel Prize in Physics and for what discovery?",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C1 (Partial: Python Only Manifest)",
+    "task_id": "direct_01",
+    "category": "no_tool",
+    "prompt": "What is the difference between supervised and unsupervised learning?",
+    "model_output": "1. **Convolutional Learning**: This is a technique used to train a model on a dataset. It is a type of unsupervised learning, where the model is trained on a dataset and the model is trained on the data.\n2. **Scalability**: This is a technique used to train a model on a dataset. It is a type of unsupervised learning, where the model is trained on a dataset and the model is trained on the data.\n3. **Convolutional Learning**: This is a technique used to train a model on a dataset. It is a type of unsupervised",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C1 (Partial: Python Only Manifest)",
+    "task_id": "direct_02",
+    "category": "no_tool",
+    "prompt": "What is 2 + 2?",
+    "model_output": "2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C2 (Partial: Web Only Manifest)",
+    "task_id": "calc_01",
+    "category": "python_math",
+    "prompt": "Calculate the square root of 9801 minus 45 using Python.",
+    "model_output": "```python\nimport math\n\ndef square_root(root):\n    root = root.rstrip('0')\n    root = root.rstrip('1')\n    root = root.rstrip('0')\n    root = root.rstrip('0')\n    root = root.rstrip('0')\n    root = root.rstrip('0')\n    root = root.rstrip('0')\n    root = root.rstrip('0')\n    root = root.rstrip('0')\n    root = root.rstrip('0')\n    root = root.rstrip('0')\n    root = root",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C2 (Partial: Web Only Manifest)",
+    "task_id": "calc_02",
+    "category": "python_math",
+    "prompt": "Compute the sum of the cubes of integers from 1 to 25.",
+    "model_output": "To compute the sum of the cubes of integers from 1 to 25, we can use the `sum()` function from the `numpy` library. The `sum()` function returns the sum of the cubes of integers from 1 to 25.",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C2 (Partial: Web Only Manifest)",
+    "task_id": "web_01",
+    "category": "web_research",
+    "prompt": "Who won the 2024 Nobel Prize in Physics and for what discovery?",
+    "model_output": "The 2024 Nobel Prize in Physics and for what discovery is a significant breakthrough in physics and for what discovery is a significant breakthrough in the future.",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C2 (Partial: Web Only Manifest)",
+    "task_id": "direct_01",
+    "category": "no_tool",
+    "prompt": "What is the difference between supervised and unsupervised learning?",
+    "model_output": "1. **Convolutional Learning**: This is a technique that uses a combination of training and validation to learn from data.\n2. **Scalability**: This is a technique that uses a combination of training and validation to learn from data.\n3. **Scalability**: This is a technique that uses a combination of training and validation to learn from data.\n4. **Scalability**: This is a technique that uses a combination of training and validation to learn from data.\n5. **Scalability**: This is a technique that uses a combination of training and validation to learn from data.\n6",
+    "tool_called": false,
+    "parsed_tool": null
+  },
+  {
+    "config": "Config C2 (Partial: Web Only Manifest)",
+    "task_id": "direct_02",
+    "category": "no_tool",
+    "prompt": "What is 2 + 2?",
+    "model_output": "2 + 2 is a basic tool that can be used to find the most recent data. It is a tool that can be used to find the most recent data.",
+    "tool_called": false,
+    "parsed_tool": null
+  }
+]

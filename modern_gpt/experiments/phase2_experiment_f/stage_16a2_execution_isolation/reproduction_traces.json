@@ -1,0 +1,1428 @@
+{
+  "reproduction_req1": {
+    "raw": {
+      "duration_s": 5.1384806632995605,
+      "events": [
+        {
+          "triggered": false,
+          "mode": "auto",
+          "decision_reason": "Query did not match technical knowledge base routing threshold.",
+          "query": "rite a python function that adds two numbers",
+          "retrieved_chunks": [],
+          "injected_context": "",
+          "retrieval_latency_ms": 0.02
+        },
+        {
+          "tool_name": "python",
+          "original_tool_name": "python",
+          "status": "started",
+          "call_id": "call_001",
+          "args": {
+            "code": "import math\nres = math.comb(2, 2)\nprint(f'Combinations: {res}')"
+          }
+        },
+        {
+          "tool_name": "python",
+          "original_tool_name": "python",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_001",
+          "input_payload": {
+            "code": "import math\nres = math.comb(2, 2)\nprint(f'Combinations: {res}')"
+          },
+          "output_payload": {
+            "stdout": "Combinations: 1\n",
+            "stderr": "",
+            "exit_code": 0,
+            "execution_time_ms": 41.25,
+            "status": "SUCCESS",
+            "failure_category": "NONE",
+            "error_message": null
+          },
+          "source_metadata": {
+            "exit_code": 0,
+            "status": "SUCCESS",
+            "failure_category": "NONE"
+          },
+          "latency_ms": 41.47,
+          "error": null
+        },
+        {
+          "text": "The ",
+          "is_finished": false,
+          "token_count": 2008,
+          "ttft_ms": 101.2,
+          "tok_per_sec": 47.3
+        },
+        {
+          "text": "Python ",
+          "is_finished": false,
+          "token_count": 2008,
+          "ttft_ms": 101.2,
+          "tok_per_sec": 47.3
+        },
+        {
+          "text": "execution ",
+          "is_finished": false,
+          "token_count": 2008,
+          "ttft_ms": 101.2,
+          "tok_per_sec": 47.3
+        },
+        {
+          "text": "yielded: ",
+          "is_finished": false,
+          "token_count": 2008,
+          "ttft_ms": 101.2,
+          "tok_per_sec": 47.3
+        },
+        {
+          "text": "`Combinations`.",
+          "is_finished": true,
+          "token_count": 2008,
+          "ttft_ms": 101.2,
+          "tok_per_sec": 47.3
+        },
+        {
+          "trace_id": "fe968872-6de9-4961-bcbd-08f26516f09a",
+          "total_tokens": 2008,
+          "ttft_ms": 101.25,
+          "total_latency_ms": 1610.48,
+          "tok_per_sec": 47.3,
+          "retrieval_triggered": false,
+          "tools_executed": 1
+        }
+      ]
+    },
+    "tokens": "The Python execution yielded: `Combinations`."
+  },
+  "reproduction_req2": {
+    "raw": {
+      "duration_s": 2.216003656387329,
+      "events": [
+        {
+          "triggered": false,
+          "mode": "auto",
+          "decision_reason": "Query classified as conversational/greeting; no external factual retrieval required.",
+          "query": "whats 1+2?",
+          "retrieved_chunks": [],
+          "injected_context": "",
+          "retrieval_latency_ms": 0.01
+        },
+        {
+          "text": "The ",
+          "is_finished": false,
+          "token_count": 55,
+          "ttft_ms": 21.0,
+          "tok_per_sec": 49.9
+        },
+        {
+          "text": "Python ",
+          "is_finished": false,
+          "token_count": 55,
+          "ttft_ms": 21.0,
+          "tok_per_sec": 49.9
+        },
+        {
+          "text": "execution ",
+          "is_finished": false,
+          "token_count": 55,
+          "ttft_ms": 21.0,
+          "tok_per_sec": 49.9
+        },
+        {
+          "text": "yielded: ",
+          "is_finished": false,
+          "token_count": 55,
+          "ttft_ms": 21.0,
+          "tok_per_sec": 49.9
+        },
+        {
+          "text": "`Combinations`.",
+          "is_finished": true,
+          "token_count": 55,
+          "ttft_ms": 21.0,
+          "tok_per_sec": 49.9
+        },
+        {
+          "trace_id": "b3fdc444-e50d-4623-805e-c8d6e70e7508",
+          "total_tokens": 55,
+          "ttft_ms": 21.02,
+          "total_latency_ms": 203.21,
+          "tok_per_sec": 49.88,
+          "retrieval_triggered": false,
+          "tools_executed": 0
+        }
+      ]
+    },
+    "tokens": "The Python execution yielded: `Combinations`."
+  },
+  "test_a": {
+    "raw": {
+      "duration_s": 5.547892808914185,
+      "events": [
+        {
+          "triggered": true,
+          "mode": "auto",
+          "decision_reason": "Automated routing triggered on technical architecture inquiry.",
+          "query": "Run python code to print FIRST_12345",
+          "retrieved_chunks": [
+            {
+              "chunk_id": "doc-data-6",
+              "doc_title": "5B Token Pretraining Mixture & Licensing Compliance",
+              "doc_source": "web/src/data/datasetsData.ts",
+              "section": "Pretraining Corpus",
+              "similarity_score": 0.0822,
+              "snippet": "The 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curate...",
+              "token_count": 85
+            }
+          ],
+          "injected_context": "[Source 1: 5B Token Pretraining Mixture & Licensing Compliance - Pretraining Corpus]\nThe 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curated Literature (10.0%, Public Domain/CC0), Wikipedia Clean English (7.5%, CC-BY-SA-4.0), OpenWebMath (7.5%, ODC-By/Apache-2.0), and UltraChat 200k (strictly capped at 5.0%, MIT). The isolated validation split consists of 20,025,153 tokens with 0.00% training contamination verified by 25,137 document SHA-256 hashes.",
+          "retrieval_latency_ms": 1.73
+        },
+        {
+          "tool_name": "python",
+          "original_tool_name": "python",
+          "status": "started",
+          "call_id": "call_001",
+          "args": {
+            "code": "import math\nf = math.comb(1, 2)\nprint(f'Frequency: {f}')"
+          }
+        },
+        {
+          "tool_name": "python",
+          "original_tool_name": "python",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_001",
+          "input_payload": {
+            "code": "import math\nf = math.comb(1, 2)\nprint(f'Frequency: {f}')"
+          },
+          "output_payload": {
+            "stdout": "Frequency: 0\n",
+            "stderr": "",
+            "exit_code": 0,
+            "execution_time_ms": 49.98,
+            "status": "SUCCESS",
+            "failure_category": "NONE",
+            "error_message": null
+          },
+          "source_metadata": {
+            "exit_code": 0,
+            "status": "SUCCESS",
+            "failure_category": "NONE"
+          },
+          "latency_ms": 50.2,
+          "error": null
+        },
+        {
+          "text": "The ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "frequency ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "range ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "[1, ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "2] ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "is ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "[1, ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "2], ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "so ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "the ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "frequency ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "of ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "the ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "first ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "element ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "is ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "[1, ",
+          "is_finished": false,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "text": "2].",
+          "is_finished": true,
+          "token_count": 2359,
+          "ttft_ms": 19.4,
+          "tok_per_sec": 43.2
+        },
+        {
+          "trace_id": "d851082e-a484-445c-9df1-82947f528a29",
+          "total_tokens": 2359,
+          "ttft_ms": 19.39,
+          "total_latency_ms": 2019.14,
+          "tok_per_sec": 43.22,
+          "retrieval_triggered": true,
+          "tools_executed": 1
+        }
+      ]
+    },
+    "tokens": "The frequency range [1, 2] is [1, 2], so the frequency of the first element is [1, 2]."
+  },
+  "test_b": {
+    "raw": {
+      "duration_s": 12.381494045257568,
+      "events": [
+        {
+          "triggered": true,
+          "mode": "auto",
+          "decision_reason": "Automated routing triggered on technical architecture inquiry.",
+          "query": "Run python code to print SECOND_67890",
+          "retrieved_chunks": [
+            {
+              "chunk_id": "doc-data-6",
+              "doc_title": "5B Token Pretraining Mixture & Licensing Compliance",
+              "doc_source": "web/src/data/datasetsData.ts",
+              "section": "Pretraining Corpus",
+              "similarity_score": 0.0822,
+              "snippet": "The 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curate...",
+              "token_count": 85
+            }
+          ],
+          "injected_context": "[Source 1: 5B Token Pretraining Mixture & Licensing Compliance - Pretraining Corpus]\nThe 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curated Literature (10.0%, Public Domain/CC0), Wikipedia Clean English (7.5%, CC-BY-SA-4.0), OpenWebMath (7.5%, ODC-By/Apache-2.0), and UltraChat 200k (strictly capped at 5.0%, MIT). The isolated validation split consists of 20,025,153 tokens with 0.00% training contamination verified by 25,137 document SHA-256 hashes.",
+          "retrieval_latency_ms": 0.96
+        },
+        {
+          "tool_name": "python",
+          "original_tool_name": "python",
+          "status": "started",
+          "call_id": "call_001",
+          "args": {
+            "code": "import math\nres = math.comb(67890, 3)\nprint(f'Combinations: {res}')"
+          }
+        },
+        {
+          "tool_name": "python",
+          "original_tool_name": "python",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_001",
+          "input_payload": {
+            "code": "import math\nres = math.comb(67890, 3)\nprint(f'Combinations: {res}')"
+          },
+          "output_payload": {
+            "stdout": "Combinations: 52149120008080\n",
+            "stderr": "",
+            "exit_code": 0,
+            "execution_time_ms": 49.0,
+            "status": "SUCCESS",
+            "failure_category": "NONE",
+            "error_message": null
+          },
+          "source_metadata": {
+            "exit_code": 0,
+            "status": "SUCCESS",
+            "failure_category": "NONE"
+          },
+          "latency_ms": 49.3,
+          "error": null
+        },
+        {
+          "text": "The ",
+          "is_finished": false,
+          "token_count": 35232,
+          "ttft_ms": 18.7,
+          "tok_per_sec": 34.4
+        },
+        {
+          "text": "first ",
+          "is_finished": false,
+          "token_count": 35232,
+          "ttft_ms": 18.7,
+          "tok_per_sec": 34.4
+        },
+        {
+          "text": "execution ",
+          "is_finished": false,
+          "token_count": 35232,
+          "ttft_ms": 18.7,
+          "tok_per_sec": 34.4
+        },
+        {
+          "text": "yielded ",
+          "is_finished": false,
+          "token_count": 35232,
+          "ttft_ms": 18.7,
+          "tok_per_sec": 34.4
+        },
+        {
+          "text": "[5214912000808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080",
+          "is_finished": true,
+          "token_count": 35232,
+          "ttft_ms": 18.7,
+          "tok_per_sec": 34.4
+        },
+        {
+          "trace_id": "c8437918-f607-4277-b82c-aac181ce16ab",
+          "total_tokens": 35232,
+          "ttft_ms": 18.69,
+          "total_latency_ms": 8870.52,
+          "tok_per_sec": 34.37,
+          "retrieval_triggered": true,
+          "tools_executed": 1
+        }
+      ]
+    },
+    "tokens": "The first execution yielded [5214912000808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080808080"
+  },
+  "test_c": {
+    "raw": {
+      "duration_s": 7.948160886764526,
+      "events": [
+        {
+          "triggered": false,
+          "mode": "auto",
+          "decision_reason": "Query did not match technical knowledge base routing threshold.",
+          "query": "What is the capital of France?",
+          "retrieved_chunks": [],
+          "injected_context": "",
+          "retrieval_latency_ms": 0.04
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "status": "started",
+          "call_id": "call_001",
+          "args": {
+            "query": "What is the capital of France?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_001",
+          "input_payload": {
+            "query": "What is the capital of France?"
+          },
+          "output_payload": {
+            "query": "What is the capital of France?",
+            "latency_ms": 791.59,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "evidence_id": "SOURCE_1",
+                "source_title": "Paris - Wikipedia",
+                "source_url": "https://en.wikipedia.org/wiki/Paris",
+                "source_snippet": "Capitalcity in \u00cele-de-France,FranceParis[b] is thecapitaland largest city ofFrance, with an estimated city population of 2.04 million in an area of 105.4 km2 (40.7 sq mi), as of January 2026, [4] and a metropolitan population of 13.3 million (2023). Located on the Seine in the centre of the \u00cele-de-Franceregion, it is the largest metropolitan area and fourth-most populous city in the ...",
+                "retrieval_timestamp": 1794914697.7864645,
+                "search_query": "What is the capital of France?",
+                "provider": "duckduckgo_lite",
+                "is_cached": false,
+                "raw_payload": {}
+              },
+              {
+                "evidence_id": "SOURCE_2",
+                "source_title": "What is the Capital of France? - WorldAtlas",
+                "source_url": "https://www.worldatlas.com/articles/what-is-the-capital-of-france.html",
+                "source_snippet": "Paris is thecapitalcity ofFrance.Thecity has an approximate area of 41 square miles with a population of 2,206,488 people as of 2018. Contrary to popular belief, the name of the city did not come from the Paris in Greek myths. Instead, the name Paris is derived from the city's initial inhabitants who were part of the Celtic Parisii tribe.",
+                "retrieval_timestamp": 1794914697.7864645,
+                "search_query": "What is the capital of France?",
+                "provider": "duckduckgo_lite",
+                "is_cached": false,
+                "raw_payload": {}
+              },
+              {
+                "evidence_id": "SOURCE_3",
+                "source_title": "Paris | Definition, Map, Population, Facts, & History | Britannica",
+                "source_url": "https://www.britannica.com/place/Paris",
+                "source_snippet": "Paris, city andcapitalofFrance, located along the Seine River, in the north-central part of the country. Paris is one of the world's most important and attractive cities, famed for its gastronomy, haute couture, painting, literature, and intellectual community. Learn more about Paris in this article.",
+                "retrieval_timestamp": 1794914697.7864645,
+                "search_query": "What is the capital of France?",
+                "provider": "duckduckgo_lite",
+                "is_cached": false,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Paris - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Paris"
+              },
+              {
+                "title": "What is the Capital of France? - WorldAtlas",
+                "url": "https://www.worldatlas.com/articles/what-is-the-capital-of-france.html"
+              },
+              {
+                "title": "Paris | Definition, Map, Population, Facts, & History | Britannica",
+                "url": "https://www.britannica.com/place/Paris"
+              }
+            ]
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Paris - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Paris"
+              },
+              {
+                "title": "What is the Capital of France? - WorldAtlas",
+                "url": "https://www.worldatlas.com/articles/what-is-the-capital-of-france.html"
+              },
+              {
+                "title": "Paris | Definition, Map, Population, Facts, & History | Britannica",
+                "url": "https://www.britannica.com/place/Paris"
+              }
+            ]
+          },
+          "latency_ms": 806.76,
+          "error": null
+        },
+        {
+          "text": "The ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "capital ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "of ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "France ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "is ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "Paris, ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "the ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "capital ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "of ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "the ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "world. ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "The ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "city ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "has ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "an ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "estimated ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "population ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "of ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "2,206,488 ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "people, ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "with ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "a ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "population ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "density ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "of ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "1,050,000 ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "people. ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "Paris ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "is ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "the ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "capital ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "of ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "the ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "world ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "and ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "is ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "the ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "second-largest ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "city ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "in ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "the ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "world ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "after ",
+          "is_finished": false,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "text": "Paris.",
+          "is_finished": true,
+          "token_count": 2962,
+          "ttft_ms": 20.3,
+          "tok_per_sec": 23.3
+        },
+        {
+          "trace_id": "2cac3f61-3fb3-4f66-b1c8-63b06576c1e5",
+          "total_tokens": 2962,
+          "ttft_ms": 20.29,
+          "total_latency_ms": 4420.47,
+          "tok_per_sec": 23.33,
+          "retrieval_triggered": false,
+          "tools_executed": 1
+        }
+      ]
+    },
+    "tokens": "The capital of France is Paris, the capital of the world. The city has an estimated population of 2,206,488 people, with a population density of 1,050,000 people. Paris is the capital of the world and is the second-largest city in the world after Paris."
+  },
+  "test_d": {
+    "raw": {
+      "duration_s": 3.4888322353363037,
+      "events": [
+        {
+          "triggered": false,
+          "mode": "auto",
+          "decision_reason": "Query did not match technical knowledge base routing threshold.",
+          "query": "Write a Python function to reverse a string.",
+          "retrieved_chunks": [],
+          "injected_context": "",
+          "retrieval_latency_ms": 0.04
+        },
+        {
+          "tool_name": "python",
+          "original_tool_name": "python",
+          "requested_by": "model",
+          "status": "failed",
+          "call_id": "call_001",
+          "input_payload": {
+            "code": "s = \"s\\nprint(f'Remainder: {remainder}')"
+          },
+          "output_payload": {
+            "error": "Invalid Python syntax: SyntaxError: unterminated string literal (detected at line 1) (line 1, offset 5)"
+          },
+          "source_metadata": {},
+          "latency_ms": 0.0,
+          "error": "Invalid Python syntax: SyntaxError: unterminated string literal (detected at line 1) (line 1, offset 5)"
+        },
+        {
+          "text": "The ",
+          "is_finished": false,
+          "token_count": 1606,
+          "ttft_ms": 20.9,
+          "tok_per_sec": 40.4
+        },
+        {
+          "text": "Python ",
+          "is_finished": false,
+          "token_count": 1606,
+          "ttft_ms": 20.9,
+          "tok_per_sec": 40.4
+        },
+        {
+          "text": "execution ",
+          "is_finished": false,
+          "token_count": 1606,
+          "ttft_ms": 20.9,
+          "tok_per_sec": 40.4
+        },
+        {
+          "text": "yielded: ",
+          "is_finished": false,
+          "token_count": 1606,
+          "ttft_ms": 20.9,
+          "tok_per_sec": 40.4
+        },
+        {
+          "text": "`Remainder`.",
+          "is_finished": true,
+          "token_count": 1606,
+          "ttft_ms": 20.9,
+          "tok_per_sec": 40.4
+        },
+        {
+          "trace_id": "19150be9-1fe1-4bbc-8425-436de934511f",
+          "total_tokens": 1606,
+          "ttft_ms": 20.93,
+          "total_latency_ms": 1469.82,
+          "tok_per_sec": 40.42,
+          "retrieval_triggered": false,
+          "tools_executed": 1
+        }
+      ]
+    },
+    "tokens": "The Python execution yielded: `Remainder`."
+  },
+  "test_e": {
+    "call1": {
+      "raw": {
+        "duration_s": 5.104492902755737,
+        "events": [
+          {
+            "triggered": true,
+            "mode": "auto",
+            "decision_reason": "Automated routing triggered on technical architecture inquiry.",
+            "query": "Run python code to calculate 123 * 456",
+            "retrieved_chunks": [
+              {
+                "chunk_id": "doc-data-6",
+                "doc_title": "5B Token Pretraining Mixture & Licensing Compliance",
+                "doc_source": "web/src/data/datasetsData.ts",
+                "section": "Pretraining Corpus",
+                "similarity_score": 0.0822,
+                "snippet": "The 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curate...",
+                "token_count": 85
+              }
+            ],
+            "injected_context": "[Source 1: 5B Token Pretraining Mixture & Licensing Compliance - Pretraining Corpus]\nThe 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curated Literature (10.0%, Public Domain/CC0), Wikipedia Clean English (7.5%, CC-BY-SA-4.0), OpenWebMath (7.5%, ODC-By/Apache-2.0), and UltraChat 200k (strictly capped at 5.0%, MIT). The isolated validation split consists of 20,025,153 tokens with 0.00% training contamination verified by 25,137 document SHA-256 hashes.",
+            "retrieval_latency_ms": 1.75
+          },
+          {
+            "tool_name": "python",
+            "original_tool_name": "python",
+            "status": "started",
+            "call_id": "call_001",
+            "args": {
+              "code": "import math\nres = math.comb(123, 456)\nprint(f'Result: {res}')"
+            }
+          },
+          {
+            "tool_name": "python",
+            "original_tool_name": "python",
+            "requested_by": "model",
+            "status": "completed",
+            "call_id": "call_001",
+            "input_payload": {
+              "code": "import math\nres = math.comb(123, 456)\nprint(f'Result: {res}')"
+            },
+            "output_payload": {
+              "stdout": "Result: 0\n",
+              "stderr": "",
+              "exit_code": 0,
+              "execution_time_ms": 55.32,
+              "status": "SUCCESS",
+              "failure_category": "NONE",
+              "error_message": null
+            },
+            "source_metadata": {
+              "exit_code": 0,
+              "status": "SUCCESS",
+              "failure_category": "NONE"
+            },
+            "latency_ms": 55.71,
+            "error": null
+          },
+          {
+            "text": "The ",
+            "is_finished": false,
+            "token_count": 1998,
+            "ttft_ms": 18.8,
+            "tok_per_sec": 45.7
+          },
+          {
+            "text": "Python ",
+            "is_finished": false,
+            "token_count": 1998,
+            "ttft_ms": 18.8,
+            "tok_per_sec": 45.7
+          },
+          {
+            "text": "execution ",
+            "is_finished": false,
+            "token_count": 1998,
+            "ttft_ms": 18.8,
+            "tok_per_sec": 45.7
+          },
+          {
+            "text": "yielded: ",
+            "is_finished": false,
+            "token_count": 1998,
+            "ttft_ms": 18.8,
+            "tok_per_sec": 45.7
+          },
+          {
+            "text": "`Result`.",
+            "is_finished": true,
+            "token_count": 1998,
+            "ttft_ms": 18.8,
+            "tok_per_sec": 45.7
+          },
+          {
+            "trace_id": "e1da17ac-3424-47d9-845e-6fa88fa6ecf0",
+            "total_tokens": 1998,
+            "ttft_ms": 18.83,
+            "total_latency_ms": 1590.26,
+            "tok_per_sec": 45.71,
+            "retrieval_triggered": true,
+            "tools_executed": 1
+          }
+        ]
+      },
+      "tokens": "The Python execution yielded: `Result`."
+    },
+    "call2": {
+      "raw": {
+        "duration_s": 5.34164834022522,
+        "events": [
+          {
+            "triggered": false,
+            "mode": "auto",
+            "decision_reason": "Automated routing triggered on technical architecture inquiry. (0 internal knowledge chunks exceeded similarity threshold 0.08; external tools enabled).",
+            "query": "Run python code to calculate 789 * 101",
+            "retrieved_chunks": [],
+            "injected_context": "",
+            "retrieval_latency_ms": 0.87
+          },
+          {
+            "tool_name": "python",
+            "original_tool_name": "python",
+            "requested_by": "model",
+            "status": "failed",
+            "call_id": "call_001",
+            "input_payload": {
+              "code": "import math\n101 = 789\ns = 101\ndef = 789\nprint(f'Days: {d} hours')"
+            },
+            "output_payload": {
+              "error": "Invalid Python syntax: SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='? (line 2, offset 1)"
+            },
+            "source_metadata": {},
+            "latency_ms": 0.0,
+            "error": "Invalid Python syntax: SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='? (line 2, offset 1)"
+          },
+          {
+            "text": "The ",
+            "is_finished": false,
+            "token_count": 2398,
+            "ttft_ms": 20.1,
+            "tok_per_sec": 41.3
+          },
+          {
+            "text": "Python ",
+            "is_finished": false,
+            "token_count": 2398,
+            "ttft_ms": 20.1,
+            "tok_per_sec": 41.3
+          },
+          {
+            "text": "execution ",
+            "is_finished": false,
+            "token_count": 2398,
+            "ttft_ms": 20.1,
+            "tok_per_sec": 41.3
+          },
+          {
+            "text": "yielded: ",
+            "is_finished": false,
+            "token_count": 2398,
+            "ttft_ms": 20.1,
+            "tok_per_sec": 41.3
+          },
+          {
+            "text": "`Days: ",
+            "is_finished": false,
+            "token_count": 2398,
+            "ttft_ms": 20.1,
+            "tok_per_sec": 41.3
+          },
+          {
+            "text": "{d} ",
+            "is_finished": false,
+            "token_count": 2398,
+            "ttft_ms": 20.1,
+            "tok_per_sec": 41.3
+          },
+          {
+            "text": "hours`.",
+            "is_finished": true,
+            "token_count": 2398,
+            "ttft_ms": 20.1,
+            "tok_per_sec": 41.3
+          },
+          {
+            "trace_id": "5d038860-51ca-498b-a179-13674584dfc7",
+            "total_tokens": 2398,
+            "ttft_ms": 20.1,
+            "total_latency_ms": 1809.88,
+            "tok_per_sec": 41.29,
+            "retrieval_triggered": false,
+            "tools_executed": 1
+          }
+        ]
+      },
+      "tokens": "The Python execution yielded: `Days: {d} hours`."
+    }
+  },
+  "test_f": {
+    "sess_1": {
+      "raw": {
+        "duration_s": 6.835405111312866,
+        "events": [
+          {
+            "triggered": true,
+            "mode": "auto",
+            "decision_reason": "Automated routing triggered on technical architecture inquiry.",
+            "query": "Run python: print(11111)",
+            "retrieved_chunks": [
+              {
+                "chunk_id": "doc-data-6",
+                "doc_title": "5B Token Pretraining Mixture & Licensing Compliance",
+                "doc_source": "web/src/data/datasetsData.ts",
+                "section": "Pretraining Corpus",
+                "similarity_score": 0.0822,
+                "snippet": "The 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curate...",
+                "token_count": 85
+              }
+            ],
+            "injected_context": "[Source 1: 5B Token Pretraining Mixture & Licensing Compliance - Pretraining Corpus]\nThe 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curated Literature (10.0%, Public Domain/CC0), Wikipedia Clean English (7.5%, CC-BY-SA-4.0), OpenWebMath (7.5%, ODC-By/Apache-2.0), and UltraChat 200k (strictly capped at 5.0%, MIT). The isolated validation split consists of 20,025,153 tokens with 0.00% training contamination verified by 25,137 document SHA-256 hashes.",
+            "retrieval_latency_ms": 1.71
+          },
+          {
+            "tool_name": "python",
+            "original_tool_name": "python",
+            "status": "started",
+            "call_id": "call_001",
+            "args": {
+              "code": "import math\nf = math.comb(11111, 0)\nprint(f'Combinations: {f}')"
+            }
+          },
+          {
+            "tool_name": "python",
+            "original_tool_name": "python",
+            "requested_by": "model",
+            "status": "completed",
+            "call_id": "call_001",
+            "input_payload": {
+              "code": "import math\nf = math.comb(11111, 0)\nprint(f'Combinations: {f}')"
+            },
+            "output_payload": {
+              "stdout": "Combinations: 1\n",
+              "stderr": "",
+              "exit_code": 0,
+              "execution_time_ms": 48.46,
+              "status": "SUCCESS",
+              "failure_category": "NONE",
+              "error_message": null
+            },
+            "source_metadata": {
+              "exit_code": 0,
+              "status": "SUCCESS",
+              "failure_category": "NONE"
+            },
+            "latency_ms": 48.76,
+            "error": null
+          },
+          {
+            "text": "The ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "combined ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "statistics ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "[1] ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "confirm ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "the ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "existence ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "of ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "a ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "clear, ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "grounded ",
+            "is_finished": false,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "text": "response.",
+            "is_finished": true,
+            "token_count": 2169,
+            "ttft_ms": 20.7,
+            "tok_per_sec": 42.3
+          },
+          {
+            "trace_id": "919b49d9-4306-4d39-a9c8-1b528495a5fa",
+            "total_tokens": 2169,
+            "ttft_ms": 20.68,
+            "total_latency_ms": 3270.97,
+            "tok_per_sec": 42.27,
+            "retrieval_triggered": true,
+            "tools_executed": 1
+          }
+        ]
+      },
+      "tokens": "The combined statistics [1] confirm the existence of a clear, grounded response."
+    },
+    "sess_2": {
+      "raw": {
+        "duration_s": 7.388378620147705,
+        "events": [
+          {
+            "triggered": true,
+            "mode": "auto",
+            "decision_reason": "Automated routing triggered on technical architecture inquiry.",
+            "query": "Run python: print(22222)",
+            "retrieved_chunks": [
+              {
+                "chunk_id": "doc-data-6",
+                "doc_title": "5B Token Pretraining Mixture & Licensing Compliance",
+                "doc_source": "web/src/data/datasetsData.ts",
+                "section": "Pretraining Corpus",
+                "similarity_score": 0.0822,
+                "snippet": "The 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curate...",
+                "token_count": 85
+              }
+            ],
+            "injected_context": "[Source 1: 5B Token Pretraining Mixture & Licensing Compliance - Pretraining Corpus]\nThe 5.0-Billion-token pretraining mixture spans 7 curated domains: FineWeb-Edu (40.0%, ODC-By 1.0), Cosmopedia v2 (15.0%, Apache-2.0), StarCoder Python & Polyglot (15.0%, Permissive open source), Standard Ebooks & Curated Literature (10.0%, Public Domain/CC0), Wikipedia Clean English (7.5%, CC-BY-SA-4.0), OpenWebMath (7.5%, ODC-By/Apache-2.0), and UltraChat 200k (strictly capped at 5.0%, MIT). The isolated validation split consists of 20,025,153 tokens with 0.00% training contamination verified by 25,137 document SHA-256 hashes.",
+            "retrieval_latency_ms": 0.9
+          },
+          {
+            "tool_name": "python",
+            "original_tool_name": "python",
+            "status": "started",
+            "call_id": "call_001",
+            "args": {
+              "code": "import math\nres = math.comb(22222, 2)\nprint(f'Combinations: {res}')"
+            }
+          },
+          {
+            "tool_name": "python",
+            "original_tool_name": "python",
+            "requested_by": "model",
+            "status": "completed",
+            "call_id": "call_001",
+            "input_payload": {
+              "code": "import math\nres = math.comb(22222, 2)\nprint(f'Combinations: {res}')"
+            },
+            "output_payload": {
+              "stdout": "Combinations: 246897531\n",
+              "stderr": "",
+              "exit_code": 0,
+              "execution_time_ms": 46.97,
+              "status": "SUCCESS",
+              "failure_category": "NONE",
+              "error_message": null
+            },
+            "source_metadata": {
+              "exit_code": 0,
+              "status": "SUCCESS",
+              "failure_category": "NONE"
+            },
+            "latency_ms": 47.25,
+            "error": null
+          },
+          {
+            "text": "The ",
+            "is_finished": false,
+            "token_count": 2405,
+            "ttft_ms": 18.9,
+            "tok_per_sec": 42.1
+          },
+          {
+            "text": "combined ",
+            "is_finished": false,
+            "token_count": 2405,
+            "ttft_ms": 18.9,
+            "tok_per_sec": 42.1
+          },
+          {
+            "text": "results ",
+            "is_finished": false,
+            "token_count": 2405,
+            "ttft_ms": 18.9,
+            "tok_per_sec": 42.1
+          },
+          {
+            "text": "are ",
+            "is_finished": false,
+            "token_count": 2405,
+            "ttft_ms": 18.9,
+            "tok_per_sec": 42.1
+          },
+          {
+            "text": "[246897531](https://en.wikipedia.org/wiki/Combinations)",
+            "is_finished": true,
+            "token_count": 2405,
+            "ttft_ms": 18.9,
+            "tok_per_sec": 42.1
+          },
+          {
+            "trace_id": "03f5fc5f-bf58-41cf-9161-7fbcdabf8d3c",
+            "total_tokens": 2405,
+            "ttft_ms": 18.93,
+            "total_latency_ms": 5348.86,
+            "tok_per_sec": 42.11,
+            "retrieval_triggered": true,
+            "tools_executed": 1
+          }
+        ]
+      },
+      "tokens": "The combined results are [246897531](https://en.wikipedia.org/wiki/Combinations)"
+    }
+  }
+}

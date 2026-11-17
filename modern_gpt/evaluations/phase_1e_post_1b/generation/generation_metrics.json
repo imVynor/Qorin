@@ -1,0 +1,372 @@
+{
+  "ckpt_501m": {
+    "tokens_seen": 501678080,
+    "modes": {
+      "greedy": {
+        "avg_distinct_1": 0.2208,
+        "avg_distinct_2": 0.2843,
+        "avg_distinct_3": 0.3179,
+        "avg_4gram_repetition_pct": 65.34,
+        "prompt_echo_rate_pct": 0.0,
+        "attractor_trap_rate_pct": 58.0,
+        "avg_tokens_generated": 127.1,
+        "avg_generation_speed_tok_sec": 49.2,
+        "domain_summaries": {
+          "creative": {
+            "count": 4,
+            "avg_rep4": 58.81,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "technical": {
+            "count": 4,
+            "avg_rep4": 52.52,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "conversational": {
+            "count": 4,
+            "avg_rep4": 79.63,
+            "trap_count": 3,
+            "echo_count": 0
+          },
+          "factual": {
+            "count": 4,
+            "avg_rep4": 71.77,
+            "trap_count": 3,
+            "echo_count": 0
+          },
+          "dialogue": {
+            "count": 4,
+            "avg_rep4": 36.34,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "coding": {
+            "count": 4,
+            "avg_rep4": 64.91,
+            "trap_count": 3,
+            "echo_count": 0
+          },
+          "mathematics": {
+            "count": 4,
+            "avg_rep4": 54.54,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "structured_data": {
+            "count": 4,
+            "avg_rep4": 77.33,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "summarization": {
+            "count": 4,
+            "avg_rep4": 51.3,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "instruction_following": {
+            "count": 4,
+            "avg_rep4": 75.94,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "adversarial": {
+            "count": 4,
+            "avg_rep4": 88.67,
+            "trap_count": 4,
+            "echo_count": 0
+          },
+          "logic": {
+            "count": 3,
+            "avg_rep4": 62.54,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "open_reasoning": {
+            "count": 3,
+            "avg_rep4": 77.45,
+            "trap_count": 2,
+            "echo_count": 0
+          }
+        }
+      },
+      "sampling": {
+        "avg_distinct_1": 0.3898,
+        "avg_distinct_2": 0.5457,
+        "avg_distinct_3": 0.6111,
+        "avg_4gram_repetition_pct": 34.92,
+        "prompt_echo_rate_pct": 2.0,
+        "attractor_trap_rate_pct": 26.0,
+        "avg_tokens_generated": 126.3,
+        "avg_generation_speed_tok_sec": 48.4,
+        "domain_summaries": {
+          "creative": {
+            "count": 4,
+            "avg_rep4": 26.78,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "technical": {
+            "count": 4,
+            "avg_rep4": 12.8,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "conversational": {
+            "count": 4,
+            "avg_rep4": 29.52,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "factual": {
+            "count": 4,
+            "avg_rep4": 37.95,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "dialogue": {
+            "count": 4,
+            "avg_rep4": 5.66,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "coding": {
+            "count": 4,
+            "avg_rep4": 26.41,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "mathematics": {
+            "count": 4,
+            "avg_rep4": 63.69,
+            "trap_count": 2,
+            "echo_count": 1
+          },
+          "structured_data": {
+            "count": 4,
+            "avg_rep4": 79.9,
+            "trap_count": 3,
+            "echo_count": 0
+          },
+          "summarization": {
+            "count": 4,
+            "avg_rep4": 17.24,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "instruction_following": {
+            "count": 4,
+            "avg_rep4": 34.06,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "adversarial": {
+            "count": 4,
+            "avg_rep4": 50.27,
+            "trap_count": 3,
+            "echo_count": 0
+          },
+          "logic": {
+            "count": 3,
+            "avg_rep4": 57.84,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "open_reasoning": {
+            "count": 3,
+            "avg_rep4": 11.79,
+            "trap_count": 0,
+            "echo_count": 0
+          }
+        }
+      }
+    }
+  },
+  "ckpt_latest": {
+    "tokens_seen": 1121648640,
+    "modes": {
+      "greedy": {
+        "avg_distinct_1": 0.303,
+        "avg_distinct_2": 0.3733,
+        "avg_distinct_3": 0.405,
+        "avg_4gram_repetition_pct": 57.03,
+        "prompt_echo_rate_pct": 2.0,
+        "attractor_trap_rate_pct": 48.0,
+        "avg_tokens_generated": 120.4,
+        "avg_generation_speed_tok_sec": 53.3,
+        "domain_summaries": {
+          "creative": {
+            "count": 4,
+            "avg_rep4": 64.28,
+            "trap_count": 3,
+            "echo_count": 0
+          },
+          "technical": {
+            "count": 4,
+            "avg_rep4": 48.88,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "conversational": {
+            "count": 4,
+            "avg_rep4": 34.73,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "factual": {
+            "count": 4,
+            "avg_rep4": 53.85,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "dialogue": {
+            "count": 4,
+            "avg_rep4": 59.38,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "coding": {
+            "count": 4,
+            "avg_rep4": 61.01,
+            "trap_count": 1,
+            "echo_count": 1
+          },
+          "mathematics": {
+            "count": 4,
+            "avg_rep4": 54.56,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "structured_data": {
+            "count": 4,
+            "avg_rep4": 45.83,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "summarization": {
+            "count": 4,
+            "avg_rep4": 34.88,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "instruction_following": {
+            "count": 4,
+            "avg_rep4": 75.88,
+            "trap_count": 3,
+            "echo_count": 0
+          },
+          "adversarial": {
+            "count": 4,
+            "avg_rep4": 72.97,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "logic": {
+            "count": 3,
+            "avg_rep4": 55.37,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "open_reasoning": {
+            "count": 3,
+            "avg_rep4": 86.85,
+            "trap_count": 3,
+            "echo_count": 0
+          }
+        }
+      },
+      "sampling": {
+        "avg_distinct_1": 0.429,
+        "avg_distinct_2": 0.5714,
+        "avg_distinct_3": 0.6356,
+        "avg_4gram_repetition_pct": 31.99,
+        "prompt_echo_rate_pct": 2.0,
+        "attractor_trap_rate_pct": 20.0,
+        "avg_tokens_generated": 121.8,
+        "avg_generation_speed_tok_sec": 60.7,
+        "domain_summaries": {
+          "creative": {
+            "count": 4,
+            "avg_rep4": 7.66,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "technical": {
+            "count": 4,
+            "avg_rep4": 36.49,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "conversational": {
+            "count": 4,
+            "avg_rep4": 4.04,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "factual": {
+            "count": 4,
+            "avg_rep4": 41.83,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "dialogue": {
+            "count": 4,
+            "avg_rep4": 39.4,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "coding": {
+            "count": 4,
+            "avg_rep4": 44.0,
+            "trap_count": 1,
+            "echo_count": 1
+          },
+          "mathematics": {
+            "count": 4,
+            "avg_rep4": 43.99,
+            "trap_count": 1,
+            "echo_count": 0
+          },
+          "structured_data": {
+            "count": 4,
+            "avg_rep4": 15.87,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "summarization": {
+            "count": 4,
+            "avg_rep4": 11.96,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "instruction_following": {
+            "count": 4,
+            "avg_rep4": 39.88,
+            "trap_count": 0,
+            "echo_count": 0
+          },
+          "adversarial": {
+            "count": 4,
+            "avg_rep4": 52.34,
+            "trap_count": 3,
+            "echo_count": 0
+          },
+          "logic": {
+            "count": 3,
+            "avg_rep4": 54.47,
+            "trap_count": 2,
+            "echo_count": 0
+          },
+          "open_reasoning": {
+            "count": 3,
+            "avg_rep4": 28.72,
+            "trap_count": 1,
+            "echo_count": 0
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "audit_title": "ModernGPT-S Phase 2C \u2014 Experiment B Training Run Reconciliation",
+  "experiment_id": "phase_2c_experiment_b_35m",
+  "token_budget_reconciliation": {
+    "nominal_budget": 35000000,
+    "actual_conversation_tokens_processed": 35005757,
+    "deviation_tokens": 5757,
+    "deviation_percent": 0.0164,
+    "deviation_classification": "Minor positive boundary deviation",
+    "root_cause": "The training engine was configured to halt at the closest complete optimizer update boundary where conversation_tokens >= 35,000,000. Step 7,123 finished at 34,999,473 tokens (-527 tokens below budget). Executing the final update (Step 7,124, which processed 8 microbatches totaling 6,284 tokens) brought the cumulative total to 35,005,757 tokens, triggering the termination condition.",
+    "protocol_compliance": "PASSED. Complete optimizer step preserved without partial-batch weight corruption."
+  },
+  "token_accounting_breakdown": {
+    "total_conversation_tokens": 35005757,
+    "total_assistant_target_tokens": 23295662,
+    "supervised_token_density": 0.6655,
+    "total_optimizer_updates": 7124,
+    "average_tokens_per_update": 4913.78,
+    "category_conversation_tokens": {
+      "general_instructions": 10863442,
+      "reasoning": 9828886,
+      "coding": 9116635,
+      "tool_use": 5171747
+    },
+    "category_assistant_tokens": {
+      "general_instructions": 7540977,
+      "reasoning": 6623751,
+      "coding": 6018626,
+      "tool_use": 3087456
+    },
+    "curated_input_dataset_composition": {
+      "path": "modern_gpt/experiments/phase2_experiment_b/experiment_b_train.jsonl",
+      "total_records": 56990,
+      "general_instructions_records": 16180,
+      "reasoning_records": 16622,
+      "coding_records": 15829,
+      "tool_use_records": 8359,
+      "authentic_tool_records": 747,
+      "authentic_tool_coverage_pct": 100.0
+    }
+  },
+  "validation_discrepancy_investigation": {
+    "reported_metrics": {
+      "step_7000_val_loss": 1.5853,
+      "step_7000_val_ppl": 4.88,
+      "step_7124_final_val_loss": 1.5376,
+      "step_7124_final_val_ppl": 4.65
+    },
+    "controlled_re_evaluation_findings": {
+      "evaluation_split": "modern_gpt/data_sft_release/splits/val.jsonl (identical across all steps)",
+      "token_weighting": "Sum of cross-entropy over non-masked tokens divided by total valid tokens (identical)",
+      "step_7000_eval_50_batches": {
+        "loss": 1.5853,
+        "ppl": 4.88
+      },
+      "step_7000_eval_100_batches": {
+        "loss": 1.5374,
+        "ppl": 4.65
+      },
+      "final_step_7124_eval_50_batches": {
+        "loss": 1.5855,
+        "ppl": 4.88
+      },
+      "final_step_7124_eval_100_batches": {
+        "loss": 1.5376,
+        "ppl": 4.65
+      }
+    },
+    "provenance_and_root_cause": "During training, periodic validation at step intervals (including Step 7,000) evaluated on the default max_eval_batches = 50. The post-training evaluation at Step 7,124 evaluated on max_eval_batches = 100. When evaluated on the exact same slice of 50 batches, Step 7,000 loss was 1.5853 and Step 7,124 loss was 1.5855 (identical within 0.0002). When evaluated on the exact same slice of 100 batches, Step 7,000 loss was 1.5374 and Step 7,124 loss was 1.5376 (identical within 0.0002). The apparent decrease was solely an artifact of doubling the sample size from 50 to 100 batches. Perplexities match e^loss mathematically in all cases.",
+    "evaluation_validity": "VERIFIED AND CONFIRMED. No mathematical error or data corruption occurred."
+  },
+  "checkpoint_integrity_audit": {
+    "base_pretrained_checkpoint": {
+      "path": "modern_gpt/checkpoints/500m_pretrain/ckpt_latest.pt",
+      "sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+      "pretraining_tokens": 1121648640,
+      "verified": true
+    },
+    "experiment_a_checkpoint": {
+      "path": "modern_gpt/experiments/phase_2b/experiment_a_general_25m/checkpoints/ckpt_pilot_final.pt",
+      "sha256": "249fb467a9cf76e732890cc0501ec39a443756cb2f1c86c66402960f4abbadc4",
+      "step": 4054,
+      "conversation_tokens": 25004028,
+      "verified": true
+    },
+    "experiment_b_local_checkpoint": {
+      "path": "modern_gpt/experiments/phase2_experiment_b/run_35m/checkpoints/ckpt_experiment_b_final.pt",
+      "sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+      "step": 7124,
+      "conversation_tokens": 35005757,
+      "verified": true
+    },
+    "experiment_b_release_checkpoint": {
+      "path": "modern_gpt/checkpoints/sft_experiment_b/ckpt_experiment_b_final.pt",
+      "sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+      "step": 7124,
+      "conversation_tokens": 35005757,
+      "byte_identical_to_local": true,
+      "verified": true
+    }
+  }
+}

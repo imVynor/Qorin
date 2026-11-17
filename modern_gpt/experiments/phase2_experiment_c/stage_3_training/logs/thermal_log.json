@@ -1,0 +1,191 @@
+[
+  {
+    "temp_c": 67.0,
+    "power_w": 58.56,
+    "utilization_pct": 100.0,
+    "memory_used_mib": 7805.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794835166.415187,
+    "step": 1
+  },
+  {
+    "temp_c": 70.0,
+    "power_w": 40.54,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7821.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794835775.7384279,
+    "step": 25
+  },
+  {
+    "temp_c": 70.0,
+    "power_w": 39.83,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7821.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794836348.91313,
+    "step": 50
+  },
+  {
+    "temp_c": 70.0,
+    "power_w": 37.58,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7817.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794837001.4964578,
+    "step": 75
+  },
+  {
+    "temp_c": 71.0,
+    "power_w": 37.83,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7817.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794837471.2396827,
+    "step": 100
+  },
+  {
+    "temp_c": 75.0,
+    "power_w": 41.8,
+    "utilization_pct": 99.0,
+    "memory_used_mib": 7813.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794838197.9602354,
+    "step": 125
+  },
+  {
+    "temp_c": 68.0,
+    "power_w": 37.67,
+    "utilization_pct": 100.0,
+    "memory_used_mib": 7684.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794838850.2844226,
+    "step": 150
+  },
+  {
+    "temp_c": 69.0,
+    "power_w": 38.58,
+    "utilization_pct": 99.0,
+    "memory_used_mib": 7668.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794839564.5171528,
+    "step": 175
+  },
+  {
+    "temp_c": 70.0,
+    "power_w": 42.2,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7606.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794840205.2380772,
+    "step": 200
+  },
+  {
+    "temp_c": 72.0,
+    "power_w": 42.95,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7715.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794840870.1880858,
+    "step": 225
+  },
+  {
+    "temp_c": 71.0,
+    "power_w": 38.74,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7654.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794841576.4980512,
+    "step": 250
+  },
+  {
+    "temp_c": 70.0,
+    "power_w": 38.79,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7659.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794842383.6337402,
+    "step": 275
+  },
+  {
+    "temp_c": 71.0,
+    "power_w": 39.27,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7639.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794843012.6589115,
+    "step": 300
+  },
+  {
+    "temp_c": 74.0,
+    "power_w": 43.14,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7626.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794843724.8671076,
+    "step": 325
+  },
+  {
+    "temp_c": 76.0,
+    "power_w": 43.01,
+    "utilization_pct": 98.0,
+    "memory_used_mib": 7626.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794844472.1667452,
+    "step": 350
+  },
+  {
+    "temp_c": 76.0,
+    "power_w": 41.91,
+    "utilization_pct": 97.0,
+    "memory_used_mib": 7709.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794845120.3683023,
+    "step": 375
+  },
+  {
+    "temp_c": 71.0,
+    "power_w": 38.85,
+    "utilization_pct": 99.0,
+    "memory_used_mib": 7694.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794845741.6348422,
+    "step": 400
+  },
+  {
+    "temp_c": 73.0,
+    "power_w": 42.83,
+    "utilization_pct": 99.0,
+    "memory_used_mib": 7652.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794846431.6201332,
+    "step": 425
+  },
+  {
+    "temp_c": 70.0,
+    "power_w": 42.0,
+    "utilization_pct": 99.0,
+    "memory_used_mib": 7582.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794847084.740687,
+    "step": 450
+  },
+  {
+    "temp_c": 71.0,
+    "power_w": 38.34,
+    "utilization_pct": 99.0,
+    "memory_used_mib": 7559.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794847809.6877558,
+    "step": 475
+  },
+  {
+    "temp_c": 72.0,
+    "power_w": 41.6,
+    "utilization_pct": 99.0,
+    "memory_used_mib": 7717.0,
+    "memory_total_mib": 8151.0,
+    "timestamp": 1794848316.227697,
+    "step": 495
+  }
+]

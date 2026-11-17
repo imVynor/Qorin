@@ -1,0 +1,50 @@
+# ModernGPT-S 100M GQA-4 Step 8D SFT Training Configuration
+# SFT Retraining on audited sft_4k_v3 dataset
+
+experiment_name: "modern_gpts_100m_sft_4k_v3"
+output_dir: "checkpoints/modern_gpts_100m_sft_4k_v3"
+artifacts_dir: "artifacts/experiments/modern_gpts_100m_step_08d"
+
+# Base model & starting checkpoint (Clean Step 4 4K Continued-Pretrain)
+base_checkpoint: "checkpoints/modern_gpts_100m_4k_pilot/checkpoint_step_2000.pt"
+tokenizer_path: "artifacts/tokenizer_16k_v2"
+
+model_config:
+  vocab_size: 16000
+  context_length: 4096
+  emb_dim: 768
+  n_heads: 12
+  num_kv_heads: 4
+  n_layers: 14
+  ffn_hidden_dim: 2048
+  dropout: 0.05
+  qkv_bias: false
+  rope_theta: 10000.0
+  rope_scale: 8.0
+  rope_type: "linear"
+
+# Training schedule & hyperparameters
+train_data_path: "data/sft_4k_v3/processed/train.jsonl"
+val_data_path: "data/sft_4k_v3/processed/val.jsonl"
+micro_batch_size: 1
+gradient_accumulation_steps: 8
+total_epochs: 3
+learning_rate: 0.00005        # 5e-5 peak LR
+min_learning_rate: 0.000005   # 5e-6 floor LR
+warmup_steps: 50
+weight_decay: 0.1
+grad_clip: 1.0
+precision: "bfloat16"         # bfloat16 on RTX 5060 Laptop GPU
+
+# Validation & Checkpointing
+eval_interval_steps: 200
+save_interval_steps: 200
+eval_batches: 50
+keep_last_checkpoints: 3
+
+# Thermal Management
+thermal_guard_enabled: true
+cooling_interval_steps: 200
+cooling_duration_seconds: 10
+max_gpu_temp_celsius: 82.0
+

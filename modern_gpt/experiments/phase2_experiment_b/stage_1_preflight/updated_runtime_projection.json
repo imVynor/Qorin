@@ -1,0 +1,47 @@
+{
+  "target_experiment": "Experiment B (General + Tool-Use SFT)",
+  "target_budget_conversation_tokens": 35000000,
+  "historical_reference_experiment_a": {
+    "active_conversation_throughput_tok_sec": 3513.1,
+    "active_assistant_throughput_tok_sec": 2805.0,
+    "total_elapsed_project_throughput_tok_sec": 3110.6,
+    "active_minutes": 166.0,
+    "cooldown_breaks": 1,
+    "cooldown_minutes": 15.0,
+    "total_wall_clock_minutes": 181.0,
+    "confidence": "HIGH_CONFIDENT_REPRODUCED"
+  },
+  "smoke_test_micro_estimate": {
+    "smoke_conversation_tokens": 5232,
+    "smoke_assistant_tokens": 3232,
+    "smoke_overall_throughput_tok_sec": 2972.8,
+    "projected_active_minutes": 196.2,
+    "confidence": "LOW_CONFIDENCE_MICRO_SAMPLE",
+    "rationale": "2 updates (5,232 tokens) capture dataloader and compilation initialization transient; historical 4,050-step run of 3,513.1 tok/s is retained as authoritative reference."
+  },
+  "reconciled_runtime_budget": {
+    "pure_active_gpu_minutes": 166.0,
+    "pure_active_gpu_hours": 2.77,
+    "thermal_sessions": [
+      {
+        "session": 1,
+        "active_minutes": 105.0,
+        "tokens_processed": 22132530
+      },
+      {
+        "cooldown": 1,
+        "rest_minutes": 15.0,
+        "reason": "Mandatory 105m active thermal guardrail"
+      },
+      {
+        "session": 2,
+        "active_minutes": 61.0,
+        "tokens_processed": 12867470
+      }
+    ],
+    "total_wall_clock_minutes": 181.0,
+    "total_wall_clock_hours": 3.02,
+    "deadline_hours_remaining": 44.5,
+    "deadline_utilization_pct": 6.8
+  }
+}

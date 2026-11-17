@@ -1,0 +1,994 @@
+{
+  "ckpt_501m": {
+    "checkpoint": "ckpt_501m",
+    "total_tasks": 50,
+    "correct_tasks": 0,
+    "overall_accuracy_pct": 0.0,
+    "type_breakdown": {
+      "arithmetic": {
+        "total": 18,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "percentage": {
+        "total": 6,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "fractions": {
+        "total": 2,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "algebra": {
+        "total": 7,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "sequence": {
+        "total": 6,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "word_problem": {
+        "total": 6,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "order_of_operations": {
+        "total": 5,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      }
+    },
+    "detailed_results": [
+      {
+        "task_id": "math_01",
+        "type": "arithmetic",
+        "prompt": "Solve: 17 + 28 = ",
+        "expected": 45.0,
+        "generated": "2.\n\nThe first equation is the second one, and the second one is the second one.\n\nThe second one is the second one",
+        "predicted": 2.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_02",
+        "type": "arithmetic",
+        "prompt": "Solve: 125 - 47 = ",
+        "expected": 78.0,
+        "generated": "0.5.\n\nThe first step is to solve the second step.\n\nThe second step is to solve the second step.",
+        "predicted": 0.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_03",
+        "type": "arithmetic",
+        "prompt": "Solve: 14 * 6 = ",
+        "expected": 84.0,
+        "generated": "3.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 3.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_04",
+        "type": "arithmetic",
+        "prompt": "Solve: 144 / 12 = ",
+        "expected": 12.0,
+        "generated": "1.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 1.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_05",
+        "type": "arithmetic",
+        "prompt": "Solve: 25 * 25 = ",
+        "expected": 625.0,
+        "generated": "1.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 1.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_06",
+        "type": "percentage",
+        "prompt": "What is 15% of 200? ",
+        "expected": 30.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_07",
+        "type": "percentage",
+        "prompt": "What is 50% of 860? ",
+        "expected": 430.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_08",
+        "type": "fractions",
+        "prompt": "What is 1/4 + 1/2 in decimal? ",
+        "expected": 0.75,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_09",
+        "type": "fractions",
+        "prompt": "What is 3/5 in decimal? ",
+        "expected": 0.6,
+        "generated": "(\u00a0(",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_10",
+        "type": "algebra",
+        "prompt": "If x + 7 = 19, what is x? x = ",
+        "expected": 12.0,
+        "generated": "x + 5 = 19, what is x?\n\n2. The first two terms are the same.\n\n3. The second two terms are the",
+        "predicted": 19.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_11",
+        "type": "algebra",
+        "prompt": "If 3x = 27, what is x? x = ",
+        "expected": 9.0,
+        "generated": "x\u00a0=\u00a0x\u00a0=\u00a0x\u00a0=\u00a0x\u00a0=\u00a0x\u00a0=",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_12",
+        "type": "algebra",
+        "prompt": "If 2x - 4 = 16, what is x? x = ",
+        "expected": 10.0,
+        "generated": "x\u00a0=\u00a0x\u00a0=\u00a0x\u00a0=\u00a0x\u00a0=\u00a0x\u00a0=",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_13",
+        "type": "sequence",
+        "prompt": "Next number in sequence: 2, 4, 6, 8, ",
+        "expected": 10.0,
+        "generated": "The sequence is a sequence of the sequence of the sequence.\n\nThe sequence is a sequence of the sequence of the sequence.\n\nThe sequence is",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_14",
+        "type": "sequence",
+        "prompt": "Next number in sequence: 3, 9, 27, ",
+        "expected": 81.0,
+        "generated": ",  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_15",
+        "type": "sequence",
+        "prompt": "Next number in sequence: 1, 1, 2, 3, 5, 8, ",
+        "expected": 13.0,
+        "generated": ",  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,  ,",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_16",
+        "type": "word_problem",
+        "prompt": "A store has 40 apples. It sells 15. How many apples remain? ",
+        "expected": 25.0,
+        "generated": "(The price of apples is $2.00.) \n\n\n\nTHE MY MY MY MY MY MY MY M",
+        "predicted": 2.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_17",
+        "type": "word_problem",
+        "prompt": "Sarah has 5 bags with 6 marbles each. How many marbles does she have in total? ",
+        "expected": 30.0,
+        "generated": "(a) What is the cost of the marbles?\n(b) What is the cost of the marbles?\n(c) What is",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_18",
+        "type": "word_problem",
+        "prompt": "A train travels at 60 mph for 3 hours. How many miles does it travel? ",
+        "expected": 180.0,
+        "generated": "The answer is, \"It is a great question.\" \nThe answer is, \"It is a great question.\" \nThe answer is, \"",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_19",
+        "type": "order_of_operations",
+        "prompt": "Solve: 8 + 4 * 2 = ",
+        "expected": 16.0,
+        "generated": "2.\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 2.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_20",
+        "type": "order_of_operations",
+        "prompt": "Solve: (10 - 2) * 3 = ",
+        "expected": 24.0,
+        "generated": "2.\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 2.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_21",
+        "type": "arithmetic",
+        "prompt": "Solve: 100 - 35 = ",
+        "expected": 65.0,
+        "generated": "0.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 0.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_22",
+        "type": "arithmetic",
+        "prompt": "Solve: 9 * 9 = ",
+        "expected": 81.0,
+        "generated": "3.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 3.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_23",
+        "type": "arithmetic",
+        "prompt": "Solve: 81 / 9 = ",
+        "expected": 9.0,
+        "generated": "0.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 0.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_24",
+        "type": "percentage",
+        "prompt": "What is 10% of 500? ",
+        "expected": 50.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_25",
+        "type": "algebra",
+        "prompt": "If 5x = 45, what is x? x = ",
+        "expected": 9.0,
+        "generated": "x. \u00a0(x - x) = (x - x) = (x - x) = (x - x) = (",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_26",
+        "type": "sequence",
+        "prompt": "Next number: 5, 10, 15, 20, ",
+        "expected": 25.0,
+        "generated": "10, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15",
+        "predicted": 10.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_27",
+        "type": "arithmetic",
+        "prompt": "Solve: 12 + 13 = ",
+        "expected": 25.0,
+        "generated": "2.\n\nThe first equation is the second one, and the second one is the second one.\n\nThe second equation is the third one",
+        "predicted": 2.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_28",
+        "type": "arithmetic",
+        "prompt": "Solve: 50 - 18 = ",
+        "expected": 32.0,
+        "generated": "0.5.\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 0.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_29",
+        "type": "arithmetic",
+        "prompt": "Solve: 7 * 8 = ",
+        "expected": 56.0,
+        "generated": "3 * 8 = \u00a03 * 8 = \u00a03 * 8 = \u00a03 * 8 = \u00a03 *",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_30",
+        "type": "arithmetic",
+        "prompt": "Solve: 64 / 8 = ",
+        "expected": 8.0,
+        "generated": "0.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 0.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_31",
+        "type": "arithmetic",
+        "prompt": "Solve: 11 * 11 = ",
+        "expected": 121.0,
+        "generated": "3 * \u00a03 * \u00a03 * \u00a03 * \u00a03 * \u00a03 *",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_32",
+        "type": "percentage",
+        "prompt": "What is 20% of 150? ",
+        "expected": 30.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_33",
+        "type": "algebra",
+        "prompt": "If x - 8 = 12, what is x? x = ",
+        "expected": 20.0,
+        "generated": "x - 8 = 12, what is x?\n\n2. The problem statement, all variables and given/known data\n\nI'm trying to solve",
+        "predicted": 12.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_34",
+        "type": "algebra",
+        "prompt": "If 4x + 2 = 18, what is x? x = ",
+        "expected": 4.0,
+        "generated": "x. x =  x. x =  x. x =  x. x =  x. x =  x. x =  x.",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_35",
+        "type": "sequence",
+        "prompt": "Next number: 10, 20, 30, 40, ",
+        "expected": 50.0,
+        "generated": "100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100,",
+        "predicted": 100.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_36",
+        "type": "word_problem",
+        "prompt": "Tom buys 3 books at $7 each. What is the total cost? ",
+        "expected": 21.0,
+        "generated": "(a) What is the total cost of the book? (b) What is the total cost of the book? (c) What is the",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_37",
+        "type": "word_problem",
+        "prompt": "A baker bakes 24 cookies and packs them equally into 4 boxes. How many in each box? ",
+        "expected": 6.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_38",
+        "type": "order_of_operations",
+        "prompt": "Solve: 15 / 3 + 2 = ",
+        "expected": 7.0,
+        "generated": "2.\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 2.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_39",
+        "type": "order_of_operations",
+        "prompt": "Solve: 30 - 5 * 4 = ",
+        "expected": 10.0,
+        "generated": "3.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 3.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_40",
+        "type": "percentage",
+        "prompt": "What is 25% of 80? ",
+        "expected": 20.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_41",
+        "type": "arithmetic",
+        "prompt": "Solve: 99 + 1 = ",
+        "expected": 100.0,
+        "generated": "0.5\n\nThe first step is to solve the second one.\n\nThe second step is to solve the second one.\n\nThe third step",
+        "predicted": 0.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_42",
+        "type": "arithmetic",
+        "prompt": "Solve: 200 - 85 = ",
+        "expected": 115.0,
+        "generated": "0.5\n\nThe first step is to solve the second step.\n\nThe second step is to solve the second step.\n\nThe",
+        "predicted": 0.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_43",
+        "type": "arithmetic",
+        "prompt": "Solve: 12 * 5 = ",
+        "expected": 60.0,
+        "generated": "3.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 3.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_44",
+        "type": "arithmetic",
+        "prompt": "Solve: 72 / 8 = ",
+        "expected": 9.0,
+        "generated": "3.5\n\nThe first step is to solve for the second step.\n\nThe second step is to solve for the third step.",
+        "predicted": 3.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_45",
+        "type": "arithmetic",
+        "prompt": "Solve: 13 * 3 = ",
+        "expected": 39.0,
+        "generated": "3\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_46",
+        "type": "percentage",
+        "prompt": "What is 5% of 100? ",
+        "expected": 5.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_47",
+        "type": "algebra",
+        "prompt": "If x / 3 = 7, what is x? x = ",
+        "expected": 21.0,
+        "generated": "x / 3 = 5, what is x? x =  x / 3 = 5, what is x? x =  x / 3 = 5,",
+        "predicted": 5.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_48",
+        "type": "sequence",
+        "prompt": "Next number: 100, 90, 80, 70, ",
+        "expected": 60.0,
+        "generated": "(1)\n\n(2)\n\n(3)\n\n(4)\n\n(5)\n\n(6)\n\n(",
+        "predicted": 1.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_49",
+        "type": "word_problem",
+        "prompt": "If a rectangle has length 8 and width 5, what is its area? ",
+        "expected": 40.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_50",
+        "type": "order_of_operations",
+        "prompt": "Solve: 2 * 3 + 4 * 5 = ",
+        "expected": 26.0,
+        "generated": "2 * 3 + 4 * 5 = \u00a02 * 3 + 4 * 5 = \u00a02 * 3 + 4 * 5 =",
+        "predicted": 2.0,
+        "correct": false
+      }
+    ],
+    "tokens_seen": 501678080
+  },
+  "ckpt_latest": {
+    "checkpoint": "ckpt_latest",
+    "total_tasks": 50,
+    "correct_tasks": 0,
+    "overall_accuracy_pct": 0.0,
+    "type_breakdown": {
+      "arithmetic": {
+        "total": 18,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "percentage": {
+        "total": 6,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "fractions": {
+        "total": 2,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "algebra": {
+        "total": 7,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "sequence": {
+        "total": 6,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "word_problem": {
+        "total": 6,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      },
+      "order_of_operations": {
+        "total": 5,
+        "correct": 0,
+        "accuracy_pct": 0.0
+      }
+    },
+    "detailed_results": [
+      {
+        "task_id": "math_01",
+        "type": "arithmetic",
+        "prompt": "Solve: 17 + 28 = ",
+        "expected": 45.0,
+        "generated": "15. \n\nThe following is a list of the most common types of the \nsolve: \n\n1. The solution of the equation",
+        "predicted": 15.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_02",
+        "type": "arithmetic",
+        "prompt": "Solve: 125 - 47 = ",
+        "expected": 78.0,
+        "generated": "(1) - (1) - (2) - (3) - (4) - (5) - (6) - (7)",
+        "predicted": 1.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_03",
+        "type": "arithmetic",
+        "prompt": "Solve: 14 * 6 = ",
+        "expected": 84.0,
+        "generated": "6 * 6 * 6 * 6 * 6 * 6 * 6 * 6 * 6 * 6 * 6 * 6 * 6 * 6 * 6 * 6 *",
+        "predicted": 6.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_04",
+        "type": "arithmetic",
+        "prompt": "Solve: 144 / 12 = ",
+        "expected": 12.0,
+        "generated": "10.5\n\n# The following is a list of the most common types of the\n# type of the type of the type of the type of",
+        "predicted": 10.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_05",
+        "type": "arithmetic",
+        "prompt": "Solve: 25 * 25 = ",
+        "expected": 625.0,
+        "generated": "10.00 * 25 = \n10.00 * 25 = \n10.00 * 25 = \n10.00 * 25 =",
+        "predicted": 10.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_06",
+        "type": "percentage",
+        "prompt": "What is 15% of 200? ",
+        "expected": 30.0,
+        "generated": "(a) What is the difference between the number of days in the week and the number of days in the week?\n(b) What is the",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_07",
+        "type": "percentage",
+        "prompt": "What is 50% of 860? ",
+        "expected": 430.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_08",
+        "type": "fractions",
+        "prompt": "What is 1/4 + 1/2 in decimal? ",
+        "expected": 0.75,
+        "generated": "(1/2) + 1/2 = 1/2.\n\n2. Oct 31, 2012\n\n### kiddy",
+        "predicted": 1.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_09",
+        "type": "fractions",
+        "prompt": "What is 3/5 in decimal? ",
+        "expected": 0.6,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_10",
+        "type": "algebra",
+        "prompt": "If x + 7 = 19, what is x? x = ",
+        "expected": 12.0,
+        "generated": "3.  4.  5.  6.  7.  7.  7.  7.  7.  7.  7.",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_11",
+        "type": "algebra",
+        "prompt": "If 3x = 27, what is x? x = ",
+        "expected": 9.0,
+        "generated": "3x + 27.\n\n2. ## Re: Re: Re: Re: Re: Re: Re: Re: Re: Re: Re:",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_12",
+        "type": "algebra",
+        "prompt": "If 2x - 4 = 16, what is x? x = ",
+        "expected": 10.0,
+        "generated": "3x - 4 = 16.\n\n3x - 4 = 16.\n\n3x - 4 = 16.\n\n3x - 4 =",
+        "predicted": 16.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_13",
+        "type": "sequence",
+        "prompt": "Next number in sequence: 2, 4, 6, 8, ",
+        "expected": 10.0,
+        "generated": "2, 4, 5, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8",
+        "predicted": 2.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_14",
+        "type": "sequence",
+        "prompt": "Next number in sequence: 3, 9, 27, ",
+        "expected": 81.0,
+        "generated": "3, \n3, \n3, \n3, \n3, \n3, \n3, \n3,",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_15",
+        "type": "sequence",
+        "prompt": "Next number in sequence: 1, 1, 2, 3, 5, 8, ",
+        "expected": 13.0,
+        "generated": "3,  4,  5,  6,  7,  8,  7,  8,  8,  8,  8,",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_16",
+        "type": "word_problem",
+        "prompt": "A store has 40 apples. It sells 15. How many apples remain? ",
+        "expected": 25.0,
+        "generated": "The store has 40 apples. The store has 40. How many apples are left? \nThe store has 40. How many apples are left?",
+        "predicted": 40.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_17",
+        "type": "word_problem",
+        "prompt": "Sarah has 5 bags with 6 marbles each. How many marbles does she have in total? ",
+        "expected": 30.0,
+        "generated": "(a) \n(b) \n(c) \n(d) \n(e) \n(f) \n(",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_18",
+        "type": "word_problem",
+        "prompt": "A train travels at 60 mph for 3 hours. How many miles does it travel? ",
+        "expected": 180.0,
+        "generated": "The answer is, it is a mile. \n\n\n\nThe train is traveling at a rate of 1,000 miles per hour. \nThe",
+        "predicted": 1000.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_19",
+        "type": "order_of_operations",
+        "prompt": "Solve: 8 + 4 * 2 = ",
+        "expected": 16.0,
+        "generated": "2.\n\nThe following is a simple example of a simple linear equation:\n\n$\\frac{1}{2} = \\frac{1}{",
+        "predicted": 2.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_20",
+        "type": "order_of_operations",
+        "prompt": "Solve: (10 - 2) * 3 = ",
+        "expected": 24.0,
+        "generated": "3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 *",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_21",
+        "type": "arithmetic",
+        "prompt": "Solve: 100 - 35 = ",
+        "expected": 65.0,
+        "generated": "-100 - 35 =  -100 - 35 =  -100 - 35 =  -100 - 35 =  -100 - 35 =  -100",
+        "predicted": -100.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_22",
+        "type": "arithmetic",
+        "prompt": "Solve: 9 * 9 = ",
+        "expected": 81.0,
+        "generated": "9 * 9 * 9 * 9 * 9 * 9 * 9 * 9 * 9 * 9 * 9 * 9 * 9 * 9 * 9 * 9 *",
+        "predicted": 9.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_23",
+        "type": "arithmetic",
+        "prompt": "Solve: 81 / 9 = ",
+        "expected": 9.0,
+        "generated": "10.5\n\n# The following is a list of the most common types of\n# the most common types of the most common types of the most",
+        "predicted": 10.5,
+        "correct": false
+      },
+      {
+        "task_id": "math_24",
+        "type": "percentage",
+        "prompt": "What is 10% of 500? ",
+        "expected": 50.0,
+        "generated": "",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_25",
+        "type": "algebra",
+        "prompt": "If 5x = 45, what is x? x = ",
+        "expected": 9.0,
+        "generated": "3x + 45.\n\n2. Oct 31, 2012\n\n### HallsofIvy\n\nStaff Emeritus\nStaff Emeritus",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_26",
+        "type": "sequence",
+        "prompt": "Next number: 5, 10, 15, 20, ",
+        "expected": 25.0,
+        "generated": "and \n2,000,000,000,000,000,000,000,000,000,000,000,000,000,",
+        "predicted": 2e+39,
+        "correct": false
+      },
+      {
+        "task_id": "math_27",
+        "type": "arithmetic",
+        "prompt": "Solve: 12 + 13 = ",
+        "expected": 25.0,
+        "generated": "10. \n\nThe following is a list of the most common types of the term \"P\" used in the United States.\n\nA.",
+        "predicted": 10.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_28",
+        "type": "arithmetic",
+        "prompt": "Solve: 50 - 18 = ",
+        "expected": 32.0,
+        "generated": "19 - \n19 - \n19 - \n19 - \n19 - \n19 - \n19 - \n19 -",
+        "predicted": 19.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_29",
+        "type": "arithmetic",
+        "prompt": "Solve: 7 * 8 = ",
+        "expected": 56.0,
+        "generated": "5 * 8 * 8 * 8 * 8 * 8 * 8 * 8 * 8 * 8 * 8 * 8 * 8 * 8 * 8 * 8",
+        "predicted": 5.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_30",
+        "type": "arithmetic",
+        "prompt": "Solve: 64 / 8 = ",
+        "expected": 8.0,
+        "generated": "10.0 / \n10.0 / \n10.0 / \n10.0 / \n10.0 / \n10",
+        "predicted": 10.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_31",
+        "type": "arithmetic",
+        "prompt": "Solve: 11 * 11 = ",
+        "expected": 121.0,
+        "generated": "(1.0 * (1.0 * (1.0 * (1.0 * (1.0 * (1.0 * (",
+        "predicted": 1.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_32",
+        "type": "percentage",
+        "prompt": "What is 20% of 150? ",
+        "expected": 30.0,
+        "generated": "",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_33",
+        "type": "algebra",
+        "prompt": "If x - 8 = 12, what is x? x = ",
+        "expected": 20.0,
+        "generated": "3.  4.  5.  6.  7.  8.  8.  8.  8.  8.  8.",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_34",
+        "type": "algebra",
+        "prompt": "If 4x + 2 = 18, what is x? x = ",
+        "expected": 4.0,
+        "generated": "3x + 2 = 18.\n\n2x + 2 = 18\n\n2x + 2 = 18\n\n2x = 18\n\n2",
+        "predicted": 18.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_35",
+        "type": "sequence",
+        "prompt": "Next number: 10, 20, 30, 40, ",
+        "expected": 50.0,
+        "generated": "10, 20, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40",
+        "predicted": 10.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_36",
+        "type": "word_problem",
+        "prompt": "Tom buys 3 books at $7 each. What is the total cost? ",
+        "expected": 21.0,
+        "generated": "The total cost is $3.00. The total cost is $2.00. The total cost is $3.00. The total cost is",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_37",
+        "type": "word_problem",
+        "prompt": "A baker bakes 24 cookies and packs them equally into 4 boxes. How many in each box? ",
+        "expected": 6.0,
+        "generated": "How many cookies do I need to make? \nHow many cookies do I need to make? \nHow many cookies do I need to make?",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_38",
+        "type": "order_of_operations",
+        "prompt": "Solve: 15 / 3 + 2 = ",
+        "expected": 7.0,
+        "generated": "2 / 3 + 2 =  2 / 3 + 2 =  2 / 3 + 2 =  2 / 3 + 2 =  2 / 3 +",
+        "predicted": 2.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_39",
+        "type": "order_of_operations",
+        "prompt": "Solve: 30 - 5 * 4 = ",
+        "expected": 10.0,
+        "generated": "5 * 4 =  5 * 4 =  5 * 4 =  5 * 4 =  5 * 4 =  5 * 4 =  5 *",
+        "predicted": 5.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_40",
+        "type": "percentage",
+        "prompt": "What is 25% of 80? ",
+        "expected": 20.0,
+        "generated": "",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_41",
+        "type": "arithmetic",
+        "prompt": "Solve: 99 + 1 = ",
+        "expected": 100.0,
+        "generated": "0.\n\nThe following is a simple example of a simple linear equation:\n\n$$\\frac{1}{2}x^2 + \\frac",
+        "predicted": 0.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_42",
+        "type": "arithmetic",
+        "prompt": "Solve: 200 - 85 = ",
+        "expected": 115.0,
+        "generated": "100 - 100 = \n100 - 100 = \n100 - 100 = \n100 - 100 = \n100 - 100 = \n100",
+        "predicted": 100.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_43",
+        "type": "arithmetic",
+        "prompt": "Solve: 12 * 5 = ",
+        "expected": 60.0,
+        "generated": "5 * 5 * 5 * 5 * 5 * 5 * 5 * 5 * 5 * 5 * 5 * 5 *5 * 5 * 5 *5",
+        "predicted": 5.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_44",
+        "type": "arithmetic",
+        "prompt": "Solve: 72 / 8 = ",
+        "expected": 9.0,
+        "generated": "10.00\n\n# The following is a list of the most common types of\n# the most common types of the most common types of the most",
+        "predicted": 10.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_45",
+        "type": "arithmetic",
+        "prompt": "Solve: 13 * 3 = ",
+        "expected": 39.0,
+        "generated": "3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 * 3 *",
+        "predicted": 3.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_46",
+        "type": "percentage",
+        "prompt": "What is 5% of 100? ",
+        "expected": 5.0,
+        "generated": "(a)\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\ufffd",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_47",
+        "type": "algebra",
+        "prompt": "If x / 3 = 7, what is x? x = ",
+        "expected": 21.0,
+        "generated": "3 / 3 = 7.\n\n2. ## Re: Re: Re: Re: Re: Re: Re: Re: Re: Re: Re",
+        "predicted": 7.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_48",
+        "type": "sequence",
+        "prompt": "Next number: 100, 90, 80, 70, ",
+        "expected": 60.0,
+        "generated": "100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100",
+        "predicted": 100.0,
+        "correct": false
+      },
+      {
+        "task_id": "math_49",
+        "type": "word_problem",
+        "prompt": "If a rectangle has length 8 and width 5, what is its area? ",
+        "expected": 40.0,
+        "generated": "(a) Find the area of the rectangle.\n\n(b) Find the area of the rectangle.\n\n(c) Find the area",
+        "predicted": null,
+        "correct": false
+      },
+      {
+        "task_id": "math_50",
+        "type": "order_of_operations",
+        "prompt": "Solve: 2 * 3 + 4 * 5 = ",
+        "expected": 26.0,
+        "generated": "3 * 3 * 5 * 5 * 5 * 5 * 5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *",
+        "predicted": 3.0,
+        "correct": false
+      }
+    ],
+    "tokens_seen": 1121648640
+  }
+}

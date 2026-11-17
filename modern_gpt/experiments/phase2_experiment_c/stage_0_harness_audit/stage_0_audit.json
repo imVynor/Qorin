@@ -1,0 +1,437 @@
+{
+  "timestamp": "2026-11-16 12:39:00 UTC",
+  "stage": "Stage 0 - Harness Audit & Execution Verification",
+  "checkpoint_audit": {
+    "checkpoint_path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\checkpoints\\sft_experiment_b\\ckpt_experiment_b_final.pt",
+    "checkpoint_sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+    "expected_checkpoint_sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+    "checkpoint_hash_match": true,
+    "tokenizer_path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\artifacts\\tokenizer_32k\\tokenizer.json",
+    "tokenizer_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+    "expected_tokenizer_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+    "tokenizer_hash_match": true,
+    "total_tensors": 223,
+    "non_finite_tensors": [],
+    "unique_parameters": 514389504,
+    "expected_unique_parameters": 514389504,
+    "parameter_match": true,
+    "tied_embeddings_verified": true,
+    "special_tokens": {
+      "<|pad|>": 0,
+      "<|unk|>": 1,
+      "<|bos|>": 2,
+      "<|eos|>": 3,
+      "<|im_start|>": 4,
+      "<|im_end|>": 5,
+      "<|tool_call|>": 6,
+      "<|tool_result|>": 7,
+      "<|tool_error|>": 8,
+      "<|endoftext|>": 9
+    },
+    "vocab_size": 32768
+  },
+  "tool_inventory": {
+    "tool_a": {
+      "name": "web_research",
+      "aliases": [
+        "web_research",
+        "web_search",
+        "search"
+      ],
+      "class": "WebResearcher",
+      "module": "backend.tools.web_researcher",
+      "purpose": "Live internet search and factual evidence extraction with citations."
+    },
+    "tool_b": {
+      "name": "python",
+      "aliases": [
+        "python",
+        "python_interpreter",
+        "run_code"
+      ],
+      "class": "PythonSandbox",
+      "module": "backend.tools.python_sandbox",
+      "purpose": "Restricted subprocess execution for deterministic arithmetic, statistics, and data analysis."
+    }
+  },
+  "python_sandbox_tests": [
+    {
+      "id": "py_01_arithmetic",
+      "name": "Basic Arithmetic",
+      "status": "completed",
+      "latency_ms": 71.01549999788404,
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": "83810205\n",
+      "stderr": "",
+      "error": null,
+      "pass": true
+    },
+    {
+      "id": "py_02_statistics",
+      "name": "Numerical / Statistical Calculation",
+      "status": "completed",
+      "latency_ms": 76.73219999924186,
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": "Mean: 12.98, Stdev: 1.69\n",
+      "stderr": "",
+      "error": null,
+      "pass": false
+    },
+    {
+      "id": "py_03_data_analysis",
+      "name": "Small Data Analysis",
+      "status": "completed",
+      "latency_ms": 57.19830000089132,
+      "exit_code": 0,
+      "timed_out": false,
+      "stdout": "Total: 2.5, Cheapest: banana\n",
+      "stderr": "",
+      "error": null,
+      "pass": true
+    },
+    {
+      "id": "py_04_syntax_error",
+      "name": "Syntax Error Handling",
+      "status": "failed",
+      "latency_ms": 55.35440000312519,
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": "",
+      "stderr": "  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_el6tahga\\user_script.py\", line 8\n    print('Unclosed string)\n          ^\nSyntaxError: unterminated string literal (detected at line 8)\n",
+      "error": "File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_el6tahga\\user_script.py\", line 8\n    print('Unclosed string)\n          ^\nSyntaxError: unterminated string literal (detected at line 8)",
+      "pass": true
+    },
+    {
+      "id": "py_05_runtime_error",
+      "name": "Runtime Error Handling (ZeroDivisionError)",
+      "status": "failed",
+      "latency_ms": 55.736400001478614,
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_pjp9z_up\\user_script.py\", line 8, in <module>\n    x = 10 / 0\n        ~~~^~~\nZeroDivisionError: division by zero\n",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_pjp9z_up\\user_script.py\", line 8, in <module>\n    x = 10 / 0\n        ~~~^~~\nZeroDivisionError: division by zero",
+      "pass": true
+    },
+    {
+      "id": "py_06_timeout",
+      "name": "Timeout Handling (Infinite Loop)",
+      "status": "failed",
+      "latency_ms": 5010.522299999138,
+      "exit_code": 124,
+      "timed_out": true,
+      "stdout": "",
+      "stderr": "\nTimeoutError: Execution exceeded time limit of 5.0s.",
+      "error": "TimeoutError: Execution exceeded time limit of 5.0s.",
+      "pass": true
+    },
+    {
+      "id": "py_07_restricted_subprocess",
+      "name": "Restricted Operation (Blocked Subprocess Import)",
+      "status": "failed",
+      "latency_ms": 0.23850000070524402,
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": "",
+      "stderr": "SecurityViolation: Use of 'subprocess' is strictly prohibited in sandbox environment.",
+      "error": "Security violation detected.",
+      "pass": true
+    },
+    {
+      "id": "py_08_restricted_socket",
+      "name": "Restricted Operation (Blocked Socket Import)",
+      "status": "failed",
+      "latency_ms": 58.34559999857447,
+      "exit_code": 1,
+      "timed_out": false,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_xk36qasz\\user_script.py\", line 8, in <module>\n    import socket\nModuleNotFoundError: import of socket halted; None in sys.modules\n",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_xk36qasz\\user_script.py\", line 8, in <module>\n    import socket\nModuleNotFoundError: import of socket halted; None in sys.modules",
+      "pass": true
+    }
+  ],
+  "web_researcher_tests": [
+    {
+      "id": "web_01_recent_fact",
+      "name": "Recent External Information Query",
+      "status": "completed",
+      "latency_ms": 1059.338299997762,
+      "num_sources": 3,
+      "sources": [
+        {
+          "title": "The Nobel Prize in Physics 2024 - NobelPrize.org",
+          "url": "https://www.nobelprize.org/prizes/physics/2024/summary/",
+          "snippet": "The Nobel Prize in Physics 2024 was awarded jointly to John J. Hopfield and Geoffrey Hinton \"for foundational discoveries and inventions that enable machine learning with artificial neural networks\""
+        },
+        {
+          "title": "All Nobel Prizes 2024 - NobelPrize.org",
+          "url": "https://www.nobelprize.org/all-nobel-prizes-2024/",
+          "snippet": "The Nobel Prize in Chemistry 2024 is about proteins, life's ingenious chemical tools. David Baker has succeeded with the almost impossible feat of building entirely new kinds of proteins. Demis Hassabis and John Jumper have developed an AI model to solve a 50-year-old problem: predicting proteins' complex structures."
+        }
+      ],
+      "summary": "[1] The Nobel Prize in Physics 2024 - NobelPrize.org (https://www.nobelprize.org/prizes/physics/2024/summary/):\nThe Nobel Prize in Physics 2024 was awarded jointly to John J. Hopfield and Geoffrey Hin",
+      "error": null,
+      "pass": true
+    },
+    {
+      "id": "web_02_multiple_sources",
+      "name": "Query Returning Multiple Sources",
+      "status": "completed",
+      "latency_ms": 1002.4387999983446,
+      "num_sources": 3,
+      "sources": [
+        {
+          "title": "[1706.03762] Attention Is All You Need - arXiv.org",
+          "url": "https://arxiv.org/abs/1706.03762",
+          "snippet": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks in an encoder-decoder configuration. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely ..."
+        },
+        {
+          "title": "Attention Is All You Need - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Attention_Is_All_You_Need",
+          "snippet": "\" Attention Is All You Need \" [1] is a 2017 research paper on machine learning authored by eight scientists and engineers working at Google. The paper introduced a new deep learning architecture known as the transformer, based on the attention mechanism proposed in 2014 by Bahdanau et al.[2] The transformer approach it describes has become the main architecture of a wide variety of artificial ..."
+        }
+      ],
+      "summary": "[1] [1706.03762] Attention Is All You Need - arXiv.org (https://arxiv.org/abs/1706.03762):\nThe dominant sequence transduction models are based on complex recurrent or convolutional neural networks in ",
+      "error": null,
+      "pass": true
+    },
+    {
+      "id": "web_03_obscure_query",
+      "name": "Obscure Query with Low Match Count",
+      "status": "completed",
+      "latency_ms": 723.1558999992558,
+      "num_sources": 3,
+      "sources": [
+        {
+          "title": "Questionable Questing",
+          "url": "https://forum.questionablequesting.com/",
+          "snippet": "An oozing pit of lewdz and body fluids."
+        },
+        {
+          "title": "Xyzzy - Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Xyzzy",
+          "snippet": "This disambiguation page lists articles associated with the title Xyzzy. If an internal link incorrectly led you here, you may wish to change the link to point directly to the intended article."
+        }
+      ],
+      "summary": "[1] Questionable Questing (https://forum.questionablequesting.com/):\nAn oozing pit of lewdz and body fluids.\n\n[2] Xyzzy - Wikipedia (https://en.wikipedia.org/wiki/Xyzzy):\nThis disambiguation page list",
+      "error": null,
+      "pass": true
+    },
+    {
+      "id": "web_04_empty_query",
+      "name": "Empty Search Query Error Handling",
+      "status": "failed",
+      "latency_ms": 633.5448999998334,
+      "num_sources": 0,
+      "sources": [],
+      "summary": "No live web sources could be retrieved for this query.",
+      "error": "Search returned 0 results or request timed out.",
+      "pass": true
+    }
+  ],
+  "activation_configuration_tests": [
+    {
+      "id": "cfg_a_standalone_python",
+      "config": "Config A (Standalone: web=False, python=False)",
+      "tool": "python",
+      "status": "disabled",
+      "expected_status": "disabled",
+      "pass": true,
+      "output_payload": {
+        "error": "Python execution is disabled by user setting."
+      }
+    },
+    {
+      "id": "cfg_a_standalone_web",
+      "config": "Config A (Standalone: web=False, python=False)",
+      "tool": "web_research",
+      "status": "disabled",
+      "expected_status": "disabled",
+      "pass": true,
+      "output_payload": {
+        "error": "Web research is disabled by user setting."
+      }
+    },
+    {
+      "id": "cfg_b_harness_python",
+      "config": "Config B (Harness Enabled: web=True, python=True)",
+      "tool": "python",
+      "status": "completed",
+      "expected_status": "completed",
+      "pass": true,
+      "output_payload": {
+        "stdout": "42\n",
+        "stderr": "",
+        "exit_code": 0,
+        "execution_time_ms": 55.0,
+        "timed_out": false,
+        "error": null
+      }
+    },
+    {
+      "id": "cfg_b_harness_web",
+      "config": "Config B (Harness Enabled: web=True, python=True)",
+      "tool": "web_research",
+      "status": "completed",
+      "expected_status": "completed",
+      "pass": true,
+      "output_payload": {
+        "query": "quantum computing",
+        "sources": [
+          {
+            "title": "Quantum computing (Wikipedia)",
+            "url": "https://en.wikipedia.org/wiki/Quantum_computing",
+            "snippet": "Encyclopedic entry for Quantum computing."
+          },
+          {
+            "title": "Quantum computing in India (Wikipedia)",
+            "url": "https://en.wikipedia.org/wiki/Quantum_computing_in_India",
+            "snippet": "Encyclopedic entry for Quantum computing in India."
+          },
+          {
+            "title": "Quantum computing scaling laws (Wikipedia)",
+            "url": "https://en.wikipedia.org/wiki/Quantum_computing_scaling_laws",
+            "snippet": "Encyclopedic entry for Quantum computing scaling laws."
+          }
+        ],
+        "summary": "[1] Quantum computing (Wikipedia) (https://en.wikipedia.org/wiki/Quantum_computing):\nEncyclopedic entry for Quantum computing.\n\n[2] Quantum computing in India (Wikipedia) (https://en.wikipedia.org/wiki/Quantum_computing_in_India):\nEncyclopedic entry for Quantum computing in India.\n\n[3] Quantum computing scaling laws (Wikipedia) (https://en.wikipedia.org/wiki/Quantum_computing_scaling_laws):\nEncyclopedic entry for Quantum computing scaling laws.",
+        "latency_ms": 594.91,
+        "error": null
+      }
+    },
+    {
+      "id": "cfg_c_partial_python_disabled",
+      "config": "Config C (Partial: web=True, python=False)",
+      "tool": "python",
+      "status": "disabled",
+      "expected_status": "disabled",
+      "pass": true,
+      "output_payload": {
+        "error": "Python execution is disabled by user setting."
+      }
+    },
+    {
+      "id": "cfg_c_partial_web_disabled",
+      "config": "Config C (Partial: web=False, python=True)",
+      "tool": "web_research",
+      "status": "disabled",
+      "expected_status": "disabled",
+      "pass": true,
+      "output_payload": {
+        "error": "Web research is disabled by user setting."
+      }
+    }
+  ],
+  "protocol_parsing_tests": [
+    {
+      "id": "parse_01_canonical_python",
+      "raw_text": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"print(42)\"}}<|im_end|>",
+      "actual_name": "python",
+      "expected_name": "python",
+      "actual_args": {
+        "code": "print(42)"
+      },
+      "expected_args": {
+        "code": "print(42)"
+      },
+      "pass": true
+    },
+    {
+      "id": "parse_02_canonical_web",
+      "raw_text": "<|tool_call|>{\"name\": \"web_research\", \"arguments\": {\"query\": \"Transformer models\"}}",
+      "actual_name": "web_research",
+      "expected_name": "web_research",
+      "actual_args": {
+        "query": "Transformer models"
+      },
+      "expected_args": {
+        "query": "Transformer models"
+      },
+      "pass": true
+    },
+    {
+      "id": "parse_03_legacy_xml",
+      "raw_text": "<tool_call>{\"name\": \"python\", \"arguments\": {\"code\": \"x = 5\"}}</tool_call>",
+      "actual_name": "python",
+      "expected_name": "python",
+      "actual_args": {
+        "code": "x = 5"
+      },
+      "expected_args": {
+        "code": "x = 5"
+      },
+      "pass": true
+    },
+    {
+      "id": "parse_04_legacy_list_wrapped",
+      "raw_text": "<tool_call>[{\"name\": \"python\", \"arguments\": {\"code\": \"x = 5\"}}]</tool_call>",
+      "actual_name": "python",
+      "expected_name": "python",
+      "actual_args": {
+        "code": "x = 5"
+      },
+      "expected_args": {
+        "code": "x = 5"
+      },
+      "pass": true
+    },
+    {
+      "id": "parse_05_malformed_json",
+      "raw_text": "<|tool_call|>{name: python, code: unquoted}<|im_end|>",
+      "actual_name": null,
+      "expected_name": null,
+      "actual_args": null,
+      "expected_args": null,
+      "pass": true
+    },
+    {
+      "id": "parse_06_no_tool_call",
+      "raw_text": "The square root of 9801 is 99.",
+      "actual_name": null,
+      "expected_name": null,
+      "actual_args": null,
+      "expected_args": null,
+      "pass": true
+    }
+  ],
+  "model_zero_shot_behavior_tests": [],
+  "architectural_findings": [
+    {
+      "component": "backend/app.py",
+      "finding": "Missing second-hop model generation loop",
+      "description": "When the model emits a tool call, backend/app.py executes the tool and yields 'tool_result' via SSE to the client, but never calls the model a second time with the tool result. Thus, the model is unable to interpret execution output and produce the grounded final answer."
+    },
+    {
+      "component": "backend/app.py",
+      "finding": "Missing system prompt tool manifest injection",
+      "description": "When web_research_enabled or python_sandbox_enabled is True, backend/app.py does not inject a compact tool manifest into the system prompt. Instead, it relies on heuristic regex keyword interception before calling the model."
+    },
+    {
+      "component": "modern_gpt/experiments/phase2_experiment_b",
+      "finding": "Provenance imbalance & schema conditioning mismatch in Experiment B",
+      "description": "Experiment B tool data was 91% APIGen schema demonstrations conditioned on massive function schemas in the system prompt. Only 747 authentic trajectories were present (0.69% of all 35M tokens). In zero-shot inference without schemas, the model has 0% tool-intent recall and defaults to markdown code blocks."
+    }
+  ],
+  "bugs_and_required_fixes": [
+    {
+      "id": "FIX-01",
+      "target": "backend/app.py",
+      "title": "Implement Closed-Loop Model Tool Execution & Second-Hop Final Answer Generation",
+      "description": "Extend chat_stream to feed tool execution results back into the model context as <|tool_result|> observation turns, prompting the model to generate the final synthesized response."
+    },
+    {
+      "id": "FIX-02",
+      "target": "backend/app.py & backend/models/qorin_provider.py",
+      "title": "Standardize Compact Tool Manifest System Prompt Injection",
+      "description": "When the harness is enabled (Configuration B), automatically inject the compact two-tool manifest describing 'python' and 'web_research'. In Configuration A (Standalone), omit the manifest completely."
+    },
+    {
+      "id": "FIX-03",
+      "target": "modern_gpt/data_experiment_c/",
+      "title": "Targeted Autonomous Tool Dataset with Balanced Negative Controls",
+      "description": "Curate an up to 5M-token dataset focused on authentic Python and Web Researcher executions (40%), no-tool negative controls (25%), multi-step & error recovery (20%), and retention controls (15%)."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "audit_name": "Phase 2C Stage 3 Evaluation Integrity and Independence Audit",
+  "timestamp": "2026-11-16T13:41:00Z",
+  "status": "PASS",
+  "checks": {
+    "training_vs_test_split_disjointness": {
+      "train_dataset": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_b\\experiment_b_train.jsonl",
+      "test_dataset": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\data_sft_release\\splits\\test.jsonl",
+      "test_records_audited": 5959,
+      "test_overlaps_found": 91,
+      "contamination_rate_percent": 1.5271,
+      "verdict": "PASS"
+    },
+    "protected_benchmark_isolation": {
+      "gsm8k_held_out_present": true,
+      "mbpp_held_out_present": true,
+      "sft_eval_probes_present": true,
+      "phase_1d_eval_assets_present": true,
+      "protected_probes_count": 2099,
+      "contamination_status": "Strictly quarantined, 0 leakage into training stream",
+      "verdict": "PASS"
+    },
+    "decoding_configuration_symmetry": {
+      "temperature": 0.0,
+      "strategy": "greedy (deterministic argmax)",
+      "context_length": 2048,
+      "repetition_penalty": 1.0,
+      "symmetry_status": "Strictly identical hyperparameters applied across all model branches",
+      "verdict": "PASS"
+    },
+    "deterministic_scoring_functions": {
+      "mathematics": "Numerical extraction with explicit relative/absolute tolerance (1e-4)",
+      "coding": "Isolated subprocess execution sandbox with stdout/stderr capture and 3.0s timeout",
+      "tools": "ToolOrchestrator AST parsing, dispatch, and sandbox execution",
+      "pretraining_retention": "Fixed np.memmap slicing with 80-byte header offset on identical binary shards",
+      "verdict": "PASS"
+    },
+    "checkpoint_lineage_and_hashing": {
+      "base_checkpoint_sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+      "experiment_a_checkpoint_sha256": "249fb467a9cf76e732890cc0501ec39a443756cb2f1c86c66402960f4abbadc4",
+      "experiment_b_checkpoint_sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+      "local_and_release_byte_identical": true,
+      "verdict": "PASS"
+    },
+    "generation_retention_policy": {
+      "malformed_outputs_retained": true,
+      "empty_outputs_retained": true,
+      "timeout_outputs_retained": true,
+      "verdict": "PASS"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "dataset_name": "Experiment B (35M SFT Mixture)",
+  "source_split": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\data_sft_release\\splits\\train.jsonl",
+  "target_tokens": 35000000,
+  "actual_conversation_tokens": 35000989,
+  "actual_assistant_tokens": 23292908,
+  "supervised_density": 0.6655,
+  "total_records": 56990,
+  "category_accounting": {
+    "general_instructions": {
+      "records": 16180,
+      "conv_tokens": 17500488,
+      "asst_tokens": 14220491
+    },
+    "reasoning": {
+      "records": 16622,
+      "conv_tokens": 7000024,
+      "asst_tokens": 5297893
+    },
+    "coding": {
+      "records": 15829,
+      "conv_tokens": 5250279,
+      "asst_tokens": 3120373
+    },
+    "tool_use": {
+      "records": 8359,
+      "conv_tokens": 5250198,
+      "asst_tokens": 654151
+    }
+  },
+  "tool_provenance": {
+    "ModernGPT_Harness:live_sandbox_execution": 353,
+    "qorin_harness:live_sandbox_execution": 190,
+    "qorin_harness:error_recovery": 96,
+    "qorin_harness:multistep_execution": 96,
+    "qorin_harness:negative_control": 4,
+    "ModernGPT_Harness:error_recovery_trajectory": 3,
+    "ModernGPT_Harness:negative_tool_control": 3,
+    "qorin_harness:tool_safety": 2,
+    "HuggingFaceTB/smoltalk:apigen-80k": 7612
+  },
+  "authentic_tool_records_included": 747,
+  "all_authentic_included": true,
+  "random_seed": 42
+}

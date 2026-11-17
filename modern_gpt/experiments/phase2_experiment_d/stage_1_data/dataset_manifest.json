@@ -1,0 +1,86 @@
+{
+  "manifest_version": "1.0.0",
+  "experiment": "QORIN Phase 2D Experiment D (Targeted Web Tool-Use Enhancement)",
+  "creation_timestamp": "2026-11-17T02:55:00+05:30",
+  "parent_checkpoint": {
+    "name": "ckpt_experiment_c_final.pt",
+    "path": "modern_gpt/experiments/phase2_experiment_c/stage_3_training/checkpoints/ckpt_experiment_c_final.pt",
+    "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b",
+    "architecture": "QorinForCausalLM (20L, 1536D, 24QH, 4KVH, 2048Ctx, 514,389,504 params)"
+  },
+  "tokenizer": {
+    "name": "bpe_32k_production",
+    "path": "modern_gpt/artifacts/tokenizer_32k/tokenizer.json",
+    "sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59"
+  },
+  "dataset_files": {
+    "train": {
+      "filename": "train.jsonl",
+      "path": "modern_gpt/experiments/phase2_experiment_d/stage_1_data/train.jsonl",
+      "sha256": "90aebbac462bbad01e3239a51ef4b2c33f9d49faf5d23172060d89ef0d66cd2a",
+      "record_count": 3800,
+      "total_conversation_tokens": 1455160,
+      "total_assistant_target_tokens": 344087,
+      "mean_conversation_tokens": 382.9,
+      "mean_assistant_tokens": 90.5
+    },
+    "val": {
+      "filename": "val.jsonl",
+      "path": "modern_gpt/experiments/phase2_experiment_d/stage_1_data/val.jsonl",
+      "sha256": "b7c10807fda6ac5553b1806afe2fb3e25df65949dfd256d13456bf4e3a1af8e6",
+      "record_count": 200,
+      "total_conversation_tokens": 75637,
+      "total_assistant_target_tokens": 17912,
+      "mean_conversation_tokens": 378.2,
+      "mean_assistant_tokens": 89.6
+    }
+  },
+  "composition_audit": {
+    "train_categories": {
+      "python_core": 664,
+      "web_colloquial": 577,
+      "web_question": 402,
+      "error_recovery_web": 379,
+      "selection_discrimination": 466,
+      "direct_conceptual": 663,
+      "web_explicit": 172,
+      "multistep_web_python": 477
+    },
+    "val_categories": {
+      "web_explicit": 8,
+      "direct_conceptual": 37,
+      "python_core": 36,
+      "web_colloquial": 23,
+      "web_question": 18,
+      "error_recovery_web": 21,
+      "selection_discrimination": 34,
+      "multistep_web_python": 23
+    },
+    "train_expected_actions": {
+      "PYTHON": 899,
+      "WEB": 1761,
+      "DIRECT": 663,
+      "MULTI_TOOL": 477
+    },
+    "val_expected_actions": {
+      "WEB": 89,
+      "DIRECT": 37,
+      "PYTHON": 51,
+      "MULTI_TOOL": 23
+    },
+    "python_to_web_ratio": 0.61
+  },
+  "contamination_and_leakage_audit": {
+    "protected_evaluation_prompt_count": 50,
+    "train_protected_overlap": 0,
+    "val_protected_overlap": 0,
+    "train_val_prompt_overlap": 0,
+    "train_experiment_c_overlap": 0,
+    "val_experiment_c_overlap": 0
+  },
+  "quality_metrics": {
+    "schema_validity_pct": 100.0,
+    "python_ast_validity_pct": 100.0,
+    "deduplication_status": "zero_exact_duplicates"
+  }
+}

@@ -1,0 +1,2601 @@
+{
+  "test_1_jensen_huang": {
+    "raw_request": {
+      "model_id": "qorin-500m-sft-exp-f",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Who is Jensen Huang?"
+        }
+      ],
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "top_k": 40,
+      "max_new_tokens": 256,
+      "repetition_penalty": 1.1,
+      "retrieval_mode": "auto",
+      "retrieval_top_k": 3,
+      "retrieval_threshold": 0.45,
+      "web_research_enabled": true,
+      "python_sandbox_enabled": true,
+      "conversation_id": "conv_live_1_1794917839464"
+    },
+    "conversation_id": "conv_live_1_1794917839464",
+    "request_id": "req_2191179d9752",
+    "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+    "retrieval_event": {
+      "triggered": false,
+      "mode": "auto",
+      "decision_reason": "Query did not match technical knowledge base routing threshold.",
+      "query": "Who is Jensen Huang?",
+      "retrieved_chunks": [],
+      "injected_context": "",
+      "retrieval_latency_ms": 0.02
+    },
+    "tool_invocations": [
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_search",
+        "status": "started",
+        "call_id": "call_req_2191_001",
+        "request_id": "req_2191179d9752",
+        "conversation_id": "conv_live_1_1794917839464",
+        "args": {
+          "query": "Who is Jensen Huang?"
+        }
+      },
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_search",
+        "requested_by": "model",
+        "status": "completed",
+        "call_id": "call_req_2191_001",
+        "execution_id": "exec_8027697d51ec",
+        "request_id": "req_2191179d9752",
+        "conversation_id": "conv_live_1_1794917839464",
+        "stdout": "Retrieved 3 authoritative sources for query 'Who is Jensen Huang?':\n\n[SOURCE_1] Jensen Huang - Wikipedia\nURL: https://en.wikipedia.org/wiki/Jensen_Huang\nKey Entities: 1963, 1993, 2026, Jensen Huang, Wikipedia Jen\nEvidence Passage: Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.\n\n[SOURCE_2] Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money\nURL: https://www.britannica.com/money/Jensen-Huang\nKey Entities: Jensen Huang, Britannica Money Jensen Huang, During Huang\nEvidence Passage: Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.\n\n[SOURCE_3] Who is Jensen Huang and why is the Nvidia CEO scandal important?\nURL: https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698\nKey Entities: Jensen Huang\nEvidence Passage: After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+        "stderr": "",
+        "input_payload": {
+          "query": "Who is Jensen Huang?"
+        },
+        "output_payload": {
+          "query": "Who is Jensen Huang?",
+          "latency_ms": 0.5,
+          "provider_name": "duckduckgo_lite",
+          "error": null,
+          "records": [
+            {
+              "source_id": "SOURCE_1",
+              "evidence_id": "SOURCE_1",
+              "title": "Jensen Huang - Wikipedia",
+              "source_title": "Jensen Huang - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+              "source_url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+              "snippet": "Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.",
+              "source_snippet": "Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.",
+              "passage": "Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.",
+              "retrieved_at": "2026-11-17T12:12:32.111990+00:00",
+              "retrieval_timestamp": 1794917552.11199,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "1963",
+                "1993",
+                "2026",
+                "Jensen Huang",
+                "Wikipedia Jen"
+              ],
+              "search_query": "Who is Jensen Huang?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "source_id": "SOURCE_2",
+              "evidence_id": "SOURCE_2",
+              "title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+              "source_title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+              "url": "https://www.britannica.com/money/Jensen-Huang",
+              "source_url": "https://www.britannica.com/money/Jensen-Huang",
+              "snippet": "Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.",
+              "source_snippet": "Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.",
+              "passage": "Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.",
+              "retrieved_at": "2026-11-17T12:12:32.111990+00:00",
+              "retrieval_timestamp": 1794917552.11199,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "Jensen Huang",
+                "Britannica Money Jensen Huang",
+                "During Huang"
+              ],
+              "search_query": "Who is Jensen Huang?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "source_id": "SOURCE_3",
+              "evidence_id": "SOURCE_3",
+              "title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+              "source_title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+              "url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698",
+              "source_url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698",
+              "snippet": "After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+              "source_snippet": "After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+              "passage": "After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+              "retrieved_at": "2026-11-17T12:12:32.112995+00:00",
+              "retrieval_timestamp": 1794917552.1129947,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "Jensen Huang"
+              ],
+              "search_query": "Who is Jensen Huang?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            }
+          ],
+          "sources": [
+            {
+              "title": "Jensen Huang - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+            },
+            {
+              "title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+              "url": "https://www.britannica.com/money/Jensen-Huang"
+            },
+            {
+              "title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+              "url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698"
+            }
+          ],
+          "execution_id": "exec_8027697d51ec",
+          "request_id": "req_2191179d9752",
+          "conversation_id": "conv_live_1_1794917839464"
+        },
+        "source_metadata": {
+          "source_count": 3,
+          "sources": [
+            {
+              "title": "Jensen Huang - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+            },
+            {
+              "title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+              "url": "https://www.britannica.com/money/Jensen-Huang"
+            },
+            {
+              "title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+              "url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698"
+            }
+          ]
+        },
+        "latency_ms": 7.79,
+        "error": null
+      }
+    ],
+    "final_text": "Based on verified sources ([SOURCE_2]): Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA) [SOURCE_2].",
+    "done_metadata": {
+      "trace_id": "req_2191179d9752",
+      "request_id": "req_2191179d9752",
+      "conversation_id": "conv_live_1_1794917839464",
+      "total_tokens": 3025,
+      "ttft_ms": 493.1,
+      "total_latency_ms": 9061.0,
+      "tok_per_sec": 25.08,
+      "retrieval_triggered": false,
+      "tools_executed": 1
+    },
+    "duration_ms": 10584.02
+  },
+  "test_2_donald_trump": {
+    "raw_request": {
+      "model_id": "qorin-500m-sft-exp-f",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Who is Donald Trump?"
+        }
+      ],
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "top_k": 40,
+      "max_new_tokens": 256,
+      "repetition_penalty": 1.1,
+      "retrieval_mode": "auto",
+      "retrieval_top_k": 3,
+      "retrieval_threshold": 0.45,
+      "web_research_enabled": true,
+      "python_sandbox_enabled": true,
+      "conversation_id": "conv_live_2_1794917850049"
+    },
+    "conversation_id": "conv_live_2_1794917850049",
+    "request_id": "req_dd1934c8620a",
+    "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+    "retrieval_event": {
+      "triggered": false,
+      "mode": "auto",
+      "decision_reason": "Query did not match technical knowledge base routing threshold.",
+      "query": "Who is Donald Trump?",
+      "retrieved_chunks": [],
+      "injected_context": "",
+      "retrieval_latency_ms": 0.02
+    },
+    "tool_invocations": [
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_research",
+        "status": "started",
+        "call_id": "call_req_dd19_001",
+        "request_id": "req_dd1934c8620a",
+        "conversation_id": "conv_live_2_1794917850049",
+        "args": {
+          "query": "Who is Donald Trump?"
+        }
+      },
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_research",
+        "requested_by": "model",
+        "status": "completed",
+        "call_id": "call_req_dd19_001",
+        "execution_id": "exec_fa7d36b4dfa0",
+        "request_id": "req_dd1934c8620a",
+        "conversation_id": "conv_live_2_1794917850049",
+        "stdout": "Retrieved 3 authoritative sources for query 'Who is Donald Trump?':\n\n[SOURCE_1] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.\n\n[SOURCE_2] Donald Trump | Birthday, Age, Education, Biography, Impeachments ...\nURL: https://www.britannica.com/biography/Donald-Trump\nKey Entities: 2017-21, 2025, 1885-89, 1893-97, 45th, 47th president, second president, first, Donald Trump, United States\nEvidence Passage: Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).\n\n[SOURCE_3] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: 2024, President Donald, The White House After, White House\nEvidence Passage: After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+        "stderr": "",
+        "input_payload": {
+          "query": "Who is Donald Trump?"
+        },
+        "output_payload": {
+          "query": "Who is Donald Trump?",
+          "latency_ms": 0.5,
+          "provider_name": "duckduckgo_lite",
+          "error": null,
+          "records": [
+            {
+              "source_id": "SOURCE_1",
+              "evidence_id": "SOURCE_1",
+              "title": "Donald Trump - Wikipedia",
+              "source_title": "Donald Trump - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+              "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+              "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+              "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+              "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+              "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+              "retrieval_timestamp": 1794917351.859678,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "1946",
+                "2017",
+                "2021",
+                "47th president",
+                "45th president",
+                "Donald Trump",
+                "Wikipedia Donald John Trump",
+                "United States",
+                "Republican Party",
+                "Republican"
+              ],
+              "search_query": "Who is Donald Trump?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "source_id": "SOURCE_2",
+              "evidence_id": "SOURCE_2",
+              "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+              "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+              "url": "https://www.britannica.com/biography/Donald-Trump",
+              "source_url": "https://www.britannica.com/biography/Donald-Trump",
+              "snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+              "source_snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+              "passage": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+              "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+              "retrieval_timestamp": 1794917351.859678,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "2017-21",
+                "2025",
+                "1885-89",
+                "1893-97",
+                "45th",
+                "47th president",
+                "second president",
+                "first",
+                "Donald Trump",
+                "United States"
+              ],
+              "search_query": "Who is Donald Trump?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "source_id": "SOURCE_3",
+              "evidence_id": "SOURCE_3",
+              "title": "President Donald J. Trump - The White House",
+              "source_title": "President Donald J. Trump - The White House",
+              "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+              "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+              "snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+              "source_snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+              "passage": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+              "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+              "retrieval_timestamp": 1794917351.859678,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "2024",
+                "President Donald",
+                "The White House After",
+                "White House"
+              ],
+              "search_query": "Who is Donald Trump?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            }
+          ],
+          "sources": [
+            {
+              "title": "Donald Trump - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+            },
+            {
+              "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+              "url": "https://www.britannica.com/biography/Donald-Trump"
+            },
+            {
+              "title": "President Donald J. Trump - The White House",
+              "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+            }
+          ],
+          "execution_id": "exec_fa7d36b4dfa0",
+          "request_id": "req_dd1934c8620a",
+          "conversation_id": "conv_live_2_1794917850049"
+        },
+        "source_metadata": {
+          "source_count": 3,
+          "sources": [
+            {
+              "title": "Donald Trump - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+            },
+            {
+              "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+              "url": "https://www.britannica.com/biography/Donald-Trump"
+            },
+            {
+              "title": "President Donald J. Trump - The White House",
+              "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+            }
+          ]
+        },
+        "latency_ms": 17.47,
+        "error": null
+      }
+    ],
+    "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+    "done_metadata": {
+      "trace_id": "req_dd1934c8620a",
+      "request_id": "req_dd1934c8620a",
+      "conversation_id": "conv_live_2_1794917850049",
+      "total_tokens": 2572,
+      "ttft_ms": 23.73,
+      "total_latency_ms": 3178.5,
+      "tok_per_sec": 27.71,
+      "retrieval_triggered": false,
+      "tools_executed": 1
+    },
+    "duration_ms": 3181.98
+  },
+  "test_3_current_president": {
+    "raw_request": {
+      "model_id": "qorin-500m-sft-exp-f",
+      "messages": [
+        {
+          "role": "user",
+          "content": "Who is the current president of the United States?"
+        }
+      ],
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "top_k": 40,
+      "max_new_tokens": 256,
+      "repetition_penalty": 1.1,
+      "retrieval_mode": "auto",
+      "retrieval_top_k": 3,
+      "retrieval_threshold": 0.45,
+      "web_research_enabled": true,
+      "python_sandbox_enabled": true,
+      "conversation_id": "conv_live_3_1794917853231"
+    },
+    "conversation_id": "conv_live_3_1794917853231",
+    "request_id": "req_3a236de37bd0",
+    "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+    "retrieval_event": {
+      "triggered": false,
+      "mode": "auto",
+      "decision_reason": "Query did not match technical knowledge base routing threshold.",
+      "query": "Who is the current president of the United States?",
+      "retrieved_chunks": [],
+      "injected_context": "",
+      "retrieval_latency_ms": 0.02
+    },
+    "tool_invocations": [
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_search",
+        "status": "started",
+        "call_id": "call_req_3a23_001",
+        "request_id": "req_3a236de37bd0",
+        "conversation_id": "conv_live_3_1794917853231",
+        "args": {
+          "query": "Who is the current president of the United States?"
+        }
+      },
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_search",
+        "requested_by": "model",
+        "status": "completed",
+        "call_id": "call_req_3a23_001",
+        "execution_id": "exec_2356364a1ea7",
+        "request_id": "req_3a236de37bd0",
+        "conversation_id": "conv_live_3_1794917853231",
+        "stdout": "Retrieved 3 authoritative sources for query 'Who is the current president of the United States?':\n\n[SOURCE_1] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: first, President Donald, The White House President Trump, White House\nEvidence Passage: President Trump built on his success in private life when he entered into politics and public service. He remarkably won the Presidency in his first ever run for any political office.\n\n[SOURCE_2] President of the United States - Wikipedia\nURL: https://en.wikipedia.org/wiki/President_of_the_United_States\nKey Entities: first president, United States, Wikipedia The, United States Armed Forces, George Washington\nEvidence Passage: The president of the United States (POTUS) [b] is the head of state and head of government of the United States . The president directs the executive branch of the federal government and is the commander-in-chief of the United States Armed Forces. The power of the presidency has grown [12] since the first president , George Washington, took office in 1789. [6] While presidential power has ebbed ...\n\n[SOURCE_3] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States . A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+        "stderr": "",
+        "input_payload": {
+          "query": "Who is the current president of the United States?"
+        },
+        "output_payload": {
+          "query": "Who is the current president of the United States?",
+          "latency_ms": 0.5,
+          "provider_name": "duckduckgo_lite",
+          "error": null,
+          "records": [
+            {
+              "source_id": "SOURCE_1",
+              "evidence_id": "SOURCE_1",
+              "title": "President Donald J. Trump - The White House",
+              "source_title": "President Donald J. Trump - The White House",
+              "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+              "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+              "snippet": "President Trump built on his success in private life when he entered into politics and public service. He remarkably won the Presidency in his first ever run for any political office.",
+              "source_snippet": "President Trump built on his success in private life when he entered into politics and public service. He remarkably won the Presidency in his first ever run for any political office.",
+              "passage": "President Trump built on his success in private life when he entered into politics and public service. He remarkably won the Presidency in his first ever run for any political office.",
+              "retrieved_at": "2026-11-17T11:51:41.085959+00:00",
+              "retrieval_timestamp": 1794916301.0859592,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "first",
+                "President Donald",
+                "The White House President Trump",
+                "White House"
+              ],
+              "search_query": "who is the current president of the United States?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "source_id": "SOURCE_2",
+              "evidence_id": "SOURCE_2",
+              "title": "President of the United States - Wikipedia",
+              "source_title": "President of the United States - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/President_of_the_United_States",
+              "source_url": "https://en.wikipedia.org/wiki/President_of_the_United_States",
+              "snippet": "The president of the United States (POTUS) [b] is the head of state and head of government of the United States . The president directs the executive branch of the federal government and is the commander-in-chief of the United States Armed Forces. The power of the presidency has grown [12] since the first president , George Washington, took office in 1789. [6] While presidential power has ebbed ...",
+              "source_snippet": "The president of the United States (POTUS) [b] is the head of state and head of government of the United States . The president directs the executive branch of the federal government and is the commander-in-chief of the United States Armed Forces. The power of the presidency has grown [12] since the first president , George Washington, took office in 1789. [6] While presidential power has ebbed ...",
+              "passage": "The president of the United States (POTUS) [b] is the head of state and head of government of the United States . The president directs the executive branch of the federal government and is the commander-in-chief of the United States Armed Forces. The power of the presidency has grown [12] since the first president , George Washington, took office in 1789. [6] While presidential power has ebbed ...",
+              "retrieved_at": "2026-11-17T11:51:41.085959+00:00",
+              "retrieval_timestamp": 1794916301.0859592,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "first president",
+                "United States",
+                "Wikipedia The",
+                "United States Armed Forces",
+                "George Washington"
+              ],
+              "search_query": "who is the current president of the United States?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "source_id": "SOURCE_3",
+              "evidence_id": "SOURCE_3",
+              "title": "Donald Trump - Wikipedia",
+              "source_title": "Donald Trump - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+              "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+              "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States . A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+              "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States . A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+              "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States . A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+              "retrieved_at": "2026-11-17T11:51:41.085959+00:00",
+              "retrieval_timestamp": 1794916301.0859592,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "1946",
+                "2017",
+                "2021",
+                "47th president",
+                "45th president",
+                "Donald Trump",
+                "Wikipedia Donald John Trump",
+                "United States",
+                "Republican Party",
+                "Republican"
+              ],
+              "search_query": "who is the current president of the United States?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            }
+          ],
+          "sources": [
+            {
+              "title": "President Donald J. Trump - The White House",
+              "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+            },
+            {
+              "title": "President of the United States - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/President_of_the_United_States"
+            },
+            {
+              "title": "Donald Trump - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+            }
+          ],
+          "execution_id": "exec_2356364a1ea7",
+          "request_id": "req_3a236de37bd0",
+          "conversation_id": "conv_live_3_1794917853231"
+        },
+        "source_metadata": {
+          "source_count": 3,
+          "sources": [
+            {
+              "title": "President Donald J. Trump - The White House",
+              "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+            },
+            {
+              "title": "President of the United States - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/President_of_the_United_States"
+            },
+            {
+              "title": "Donald Trump - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+            }
+          ]
+        },
+        "latency_ms": 94.68,
+        "error": null
+      }
+    ],
+    "final_text": "Based on verified sources ([SOURCE_3]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States  [SOURCE_3].",
+    "done_metadata": {
+      "trace_id": "req_3a236de37bd0",
+      "request_id": "req_3a236de37bd0",
+      "conversation_id": "conv_live_3_1794917853231",
+      "total_tokens": 1291,
+      "ttft_ms": 30.33,
+      "total_latency_ms": 2210.35,
+      "tok_per_sec": 28.0,
+      "retrieval_triggered": false,
+      "tools_executed": 1
+    },
+    "duration_ms": 3728.07
+  },
+  "test_4_capital_australia": {
+    "raw_request": {
+      "model_id": "qorin-500m-sft-exp-f",
+      "messages": [
+        {
+          "role": "user",
+          "content": "What is the capital of Australia?"
+        }
+      ],
+      "temperature": 0.1,
+      "top_p": 0.9,
+      "top_k": 40,
+      "max_new_tokens": 256,
+      "repetition_penalty": 1.1,
+      "retrieval_mode": "auto",
+      "retrieval_top_k": 3,
+      "retrieval_threshold": 0.45,
+      "web_research_enabled": true,
+      "python_sandbox_enabled": true,
+      "conversation_id": "conv_live_4_1794917856959"
+    },
+    "conversation_id": "conv_live_4_1794917856959",
+    "request_id": "req_01255aa0f3f2",
+    "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+    "retrieval_event": {
+      "triggered": false,
+      "mode": "auto",
+      "decision_reason": "Query did not match technical knowledge base routing threshold.",
+      "query": "What is the capital of Australia?",
+      "retrieved_chunks": [],
+      "injected_context": "",
+      "retrieval_latency_ms": 0.02
+    },
+    "tool_invocations": [
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_search",
+        "status": "started",
+        "call_id": "call_req_0125_001",
+        "request_id": "req_01255aa0f3f2",
+        "conversation_id": "conv_live_4_1794917856959",
+        "args": {
+          "query": "What is the capital of Australia?"
+        }
+      },
+      {
+        "tool_name": "web_search",
+        "original_tool_name": "web_search",
+        "requested_by": "model",
+        "status": "completed",
+        "call_id": "call_req_0125_001",
+        "execution_id": "exec_f0c0022e3b81",
+        "request_id": "req_01255aa0f3f2",
+        "conversation_id": "conv_live_4_1794917856959",
+        "stdout": "Retrieved 3 authoritative sources for query 'What is the capital of Australia?':\n\n[SOURCE_1] Canberra - Wikipedia\nURL: https://en.wikipedia.org/wiki/Canberra\nKey Entities: Wikipedia As Australia, Australian Broadcasting Corporation\nEvidence Passage: As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus.\n\n[SOURCE_2] Australian Capital Territory - Wikipedia\nURL: https://en.wikipedia.org/wiki/Australian_Capital_Territory\nKey Entities: 1938, Australian Capital Territory, Wikipedia The Australian Capital Territory, Federal Capital Territory\nEvidence Passage: The Australian Capital Territory (ACT), known as the Federal Capital Territory until 1938, is an internal territory of Australia . Canberra, the capital city of Australia , is situated within the territory and is the territory's primate city.\n\n[SOURCE_3] Canberra | History, Map, Population, Climate, & Facts | Britannica\nURL: https://www.britannica.com/place/Canberra\nKey Entities: Britannica Canberra, Australian Capital Territory, Molonglo River, Murrumbidgee River\nEvidence Passage: Canberra, federal capital of the Commonwealth of Australia . It occupies part of the Australian Capital Territory, in southern Australia , and is about 150 miles (240 km) southwest of Sydney. Canberra lies astride the Molonglo River, which is a tributary of the Murrumbidgee River.",
+        "stderr": "",
+        "input_payload": {
+          "query": "What is the capital of Australia?"
+        },
+        "output_payload": {
+          "query": "What is the capital of Australia?",
+          "latency_ms": 0.5,
+          "provider_name": "duckduckgo_lite",
+          "error": null,
+          "records": [
+            {
+              "source_id": "SOURCE_1",
+              "evidence_id": "SOURCE_1",
+              "title": "Canberra - Wikipedia",
+              "source_title": "Canberra - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Canberra",
+              "source_url": "https://en.wikipedia.org/wiki/Canberra",
+              "snippet": "As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus.",
+              "source_snippet": "As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus.",
+              "passage": "As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus.",
+              "retrieved_at": "2026-11-17T11:59:57.309879+00:00",
+              "retrieval_timestamp": 1794916797.3098793,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "Wikipedia As Australia",
+                "Australian Broadcasting Corporation"
+              ],
+              "search_query": "what is the capital of Australia?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "source_id": "SOURCE_2",
+              "evidence_id": "SOURCE_2",
+              "title": "Australian Capital Territory - Wikipedia",
+              "source_title": "Australian Capital Territory - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Australian_Capital_Territory",
+              "source_url": "https://en.wikipedia.org/wiki/Australian_Capital_Territory",
+              "snippet": "The Australian Capital Territory (ACT), known as the Federal Capital Territory until 1938, is an internal territory of Australia . Canberra, the capital city of Australia , is situated within the territory and is the territory's primate city.",
+              "source_snippet": "The Australian Capital Territory (ACT), known as the Federal Capital Territory until 1938, is an internal territory of Australia . Canberra, the capital city of Australia , is situated within the territory and is the territory's primate city.",
+              "passage": "The Australian Capital Territory (ACT), known as the Federal Capital Territory until 1938, is an internal territory of Australia . Canberra, the capital city of Australia , is situated within the territory and is the territory's primate city.",
+              "retrieved_at": "2026-11-17T11:59:57.309879+00:00",
+              "retrieval_timestamp": 1794916797.3098793,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "1938",
+                "Australian Capital Territory",
+                "Wikipedia The Australian Capital Territory",
+                "Federal Capital Territory"
+              ],
+              "search_query": "what is the capital of Australia?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            },
+            {
+              "source_id": "SOURCE_3",
+              "evidence_id": "SOURCE_3",
+              "title": "Canberra | History, Map, Population, Climate, & Facts | Britannica",
+              "source_title": "Canberra | History, Map, Population, Climate, & Facts | Britannica",
+              "url": "https://www.britannica.com/place/Canberra",
+              "source_url": "https://www.britannica.com/place/Canberra",
+              "snippet": "Canberra, federal capital of the Commonwealth of Australia . It occupies part of the Australian Capital Territory, in southern Australia , and is about 150 miles (240 km) southwest of Sydney. Canberra lies astride the Molonglo River, which is a tributary of the Murrumbidgee River.",
+              "source_snippet": "Canberra, federal capital of the Commonwealth of Australia . It occupies part of the Australian Capital Territory, in southern Australia , and is about 150 miles (240 km) southwest of Sydney. Canberra lies astride the Molonglo River, which is a tributary of the Murrumbidgee River.",
+              "passage": "Canberra, federal capital of the Commonwealth of Australia . It occupies part of the Australian Capital Territory, in southern Australia , and is about 150 miles (240 km) southwest of Sydney. Canberra lies astride the Molonglo River, which is a tributary of the Murrumbidgee River.",
+              "retrieved_at": "2026-11-17T11:59:57.310394+00:00",
+              "retrieval_timestamp": 1794916797.310394,
+              "passage_relevance": 1.0,
+              "relevant_entity_references": [
+                "Britannica Canberra",
+                "Australian Capital Territory",
+                "Molonglo River",
+                "Murrumbidgee River"
+              ],
+              "search_query": "what is the capital of Australia?",
+              "provider": "duckduckgo_lite",
+              "is_cached": true,
+              "raw_payload": {}
+            }
+          ],
+          "sources": [
+            {
+              "title": "Canberra - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Canberra"
+            },
+            {
+              "title": "Australian Capital Territory - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Australian_Capital_Territory"
+            },
+            {
+              "title": "Canberra | History, Map, Population, Climate, & Facts | Britannica",
+              "url": "https://www.britannica.com/place/Canberra"
+            }
+          ],
+          "execution_id": "exec_f0c0022e3b81",
+          "request_id": "req_01255aa0f3f2",
+          "conversation_id": "conv_live_4_1794917856959"
+        },
+        "source_metadata": {
+          "source_count": 3,
+          "sources": [
+            {
+              "title": "Canberra - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Canberra"
+            },
+            {
+              "title": "Australian Capital Territory - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Australian_Capital_Territory"
+            },
+            {
+              "title": "Canberra | History, Map, Population, Climate, & Facts | Britannica",
+              "url": "https://www.britannica.com/place/Canberra"
+            }
+          ]
+        },
+        "latency_ms": 108.52,
+        "error": null
+      }
+    ],
+    "final_text": "Based on verified sources ([SOURCE_1]): As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus [SOURCE_1].",
+    "done_metadata": {
+      "trace_id": "req_01255aa0f3f2",
+      "request_id": "req_01255aa0f3f2",
+      "conversation_id": "conv_live_4_1794917856959",
+      "total_tokens": 1261,
+      "ttft_ms": 23.2,
+      "total_latency_ms": 2011.2,
+      "tok_per_sec": 28.72,
+      "retrieval_triggered": false,
+      "tools_executed": 1
+    },
+    "duration_ms": 2014.8
+  },
+  "test_5_sequential_same_conversation": {
+    "turn_1": {
+      "raw_request": {
+        "model_id": "qorin-500m-sft-exp-f",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who is Jensen Huang?"
+          }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 40,
+        "max_new_tokens": 256,
+        "repetition_penalty": 1.1,
+        "retrieval_mode": "auto",
+        "retrieval_top_k": 3,
+        "retrieval_threshold": 0.45,
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true,
+        "conversation_id": "conv_live_5_1794917858974"
+      },
+      "conversation_id": "conv_live_5_1794917858974",
+      "request_id": "req_8c54563d8a7d",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "retrieval_event": {
+        "triggered": false,
+        "mode": "auto",
+        "decision_reason": "Query did not match technical knowledge base routing threshold.",
+        "query": "Who is Jensen Huang?",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 0.02
+      },
+      "tool_invocations": [
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "status": "started",
+          "call_id": "call_req_8c54_001",
+          "request_id": "req_8c54563d8a7d",
+          "conversation_id": "conv_live_5_1794917858974",
+          "args": {
+            "query": "Who is Jensen Huang?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_req_8c54_001",
+          "execution_id": "exec_b7e058592ca4",
+          "request_id": "req_8c54563d8a7d",
+          "conversation_id": "conv_live_5_1794917858974",
+          "stdout": "Retrieved 3 authoritative sources for query 'Who is Jensen Huang?':\n\n[SOURCE_1] Jensen Huang - Wikipedia\nURL: https://en.wikipedia.org/wiki/Jensen_Huang\nKey Entities: 1963, 1993, 2026, Jensen Huang, Wikipedia Jen\nEvidence Passage: Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.\n\n[SOURCE_2] Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money\nURL: https://www.britannica.com/money/Jensen-Huang\nKey Entities: Jensen Huang, Britannica Money Jensen Huang, During Huang\nEvidence Passage: Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.\n\n[SOURCE_3] Who is Jensen Huang and why is the Nvidia CEO scandal important?\nURL: https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698\nKey Entities: Jensen Huang\nEvidence Passage: After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+          "stderr": "",
+          "input_payload": {
+            "query": "Who is Jensen Huang?"
+          },
+          "output_payload": {
+            "query": "Who is Jensen Huang?",
+            "latency_ms": 0.5,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "source_id": "SOURCE_1",
+                "evidence_id": "SOURCE_1",
+                "title": "Jensen Huang - Wikipedia",
+                "source_title": "Jensen Huang - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+                "source_url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+                "snippet": "Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.",
+                "source_snippet": "Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.",
+                "passage": "Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.",
+                "retrieved_at": "2026-11-17T12:12:32.111990+00:00",
+                "retrieval_timestamp": 1794917552.11199,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "1963",
+                  "1993",
+                  "2026",
+                  "Jensen Huang",
+                  "Wikipedia Jen"
+                ],
+                "search_query": "Who is Jensen Huang?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_2",
+                "evidence_id": "SOURCE_2",
+                "title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+                "source_title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+                "url": "https://www.britannica.com/money/Jensen-Huang",
+                "source_url": "https://www.britannica.com/money/Jensen-Huang",
+                "snippet": "Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.",
+                "source_snippet": "Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.",
+                "passage": "Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.",
+                "retrieved_at": "2026-11-17T12:12:32.111990+00:00",
+                "retrieval_timestamp": 1794917552.11199,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "Jensen Huang",
+                  "Britannica Money Jensen Huang",
+                  "During Huang"
+                ],
+                "search_query": "Who is Jensen Huang?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_3",
+                "evidence_id": "SOURCE_3",
+                "title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+                "source_title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+                "url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698",
+                "source_url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698",
+                "snippet": "After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+                "source_snippet": "After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+                "passage": "After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+                "retrieved_at": "2026-11-17T12:12:32.112995+00:00",
+                "retrieval_timestamp": 1794917552.1129947,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "Jensen Huang"
+                ],
+                "search_query": "Who is Jensen Huang?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Jensen Huang - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+              },
+              {
+                "title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+                "url": "https://www.britannica.com/money/Jensen-Huang"
+              },
+              {
+                "title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+                "url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698"
+              }
+            ],
+            "execution_id": "exec_b7e058592ca4",
+            "request_id": "req_8c54563d8a7d",
+            "conversation_id": "conv_live_5_1794917858974"
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Jensen Huang - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+              },
+              {
+                "title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+                "url": "https://www.britannica.com/money/Jensen-Huang"
+              },
+              {
+                "title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+                "url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698"
+              }
+            ]
+          },
+          "latency_ms": 42.71,
+          "error": null
+        }
+      ],
+      "final_text": "Based on verified sources ([SOURCE_2]): Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA) [SOURCE_2].",
+      "done_metadata": {
+        "trace_id": "req_8c54563d8a7d",
+        "request_id": "req_8c54563d8a7d",
+        "conversation_id": "conv_live_5_1794917858974",
+        "total_tokens": 1996,
+        "ttft_ms": 26.15,
+        "total_latency_ms": 2937.34,
+        "tok_per_sec": 26.89,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "duration_ms": 4452.38
+    },
+    "turn_2": {
+      "raw_request": {
+        "model_id": "qorin-500m-sft-exp-f",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who is Jensen Huang?"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on verified sources ([SOURCE_2]): Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA) [SOURCE_2]."
+          },
+          {
+            "role": "user",
+            "content": "Who is Donald Trump?"
+          }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 40,
+        "max_new_tokens": 256,
+        "repetition_penalty": 1.1,
+        "retrieval_mode": "auto",
+        "retrieval_top_k": 3,
+        "retrieval_threshold": 0.45,
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true,
+        "conversation_id": "conv_live_5_1794917858974"
+      },
+      "conversation_id": "conv_live_5_1794917858974",
+      "request_id": "req_4164701cf7d7",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "retrieval_event": {
+        "triggered": false,
+        "mode": "auto",
+        "decision_reason": "Query did not match technical knowledge base routing threshold.",
+        "query": "Who is Donald Trump?",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 0.02
+      },
+      "tool_invocations": [
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "status": "started",
+          "call_id": "call_req_4164_001",
+          "request_id": "req_4164701cf7d7",
+          "conversation_id": "conv_live_5_1794917858974",
+          "args": {
+            "query": "Who is Donald Trump?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_req_4164_001",
+          "execution_id": "exec_e163c5361102",
+          "request_id": "req_4164701cf7d7",
+          "conversation_id": "conv_live_5_1794917858974",
+          "stdout": "Retrieved 3 authoritative sources for query 'Who is Donald Trump?':\n\n[SOURCE_1] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.\n\n[SOURCE_2] Donald Trump | Birthday, Age, Education, Biography, Impeachments ...\nURL: https://www.britannica.com/biography/Donald-Trump\nKey Entities: 2017-21, 2025, 1885-89, 1893-97, 45th, 47th president, second president, first, Donald Trump, United States\nEvidence Passage: Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).\n\n[SOURCE_3] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: 2024, President Donald, The White House After, White House\nEvidence Passage: After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+          "stderr": "",
+          "input_payload": {
+            "query": "Who is Donald Trump?"
+          },
+          "output_payload": {
+            "query": "Who is Donald Trump?",
+            "latency_ms": 0.5,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "source_id": "SOURCE_1",
+                "evidence_id": "SOURCE_1",
+                "title": "Donald Trump - Wikipedia",
+                "source_title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "1946",
+                  "2017",
+                  "2021",
+                  "47th president",
+                  "45th president",
+                  "Donald Trump",
+                  "Wikipedia Donald John Trump",
+                  "United States",
+                  "Republican Party",
+                  "Republican"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_2",
+                "evidence_id": "SOURCE_2",
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump",
+                "source_url": "https://www.britannica.com/biography/Donald-Trump",
+                "snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "source_snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "passage": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2017-21",
+                  "2025",
+                  "1885-89",
+                  "1893-97",
+                  "45th",
+                  "47th president",
+                  "second president",
+                  "first",
+                  "Donald Trump",
+                  "United States"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_3",
+                "evidence_id": "SOURCE_3",
+                "title": "President Donald J. Trump - The White House",
+                "source_title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "source_snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "passage": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2024",
+                  "President Donald",
+                  "The White House After",
+                  "White House"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ],
+            "execution_id": "exec_e163c5361102",
+            "request_id": "req_4164701cf7d7",
+            "conversation_id": "conv_live_5_1794917858974"
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ]
+          },
+          "latency_ms": 11.95,
+          "error": null
+        }
+      ],
+      "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "done_metadata": {
+        "trace_id": "req_4164701cf7d7",
+        "request_id": "req_4164701cf7d7",
+        "conversation_id": "conv_live_5_1794917858974",
+        "total_tokens": 33932,
+        "ttft_ms": 25.7,
+        "total_latency_ms": 13150.21,
+        "tok_per_sec": 21.35,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "duration_ms": 14658.77
+    }
+  },
+  "test_6_separate_conversations": {
+    "jensen": {
+      "raw_request": {
+        "model_id": "qorin-500m-sft-exp-f",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who is Jensen Huang?"
+          }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 40,
+        "max_new_tokens": 256,
+        "repetition_penalty": 1.1,
+        "retrieval_mode": "auto",
+        "retrieval_top_k": 3,
+        "retrieval_threshold": 0.45,
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true,
+        "conversation_id": "conv_live_6a_1794917878085"
+      },
+      "conversation_id": "conv_live_6a_1794917878085",
+      "request_id": "req_215acc1bca68",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "retrieval_event": {
+        "triggered": false,
+        "mode": "auto",
+        "decision_reason": "Query did not match technical knowledge base routing threshold.",
+        "query": "Who is Jensen Huang?",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 0.02
+      },
+      "tool_invocations": [
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "status": "started",
+          "call_id": "call_req_215a_001",
+          "request_id": "req_215acc1bca68",
+          "conversation_id": "conv_live_6a_1794917878085",
+          "args": {
+            "query": "Who is Jensen Huang?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_req_215a_001",
+          "execution_id": "exec_82fe7b66cc08",
+          "request_id": "req_215acc1bca68",
+          "conversation_id": "conv_live_6a_1794917878085",
+          "stdout": "Retrieved 3 authoritative sources for query 'Who is Jensen Huang?':\n\n[SOURCE_1] Jensen Huang - Wikipedia\nURL: https://en.wikipedia.org/wiki/Jensen_Huang\nKey Entities: 1963, 1993, 2026, Jensen Huang, Wikipedia Jen\nEvidence Passage: Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.\n\n[SOURCE_2] Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money\nURL: https://www.britannica.com/money/Jensen-Huang\nKey Entities: Jensen Huang, Britannica Money Jensen Huang, During Huang\nEvidence Passage: Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.\n\n[SOURCE_3] Who is Jensen Huang and why is the Nvidia CEO scandal important?\nURL: https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698\nKey Entities: Jensen Huang\nEvidence Passage: After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+          "stderr": "",
+          "input_payload": {
+            "query": "Who is Jensen Huang?"
+          },
+          "output_payload": {
+            "query": "Who is Jensen Huang?",
+            "latency_ms": 0.5,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "source_id": "SOURCE_1",
+                "evidence_id": "SOURCE_1",
+                "title": "Jensen Huang - Wikipedia",
+                "source_title": "Jensen Huang - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+                "source_url": "https://en.wikipedia.org/wiki/Jensen_Huang",
+                "snippet": "Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.",
+                "source_snippet": "Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.",
+                "passage": "Jen-Hsun \" Jensen \" Huang[a] (born February 17, 1963) is a Taiwanese and American electrical engineer and businessman. He co-founded the technology company Nvidia, one of the world's most valuable corporations, and served as its president and CEO from its founding in 1993 until his resignation in 2026.",
+                "retrieved_at": "2026-11-17T12:12:32.111990+00:00",
+                "retrieval_timestamp": 1794917552.11199,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "1963",
+                  "1993",
+                  "2026",
+                  "Jensen Huang",
+                  "Wikipedia Jen"
+                ],
+                "search_query": "Who is Jensen Huang?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_2",
+                "evidence_id": "SOURCE_2",
+                "title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+                "source_title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+                "url": "https://www.britannica.com/money/Jensen-Huang",
+                "source_url": "https://www.britannica.com/money/Jensen-Huang",
+                "snippet": "Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.",
+                "source_snippet": "Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.",
+                "passage": "Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA). During Huang's 33 years leading NVIDIA, the company became one of the leading providers of graphics processing units (GPUs) and took center stage in the artificial intelligence boom.",
+                "retrieved_at": "2026-11-17T12:12:32.111990+00:00",
+                "retrieval_timestamp": 1794917552.11199,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "Jensen Huang",
+                  "Britannica Money Jensen Huang",
+                  "During Huang"
+                ],
+                "search_query": "Who is Jensen Huang?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_3",
+                "evidence_id": "SOURCE_3",
+                "title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+                "source_title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+                "url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698",
+                "source_url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698",
+                "snippet": "After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+                "source_snippet": "After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+                "passage": "After news broke of Nvidia CEO Jensen Huang's affair with an alleged Chinese intelligence asset Nvidia's value plummeted. Why?",
+                "retrieved_at": "2026-11-17T12:12:32.112995+00:00",
+                "retrieval_timestamp": 1794917552.1129947,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "Jensen Huang"
+                ],
+                "search_query": "Who is Jensen Huang?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Jensen Huang - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+              },
+              {
+                "title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+                "url": "https://www.britannica.com/money/Jensen-Huang"
+              },
+              {
+                "title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+                "url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698"
+              }
+            ],
+            "execution_id": "exec_82fe7b66cc08",
+            "request_id": "req_215acc1bca68",
+            "conversation_id": "conv_live_6a_1794917878085"
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Jensen Huang - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Jensen_Huang"
+              },
+              {
+                "title": "Jensen Huang | NVIDIA, AI, Biography, & Career | Britannica Money",
+                "url": "https://www.britannica.com/money/Jensen-Huang"
+              },
+              {
+                "title": "Who is Jensen Huang and why is the Nvidia CEO scandal important?",
+                "url": "https://www.abc.net.au/news/2026-11-10/who-is-jensen-huang-and-why-is-nvidia-ceo-scandal-important/107368698"
+              }
+            ]
+          },
+          "latency_ms": 9.93,
+          "error": null
+        }
+      ],
+      "final_text": "Based on verified sources ([SOURCE_2]): Jensen Huang is a Taiwanese-born American entrepreneur who cofounded the American semiconductor company NVIDIA Corporation (NVDA) [SOURCE_2].",
+      "done_metadata": {
+        "trace_id": "req_215acc1bca68",
+        "request_id": "req_215acc1bca68",
+        "conversation_id": "conv_live_6a_1794917878085",
+        "total_tokens": 2265,
+        "ttft_ms": 23.28,
+        "total_latency_ms": 3223.94,
+        "tok_per_sec": 24.75,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "duration_ms": 3227.46
+    },
+    "trump": {
+      "raw_request": {
+        "model_id": "qorin-500m-sft-exp-f",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who is Donald Trump?"
+          }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 40,
+        "max_new_tokens": 256,
+        "repetition_penalty": 1.1,
+        "retrieval_mode": "auto",
+        "retrieval_top_k": 3,
+        "retrieval_threshold": 0.45,
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true,
+        "conversation_id": "conv_live_6b_1794917881313"
+      },
+      "conversation_id": "conv_live_6b_1794917881313",
+      "request_id": "req_cf63fe1bb402",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "retrieval_event": {
+        "triggered": false,
+        "mode": "auto",
+        "decision_reason": "Query did not match technical knowledge base routing threshold.",
+        "query": "Who is Donald Trump?",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 0.02
+      },
+      "tool_invocations": [
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "status": "started",
+          "call_id": "call_req_cf63_001",
+          "request_id": "req_cf63fe1bb402",
+          "conversation_id": "conv_live_6b_1794917881313",
+          "args": {
+            "query": "Who is Donald Trump?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_req_cf63_001",
+          "execution_id": "exec_641a984948ec",
+          "request_id": "req_cf63fe1bb402",
+          "conversation_id": "conv_live_6b_1794917881313",
+          "stdout": "Retrieved 3 authoritative sources for query 'Who is Donald Trump?':\n\n[SOURCE_1] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.\n\n[SOURCE_2] Donald Trump | Birthday, Age, Education, Biography, Impeachments ...\nURL: https://www.britannica.com/biography/Donald-Trump\nKey Entities: 2017-21, 2025, 1885-89, 1893-97, 45th, 47th president, second president, first, Donald Trump, United States\nEvidence Passage: Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).\n\n[SOURCE_3] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: 2024, President Donald, The White House After, White House\nEvidence Passage: After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+          "stderr": "",
+          "input_payload": {
+            "query": "Who is Donald Trump?"
+          },
+          "output_payload": {
+            "query": "Who is Donald Trump?",
+            "latency_ms": 0.5,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "source_id": "SOURCE_1",
+                "evidence_id": "SOURCE_1",
+                "title": "Donald Trump - Wikipedia",
+                "source_title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "1946",
+                  "2017",
+                  "2021",
+                  "47th president",
+                  "45th president",
+                  "Donald Trump",
+                  "Wikipedia Donald John Trump",
+                  "United States",
+                  "Republican Party",
+                  "Republican"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_2",
+                "evidence_id": "SOURCE_2",
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump",
+                "source_url": "https://www.britannica.com/biography/Donald-Trump",
+                "snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "source_snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "passage": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2017-21",
+                  "2025",
+                  "1885-89",
+                  "1893-97",
+                  "45th",
+                  "47th president",
+                  "second president",
+                  "first",
+                  "Donald Trump",
+                  "United States"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_3",
+                "evidence_id": "SOURCE_3",
+                "title": "President Donald J. Trump - The White House",
+                "source_title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "source_snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "passage": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2024",
+                  "President Donald",
+                  "The White House After",
+                  "White House"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ],
+            "execution_id": "exec_641a984948ec",
+            "request_id": "req_cf63fe1bb402",
+            "conversation_id": "conv_live_6b_1794917881313"
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ]
+          },
+          "latency_ms": 46.44,
+          "error": null
+        }
+      ],
+      "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "done_metadata": {
+        "trace_id": "req_cf63fe1bb402",
+        "request_id": "req_cf63fe1bb402",
+        "conversation_id": "conv_live_6b_1794917881313",
+        "total_tokens": 2292,
+        "ttft_ms": 30.26,
+        "total_latency_ms": 3462.14,
+        "tok_per_sec": 24.09,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "duration_ms": 4967.77
+    }
+  },
+  "test_7_rag_modes": {
+    "rag_off": {
+      "raw_request": {
+        "model_id": "qorin-500m-sft-exp-f",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who is Donald Trump?"
+          }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 40,
+        "max_new_tokens": 256,
+        "repetition_penalty": 1.1,
+        "retrieval_mode": "off",
+        "retrieval_top_k": 3,
+        "retrieval_threshold": 0.45,
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true,
+        "conversation_id": "conv_live_7_off_1794917886280"
+      },
+      "conversation_id": "conv_live_7_off_1794917886280",
+      "request_id": "req_0d8316be2e7e",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "retrieval_event": {
+        "triggered": false,
+        "mode": "off",
+        "decision_reason": "Retrieval explicitly disabled by user setting.",
+        "query": "Who is Donald Trump?",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 0.0
+      },
+      "tool_invocations": [
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "status": "started",
+          "call_id": "call_req_0d83_001",
+          "request_id": "req_0d8316be2e7e",
+          "conversation_id": "conv_live_7_off_1794917886280",
+          "args": {
+            "query": "Who is Donald Trump?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_req_0d83_001",
+          "execution_id": "exec_935a150dd5b6",
+          "request_id": "req_0d8316be2e7e",
+          "conversation_id": "conv_live_7_off_1794917886280",
+          "stdout": "Retrieved 3 authoritative sources for query 'Who is Donald Trump?':\n\n[SOURCE_1] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.\n\n[SOURCE_2] Donald Trump | Birthday, Age, Education, Biography, Impeachments ...\nURL: https://www.britannica.com/biography/Donald-Trump\nKey Entities: 2017-21, 2025, 1885-89, 1893-97, 45th, 47th president, second president, first, Donald Trump, United States\nEvidence Passage: Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).\n\n[SOURCE_3] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: 2024, President Donald, The White House After, White House\nEvidence Passage: After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+          "stderr": "",
+          "input_payload": {
+            "query": "Who is Donald Trump?"
+          },
+          "output_payload": {
+            "query": "Who is Donald Trump?",
+            "latency_ms": 0.5,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "source_id": "SOURCE_1",
+                "evidence_id": "SOURCE_1",
+                "title": "Donald Trump - Wikipedia",
+                "source_title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "1946",
+                  "2017",
+                  "2021",
+                  "47th president",
+                  "45th president",
+                  "Donald Trump",
+                  "Wikipedia Donald John Trump",
+                  "United States",
+                  "Republican Party",
+                  "Republican"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_2",
+                "evidence_id": "SOURCE_2",
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump",
+                "source_url": "https://www.britannica.com/biography/Donald-Trump",
+                "snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "source_snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "passage": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2017-21",
+                  "2025",
+                  "1885-89",
+                  "1893-97",
+                  "45th",
+                  "47th president",
+                  "second president",
+                  "first",
+                  "Donald Trump",
+                  "United States"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_3",
+                "evidence_id": "SOURCE_3",
+                "title": "President Donald J. Trump - The White House",
+                "source_title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "source_snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "passage": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2024",
+                  "President Donald",
+                  "The White House After",
+                  "White House"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ],
+            "execution_id": "exec_935a150dd5b6",
+            "request_id": "req_0d8316be2e7e",
+            "conversation_id": "conv_live_7_off_1794917886280"
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ]
+          },
+          "latency_ms": 54.32,
+          "error": null
+        }
+      ],
+      "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "done_metadata": {
+        "trace_id": "req_0d8316be2e7e",
+        "request_id": "req_0d8316be2e7e",
+        "conversation_id": "conv_live_7_off_1794917886280",
+        "total_tokens": 3711,
+        "ttft_ms": 22.74,
+        "total_latency_ms": 4491.42,
+        "tok_per_sec": 22.84,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "duration_ms": 6001.26
+    },
+    "rag_auto": {
+      "raw_request": {
+        "model_id": "qorin-500m-sft-exp-f",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who is Donald Trump?"
+          }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 40,
+        "max_new_tokens": 256,
+        "repetition_penalty": 1.1,
+        "retrieval_mode": "auto",
+        "retrieval_top_k": 3,
+        "retrieval_threshold": 0.45,
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true,
+        "conversation_id": "conv_live_7_auto_1794917892282"
+      },
+      "conversation_id": "conv_live_7_auto_1794917892282",
+      "request_id": "req_73a58a6e87a2",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "retrieval_event": {
+        "triggered": false,
+        "mode": "auto",
+        "decision_reason": "Query did not match technical knowledge base routing threshold.",
+        "query": "Who is Donald Trump?",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 0.02
+      },
+      "tool_invocations": [
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "status": "started",
+          "call_id": "call_req_73a5_001",
+          "request_id": "req_73a58a6e87a2",
+          "conversation_id": "conv_live_7_auto_1794917892282",
+          "args": {
+            "query": "Who is Donald Trump?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_req_73a5_001",
+          "execution_id": "exec_4350bb058e38",
+          "request_id": "req_73a58a6e87a2",
+          "conversation_id": "conv_live_7_auto_1794917892282",
+          "stdout": "Retrieved 3 authoritative sources for query 'Who is Donald Trump?':\n\n[SOURCE_1] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.\n\n[SOURCE_2] Donald Trump | Birthday, Age, Education, Biography, Impeachments ...\nURL: https://www.britannica.com/biography/Donald-Trump\nKey Entities: 2017-21, 2025, 1885-89, 1893-97, 45th, 47th president, second president, first, Donald Trump, United States\nEvidence Passage: Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).\n\n[SOURCE_3] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: 2024, President Donald, The White House After, White House\nEvidence Passage: After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+          "stderr": "",
+          "input_payload": {
+            "query": "Who is Donald Trump?"
+          },
+          "output_payload": {
+            "query": "Who is Donald Trump?",
+            "latency_ms": 0.5,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "source_id": "SOURCE_1",
+                "evidence_id": "SOURCE_1",
+                "title": "Donald Trump - Wikipedia",
+                "source_title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "1946",
+                  "2017",
+                  "2021",
+                  "47th president",
+                  "45th president",
+                  "Donald Trump",
+                  "Wikipedia Donald John Trump",
+                  "United States",
+                  "Republican Party",
+                  "Republican"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_2",
+                "evidence_id": "SOURCE_2",
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump",
+                "source_url": "https://www.britannica.com/biography/Donald-Trump",
+                "snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "source_snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "passage": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2017-21",
+                  "2025",
+                  "1885-89",
+                  "1893-97",
+                  "45th",
+                  "47th president",
+                  "second president",
+                  "first",
+                  "Donald Trump",
+                  "United States"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_3",
+                "evidence_id": "SOURCE_3",
+                "title": "President Donald J. Trump - The White House",
+                "source_title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "source_snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "passage": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2024",
+                  "President Donald",
+                  "The White House After",
+                  "White House"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ],
+            "execution_id": "exec_4350bb058e38",
+            "request_id": "req_73a58a6e87a2",
+            "conversation_id": "conv_live_7_auto_1794917892282"
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ]
+          },
+          "latency_ms": 14.17,
+          "error": null
+        }
+      ],
+      "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "done_metadata": {
+        "trace_id": "req_73a58a6e87a2",
+        "request_id": "req_73a58a6e87a2",
+        "conversation_id": "conv_live_7_auto_1794917892282",
+        "total_tokens": 1051,
+        "ttft_ms": 23.27,
+        "total_latency_ms": 2041.85,
+        "tok_per_sec": 23.42,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "duration_ms": 2045.93
+    },
+    "rag_always": {
+      "raw_request": {
+        "model_id": "qorin-500m-sft-exp-f",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who is Donald Trump?"
+          }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 40,
+        "max_new_tokens": 256,
+        "repetition_penalty": 1.1,
+        "retrieval_mode": "always",
+        "retrieval_top_k": 3,
+        "retrieval_threshold": 0.45,
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true,
+        "conversation_id": "conv_live_7_always_1794917894328"
+      },
+      "conversation_id": "conv_live_7_always_1794917894328",
+      "request_id": "req_266bd2d7ec7c",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "retrieval_event": {
+        "triggered": false,
+        "mode": "always",
+        "decision_reason": "Retrieval forced by 'always' policy setting. (0 internal knowledge chunks exceeded similarity threshold 0.45; external tools enabled).",
+        "query": "Who is Donald Trump?",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 1.06
+      },
+      "tool_invocations": [
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "status": "started",
+          "call_id": "call_req_266b_001",
+          "request_id": "req_266bd2d7ec7c",
+          "conversation_id": "conv_live_7_always_1794917894328",
+          "args": {
+            "query": "Who is Donald Trump?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_req_266b_001",
+          "execution_id": "exec_032d347747dc",
+          "request_id": "req_266bd2d7ec7c",
+          "conversation_id": "conv_live_7_always_1794917894328",
+          "stdout": "Retrieved 3 authoritative sources for query 'Who is Donald Trump?':\n\n[SOURCE_1] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.\n\n[SOURCE_2] Donald Trump | Birthday, Age, Education, Biography, Impeachments ...\nURL: https://www.britannica.com/biography/Donald-Trump\nKey Entities: 2017-21, 2025, 1885-89, 1893-97, 45th, 47th president, second president, first, Donald Trump, United States\nEvidence Passage: Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).\n\n[SOURCE_3] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: 2024, President Donald, The White House After, White House\nEvidence Passage: After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+          "stderr": "",
+          "input_payload": {
+            "query": "Who is Donald Trump?"
+          },
+          "output_payload": {
+            "query": "Who is Donald Trump?",
+            "latency_ms": 0.5,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "source_id": "SOURCE_1",
+                "evidence_id": "SOURCE_1",
+                "title": "Donald Trump - Wikipedia",
+                "source_title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "1946",
+                  "2017",
+                  "2021",
+                  "47th president",
+                  "45th president",
+                  "Donald Trump",
+                  "Wikipedia Donald John Trump",
+                  "United States",
+                  "Republican Party",
+                  "Republican"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_2",
+                "evidence_id": "SOURCE_2",
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump",
+                "source_url": "https://www.britannica.com/biography/Donald-Trump",
+                "snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "source_snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "passage": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2017-21",
+                  "2025",
+                  "1885-89",
+                  "1893-97",
+                  "45th",
+                  "47th president",
+                  "second president",
+                  "first",
+                  "Donald Trump",
+                  "United States"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_3",
+                "evidence_id": "SOURCE_3",
+                "title": "President Donald J. Trump - The White House",
+                "source_title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "source_snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "passage": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2024",
+                  "President Donald",
+                  "The White House After",
+                  "White House"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ],
+            "execution_id": "exec_032d347747dc",
+            "request_id": "req_266bd2d7ec7c",
+            "conversation_id": "conv_live_7_always_1794917894328"
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ]
+          },
+          "latency_ms": 12.09,
+          "error": null
+        }
+      ],
+      "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "done_metadata": {
+        "trace_id": "req_266bd2d7ec7c",
+        "request_id": "req_266bd2d7ec7c",
+        "conversation_id": "conv_live_7_always_1794917894328",
+        "total_tokens": 3417,
+        "ttft_ms": 30.75,
+        "total_latency_ms": 4581.64,
+        "tok_per_sec": 21.88,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "duration_ms": 6090.51
+    }
+  },
+  "test_8_repeat_query_same_conversation": {
+    "turn_1": {
+      "raw_request": {
+        "model_id": "qorin-500m-sft-exp-f",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who is Donald Trump?"
+          }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 40,
+        "max_new_tokens": 256,
+        "repetition_penalty": 1.1,
+        "retrieval_mode": "auto",
+        "retrieval_top_k": 3,
+        "retrieval_threshold": 0.45,
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true,
+        "conversation_id": "conv_live_8_1794917900417"
+      },
+      "conversation_id": "conv_live_8_1794917900417",
+      "request_id": "req_451f71ad70b9",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "retrieval_event": {
+        "triggered": false,
+        "mode": "auto",
+        "decision_reason": "Query did not match technical knowledge base routing threshold.",
+        "query": "Who is Donald Trump?",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 0.02
+      },
+      "tool_invocations": [
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "status": "started",
+          "call_id": "call_req_451f_001",
+          "request_id": "req_451f71ad70b9",
+          "conversation_id": "conv_live_8_1794917900417",
+          "args": {
+            "query": "Who is Donald Trump?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_research",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_req_451f_001",
+          "execution_id": "exec_941b42801a30",
+          "request_id": "req_451f71ad70b9",
+          "conversation_id": "conv_live_8_1794917900417",
+          "stdout": "Retrieved 3 authoritative sources for query 'Who is Donald Trump?':\n\n[SOURCE_1] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.\n\n[SOURCE_2] Donald Trump | Birthday, Age, Education, Biography, Impeachments ...\nURL: https://www.britannica.com/biography/Donald-Trump\nKey Entities: 2017-21, 2025, 1885-89, 1893-97, 45th, 47th president, second president, first, Donald Trump, United States\nEvidence Passage: Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).\n\n[SOURCE_3] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: 2024, President Donald, The White House After, White House\nEvidence Passage: After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+          "stderr": "",
+          "input_payload": {
+            "query": "Who is Donald Trump?"
+          },
+          "output_payload": {
+            "query": "Who is Donald Trump?",
+            "latency_ms": 0.5,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "source_id": "SOURCE_1",
+                "evidence_id": "SOURCE_1",
+                "title": "Donald Trump - Wikipedia",
+                "source_title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "1946",
+                  "2017",
+                  "2021",
+                  "47th president",
+                  "45th president",
+                  "Donald Trump",
+                  "Wikipedia Donald John Trump",
+                  "United States",
+                  "Republican Party",
+                  "Republican"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_2",
+                "evidence_id": "SOURCE_2",
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump",
+                "source_url": "https://www.britannica.com/biography/Donald-Trump",
+                "snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "source_snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "passage": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2017-21",
+                  "2025",
+                  "1885-89",
+                  "1893-97",
+                  "45th",
+                  "47th president",
+                  "second president",
+                  "first",
+                  "Donald Trump",
+                  "United States"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_3",
+                "evidence_id": "SOURCE_3",
+                "title": "President Donald J. Trump - The White House",
+                "source_title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "source_snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "passage": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2024",
+                  "President Donald",
+                  "The White House After",
+                  "White House"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ],
+            "execution_id": "exec_941b42801a30",
+            "request_id": "req_451f71ad70b9",
+            "conversation_id": "conv_live_8_1794917900417"
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ]
+          },
+          "latency_ms": 52.96,
+          "error": null
+        }
+      ],
+      "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "done_metadata": {
+        "trace_id": "req_451f71ad70b9",
+        "request_id": "req_451f71ad70b9",
+        "conversation_id": "conv_live_8_1794917900417",
+        "total_tokens": 2631,
+        "ttft_ms": 23.4,
+        "total_latency_ms": 3979.09,
+        "tok_per_sec": 22.1,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "duration_ms": 5483.63
+    },
+    "turn_2": {
+      "raw_request": {
+        "model_id": "qorin-500m-sft-exp-f",
+        "messages": [
+          {
+            "role": "user",
+            "content": "Who is Donald Trump?"
+          },
+          {
+            "role": "assistant",
+            "content": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1]."
+          },
+          {
+            "role": "user",
+            "content": "Who is Donald Trump?"
+          }
+        ],
+        "temperature": 0.1,
+        "top_p": 0.9,
+        "top_k": 40,
+        "max_new_tokens": 256,
+        "repetition_penalty": 1.1,
+        "retrieval_mode": "auto",
+        "retrieval_top_k": 3,
+        "retrieval_threshold": 0.45,
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true,
+        "conversation_id": "conv_live_8_1794917900417"
+      },
+      "conversation_id": "conv_live_8_1794917900417",
+      "request_id": "req_3ca2b02a7951",
+      "checkpoint_sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4",
+      "retrieval_event": {
+        "triggered": false,
+        "mode": "auto",
+        "decision_reason": "Query did not match technical knowledge base routing threshold.",
+        "query": "Who is Donald Trump?",
+        "retrieved_chunks": [],
+        "injected_context": "",
+        "retrieval_latency_ms": 0.02
+      },
+      "tool_invocations": [
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "status": "started",
+          "call_id": "call_req_3ca2_001",
+          "request_id": "req_3ca2b02a7951",
+          "conversation_id": "conv_live_8_1794917900417",
+          "args": {
+            "query": "Who is Donald Trump?"
+          }
+        },
+        {
+          "tool_name": "web_search",
+          "original_tool_name": "web_search",
+          "requested_by": "model",
+          "status": "completed",
+          "call_id": "call_req_3ca2_001",
+          "execution_id": "exec_8ce834541572",
+          "request_id": "req_3ca2b02a7951",
+          "conversation_id": "conv_live_8_1794917900417",
+          "stdout": "Retrieved 3 authoritative sources for query 'Who is Donald Trump?':\n\n[SOURCE_1] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.\n\n[SOURCE_2] Donald Trump | Birthday, Age, Education, Biography, Impeachments ...\nURL: https://www.britannica.com/biography/Donald-Trump\nKey Entities: 2017-21, 2025, 1885-89, 1893-97, 45th, 47th president, second president, first, Donald Trump, United States\nEvidence Passage: Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).\n\n[SOURCE_3] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: 2024, President Donald, The White House After, White House\nEvidence Passage: After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+          "stderr": "",
+          "input_payload": {
+            "query": "Who is Donald Trump?"
+          },
+          "output_payload": {
+            "query": "Who is Donald Trump?",
+            "latency_ms": 0.5,
+            "provider_name": "duckduckgo_lite",
+            "error": null,
+            "records": [
+              {
+                "source_id": "SOURCE_1",
+                "evidence_id": "SOURCE_1",
+                "title": "Donald Trump - Wikipedia",
+                "source_title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+                "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "1946",
+                  "2017",
+                  "2021",
+                  "47th president",
+                  "45th president",
+                  "Donald Trump",
+                  "Wikipedia Donald John Trump",
+                  "United States",
+                  "Republican Party",
+                  "Republican"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_2",
+                "evidence_id": "SOURCE_2",
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump",
+                "source_url": "https://www.britannica.com/biography/Donald-Trump",
+                "snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "source_snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "passage": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2017-21",
+                  "2025",
+                  "1885-89",
+                  "1893-97",
+                  "45th",
+                  "47th president",
+                  "second president",
+                  "first",
+                  "Donald Trump",
+                  "United States"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              },
+              {
+                "source_id": "SOURCE_3",
+                "evidence_id": "SOURCE_3",
+                "title": "President Donald J. Trump - The White House",
+                "source_title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+                "snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "source_snippet": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "passage": "After a landslide election victory in 2024, President Donald J. Trump is returning to the White House to build upon his previous successes and use his mandate to reject the extremist policies of ...",
+                "retrieved_at": "2026-11-17T12:09:11.859678+00:00",
+                "retrieval_timestamp": 1794917351.859678,
+                "passage_relevance": 1.0,
+                "relevant_entity_references": [
+                  "2024",
+                  "President Donald",
+                  "The White House After",
+                  "White House"
+                ],
+                "search_query": "Who is Donald Trump?",
+                "provider": "duckduckgo_lite",
+                "is_cached": true,
+                "raw_payload": {}
+              }
+            ],
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ],
+            "execution_id": "exec_8ce834541572",
+            "request_id": "req_3ca2b02a7951",
+            "conversation_id": "conv_live_8_1794917900417"
+          },
+          "source_metadata": {
+            "source_count": 3,
+            "sources": [
+              {
+                "title": "Donald Trump - Wikipedia",
+                "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+              },
+              {
+                "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+                "url": "https://www.britannica.com/biography/Donald-Trump"
+              },
+              {
+                "title": "President Donald J. Trump - The White House",
+                "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+              }
+            ]
+          },
+          "latency_ms": 9.84,
+          "error": null
+        }
+      ],
+      "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+      "done_metadata": {
+        "trace_id": "req_3ca2b02a7951",
+        "request_id": "req_3ca2b02a7951",
+        "conversation_id": "conv_live_8_1794917900417",
+        "total_tokens": 2400,
+        "ttft_ms": 26.47,
+        "total_latency_ms": 4238.8,
+        "tok_per_sec": 19.63,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "duration_ms": 5749.52
+    }
+  }
+}

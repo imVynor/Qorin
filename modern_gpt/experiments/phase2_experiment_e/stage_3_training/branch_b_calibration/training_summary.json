@@ -1,0 +1,42 @@
+{
+  "branch": "branch_b",
+  "branch_name": "Branch B: Decision Calibration Only",
+  "stop_reason": "Sustained degradation: Val loss 0.8028 exceeded best 0.7298 by >10%",
+  "total_updates": 125,
+  "planned_updates": 200,
+  "best_step": 25,
+  "best_val_loss": 0.7298,
+  "final_val_loss": 0.8028,
+  "total_tokens_processed": 52516,
+  "total_target_tokens_processed": 22770,
+  "wall_clock_seconds": 178.4,
+  "active_gpu_seconds": 79.65,
+  "val_loss_history": [
+    [
+      0,
+      1.9755
+    ],
+    [
+      25,
+      0.7298
+    ],
+    [
+      50,
+      0.7462
+    ],
+    [
+      75,
+      0.7738
+    ],
+    [
+      100,
+      0.7891
+    ],
+    [
+      125,
+      0.8028
+    ]
+  ],
+  "best_checkpoint_sha256": "beec486831406acf3a6ac315cc188a1f2f97a5c978361ddfa7727d69a39436f6",
+  "final_checkpoint_sha256": "0a5d6af943dde4bc1134d601e4e1781b512ec996c5c325e28f560725ffd5dd6b"
+}

@@ -1,0 +1,329 @@
+{
+  "contingency_table": {
+    "both_pass": 23,
+    "both_fail": 97,
+    "exp_c_fail_exp_d_pass (d_wins)": 19,
+    "exp_c_pass_exp_d_fail (c_wins)": 11,
+    "total_paired_tasks": 150
+  },
+  "mcnemar_test": {
+    "chi2": 1.6333,
+    "p_value": 0.201243,
+    "significant_at_05": false,
+    "significant_at_01": false,
+    "d_wins": 19,
+    "c_wins": 11
+  },
+  "deltas": {
+    "intent_f1_delta": 0.2414,
+    "tool_selection_accuracy_delta": 0.5263,
+    "web_recall_delta": 0.8026,
+    "python_recall_delta": -0.0263,
+    "end_to_end_semantic_delta": 0.0533,
+    "unnecessary_tool_calls_delta": 0.4167,
+    "unsupported_claims_reduction": 0.04
+  },
+  "task_level_disagreements_count": 30,
+  "task_level_disagreements": [
+    {
+      "id": "colloquial_02",
+      "winner": "exp_d",
+      "category": "colloquial_web_research",
+      "prompt": "look into ilya sutskever's new company ssi",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 0/3 criteria.",
+      "exp_d_reason": "Matched 2/3 semantic criteria."
+    },
+    {
+      "id": "colloquial_07",
+      "winner": "exp_d",
+      "category": "colloquial_web_research",
+      "prompt": "give me the scoop on figure 02 humanoid robot",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 0/3 criteria.",
+      "exp_d_reason": "Matched 3/3 semantic criteria."
+    },
+    {
+      "id": "colloquial_08",
+      "winner": "exp_c",
+      "category": "colloquial_web_research",
+      "prompt": "what happened to the voyager 1 communication thruster issue?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Matched 2/3 semantic criteria.",
+      "exp_d_reason": "Semantic mismatch: matched only 0/3 criteria."
+    },
+    {
+      "id": "colloquial_09",
+      "winner": "exp_d",
+      "category": "colloquial_web_research",
+      "prompt": "who is dario amodei and what company does he run?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 1/3 criteria.",
+      "exp_d_reason": "Matched 2/3 semantic criteria."
+    },
+    {
+      "id": "colloquial_10",
+      "winner": "exp_c",
+      "category": "colloquial_web_research",
+      "prompt": "tell me about yann lecun's jepa architecture",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Matched 2/3 semantic criteria.",
+      "exp_d_reason": "Semantic mismatch: matched only 0/3 criteria."
+    },
+    {
+      "id": "colloquial_11",
+      "winner": "exp_d",
+      "category": "colloquial_web_research",
+      "prompt": "look up the latest status of iter nuclear fusion project",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 1/3 criteria.",
+      "exp_d_reason": "Matched 2/3 semantic criteria."
+    },
+    {
+      "id": "colloquial_19",
+      "winner": "exp_d",
+      "category": "colloquial_web_research",
+      "prompt": "grab some info on arthur mensch",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 0/2 criteria.",
+      "exp_d_reason": "Matched 1/2 semantic criteria."
+    },
+    {
+      "id": "colloquial_22",
+      "winner": "exp_d",
+      "category": "colloquial_web_research",
+      "prompt": "look into the deep-sea discovery of dark oxygen in the clarion-clipperton zone",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 0/3 criteria.",
+      "exp_d_reason": "Matched 3/3 semantic criteria."
+    },
+    {
+      "id": "colloquial_26",
+      "winner": "exp_c",
+      "category": "colloquial_web_research",
+      "prompt": "who is the ceo of tsmc in 2024?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Matched 1/2 semantic criteria.",
+      "exp_d_reason": "Semantic mismatch: matched only 0/2 criteria."
+    },
+    {
+      "id": "current_01",
+      "winner": "exp_d",
+      "category": "current_information",
+      "prompt": "What is the estimated population of Iceland according to 2024 census records?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 1/3 criteria.",
+      "exp_d_reason": "Matched 2/3 semantic criteria."
+    },
+    {
+      "id": "current_11",
+      "winner": "exp_c",
+      "category": "current_information",
+      "prompt": "Which motion picture won the 2024 Academy Award for Best Picture at the 96th Oscars?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Matched 1/2 semantic criteria.",
+      "exp_d_reason": "Semantic mismatch: matched only 0/2 criteria."
+    },
+    {
+      "id": "current_20",
+      "winner": "exp_c",
+      "category": "current_information",
+      "prompt": "Who won the 2024 Ballon d'Or for men's football in October 2024?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Matched 1/2 semantic criteria.",
+      "exp_d_reason": "Semantic mismatch: matched only 0/2 criteria."
+    },
+    {
+      "id": "python_02",
+      "winner": "exp_c",
+      "category": "python_computation",
+      "prompt": "Find the median of the array [45, 12, 89, 23, 67, 91, 10, 34, 56, 78] using Python statistics.",
+      "exp_c_action": "python",
+      "exp_d_action": "python",
+      "exp_c_reason": "Found exact numerical target '50.5' in response.",
+      "exp_d_reason": "Failed numerical check; criteria match 0/1."
+    },
+    {
+      "id": "python_17",
+      "winner": "exp_d",
+      "category": "python_computation",
+      "prompt": "Sort the following list of strings alphabetically by their last character: ['banana', 'apple', 'cherry', 'fig', 'date'] using Python.",
+      "exp_c_action": "python",
+      "exp_d_action": "python",
+      "exp_c_reason": "Failed numerical check; criteria match 0/2.",
+      "exp_d_reason": "Matched 1/2 numerical criteria."
+    },
+    {
+      "id": "direct_07",
+      "winner": "exp_d",
+      "category": "direct_conceptual",
+      "prompt": "Explain the difference between concurrency and parallelism in computer science.",
+      "exp_c_action": null,
+      "exp_d_action": null,
+      "exp_c_reason": "Semantic mismatch: matched only 1/3 criteria.",
+      "exp_d_reason": "Matched 3/3 semantic criteria."
+    },
+    {
+      "id": "direct_11",
+      "winner": "exp_c",
+      "category": "direct_conceptual",
+      "prompt": "Hello! Can you briefly introduce yourself and what you are designed to do?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Matched 2/2 semantic criteria.",
+      "exp_d_reason": "Semantic mismatch: matched only 0/2 criteria."
+    },
+    {
+      "id": "direct_12",
+      "winner": "exp_d",
+      "category": "direct_conceptual",
+      "prompt": "How does binary search work and what is its worst-case time complexity?",
+      "exp_c_action": null,
+      "exp_d_action": null,
+      "exp_c_reason": "Semantic mismatch: matched only 0/3 criteria.",
+      "exp_d_reason": "Matched 3/3 semantic criteria."
+    },
+    {
+      "id": "direct_16",
+      "winner": "exp_c",
+      "category": "direct_conceptual",
+      "prompt": "What is information entropy as formulated by Claude Shannon?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Matched 2/3 semantic criteria.",
+      "exp_d_reason": "Semantic mismatch: matched only 0/3 criteria."
+    },
+    {
+      "id": "discrim_02",
+      "winner": "exp_d",
+      "category": "tool_discrimination",
+      "prompt": "Calculate the surface area of a sphere with radius 7.35 cm using Python.",
+      "exp_c_action": "python",
+      "exp_d_action": "python",
+      "exp_c_reason": "Semantic mismatch: matched only 0/2 criteria.",
+      "exp_d_reason": "Matched 1/2 semantic criteria."
+    },
+    {
+      "id": "discrim_04",
+      "winner": "exp_d",
+      "category": "tool_discrimination",
+      "prompt": "Define what statistical variance measures conceptually.",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 0/3 criteria.",
+      "exp_d_reason": "Matched 2/3 semantic criteria."
+    },
+    {
+      "id": "discrim_08",
+      "winner": "exp_c",
+      "category": "tool_discrimination",
+      "prompt": "Write and execute a Python script to check if the parentheses in '((a+b)*(c-[d/e]))' are properly balanced.",
+      "exp_c_action": null,
+      "exp_d_action": "python",
+      "exp_c_reason": "Matched 1/2 semantic criteria.",
+      "exp_d_reason": "Semantic mismatch: matched only 0/2 criteria."
+    },
+    {
+      "id": "discrim_09",
+      "winner": "exp_d",
+      "category": "tool_discrimination",
+      "prompt": "What is the stock ticker symbol for Alphabet Inc. Class A shares traded on Nasdaq?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 0/1 criteria.",
+      "exp_d_reason": "Matched 1/1 semantic criteria."
+    },
+    {
+      "id": "discrim_15",
+      "winner": "exp_d",
+      "category": "tool_discrimination",
+      "prompt": "Where and on what exact date did the Wright brothers make their historic first powered flight?",
+      "exp_c_action": null,
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 0/3 criteria.",
+      "exp_d_reason": "Matched 2/3 semantic criteria."
+    },
+    {
+      "id": "discrim_19",
+      "winner": "exp_d",
+      "category": "tool_discrimination",
+      "prompt": "Compute the binomial coefficient math.comb(28, 6) using Python.",
+      "exp_c_action": "python",
+      "exp_d_action": "python",
+      "exp_c_reason": "Semantic mismatch: matched only 0/2 criteria.",
+      "exp_d_reason": "Matched 1/2 semantic criteria."
+    },
+    {
+      "id": "multistep_05",
+      "winner": "exp_d",
+      "category": "multistep_web_python",
+      "prompt": "Look up the surface area of Earth and Mars in square kilometers, then calculate what percentage of Earth's area Mars covers using Python.",
+      "exp_c_action": "python",
+      "exp_d_action": "python",
+      "exp_c_reason": "Semantic mismatch: matched only 0/3 criteria.",
+      "exp_d_reason": "Matched 2/3 semantic criteria."
+    },
+    {
+      "id": "multistep_12",
+      "winner": "exp_d",
+      "category": "multistep_web_python",
+      "prompt": "Look up the battery capacity in usable kWh of the Tesla Model 3 Long Range (approx 75 kWh) and Hyundai Ioniq 5 Long Range (approx 77.4 kWh), then compute the difference in kWh using Python.",
+      "exp_c_action": "python",
+      "exp_d_action": "python",
+      "exp_c_reason": "Semantic mismatch: matched only 0/2 criteria.",
+      "exp_d_reason": "Matched 1/2 semantic criteria."
+    },
+    {
+      "id": "failure_03",
+      "winner": "exp_c",
+      "category": "tool_failure_recovery",
+      "prompt": "Search for the private intranet password of employee ID 9841249 on our internal corporate system.",
+      "exp_c_action": "python",
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Matched uncertainty criteria.",
+      "exp_d_reason": "Failed to express required uncertainty or acknowledgment."
+    },
+    {
+      "id": "failure_04",
+      "winner": "exp_d",
+      "category": "tool_failure_recovery",
+      "prompt": "Execute Python: `import non_existent_library_xyz123; print(non_existent_library_xyz123.solve())` and explain what happens.",
+      "exp_c_action": "python",
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Semantic mismatch: matched only 0/2 criteria.",
+      "exp_d_reason": "Matched 1/2 semantic criteria."
+    },
+    {
+      "id": "failure_05",
+      "winner": "exp_c",
+      "category": "tool_failure_recovery",
+      "prompt": "Look up the exact real-time temperature on Neptune's surface right now at 12:00 UTC.",
+      "exp_c_action": "python",
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Matched uncertainty criteria.",
+      "exp_d_reason": "Failed to express required uncertainty or acknowledgment."
+    },
+    {
+      "id": "failure_06",
+      "winner": "exp_d",
+      "category": "tool_failure_recovery",
+      "prompt": "Search the web for the private personal home cell phone number of Tim Cook.",
+      "exp_c_action": "python",
+      "exp_d_action": "web_research",
+      "exp_c_reason": "Failed to express required uncertainty or acknowledgment.",
+      "exp_d_reason": "Matched uncertainty criteria."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "curation_date": "2026-11-07",
+  "tokenizer_fingerprint": "be6c3d60c5baf217",
+  "tokenizer_path": "artifacts/tokenizer_16k_v2",
+  "max_context_length": 4096,
+  "sources": [
+    {
+      "source_id": "smoltalk",
+      "url": "https://huggingface.co/datasets/HuggingFaceTB/smoltalk",
+      "revision": "all",
+      "license": "Apache-2.0",
+      "category_contributions": ["multi_turn_dialogue", "general_instruction", "coding_python"],
+      "sample_count": 3500
+    },
+    {
+      "source_id": "ultrachat_200k",
+      "url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k",
+      "revision": "train_sft",
+      "license": "MIT",
+      "category_contributions": ["multi_turn_dialogue"],
+      "sample_count": 1500
+    },
+    {
+      "source_id": "synthetic_long_retrieval",
+      "url": "internal:modern_gpt/scripts/generate_retrieval_sft.py",
+      "revision": "seed_42_v1",
+      "license": "MIT (ModernGPT-S Internal)",
+      "category_contributions": ["long_context_retrieval"],
+      "sample_count": 1200
+    },
+    {
+      "source_id": "local_sft_v2_curated",
+      "url": "internal:modern_gpt/data/sft_v2_public/train.jsonl",
+      "revision": "v2_filtered",
+      "license": "Permissive Synthetic",
+      "category_contributions": ["coding_python", "general_instruction", "contextual_qa", "structured_json", "mathematics"],
+      "sample_count": 6500
+    }
+  ],
+  "benchmark_isolation": {
+    "160_task_transfer_leakage": "ZERO (midscale_500 completely excluded; fingerprint cross-checked)",
+    "step_4_passkey_leakage": "ZERO (distinct entities, keys, and document pools)"
+  }
+}
+

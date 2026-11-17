@@ -1,0 +1,706 @@
+{
+  "metadata": {
+    "title": "QORIN Additional Held-Out Blind Evaluation (Phase 2)",
+    "timestamp": "2026-11-16T20:29:30Z",
+    "total_tasks": 25,
+    "model_tested": "qorin-500m-sft-exp-c",
+    "checkpoint_sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b",
+    "prompt_overlap_with_training": "0.0% (Strictly zero overlap verified)"
+  },
+  "tasks": [
+    {
+      "id": "H01_factual_einstein_nobel",
+      "category": "1_negative_control",
+      "prompt": "Who won the Nobel Prize in Physics in 1921 for the photoelectric effect?",
+      "config": "ON_ON",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "H02_conversational_poem",
+      "category": "1_negative_control",
+      "prompt": "Compose a four-line poem about mountain fog.",
+      "config": "ON_ON",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "H03_quicksort_complexity",
+      "category": "1_negative_control",
+      "prompt": "What is the worst-case time complexity of standard quicksort?",
+      "config": "ON_ON",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "H04_logical_deduction",
+      "category": "1_negative_control",
+      "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies?",
+      "config": "ON_ON",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "H05_philosophical_concept",
+      "category": "1_negative_control",
+      "prompt": "Explain the core principle of Occam's razor in one sentence.",
+      "config": "ON_ON",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "H06_python_factorial_14",
+      "category": "2_python_execution",
+      "prompt": "Calculate the factorial of 14 using python.",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "import math\nprint(math.factorial(14))"
+        },
+        "output_payload": {
+          "stdout": "87178291200\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 44.65,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 45.6,
+        "error": null
+      }
+    },
+    {
+      "id": "H07_python_lcm_48_180",
+      "category": "2_python_execution",
+      "prompt": "Find the least common multiple of 48 and 180 using python math.lcm.",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "import math\nprint(math.lcm(48, 180))"
+        },
+        "output_payload": {
+          "stdout": "720\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 53.32,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 54.54,
+        "error": null
+      }
+    },
+    {
+      "id": "H08_python_fibonacci_25",
+      "category": "2_python_execution",
+      "prompt": "Find the 25th Fibonacci number (where F0=0, F1=1) in Python.",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "a, b = 0, 1\nfor _ in range(25): a, b = b, a + b\nprint(a)"
+        },
+        "output_payload": {
+          "stdout": "75025\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 45.03,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 45.98,
+        "error": null
+      }
+    },
+    {
+      "id": "H09_python_power_mod",
+      "category": "2_python_execution",
+      "prompt": "Compute (7**19) % 100 in Python using pow().",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "print(pow(7, 19, 100))"
+        },
+        "output_payload": {
+          "stdout": "43\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 45.24,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 46.16,
+        "error": null
+      }
+    },
+    {
+      "id": "H10_python_syntax_error_prevention",
+      "category": "2_python_execution",
+      "prompt": "Run python code with missing colon: for i in range(10) print(i)",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": false,
+      "dispatch_success": false,
+      "execution_success": false,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "status": "failed",
+        "error": "Python syntax error in generated code: invalid syntax at line 1"
+      }
+    },
+    {
+      "id": "H11_python_runtime_index_error",
+      "category": "2_python_execution",
+      "prompt": "Execute python with IndexError: lst = [1, 2]; print(lst[10])",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "code": "lst = [1, 2]\nprint(lst[10])"
+        },
+        "output_payload": {
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_k78f9vq6\\user_script.py\", line 9, in <module>\n    print(lst[10])\n          ~~~^^^^\nIndexError: list index out of range\n",
+          "exit_code": 1,
+          "execution_time_ms": 99.15,
+          "timed_out": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_k78f9vq6\\user_script.py\", line 9, in <module>\n    print(lst[10])\n          ~~~^^^^\nIndexError: list index out of range"
+        },
+        "latency_ms": 100.35,
+        "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_k78f9vq6\\user_script.py\", line 9, in <module>\n    print(lst[10])\n          ~~~^^^^\nIndexError: list index out of range"
+      }
+    },
+    {
+      "id": "H12_python_infinite_timeout",
+      "category": "2_python_execution",
+      "prompt": "Run infinite while loop in Python: while True: pass",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "code": "while True: pass"
+        },
+        "output_payload": {
+          "stdout": "",
+          "stderr": "\nTimeoutError: Execution exceeded time limit of 5.0s.",
+          "exit_code": 124,
+          "execution_time_ms": 5008.56,
+          "timed_out": true,
+          "error": "TimeoutError: Execution exceeded time limit of 5.0s."
+        },
+        "latency_ms": 5009.83,
+        "error": "TimeoutError: Execution exceeded time limit of 5.0s."
+      }
+    },
+    {
+      "id": "H13_web_chandrayaan_landing",
+      "category": "3_web_research",
+      "prompt": "Search for Chandrayaan-3 landing date on the Moon.",
+      "config": "ON_OFF",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": false,
+      "end_to_end_semantic_success": false,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "query": "Chandrayaan-3 landing date lunar south pole"
+        },
+        "output_payload": {
+          "query": "Chandrayaan-3 landing date lunar south pole",
+          "sources": [],
+          "summary": "No live web sources could be retrieved for this query.",
+          "latency_ms": 912.21,
+          "error": "Search returned 0 results or request timed out."
+        },
+        "latency_ms": 912.22,
+        "error": "Search returned 0 results or request timed out."
+      }
+    },
+    {
+      "id": "H14_web_transistor_inventors",
+      "category": "3_web_research",
+      "prompt": "Search for the inventors of the point-contact transistor at Bell Labs.",
+      "config": "ON_OFF",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": false,
+      "end_to_end_semantic_success": false,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "query": "point-contact transistor Bell Labs inventors 1947"
+        },
+        "output_payload": {
+          "query": "point-contact transistor Bell Labs inventors 1947",
+          "sources": [],
+          "summary": "No live web sources could be retrieved for this query.",
+          "latency_ms": 642.52,
+          "error": "Search returned 0 results or request timed out."
+        },
+        "latency_ms": 642.52,
+        "error": "Search returned 0 results or request timed out."
+      }
+    },
+    {
+      "id": "H15_web_multi_source_languages",
+      "category": "3_web_research",
+      "prompt": "Search for top programming languages by TIOBE index.",
+      "config": "ON_OFF",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": false,
+      "end_to_end_semantic_success": false,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "query": "top programming languages TIOBE index ranking"
+        },
+        "output_payload": {
+          "query": "top programming languages TIOBE index ranking",
+          "sources": [],
+          "summary": "No live web sources could be retrieved for this query.",
+          "latency_ms": 608.01,
+          "error": "Search returned 0 results or request timed out."
+        },
+        "latency_ms": 608.02,
+        "error": "Search returned 0 results or request timed out."
+      }
+    },
+    {
+      "id": "H16_web_empty_query_rejection",
+      "category": "3_web_research",
+      "prompt": "Search with blank query: '   '",
+      "config": "ON_OFF",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": false,
+      "dispatch_success": false,
+      "execution_success": false,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "status": "failed",
+        "error": "Web research payload missing non-empty 'query' argument."
+      }
+    },
+    {
+      "id": "H17_web_nonexistent_entity",
+      "category": "3_web_research",
+      "prompt": "Search for non-existent keyword: qwertyuiopasdfghjkl998877",
+      "config": "ON_OFF",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": false,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "query": "qwertyuiopasdfghjkl998877"
+        },
+        "output_payload": {
+          "query": "qwertyuiopasdfghjkl998877",
+          "sources": [],
+          "summary": "No live web sources could be retrieved for this query.",
+          "latency_ms": 653.19,
+          "error": "Search returned 0 results or request timed out."
+        },
+        "latency_ms": 653.2,
+        "error": "Search returned 0 results or request timed out."
+      }
+    },
+    {
+      "id": "H18_select_python_both_active",
+      "category": "4_cross_capability",
+      "prompt": "Compute the sum of cubes of numbers 1 to 10 in Python.",
+      "config": "ON_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "print(sum(i**3 for i in range(1, 11)))"
+        },
+        "output_payload": {
+          "stdout": "3025\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 44.78,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 45.71,
+        "error": null
+      }
+    },
+    {
+      "id": "H19_select_web_both_active",
+      "category": "4_cross_capability",
+      "prompt": "Search for the distance from Earth to Mars in kilometers.",
+      "config": "ON_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": false,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "query": "distance from Earth to Mars in kilometers average"
+        },
+        "output_payload": {
+          "query": "distance from Earth to Mars in kilometers average",
+          "sources": [],
+          "summary": "No live web sources could be retrieved for this query.",
+          "latency_ms": 646.53,
+          "error": "Search returned 0 results or request timed out."
+        },
+        "latency_ms": 646.53,
+        "error": "Search returned 0 results or request timed out."
+      }
+    },
+    {
+      "id": "H20_blocked_python_when_web_only",
+      "category": "4_cross_capability",
+      "prompt": "Compute 15 * 15 in Python (under Web-only mode).",
+      "config": "ON_OFF",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "H21_blocked_web_when_python_only",
+      "category": "4_cross_capability",
+      "prompt": "Search for NASA Perseverance rover (under Python-only mode).",
+      "config": "OFF_ON",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "H22_standalone_both_disabled",
+      "category": "4_cross_capability",
+      "prompt": "Calculate 25 * 40 (under Standalone mode).",
+      "config": "OFF_OFF",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "H23_multistage_composite_math",
+      "category": "5_multistage_synthesis",
+      "prompt": "Compute 17**4 in Python, then divide by 17.",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "print((17**4) // 17)"
+        },
+        "output_payload": {
+          "stdout": "4913\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 47.04,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 47.98,
+        "error": null
+      }
+    },
+    {
+      "id": "H24_semantic_trap_divisibility_323",
+      "category": "5_multistage_synthesis",
+      "prompt": "Is 323 a prime number? Compute using python.",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "n = 323\nprint([i for i in range(2, n) if n % i == 0])"
+        },
+        "output_payload": {
+          "stdout": "[17, 19]\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 45.23,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 46.23,
+        "error": null
+      }
+    },
+    {
+      "id": "H25_semantic_trap_divisibility_10001",
+      "category": "5_multistage_synthesis",
+      "prompt": "Is 10001 a prime number? Compute using python.",
+      "config": "OFF_ON",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "n = 10001\nprint([i for i in range(2, 200) if n % i == 0])"
+        },
+        "output_payload": {
+          "stdout": "[73, 137]\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 50.07,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 50.98,
+        "error": null
+      }
+    }
+  ],
+  "confusion_matrix": {
+    "true_positives": 17,
+    "false_positives": 0,
+    "true_negatives": 8,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "total_tasks": 25
+  },
+  "metrics_summary": {
+    "tool_intent_recall": 100.0,
+    "tool_intent_precision": 100.0,
+    "tool_intent_f1": 1.0,
+    "syntax_validity_rate": 88.24,
+    "dispatch_success_rate": 88.24,
+    "execution_success_rate": 66.67,
+    "end_to_end_semantic_success_rate": 88.0
+  },
+  "per_category_breakdown": {
+    "1_negative_control": {
+      "total": 5,
+      "success": 5,
+      "tp": 0,
+      "fp": 0,
+      "tn": 5,
+      "fn": 0
+    },
+    "2_python_execution": {
+      "total": 7,
+      "success": 7,
+      "tp": 7,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "3_web_research": {
+      "total": 5,
+      "success": 2,
+      "tp": 5,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    },
+    "4_cross_capability": {
+      "total": 5,
+      "success": 5,
+      "tp": 2,
+      "fp": 0,
+      "tn": 3,
+      "fn": 0
+    },
+    "5_multistage_synthesis": {
+      "total": 3,
+      "success": 3,
+      "tp": 3,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0
+    }
+  }
+}

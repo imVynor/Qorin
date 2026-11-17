@@ -1,0 +1,45 @@
+{
+  "branch": "branch_d_combined",
+  "stop_reason": "Early stopping triggered: 5 consecutive evaluations without improvement (Best: Step 25 @ 1.2546)",
+  "total_updates": 150,
+  "planned_updates": 200,
+  "best_step": 25,
+  "best_val_loss": 1.2546,
+  "step200_val_loss": 1.337,
+  "total_tokens_processed": 89606,
+  "total_target_tokens_processed": 28518,
+  "wall_clock_seconds": 546.69,
+  "active_gpu_seconds": 414.05,
+  "val_loss_history": [
+    [
+      0,
+      2.1071
+    ],
+    [
+      25,
+      1.2546
+    ],
+    [
+      50,
+      1.285
+    ],
+    [
+      75,
+      1.2841
+    ],
+    [
+      100,
+      1.3112
+    ],
+    [
+      125,
+      1.3108
+    ],
+    [
+      150,
+      1.337
+    ]
+  ],
+  "best_checkpoint_sha256": "7322b9aee559945c32f02f59835e7143534c3982178b5aacf4b31470934f9dcc",
+  "step200_checkpoint_sha256": "78f8ca6b8c8e08471805c03d60a61884dc10e676eeb0f20a4c668e4fc0068eb8"
+}

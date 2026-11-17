@@ -1,0 +1,130 @@
+{
+  "stage": "Stage 12: Stateful Harness and Retrieval Infrastructure Repair",
+  "historical_accounting_reconciliation": {
+    "total_attempted_tool_calls": 603,
+    "pre_dispatch_schema_failures": 61,
+    "total_dispatched_tool_calls": 542,
+    "successfully_executed_calls": 130,
+    "post_dispatch_execution_failures": 412,
+    "post_dispatch_breakdown": {
+      "web_retrieval_failures": {
+        "count": 331,
+        "percentage_of_post_dispatch": 80.34,
+        "root_causes": {
+          "duckduckgo_timeout_4s": 247,
+          "http_429_rate_limiting": 68,
+          "html_parsing_extraction": 16
+        }
+      },
+      "python_sandbox_failures": {
+        "count": 81,
+        "percentage_of_post_dispatch": 19.66,
+        "root_causes": {
+          "unsupported_hallucinated_standard_lib": 44,
+          "syntax_and_indentation_errors": 19,
+          "name_error_unbound_variable": 11,
+          "zero_division_math_domain_error": 7
+        }
+      }
+    },
+    "checkpoint_breakdown": {
+      "exp_d_parent": {
+        "total_attempts": 132,
+        "pre_dispatch_schema_failures": 9,
+        "dispatched_calls": 123,
+        "successful_executions": 29,
+        "post_dispatch_failures": 94,
+        "web_failures": 79,
+        "python_failures": 15
+      },
+      "branch_b_best": {
+        "total_attempts": 111,
+        "pre_dispatch_schema_failures": 10,
+        "dispatched_calls": 101,
+        "successful_executions": 36,
+        "post_dispatch_failures": 65,
+        "web_failures": 51,
+        "python_failures": 14
+      },
+      "branch_c_best": {
+        "total_attempts": 121,
+        "pre_dispatch_schema_failures": 16,
+        "dispatched_calls": 105,
+        "successful_executions": 16,
+        "post_dispatch_failures": 89,
+        "web_failures": 75,
+        "python_failures": 14
+      },
+      "branch_d_best": {
+        "total_attempts": 126,
+        "pre_dispatch_schema_failures": 8,
+        "dispatched_calls": 118,
+        "successful_executions": 27,
+        "post_dispatch_failures": 91,
+        "web_failures": 70,
+        "python_failures": 21
+      },
+      "branch_d_terminal": {
+        "total_attempts": 113,
+        "pre_dispatch_schema_failures": 18,
+        "dispatched_calls": 95,
+        "successful_executions": 22,
+        "post_dispatch_failures": 73,
+        "web_failures": 56,
+        "python_failures": 17
+      }
+    },
+    "stage_11_prose_reconciliation_note": "Stage 11 narrative reported 120 successful executions, 8 schema failures, and 414 execution failures. This resulted from transcribing Branch D Best's isolated schema count (8) instead of the multi-model aggregate (61) and a 10-count typo on successful calls (120 vs actual 130). When verified against the raw JSON manifests, 603 attempts = 61 schema failures + 542 dispatched; 542 dispatched = 130 successful + 412 post-dispatch failures (331 web + 81 python)."
+  },
+  "infrastructure_unit_integration_test_summary": {
+    "total_tests": 14,
+    "tests_passed": 14,
+    "tests_failed": 0,
+    "tests_errored": 0,
+    "pass_rate": 1.0,
+    "total_duration_seconds": 1.306,
+    "subsystems_validated": [
+      "MultiTurnStateMachine (Direct, Single-Turn Web, Multi-Turn Web->Python Chaining, Schema Retry, Call Limits)",
+      "RetrievalInfrastructure (Mock Provider, SQLite Cache Hit/Miss, Empty Query Handling)",
+      "PythonExecutionContract (Safe Math, Security Violations, Syntax Errors, Timeout, Unsupported APIs, Zero Division)"
+    ]
+  },
+  "model_capability_evaluation_summary": {
+    "evaluation_dataset": "15 held-out multi-step web_research -> python tasks",
+    "checkpoints_evaluated": [
+      {
+        "model_tag": "branch_d_terminal",
+        "checkpoint": "ckpt_branch_d_step200.pt",
+        "total_tasks": 15,
+        "turn1_tool_distribution": {
+          "web": 0,
+          "python": 12,
+          "direct": 1
+        },
+        "web_turn1_count": 2,
+        "python_turn1_count": 12,
+        "python_turn2_count": 1,
+        "full_chain_completion_rate": 0.0,
+        "semantic_pass_rate": 0.0667,
+        "primary_failure_mode": "Premature Turn 1 Python invocation (80%) and termination at Observation 1 without Turn 2 chaining (13.3%)"
+      },
+      {
+        "model_tag": "exp_d_parent",
+        "checkpoint": "ckpt_experiment_d_best.pt",
+        "total_tasks": 15,
+        "turn1_tool_distribution": {
+          "web": 0,
+          "python": 15,
+          "direct": 0
+        },
+        "web_turn1_count": 0,
+        "python_turn1_count": 15,
+        "python_turn2_count": 1,
+        "full_chain_completion_rate": 0.0,
+        "semantic_pass_rate": 0.0,
+        "primary_failure_mode": "100% premature Turn 1 Python invocation due to calculation keywords"
+      }
+    ],
+    "harness_vs_model_disentanglement": "Harness infrastructure successfully executed 100% of multi-turn chaining tests. Models achieved 0% full chain completion due to single-turn training data bias."
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "step_08d_log_summary": {
+    "total_records": 11982,
+    "total_optimizer_steps": 11982,
+    "initial_loss": 2.1951,
+    "final_loss": 0.4186,
+    "min_loss": 0.0047,
+    "min_loss_step": 5304,
+    "max_loss": 2.6949,
+    "avg_loss": 0.4517,
+    "peak_lr": 5e-05,
+    "final_lr": 5.000000779876396e-06,
+    "avg_grad_norm": 2.3887,
+    "max_grad_norm": 19.375,
+    "avg_vram_mb": 628.7,
+    "epochs": {
+      "epoch_1": {
+        "steps": 3994,
+        "start_step": 1,
+        "end_step": 3994,
+        "initial_loss": 2.1951,
+        "final_loss": 0.5424,
+        "min_loss": 0.0049,
+        "max_loss": 2.6949,
+        "avg_loss": 0.5352,
+        "avg_grad_norm": 2.7455,
+        "max_grad_norm": 14.25
+      },
+      "epoch_2": {
+        "steps": 3994,
+        "start_step": 3995,
+        "end_step": 7988,
+        "initial_loss": 0.3359,
+        "final_loss": 0.3736,
+        "min_loss": 0.0047,
+        "max_loss": 1.6276,
+        "avg_loss": 0.4245,
+        "avg_grad_norm": 2.2655,
+        "max_grad_norm": 19.375
+      },
+      "epoch_3": {
+        "steps": 3994,
+        "start_step": 7989,
+        "end_step": 11982,
+        "initial_loss": 0.3884,
+        "final_loss": 0.4186,
+        "min_loss": 0.0072,
+        "max_loss": 1.3538,
+        "avg_loss": 0.3953,
+        "avg_grad_norm": 2.155,
+        "max_grad_norm": 9.9375
+      }
+    }
+  },
+  "step_07b_log_summary": {
+    "total_records": 8507,
+    "total_optimizer_steps": 8118,
+    "initial_loss": 1.7254,
+    "final_loss": 0.5063,
+    "min_loss": 0.0002,
+    "min_loss_step": 2707,
+    "max_loss": 2.442,
+    "avg_loss": 0.7678,
+    "peak_lr": 5e-05,
+    "final_lr": 5.000001705770045e-06,
+    "avg_grad_norm": 3.0166,
+    "max_grad_norm": 20.5,
+    "avg_vram_mb": 623.0,
+    "epochs": {
+      "epoch_1": {
+        "steps": 3095,
+        "start_step": 1,
+        "end_step": 2706,
+        "initial_loss": 1.7254,
+        "final_loss": 0.7254,
+        "min_loss": 0.0483,
+        "max_loss": 2.442,
+        "avg_loss": 0.8809,
+        "avg_grad_norm": 3.4787,
+        "max_grad_norm": 20.5
+      },
+      "epoch_2": {
+        "steps": 2707,
+        "start_step": 2707,
+        "end_step": 5413,
+        "initial_loss": 0.0002,
+        "final_loss": 0.3298,
+        "min_loss": 0.0002,
+        "max_loss": 1.7648,
+        "avg_loss": 0.7233,
+        "avg_grad_norm": 2.8041,
+        "max_grad_norm": 6.9375
+      },
+      "epoch_3": {
+        "steps": 2705,
+        "start_step": 5414,
+        "end_step": 8118,
+        "initial_loss": 0.2549,
+        "final_loss": 0.5063,
+        "min_loss": 0.0117,
+        "max_loss": 1.8218,
+        "avg_loss": 0.683,
+        "avg_grad_norm": 2.7005,
+        "max_grad_norm": 7.9062
+      }
+    }
+  },
+  "masking_verification": [
+    {
+      "test_idx": 0,
+      "total_tokens": 74,
+      "supervised_tokens": 15,
+      "first_15_labels": [
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100
+      ],
+      "last_10_labels": [
+        14,
+        28,
+        92,
+        310,
+        63,
+        490,
+        92,
+        30,
+        199,
+        0
+      ],
+      "contains_masked_system": true,
+      "eos_supervised": true
+    },
+    {
+      "test_idx": 1,
+      "total_tokens": 126,
+      "supervised_tokens": 34,
+      "first_15_labels": [
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100
+      ],
+      "last_10_labels": [
+        1,
+        28,
+        92,
+        310,
+        63,
+        490,
+        92,
+        30,
+        199,
+        0
+      ],
+      "contains_masked_system": true,
+      "eos_supervised": true
+    },
+    {
+      "test_idx": 2,
+      "total_tokens": 77,
+      "supervised_tokens": 11,
+      "first_15_labels": [
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100,
+        -100
+      ],
+      "last_10_labels": [
+        410,
+        28,
+        92,
+        310,
+        63,
+        490,
+        92,
+        30,
+        199,
+        0
+      ],
+      "contains_masked_system": true,
+      "eos_supervised": true
+    }
+  ]
+}

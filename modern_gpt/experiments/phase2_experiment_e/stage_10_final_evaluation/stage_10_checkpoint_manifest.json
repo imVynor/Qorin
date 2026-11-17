@@ -1,0 +1,71 @@
+{
+  "manifest_version": "1.0.0",
+  "audit_stage": "Stage 10: Final Comparative Evaluation & Forensic Audit",
+  "timestamp": "2026-11-17T11:25:00+05:30",
+  "checkpoints": {
+    "exp_d_parent": {
+      "tag": "exp_d_parent",
+      "model_name": "Experiment D Parent",
+      "path": "modern_gpt/experiments/phase2_experiment_d/stage_3_training/checkpoints/ckpt_experiment_d_best.pt",
+      "sha256": "c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7",
+      "optimizer_step": 425,
+      "validation_loss": 0.8412,
+      "parent_sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b",
+      "description": "Authoritative frozen baseline checkpoint from Experiment D Stage 3 training (Step 425)",
+      "is_immutable": true
+    },
+    "branch_b_best": {
+      "tag": "branch_b_best",
+      "model_name": "Branch B Best (Calibration)",
+      "path": "modern_gpt/experiments/phase2_experiment_e/stage_3_training/branch_b_calibration/checkpoints/ckpt_branch_best.pt",
+      "sha256": "beec486831406acf3a6ac315cc188a1f2f97a5c978361ddfa7727d69a39436f6",
+      "optimizer_step": 25,
+      "validation_loss": 0.7298,
+      "parent_sha256": "c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7",
+      "description": "Decision Calibration single-intervention branch; trained on Corpus 1; early stopped at Step 125; best checkpoint at Step 25",
+      "is_immutable": true
+    },
+    "branch_c_best": {
+      "tag": "branch_c_best",
+      "model_name": "Branch C Best (Synthesis)",
+      "path": "modern_gpt/experiments/phase2_experiment_e/stage_3_training/branch_c_synthesis/checkpoints/ckpt_branch_best.pt",
+      "sha256": "e1ae15ca223a30ecc7a3b56b54062244ff7a2e58e969dad86e64124065a45e0e",
+      "optimizer_step": 25,
+      "validation_loss": 2.1631,
+      "parent_sha256": "c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7",
+      "description": "Evidence-Grounded Synthesis single-intervention branch; trained on Corpus 2; early stopped at Step 75; best checkpoint at Step 25",
+      "is_immutable": true
+    },
+    "branch_d_best": {
+      "tag": "branch_d_best",
+      "model_name": "Branch D Best (Combined Multi-Task)",
+      "path": "modern_gpt/experiments/phase2_experiment_e/stage_3_training/branch_d_combined/checkpoints/ckpt_branch_d_best.pt",
+      "sha256": "7322b9aee559945c32f02f59835e7143534c3982178b5aacf4b31470934f9dcc",
+      "optimizer_step": 25,
+      "validation_loss": 1.2546,
+      "component_losses": {
+        "calibration": 0.7725,
+        "synthesis": 1.9556
+      },
+      "parent_sha256": "c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7",
+      "description": "Combined Multi-Task SFT (alpha=0.5 calibration, alpha=0.5 synthesis); best checkpoint at Step 25",
+      "is_immutable": true
+    },
+    "branch_d_terminal": {
+      "tag": "branch_d_terminal",
+      "model_name": "Branch D Terminal Gate (Step 150)",
+      "path": "modern_gpt/experiments/phase2_experiment_e/stage_3_training/branch_d_combined/checkpoints/ckpt_branch_d_step200.pt",
+      "sha256": "78f8ca6b8c8e08471805c03d60a61884dc10e676eeb0f20a4c668e4fc0068eb8",
+      "optimizer_step": 150,
+      "validation_loss": 1.3370,
+      "component_losses": {
+        "calibration": 0.8687,
+        "synthesis": 2.0831
+      },
+      "parent_sha256": "c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7",
+      "description": "Terminal state of Branch D training; halted at Step 150 by 5-eval plateau early-stopping safeguard; preserved under filename ckpt_branch_d_step200.pt",
+      "reconciliation_notes": "Filename contains 'step200' per original Stage 9 milestone allocation, but model weights represent exact Step 150 early-stopped state. Preserved without renaming to guarantee hash and manifest integrity.",
+      "is_immutable": true
+    }
+  }
+}

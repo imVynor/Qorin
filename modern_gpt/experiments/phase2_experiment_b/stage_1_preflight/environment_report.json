@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-11-15T18:32:25Z",
+  "python_version": "3.12.13 (main, Jun 23 2026, 15:23:43) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pytorch_version": "2.16.0.dev20261022+cu134",
+  "cuda_available": true,
+  "cuda_version": "13.4",
+  "gpu_device_name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "gpu_total_vram_mb": 8123.4,
+  "checkpoint_path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\checkpoints\\500m_pretrain\\ckpt_latest.pt",
+  "tokenizer_path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\artifacts\\tokenizer_32k\\tokenizer.json"
+}

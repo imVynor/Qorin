@@ -1,0 +1,13 @@
+{
+  "name": "bpe_32k_candidate",
+  "target_vocab_size": 32768,
+  "actual_vocab_size": 32768,
+  "training_duration_seconds": 5.092,
+  "fingerprint": "a1274e6fd57b5b63",
+  "special_tokens": {
+    "eos_id": 0,
+    "unk_id": null,
+    "bos_id": null,
+    "pad_id": null
+  }
+}

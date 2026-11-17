@@ -1,0 +1,777 @@
+event: retrieval
+data: {"triggered": false, "mode": "auto", "decision_reason": "Query did not match technical knowledge base routing threshold.", "query": "Search the web for: Elon Musk", "retrieved_chunks": [], "injected_context": "", "retrieval_latency_ms": 0.02}
+
+event: token
+data: {"text": "To", "is_finished": false, "token_count": 1, "ttft_ms": 132.3, "tok_per_sec": 7.6, "elapsed_ms": 132.4}
+
+event: token
+data: {"text": " find", "is_finished": false, "token_count": 2, "ttft_ms": 132.3, "tok_per_sec": 11.8, "elapsed_ms": 169.3}
+
+event: token
+data: {"text": " El", "is_finished": false, "token_count": 3, "ttft_ms": 132.3, "tok_per_sec": 16.4, "elapsed_ms": 183.2}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 4, "ttft_ms": 132.3, "tok_per_sec": 20.3, "elapsed_ms": 196.9}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 5, "ttft_ms": 132.3, "tok_per_sec": 23.7, "elapsed_ms": 211.3}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 6, "ttft_ms": 132.3, "tok_per_sec": 26.6, "elapsed_ms": 225.2}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 7, "ttft_ms": 132.3, "tok_per_sec": 29.2, "elapsed_ms": 239.3}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 8, "ttft_ms": 132.3, "tok_per_sec": 31.6, "elapsed_ms": 253.4}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 9, "ttft_ms": 132.3, "tok_per_sec": 33.6, "elapsed_ms": 267.6}
+
+event: token
+data: {"text": ",", "is_finished": false, "token_count": 10, "ttft_ms": 132.3, "tok_per_sec": 35.5, "elapsed_ms": 282.0}
+
+event: token
+data: {"text": " click", "is_finished": false, "token_count": 11, "ttft_ms": 132.3, "tok_per_sec": 37.1, "elapsed_ms": 296.6}
+
+event: token
+data: {"text": " on", "is_finished": false, "token_count": 12, "ttft_ms": 132.3, "tok_per_sec": 38.6, "elapsed_ms": 311.0}
+
+event: token
+data: {"text": " the", "is_finished": false, "token_count": 13, "ttft_ms": 132.3, "tok_per_sec": 39.9, "elapsed_ms": 325.5}
+
+event: token
+data: {"text": " \"", "is_finished": false, "token_count": 14, "ttft_ms": 132.3, "tok_per_sec": 41.2, "elapsed_ms": 340.0}
+
+event: token
+data: {"text": "Search", "is_finished": false, "token_count": 15, "ttft_ms": 132.3, "tok_per_sec": 42.3, "elapsed_ms": 354.7}
+
+event: token
+data: {"text": "\"", "is_finished": false, "token_count": 16, "ttft_ms": 132.3, "tok_per_sec": 43.3, "elapsed_ms": 369.3}
+
+event: token
+data: {"text": " button", "is_finished": false, "token_count": 17, "ttft_ms": 132.3, "tok_per_sec": 44.3, "elapsed_ms": 383.9}
+
+event: token
+data: {"text": " at", "is_finished": false, "token_count": 18, "ttft_ms": 132.3, "tok_per_sec": 45.1, "elapsed_ms": 398.7}
+
+event: token
+data: {"text": " the", "is_finished": false, "token_count": 19, "ttft_ms": 132.3, "tok_per_sec": 45.8, "elapsed_ms": 415.1}
+
+event: token
+data: {"text": " top", "is_finished": false, "token_count": 20, "ttft_ms": 132.3, "tok_per_sec": 46.5, "elapsed_ms": 430.2}
+
+event: token
+data: {"text": " of", "is_finished": false, "token_count": 21, "ttft_ms": 132.3, "tok_per_sec": 47.1, "elapsed_ms": 445.6}
+
+event: token
+data: {"text": " your", "is_finished": false, "token_count": 22, "ttft_ms": 132.3, "tok_per_sec": 47.7, "elapsed_ms": 461.0}
+
+event: token
+data: {"text": " screen", "is_finished": false, "token_count": 23, "ttft_ms": 132.3, "tok_per_sec": 48.3, "elapsed_ms": 476.7}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 24, "ttft_ms": 132.3, "tok_per_sec": 48.7, "elapsed_ms": 492.4}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 25, "ttft_ms": 132.3, "tok_per_sec": 49.3, "elapsed_ms": 507.6}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 26, "ttft_ms": 132.3, "tok_per_sec": 49.7, "elapsed_ms": 523.3}
+
+event: token
+data: {"text": "You", "is_finished": false, "token_count": 27, "ttft_ms": 132.3, "tok_per_sec": 50.1, "elapsed_ms": 538.9}
+
+event: token
+data: {"text": "'ll", "is_finished": false, "token_count": 28, "ttft_ms": 132.3, "tok_per_sec": 50.5, "elapsed_ms": 554.9}
+
+event: token
+data: {"text": " be", "is_finished": false, "token_count": 29, "ttft_ms": 132.3, "tok_per_sec": 50.8, "elapsed_ms": 570.4}
+
+event: token
+data: {"text": " asked", "is_finished": false, "token_count": 30, "ttft_ms": 132.3, "tok_per_sec": 51.2, "elapsed_ms": 586.2}
+
+event: token
+data: {"text": " to", "is_finished": false, "token_count": 31, "ttft_ms": 132.3, "tok_per_sec": 51.5, "elapsed_ms": 601.6}
+
+event: token
+data: {"text": " fill", "is_finished": false, "token_count": 32, "ttft_ms": 132.3, "tok_per_sec": 51.8, "elapsed_ms": 617.5}
+
+event: token
+data: {"text": " out", "is_finished": false, "token_count": 33, "ttft_ms": 132.3, "tok_per_sec": 52.1, "elapsed_ms": 633.3}
+
+event: token
+data: {"text": " a", "is_finished": false, "token_count": 34, "ttft_ms": 132.3, "tok_per_sec": 52.3, "elapsed_ms": 649.9}
+
+event: token
+data: {"text": " search", "is_finished": false, "token_count": 35, "ttft_ms": 132.3, "tok_per_sec": 52.5, "elapsed_ms": 666.1}
+
+event: token
+data: {"text": " form", "is_finished": false, "token_count": 36, "ttft_ms": 132.3, "tok_per_sec": 52.6, "elapsed_ms": 684.1}
+
+event: token
+data: {"text": " with", "is_finished": false, "token_count": 37, "ttft_ms": 132.3, "tok_per_sec": 52.8, "elapsed_ms": 700.2}
+
+event: token
+data: {"text": " relevant", "is_finished": false, "token_count": 38, "ttft_ms": 132.3, "tok_per_sec": 53.1, "elapsed_ms": 715.7}
+
+event: token
+data: {"text": " keywords", "is_finished": false, "token_count": 39, "ttft_ms": 132.3, "tok_per_sec": 53.3, "elapsed_ms": 731.2}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 40, "ttft_ms": 132.3, "tok_per_sec": 53.5, "elapsed_ms": 747.0}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 41, "ttft_ms": 132.3, "tok_per_sec": 53.8, "elapsed_ms": 762.3}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 42, "ttft_ms": 132.3, "tok_per_sec": 54.0, "elapsed_ms": 778.4}
+
+event: token
+data: {"text": "Here", "is_finished": false, "token_count": 43, "ttft_ms": 132.3, "tok_per_sec": 54.1, "elapsed_ms": 794.2}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 44, "ttft_ms": 132.3, "tok_per_sec": 54.4, "elapsed_ms": 809.4}
+
+event: token
+data: {"text": " the", "is_finished": false, "token_count": 45, "ttft_ms": 132.3, "tok_per_sec": 54.5, "elapsed_ms": 825.2}
+
+event: token
+data: {"text": " results", "is_finished": false, "token_count": 46, "ttft_ms": 132.3, "tok_per_sec": 54.7, "elapsed_ms": 840.9}
+
+event: token
+data: {"text": ":", "is_finished": false, "token_count": 47, "ttft_ms": 132.3, "tok_per_sec": 54.9, "elapsed_ms": 856.7}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 48, "ttft_ms": 132.3, "tok_per_sec": 55.0, "elapsed_ms": 872.8}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 49, "ttft_ms": 132.3, "tok_per_sec": 55.1, "elapsed_ms": 888.8}
+
+event: token
+data: {"text": "1", "is_finished": false, "token_count": 50, "ttft_ms": 132.3, "tok_per_sec": 55.3, "elapsed_ms": 904.6}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 51, "ttft_ms": 132.3, "tok_per_sec": 55.4, "elapsed_ms": 920.7}
+
+event: token
+data: {"text": " **", "is_finished": false, "token_count": 52, "ttft_ms": 132.3, "tok_per_sec": 55.5, "elapsed_ms": 936.9}
+
+event: token
+data: {"text": "El", "is_finished": false, "token_count": 53, "ttft_ms": 132.3, "tok_per_sec": 55.6, "elapsed_ms": 953.7}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 54, "ttft_ms": 132.3, "tok_per_sec": 55.7, "elapsed_ms": 970.3}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 55, "ttft_ms": 132.3, "tok_per_sec": 55.7, "elapsed_ms": 986.9}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 56, "ttft_ms": 132.3, "tok_per_sec": 55.8, "elapsed_ms": 1003.6}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 57, "ttft_ms": 132.3, "tok_per_sec": 55.9, "elapsed_ms": 1020.3}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 58, "ttft_ms": 132.3, "tok_per_sec": 55.9, "elapsed_ms": 1036.8}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 59, "ttft_ms": 132.3, "tok_per_sec": 56.0, "elapsed_ms": 1054.0}
+
+event: token
+data: {"text": "**:", "is_finished": false, "token_count": 60, "ttft_ms": 132.3, "tok_per_sec": 56.0, "elapsed_ms": 1070.9}
+
+event: token
+data: {"text": " \n", "is_finished": false, "token_count": 61, "ttft_ms": 132.3, "tok_per_sec": 56.0, "elapsed_ms": 1088.9}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 62, "ttft_ms": 132.3, "tok_per_sec": 56.0, "elapsed_ms": 1106.3}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 63, "ttft_ms": 132.3, "tok_per_sec": 56.1, "elapsed_ms": 1123.7}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 64, "ttft_ms": 132.3, "tok_per_sec": 55.9, "elapsed_ms": 1144.0}
+
+event: token
+data: {"text": " La", "is_finished": false, "token_count": 65, "ttft_ms": 132.3, "tok_per_sec": 56.0, "elapsed_ms": 1161.2}
+
+event: token
+data: {"text": "an", "is_finished": false, "token_count": 66, "ttft_ms": 132.3, "tok_per_sec": 56.0, "elapsed_ms": 1177.9}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 67, "ttft_ms": 132.3, "tok_per_sec": 56.1, "elapsed_ms": 1195.1}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 68, "ttft_ms": 132.3, "tok_per_sec": 56.0, "elapsed_ms": 1213.4}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 69, "ttft_ms": 132.3, "tok_per_sec": 56.1, "elapsed_ms": 1230.3}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 70, "ttft_ms": 132.3, "tok_per_sec": 56.1, "elapsed_ms": 1247.5}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 71, "ttft_ms": 132.3, "tok_per_sec": 56.2, "elapsed_ms": 1264.2}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 72, "ttft_ms": 132.3, "tok_per_sec": 56.2, "elapsed_ms": 1281.1}
+
+event: token
+data: {"text": " ", "is_finished": false, "token_count": 73, "ttft_ms": 132.3, "tok_per_sec": 56.2, "elapsed_ms": 1298.3}
+
+event: token
+data: {"text": "\n  ", "is_finished": false, "token_count": 74, "ttft_ms": 132.3, "tok_per_sec": 56.3, "elapsed_ms": 1315.3}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 75, "ttft_ms": 132.3, "tok_per_sec": 56.3, "elapsed_ms": 1332.4}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 76, "ttft_ms": 132.3, "tok_per_sec": 56.3, "elapsed_ms": 1349.8}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 77, "ttft_ms": 132.3, "tok_per_sec": 56.3, "elapsed_ms": 1366.9}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 78, "ttft_ms": 132.3, "tok_per_sec": 56.3, "elapsed_ms": 1384.2}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 79, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 1401.7}
+
+event: token
+data: {"text": " El", "is_finished": false, "token_count": 80, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 1418.9}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 81, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 1436.0}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 82, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 1453.1}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 83, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 1470.9}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 84, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 1488.3}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 85, "ttft_ms": 132.3, "tok_per_sec": 56.5, "elapsed_ms": 1505.2}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 86, "ttft_ms": 132.3, "tok_per_sec": 56.5, "elapsed_ms": 1522.0}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 87, "ttft_ms": 132.3, "tok_per_sec": 56.5, "elapsed_ms": 1538.6}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 88, "ttft_ms": 132.3, "tok_per_sec": 56.6, "elapsed_ms": 1555.7}
+
+event: token
+data: {"text": "2", "is_finished": false, "token_count": 89, "ttft_ms": 132.3, "tok_per_sec": 56.6, "elapsed_ms": 1572.8}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 90, "ttft_ms": 132.3, "tok_per_sec": 56.6, "elapsed_ms": 1590.0}
+
+event: token
+data: {"text": " **", "is_finished": false, "token_count": 91, "ttft_ms": 132.3, "tok_per_sec": 56.6, "elapsed_ms": 1606.7}
+
+event: token
+data: {"text": "El", "is_finished": false, "token_count": 92, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 1623.4}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 93, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 1640.2}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 94, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 1658.6}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 95, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 1676.2}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 96, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 1694.0}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 97, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 1711.1}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 98, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 1728.6}
+
+event: token
+data: {"text": "**:", "is_finished": false, "token_count": 99, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 1745.8}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 100, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 1762.9}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 101, "ttft_ms": 132.3, "tok_per_sec": 56.8, "elapsed_ms": 1779.5}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 102, "ttft_ms": 132.3, "tok_per_sec": 56.8, "elapsed_ms": 1796.1}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 103, "ttft_ms": 132.3, "tok_per_sec": 56.8, "elapsed_ms": 1812.4}
+
+event: token
+data: {"text": " La", "is_finished": false, "token_count": 104, "ttft_ms": 132.3, "tok_per_sec": 56.9, "elapsed_ms": 1828.6}
+
+event: token
+data: {"text": "an", "is_finished": false, "token_count": 105, "ttft_ms": 132.3, "tok_per_sec": 56.9, "elapsed_ms": 1845.4}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 106, "ttft_ms": 132.3, "tok_per_sec": 56.9, "elapsed_ms": 1861.9}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 107, "ttft_ms": 132.3, "tok_per_sec": 57.0, "elapsed_ms": 1878.3}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 108, "ttft_ms": 132.3, "tok_per_sec": 57.0, "elapsed_ms": 1894.8}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 109, "ttft_ms": 132.3, "tok_per_sec": 57.0, "elapsed_ms": 1911.4}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 110, "ttft_ms": 132.3, "tok_per_sec": 57.1, "elapsed_ms": 1927.7}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 111, "ttft_ms": 132.3, "tok_per_sec": 57.1, "elapsed_ms": 1944.3}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 112, "ttft_ms": 132.3, "tok_per_sec": 57.1, "elapsed_ms": 1960.7}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 113, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 1977.2}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 114, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 1993.3}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 115, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 2010.0}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 116, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 2026.6}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 117, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2043.6}
+
+event: token
+data: {"text": " El", "is_finished": false, "token_count": 118, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2060.7}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 119, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2077.4}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 120, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2093.9}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 121, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2111.9}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 122, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2128.6}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 123, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2145.9}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 124, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2162.7}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 125, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2180.1}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 126, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2196.7}
+
+event: token
+data: {"text": "3", "is_finished": false, "token_count": 127, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2213.4}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 128, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2229.9}
+
+event: token
+data: {"text": " **", "is_finished": false, "token_count": 129, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2246.5}
+
+event: token
+data: {"text": "El", "is_finished": false, "token_count": 130, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2263.0}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 131, "ttft_ms": 132.3, "tok_per_sec": 57.5, "elapsed_ms": 2279.5}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 132, "ttft_ms": 132.3, "tok_per_sec": 57.5, "elapsed_ms": 2296.4}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 133, "ttft_ms": 132.3, "tok_per_sec": 57.5, "elapsed_ms": 2314.3}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 134, "ttft_ms": 132.3, "tok_per_sec": 57.5, "elapsed_ms": 2332.0}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 135, "ttft_ms": 132.3, "tok_per_sec": 57.5, "elapsed_ms": 2349.7}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 136, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2367.5}
+
+event: token
+data: {"text": "**:", "is_finished": false, "token_count": 137, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2385.3}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 138, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2403.0}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 139, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2420.7}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 140, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2438.5}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 141, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2456.4}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 142, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2474.5}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 143, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2492.0}
+
+event: token
+data: {"text": " El", "is_finished": false, "token_count": 144, "ttft_ms": 132.3, "tok_per_sec": 57.4, "elapsed_ms": 2510.1}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 145, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2529.0}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 146, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2546.9}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 147, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2565.2}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 148, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2583.0}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 149, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2601.0}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 150, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2619.2}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 151, "ttft_ms": 132.3, "tok_per_sec": 57.3, "elapsed_ms": 2637.3}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 152, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 2655.6}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 153, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 2673.8}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 154, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 2692.0}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 155, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 2710.2}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 156, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 2728.3}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 157, "ttft_ms": 132.3, "tok_per_sec": 57.2, "elapsed_ms": 2746.6}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 158, "ttft_ms": 132.3, "tok_per_sec": 57.1, "elapsed_ms": 2764.9}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 159, "ttft_ms": 132.3, "tok_per_sec": 57.1, "elapsed_ms": 2783.1}
+
+event: token
+data: {"text": " El", "is_finished": false, "token_count": 160, "ttft_ms": 132.3, "tok_per_sec": 57.1, "elapsed_ms": 2801.4}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 161, "ttft_ms": 132.3, "tok_per_sec": 57.1, "elapsed_ms": 2819.7}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 162, "ttft_ms": 132.3, "tok_per_sec": 57.1, "elapsed_ms": 2838.0}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 163, "ttft_ms": 132.3, "tok_per_sec": 57.1, "elapsed_ms": 2856.5}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 164, "ttft_ms": 132.3, "tok_per_sec": 57.0, "elapsed_ms": 2874.7}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 165, "ttft_ms": 132.3, "tok_per_sec": 57.0, "elapsed_ms": 2893.3}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 166, "ttft_ms": 132.3, "tok_per_sec": 57.0, "elapsed_ms": 2912.0}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 167, "ttft_ms": 132.3, "tok_per_sec": 57.0, "elapsed_ms": 2930.7}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 168, "ttft_ms": 132.3, "tok_per_sec": 57.0, "elapsed_ms": 2949.4}
+
+event: token
+data: {"text": "4", "is_finished": false, "token_count": 169, "ttft_ms": 132.3, "tok_per_sec": 56.9, "elapsed_ms": 2968.2}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 170, "ttft_ms": 132.3, "tok_per_sec": 56.9, "elapsed_ms": 2987.1}
+
+event: token
+data: {"text": " **", "is_finished": false, "token_count": 171, "ttft_ms": 132.3, "tok_per_sec": 56.9, "elapsed_ms": 3006.2}
+
+event: token
+data: {"text": "El", "is_finished": false, "token_count": 172, "ttft_ms": 132.3, "tok_per_sec": 56.9, "elapsed_ms": 3024.9}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 173, "ttft_ms": 132.3, "tok_per_sec": 56.8, "elapsed_ms": 3043.8}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 174, "ttft_ms": 132.3, "tok_per_sec": 56.8, "elapsed_ms": 3062.5}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 175, "ttft_ms": 132.3, "tok_per_sec": 56.8, "elapsed_ms": 3081.2}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 176, "ttft_ms": 132.3, "tok_per_sec": 56.8, "elapsed_ms": 3099.9}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 177, "ttft_ms": 132.3, "tok_per_sec": 56.8, "elapsed_ms": 3118.8}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 178, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 3137.8}
+
+event: token
+data: {"text": "**:", "is_finished": false, "token_count": 179, "ttft_ms": 132.3, "tok_per_sec": 56.7, "elapsed_ms": 3159.1}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 180, "ttft_ms": 132.3, "tok_per_sec": 56.6, "elapsed_ms": 3178.2}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 181, "ttft_ms": 132.3, "tok_per_sec": 56.6, "elapsed_ms": 3196.9}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 182, "ttft_ms": 132.3, "tok_per_sec": 56.6, "elapsed_ms": 3215.9}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 183, "ttft_ms": 132.3, "tok_per_sec": 56.6, "elapsed_ms": 3234.7}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 184, "ttft_ms": 132.3, "tok_per_sec": 56.6, "elapsed_ms": 3253.4}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 185, "ttft_ms": 132.3, "tok_per_sec": 56.5, "elapsed_ms": 3272.2}
+
+event: token
+data: {"text": " El", "is_finished": false, "token_count": 186, "ttft_ms": 132.3, "tok_per_sec": 56.5, "elapsed_ms": 3290.8}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 187, "ttft_ms": 132.3, "tok_per_sec": 56.5, "elapsed_ms": 3309.8}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 188, "ttft_ms": 132.3, "tok_per_sec": 56.5, "elapsed_ms": 3328.7}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 189, "ttft_ms": 132.3, "tok_per_sec": 56.5, "elapsed_ms": 3347.7}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 190, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 3366.5}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 191, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 3385.2}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 192, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 3404.3}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 193, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 3423.1}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 194, "ttft_ms": 132.3, "tok_per_sec": 56.4, "elapsed_ms": 3441.9}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 195, "ttft_ms": 132.3, "tok_per_sec": 56.3, "elapsed_ms": 3460.6}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 196, "ttft_ms": 132.3, "tok_per_sec": 56.3, "elapsed_ms": 3479.6}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 197, "ttft_ms": 132.3, "tok_per_sec": 56.3, "elapsed_ms": 3500.1}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 198, "ttft_ms": 132.3, "tok_per_sec": 56.2, "elapsed_ms": 3520.4}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 199, "ttft_ms": 132.3, "tok_per_sec": 56.2, "elapsed_ms": 3541.1}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 200, "ttft_ms": 132.3, "tok_per_sec": 56.1, "elapsed_ms": 3562.0}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 201, "ttft_ms": 132.3, "tok_per_sec": 56.1, "elapsed_ms": 3582.5}
+
+event: token
+data: {"text": " El", "is_finished": false, "token_count": 202, "ttft_ms": 132.3, "tok_per_sec": 56.1, "elapsed_ms": 3603.3}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 203, "ttft_ms": 132.3, "tok_per_sec": 56.0, "elapsed_ms": 3623.9}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 204, "ttft_ms": 132.3, "tok_per_sec": 56.0, "elapsed_ms": 3644.8}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 205, "ttft_ms": 132.3, "tok_per_sec": 55.9, "elapsed_ms": 3665.4}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 206, "ttft_ms": 132.3, "tok_per_sec": 55.9, "elapsed_ms": 3686.1}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 207, "ttft_ms": 132.3, "tok_per_sec": 55.8, "elapsed_ms": 3706.7}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 208, "ttft_ms": 132.3, "tok_per_sec": 55.8, "elapsed_ms": 3727.3}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 209, "ttft_ms": 132.3, "tok_per_sec": 55.8, "elapsed_ms": 3747.8}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 210, "ttft_ms": 132.3, "tok_per_sec": 55.7, "elapsed_ms": 3768.5}
+
+event: token
+data: {"text": "5", "is_finished": false, "token_count": 211, "ttft_ms": 132.3, "tok_per_sec": 55.7, "elapsed_ms": 3789.4}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 212, "ttft_ms": 132.3, "tok_per_sec": 55.6, "elapsed_ms": 3810.0}
+
+event: token
+data: {"text": " **", "is_finished": false, "token_count": 213, "ttft_ms": 132.3, "tok_per_sec": 55.6, "elapsed_ms": 3830.6}
+
+event: token
+data: {"text": "El", "is_finished": false, "token_count": 214, "ttft_ms": 132.3, "tok_per_sec": 55.6, "elapsed_ms": 3851.3}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 215, "ttft_ms": 132.3, "tok_per_sec": 55.5, "elapsed_ms": 3872.0}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 216, "ttft_ms": 132.3, "tok_per_sec": 55.5, "elapsed_ms": 3892.9}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 217, "ttft_ms": 132.3, "tok_per_sec": 55.4, "elapsed_ms": 3913.7}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 218, "ttft_ms": 132.3, "tok_per_sec": 55.4, "elapsed_ms": 3934.2}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 219, "ttft_ms": 132.3, "tok_per_sec": 55.4, "elapsed_ms": 3955.0}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 220, "ttft_ms": 132.3, "tok_per_sec": 55.3, "elapsed_ms": 3975.7}
+
+event: token
+data: {"text": "**:", "is_finished": false, "token_count": 221, "ttft_ms": 132.3, "tok_per_sec": 55.3, "elapsed_ms": 3996.7}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 222, "ttft_ms": 132.3, "tok_per_sec": 55.3, "elapsed_ms": 4017.5}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 223, "ttft_ms": 132.3, "tok_per_sec": 55.2, "elapsed_ms": 4038.5}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 224, "ttft_ms": 132.3, "tok_per_sec": 55.2, "elapsed_ms": 4059.5}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 225, "ttft_ms": 132.3, "tok_per_sec": 55.1, "elapsed_ms": 4080.2}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 226, "ttft_ms": 132.3, "tok_per_sec": 55.1, "elapsed_ms": 4101.1}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 227, "ttft_ms": 132.3, "tok_per_sec": 55.1, "elapsed_ms": 4122.0}
+
+event: token
+data: {"text": " El", "is_finished": false, "token_count": 228, "ttft_ms": 132.3, "tok_per_sec": 55.0, "elapsed_ms": 4142.7}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 229, "ttft_ms": 132.3, "tok_per_sec": 55.0, "elapsed_ms": 4164.3}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 230, "ttft_ms": 132.3, "tok_per_sec": 55.0, "elapsed_ms": 4185.4}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 231, "ttft_ms": 132.3, "tok_per_sec": 54.9, "elapsed_ms": 4206.4}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 232, "ttft_ms": 132.3, "tok_per_sec": 54.9, "elapsed_ms": 4227.3}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 233, "ttft_ms": 132.3, "tok_per_sec": 54.8, "elapsed_ms": 4248.5}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 234, "ttft_ms": 132.3, "tok_per_sec": 54.8, "elapsed_ms": 4269.4}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 235, "ttft_ms": 132.3, "tok_per_sec": 54.8, "elapsed_ms": 4290.2}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 236, "ttft_ms": 132.3, "tok_per_sec": 54.7, "elapsed_ms": 4311.2}
+
+event: token
+data: {"text": "\t", "is_finished": false, "token_count": 237, "ttft_ms": 132.3, "tok_per_sec": 54.7, "elapsed_ms": 4332.0}
+
+event: token
+data: {"text": "*", "is_finished": false, "token_count": 238, "ttft_ms": 132.3, "tok_per_sec": 54.7, "elapsed_ms": 4352.8}
+
+event: token
+data: {"text": "  ", "is_finished": false, "token_count": 239, "ttft_ms": 132.3, "tok_per_sec": 54.6, "elapsed_ms": 4373.6}
+
+event: token
+data: {"text": " S", "is_finished": false, "token_count": 240, "ttft_ms": 132.3, "tok_per_sec": 54.6, "elapsed_ms": 4394.3}
+
+event: token
+data: {"text": "ays", "is_finished": false, "token_count": 241, "ttft_ms": 132.3, "tok_per_sec": 54.6, "elapsed_ms": 4415.1}
+
+event: token
+data: {"text": " El", "is_finished": false, "token_count": 242, "ttft_ms": 132.3, "tok_per_sec": 54.6, "elapsed_ms": 4435.9}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 243, "ttft_ms": 132.3, "tok_per_sec": 54.5, "elapsed_ms": 4457.0}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 244, "ttft_ms": 132.3, "tok_per_sec": 54.5, "elapsed_ms": 4477.9}
+
+event: token
+data: {"text": "k", "is_finished": false, "token_count": 245, "ttft_ms": 132.3, "tok_per_sec": 54.5, "elapsed_ms": 4498.9}
+
+event: token
+data: {"text": "'s", "is_finished": false, "token_count": 246, "ttft_ms": 132.3, "tok_per_sec": 54.4, "elapsed_ms": 4520.0}
+
+event: token
+data: {"text": " latest", "is_finished": false, "token_count": 247, "ttft_ms": 132.3, "tok_per_sec": 54.4, "elapsed_ms": 4540.9}
+
+event: token
+data: {"text": " news", "is_finished": false, "token_count": 248, "ttft_ms": 132.3, "tok_per_sec": 54.4, "elapsed_ms": 4561.9}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 249, "ttft_ms": 132.3, "tok_per_sec": 54.3, "elapsed_ms": 4583.0}
+
+event: token
+data: {"text": "\n", "is_finished": false, "token_count": 250, "ttft_ms": 132.3, "tok_per_sec": 54.3, "elapsed_ms": 4603.8}
+
+event: token
+data: {"text": "6", "is_finished": false, "token_count": 251, "ttft_ms": 132.3, "tok_per_sec": 54.3, "elapsed_ms": 4625.0}
+
+event: token
+data: {"text": ".", "is_finished": false, "token_count": 252, "ttft_ms": 132.3, "tok_per_sec": 54.2, "elapsed_ms": 4646.1}
+
+event: token
+data: {"text": " **", "is_finished": false, "token_count": 253, "ttft_ms": 132.3, "tok_per_sec": 54.2, "elapsed_ms": 4667.3}
+
+event: token
+data: {"text": "El", "is_finished": false, "token_count": 254, "ttft_ms": 132.3, "tok_per_sec": 54.2, "elapsed_ms": 4688.1}
+
+event: token
+data: {"text": "on", "is_finished": false, "token_count": 255, "ttft_ms": 132.3, "tok_per_sec": 54.1, "elapsed_ms": 4709.2}
+
+event: token
+data: {"text": " Mus", "is_finished": false, "token_count": 256, "ttft_ms": 132.3, "tok_per_sec": 54.1, "elapsed_ms": 4730.5}
+
+event: token
+data: {"text": "", "is_finished": true, "token_count": 256, "ttft_ms": 132.3, "tok_per_sec": 54.1, "elapsed_ms": 4730.6}
+
+event: done
+data: {"trace_id": "55f419e3-f3c0-49ad-8c47-c0e15f203179", "total_tokens": 33152, "ttft_ms": 132.31, "total_latency_ms": 4734.75, "tok_per_sec": 54.12, "retrieval_triggered": false, "tools_executed": 0}
+

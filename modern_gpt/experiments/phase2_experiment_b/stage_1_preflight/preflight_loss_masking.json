@@ -1,0 +1,140 @@
+{
+  "dataset_hashes": {
+    "train_sha256": "622240e93f850e33bfeaae719fb290c6156751df60e29e7d344a720e3aa219e9",
+    "train_match": true,
+    "val_sha256": "77d7f8d19867f071b09b4895aa48454a7a6c9e2d5a1ed16a214f117b15e637dc",
+    "val_match": true,
+    "test_sha256": "b3798c6fcf1213c473a445fce1575e7dd11ff2863949e18547eb85bc7d641923",
+    "test_match": true
+  },
+  "masking_verification_samples": [
+    {
+      "category_case": "general_instructions",
+      "record_id": "sft_v1_a_uc_06829",
+      "source": "HuggingFaceH4/ultrachat_200k",
+      "total_tokens": 1448,
+      "supervised_tokens": 1274,
+      "masked_tokens": 174,
+      "supervision_density": 0.8798,
+      "turn_roles": [
+        "user",
+        "assistant",
+        "user",
+        "assistant",
+        "user",
+        "assistant"
+      ],
+      "masking_rule_verified": "User/System/Tool_Result masked (-100); Assistant/Tool_Call supervised"
+    },
+    {
+      "category_case": "reasoning",
+      "record_id": "sft_v1_1_reas_numina_18396",
+      "source": "HuggingFaceTB/smoltalk:numina-cot-100k",
+      "total_tokens": 386,
+      "supervised_tokens": 321,
+      "masked_tokens": 65,
+      "supervision_density": 0.8316,
+      "turn_roles": [
+        "user",
+        "assistant"
+      ],
+      "masking_rule_verified": "User/System/Tool_Result masked (-100); Assistant/Tool_Call supervised"
+    },
+    {
+      "category_case": "coding",
+      "record_id": "sft_v1_1_code_selfoss_30918",
+      "source": "HuggingFaceTB/smoltalk:self-oss-instruct",
+      "total_tokens": 333,
+      "supervised_tokens": 164,
+      "masked_tokens": 169,
+      "supervision_density": 0.4925,
+      "turn_roles": [
+        "user",
+        "assistant"
+      ],
+      "masking_rule_verified": "User/System/Tool_Result masked (-100); Assistant/Tool_Call supervised"
+    },
+    {
+      "category_case": "apigen_demonstration",
+      "record_id": "sft_v1_1_tool_apigen_42605",
+      "source": "HuggingFaceTB/smoltalk:apigen-80k",
+      "total_tokens": 1216,
+      "supervised_tokens": 518,
+      "masked_tokens": 698,
+      "supervision_density": 0.426,
+      "turn_roles": [
+        "system",
+        "user",
+        "assistant"
+      ],
+      "masking_rule_verified": "User/System/Tool_Result masked (-100); Assistant/Tool_Call supervised"
+    },
+    {
+      "category_case": "authentic_tool_execution",
+      "record_id": "sft_v1_1_tool_py_00178",
+      "source": "qorin_harness:live_sandbox_execution",
+      "total_tokens": 221,
+      "supervised_tokens": 105,
+      "masked_tokens": 116,
+      "supervision_density": 0.4751,
+      "turn_roles": [
+        "user",
+        "assistant",
+        "tool",
+        "assistant"
+      ],
+      "masking_rule_verified": "User/System/Tool_Result masked (-100); Assistant/Tool_Call supervised"
+    },
+    {
+      "category_case": "multistep_workflow",
+      "record_id": "sft_v1_1_tool_multi_00057",
+      "source": "qorin_harness:multistep_execution",
+      "total_tokens": 344,
+      "supervised_tokens": 161,
+      "masked_tokens": 183,
+      "supervision_density": 0.468,
+      "turn_roles": [
+        "user",
+        "assistant",
+        "tool",
+        "assistant",
+        "tool",
+        "assistant"
+      ],
+      "masking_rule_verified": "User/System/Tool_Result masked (-100); Assistant/Tool_Call supervised"
+    },
+    {
+      "category_case": "error_recovery",
+      "record_id": "sft_v1_1_tool_recov_00056",
+      "source": "qorin_harness:error_recovery",
+      "total_tokens": 431,
+      "supervised_tokens": 112,
+      "masked_tokens": 319,
+      "supervision_density": 0.2599,
+      "turn_roles": [
+        "user",
+        "assistant",
+        "tool",
+        "assistant",
+        "tool",
+        "assistant"
+      ],
+      "masking_rule_verified": "User/System/Tool_Result masked (-100); Assistant/Tool_Call supervised"
+    },
+    {
+      "category_case": "negative_control",
+      "record_id": "sft_v1_1_tool_notool_00002",
+      "source": "qorin_harness:negative_control",
+      "total_tokens": 81,
+      "supervised_tokens": 37,
+      "masked_tokens": 44,
+      "supervision_density": 0.4568,
+      "turn_roles": [
+        "user",
+        "assistant"
+      ],
+      "masking_rule_verified": "User/System/Tool_Result masked (-100); Assistant/Tool_Call supervised"
+    }
+  ],
+  "status": "PASS"
+}

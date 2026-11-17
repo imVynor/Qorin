@@ -1,0 +1,252 @@
+{
+  "metadata": {
+    "audit_timestamp": "\"2026-11-17\"",
+    "total_benchmark_tasks": 150,
+    "checkpoint_c": "ckpt_experiment_c_final.pt",
+    "checkpoint_d": "ckpt_experiment_d_best.pt"
+  },
+  "experiment_c": {
+    "total_tasks": 150,
+    "confusion_matrix": {
+      "tp": 61,
+      "fp": 3,
+      "tn": 33,
+      "fn": 53,
+      "precision": 0.9531,
+      "precision_ci": [
+        0.871,
+        0.9839
+      ],
+      "recall": 0.5351,
+      "recall_ci": [
+        0.4439,
+        0.624
+      ],
+      "f1": 0.6854,
+      "accuracy": 0.6267,
+      "accuracy_ci": [
+        0.547,
+        0.7
+      ]
+    },
+    "tool_selection": {
+      "overall_accuracy": 0.3158,
+      "overall_accuracy_ci": [
+        0.2377,
+        0.4059
+      ],
+      "web_recall": 0.0,
+      "web_recall_ci": [
+        0.0,
+        0.0481
+      ],
+      "web_correct": 0,
+      "web_total": 76,
+      "python_recall": 0.9474,
+      "python_recall_ci": [
+        0.8271,
+        0.9854
+      ],
+      "python_correct": 36,
+      "python_total": 38
+    },
+    "funnel_rates": {
+      "schema_validity_rate": 0.9062,
+      "valid_calls": 58,
+      "attempted_calls": 64,
+      "dispatch_rate": 0.3867,
+      "dispatched_count": 58,
+      "execution_success_rate": 0.7069,
+      "executed_count": 41,
+      "evidence_utilization_rate": 2.1707,
+      "evidence_utilized_count": 89,
+      "end_to_end_semantic_success_rate": 0.2267,
+      "semantic_success_ci": [
+        0.167,
+        0.3
+      ],
+      "semantic_success_count": 34
+    },
+    "behavioral_rates": {
+      "unnecessary_tool_call_rate": 0.0833,
+      "unnecessary_calls_fp": 3,
+      "direct_expected_total": 36,
+      "unsupported_factual_claim_rate": 0.7,
+      "unsupported_factual_claims": 35,
+      "factual_tasks_total": 50
+    },
+    "per_category": {
+      "colloquial_web_research": {
+        "total_tasks": 30,
+        "semantic_success_count": 9,
+        "semantic_success_rate": 0.3,
+        "tool_selection_rate": 0.0,
+        "executed_count": 5
+      },
+      "current_information": {
+        "total_tasks": 20,
+        "semantic_success_count": 6,
+        "semantic_success_rate": 0.3,
+        "tool_selection_rate": 0.0,
+        "executed_count": 0
+      },
+      "python_computation": {
+        "total_tasks": 25,
+        "semantic_success_count": 5,
+        "semantic_success_rate": 0.2,
+        "tool_selection_rate": 1.0,
+        "executed_count": 16
+      },
+      "direct_conceptual": {
+        "total_tasks": 25,
+        "semantic_success_count": 9,
+        "semantic_success_rate": 0.36,
+        "tool_selection_rate": 1.0,
+        "executed_count": 0
+      },
+      "tool_discrimination": {
+        "total_tasks": 20,
+        "semantic_success_count": 3,
+        "semantic_success_rate": 0.15,
+        "tool_selection_rate": 0.6,
+        "executed_count": 3
+      },
+      "multistep_web_python": {
+        "total_tasks": 15,
+        "semantic_success_count": 0,
+        "semantic_success_rate": 0.0,
+        "tool_selection_rate": 0.0,
+        "executed_count": 8
+      },
+      "tool_failure_recovery": {
+        "total_tasks": 15,
+        "semantic_success_count": 2,
+        "semantic_success_rate": 0.1333,
+        "tool_selection_rate": 0.4667,
+        "executed_count": 9
+      }
+    }
+  },
+  "experiment_d": {
+    "total_tasks": 150,
+    "confusion_matrix": {
+      "tp": 114,
+      "fp": 18,
+      "tn": 18,
+      "fn": 0,
+      "precision": 0.8636,
+      "precision_ci": [
+        0.7947,
+        0.912
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        0.9674,
+        1.0
+      ],
+      "f1": 0.9268,
+      "accuracy": 0.88,
+      "accuracy_ci": [
+        0.8183,
+        0.9227
+      ]
+    },
+    "tool_selection": {
+      "overall_accuracy": 0.8421,
+      "overall_accuracy_ci": [
+        0.7642,
+        0.8977
+      ],
+      "web_recall": 0.8026,
+      "web_recall_ci": [
+        0.6996,
+        0.8766
+      ],
+      "web_correct": 61,
+      "web_total": 76,
+      "python_recall": 0.9211,
+      "python_recall_ci": [
+        0.792,
+        0.9728
+      ],
+      "python_correct": 35,
+      "python_total": 38
+    },
+    "funnel_rates": {
+      "schema_validity_rate": 0.9318,
+      "valid_calls": 123,
+      "attempted_calls": 132,
+      "dispatch_rate": 0.82,
+      "dispatched_count": 123,
+      "execution_success_rate": 0.8618,
+      "executed_count": 106,
+      "evidence_utilization_rate": 0.9811,
+      "evidence_utilized_count": 104,
+      "end_to_end_semantic_success_rate": 0.28,
+      "semantic_success_ci": [
+        0.2143,
+        0.3567
+      ],
+      "semantic_success_count": 42
+    },
+    "behavioral_rates": {
+      "unnecessary_tool_call_rate": 0.5,
+      "unnecessary_calls_fp": 18,
+      "direct_expected_total": 36,
+      "unsupported_factual_claim_rate": 0.66,
+      "unsupported_factual_claims": 33,
+      "factual_tasks_total": 50
+    },
+    "per_category": {
+      "colloquial_web_research": {
+        "total_tasks": 30,
+        "semantic_success_count": 12,
+        "semantic_success_rate": 0.4,
+        "tool_selection_rate": 1.0,
+        "executed_count": 28
+      },
+      "current_information": {
+        "total_tasks": 20,
+        "semantic_success_count": 5,
+        "semantic_success_rate": 0.25,
+        "tool_selection_rate": 1.0,
+        "executed_count": 20
+      },
+      "python_computation": {
+        "total_tasks": 25,
+        "semantic_success_count": 5,
+        "semantic_success_rate": 0.2,
+        "tool_selection_rate": 1.0,
+        "executed_count": 14
+      },
+      "direct_conceptual": {
+        "total_tasks": 25,
+        "semantic_success_count": 9,
+        "semantic_success_rate": 0.36,
+        "tool_selection_rate": 0.6,
+        "executed_count": 10
+      },
+      "tool_discrimination": {
+        "total_tasks": 20,
+        "semantic_success_count": 7,
+        "semantic_success_rate": 0.35,
+        "tool_selection_rate": 0.8,
+        "executed_count": 13
+      },
+      "multistep_web_python": {
+        "total_tasks": 15,
+        "semantic_success_count": 2,
+        "semantic_success_rate": 0.1333,
+        "tool_selection_rate": 0.0,
+        "executed_count": 7
+      },
+      "tool_failure_recovery": {
+        "total_tasks": 15,
+        "semantic_success_count": 2,
+        "semantic_success_rate": 0.1333,
+        "tool_selection_rate": 0.5333,
+        "executed_count": 14
+      }
+    }
+  }
+}

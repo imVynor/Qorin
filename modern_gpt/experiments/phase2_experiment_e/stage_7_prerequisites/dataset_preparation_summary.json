@@ -1,0 +1,69 @@
+{
+  "preparation_timestamp": 1794890495.6561065,
+  "total_pool_records": 1000,
+  "corpus1_records": 500,
+  "corpus2_records": 500,
+  "disjoint_invariance_verified": true,
+  "decontamination_audit_summary": {
+    "total_audited": 1000,
+    "clean_records": 1000,
+    "violations": 0,
+    "passed": true
+  },
+  "split_token_statistics": {
+    "corpus1_calibration_train.jsonl": {
+      "record_count": 400,
+      "total_tokens": 37282,
+      "target_tokens": 18046,
+      "avg_tokens_per_record": 93.2
+    },
+    "corpus1_calibration_val.jsonl": {
+      "record_count": 50,
+      "total_tokens": 6523,
+      "target_tokens": 3635,
+      "avg_tokens_per_record": 130.5
+    },
+    "corpus1_calibration_test.jsonl": {
+      "record_count": 50,
+      "total_tokens": 4775,
+      "target_tokens": 1915,
+      "avg_tokens_per_record": 95.5
+    },
+    "corpus2_synthesis_train.jsonl": {
+      "record_count": 400,
+      "total_tokens": 72038,
+      "target_tokens": 19990,
+      "avg_tokens_per_record": 180.1
+    },
+    "corpus2_synthesis_val.jsonl": {
+      "record_count": 50,
+      "total_tokens": 8740,
+      "target_tokens": 2500,
+      "avg_tokens_per_record": 174.8
+    },
+    "corpus2_synthesis_test.jsonl": {
+      "record_count": 50,
+      "total_tokens": 10642,
+      "target_tokens": 3175,
+      "avg_tokens_per_record": 212.8
+    },
+    "combined_train.jsonl": {
+      "record_count": 800,
+      "total_tokens": 109320,
+      "target_tokens": 38036,
+      "avg_tokens_per_record": 136.7
+    },
+    "combined_val.jsonl": {
+      "record_count": 100,
+      "total_tokens": 15263,
+      "target_tokens": 6135,
+      "avg_tokens_per_record": 152.6
+    },
+    "combined_test.jsonl": {
+      "record_count": 100,
+      "total_tokens": 15417,
+      "target_tokens": 5090,
+      "avg_tokens_per_record": 154.2
+    }
+  }
+}

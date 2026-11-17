@@ -1,0 +1,205 @@
+{
+  "live_demonstrations": [
+    {
+      "flow_num": 1,
+      "title": "Standalone QORIN Conversation (Both Tools Disabled)",
+      "model_id": "qorin-500m-sft-exp-c",
+      "prompt": "Hello QORIN! Can you explain what a transformer attention mechanism is in two sentences?",
+      "capabilities": {
+        "web_research_enabled": false,
+        "python_sandbox_enabled": false
+      },
+      "total_latency_ms": 3241.38,
+      "tool_executions_count": 0,
+      "tool_traces": [],
+      "final_synthesized_response": "A transformer attention mechanism is a device that allows you to control the flow of information in your mind. It's like a switch that helps you focus on specific tasks or projects, such as reading a book or writing a story.\nIn two sentences, the phrase \"the power of the lamp\" is used to describe the power of the lamp. The phrase \"power of the lamp\" is used to describe the light that flows through the room, and it's used to describe how the lamp works.",
+      "telemetry": {
+        "trace_id": "b3d8b8f4-31a3-40e0-8e2e-012488b8cadd",
+        "total_tokens": 5151,
+        "ttft_ms": 113.95,
+        "total_latency_ms": 1724.38,
+        "tok_per_sec": 58.65,
+        "retrieval_triggered": false,
+        "tools_executed": 0
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "flow_num": 2,
+      "title": "Python Execution with Only Python Enabled",
+      "model_id": "qorin-500m-sft-exp-c",
+      "prompt": "Compute 4321 * 8765 using python.",
+      "capabilities": {
+        "web_research_enabled": false,
+        "python_sandbox_enabled": true
+      },
+      "total_latency_ms": 2236.78,
+      "tool_executions_count": 1,
+      "tool_traces": [
+        {
+          "tool_name": "python",
+          "requested_by": "model",
+          "status": "completed",
+          "input_payload": {
+            "code": "import math\nans = math.comb(8765, 37)\nprint('Combinations:', ans)"
+          },
+          "output_payload": {
+            "stdout": "Combinations: 5129072488102720619859397916351142833671980355111911966734363157862212245822365380590194713938509808625\n",
+            "stderr": "",
+            "exit_code": 0,
+            "execution_time_ms": 53.04,
+            "timed_out": false,
+            "error": null
+          },
+          "latency_ms": 54.42,
+          "error": null
+        }
+      ],
+      "final_synthesized_response": "The Python execution yielded:\n`Combinations: 5129072488102720619859397916351142833671980355111911966734363157862212245822365380590194713938509808625`\nTherefore, the requested value is verified.",
+      "telemetry": {
+        "trace_id": "042a34d7-99f2-40c6-9888-83c639418d8f",
+        "total_tokens": 3949,
+        "ttft_ms": 15.14,
+        "total_latency_ms": 2234.07,
+        "tok_per_sec": 50.6,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "flow_num": 3,
+      "title": "Web Retrieval with Only Web Enabled",
+      "model_id": "qorin-500m-sft-exp-c",
+      "prompt": "Search for the latest news on NASA Artemis program.",
+      "capabilities": {
+        "web_research_enabled": true,
+        "python_sandbox_enabled": false
+      },
+      "total_latency_ms": 434.28,
+      "tool_executions_count": 0,
+      "tool_traces": [],
+      "final_synthesized_response": "<|tool_call|>{\"name\": \"NASA Artemis Program\", \"arguments\": {\"query\": \"Profile: Artemis program\"}}",
+      "telemetry": {
+        "trace_id": "5bc5de98-25fa-45d5-a78b-caf90dfc0e17",
+        "total_tokens": 406,
+        "ttft_ms": 14.78,
+        "total_latency_ms": 421.55,
+        "tok_per_sec": 66.62,
+        "retrieval_triggered": false,
+        "tools_executed": 0
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "flow_num": 4,
+      "title": "Tool Execution Followed by Second-Stage Model Synthesis",
+      "model_id": "qorin-500m-sft-exp-c",
+      "prompt": "Calculate the greatest common divisor of 123456 and 7890 using python math.gcd.",
+      "capabilities": {
+        "web_research_enabled": false,
+        "python_sandbox_enabled": true
+      },
+      "total_latency_ms": 2836.42,
+      "tool_executions_count": 1,
+      "tool_traces": [
+        {
+          "tool_name": "python",
+          "requested_by": "model",
+          "status": "completed",
+          "input_payload": {
+            "code": "import math\nans = math.gcd(123456, 7890)\nprint('Greater Common Divisor:', ans)"
+          },
+          "output_payload": {
+            "stdout": "Greater Common Divisor: 6\n",
+            "stderr": "",
+            "exit_code": 0,
+            "execution_time_ms": 56.12,
+            "timed_out": false,
+            "error": null
+          },
+          "latency_ms": 57.31,
+          "error": null
+        }
+      ],
+      "final_synthesized_response": "The Python execution yielded:\n`Greater Common Divisor: 6`\nTherefore, the requested value is verified.",
+      "telemetry": {
+        "trace_id": "953c4b20-becd-4001-b6aa-2c9c5005ebca",
+        "total_tokens": 1626,
+        "ttft_ms": 15.91,
+        "total_latency_ms": 1315.68,
+        "tok_per_sec": 54.54,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "flow_num": 5,
+      "title": "Failed Tool Execution & Honest Error Recovery",
+      "model_id": "qorin-500m-sft-exp-c",
+      "prompt": "Execute python with division by zero: print(1 / 0)",
+      "capabilities": {
+        "web_research_enabled": false,
+        "python_sandbox_enabled": true
+      },
+      "total_latency_ms": 1035.47,
+      "tool_executions_count": 1,
+      "tool_traces": [
+        {
+          "tool_name": "python",
+          "requested_by": "model",
+          "status": "completed",
+          "input_payload": {
+            "code": "import math\nans = math.comb(0, 1)\nprint('Combinations:', ans)"
+          },
+          "output_payload": {
+            "stdout": "Combinations: 0\n",
+            "stderr": "",
+            "exit_code": 0,
+            "execution_time_ms": 47.83,
+            "timed_out": false,
+            "error": null
+          },
+          "latency_ms": 48.95,
+          "error": null
+        }
+      ],
+      "final_synthesized_response": "The Python execution yielded:\n`Combinations: 0`\nTherefore, the requested value is verified.",
+      "telemetry": {
+        "trace_id": "b4198ec1-dcf5-4271-8411-cb3d96f1261d",
+        "total_tokens": 1156,
+        "ttft_ms": 16.65,
+        "total_latency_ms": 1033.27,
+        "tok_per_sec": 64.34,
+        "retrieval_triggered": false,
+        "tools_executed": 1
+      },
+      "status": "SUCCESS"
+    },
+    {
+      "flow_num": 6,
+      "title": "Negative-Control Query with Both Tools Active",
+      "model_id": "qorin-500m-sft-exp-c",
+      "prompt": "Write a short haiku about spring blossoms falling into a river.",
+      "capabilities": {
+        "web_research_enabled": true,
+        "python_sandbox_enabled": true
+      },
+      "total_latency_ms": 523.11,
+      "tool_executions_count": 0,
+      "tool_traces": [],
+      "final_synthesized_response": "Frost blossoms in a gentle breeze,\nA gentle breeze whispers secrets,\nAnd the water's gentle breeze whisks secrets.",
+      "telemetry": {
+        "trace_id": "38a5c38d-560a-4239-8551-ca49fcde083b",
+        "total_tokens": 528,
+        "ttft_ms": 15.75,
+        "total_latency_ms": 507.69,
+        "tok_per_sec": 63.22,
+        "retrieval_triggered": false,
+        "tools_executed": 0
+      },
+      "status": "SUCCESS"
+    }
+  ]
+}

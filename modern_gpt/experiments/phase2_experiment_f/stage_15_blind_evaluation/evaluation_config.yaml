@@ -1,0 +1,22 @@
+dataset:
+  path: C:\Users\Anish\Desktop\Projects\ML-course\modern_gpt\experiments\phase2_experiment_f\stage_13_dataset\test.jsonl
+  record_count: 100
+decoding:
+  max_new_tokens: 160
+  precision: BF16
+  strategy: greedy
+  temperature: 0.0
+evaluation_timestamp: 1794908961.1614206
+models:
+  baseline:
+    name: Frozen Experiment D Best
+    optimizer_step: 425
+    path: C:\Users\Anish\Desktop\Projects\ML-course\modern_gpt\experiments\phase2_experiment_d\stage_3_training\checkpoints\ckpt_experiment_d_best.pt
+    sha256: c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7
+  candidate:
+    name: Experiment F Step 100 Pilot Best
+    optimizer_step: 100
+    path: C:\Users\Anish\Desktop\Projects\ML-course\modern_gpt\experiments\phase2_experiment_f\stage_14_training_pilot\checkpoints\ckpt_pilot_best.pt
+    sha256: bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4
+prompt_template_sha256: 3aa2dfb7821ca0110a73788053b6291805fa26afded6ce2b4b5375bd18ed5495
+tokenizer_sha256: d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59

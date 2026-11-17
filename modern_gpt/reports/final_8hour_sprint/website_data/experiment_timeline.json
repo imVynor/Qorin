@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "title": "ModernGPT-S Research Milestone Timeline",
+    "source_artifact": "Repository logs and git history",
+    "model": "QORIN (514M parameters)",
+    "sprint": "Final 8-Hour Sprint: Reliability and Research Showcase",
+    "two_stage_protocol_enabled": true
+  },
+  "timeline": [
+    {
+      "phase": "Phase 1c",
+      "name": "500M Pretraining Execution",
+      "timestamp": "2026-11-12 to 2026-11-15",
+      "tokens": 1121648640,
+      "objective": "Pretrain 514M ModernGPT-S from scratch across 7 curated domains.",
+      "outcome": "Achieved 2.8621 validation loss and 17.50 perplexity without divergence."
+    },
+    {
+      "phase": "Phase 2a",
+      "name": "SFT Preparation & Audit",
+      "timestamp": "2026-11-15",
+      "tokens": 0,
+      "objective": "Verify tokenizer, special tokens (<|im_start|>, <|im_end|>, <|tool_call|>), and establish SFT split protocol.",
+      "outcome": "Pristine separation of train/val/test splits and zero data leakage verified."
+    },
+    {
+      "phase": "Phase 2b",
+      "name": "Experiment A (25M General SFT Pilot)",
+      "timestamp": "2026-11-15",
+      "tokens": 25000000,
+      "objective": "Determine feasibility of instruction-following in 500M parameter base.",
+      "outcome": "Established conversational structure, reduced echo rates from 34.4% to 30.8%."
+    },
+    {
+      "phase": "Phase 2c",
+      "name": "Experiment B (35M SFT)",
+      "timestamp": "2026-11-16",
+      "tokens": 35000000,
+      "objective": "Scale instruction following and introduce multi-turn tool schema demonstrations.",
+      "outcome": "Coding syntax reached 92%, Pass@1 reached 42%. However, 0% tool-intent recall observed due to schema dilution (0.69% authentic tool tokens)."
+    },
+    {
+      "phase": "Phase 2d",
+      "name": "Experiment C (Targeted Two-Tool Sprint)",
+      "timestamp": "2026-11-16 to 2026-11-17",
+      "tokens": 1785635,
+      "objective": "Repair harness DEF-01/02/03, curate 755 authentic trajectories with compact manifest, and unlock autonomous intent detection.",
+      "outcome": "Tool Intent F1 reached 0.889 (80% recall, 100% precision). Closed-loop execution verified in live SSE runtime."
+    }
+  ]
+}

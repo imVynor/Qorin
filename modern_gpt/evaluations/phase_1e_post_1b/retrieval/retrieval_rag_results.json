@@ -1,0 +1,46 @@
+{
+  "ckpt_501m": {
+    "records": [
+      {
+        "id": "rag_clean_01",
+        "question": "What is the launch date of the James Webb Space Telescope and what rocket launched it?",
+        "expected": "December 25, 2021 aboard an Ariane 5 rocket",
+        "generated": "Question 1 (Relevant): The James Webb Space Telescope (JWST) was launched on December 25, 2021, aboard an Ariane 5 rocket from Kourou, French Guiana. Its primary mirror consists of 18 hex"
+      },
+      {
+        "id": "rag_clean_02",
+        "question": "Which naturally occurring element has the highest density and what is its value?",
+        "expected": "Osmium with a density of 22.59 g/cm3",
+        "generated": "Question 1 (Relevant): The element Osmium has the highest density of all naturally occurring elements, with a density of 22.59 g/cm3.\n\nQuestion 2 (Distractor): The element Osmium"
+      },
+      {
+        "id": "rag_clean_03",
+        "question": "What is the deepest point in Earth's oceans and what is its approximate depth?",
+        "expected": "Challenger Deep in the Mariana Trench at approximately 10,994 meters",
+        "generated": "Question 1 (Relevant): The deepest known oceanic trench on Earth is the deepest known oceanic trench on Earth.\n\nQuestion 2 (Distractor): The deepest known oceanic trench on Earth is the deepest known oceanic"
+      }
+    ]
+  },
+  "ckpt_latest": {
+    "records": [
+      {
+        "id": "rag_clean_01",
+        "question": "What is the launch date of the James Webb Space Telescope and what rocket launched it?",
+        "expected": "December 25, 2021 aboard an Ariane 5 rocket",
+        "generated": "Question: What is the launch date of the James Webb Space Telescope?\nAnswer based strictly on the context:\n\nQuestion: What is the launch date of the James Webb Space Telescope?\nAnswer based strictly on the context:"
+      },
+      {
+        "id": "rag_clean_02",
+        "question": "Which naturally occurring element has the highest density and what is its value?",
+        "expected": "Osmium with a density of 22.59 g/cm3",
+        "generated": "Question: Which element has the highest density and what is its value?\nAnswer based on the context:\n\nQuestion: Which element has the lowest density and what is its value?\nAnswer based on the context:\n\nQuestion"
+      },
+      {
+        "id": "rag_clean_03",
+        "question": "What is the deepest point in Earth's oceans and what is its approximate depth?",
+        "expected": "Challenger Deep in the Mariana Trench at approximately 10,994 meters",
+        "generated": "Question:\n\nQuestion: What is the deepest point in the ocean?\nAnswer based on the context:\n\nQuestion:\n\nQuestion: What is the deepest point in the ocean?\nAnswer based on the context:"
+      }
+    ]
+  }
+}

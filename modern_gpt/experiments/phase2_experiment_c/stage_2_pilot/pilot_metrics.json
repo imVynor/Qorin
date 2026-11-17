@@ -1,0 +1,59 @@
+{
+  "pilot_timestamp": "2026-11-16 13:04:24 UTC",
+  "starting_checkpoint_sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+  "pilot_checkpoint_sha256": "f876104914bb78c7475d9efb014ba9952b424a78e81f69da9b6beba17f26d7f6",
+  "total_updates": 2,
+  "total_conversation_tokens": 3884,
+  "total_assistant_tokens": 960,
+  "update_metrics": [
+    {
+      "update_step": 1,
+      "loss": 1.1781,
+      "grad_norm_before_clip": 5.5021,
+      "grad_norm_after_clip": 1.0,
+      "cumulative_conv_tokens": 1780,
+      "cumulative_asst_tokens": 472
+    },
+    {
+      "update_step": 2,
+      "loss": 1.3519,
+      "grad_norm_before_clip": 5.3013,
+      "grad_norm_after_clip": 1.0,
+      "cumulative_conv_tokens": 3884,
+      "cumulative_asst_tokens": 960
+    }
+  ],
+  "resume_fidelity_max_diff": 0.0,
+  "controlled_generation_results": [
+    {
+      "id": "pilot_eval_01_python",
+      "prompt": "Calculate the sum of squares of integers from 1 to 20 using Python.",
+      "category": "python_calc",
+      "tool_expected": true,
+      "tool_called": false,
+      "generated_text": "",
+      "parsed_call": null,
+      "execution_trace": null
+    },
+    {
+      "id": "pilot_eval_02_web",
+      "prompt": "Search the web for: Nobel Prize in Physics 2024 winners.",
+      "category": "web_research",
+      "tool_expected": true,
+      "tool_called": false,
+      "generated_text": "",
+      "parsed_call": null,
+      "execution_trace": null
+    },
+    {
+      "id": "pilot_eval_03_no_tool",
+      "prompt": "What is 2 + 2?",
+      "category": "no_tool",
+      "tool_expected": false,
+      "tool_called": false,
+      "generated_text": "2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2\n2 + 2 = 2 + 2",
+      "parsed_call": null,
+      "execution_trace": null
+    }
+  ]
+}

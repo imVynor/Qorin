@@ -1,0 +1,231 @@
+{
+  "title": "ModernGPT-S 500M Validation Shard Manifest",
+  "phase": "1B.7",
+  "split": "val",
+  "timestamp_iso": "2026-11-11T20:04:33Z",
+  "tokenizer_fingerprint": "3559c7435e1d9330",
+  "tokenizer_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+  "total_tokens": 20000000,
+  "total_shards": 7,
+  "domain_metrics": {
+    "web": {
+      "target_tokens": 8000000,
+      "realized_tokens": 8000000,
+      "docs_used": 7766,
+      "shards_count": 1,
+      "duration_s": 10.443,
+      "file_size_bytes": 16000080,
+      "payload_sha256": "bef31ba7dfaa45ce950b42aacf420568e893e53f4686d2ad10b1040d2f8b0d8a",
+      "file_sha256": "6215dcdd38fb09ab107c4cabafa439ea51576e45dd08edd3f1c9653fa4fab822"
+    },
+    "edu": {
+      "target_tokens": 3000000,
+      "realized_tokens": 3000000,
+      "docs_used": 4138,
+      "shards_count": 1,
+      "duration_s": 4.294,
+      "file_size_bytes": 6000080,
+      "payload_sha256": "4633d9cd4efdaa68e98a823dc89fcbccbace93a9663577637b7bd6d45722955a",
+      "file_sha256": "add1f691741ac769578fcd7566637d3077cfb83d2b599369e88eaf590c5bf0ab"
+    },
+    "code": {
+      "target_tokens": 3000000,
+      "realized_tokens": 3000000,
+      "docs_used": 1863,
+      "shards_count": 1,
+      "duration_s": 3.719,
+      "file_size_bytes": 6000080,
+      "payload_sha256": "bc1431325a4b7238c706d70827074068144cb838c81c17d303d054ffcb2448cb",
+      "file_sha256": "5f3cda7160a24dec63903e6dfbd289d0a1a23e2a652ed5960b66d10e547138cd"
+    },
+    "wiki": {
+      "target_tokens": 1500000,
+      "realized_tokens": 1500000,
+      "docs_used": 222,
+      "shards_count": 1,
+      "duration_s": 2.215,
+      "file_size_bytes": 3000080,
+      "payload_sha256": "8da63fa3527c396ba8cfac9cee7726eb91ef96de4d6ffc7b54cf883c1245e22a",
+      "file_sha256": "54b9d3675212061eef138691f775bd47ee5566ae8ef60a6cfffc9fb649b8f1f0"
+    },
+    "math": {
+      "target_tokens": 1500000,
+      "realized_tokens": 1500000,
+      "docs_used": 847,
+      "shards_count": 1,
+      "duration_s": 1.836,
+      "file_size_bytes": 3000080,
+      "payload_sha256": "829af91d4865f8e92aa9f1c0efc44d82fdb83a6f6b5c7e3f7e022aecb6a1d4d0",
+      "file_sha256": "1338aac7e7164cb249f0d7396d1f9d0930db33cb0eac6d43a45448648f3d91b0"
+    },
+    "books": {
+      "target_tokens": 2000000,
+      "realized_tokens": 2000000,
+      "docs_used": 92,
+      "shards_count": 1,
+      "duration_s": 2.747,
+      "file_size_bytes": 4000080,
+      "payload_sha256": "b4c362011d16e22df7fbcc76daf15e01ab4e881071498a7b699c253e21230ba1",
+      "file_sha256": "96e1830bbade6143109441faaab05e0de427d09fd4757ed1157a1eb1412d08cb"
+    },
+    "dialogue": {
+      "target_tokens": 1000000,
+      "realized_tokens": 1000000,
+      "docs_used": 847,
+      "shards_count": 1,
+      "duration_s": 1.325,
+      "file_size_bytes": 2000080,
+      "payload_sha256": "ce45576ba6eefb4c1e9da4d748dd58afde4b031f9809d267f351b0712240118a",
+      "file_sha256": "670d8ede702d997ea4b8e2be560e46098ba933904b70e68bbc6f55f53155ef20"
+    }
+  },
+  "shards": [
+    {
+      "shard_file": "modern_gpt\\data_500m\\final_5b\\val\\web\\shard_00000.bin",
+      "file_size_bytes": 16000080,
+      "header_size_bytes": 80,
+      "payload_bytes": 16000000,
+      "total_tokens": 8000000,
+      "sequence_length": 2048,
+      "total_sequences": 3906,
+      "tokenizer_fingerprint": "3559c7435e1d9330",
+      "payload_sha256": "bef31ba7dfaa45ce950b42aacf420568e893e53f4686d2ad10b1040d2f8b0d8a",
+      "file_sha256": "6215dcdd38fb09ab107c4cabafa439ea51576e45dd08edd3f1c9653fa4fab822",
+      "domain": "web",
+      "split": "val",
+      "docs_used": 7766,
+      "truncated_info": {
+        "boundary_doc_id": "acq_web_004400",
+        "original_doc_tokens": 637,
+        "tokens_admitted": 478,
+        "tokens_truncated": 159
+      }
+    },
+    {
+      "shard_file": "modern_gpt\\data_500m\\final_5b\\val\\edu\\shard_00000.bin",
+      "file_size_bytes": 6000080,
+      "header_size_bytes": 80,
+      "payload_bytes": 6000000,
+      "total_tokens": 3000000,
+      "sequence_length": 2048,
+      "total_sequences": 1464,
+      "tokenizer_fingerprint": "3559c7435e1d9330",
+      "payload_sha256": "4633d9cd4efdaa68e98a823dc89fcbccbace93a9663577637b7bd6d45722955a",
+      "file_sha256": "add1f691741ac769578fcd7566637d3077cfb83d2b599369e88eaf590c5bf0ab",
+      "domain": "edu",
+      "split": "val",
+      "docs_used": 4138,
+      "truncated_info": {
+        "boundary_doc_id": "acq_edu_004000",
+        "original_doc_tokens": 608,
+        "tokens_admitted": 437,
+        "tokens_truncated": 171
+      }
+    },
+    {
+      "shard_file": "modern_gpt\\data_500m\\final_5b\\val\\code\\shard_00000.bin",
+      "file_size_bytes": 6000080,
+      "header_size_bytes": 80,
+      "payload_bytes": 6000000,
+      "total_tokens": 3000000,
+      "sequence_length": 2048,
+      "total_sequences": 1464,
+      "tokenizer_fingerprint": "3559c7435e1d9330",
+      "payload_sha256": "bc1431325a4b7238c706d70827074068144cb838c81c17d303d054ffcb2448cb",
+      "file_sha256": "5f3cda7160a24dec63903e6dfbd289d0a1a23e2a652ed5960b66d10e547138cd",
+      "domain": "code",
+      "split": "val",
+      "docs_used": 1863,
+      "truncated_info": {
+        "boundary_doc_id": "acq_code_001862",
+        "original_doc_tokens": 3929,
+        "tokens_admitted": 2610,
+        "tokens_truncated": 1319
+      }
+    },
+    {
+      "shard_file": "modern_gpt\\data_500m\\final_5b\\val\\wiki\\shard_00000.bin",
+      "file_size_bytes": 3000080,
+      "header_size_bytes": 80,
+      "payload_bytes": 3000000,
+      "total_tokens": 1500000,
+      "sequence_length": 2048,
+      "total_sequences": 732,
+      "tokenizer_fingerprint": "3559c7435e1d9330",
+      "payload_sha256": "8da63fa3527c396ba8cfac9cee7726eb91ef96de4d6ffc7b54cf883c1245e22a",
+      "file_sha256": "54b9d3675212061eef138691f775bd47ee5566ae8ef60a6cfffc9fb649b8f1f0",
+      "domain": "wiki",
+      "split": "val",
+      "docs_used": 222,
+      "truncated_info": {
+        "boundary_doc_id": "acq_wiki_000221",
+        "original_doc_tokens": 11955,
+        "tokens_admitted": 4928,
+        "tokens_truncated": 7027
+      }
+    },
+    {
+      "shard_file": "modern_gpt\\data_500m\\final_5b\\val\\math\\shard_00000.bin",
+      "file_size_bytes": 3000080,
+      "header_size_bytes": 80,
+      "payload_bytes": 3000000,
+      "total_tokens": 1500000,
+      "sequence_length": 2048,
+      "total_sequences": 732,
+      "tokenizer_fingerprint": "3559c7435e1d9330",
+      "payload_sha256": "829af91d4865f8e92aa9f1c0efc44d82fdb83a6f6b5c7e3f7e022aecb6a1d4d0",
+      "file_sha256": "1338aac7e7164cb249f0d7396d1f9d0930db33cb0eac6d43a45448648f3d91b0",
+      "domain": "math",
+      "split": "val",
+      "docs_used": 847,
+      "truncated_info": {
+        "boundary_doc_id": "acq_math_000846",
+        "original_doc_tokens": 2222,
+        "tokens_admitted": 548,
+        "tokens_truncated": 1674
+      }
+    },
+    {
+      "shard_file": "modern_gpt\\data_500m\\final_5b\\val\\books\\shard_00000.bin",
+      "file_size_bytes": 4000080,
+      "header_size_bytes": 80,
+      "payload_bytes": 4000000,
+      "total_tokens": 2000000,
+      "sequence_length": 2048,
+      "total_sequences": 976,
+      "tokenizer_fingerprint": "3559c7435e1d9330",
+      "payload_sha256": "b4c362011d16e22df7fbcc76daf15e01ab4e881071498a7b699c253e21230ba1",
+      "file_sha256": "96e1830bbade6143109441faaab05e0de427d09fd4757ed1157a1eb1412d08cb",
+      "domain": "books",
+      "split": "val",
+      "docs_used": 92,
+      "truncated_info": {
+        "boundary_doc_id": "acq_books_000091",
+        "original_doc_tokens": 26339,
+        "tokens_admitted": 25322,
+        "tokens_truncated": 1017
+      }
+    },
+    {
+      "shard_file": "modern_gpt\\data_500m\\final_5b\\val\\dialogue\\shard_00000.bin",
+      "file_size_bytes": 2000080,
+      "header_size_bytes": 80,
+      "payload_bytes": 2000000,
+      "total_tokens": 1000000,
+      "sequence_length": 2048,
+      "total_sequences": 488,
+      "tokenizer_fingerprint": "3559c7435e1d9330",
+      "payload_sha256": "ce45576ba6eefb4c1e9da4d748dd58afde4b031f9809d267f351b0712240118a",
+      "file_sha256": "670d8ede702d997ea4b8e2be560e46098ba933904b70e68bbc6f55f53155ef20",
+      "domain": "dialogue",
+      "split": "val",
+      "docs_used": 847,
+      "truncated_info": {
+        "boundary_doc_id": "acq_dialogue_000846",
+        "original_doc_tokens": 1878,
+        "tokens_admitted": 590,
+        "tokens_truncated": 1288
+      }
+    }
+  ]
+}

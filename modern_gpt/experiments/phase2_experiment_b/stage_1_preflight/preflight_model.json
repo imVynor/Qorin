@@ -1,0 +1,37 @@
+{
+  "architecture": {
+    "n_layers": 20,
+    "emb_dim": 1536,
+    "n_heads": 24,
+    "num_kv_heads": 4,
+    "head_dim": 64,
+    "gqa_ratio": 6,
+    "ffn_hidden_dim": 3840,
+    "norm_eps": 1e-06,
+    "rope_theta": 10000.0,
+    "context_length": 2048,
+    "vocab_size": 32768,
+    "tied_embeddings": true
+  },
+  "forward_pass": {
+    "input_shape": [
+      1,
+      5
+    ],
+    "output_logits_shape": [
+      1,
+      5,
+      32768
+    ],
+    "expected_logits_shape": [
+      1,
+      5,
+      32768
+    ],
+    "logits_all_finite": true,
+    "device_placement": "cuda:0",
+    "vram_allocated_mb": 1036.4,
+    "vram_reserved_mb": 1090.0
+  },
+  "status": "PASS"
+}

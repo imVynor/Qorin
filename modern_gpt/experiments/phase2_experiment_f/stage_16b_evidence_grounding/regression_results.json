@@ -1,0 +1,828 @@
+{
+  "case_a": {
+    "prompt": "who is donald trump",
+    "final_text": "Based on verified sources ([SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+    "latency_ms": 8774.73,
+    "tool_results": {
+      "tool_name": "web_search",
+      "original_tool_name": "web_search",
+      "requested_by": "manual_override",
+      "status": "completed",
+      "call_id": "call_req_bb30_001",
+      "execution_id": "exec_df34cc2824db",
+      "request_id": "req_bb3023b51e65",
+      "conversation_id": "conv_bench_1794920358165",
+      "stdout": "Retrieved 3 authoritative sources for query 'who is donald trump trump?':\n\n[SOURCE_1] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.\n\n[SOURCE_2] Robert Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Robert_Trump\nKey Entities: 1948, 2020, 1999, 45th, 47th president, Robert Trump, Wikipedia Robert Stewart Trump, Donald Trump, United States, Bethesda Softworks\nEvidence Passage: Robert Stewart Trump (August 26, 1948 - August 15, 2020) was an American businessman and investor. He was the younger brother of Donald Trump and a loyal supporter of his political career. Donald was elected the 45th and 47th president of the United States. Trump served on the board of directors for ZeniMax Media, parent company to Bethesda Softworks, from 1999 [1] until his death in 2020 ...\n\n[SOURCE_3] Donald Trump | Birthday, Age, Education, Biography, Impeachments ...\nURL: https://www.britannica.com/biography/Donald-Trump\nKey Entities: 2017-21, 2025, 1885-89, 1893-97, 45th, 47th president, second president, first, Donald Trump, United States\nEvidence Passage: Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+      "stderr": "",
+      "input_payload": {
+        "query": "who is donald trump trump?"
+      },
+      "output_payload": {
+        "query": "who is donald trump trump?",
+        "latency_ms": 0.5,
+        "provider_name": "duckduckgo_lite",
+        "error": null,
+        "records": [
+          {
+            "source_id": "SOURCE_1",
+            "evidence_id": "SOURCE_1",
+            "title": "Donald Trump - Wikipedia",
+            "source_title": "Donald Trump - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+            "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+            "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+            "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+            "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States. A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+            "retrieved_at": "2026-11-17T11:59:50.625446+00:00",
+            "retrieval_timestamp": 1794916790.6254463,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "1946",
+              "2017",
+              "2021",
+              "47th president",
+              "45th president",
+              "Donald Trump",
+              "Wikipedia Donald John Trump",
+              "United States",
+              "Republican Party",
+              "Republican"
+            ],
+            "search_query": "who is donald trump trump?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          },
+          {
+            "source_id": "SOURCE_2",
+            "evidence_id": "SOURCE_2",
+            "title": "Robert Trump - Wikipedia",
+            "source_title": "Robert Trump - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Robert_Trump",
+            "source_url": "https://en.wikipedia.org/wiki/Robert_Trump",
+            "snippet": "Robert Stewart Trump (August 26, 1948 - August 15, 2020) was an American businessman and investor. He was the younger brother of Donald Trump and a loyal supporter of his political career. Donald was elected the 45th and 47th president of the United States. Trump served on the board of directors for ZeniMax Media, parent company to Bethesda Softworks, from 1999 [1] until his death in 2020 ...",
+            "source_snippet": "Robert Stewart Trump (August 26, 1948 - August 15, 2020) was an American businessman and investor. He was the younger brother of Donald Trump and a loyal supporter of his political career. Donald was elected the 45th and 47th president of the United States. Trump served on the board of directors for ZeniMax Media, parent company to Bethesda Softworks, from 1999 [1] until his death in 2020 ...",
+            "passage": "Robert Stewart Trump (August 26, 1948 - August 15, 2020) was an American businessman and investor. He was the younger brother of Donald Trump and a loyal supporter of his political career. Donald was elected the 45th and 47th president of the United States. Trump served on the board of directors for ZeniMax Media, parent company to Bethesda Softworks, from 1999 [1] until his death in 2020 ...",
+            "retrieved_at": "2026-11-17T11:59:50.625446+00:00",
+            "retrieval_timestamp": 1794916790.6254463,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "1948",
+              "2020",
+              "1999",
+              "45th",
+              "47th president",
+              "Robert Trump",
+              "Wikipedia Robert Stewart Trump",
+              "Donald Trump",
+              "United States",
+              "Bethesda Softworks"
+            ],
+            "search_query": "who is donald trump trump?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          },
+          {
+            "source_id": "SOURCE_3",
+            "evidence_id": "SOURCE_3",
+            "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+            "source_title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+            "url": "https://www.britannica.com/biography/Donald-Trump",
+            "source_url": "https://www.britannica.com/biography/Donald-Trump",
+            "snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+            "source_snippet": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+            "passage": "Donald Trump is the 45th and 47th president of the United States (2017-21; 2025- ). Following his inauguration on January 20, 2025, Trump became only the second president to serve two nonconsecutive terms, the first being Grover Cleveland (1885-89; 1893-97).",
+            "retrieved_at": "2026-11-17T11:59:50.625446+00:00",
+            "retrieval_timestamp": 1794916790.6254463,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "2017-21",
+              "2025",
+              "1885-89",
+              "1893-97",
+              "45th",
+              "47th president",
+              "second president",
+              "first",
+              "Donald Trump",
+              "United States"
+            ],
+            "search_query": "who is donald trump trump?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          }
+        ],
+        "sources": [
+          {
+            "title": "Donald Trump - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+          },
+          {
+            "title": "Robert Trump - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Robert_Trump"
+          },
+          {
+            "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+            "url": "https://www.britannica.com/biography/Donald-Trump"
+          }
+        ],
+        "execution_id": "exec_df34cc2824db",
+        "request_id": "req_bb3023b51e65",
+        "conversation_id": "conv_bench_1794920358165"
+      },
+      "source_metadata": {
+        "source_count": 3,
+        "sources": [
+          {
+            "title": "Donald Trump - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+          },
+          {
+            "title": "Robert Trump - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Robert_Trump"
+          },
+          {
+            "title": "Donald Trump | Birthday, Age, Education, Biography, Impeachments ...",
+            "url": "https://www.britannica.com/biography/Donald-Trump"
+          }
+        ]
+      },
+      "latency_ms": 25.1,
+      "error": null
+    },
+    "validation": {
+      "is_grounded": true,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "unsupported_claims": 0,
+      "citation_precision": 1.0,
+      "claim_supported_precision": 1.0,
+      "query_relevance_score": 1.0,
+      "detected_contradictions": [],
+      "claims": [
+        {
+          "claim_text": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_1"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_1",
+            "SOURCE_2"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        }
+      ],
+      "suggested_correction": null
+    }
+  },
+  "case_b": {
+    "prompt": "who is the current president of the United States?",
+    "final_text": "Based on verified sources ([SOURCE_3]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States  [SOURCE_3].",
+    "latency_ms": 1614.42,
+    "tool_results": {
+      "tool_name": "web_search",
+      "original_tool_name": "web_search",
+      "requested_by": "manual_override",
+      "status": "completed",
+      "call_id": "call_req_5bf0_001",
+      "execution_id": "exec_a75886042233",
+      "request_id": "req_5bf029ec01f3",
+      "conversation_id": "conv_bench_1794920366940",
+      "stdout": "Retrieved 3 authoritative sources for query 'Who is the current president of the United States?':\n\n[SOURCE_1] President Donald J. Trump - The White House\nURL: https://www.whitehouse.gov/administration/donald-j-trump/\nKey Entities: first, President Donald, The White House President Trump, White House\nEvidence Passage: President Trump built on his success in private life when he entered into politics and public service. He remarkably won the Presidency in his first ever run for any political office.\n\n[SOURCE_2] President of the United States - Wikipedia\nURL: https://en.wikipedia.org/wiki/President_of_the_United_States\nKey Entities: first president, United States, Wikipedia The, United States Armed Forces, George Washington\nEvidence Passage: The president of the United States (POTUS) [b] is the head of state and head of government of the United States . The president directs the executive branch of the federal government and is the commander-in-chief of the United States Armed Forces. The power of the presidency has grown [12] since the first president , George Washington, took office in 1789. [6] While presidential power has ebbed ...\n\n[SOURCE_3] Donald Trump - Wikipedia\nURL: https://en.wikipedia.org/wiki/Donald_Trump\nKey Entities: 1946, 2017, 2021, 47th president, 45th president, Donald Trump, Wikipedia Donald John Trump, United States, Republican Party, Republican\nEvidence Passage: Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States . A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+      "stderr": "",
+      "input_payload": {
+        "query": "Who is the current president of the United States?"
+      },
+      "output_payload": {
+        "query": "Who is the current president of the United States?",
+        "latency_ms": 0.5,
+        "provider_name": "duckduckgo_lite",
+        "error": null,
+        "records": [
+          {
+            "source_id": "SOURCE_1",
+            "evidence_id": "SOURCE_1",
+            "title": "President Donald J. Trump - The White House",
+            "source_title": "President Donald J. Trump - The White House",
+            "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+            "source_url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+            "snippet": "President Trump built on his success in private life when he entered into politics and public service. He remarkably won the Presidency in his first ever run for any political office.",
+            "source_snippet": "President Trump built on his success in private life when he entered into politics and public service. He remarkably won the Presidency in his first ever run for any political office.",
+            "passage": "President Trump built on his success in private life when he entered into politics and public service. He remarkably won the Presidency in his first ever run for any political office.",
+            "retrieved_at": "2026-11-17T11:51:41.085959+00:00",
+            "retrieval_timestamp": 1794916301.0859592,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "first",
+              "President Donald",
+              "The White House President Trump",
+              "White House"
+            ],
+            "search_query": "who is the current president of the United States?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          },
+          {
+            "source_id": "SOURCE_2",
+            "evidence_id": "SOURCE_2",
+            "title": "President of the United States - Wikipedia",
+            "source_title": "President of the United States - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/President_of_the_United_States",
+            "source_url": "https://en.wikipedia.org/wiki/President_of_the_United_States",
+            "snippet": "The president of the United States (POTUS) [b] is the head of state and head of government of the United States . The president directs the executive branch of the federal government and is the commander-in-chief of the United States Armed Forces. The power of the presidency has grown [12] since the first president , George Washington, took office in 1789. [6] While presidential power has ebbed ...",
+            "source_snippet": "The president of the United States (POTUS) [b] is the head of state and head of government of the United States . The president directs the executive branch of the federal government and is the commander-in-chief of the United States Armed Forces. The power of the presidency has grown [12] since the first president , George Washington, took office in 1789. [6] While presidential power has ebbed ...",
+            "passage": "The president of the United States (POTUS) [b] is the head of state and head of government of the United States . The president directs the executive branch of the federal government and is the commander-in-chief of the United States Armed Forces. The power of the presidency has grown [12] since the first president , George Washington, took office in 1789. [6] While presidential power has ebbed ...",
+            "retrieved_at": "2026-11-17T11:51:41.085959+00:00",
+            "retrieval_timestamp": 1794916301.0859592,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "first president",
+              "United States",
+              "Wikipedia The",
+              "United States Armed Forces",
+              "George Washington"
+            ],
+            "search_query": "who is the current president of the United States?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          },
+          {
+            "source_id": "SOURCE_3",
+            "evidence_id": "SOURCE_3",
+            "title": "Donald Trump - Wikipedia",
+            "source_title": "Donald Trump - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Donald_Trump",
+            "source_url": "https://en.wikipedia.org/wiki/Donald_Trump",
+            "snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States . A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+            "source_snippet": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States . A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+            "passage": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States . A member of the Republican Party, he served as the 45th president from 2017 to 2021.",
+            "retrieved_at": "2026-11-17T11:51:41.085959+00:00",
+            "retrieval_timestamp": 1794916301.0859592,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "1946",
+              "2017",
+              "2021",
+              "47th president",
+              "45th president",
+              "Donald Trump",
+              "Wikipedia Donald John Trump",
+              "United States",
+              "Republican Party",
+              "Republican"
+            ],
+            "search_query": "who is the current president of the United States?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          }
+        ],
+        "sources": [
+          {
+            "title": "President Donald J. Trump - The White House",
+            "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+          },
+          {
+            "title": "President of the United States - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/President_of_the_United_States"
+          },
+          {
+            "title": "Donald Trump - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+          }
+        ],
+        "execution_id": "exec_a75886042233",
+        "request_id": "req_5bf029ec01f3",
+        "conversation_id": "conv_bench_1794920366940"
+      },
+      "source_metadata": {
+        "source_count": 3,
+        "sources": [
+          {
+            "title": "President Donald J. Trump - The White House",
+            "url": "https://www.whitehouse.gov/administration/donald-j-trump/"
+          },
+          {
+            "title": "President of the United States - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/President_of_the_United_States"
+          },
+          {
+            "title": "Donald Trump - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Donald_Trump"
+          }
+        ]
+      },
+      "latency_ms": 41.31,
+      "error": null
+    },
+    "validation": {
+      "is_grounded": true,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "unsupported_claims": 0,
+      "citation_precision": 1.0,
+      "claim_supported_precision": 1.0,
+      "query_relevance_score": 0.8,
+      "detected_contradictions": [],
+      "claims": [
+        {
+          "claim_text": "Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States  [SOURCE_3].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_3"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_3"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        }
+      ],
+      "suggested_correction": null
+    }
+  },
+  "case_c": {
+    "prompt": "what is the capital of Australia?",
+    "final_text": "Based on verified sources ([SOURCE_1]): As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus [SOURCE_1].",
+    "latency_ms": 3954.87,
+    "tool_results": {
+      "tool_name": "web_search",
+      "original_tool_name": "web_search",
+      "requested_by": "manual_override",
+      "status": "completed",
+      "call_id": "call_req_ab9b_001",
+      "execution_id": "exec_70bf1a2a267d",
+      "request_id": "req_ab9b89d26c56",
+      "conversation_id": "conv_bench_1794920368554",
+      "stdout": "Retrieved 3 authoritative sources for query 'what is the capital of Australia?':\n\n[SOURCE_1] Canberra - Wikipedia\nURL: https://en.wikipedia.org/wiki/Canberra\nKey Entities: Wikipedia As Australia, Australian Broadcasting Corporation\nEvidence Passage: As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus.\n\n[SOURCE_2] Australian Capital Territory - Wikipedia\nURL: https://en.wikipedia.org/wiki/Australian_Capital_Territory\nKey Entities: 1938, Australian Capital Territory, Wikipedia The Australian Capital Territory, Federal Capital Territory\nEvidence Passage: The Australian Capital Territory (ACT), known as the Federal Capital Territory until 1938, is an internal territory of Australia . Canberra, the capital city of Australia , is situated within the territory and is the territory's primate city.\n\n[SOURCE_3] Canberra | History, Map, Population, Climate, & Facts | Britannica\nURL: https://www.britannica.com/place/Canberra\nKey Entities: Britannica Canberra, Australian Capital Territory, Molonglo River, Murrumbidgee River\nEvidence Passage: Canberra, federal capital of the Commonwealth of Australia . It occupies part of the Australian Capital Territory, in southern Australia , and is about 150 miles (240 km) southwest of Sydney. Canberra lies astride the Molonglo River, which is a tributary of the Murrumbidgee River.",
+      "stderr": "",
+      "input_payload": {
+        "query": "what is the capital of Australia?"
+      },
+      "output_payload": {
+        "query": "what is the capital of Australia?",
+        "latency_ms": 0.5,
+        "provider_name": "duckduckgo_lite",
+        "error": null,
+        "records": [
+          {
+            "source_id": "SOURCE_1",
+            "evidence_id": "SOURCE_1",
+            "title": "Canberra - Wikipedia",
+            "source_title": "Canberra - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Canberra",
+            "source_url": "https://en.wikipedia.org/wiki/Canberra",
+            "snippet": "As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus.",
+            "source_snippet": "As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus.",
+            "passage": "As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus.",
+            "retrieved_at": "2026-11-17T11:59:57.309879+00:00",
+            "retrieval_timestamp": 1794916797.3098793,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "Wikipedia As Australia",
+              "Australian Broadcasting Corporation"
+            ],
+            "search_query": "what is the capital of Australia?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          },
+          {
+            "source_id": "SOURCE_2",
+            "evidence_id": "SOURCE_2",
+            "title": "Australian Capital Territory - Wikipedia",
+            "source_title": "Australian Capital Territory - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Australian_Capital_Territory",
+            "source_url": "https://en.wikipedia.org/wiki/Australian_Capital_Territory",
+            "snippet": "The Australian Capital Territory (ACT), known as the Federal Capital Territory until 1938, is an internal territory of Australia . Canberra, the capital city of Australia , is situated within the territory and is the territory's primate city.",
+            "source_snippet": "The Australian Capital Territory (ACT), known as the Federal Capital Territory until 1938, is an internal territory of Australia . Canberra, the capital city of Australia , is situated within the territory and is the territory's primate city.",
+            "passage": "The Australian Capital Territory (ACT), known as the Federal Capital Territory until 1938, is an internal territory of Australia . Canberra, the capital city of Australia , is situated within the territory and is the territory's primate city.",
+            "retrieved_at": "2026-11-17T11:59:57.309879+00:00",
+            "retrieval_timestamp": 1794916797.3098793,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "1938",
+              "Australian Capital Territory",
+              "Wikipedia The Australian Capital Territory",
+              "Federal Capital Territory"
+            ],
+            "search_query": "what is the capital of Australia?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          },
+          {
+            "source_id": "SOURCE_3",
+            "evidence_id": "SOURCE_3",
+            "title": "Canberra | History, Map, Population, Climate, & Facts | Britannica",
+            "source_title": "Canberra | History, Map, Population, Climate, & Facts | Britannica",
+            "url": "https://www.britannica.com/place/Canberra",
+            "source_url": "https://www.britannica.com/place/Canberra",
+            "snippet": "Canberra, federal capital of the Commonwealth of Australia . It occupies part of the Australian Capital Territory, in southern Australia , and is about 150 miles (240 km) southwest of Sydney. Canberra lies astride the Molonglo River, which is a tributary of the Murrumbidgee River.",
+            "source_snippet": "Canberra, federal capital of the Commonwealth of Australia . It occupies part of the Australian Capital Territory, in southern Australia , and is about 150 miles (240 km) southwest of Sydney. Canberra lies astride the Molonglo River, which is a tributary of the Murrumbidgee River.",
+            "passage": "Canberra, federal capital of the Commonwealth of Australia . It occupies part of the Australian Capital Territory, in southern Australia , and is about 150 miles (240 km) southwest of Sydney. Canberra lies astride the Molonglo River, which is a tributary of the Murrumbidgee River.",
+            "retrieved_at": "2026-11-17T11:59:57.310394+00:00",
+            "retrieval_timestamp": 1794916797.310394,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "Britannica Canberra",
+              "Australian Capital Territory",
+              "Molonglo River",
+              "Murrumbidgee River"
+            ],
+            "search_query": "what is the capital of Australia?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          }
+        ],
+        "sources": [
+          {
+            "title": "Canberra - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Canberra"
+          },
+          {
+            "title": "Australian Capital Territory - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Australian_Capital_Territory"
+          },
+          {
+            "title": "Canberra | History, Map, Population, Climate, & Facts | Britannica",
+            "url": "https://www.britannica.com/place/Canberra"
+          }
+        ],
+        "execution_id": "exec_70bf1a2a267d",
+        "request_id": "req_ab9b89d26c56",
+        "conversation_id": "conv_bench_1794920368554"
+      },
+      "source_metadata": {
+        "source_count": 3,
+        "sources": [
+          {
+            "title": "Canberra - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Canberra"
+          },
+          {
+            "title": "Australian Capital Territory - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Australian_Capital_Territory"
+          },
+          {
+            "title": "Canberra | History, Map, Population, Climate, & Facts | Britannica",
+            "url": "https://www.britannica.com/place/Canberra"
+          }
+        ]
+      },
+      "latency_ms": 11.6,
+      "error": null
+    },
+    "validation": {
+      "is_grounded": true,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "unsupported_claims": 0,
+      "citation_precision": 1.0,
+      "claim_supported_precision": 1.0,
+      "query_relevance_score": 0.67,
+      "detected_contradictions": [],
+      "claims": [
+        {
+          "claim_text": "As Australia's capital , Canberra is the most important centre for much of Australia's political reportage and thus all the major media, including the Australian Broadcasting Corporation, the commercial television networks, and the metropolitan newspapers maintain local bureaus [SOURCE_1].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_1"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_1",
+            "SOURCE_2",
+            "SOURCE_3"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        }
+      ],
+      "suggested_correction": null
+    }
+  },
+  "case_d": {
+    "prompt": "what was the result of the 2022 FIFA World Cup?",
+    "final_text": "Based on verified sources ([SOURCE_3], [SOURCE_1]): The final match of the 2022 FIFA World Cup , the 22nd edition of FIFA 's competition for men's national football teams, was played at Lusail Stadium in Lusail, Qatar, on 18 December 2022 (Qatari National Day), and was contested by Argentina and defending champions France [SOURCE_3]. The 2022 FIFA World Cup was the 22nd FIFA World Cup , the quadrennial world championship for national football teams organised by FIFA  [SOURCE_1].",
+    "latency_ms": 1915.08,
+    "tool_results": {
+      "tool_name": "web_search",
+      "original_tool_name": "web_search",
+      "requested_by": "manual_override",
+      "status": "completed",
+      "call_id": "call_req_683c_001",
+      "execution_id": "exec_1264071502a2",
+      "request_id": "req_683cb6a4c51a",
+      "conversation_id": "conv_bench_1794920372511",
+      "stdout": "Retrieved 3 authoritative sources for query 'what was the result of the 2022 FIFA World Cup?':\n\n[SOURCE_1] 2022 FIFA World Cup - Wikipedia\nURL: https://en.wikipedia.org/wiki/2022_FIFA_World_Cup\nKey Entities: 2022, 2010, 22nd, World Cup, Wikipedia The, FIFA\nEvidence Passage: The 2022 FIFA World Cup was the 22nd FIFA World Cup , the quadrennial world championship for national football teams organised by FIFA . It took place in Qatar from 20 November to 18 December 2022 , after the country was awarded the hosting rights in 2010.\n\n[SOURCE_2] FIFA World Cup Qatar 2022\u2122\nURL: https://www.fifa.com/en/tournaments/mens/worldcup/qatar2022\nKey Entities: 2022, World Cup Qatar, FIFA\nEvidence Passage: Discover the story of the FIFA World Cup Qatar 2022 \u2122, from standout moments to defining results , all in one place.\n\n[SOURCE_3] 2022 FIFA World Cup final - Wikipedia\nURL: https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_final\nKey Entities: 2022, 22nd edition, World Cup, Wikipedia The, Lusail Stadium, Qatari National Day, FIFA\nEvidence Passage: The final match of the 2022 FIFA World Cup , the 22nd edition of FIFA 's competition for men's national football teams, was played at Lusail Stadium in Lusail, Qatar, on 18 December 2022 (Qatari National Day), and was contested by Argentina and defending champions France. With a record 1.5 billion people watching on television, the final became one of the most widely watched televised sporting ...",
+      "stderr": "",
+      "input_payload": {
+        "query": "what was the result of the 2022 FIFA World Cup?"
+      },
+      "output_payload": {
+        "query": "what was the result of the 2022 FIFA World Cup?",
+        "latency_ms": 0.5,
+        "provider_name": "duckduckgo_lite",
+        "error": null,
+        "records": [
+          {
+            "source_id": "SOURCE_1",
+            "evidence_id": "SOURCE_1",
+            "title": "2022 FIFA World Cup - Wikipedia",
+            "source_title": "2022 FIFA World Cup - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup",
+            "source_url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup",
+            "snippet": "The 2022 FIFA World Cup was the 22nd FIFA World Cup , the quadrennial world championship for national football teams organised by FIFA . It took place in Qatar from 20 November to 18 December 2022 , after the country was awarded the hosting rights in 2010.",
+            "source_snippet": "The 2022 FIFA World Cup was the 22nd FIFA World Cup , the quadrennial world championship for national football teams organised by FIFA . It took place in Qatar from 20 November to 18 December 2022 , after the country was awarded the hosting rights in 2010.",
+            "passage": "The 2022 FIFA World Cup was the 22nd FIFA World Cup , the quadrennial world championship for national football teams organised by FIFA . It took place in Qatar from 20 November to 18 December 2022 , after the country was awarded the hosting rights in 2010.",
+            "retrieved_at": "2026-11-17T11:51:56.955638+00:00",
+            "retrieval_timestamp": 1794916316.9556377,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "2022",
+              "2010",
+              "22nd",
+              "World Cup",
+              "Wikipedia The",
+              "FIFA"
+            ],
+            "search_query": "what was the result of the 2022 FIFA World Cup?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          },
+          {
+            "source_id": "SOURCE_2",
+            "evidence_id": "SOURCE_2",
+            "title": "FIFA World Cup Qatar 2022\u2122",
+            "source_title": "FIFA World Cup Qatar 2022\u2122",
+            "url": "https://www.fifa.com/en/tournaments/mens/worldcup/qatar2022",
+            "source_url": "https://www.fifa.com/en/tournaments/mens/worldcup/qatar2022",
+            "snippet": "Discover the story of the FIFA World Cup Qatar 2022 \u2122, from standout moments to defining results , all in one place.",
+            "source_snippet": "Discover the story of the FIFA World Cup Qatar 2022 \u2122, from standout moments to defining results , all in one place.",
+            "passage": "Discover the story of the FIFA World Cup Qatar 2022 \u2122, from standout moments to defining results , all in one place.",
+            "retrieved_at": "2026-11-17T11:51:56.955638+00:00",
+            "retrieval_timestamp": 1794916316.9556377,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "2022",
+              "World Cup Qatar",
+              "FIFA"
+            ],
+            "search_query": "what was the result of the 2022 FIFA World Cup?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          },
+          {
+            "source_id": "SOURCE_3",
+            "evidence_id": "SOURCE_3",
+            "title": "2022 FIFA World Cup final - Wikipedia",
+            "source_title": "2022 FIFA World Cup final - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_final",
+            "source_url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_final",
+            "snippet": "The final match of the 2022 FIFA World Cup , the 22nd edition of FIFA 's competition for men's national football teams, was played at Lusail Stadium in Lusail, Qatar, on 18 December 2022 (Qatari National Day), and was contested by Argentina and defending champions France. With a record 1.5 billion people watching on television, the final became one of the most widely watched televised sporting ...",
+            "source_snippet": "The final match of the 2022 FIFA World Cup , the 22nd edition of FIFA 's competition for men's national football teams, was played at Lusail Stadium in Lusail, Qatar, on 18 December 2022 (Qatari National Day), and was contested by Argentina and defending champions France. With a record 1.5 billion people watching on television, the final became one of the most widely watched televised sporting ...",
+            "passage": "The final match of the 2022 FIFA World Cup , the 22nd edition of FIFA 's competition for men's national football teams, was played at Lusail Stadium in Lusail, Qatar, on 18 December 2022 (Qatari National Day), and was contested by Argentina and defending champions France. With a record 1.5 billion people watching on television, the final became one of the most widely watched televised sporting ...",
+            "retrieved_at": "2026-11-17T11:51:56.955638+00:00",
+            "retrieval_timestamp": 1794916316.9556377,
+            "passage_relevance": 1.0,
+            "relevant_entity_references": [
+              "2022",
+              "22nd edition",
+              "World Cup",
+              "Wikipedia The",
+              "Lusail Stadium",
+              "Qatari National Day",
+              "FIFA"
+            ],
+            "search_query": "what was the result of the 2022 FIFA World Cup?",
+            "provider": "duckduckgo_lite",
+            "is_cached": true,
+            "raw_payload": {}
+          }
+        ],
+        "sources": [
+          {
+            "title": "2022 FIFA World Cup - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup"
+          },
+          {
+            "title": "FIFA World Cup Qatar 2022\u2122",
+            "url": "https://www.fifa.com/en/tournaments/mens/worldcup/qatar2022"
+          },
+          {
+            "title": "2022 FIFA World Cup final - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_final"
+          }
+        ],
+        "execution_id": "exec_1264071502a2",
+        "request_id": "req_683cb6a4c51a",
+        "conversation_id": "conv_bench_1794920372511"
+      },
+      "source_metadata": {
+        "source_count": 3,
+        "sources": [
+          {
+            "title": "2022 FIFA World Cup - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup"
+          },
+          {
+            "title": "FIFA World Cup Qatar 2022\u2122",
+            "url": "https://www.fifa.com/en/tournaments/mens/worldcup/qatar2022"
+          },
+          {
+            "title": "2022 FIFA World Cup final - Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_final"
+          }
+        ]
+      },
+      "latency_ms": 11.86,
+      "error": null
+    },
+    "validation": {
+      "is_grounded": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "unsupported_claims": 0,
+      "citation_precision": 1.0,
+      "claim_supported_precision": 1.0,
+      "query_relevance_score": 0.67,
+      "detected_contradictions": [],
+      "claims": [
+        {
+          "claim_text": "The final match of the 2022 FIFA World Cup , the 22nd edition of FIFA 's competition for men's national football teams, was played at Lusail Stadium in Lusail, Qatar, on 18 December 2022 (Qatari National Day), and was contested by Argentina and defending champions France [SOURCE_3].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_3"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_1",
+            "SOURCE_3"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        },
+        {
+          "claim_text": "The 2022 FIFA World Cup was the 22nd FIFA World Cup , the quadrennial world championship for national football teams organised by FIFA  [SOURCE_1].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_1"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_1",
+            "SOURCE_2",
+            "SOURCE_3"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        }
+      ],
+      "suggested_correction": null
+    }
+  },
+  "case_e": {
+    "prompt": "where and when was the treaty signed?",
+    "contradictions_detected": [
+      "Potential date discrepancy between [SOURCE_1] (1919) and [SOURCE_2] (1920)."
+    ],
+    "final_text": "Based on verified sources ([SOURCE_1], [SOURCE_2]): The treaty was signed in Paris in 1919 [SOURCE_1]. The treaty was signed in London in 1920 [SOURCE_2].",
+    "validation": {
+      "is_grounded": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "unsupported_claims": 0,
+      "citation_precision": 1.0,
+      "claim_supported_precision": 1.0,
+      "query_relevance_score": 1.0,
+      "detected_contradictions": [
+        "Potential date discrepancy between [SOURCE_1] (1919) and [SOURCE_2] (1920)."
+      ],
+      "claims": [
+        {
+          "claim_text": "The treaty was signed in Paris in 1919 [SOURCE_1].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_1"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_1"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        },
+        {
+          "claim_text": "The treaty was signed in London in 1920 [SOURCE_2].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_2"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_2"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        }
+      ],
+      "suggested_correction": null
+    }
+  },
+  "case_f": {
+    "prompt": "what is xyz12345?",
+    "final_text": "Retrieved sources do not contain sufficient evidence to answer: 'what is xyz12345?'.",
+    "status": "PASSED - Acknowledged insufficient evidence explicitly"
+  },
+  "case_g": {
+    "prompt": "capital of Australia",
+    "final_text": "Based on verified sources ([SOURCE_1]): Canberra is the federal capital city of the Commonwealth of Australia [SOURCE_1].",
+    "status": "PASSED - Irrelevant passages filtered, grounded assertion retained",
+    "validation": {
+      "is_grounded": true,
+      "total_claims": 1,
+      "supported_claims": 1,
+      "unsupported_claims": 0,
+      "citation_precision": 1.0,
+      "claim_supported_precision": 1.0,
+      "query_relevance_score": 1.0,
+      "detected_contradictions": [],
+      "claims": [
+        {
+          "claim_text": "Canberra is the federal capital city of the Commonwealth of Australia [SOURCE_1].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_1"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_1"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        }
+      ],
+      "suggested_correction": null
+    }
+  },
+  "case_h": {
+    "prompt": "who was the first person to walk on the moon?",
+    "final_text": "Based on verified sources ([SOURCE_3], [SOURCE_1]): Neil Armstrong was the first person to walk on the Moon  [SOURCE_3]. Neil Armstrong became the first human to walk on the Moon  [SOURCE_1].",
+    "latency_ms": 3933.45,
+    "validation": {
+      "is_grounded": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "unsupported_claims": 0,
+      "citation_precision": 1.0,
+      "claim_supported_precision": 1.0,
+      "query_relevance_score": 0.8,
+      "detected_contradictions": [],
+      "claims": [
+        {
+          "claim_text": "Neil Armstrong was the first person to walk on the Moon  [SOURCE_3].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_3"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_1",
+            "SOURCE_2",
+            "SOURCE_3"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        },
+        {
+          "claim_text": "Neil Armstrong became the first human to walk on the Moon  [SOURCE_1].",
+          "status": "SUPPORTED",
+          "cited_sources": [
+            "SOURCE_1"
+          ],
+          "supporting_source_ids": [
+            "SOURCE_1",
+            "SOURCE_2",
+            "SOURCE_3"
+          ],
+          "missing_entities": [],
+          "confidence_score": 1.0,
+          "reason": "Supported by retrieved evidence sentence."
+        }
+      ],
+      "suggested_correction": null
+    }
+  }
+}

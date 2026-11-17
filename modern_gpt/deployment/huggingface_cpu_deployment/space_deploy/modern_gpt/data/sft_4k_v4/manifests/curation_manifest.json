@@ -1,0 +1,210 @@
+{
+  "manifest_version": "1.0.0",
+  "dataset_target": "sft_4k_v4",
+  "phase": "1B.2_curation",
+  "random_seed": 42,
+  "tokenizer_fingerprint": "be6c3d60c5baf217",
+  "candidate_pool_file": "modern_gpt\\data\\sft_4k_v4\\raw\\curated_candidate_pool.jsonl",
+  "candidate_pool_sha256": "f6d5cccf21d4df476c42fe78fbf0520de49c43387a58f9532df28b75606a192e",
+  "total_records": 16422,
+  "total_input_tokens": 7733445,
+  "total_supervised_tokens": 2528376,
+  "category_breakdown": {
+    "coding_technical": {
+      "records": 2990,
+      "record_share_pct": 18.21,
+      "supervised_tokens": 448499,
+      "supervised_token_share_pct": 17.74,
+      "input_tokens": 820783,
+      "mean_supervised_tokens": 150.0
+    },
+    "general_conversation": {
+      "records": 1224,
+      "record_share_pct": 7.45,
+      "supervised_tokens": 268359,
+      "supervised_token_share_pct": 10.61,
+      "input_tokens": 562422,
+      "mean_supervised_tokens": 219.25
+    },
+    "instruction_following": {
+      "records": 1401,
+      "record_share_pct": 8.53,
+      "supervised_tokens": 195412,
+      "supervised_token_share_pct": 7.73,
+      "input_tokens": 419693,
+      "mean_supervised_tokens": 139.48
+    },
+    "knowledge_and_explanations": {
+      "records": 3381,
+      "record_share_pct": 20.59,
+      "supervised_tokens": 114182,
+      "supervised_token_share_pct": 4.52,
+      "input_tokens": 672400,
+      "mean_supervised_tokens": 33.77
+    },
+    "multi_turn_dialogue": {
+      "records": 1424,
+      "record_share_pct": 8.67,
+      "supervised_tokens": 901607,
+      "supervised_token_share_pct": 35.66,
+      "input_tokens": 1247901,
+      "mean_supervised_tokens": 633.15
+    },
+    "reasoning_and_mathematics": {
+      "records": 2907,
+      "record_share_pct": 17.7,
+      "supervised_tokens": 360015,
+      "supervised_token_share_pct": 14.24,
+      "input_tokens": 727213,
+      "mean_supervised_tokens": 123.84
+    },
+    "retrieval_and_structured_output": {
+      "records": 3095,
+      "record_share_pct": 18.85,
+      "supervised_tokens": 240302,
+      "supervised_token_share_pct": 9.5,
+      "input_tokens": 3283033,
+      "mean_supervised_tokens": 77.64
+    }
+  },
+  "source_breakdown": {
+    "curated_context_insulation:independent_task_execution": {
+      "records": 134,
+      "supervised_tokens": 15266,
+      "license": "Unknown"
+    },
+    "curated_context_insulation:irrelevant_context_suppression": {
+      "records": 73,
+      "supervised_tokens": 15585,
+      "license": "Unknown"
+    },
+    "curated_context_insulation:relevant_state_retention": {
+      "records": 174,
+      "supervised_tokens": 22567,
+      "license": "Unknown"
+    },
+    "curated_context_insulation:returning_to_earlier_topics": {
+      "records": 21,
+      "supervised_tokens": 5910,
+      "license": "Unknown"
+    },
+    "curated_context_insulation:topic_switching": {
+      "records": 305,
+      "supervised_tokens": 58296,
+      "license": "Unknown"
+    },
+    "curated_conversational_diverse": {
+      "records": 9,
+      "supervised_tokens": 216,
+      "license": "MIT"
+    },
+    "curated_direct_qa": {
+      "records": 19,
+      "supervised_tokens": 748,
+      "license": "MIT"
+    },
+    "local_sft_v2:code_alpaca": {
+      "records": 1790,
+      "supervised_tokens": 174606,
+      "license": "CC-BY-4.0"
+    },
+    "local_sft_v2:dolly_instruction": {
+      "records": 941,
+      "supervised_tokens": 111968,
+      "license": "CC-BY-SA-3.0"
+    },
+    "local_sft_v2:dolly_qa": {
+      "records": 321,
+      "supervised_tokens": 15680,
+      "license": "CC-BY-SA-3.0"
+    },
+    "local_sft_v2:gsm8k": {
+      "records": 178,
+      "supervised_tokens": 22222,
+      "license": "MIT"
+    },
+    "local_sft_v2:json": {
+      "records": 728,
+      "supervised_tokens": 54814,
+      "license": "MIT"
+    },
+    "local_sft_v2:mbpp": {
+      "records": 311,
+      "supervised_tokens": 30767,
+      "license": "CC-BY-4.0"
+    },
+    "local_sft_v2:squad": {
+      "records": 946,
+      "supervised_tokens": 14716,
+      "license": "CC-BY-SA-4.0"
+    },
+    "openai/gsm8k:train": {
+      "records": 2729,
+      "supervised_tokens": 337793,
+      "license": "MIT"
+    },
+    "smoltalk:apigen-80k": {
+      "records": 1167,
+      "supervised_tokens": 118048,
+      "license": "Apache-2.0"
+    },
+    "smoltalk:explore-instruct": {
+      "records": 916,
+      "supervised_tokens": 33370,
+      "license": "Apache-2.0"
+    },
+    "smoltalk:openhermes": {
+      "records": 894,
+      "supervised_tokens": 252463,
+      "license": "MIT / Apache-2.0"
+    },
+    "smoltalk:self-oss-instruct": {
+      "records": 889,
+      "supervised_tokens": 243126,
+      "license": "Apache-2.0"
+    },
+    "smoltalk:smol-magpie-ultra": {
+      "records": 323,
+      "supervised_tokens": 477575,
+      "license": "Apache-2.0"
+    },
+    "smoltalk:smol-rewrite": {
+      "records": 460,
+      "supervised_tokens": 83444,
+      "license": "Apache-2.0"
+    },
+    "smoltalk:systemchats": {
+      "records": 394,
+      "supervised_tokens": 306408,
+      "license": "Apache-2.0"
+    },
+    "synthetic_long_retrieval_v3": {
+      "records": 1200,
+      "supervised_tokens": 67440,
+      "license": "MIT"
+    },
+    "tau/commonsense_qa:train": {
+      "records": 1500,
+      "supervised_tokens": 65348,
+      "license": "MIT"
+    }
+  },
+  "license_breakdown_by_records": {
+    "MIT": 7070,
+    "Apache-2.0": 4149,
+    "CC-BY-4.0": 2101,
+    "CC-BY-SA-3.0": 1262,
+    "CC-BY-SA-4.0": 946,
+    "MIT / Apache-2.0": 894
+  },
+  "reclassified_counts": {
+    "smoltalk:smol-rewrite": 460,
+    "local_sft_v2:dolly_instruction": 941,
+    "local_sft_v2:squad": 946,
+    "smoltalk:explore-instruct": 916,
+    "curated_direct_qa": 19
+  },
+  "rejections": {
+    "duplicate_hash": 493
+  }
+}

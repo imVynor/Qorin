@@ -1,0 +1,59 @@
+{
+  "case_a_donald_trump": {
+    "prompt": "who is donald trump",
+    "before": {
+      "final_text": "The United States presidential election held on January 20, 2021 concluded with a 2-2 vote. The United States is the second-largest economy in the world, with a total of 176 million people. Donald Trump is the seventh president of the United States and a member of the Democratic Party.",
+      "is_grounded": false,
+      "total_claims": 3,
+      "supported_claims": 0,
+      "unsupported_claims": 3,
+      "hallucinated_facts": [
+        "2-2 vote",
+        "176 million people",
+        "seventh president",
+        "Democratic Party"
+      ],
+      "citations": []
+    },
+    "after": {
+      "final_text": "Based on verified sources ([SOURCE_1], [SOURCE_2]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States [SOURCE_1]. He was the younger brother of Donald Trump and a loyal supporter of his political career [SOURCE_2].",
+      "is_grounded": true,
+      "total_claims": 2,
+      "supported_claims": 2,
+      "unsupported_claims": 0,
+      "citations": [
+        "SOURCE_1",
+        "SOURCE_2"
+      ],
+      "latency_ms": 9469.95
+    }
+  },
+  "case_b_current_president": {
+    "prompt": "who is the current president of the United States?",
+    "before": {
+      "final_text": "The current president of the United States is John F. Kennedy.",
+      "is_grounded": false,
+      "unsupported_claims": 1
+    },
+    "after": {
+      "final_text": "Based on verified sources ([SOURCE_3], [SOURCE_1]): Donald John Trump (born June 14, 1946) is an American politician, media personality, and businessman who is the 47th president of the United States  [SOURCE_3]. President Trump built on his success in private life when he entered into politics and public service [SOURCE_1].",
+      "is_grounded": true,
+      "unsupported_claims": 0,
+      "latency_ms": 2610.9
+    }
+  },
+  "case_d_fifa_world_cup": {
+    "prompt": "what was the result of the 2022 FIFA World Cup?",
+    "before": {
+      "final_text": "The 2022 FIFA World Cup was won by Germany defeating Brazil 7-1.",
+      "is_grounded": false,
+      "unsupported_claims": 1
+    },
+    "after": {
+      "final_text": "Based on verified sources ([SOURCE_3], [SOURCE_1]): The final match of the 2022 FIFA World Cup , the 22nd edition of FIFA 's competition for men's national football teams, was played at Lusail Stadium in Lusail, Qatar, on 18 December 2022 (Qatari National Day), and was contested by Argentina and defending champions France [SOURCE_3]. The 2022 FIFA World Cup was the 22nd FIFA World Cup , the quadrennial world championship for national football teams organised by FIFA  [SOURCE_1].",
+      "is_grounded": true,
+      "unsupported_claims": 0,
+      "latency_ms": 2717.6
+    }
+  }
+}

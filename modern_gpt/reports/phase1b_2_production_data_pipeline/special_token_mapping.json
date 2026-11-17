@@ -1,0 +1,52 @@
+{
+  "<|pad|>": {
+    "id": 0,
+    "role": "boundary",
+    "loss_mask": 0
+  },
+  "<|unk|>": {
+    "id": 1,
+    "role": "boundary",
+    "loss_mask": 0
+  },
+  "<|bos|>": {
+    "id": 2,
+    "role": "boundary",
+    "loss_mask": 0
+  },
+  "<|eos|>": {
+    "id": 3,
+    "role": "boundary",
+    "loss_mask": 1
+  },
+  "<|im_start|>": {
+    "id": 4,
+    "role": "control",
+    "loss_mask": 1
+  },
+  "<|im_end|>": {
+    "id": 5,
+    "role": "control",
+    "loss_mask": 1
+  },
+  "<|tool_call|>": {
+    "id": 6,
+    "role": "control",
+    "loss_mask": 1
+  },
+  "<|tool_result|>": {
+    "id": 7,
+    "role": "control",
+    "loss_mask": 0
+  },
+  "<|tool_error|>": {
+    "id": 8,
+    "role": "control",
+    "loss_mask": 0
+  },
+  "<|endoftext|>": {
+    "id": 9,
+    "role": "boundary",
+    "loss_mask": 1
+  }
+}

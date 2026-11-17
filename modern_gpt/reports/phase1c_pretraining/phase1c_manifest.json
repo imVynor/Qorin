@@ -1,0 +1,454 @@
+{
+  "phase": "1C",
+  "timestamp": "2026-11-12T03:23:12.017010",
+  "model": {
+    "name": "ModernGPT-S-500M",
+    "parameters": 514389504,
+    "layers": 20,
+    "hidden_dim": 1536,
+    "query_heads": 24,
+    "kv_heads": 4,
+    "context_length": 2048,
+    "tied_embeddings": true,
+    "linear_biases": false
+  },
+  "hardware": {
+    "os": "Windows 11",
+    "python": "3.12.13",
+    "ram_total_gb": 31.43,
+    "ram_available_gb": 18.11,
+    "disk_total_gb": 851.65,
+    "disk_free_gb": 211.4,
+    "pytorch_version": "2.16.0.dev20261022+cu134",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "vram_total_gb": 7.93,
+    "compute_capability": "12.0",
+    "cuda_runtime_version": "13.4",
+    "driver_version": "Unknown",
+    "bf16_supported": true,
+    "fp16_supported": true,
+    "tf32_supported": true,
+    "sdpa_backends": {
+      "flash_attention": true,
+      "math": true,
+      "mem_efficient": true
+    },
+    "gpu_temp_c": 52.0,
+    "power_draw_w": 5.57
+  },
+  "memory_benchmark": {
+    "microbatch_1": {
+      "status": "SUCCESS",
+      "loss": 10.5752,
+      "peak_allocated_mib": 4222.23,
+      "peak_allocated_gib": 4.12,
+      "peak_reserved_mib": 4388.0,
+      "peak_reserved_gib": 4.29,
+      "finite_params": true,
+      "checkpoint_roundtrip_match": true
+    },
+    "microbatch_2": {
+      "status": "SUCCESS",
+      "loss": 10.5657,
+      "peak_allocated_mib": 8618.45,
+      "peak_allocated_gib": 8.42,
+      "peak_reserved_mib": 8910.0,
+      "peak_reserved_gib": 8.7,
+      "finite_params": true,
+      "checkpoint_roundtrip_match": true
+    },
+    "microbatch_4": {
+      "status": "SUCCESS",
+      "loss": 10.7275,
+      "peak_allocated_mib": 9567.51,
+      "peak_allocated_gib": 9.34,
+      "peak_reserved_mib": 11238.0,
+      "peak_reserved_gib": 10.97,
+      "finite_params": true,
+      "checkpoint_roundtrip_match": true
+    }
+  },
+  "throughput_benchmark": {
+    "microbatch_size": 1,
+    "grad_accum_steps": 16,
+    "sequence_length": 2048,
+    "tokens_per_update": 32768,
+    "mean_throughput_tokens_per_sec": 5124.5,
+    "median_throughput_tokens_per_sec": 5054.4,
+    "conservative_throughput_tokens_per_sec": 5017.2,
+    "min_throughput": 4837.8,
+    "max_throughput": 5556.0,
+    "mean_seconds_per_update": 6.404,
+    "peak_vram_allocated_mib": 4982.84,
+    "peak_vram_reserved_mib": 5378.0,
+    "avg_gpu_temp_c": 86.5,
+    "max_gpu_temp_c": 87.0,
+    "avg_power_w": 89.3,
+    "cpu_util_pct": 8.0,
+    "raw_step_throughputs": [
+      5556.0,
+      5457.0,
+      5350.7,
+      5137.9,
+      5234.0,
+      5188.7,
+      5146.7,
+      4837.8,
+      5054.4,
+      5043.9,
+      4901.1,
+      5017.2,
+      5033.0,
+      5017.9,
+      4891.0
+    ],
+    "raw_update_times": [
+      5.898,
+      6.005,
+      6.124,
+      6.378,
+      6.261,
+      6.315,
+      6.367,
+      6.773,
+      6.483,
+      6.497,
+      6.686,
+      6.531,
+      6.511,
+      6.53,
+      6.7
+    ],
+    "telemetry": [
+      {
+        "temp_c": 86.0,
+        "power_w": 110.78,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 87.0,
+        "power_w": 104.11,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 86.0,
+        "power_w": 96.33,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 87.0,
+        "power_w": 96.15,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 87.0,
+        "power_w": 91.13,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 87.0,
+        "power_w": 88.75,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 87.0,
+        "power_w": 86.75,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 87.0,
+        "power_w": 85.77,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 87.0,
+        "power_w": 81.93,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 87.0,
+        "power_w": 85.38,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 86.0,
+        "power_w": 89.08,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 86.0,
+        "power_w": 81.3,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 87.0,
+        "power_w": 81.83,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 85.0,
+        "power_w": 79.91,
+        "util_pct": 99.0
+      },
+      {
+        "temp_c": 86.0,
+        "power_w": 80.58,
+        "util_pct": 99.0
+      }
+    ]
+  },
+  "runtime_estimates": {
+    "budgets": {
+      "500M": {
+        "optimistic": {
+          "tokens": 500000000,
+          "tps": 5556.0,
+          "pure_train_hours": 25.0,
+          "n_cooldown_cycles": 14,
+          "cooldown_hours": 3.5,
+          "validation_hours": 0.17,
+          "checkpoint_hours": 0.01,
+          "total_wall_clock_hours": 28.67,
+          "total_wall_clock_days": 1.19
+        },
+        "expected": {
+          "tokens": 500000000,
+          "tps": 5054.4,
+          "pure_train_hours": 27.48,
+          "n_cooldown_cycles": 15,
+          "cooldown_hours": 3.75,
+          "validation_hours": 0.18,
+          "checkpoint_hours": 0.01,
+          "total_wall_clock_hours": 31.42,
+          "total_wall_clock_days": 1.31
+        },
+        "conservative": {
+          "tokens": 500000000,
+          "tps": 4837.8,
+          "pure_train_hours": 28.71,
+          "n_cooldown_cycles": 16,
+          "cooldown_hours": 4.0,
+          "validation_hours": 0.19,
+          "checkpoint_hours": 0.01,
+          "total_wall_clock_hours": 32.91,
+          "total_wall_clock_days": 1.37
+        }
+      },
+      "1B": {
+        "optimistic": {
+          "tokens": 1000000000,
+          "tps": 5556.0,
+          "pure_train_hours": 50.0,
+          "n_cooldown_cycles": 28,
+          "cooldown_hours": 7.0,
+          "validation_hours": 0.33,
+          "checkpoint_hours": 0.02,
+          "total_wall_clock_hours": 57.35,
+          "total_wall_clock_days": 2.39
+        },
+        "expected": {
+          "tokens": 1000000000,
+          "tps": 5054.4,
+          "pure_train_hours": 54.96,
+          "n_cooldown_cycles": 31,
+          "cooldown_hours": 7.75,
+          "validation_hours": 0.37,
+          "checkpoint_hours": 0.02,
+          "total_wall_clock_hours": 63.09,
+          "total_wall_clock_days": 2.63
+        },
+        "conservative": {
+          "tokens": 1000000000,
+          "tps": 4837.8,
+          "pure_train_hours": 57.42,
+          "n_cooldown_cycles": 32,
+          "cooldown_hours": 8.0,
+          "validation_hours": 0.38,
+          "checkpoint_hours": 0.02,
+          "total_wall_clock_hours": 65.82,
+          "total_wall_clock_days": 2.74
+        }
+      },
+      "2B": {
+        "optimistic": {
+          "tokens": 2000000000,
+          "tps": 5556.0,
+          "pure_train_hours": 99.99,
+          "n_cooldown_cycles": 57,
+          "cooldown_hours": 14.25,
+          "validation_hours": 0.67,
+          "checkpoint_hours": 0.03,
+          "total_wall_clock_hours": 114.94,
+          "total_wall_clock_days": 4.79
+        },
+        "expected": {
+          "tokens": 2000000000,
+          "tps": 5054.4,
+          "pure_train_hours": 109.92,
+          "n_cooldown_cycles": 62,
+          "cooldown_hours": 15.5,
+          "validation_hours": 0.73,
+          "checkpoint_hours": 0.03,
+          "total_wall_clock_hours": 126.18,
+          "total_wall_clock_days": 5.26
+        },
+        "conservative": {
+          "tokens": 2000000000,
+          "tps": 4837.8,
+          "pure_train_hours": 114.84,
+          "n_cooldown_cycles": 65,
+          "cooldown_hours": 16.25,
+          "validation_hours": 0.77,
+          "checkpoint_hours": 0.03,
+          "total_wall_clock_hours": 131.89,
+          "total_wall_clock_days": 5.5
+        }
+      },
+      "3B": {
+        "optimistic": {
+          "tokens": 3000000000,
+          "tps": 5556.0,
+          "pure_train_hours": 149.99,
+          "n_cooldown_cycles": 85,
+          "cooldown_hours": 21.25,
+          "validation_hours": 1.0,
+          "checkpoint_hours": 0.05,
+          "total_wall_clock_hours": 172.29,
+          "total_wall_clock_days": 7.18
+        },
+        "expected": {
+          "tokens": 3000000000,
+          "tps": 5054.4,
+          "pure_train_hours": 164.87,
+          "n_cooldown_cycles": 94,
+          "cooldown_hours": 23.5,
+          "validation_hours": 1.1,
+          "checkpoint_hours": 0.05,
+          "total_wall_clock_hours": 189.52,
+          "total_wall_clock_days": 7.9
+        },
+        "conservative": {
+          "tokens": 3000000000,
+          "tps": 4837.8,
+          "pure_train_hours": 172.25,
+          "n_cooldown_cycles": 98,
+          "cooldown_hours": 24.5,
+          "validation_hours": 1.15,
+          "checkpoint_hours": 0.05,
+          "total_wall_clock_hours": 197.95,
+          "total_wall_clock_days": 8.25
+        }
+      },
+      "4B": {
+        "optimistic": {
+          "tokens": 4000000000,
+          "tps": 5556.0,
+          "pure_train_hours": 199.98,
+          "n_cooldown_cycles": 114,
+          "cooldown_hours": 28.5,
+          "validation_hours": 1.33,
+          "checkpoint_hours": 0.07,
+          "total_wall_clock_hours": 229.88,
+          "total_wall_clock_days": 9.58
+        },
+        "expected": {
+          "tokens": 4000000000,
+          "tps": 5054.4,
+          "pure_train_hours": 219.83,
+          "n_cooldown_cycles": 125,
+          "cooldown_hours": 31.25,
+          "validation_hours": 1.47,
+          "checkpoint_hours": 0.07,
+          "total_wall_clock_hours": 252.61,
+          "total_wall_clock_days": 10.53
+        },
+        "conservative": {
+          "tokens": 4000000000,
+          "tps": 4837.8,
+          "pure_train_hours": 229.67,
+          "n_cooldown_cycles": 131,
+          "cooldown_hours": 32.75,
+          "validation_hours": 1.53,
+          "checkpoint_hours": 0.07,
+          "total_wall_clock_hours": 264.02,
+          "total_wall_clock_days": 11.0
+        }
+      },
+      "5B": {
+        "optimistic": {
+          "tokens": 5000000000,
+          "tps": 5556.0,
+          "pure_train_hours": 249.98,
+          "n_cooldown_cycles": 142,
+          "cooldown_hours": 35.5,
+          "validation_hours": 1.67,
+          "checkpoint_hours": 0.08,
+          "total_wall_clock_hours": 287.23,
+          "total_wall_clock_days": 11.97
+        },
+        "expected": {
+          "tokens": 5000000000,
+          "tps": 5054.4,
+          "pure_train_hours": 274.79,
+          "n_cooldown_cycles": 157,
+          "cooldown_hours": 39.25,
+          "validation_hours": 1.83,
+          "checkpoint_hours": 0.08,
+          "total_wall_clock_hours": 315.95,
+          "total_wall_clock_days": 13.16
+        },
+        "conservative": {
+          "tokens": 5000000000,
+          "tps": 4837.8,
+          "pure_train_hours": 287.09,
+          "n_cooldown_cycles": 164,
+          "cooldown_hours": 41.0,
+          "validation_hours": 1.91,
+          "checkpoint_hours": 0.08,
+          "total_wall_clock_hours": 330.09,
+          "total_wall_clock_days": 13.75
+        }
+      }
+    },
+    "time_windows": {
+      "6_hours": {
+        "window_hours": 6,
+        "active_training_hours": 5.1,
+        "tokens_achievable": 92798784,
+        "tokens_readable": "93M"
+      },
+      "12_hours": {
+        "window_hours": 12,
+        "active_training_hours": 10.2,
+        "tokens_achievable": 185597568,
+        "tokens_readable": "186M"
+      },
+      "24_hours": {
+        "window_hours": 24,
+        "active_training_hours": 20.4,
+        "tokens_achievable": 371195136,
+        "tokens_readable": "371M"
+      },
+      "48_hours": {
+        "window_hours": 48,
+        "active_training_hours": 40.8,
+        "tokens_achievable": 742390272,
+        "tokens_readable": "742M"
+      },
+      "72_hours": {
+        "window_hours": 72,
+        "active_training_hours": 61.2,
+        "tokens_achievable": 1113585407,
+        "tokens_readable": "1.11B"
+      }
+    }
+  },
+  "operating_cycle": {
+    "active_training_minutes": 105,
+    "cooldown_minutes": 15,
+    "max_safe_temp_c": 92.0
+  },
+  "reports_generated": 17,
+  "status": "READY_FOR_PRETRAINING"
+}

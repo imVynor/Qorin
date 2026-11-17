@@ -1,0 +1,320 @@
+{
+  "base_pretrained": {
+    "total_tasks": 50,
+    "syntax_valid_count": 1,
+    "syntax_valid_pct": 2.0,
+    "pass_at_1_count": 0,
+    "pass_at_1_pct": 0.0,
+    "is_prime_suite": {
+      "total_cases": 13,
+      "passed_cases": 0,
+      "accuracy_pct": 0.0,
+      "generated_code": "Write a Python function `is_prime(n)` that returns True if n is prime, and False otherwise.emerte\n```\n\n### Conclusion\n\nIn this chapter, we have explored the concept of prime numbers and their applications in Python programming. We have also learned how to use Python to generate and manipulate numbers, as well as how to use Python to generate and manipulate numbers.\n\nIn the next chapter, we will delve into the world of Python programming and learn how to use it to generate and manipulate numbers. We will also explore the use of Python to generate and manipulate numbers, as well as the use of Python to generate and manipulate numbers.\n\nIn the next chapter, we will delve into the world of Python programming",
+      "cases": [
+        {
+          "input": -7,
+          "expected": false,
+          "category": "negative_integer",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": -1,
+          "expected": false,
+          "category": "negative_integer",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 0,
+          "expected": false,
+          "category": "zero",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 1,
+          "expected": false,
+          "category": "one",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 2,
+          "expected": true,
+          "category": "two",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 3,
+          "expected": true,
+          "category": "small_prime",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 4,
+          "expected": false,
+          "category": "small_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 9,
+          "expected": false,
+          "category": "small_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 15,
+          "expected": false,
+          "category": "small_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 17,
+          "expected": true,
+          "category": "larger_prime",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 97,
+          "expected": true,
+          "category": "larger_prime",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 100,
+          "expected": false,
+          "category": "larger_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 541,
+          "expected": true,
+          "category": "larger_prime",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        }
+      ]
+    }
+  },
+  "experiment_a": {
+    "total_tasks": 50,
+    "syntax_valid_count": 26,
+    "syntax_valid_pct": 52.0,
+    "pass_at_1_count": 7,
+    "pass_at_1_pct": 14.0,
+    "is_prime_suite": {
+      "total_cases": 13,
+      "passed_cases": 8,
+      "accuracy_pct": 61.54,
+      "generated_code": "def is_prime(n):\n    return n > 0",
+      "cases": [
+        {
+          "input": -7,
+          "expected": false,
+          "category": "negative_integer",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": -1,
+          "expected": false,
+          "category": "negative_integer",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 0,
+          "expected": false,
+          "category": "zero",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 1,
+          "expected": false,
+          "category": "one",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 2,
+          "expected": true,
+          "category": "two",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 3,
+          "expected": true,
+          "category": "small_prime",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 4,
+          "expected": false,
+          "category": "small_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 9,
+          "expected": false,
+          "category": "small_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 15,
+          "expected": false,
+          "category": "small_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 17,
+          "expected": true,
+          "category": "larger_prime",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 97,
+          "expected": true,
+          "category": "larger_prime",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 100,
+          "expected": false,
+          "category": "larger_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 541,
+          "expected": true,
+          "category": "larger_prime",
+          "passed": true,
+          "status": "PASSED"
+        }
+      ]
+    }
+  },
+  "experiment_b": {
+    "total_tasks": 50,
+    "syntax_valid_count": 46,
+    "syntax_valid_pct": 92.0,
+    "pass_at_1_count": 21,
+    "pass_at_1_pct": 42.0,
+    "is_prime_suite": {
+      "total_cases": 13,
+      "passed_cases": 6,
+      "accuracy_pct": 46.15,
+      "generated_code": "def is_prime(n):\n    if n == 0:\n        return False\n    else:\n        return True",
+      "cases": [
+        {
+          "input": -7,
+          "expected": false,
+          "category": "negative_integer",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": -1,
+          "expected": false,
+          "category": "negative_integer",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 0,
+          "expected": false,
+          "category": "zero",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 1,
+          "expected": false,
+          "category": "one",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 2,
+          "expected": true,
+          "category": "two",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 3,
+          "expected": true,
+          "category": "small_prime",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 4,
+          "expected": false,
+          "category": "small_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 9,
+          "expected": false,
+          "category": "small_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 15,
+          "expected": false,
+          "category": "small_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 17,
+          "expected": true,
+          "category": "larger_prime",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 97,
+          "expected": true,
+          "category": "larger_prime",
+          "passed": true,
+          "status": "PASSED"
+        },
+        {
+          "input": 100,
+          "expected": false,
+          "category": "larger_composite",
+          "passed": false,
+          "status": "FAILED (Exit Code 1)"
+        },
+        {
+          "input": 541,
+          "expected": true,
+          "category": "larger_prime",
+          "passed": true,
+          "status": "PASSED"
+        }
+      ]
+    }
+  }
+}

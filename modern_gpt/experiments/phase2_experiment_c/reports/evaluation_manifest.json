@@ -1,0 +1,114 @@
+{
+  "evaluation_title": "Phase 2D Experiment C Final Capability Audit & Evaluation Manifest",
+  "timestamp": "2026-11-16T17:15:08.234793+00:00",
+  "branches_evaluated": [
+    "base_pretrained",
+    "experiment_a",
+    "experiment_b",
+    "experiment_c"
+  ],
+  "summary": {
+    "checkpoints": {
+      "base_pretrained": {
+        "name": "ModernGPT-S 500M Pretrained Base",
+        "sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d"
+      },
+      "experiment_a": {
+        "name": "Experiment A (25M General SFT Pilot)",
+        "sha256": "249fb467a9cf76e732890cc0501ec39a443756cb2f1c86c66402960f4abbadc4"
+      },
+      "experiment_b": {
+        "name": "Experiment B (35M General + Tool-Use SFT)",
+        "sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f"
+      },
+      "experiment_c": {
+        "name": "Experiment C (Targeted Autonomous Two-Tool SFT)",
+        "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b"
+      }
+    },
+    "metrics": {
+      "pretraining_retention_loss": {
+        "base_pretrained": 2.8621,
+        "experiment_a": 2.8487,
+        "experiment_b": 2.8499,
+        "experiment_c": 2.8651
+      },
+      "pretraining_retention_ppl": {
+        "base_pretrained": 17.5,
+        "experiment_a": 17.26,
+        "experiment_b": 17.29,
+        "experiment_c": 17.55
+      },
+      "math_accuracy_pct": {
+        "base_pretrained": 0.0,
+        "experiment_a": 0.0,
+        "experiment_b": 4.0,
+        "experiment_c": 0.0
+      },
+      "coding_syntax_valid_pct": {
+        "base_pretrained": 2.0,
+        "experiment_a": 52.0,
+        "experiment_b": 92.0,
+        "experiment_c": 96.0
+      },
+      "coding_pass_at_1_pct": {
+        "base_pretrained": 0.0,
+        "experiment_a": 14.0,
+        "experiment_b": 42.0,
+        "experiment_c": 38.0
+      },
+      "is_prime_accuracy_pct": {
+        "base_pretrained": 0.0,
+        "experiment_a": 61.54,
+        "experiment_b": 46.15,
+        "experiment_c": 53.85
+      },
+      "tool_intent_f1": {
+        "base_pretrained": 0.0,
+        "experiment_a": 0.0,
+        "experiment_b": 0.0,
+        "experiment_c": 0.8889
+      },
+      "tool_syntax_valid_pct": {
+        "base_pretrained": 0.0,
+        "experiment_a": 0.0,
+        "experiment_b": 0.0,
+        "experiment_c": 66.67
+      },
+      "tool_end_to_end_success_pct": {
+        "base_pretrained": 4.0,
+        "experiment_a": 8.0,
+        "experiment_b": 4.0,
+        "experiment_c": 6.67
+      },
+      "distinct_1": {
+        "base_pretrained": 0.4877,
+        "experiment_a": 0.4878,
+        "experiment_b": 0.5075,
+        "experiment_c": 0.5067
+      },
+      "repetition_4_rate": {
+        "base_pretrained": 0.3443,
+        "experiment_a": 0.3079,
+        "experiment_b": 0.2933,
+        "experiment_c": 0.2951
+      }
+    }
+  },
+  "deliverables": [
+    "evaluation_manifest.json",
+    "evaluation_integrity_audit.json",
+    "training_report_reconciliation.json",
+    "general_instruction_evaluation.json",
+    "reasoning_math_evaluation.json",
+    "coding_evaluation.json",
+    "tool_use_evaluation.json",
+    "pretraining_retention.json",
+    "raw_generations.jsonl",
+    "individual_task_results.jsonl",
+    "failure_analysis.md",
+    "base_vs_a_vs_b_vs_c.json",
+    "final_report.md",
+    "SHA256SUMS"
+  ]
+}

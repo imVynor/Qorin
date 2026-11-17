@@ -1,0 +1,39 @@
+# Experiment A: General SFT Pilot
+# Focus: Conversational fluency, multi-turn dialogue, summarization, explanations, instruction following
+experiment_name: "sft_exp_a_general_25m"
+model_architecture: "ModernGPT-S-500M"
+init_checkpoint: "modern_gpt/checkpoints/500m_pretrain/ckpt_latest.pt"
+tokenizer_path: "modern_gpt/artifacts/tokenizer_32k/tokenizer.json"
+train_dataset_path: "modern_gpt/data_sft_release/splits/train.jsonl"
+val_dataset_path: "modern_gpt/data_sft_release/splits/val.jsonl"
+output_dir: "modern_gpt/experiments/phase_2b/experiment_a_general_25m"
+
+# Training Hyperparameters
+optimizer: "adamw_8bit"
+learning_rate: 2.5e-5
+min_learning_rate: 2.5e-6
+weight_decay: 0.01
+warmup_ratio: 0.03
+max_grad_norm: 1.0
+precision: "bfloat16"
+gradient_checkpointing: true
+
+# Batching & Schedule
+microbatch_size: 1
+gradient_accumulation_steps: 8
+max_seq_len: 2048
+max_training_tokens: 25000000 # 25M total serialized training-input tokens
+num_epochs: 1
+random_seed: 42
+
+# Category Sampling Filter (General & Reasoning only - no tool-use records)
+category_filter:
+  - "general_instructions"
+  - "reasoning"
+
+# Logging & Checkpointing
+logging_steps: 10
+eval_steps: 250
+save_steps: 500
+thermal_cooldown_interval_minutes: 105
+thermal_cooldown_duration_minutes: 15

@@ -1,0 +1,133 @@
+{
+  "audit_timestamp": "2026-11-15T18:25:00Z",
+  "stage": "Stage 0 \u2014 Repository and Experiment Audit",
+  "experiment_id": "sft_exp_b_general_tools_35m",
+  "architecture_audit": {
+    "checkpoint_sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+    "expected_sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+    "sha256_match": true,
+    "tokenizer_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+    "tokenizer_fingerprint": "3559c7435e1d9330",
+    "pretraining_tokens": 1121648640,
+    "pretraining_step": 34230,
+    "total_unique_parameters": 514389504,
+    "tied_embeddings_verified": true,
+    "load_state_dict_result": "STRICT_MATCH_ZERO_MISSING_ZERO_UNEXPECTED",
+    "checkpoint_config": {
+      "vocab_size": 32768,
+      "context_length": 2048,
+      "emb_dim": 1536,
+      "n_heads": 24,
+      "n_layers": 20,
+      "ffn_hidden_dim": 3840,
+      "dropout": 0.0,
+      "qkv_bias": false,
+      "rope_theta": 10000.0,
+      "num_kv_heads": 4,
+      "gradient_checkpointing": true,
+      "rope_scale": 1.0,
+      "rope_type": "default",
+      "out_proj_bias": false
+    },
+    "model_config_py": {
+      "n_layers": 20,
+      "emb_dim": 1536,
+      "n_heads": 24,
+      "num_kv_heads": 4,
+      "gqa_ratio": 6,
+      "head_dim": 64,
+      "ffn_hidden_dim": 3840,
+      "rope_theta": 10000.0,
+      "context_length": 2048,
+      "vocab_size": 32768
+    },
+    "discrepancy_resolution": {
+      "status": "RESOLVED_AUTHORITATIVE",
+      "explanation": "Checkpoint metadata, model implementation, and training state dictionary strictly agree: n_layers=20, emb_dim=1536, n_heads=24, num_kv_heads=4 (6:1 GQA), head_dim=64, ffn_hidden_dim=3840, rope_theta=10000.0, params=514,389,504. The mention in an earlier SFT preparation report of 16 query heads / RoPE theta 500,000 was a textual documentation typo; the actual codebase and frozen weights have always been 24 query heads and RoPE theta 10,000.0."
+    }
+  },
+  "dataset_audit": {
+    "release_version": "1.1.0-production-release",
+    "train_sha256": "622240e93f850e33bfeaae719fb290c6156751df60e29e7d344a720e3aa219e9",
+    "train_match": true,
+    "val_sha256": "77d7f8d19867f071b09b4895aa48454a7a6c9e2d5a1ed16a214f117b15e637dc",
+    "val_match": true,
+    "test_sha256": "b3798c6fcf1213c473a445fce1575e7dd11ff2863949e18547eb85bc7d641923",
+    "test_match": true
+  },
+  "tool_audit": {
+    "total_tool_records": 74368,
+    "breakdown": {
+      "apigen_schema_demonstrations": {
+        "records": 73621,
+        "share_pct": 98.99,
+        "source": "HuggingFaceTB/smoltalk:apigen-80k",
+        "classification": "Schema-validated function-calling demonstration (not executed in live subprocess)"
+      },
+      "authentic_live_sandbox_executions": {
+        "records": 543,
+        "share_pct": 0.73,
+        "source": "ModernGPT_Harness:live_sandbox_execution (353) + qorin_harness:live_sandbox_execution (190)",
+        "classification": "Genuine Python subprocess execution with stdout/stderr captured directly from runtime"
+      },
+      "multistep_workflows": {
+        "records": 96,
+        "share_pct": 0.13,
+        "source": "qorin_harness:multistep_execution",
+        "classification": "Multi-turn sequential tool invocations and state chaining"
+      },
+      "error_recovery_demonstrations": {
+        "records": 99,
+        "share_pct": 0.13,
+        "source": "qorin_harness:error_recovery (96) + ModernGPT_Harness:error_recovery_trajectory (3)",
+        "classification": "Tool error handling and fallback adaptation"
+      },
+      "negative_controls": {
+        "records": 7,
+        "share_pct": 0.01,
+        "source": "qorin_harness:negative_control (4) + ModernGPT_Harness:negative_tool_control (3)",
+        "classification": "No-tool decision controls (direct answering without tool invocation)"
+      },
+      "tool_safety": {
+        "records": 2,
+        "share_pct": 0.003,
+        "source": "qorin_harness:tool_safety",
+        "classification": "Prompt injection resistance & untrusted code rejection"
+      }
+    },
+    "provenance_reconciliation_verdict": "Speculative claims of 32k authentic Python executions in earlier reports are reconciled against actual repository files: 73,621 are APIGen demonstrations and 543 are authentic live sandbox executions. Authenticity labels will be strictly preserved in sampling manifests."
+  },
+  "throughput_reconciliation": {
+    "total_conversation_tokens": 24924426,
+    "total_assistant_target_tokens": 19900296,
+    "total_wall_clock_seconds": 8012.6,
+    "total_wall_clock_minutes": 133.54,
+    "cooldown_duration_seconds": 918.0,
+    "cooldown_duration_minutes": 15.3,
+    "active_training_seconds": 7094.7,
+    "active_training_minutes": 118.24,
+    "reconciled_metrics": {
+      "pure_active_conv_throughput_tok_s": 3513.1,
+      "pure_active_asst_throughput_tok_s": 2805.0,
+      "overall_elapsed_conv_throughput_tok_s": 3110.6,
+      "microbenchmark_isolated_compute_throughput_tok_s": 5136.5
+    },
+    "explanation": "In Experiment A, 3,110.7 tok/s was the end-to-end total elapsed project throughput (24.9M tokens / 8,012.6 total elapsed seconds including the 15-minute cooldown break, 16 validation passes, and 8 checkpoint disk writes). The pure active training time was 118.24 minutes (3,513.1 tok/s). The difference between active training (3,513 tok/s) and isolated microbenchmark (5,136 tok/s) is explained by dataloader collate overhead and per-step Python logging."
+  },
+  "tool_harness_audit": {
+    "sandbox_module": "backend/tools/python_sandbox.py",
+    "sandbox_status": "OPERATIONAL",
+    "timeout_seconds": 5.0,
+    "security_headers": "Subprocess isolation with restricted modules (_BLOCKED: socket, urllib, http, ftplib, smtplib, webbrowser, subprocess, shutil)",
+    "orchestrator_module": "backend/tools/orchestrator.py",
+    "orchestrator_status": "OPERATIONAL",
+    "protocol_delimiters": {
+      "tool_call": "<|tool_call|>",
+      "tool_result": "<|tool_result|>",
+      "tool_error": "<|tool_error|>",
+      "im_start": "<|im_start|>",
+      "im_end": "<|im_end|>"
+    }
+  },
+  "blockers_identified": []
+}

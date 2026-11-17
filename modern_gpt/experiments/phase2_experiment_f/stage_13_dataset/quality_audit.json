@@ -1,0 +1,28 @@
+{
+  "audit_timestamp": "2026-11-17T13:31:59.541219",
+  "total_records_evaluated": 1000,
+  "valid_serialization_count": 1000,
+  "valid_serialization_rate": 1.0,
+  "python_sandbox_executions": 437,
+  "python_sandbox_pass_rate": 1.0,
+  "provenance_records_present": 1000,
+  "tool_call_id_integrity": {
+    "multi_turn_records_with_call_001_and_call_002": 330,
+    "sequential_id_match_rate": 1.0
+  },
+  "context_window_compliance": {
+    "limit": 2048,
+    "max_length": 697,
+    "compliance_rate": 1.0
+  },
+  "loss_mask_integrity": {
+    "records_with_assistant_target": 1000,
+    "mean_assistant_tokens": 91.35,
+    "zero_target_records": 0
+  },
+  "rejection_summary": {
+    "records_rejected": 0,
+    "records_repaired": 0,
+    "records_accepted": 1000
+  }
+}

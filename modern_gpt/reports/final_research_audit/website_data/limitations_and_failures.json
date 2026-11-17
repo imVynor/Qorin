@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "title": "Transparent Limitations, Known Boundaries, and Negative Results",
+    "source_artifacts": [
+      "modern_gpt/reports/final_research_audit/failure_analysis.md",
+      "modern_gpt/reports/final_research_audit/extended_prime_audit.json"
+    ]
+  },
+  "negative_findings": [
+    {
+      "domain": "Symbolic Mathematics & Primality",
+      "hypothesis": "Model possesses algorithmic primality testing via learned code logic.",
+      "empirical_reality": "Model learned a superficial parity heuristic (is_prime := n % 2 != 0). Scores 59.46% on balanced sets by classifying all even numbers as composite, but fails on all odd composites (9, 15, 25, 49) and Carmichael numbers (561, 1105).",
+      "recommendation": "Do not claim genuine mathematical reasoning capability; state clearly that small models require external tools for reliable arithmetic."
+    },
+    {
+      "domain": "Autonomous Tool Selection Balance",
+      "hypothesis": "Model autonomously distinguishes between Python and Web Researcher when both are enabled.",
+      "empirical_reality": "Heavy inductive prior toward Python tool due to 10:1 representation in Stage 1 training data. Frequently calls Python even on factual lookup tasks unless Web tool is isolated.",
+      "recommendation": "Use routing guards or balanced two-tool fine-tuning in future work."
+    },
+    {
+      "domain": "Self-Correction & Output Verification",
+      "hypothesis": "Model critically validates tool observation against user question.",
+      "empirical_reality": "Model faithfully ingests and reports tool observation, but treats buggy script outputs as ground truth without self-correction.",
+      "recommendation": "Closed-loop synthesis should be audited by downstream verification modules."
+    },
+    {
+      "domain": "Schema Dilution in Experiment B",
+      "hypothesis": "Broad multi-tool schema training enables zero-shot tool usage.",
+      "empirical_reality": "Providing extensive multi-page schema documentation with only 0.69% authentic execution examples caused model to treat schemas as conversational text, resulting in 0% intent recall.",
+      "recommendation": "Compact manifests with authentic input-execution-observation supervision are strictly required."
+    }
+  ]
+}

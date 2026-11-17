@@ -1,0 +1,42 @@
+{
+  "validator_latency": {
+    "mean_ms": 0.023,
+    "p95_ms": 0.023,
+    "target_max_ms": 50.0,
+    "status": "PASSED (Sub-millisecond lightweight deterministic validator)"
+  },
+  "per_case_latencies": {
+    "case_a": {
+      "e2e_latency_ms": 9469.95,
+      "tool_retrieval_latency_ms": 877.32
+    },
+    "case_b": {
+      "e2e_latency_ms": 2610.9,
+      "tool_retrieval_latency_ms": 21.1
+    },
+    "case_c": {
+      "e2e_latency_ms": 5095.43,
+      "tool_retrieval_latency_ms": 920.43
+    },
+    "case_d": {
+      "e2e_latency_ms": 2717.6,
+      "tool_retrieval_latency_ms": 62.29
+    },
+    "case_e": {
+      "e2e_latency_ms": 0,
+      "tool_retrieval_latency_ms": 0
+    },
+    "case_f": {
+      "e2e_latency_ms": 0,
+      "tool_retrieval_latency_ms": 0
+    },
+    "case_g": {
+      "e2e_latency_ms": 0,
+      "tool_retrieval_latency_ms": 0
+    },
+    "case_h": {
+      "e2e_latency_ms": 3077.08,
+      "tool_retrieval_latency_ms": 0
+    }
+  }
+}

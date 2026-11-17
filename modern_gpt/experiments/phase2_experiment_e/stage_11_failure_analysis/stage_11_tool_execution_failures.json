@@ -1,0 +1,326 @@
+{
+  "audit_metadata": {
+    "stage": "Stage 11: Tool Execution Failure Analysis",
+    "pipeline_stages": [
+      "1. Model decides to use tool",
+      "2. Model selects correct tool",
+      "3. Model generates arguments",
+      "4. Arguments pass schema validation",
+      "5. Harness dispatches call",
+      "6. Tool executes successfully",
+      "7. Output returned to model",
+      "8. Model uses result correctly"
+    ],
+    "identical_metrics_reconciliation": {
+      "finding": "In Stage 10, schema validity rate, semantic argument validity rate, and dispatch rate showed identical numerators and denominators across models.",
+      "explanation": "1. QorinTwoStageProtocol.validate_and_sanitize_arguments enforces Python AST syntax verification and non-empty string checks during schema validation, making semantic argument validity definitionally identical to schema validity in this architecture. 2. The evaluator harness had no intermediate queue, rate-limiter, or approval gatekeeper; 100% of calls passing schema validation were immediately dispatched via orchestrator.execute_tool(), making dispatch count identically equal to schema validity count."
+    }
+  },
+  "models": {
+    "exp_d_parent": {
+      "stage_1_intent_decided": {
+        "attempts": 150,
+        "success": 132,
+        "rate": 0.88
+      },
+      "stage_2_tool_selected_correctly": {
+        "attempts": 114,
+        "success": 96,
+        "rate": 0.8421
+      },
+      "stage_3_args_generated": {
+        "attempts": 132,
+        "success": 132,
+        "rate": 1.0
+      },
+      "stage_4_schema_validated": {
+        "attempts": 132,
+        "success": 123,
+        "rate": 0.9318
+      },
+      "stage_5_dispatched": {
+        "attempts": 123,
+        "success": 123,
+        "rate": 1.0
+      },
+      "stage_6_executed_successfully": {
+        "attempts": 123,
+        "success": 29,
+        "rate": 0.2358
+      },
+      "stage_7_output_returned": {
+        "attempts": 29,
+        "success": 29,
+        "rate": 1.0
+      },
+      "stage_8_result_used_correctly": {
+        "attempts": 150,
+        "success": 33,
+        "rate": 0.22
+      },
+      "execution_breakdown_by_tool": {
+        "web_research": {
+          "dispatched": 82,
+          "executed": 3,
+          "failed": 79,
+          "failure_rate": 0.9634
+        },
+        "python": {
+          "dispatched": 41,
+          "executed": 26,
+          "failed": 15,
+          "failure_rate": 0.3659
+        }
+      },
+      "execution_failure_root_causes": {
+        "duckduckgo_scraping_timeout_or_blocked": 79,
+        "python_api_hallucination_runtime_exception": 15,
+        "schema_or_json_malformation": 9
+      }
+    },
+    "branch_b_best": {
+      "stage_1_intent_decided": {
+        "attempts": 150,
+        "success": 111,
+        "rate": 0.74
+      },
+      "stage_2_tool_selected_correctly": {
+        "attempts": 114,
+        "success": 90,
+        "rate": 0.7895
+      },
+      "stage_3_args_generated": {
+        "attempts": 111,
+        "success": 111,
+        "rate": 1.0
+      },
+      "stage_4_schema_validated": {
+        "attempts": 111,
+        "success": 101,
+        "rate": 0.9099
+      },
+      "stage_5_dispatched": {
+        "attempts": 101,
+        "success": 101,
+        "rate": 1.0
+      },
+      "stage_6_executed_successfully": {
+        "attempts": 101,
+        "success": 36,
+        "rate": 0.3564
+      },
+      "stage_7_output_returned": {
+        "attempts": 36,
+        "success": 36,
+        "rate": 1.0
+      },
+      "stage_8_result_used_correctly": {
+        "attempts": 150,
+        "success": 35,
+        "rate": 0.2333
+      },
+      "execution_breakdown_by_tool": {
+        "web_research": {
+          "dispatched": 61,
+          "executed": 10,
+          "failed": 51,
+          "failure_rate": 0.8361
+        },
+        "python": {
+          "dispatched": 40,
+          "executed": 26,
+          "failed": 14,
+          "failure_rate": 0.35
+        }
+      },
+      "execution_failure_root_causes": {
+        "duckduckgo_scraping_timeout_or_blocked": 51,
+        "python_api_hallucination_runtime_exception": 14,
+        "schema_or_json_malformation": 10
+      }
+    },
+    "branch_c_best": {
+      "stage_1_intent_decided": {
+        "attempts": 150,
+        "success": 121,
+        "rate": 0.8067
+      },
+      "stage_2_tool_selected_correctly": {
+        "attempts": 114,
+        "success": 95,
+        "rate": 0.8333
+      },
+      "stage_3_args_generated": {
+        "attempts": 121,
+        "success": 121,
+        "rate": 1.0
+      },
+      "stage_4_schema_validated": {
+        "attempts": 121,
+        "success": 105,
+        "rate": 0.8678
+      },
+      "stage_5_dispatched": {
+        "attempts": 105,
+        "success": 105,
+        "rate": 1.0
+      },
+      "stage_6_executed_successfully": {
+        "attempts": 105,
+        "success": 16,
+        "rate": 0.1524
+      },
+      "stage_7_output_returned": {
+        "attempts": 16,
+        "success": 16,
+        "rate": 1.0
+      },
+      "stage_8_result_used_correctly": {
+        "attempts": 150,
+        "success": 34,
+        "rate": 0.2267
+      },
+      "execution_breakdown_by_tool": {
+        "web_research": {
+          "dispatched": 76,
+          "executed": 1,
+          "failed": 75,
+          "failure_rate": 0.9868
+        },
+        "python": {
+          "dispatched": 29,
+          "executed": 15,
+          "failed": 14,
+          "failure_rate": 0.4828
+        }
+      },
+      "execution_failure_root_causes": {
+        "duckduckgo_scraping_timeout_or_blocked": 75,
+        "python_api_hallucination_runtime_exception": 14,
+        "schema_or_json_malformation": 16
+      }
+    },
+    "branch_d_best": {
+      "stage_1_intent_decided": {
+        "attempts": 150,
+        "success": 126,
+        "rate": 0.84
+      },
+      "stage_2_tool_selected_correctly": {
+        "attempts": 114,
+        "success": 94,
+        "rate": 0.8246
+      },
+      "stage_3_args_generated": {
+        "attempts": 126,
+        "success": 126,
+        "rate": 1.0
+      },
+      "stage_4_schema_validated": {
+        "attempts": 126,
+        "success": 118,
+        "rate": 0.9365
+      },
+      "stage_5_dispatched": {
+        "attempts": 118,
+        "success": 118,
+        "rate": 1.0
+      },
+      "stage_6_executed_successfully": {
+        "attempts": 118,
+        "success": 27,
+        "rate": 0.2288
+      },
+      "stage_7_output_returned": {
+        "attempts": 27,
+        "success": 27,
+        "rate": 1.0
+      },
+      "stage_8_result_used_correctly": {
+        "attempts": 150,
+        "success": 34,
+        "rate": 0.2267
+      },
+      "execution_breakdown_by_tool": {
+        "web_research": {
+          "dispatched": 75,
+          "executed": 5,
+          "failed": 70,
+          "failure_rate": 0.9333
+        },
+        "python": {
+          "dispatched": 43,
+          "executed": 22,
+          "failed": 21,
+          "failure_rate": 0.4884
+        }
+      },
+      "execution_failure_root_causes": {
+        "duckduckgo_scraping_timeout_or_blocked": 70,
+        "python_api_hallucination_runtime_exception": 21,
+        "schema_or_json_malformation": 8
+      }
+    },
+    "branch_d_terminal": {
+      "stage_1_intent_decided": {
+        "attempts": 150,
+        "success": 113,
+        "rate": 0.7533
+      },
+      "stage_2_tool_selected_correctly": {
+        "attempts": 114,
+        "success": 93,
+        "rate": 0.8158
+      },
+      "stage_3_args_generated": {
+        "attempts": 113,
+        "success": 113,
+        "rate": 1.0
+      },
+      "stage_4_schema_validated": {
+        "attempts": 113,
+        "success": 95,
+        "rate": 0.8407
+      },
+      "stage_5_dispatched": {
+        "attempts": 95,
+        "success": 95,
+        "rate": 1.0
+      },
+      "stage_6_executed_successfully": {
+        "attempts": 95,
+        "success": 22,
+        "rate": 0.2316
+      },
+      "stage_7_output_returned": {
+        "attempts": 22,
+        "success": 22,
+        "rate": 1.0
+      },
+      "stage_8_result_used_correctly": {
+        "attempts": 150,
+        "success": 38,
+        "rate": 0.2533
+      },
+      "execution_breakdown_by_tool": {
+        "web_research": {
+          "dispatched": 63,
+          "executed": 7,
+          "failed": 56,
+          "failure_rate": 0.8889
+        },
+        "python": {
+          "dispatched": 32,
+          "executed": 15,
+          "failed": 17,
+          "failure_rate": 0.5312
+        }
+      },
+      "execution_failure_root_causes": {
+        "duckduckgo_scraping_timeout_or_blocked": 56,
+        "python_api_hallucination_runtime_exception": 17,
+        "schema_or_json_malformation": 18
+      }
+    }
+  }
+}

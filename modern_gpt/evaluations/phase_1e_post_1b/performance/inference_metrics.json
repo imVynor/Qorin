@@ -1,0 +1,20 @@
+{
+  "device_name": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "ttft_ms_by_prompt_len": {
+    "128": 15.0,
+    "512": 23.85,
+    "1024": 47.58,
+    "2048": 104.04
+  },
+  "prefill_throughput_tok_sec": {
+    "128": 8532.2,
+    "512": 21469.7,
+    "1024": 21520.2,
+    "2048": 19684.5
+  },
+  "inter_token_latency_ms": 15.63,
+  "decode_throughput_tok_sec": 64.0,
+  "peak_vram_allocated_mb": 1220.14,
+  "peak_vram_reserved_mb": 1352.0,
+  "model_parameters": 514389504
+}

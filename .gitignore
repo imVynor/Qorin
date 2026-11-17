@@ -1,5 +1,5 @@
 # ==============================================================================
-# QORIN Repository .gitignore (Frontend-First & Clean Release)
+# QORIN Repository .gitignore
 # ==============================================================================
 
 # Node / Frontend Build Outputs
@@ -22,10 +22,8 @@ pnpm-debug.log*
 !.env.example
 !.env.test
 *.env.local
-
-# Backend & Inference Server (Decoupled; Excluded from Initial Frontend Release)
-backend/
-**/backend/
+.secrets.json
+**/.secrets.json
 
 # Python Environments, Caches & Bytecode
 .venv/
@@ -36,16 +34,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pytest_cache/
+**/.pytest_cache/
 .coverage
 htmlcov/
 .mypy_cache/
 .ruff_cache/
 
 # Model Weights, Binary Checkpoints & Tensor Dumps (>50MB / GB-scale)
-# Note: Checkpoints are hosted separately; not committed to git.
+# Note: Checkpoints are hosted publicly on Hugging Face (vynor/qorin-models)
 *.pt
 *.pth
-*.ckpt
+*.ckpt*
 *.bin
 *.safetensors
 *.onnx
@@ -55,8 +54,7 @@ htmlcov/
 *.pkl
 checkpoints/
 **/checkpoints/
-modern_gpt/
-gpt2/
+**/runs/
 
 # Large Training Datasets, Tokenized Shards & Corpora
 *.jsonl
@@ -66,15 +64,21 @@ gpt2/
 *.tar.gz
 *.gz
 *.zip
-web.zip
 modern-gpt-instruction-data/
-artifacts/
-**/artifacts/
+modergpt/
+modern_gpt/archive/
+modern_gpt/artifacts/
+modern_gpt/data/
+modern_gpt/data_*/
+modern_gpt/logs/
+gpt2/gpt2/124M/
 
-# Databases, Cache & Transient Sandboxes
+# Databases, Transient Cache & Sandboxes
 *.db
 *.sqlite
 *.sqlite3
+backend/data/sandbox/
+backend/tools/retrieval_cache.sqlite
 
 # Operating System & IDE Artifacts
 .DS_Store
@@ -89,30 +93,25 @@ desktop.ini
 *.sln
 *.sw?
 
-# Testing Scripts & Verification Exclusions
-# Retain frontend verification scripts and tests; exclude internal Python test harnesses
-tests/*.py
-scripts/*.py
-tests/__pycache__/
-scripts/__pycache__/
+# Ephemeral Backup & Temp Files
+*.tmp
+*.bak
+*.bak_*
+
+# AI Planning Artifacts & Internal Scratch Workspaces
+artifacts/
+**/artifacts/
+scratch/
+**/scratch/
+QORIN_*.md
+website_content_inventory.md
+FINAL_DEPLOYMENT_SECURITY_GATE.md
+HF_DEPLOYMENT_FINAL_REPORT.md
+
+# Web Temporary Verification Files
 web/*.png
 !web/src/assets/*.png
 web/screenshot_*.png
 web/debug_capture.cjs
 web/test_*.cjs
 web/verify_*.cjs
-*.tmp
-*.bak
-*.bak_*
-
-# Internal Planning Documents & Scratch Workspaces
-scratch/
-QORIN_*.md
-website_content_inventory.md
-resources.txt
-test.ipynb
-start_harness.bat
-start_harness.ps1
-tools_export_data.py
-tool_context_spec.json
-web/README.md

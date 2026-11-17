@@ -1,0 +1,77 @@
+{
+  "tokenizer": {
+    "name": "tokenizer.json",
+    "sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+    "vocab_size": 32768
+  },
+  "context_length_limit": 2048,
+  "max_observed_sequence_length": 697,
+  "all_sequences_within_limit": true,
+  "splits": {
+    "train": {
+      "record_count": 800,
+      "total_tokens": 314712,
+      "assistant_target_tokens": 73186,
+      "mean_sequence_length": 393.39,
+      "min_sequence_length": 225,
+      "max_sequence_length": 697,
+      "assistant_token_percentage": 23.25
+    },
+    "validation": {
+      "record_count": 100,
+      "total_tokens": 39053,
+      "assistant_target_tokens": 9062,
+      "mean_sequence_length": 390.53,
+      "min_sequence_length": 232,
+      "max_sequence_length": 659,
+      "assistant_token_percentage": 23.2
+    },
+    "test": {
+      "record_count": 100,
+      "total_tokens": 39284,
+      "assistant_target_tokens": 9099,
+      "mean_sequence_length": 392.84,
+      "min_sequence_length": 227,
+      "max_sequence_length": 602,
+      "assistant_token_percentage": 23.16
+    }
+  },
+  "corpora": {
+    "corpus_multiturn": {
+      "record_count": 400,
+      "total_tokens": 201206,
+      "assistant_target_tokens": 59766,
+      "mean_sequence_length": 503.01,
+      "min_sequence_length": 324,
+      "max_sequence_length": 697,
+      "assistant_token_percentage": 29.7
+    },
+    "corpus_calibration": {
+      "record_count": 300,
+      "total_tokens": 94447,
+      "assistant_target_tokens": 19411,
+      "mean_sequence_length": 314.82,
+      "min_sequence_length": 225,
+      "max_sequence_length": 406,
+      "assistant_token_percentage": 20.55
+    },
+    "corpus_synthesis": {
+      "record_count": 300,
+      "total_tokens": 97396,
+      "assistant_target_tokens": 12170,
+      "mean_sequence_length": 324.65,
+      "min_sequence_length": 294,
+      "max_sequence_length": 410,
+      "assistant_token_percentage": 12.5
+    }
+  },
+  "aggregate": {
+    "record_count": 1000,
+    "total_tokens": 393049,
+    "assistant_target_tokens": 91347,
+    "mean_sequence_length": 393.05,
+    "min_sequence_length": 225,
+    "max_sequence_length": 697,
+    "assistant_token_percentage": 23.24
+  }
+}

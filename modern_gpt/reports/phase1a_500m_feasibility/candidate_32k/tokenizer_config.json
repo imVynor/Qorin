@@ -1,0 +1,15 @@
+{
+  "name": "bpe_32k_candidate",
+  "vocab_size": 32768,
+  "fingerprint": "a1274e6fd57b5b63",
+  "special_tokens": {
+    "eos": "<|endoftext|>",
+    "eos_id": 0,
+    "unk": null,
+    "unk_id": null,
+    "bos": null,
+    "bos_id": null,
+    "pad": null,
+    "pad_id": null
+  }
+}

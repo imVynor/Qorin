@@ -1,0 +1,39 @@
+{
+  "before": {
+    "request_1": {
+      "user_prompt": "rite a python function that adds two numbers",
+      "tool_executed": "python",
+      "tool_call_id": "call_001",
+      "execution_id": "NONE (Missing in legacy harness)",
+      "code_executed": "import math\nres = math.comb(2, 2)\nprint(f'Combinations: {res}')",
+      "stdout": "Combinations: 1\n",
+      "response_text": "The Python execution yielded: Combinations.",
+      "issue": "Model inappropriately triggered Python tool on code-writing request, hallucinated math.comb, and leaked Combinations into conversation history."
+    },
+    "request_2": {
+      "user_prompt": "whats 1+2?",
+      "conversation_history_included_r1": true,
+      "tool_executed": null,
+      "response_text": "The Python execution yielded: Combinations.",
+      "issue": "Conversational inertia and lack of simple arithmetic interceptor caused model to regurgitate the previous assistant answer word-for-word."
+    }
+  },
+  "after": {
+    "request_1": {
+      "user_prompt": "rite a python function that adds two numbers",
+      "classified_intent": "CODE_GENERATION",
+      "tool_dispatched": null,
+      "tools_executed_count": 0,
+      "response_text": "```python\ndef add(a, b):\n    \"\"\"Returns the sum of two numbers.\"\"\"\n    return a + b\n```",
+      "status": "PASSED - Clean Python function block returned without unnecessary execution"
+    },
+    "request_2": {
+      "user_prompt": "whats 1+2?",
+      "classified_intent": "SIMPLE_ARITHMETIC",
+      "tool_dispatched": null,
+      "tools_executed_count": 0,
+      "response_text": "3",
+      "status": "PASSED - Direct arithmetic result (3) returned without unnecessary execution or stale regurgitation"
+    }
+  }
+}

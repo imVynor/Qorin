@@ -1,0 +1,104 @@
+{
+  "base_pretrained": {
+    "weighted_loss": 2.8621,
+    "weighted_ppl": 17.5,
+    "domains": {
+      "web": {
+        "loss": 3.3836,
+        "ppl": 29.48
+      },
+      "edu": {
+        "loss": 2.3594,
+        "ppl": 10.59
+      },
+      "code": {
+        "loss": 1.8604,
+        "ppl": 6.43
+      },
+      "wiki": {
+        "loss": 3.2799,
+        "ppl": 26.57
+      },
+      "math": {
+        "loss": 2.8715,
+        "ppl": 17.66
+      },
+      "books": {
+        "loss": 3.106,
+        "ppl": 22.33
+      },
+      "dialogue": {
+        "loss": 2.0742,
+        "ppl": 7.96
+      }
+    }
+  },
+  "experiment_a": {
+    "weighted_loss": 2.8487,
+    "weighted_ppl": 17.26,
+    "domains": {
+      "web": {
+        "loss": 3.3699,
+        "ppl": 29.08
+      },
+      "edu": {
+        "loss": 2.3389,
+        "ppl": 10.37
+      },
+      "code": {
+        "loss": 1.8541,
+        "ppl": 6.39
+      },
+      "wiki": {
+        "loss": 3.2666,
+        "ppl": 26.22
+      },
+      "math": {
+        "loss": 2.8583,
+        "ppl": 17.43
+      },
+      "books": {
+        "loss": 3.1014,
+        "ppl": 22.23
+      },
+      "dialogue": {
+        "loss": 2.0442,
+        "ppl": 7.72
+      }
+    }
+  },
+  "experiment_b": {
+    "weighted_loss": 2.8499,
+    "weighted_ppl": 17.29,
+    "domains": {
+      "web": {
+        "loss": 3.3725,
+        "ppl": 29.15
+      },
+      "edu": {
+        "loss": 2.3401,
+        "ppl": 10.38
+      },
+      "code": {
+        "loss": 1.8521,
+        "ppl": 6.37
+      },
+      "wiki": {
+        "loss": 3.2675,
+        "ppl": 26.25
+      },
+      "math": {
+        "loss": 2.8582,
+        "ppl": 17.43
+      },
+      "books": {
+        "loss": 3.102,
+        "ppl": 22.24
+      },
+      "dialogue": {
+        "loss": 2.0477,
+        "ppl": 7.75
+      }
+    }
+  }
+}

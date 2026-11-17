@@ -1,0 +1,967 @@
+{
+  "step_0": {
+    "intent_precision": 0.3478,
+    "intent_recall": 0.3636,
+    "intent_f1": 0.3555,
+    "direct_concept_fpr": 0.125,
+    "unnecessary_tool_calls": 1,
+    "missed_tool_calls": 14,
+    "python_selection_recall": 0.0,
+    "web_selection_recall": 1.0,
+    "contrastive_accuracy": 0.0,
+    "cal_results": [
+      {
+        "id": "cal_contrast_019",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"p = 3655471\\nprint('Probability density f",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_029",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"Density in physics\"}}",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_031",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"Train torque = (1, 2)\\nprint('Train torqu",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_032",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"wp = 0.4m lever arm(25N force applied at ",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_033",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"Wave frequency overview and facts\"}}",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_046",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"import statistics as st\\ndata = [1, 2, 3,",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_054",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"m = mu(0.3)\\nprint('Mul:', m)\"}}",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_072",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"import math\\nres = math.comb(1, 2)\\nprint",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_012",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import math\\nres = math.g(80, 9.8)\\nprint('G:",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_016",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"import statistics as st\\ndata = [3.2 mill",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_033",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"import math\\nres = math.comb(7, 4)\\nprint",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_044",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import math\\nres = math.comb(3, -5, 7)\\nprint",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_051",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import math\\nres = math.comb(2, 5)\\nprint('Co",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_073",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import statistics as st\\ndata = [1, 2, 3, 4, ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_concept_002",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Chain of knowledge holds sway over the rest of the system, influencing the behavior and decision-mak",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_012",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "A opportunity cost is a cost that is calculated based on the market value of the opportunity, typica",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_030",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "An indexing structure in relational databases provides a structured way to structure and retrieve da",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_031",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Entropy is a fundamental concept in information theory that describes the distribution of informatio",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_037",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Monopolistic competition is a competition for the highest level of competition in which a single pla",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_049",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Primary storage provides primary storage for primary data, while secondary storage provides secondar",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_067",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Eukaryotic cells have a single nucleus and a single nucleus, while prokaryotic cells have multiple n",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_071",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "<|tool_call|>{\"name\": \"python_interpreter\": \"Dijkstra uses a combination of Python and graph theory ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_003",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"Tungsten overview and facts\"}}",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_011",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"import cherry.domains.mimetype.mimetype.m",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_014",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"import statistics as st\\ndata = [1]\\nprin",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_051",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"animals that maintain a constant internal",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_056",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"import math\\nres = math.comb(1, 3)\\nprint",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_057",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"import statistics as st\\ndata = [1]\\nprin",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_065",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"Lieutenant General Johnny Crawford, who p",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_066",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"SI unit of electrical capacitance = 'I'\\n",
+        "correct": true
+      }
+    ]
+  },
+  "step_25": {
+    "intent_precision": 0.3333,
+    "intent_recall": 0.0455,
+    "intent_f1": 0.0801,
+    "direct_concept_fpr": 0.0,
+    "unnecessary_tool_calls": 0,
+    "missed_tool_calls": 21,
+    "python_selection_recall": 0.0,
+    "web_selection_recall": 0.125,
+    "contrastive_accuracy": 0.0,
+    "cal_results": [
+      {
+        "id": "cal_contrast_019",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Probability density function (PDF) is a statistical function that calculates the probability of a gi",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_029",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Density is a measure of the density of a substance. It is calculated using the density of the substa",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_031",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Tension in the mechanical system is a fundamental concept in mechanics. It describes the forces exer",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_032",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<0.4m lever arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm ",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_033",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Wave frequency is a fundamental concept in physics that describes the frequency spectrum of a wave. ",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_046",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<<1.5",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_054",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_072",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Electric resistivity is a measure of the resistance to a current. It is calculated using the formula",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_012",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<<9.8 m/s\u00b2 = 9.8 m/s\u00b2\n\nThe gravitational potential energy of an 80 kg climber is 9.8 m/s\u00b2.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_016",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "Based on the provided text, the percentage increase was 3.2 million.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_033",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "Based on the provided data, the total accumulated value after 7 years is 4.2% simple annual interest",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_044",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<<<\n{\"name\": \"web_search\", \"arguments\": {\"code\": \"res = (3, -5, 7)\\nprint(f'Dot Product: {res}')\"}}\n",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_051",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<<<\n{\"name\": \"web_search\", \"arguments\": {\"code\": \"res = (2, 5) * (6, 17)\\nprint(f'Slope: {res}')\"}}\n",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_073",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_concept_002",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Chain of knowledge is the foundation of all knowledge. It is the foundation of all knowledge, and it",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_012",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Economic concept of opportunity cost is a measure of the economic performance of a given market or i",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_030",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "An indexing structure is a structure that implements an associative array abstract data type, mappin",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_031",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Entropy is a measure of the entropy of a system. It is defined as the ratio of the entropy of a syst",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_037",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Monopolistic competition is a competitive competition where competitors compete for the most popular",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_049",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Primary storage is the primary storage system used for storing data. Secondary storage provides a pr",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_067",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Eukaryotic cells are non-coding, non-coding, non-coding cells. They have a single nucleus and a sing",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_071",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Dijkstra's algorithm is a graph-based algorithm that computes the dijkstra sum of two graphs. It is ",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_003",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_011",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_014",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_051",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "According to the American Society for Animal Behavior (AAPB), the average temperature in a human is ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_056",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<tool_call>\n{\"name\": \"web_search\", \"arguments\": {\"code\": \"import math\\nres = math.comb(1, 2)\\nprint(",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_057",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_065",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<<1665<<270<<280<<280<<280<<280<<280<<280<<280<<280<<280<<280<<280<<280<<280<<280<<280<<280<<280<<28",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_066",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "I am not able to access the specific units of electrical capacitance. However, I can provide a gener",
+        "correct": false
+      }
+    ]
+  },
+  "step_50": {
+    "intent_precision": 0.7143,
+    "intent_recall": 0.2273,
+    "intent_f1": 0.3449,
+    "direct_concept_fpr": 0.0,
+    "unnecessary_tool_calls": 0,
+    "missed_tool_calls": 17,
+    "python_selection_recall": 0.3333,
+    "web_selection_recall": 0.375,
+    "contrastive_accuracy": 0.0,
+    "cal_results": [
+      {
+        "id": "cal_contrast_019",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Probability density function (PDF) calculates the probability density function of a probability dist",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_029",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Density is the density of a substance at a specific temperature and pressure. It is measured in Kelv",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_031",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Tension in mechanics is the force exerted by a force on a body at a constant rate. In mechanics, tor",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_032",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<0.4m lever arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm arm ",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_033",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Waves are a fundamental concept in physics, enabling us to measure the frequency of a wave in a give",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_046",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n<1.5*n",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_054",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "<<<\n{\"name\": \"web_search\", \"arguments\": {\"code\": \"mu = 0.3\\nnormal force 500N = 0.3\\nprint(friction)",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_072",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Electrical resistivity is the resistance to current flowing through a material. It is measured in oh",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_012",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<<9.8 m/s\u00b2 = 9.8 m/s\u00b2\n\nThe gravitational potential energy of an 80 kg climber is 9.8 m/s\u00b2.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_016",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "According to the International Monetary Fund, the annual revenue increased from $3.2 million to 4.6 ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_033",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<7 years < 7.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_044",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<<\n{\"name\": \"python_interpreter\": \"import math\\nprint(f'Dot Product: {Dot Product}')\"}}\n",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_calc_051",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<<{\"name\": \"web_search\", \"arguments\": {\"code\": \"import math\\nprint(f'Slope: {slope}')\"}}",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_073",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "<<<\n{\"name\": \"python_interpreter\", \"arguments\": {\"code\": \"import math\\nres = math.comb(x, y)\\nprint(",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_002",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Chain of self-attention mechanisms is the central nervous system's primary focus. It regulates our i",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_012",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Economic concept of opportunity cost is a measure of the economic performance of an economy over a p",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_030",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "An indexing structure is a structure that implements an associative array abstract data type, mappin",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_031",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Entropy is a measure of the entropy of a system. It is defined as the ratio of the entropy of a syst",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_037",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Monopolistic competition is a competitive competition where competitors compete for the most popular",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_049",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Primary storage is the primary storage system used for storing data. Secondary storage provides prim",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_067",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Eukaryotic cells are non-living organisms that have no external organs or organs. Prokaryotic cells ",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_071",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Dijkstra's algorithm is a graph-based algorithm that computes the shortest paths between two vertice",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_003",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "Tungsten is a non-metal-based metal that has a chemical symbol of Tungsten. It is a non-metal-based ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_011",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_014",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<tool_call>\n{\"name\": \"web_search\", \"arguments\": {\"code\": \"import math\\nh = math.sqrt(1 + math.pi * (",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_051",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The term \"animal\" refers to a living organism that maintains a constant internal body temperature.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_056",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<tool_call>{\"name\": \"web_search\", \"arguments\": {\"code\": \"import math\\nr = math.sqrt(r**2)\\nprint(f'R",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_057",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<tool_call>\n{\"name\": \"web_search\", \"arguments\": {\"code\": \"import math\\nr = math.sqrt(1912)\\nprint(f'",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_065",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<1665<<16",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_066",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The SI unit of electrical capacitance is the ohm.\n\nThe SI unit of electrical capacitance is the ohm.",
+        "correct": false
+      }
+    ]
+  },
+  "step_75": {
+    "intent_precision": 1.0,
+    "intent_recall": 0.0,
+    "intent_f1": 0.0,
+    "direct_concept_fpr": 0.0,
+    "unnecessary_tool_calls": 0,
+    "missed_tool_calls": 22,
+    "python_selection_recall": 0.0,
+    "web_selection_recall": 0.0,
+    "contrastive_accuracy": 0.0,
+    "cal_results": [
+      {
+        "id": "cal_contrast_019",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "A probability density function is a function that describes the density of a probability space over ",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_029",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Density is the density of a substance at a specific temperature and pressure. It is defined as the r",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_031",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Tension is the force exerted by a force on a body at a constant rate, and it is proportional to the ",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_032",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Based on historical and theoretical records [1], torque of 25N force applied at 0.4m lever arm arm a",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_033",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Waves are a fundamental concept in physics, enabling us to measure the frequency of a wave in a give",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_046",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "The speed of light in medium with n=1.5 is 1.5 times the speed of light in medium with n=1.5.",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_054",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "The mu=0.3 and normal force 500N are two-dimensional vectors with a single-dimensional vector space,",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_072",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Electrical resistivity is the resistance to current flowing through a material. It is measured in oh",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_012",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "Based on the gravitational potential energy of an 80 kg climber standing 450 meters above base camp,",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_016",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "According to the International Monetary Fund, the annual revenue increased from $3.2 million to 4.6 ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_033",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "The total accumulated value after 7 years is $10,000.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_044",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "The dot product of vectors A and B is [3, -5, 7].",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_051",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "Based on the provided text, the slope and y-intercept of the line passing through points (2, 5) and ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_073",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "The sample correlation coefficient is [1, 2, 3, 4, 5].",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_concept_002",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "The primary goal of transformer self-attention mechanisms is to maintain focus and focus on the pres",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_012",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Economic concept of opportunity cost is the cost of doing something that is not currently possible o",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_030",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "An indexing structure is a structure that implements an associative array abstract data structure, m",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_031",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Entropy is a measure of the entropy of a system. It is defined as the ratio of the entropy of a syst",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_037",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Monopolistic competition is a competitive competition where competitors compete for limited resource",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_049",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Primary storage is the primary storage system used for storing data. Secondary storage provides prim",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_067",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Eukaryotic cells are non-living organisms that have no external organs or organs. Prokaryotic cells ",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_071",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Dijkstra's algorithm is a graph-based algorithm that computes the dijkstra's distance between two ve",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_003",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The chemical element symbol for Tungsten is Tungsten.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_011",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The play The Cherry Orchard is a play written by the author. The play is based on the novel The Cher",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_014",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The highest mountain peak in North America is the Sierra Nevada mountain range.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_051",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The term \"animal\" refers to a living organism that maintains a constant internal body temperature.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_056",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "Based on historical and current research, the Ring of Fire is bounded by the Ring of Fire, which is ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_057",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The continental drift hypothesis posits that the Earth's crust was formed by the collision of two te",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_065",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "Based on historical records [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_066",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The SI unit of electrical capacitance is the ohm.\n\nThe SI unit of electrical capacitance is the ohm.",
+        "correct": false
+      }
+    ]
+  },
+  "step_100": {
+    "intent_precision": 1.0,
+    "intent_recall": 0.0,
+    "intent_f1": 0.0,
+    "direct_concept_fpr": 0.0,
+    "unnecessary_tool_calls": 0,
+    "missed_tool_calls": 22,
+    "python_selection_recall": 0.0,
+    "web_selection_recall": 0.0,
+    "contrastive_accuracy": 0.0,
+    "cal_results": [
+      {
+        "id": "cal_contrast_019",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "A probability density function is a function that describes the density of a probability distributio",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_029",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Density is the density of a substance at a specific temperature and pressure. It is defined as the r",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_031",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Tension is the force exerted by a force on a body at a constant rate, and is directly proportional t",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_032",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Based on historical and theoretical records [1], torque of 25N force applied at 0.4m lever arm is 25",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_033",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Wave frequency is the frequency of a wave that is oscillating at a constant speed. It is measured in",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_046",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "The speed of light in medium with n=1.5 is 1.5 times the speed of light in medium with n=1.5.",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_054",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "The mu=0.3 and normal force 500N are two-dimensional vectors with a single-dimensional vector space,",
+        "correct": false
+      },
+      {
+        "id": "cal_contrast_072",
+        "category": "CAL_CONTRASTIVE_PAIRS",
+        "generated": "Electrical resistivity is the resistance to current flowing through a material at a constant rate. I",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_012",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "Based on the gravitational potential energy of an 80 kg climber standing 450 meters above base camp,",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_016",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "According to the International Monetary Fund, the annual revenue increased from $3.2 million to 4.6 ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_033",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "Based on historical data [1], the total accumulated value after 7 years is 4.2% simple annual intere",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_044",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "Based on the given data, the dot product of vectors A and B is [3, -5, 7].",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_051",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "Based on the provided text, the slope and y-intercept of the line passing through points (2, 5) and ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_calc_073",
+        "category": "CAL_DIRECT_PROVIDED_CALC",
+        "generated": "The sample correlation coefficient is [1, 2, 3, 4, 5].",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_concept_002",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "The primary principle of transformer self-attention mechanisms is self-attention. Self-attention is ",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_012",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Economic concept of opportunity cost is the cost of doing something that is not currently possible o",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_030",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "An indexing structure is a structure that implements an associative array abstract data structure, m",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_031",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Entropy is a measure of the entropy of a system at a given temperature. It is calculated by the entr",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_037",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Monopolistic competition is a competitive competition where competitors compete for limited resource",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_049",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Primary storage is the primary storage system used by computers and other electronic devices. Second",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_067",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Eukaryotic cells are non-living organisms that have no external organs or organs. Prokaryotic cells ",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_concept_071",
+        "category": "CAL_DIRECT_CONCEPT",
+        "generated": "Dijkstra's algorithm is a graph-based algorithm that computes the dijkstra's ratio for a given graph",
+        "correct": true
+      },
+      {
+        "id": "cal_dir_web_003",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The chemical element symbol for Tungsten is Tungsten.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_011",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The play The Cherry Orchard is a play written by the author. The play is based on the novel The Cher",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_014",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The highest mountain peak in North America is the Sierra Nevada mountain range. It is located in the",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_051",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The term \"animal\" refers to a living organism that maintains a constant internal body temperature.",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_056",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "Based on historical and geographical records [1], the Ring of Fire is bounded by the Ring of Fire, w",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_057",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "Based on historical and theoretical records [1], the continental drift hypothesis has been proposed ",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_065",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "Based on historical records [1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14",
+        "correct": false
+      },
+      {
+        "id": "cal_dir_web_066",
+        "category": "CAL_DIRECT_FACTUAL_WEB",
+        "generated": "The SI unit of electrical capacitance is the ohm.\n\nThe SI unit of electrical capacitance is the ohm.",
+        "correct": false
+      }
+    ]
+  }
+}

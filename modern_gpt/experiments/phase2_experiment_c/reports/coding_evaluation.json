@@ -1,0 +1,311 @@
+{
+  "total": 50,
+  "syntax_valid": 48,
+  "syntax_valid_pct": 96.0,
+  "pass_at_1": 19,
+  "pass_at_1_pct": 38.0,
+  "is_prime_accuracy_pct": 53.85,
+  "is_prime_passed": 7,
+  "task_details": [
+    {
+      "id": "code_00",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_01",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_02",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_03",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_04",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_05",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_06",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_07",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_08",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_09",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_10",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_11",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_12",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_13",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_14",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_15",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_16",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_17",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_18",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_19",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_20",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_21",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_22",
+      "syntax_ok": false,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_23",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_24",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_25",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_26",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_27",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_28",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_29",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_30",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_31",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_32",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_33",
+      "syntax_ok": false,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_34",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_35",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_36",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_37",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_38",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_39",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_40",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_41",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_42",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_43",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_44",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_45",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_46",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_47",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    },
+    {
+      "id": "code_48",
+      "syntax_ok": true,
+      "passed": false,
+      "status": "FAILED (Exit Code 1)"
+    },
+    {
+      "id": "code_49",
+      "syntax_ok": true,
+      "passed": true,
+      "status": "PASSED"
+    }
+  ]
+}

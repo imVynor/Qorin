@@ -1,0 +1,273 @@
+import json
+import hashlib
+from pathlib import Path
+
+manifest = {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "manifest_version": "2.0.0",
+    "updated_at": "2026-11-17T01:45:00Z",
+    "project": "QORIN: Tool-Augmented Small Language Models",
+    "authoritative_source": "modern_gpt/reports/checkpoint_architecture_audit/architecture_audit.md",
+    "model_families": {
+        "QORIN-500M": {
+            "family_id": "QORIN-500M",
+            "historical_name": "ModernGPT-S-500M",
+            "parameters": {
+                "unique_trainable_parameters": 514389504,
+                "raw_tensor_elements_in_checkpoint": 569964032,
+                "tied_embeddings": True
+            },
+            "canonical_architecture": {
+                "n_layers": 20,
+                "emb_dim": 1536,
+                "n_heads": 24,
+                "num_kv_heads": 4,
+                "gqa_ratio": "6:1",
+                "head_dim": 64,
+                "ffn_hidden_dim": 3840,
+                "activation": "SwiGLU",
+                "norm_type": "RMSNorm",
+                "norm_eps": 1e-5,
+                "context_length": 2048,
+                "vocab_size": 32768,
+                "qkv_bias": False,
+                "out_proj_bias": False,
+                "rope_theta": 10000.0,
+                "rope_scale": 1.0,
+                "rope_type": "default"
+            },
+            "tokenizer": {
+                "identity": "bpe_32k",
+                "vocab_size": 32768,
+                "path": "modern_gpt/artifacts/tokenizer_32k/tokenizer.json",
+                "sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+                "special_tokens": [
+                    "<|im_start|>",
+                    "<|im_end|>",
+                    "<|tool_call|>",
+                    "<|tool_result|>",
+                    "<|tool_error|>"
+                ]
+            },
+            "checkpoints": {
+                "qorin-500m-sft-exp-c": {
+                    "checkpoint_id": "qorin-500m-sft-exp-c",
+                    "display_name": "QORIN-500M SFT Experiment C (Autonomous Two-Tool)",
+                    "checkpoint_path": "modern_gpt/experiments/phase2_experiment_c/stage_3_training/checkpoints/ckpt_experiment_c_final.pt",
+                    "sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b",
+                    "training_stage": "Targeted Autonomous Two-Tool SFT (Stage 3)",
+                    "training_lineage": {
+                        "parent_checkpoint": "modern_gpt/checkpoints/sft_experiment_b/ckpt_experiment_b_final.pt",
+                        "parent_sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+                        "root_pretraining_checkpoint": "modern_gpt/checkpoints/500m_pretrain/ckpt_latest.pt",
+                        "root_pretraining_sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+                        "in_place_continuation_verified": True
+                    },
+                    "training_budget": {
+                        "tokens_processed": 1885000,
+                        "optimizer": "adamw_8bit",
+                        "learning_rate": 2.0e-5,
+                        "min_learning_rate": 2.0e-6,
+                        "scheduler": "cosine",
+                        "precision": "bfloat16"
+                    },
+                    "evaluation_results": {
+                        "coding_syntax_valid_pct": 96.0,
+                        "coding_pass_at_1_pct": 38.0,
+                        "tool_intent_recall": 0.800,
+                        "tool_intent_precision": 1.000,
+                        "tool_intent_f1": 0.889,
+                        "tool_selection_accuracy": 0.680,
+                        "syntax_valid_tool_call_pct": 66.67,
+                        "execution_success_pct": 50.0,
+                        "end_to_end_task_success_pct": 6.67
+                    },
+                    "capabilities": [
+                        "General conversational interaction (direct response)",
+                        "Code syntax generation in Python",
+                        "Structured tool call emission: <|tool_call|>{\"tool\": \"...\", \"arguments\": {...}}<|tool_call_end|>",
+                        "Multi-turn tool-result interpretation upon re-prompting"
+                    ],
+                    "limitations": [
+                        "Selection bias favoring Python over Web Researcher when both tools are active",
+                        "Occasional semantic errors in generated Python code (e.g. naive parity test instead of general primality algorithm)",
+                        "End-to-end task completion (6.67%) significantly lower than execution success (50.0%)",
+                        "Sensitive to system prompt formatting and capability declarations"
+                    ]
+                },
+                "qorin-500m-sft-exp-b": {
+                    "checkpoint_id": "qorin-500m-sft-exp-b",
+                    "display_name": "QORIN-500M SFT Experiment B (35M General + Schema)",
+                    "checkpoint_path": "modern_gpt/checkpoints/sft_experiment_b/ckpt_experiment_b_final.pt",
+                    "sha256": "acbecc699da76387de9ef6d6a40a64ad73b324b6eee2bd1842a6fd9ab1972c4f",
+                    "training_stage": "General SFT + Tool Schema Demonstration (35M tokens)",
+                    "training_lineage": {
+                        "parent_checkpoint": "modern_gpt/experiments/phase_2b/experiment_a_general_25m/checkpoints/ckpt_pilot_final.pt",
+                        "parent_sha256": "249fb467a9cf76e732890cc0501ec39a443756cb2f1c86c66402960f4abbadc4",
+                        "in_place_continuation_verified": True
+                    },
+                    "evaluation_results": {
+                        "coding_syntax_valid_pct": 92.0,
+                        "coding_pass_at_1_pct": 42.0,
+                        "tool_intent_recall": 0.000,
+                        "tool_intent_precision": 0.000,
+                        "tool_intent_f1": 0.000
+                    },
+                    "capabilities": [
+                        "General instruction following",
+                        "Coding generation",
+                        "Conversational direct responses"
+                    ],
+                    "limitations": [
+                        "Zero autonomous tool invocation (0% intent recall in evaluation)",
+                        "Treats tool calls only as schema completion rather than interactive execution"
+                    ]
+                },
+                "qorin-500m-sft-exp-a": {
+                    "checkpoint_id": "qorin-500m-sft-exp-a",
+                    "display_name": "QORIN-500M SFT Experiment A (25M General Pilot)",
+                    "checkpoint_path": "modern_gpt/experiments/phase_2b/experiment_a_general_25m/checkpoints/ckpt_pilot_final.pt",
+                    "sha256": "249fb467a9cf76e732890cc0501ec39a443756cb2f1c86c66402960f4abbadc4",
+                    "training_stage": "General Instruction Fine-Tuning Pilot (25M tokens)",
+                    "training_lineage": {
+                        "parent_checkpoint": "modern_gpt/checkpoints/500m_pretrain/ckpt_latest.pt",
+                        "parent_sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+                        "in_place_continuation_verified": True
+                    },
+                    "evaluation_results": {
+                        "coding_syntax_valid_pct": 78.0,
+                        "coding_pass_at_1_pct": 26.0,
+                        "tool_intent_recall": 0.000
+                    },
+                    "capabilities": [
+                        "Basic instruction following"
+                    ],
+                    "limitations": [
+                        "No tool capabilities",
+                        "Lower reasoning and coding proficiency"
+                    ]
+                },
+                "qorin-500m-pretrain-pilot": {
+                    "checkpoint_id": "qorin-500m-pretrain-pilot",
+                    "display_name": "QORIN-500M Pretraining Pilot (In-Progress)",
+                    "checkpoint_path": "modern_gpt/checkpoints/500m_pretrain/ckpt_latest.pt",
+                    "sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+                    "training_stage": "Causal Language Modeling Pretraining (252M tokens / Step 7,694)",
+                    "training_lineage": {
+                        "parent_checkpoint": None,
+                        "in_place_continuation_verified": False
+                    },
+                    "evaluation_results": {
+                        "pretraining_loss": 3.12,
+                        "pretraining_ppl": 22.65
+                    },
+                    "capabilities": [
+                        "Raw next-token prediction and autoregressive completion"
+                    ],
+                    "limitations": [
+                        "Unconverged pretraining weights",
+                        "No instruction following or alignment",
+                        "No tool capabilities"
+                    ]
+                }
+            }
+        },
+        "QORIN-100M": {
+            "family_id": "QORIN-100M",
+            "parameters": {
+                "unique_trainable_parameters": 104807424,
+                "raw_tensor_elements_in_checkpoint": 120029440
+            },
+            "canonical_architecture": {
+                "n_layers": 14,
+                "emb_dim": 768,
+                "n_heads": 12,
+                "num_kv_heads": 4,
+                "gqa_ratio": "3:1",
+                "head_dim": 64,
+                "ffn_hidden_dim": 2048,
+                "activation": "SwiGLU",
+                "norm_type": "RMSNorm",
+                "vocab_size": 16000
+            },
+            "tokenizer": {
+                "identity": "bpe_16k_v2",
+                "vocab_size": 16000,
+                "path": "modern_gpt/artifacts/tokenizer_16k_v2/tokenizer.json",
+                "sha256": "6c155b6fb30153aac2f206fc14c30b78e3c3b45b16748c87faf7bf9b04ccbe69"
+            },
+            "checkpoints": {
+                "qorin-100m-sft-v3": {
+                    "checkpoint_id": "qorin-100m-sft-v3",
+                    "display_name": "QORIN-100M SFT v3 (4K Context)",
+                    "checkpoint_path": "modern_gpt/checkpoints/modern_gpts_100m_sft_4k_v3/best_val.pt",
+                    "sha256": "d771ea9f5465e3bcf2b619a32f7797742e500a01704a4d5f582eb5db4adc7510",
+                    "context_length": 4096,
+                    "rope_scale": 8.0,
+                    "rope_type": "linear"
+                },
+                "qorin-100m-4k-base": {
+                    "checkpoint_id": "qorin-100m-4k-base",
+                    "display_name": "QORIN-100M 4K Pretrained Pilot",
+                    "checkpoint_path": "modern_gpt/checkpoints/modern_gpts_100m_4k_pilot/checkpoint_step_2000.pt",
+                    "sha256": "3b23f37b82279c63d5913933fef22ea487ed28f28e08878cfa4d531064900817",
+                    "context_length": 4096,
+                    "rope_scale": 8.0,
+                    "rope_type": "linear"
+                },
+                "qorin-100m-base": {
+                    "checkpoint_id": "qorin-100m-base",
+                    "display_name": "QORIN-100M Baseline Pretrained",
+                    "checkpoint_path": "modern_gpt/checkpoints/modern_gpts_100m/best_val.pt",
+                    "sha256": "bded509c44eabc2932dc1e293967bb0524acc31182fe9df0295b9ad2a4671e31",
+                    "context_length": 512,
+                    "rope_scale": 1.0,
+                    "rope_type": "default"
+                }
+            }
+        },
+        "QORIN-50M": {
+            "family_id": "QORIN-50M",
+            "canonical_architecture": {
+                "n_layers": 12,
+                "emb_dim": 512,
+                "n_heads": 8,
+                "num_kv_heads": 8,
+                "context_length": 512,
+                "vocab_size": 16000
+            },
+            "checkpoints": {
+                "qorin-50m-sft": {
+                    "checkpoint_id": "qorin-50m-sft",
+                    "display_name": "QORIN-50M SFT v2",
+                    "checkpoint_path": "modern_gpt/checkpoints/sft_50m_targeted_v2/best_val.pt",
+                    "sha256": "32c831873d5407f013456340fc331484b0e0170adabeae9e103f9901f21eb971"
+                }
+            }
+        },
+        "QORIN-16M": {
+            "family_id": "QORIN-16M",
+            "canonical_architecture": {
+                "n_layers": 6,
+                "emb_dim": 384,
+                "n_heads": 6,
+                "context_length": 512,
+                "vocab_size": 16000
+            },
+            "checkpoints": {
+                "qorin-16m-sft": {
+                    "checkpoint_id": "qorin-16m-sft",
+                    "display_name": "QORIN-16M SFT",
+                    "checkpoint_path": "modern_gpt/checkpoints/exp_100m/best_val.pt",
+                    "sha256": "3bf4c51485f727b6a3acf7861299eec408cc7e59b195a0a4a09ee7927057dd16"
+                }
+            }
+        }
+    }
+}
+
+manifest_path = Path("modern_gpt/canonical_model_manifest.json")
+with open(manifest_path, "w", encoding="utf-8") as f:
+    json.dump(manifest, f, indent=2)
+
+print("Canonical manifest written to", manifest_path)

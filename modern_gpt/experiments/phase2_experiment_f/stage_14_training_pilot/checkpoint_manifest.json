@@ -1,0 +1,29 @@
+{
+  "experiment": "QORIN_Experiment_F_Stage14_Pilot",
+  "created_at": 1794906035.6949167,
+  "total_updates_completed": 100,
+  "records_presented": 400,
+  "unique_records_sampled": 400,
+  "sampled_distribution": {
+    "corpus_multiturn": 160,
+    "corpus_calibration": 120,
+    "corpus_synthesis": 120
+  },
+  "best_checkpoint": {
+    "filename": "ckpt_pilot_best.pt",
+    "step": 100,
+    "val_loss": 0.8947,
+    "sha256": "bb5b7091e951e49263e7b55e78b1f6837b5713ffb2f197c20366f39f3cd9b1e4"
+  },
+  "terminal_checkpoint": {
+    "filename": "ckpt_pilot_step100.pt",
+    "step": 100,
+    "val_loss": 0.8947,
+    "sha256": "9990518d707d1dd95270f07c7a3ec06e5541f5abc009326ec97e3ea9b855b8e9"
+  },
+  "parent_checkpoint": {
+    "path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\experiments\\phase2_experiment_d\\stage_3_training\\checkpoints\\ckpt_experiment_d_best.pt",
+    "step": 425,
+    "sha256": "c6b388dab89b5762c3ad451cae30b0d5c73447a4e07bba962c745b2cb6948be7"
+  }
+}

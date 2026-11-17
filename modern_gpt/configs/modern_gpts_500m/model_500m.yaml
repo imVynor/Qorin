@@ -1,0 +1,67 @@
+# ModernGPT-S 500M Architecture Configuration
+# Phase 1A Consensus Specification
+architecture_name: "ModernGPT-S-500M"
+parameter_count: 514389504
+non_embedding_parameter_count: 464057856
+
+# Model Dimensions
+vocab_size: 32768
+context_length: 2048
+emb_dim: 1536
+n_layers: 20
+n_heads: 24
+num_kv_heads: 4
+head_dim: 64
+ffn_hidden_dim: 3840
+ffn_expansion_ratio: 2.50
+
+# Normalization & Activation
+norm_type: "RMSNorm"
+norm_eps: 1.0e-6
+activation: "SwiGLU"
+
+# Attention & Positional Encoding
+attention_type: "GQA"
+gqa_ratio: 6
+qkv_bias: false
+out_proj_bias: false
+linear_bias: false
+rope_theta: 10000.0
+rope_scale: 1.0
+rope_type: "default"
+
+# Weight Tying & Regularization
+tied_embeddings: true
+dropout: 0.0
+
+# Training & Runtime Precision
+precision: "bf16"
+gradient_checkpointing: true
+
+# Tokenizer & Tool Delimiters
+tokenizer: "bpe_32k"
+tokenizer_vocab_size: 32768
+tokenizer_fingerprint: "3559c7435e1d9330"
+tool_calling_enabled: true
+special_tokens:
+  pad_token: "<|pad|>"
+  pad_token_id: 0
+  unk_token: "<|unk|>"
+  unk_token_id: 1
+  bos_token: "<|bos|>"
+  bos_token_id: 2
+  eos_token: "<|eos|>"
+  eos_token_id: 3
+  im_start_token: "<|im_start|>"
+  im_start_token_id: 4
+  im_end_token: "<|im_end|>"
+  im_end_token_id: 5
+  tool_call_token: "<|tool_call|>"
+  tool_call_token_id: 6
+  tool_result_token: "<|tool_result|>"
+  tool_result_token_id: 7
+  tool_error_token: "<|tool_error|>"
+  tool_error_token_id: 8
+  endoftext_token: "<|endoftext|>"
+  endoftext_token_id: 9
+

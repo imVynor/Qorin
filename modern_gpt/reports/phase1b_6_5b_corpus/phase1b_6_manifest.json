@@ -1,0 +1,212 @@
+{
+  "phase": "1B.6",
+  "title": "ModernGPT-S 500M 5B Pretraining Corpus Acquisition Manifest",
+  "status": "COMPLETE",
+  "timestamp_iso": "2026-11-11T19:08:20.418026+00:00",
+  "tokenizer": {
+    "name": "bpe_32k",
+    "fingerprint": "3559c7435e1d9330",
+    "sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59"
+  },
+  "summary_metrics": {
+    "target_pretraining_tokens": 5000000000,
+    "total_acquired_documents": 4143836,
+    "total_acquired_tokens": 4791607242,
+    "total_acquired_bytes": 22772233147,
+    "total_clean_tokens_on_disk": 5020216363,
+    "total_validation_reserved_tokens": 20025153,
+    "total_training_eligible_tokens": 5000191210,
+    "remaining_5b_shortfall_tokens": 0,
+    "coverage_percentage": 100.0,
+    "validation_leakage_rate": "0.00%",
+    "quarantine_hashes_active": 25137
+  },
+  "acquired_datasets": {
+    "web": {
+      "total_documents": 1813679,
+      "total_tokens": 1845789822,
+      "file_size_bytes": 9436993425,
+      "file_sha256": "805b51d54fa6ca1710072cee3da91787fb1fd48f292c0f9f014b88fb72843f02"
+    },
+    "edu": {
+      "total_documents": 969130,
+      "total_tokens": 701777608,
+      "file_size_bytes": 4101560378,
+      "file_sha256": "ba6aeb707321e672b174778800b53956e3ca5d4aa4c0f3a28430c9a7161a8de4"
+    },
+    "code": {
+      "total_documents": 434973,
+      "total_tokens": 739996991,
+      "file_size_bytes": 2855209312,
+      "file_sha256": "efcb60836370924b0972364b24979fc817447153b6abf06ec197d8eb2f47526b"
+    },
+    "wiki": {
+      "total_documents": 424273,
+      "total_tokens": 376100584,
+      "file_size_bytes": 1750799821,
+      "file_sha256": "a2616cc763d5db34d19b8b7a9868049bc268db6ef33b57c51dec4cafad8fd9f3"
+    },
+    "math": {
+      "total_documents": 214345,
+      "total_tokens": 376145857,
+      "file_size_bytes": 1496526146,
+      "file_sha256": "51aa38be91c67a3cda9b5d4cf33204d8b570ab787ba97a3913e783b12d66660f"
+    },
+    "books": {
+      "total_documents": 24650,
+      "total_tokens": 502020614,
+      "file_size_bytes": 1800075759,
+      "file_sha256": "bc9bb412f3774efce8f1df4155a3374b59225615fdc45ddf6c6675025870cbfe"
+    },
+    "dialogue": {
+      "total_documents": 262786,
+      "total_tokens": 249775766,
+      "file_size_bytes": 1331068306,
+      "file_sha256": "55ace771387d8b996c82045e5782df731157339255631d4b2c5a782d1269feb2"
+    }
+  },
+  "validation_corpus": {
+    "web": {
+      "target_tokens": 8000000,
+      "realized_tokens": 8000113,
+      "realized_docs": 7773,
+      "file_path": "modern_gpt\\data_500m\\val_isolated\\val_web.jsonl",
+      "file_size_bytes": 40681023,
+      "file_sha256": "219f3d6bdae3814a065be3f312b65fb442e381353ab948a40cb4c14a372f8b3d",
+      "status": "SUFFICIENT"
+    },
+    "edu": {
+      "target_tokens": 3000000,
+      "realized_tokens": 3000369,
+      "realized_docs": 4144,
+      "file_path": "modern_gpt\\data_500m\\val_isolated\\val_edu.jsonl",
+      "file_size_bytes": 17569531,
+      "file_sha256": "1e6463ce3d59da66e487a6d0260c4a617eb7e828052c1314c635be6ed0d024bc",
+      "status": "SUFFICIENT"
+    },
+    "code": {
+      "target_tokens": 3000000,
+      "realized_tokens": 3015673,
+      "realized_docs": 1864,
+      "file_path": "modern_gpt\\data_500m\\val_isolated\\val_code.jsonl",
+      "file_size_bytes": 11619585,
+      "file_sha256": "2fb634d765ee1aea4986f9b9c0f221c7bafd432c550a41195bbd4905294839a8",
+      "status": "SUFFICIENT"
+    },
+    "wiki": {
+      "target_tokens": 1500000,
+      "realized_tokens": 1506805,
+      "realized_docs": 222,
+      "file_path": "modern_gpt\\data_500m\\val_isolated\\val_wiki.jsonl",
+      "file_size_bytes": 6763552,
+      "file_sha256": "078799d81a0c1eec6324e07531b9d58905241a5e962c510ffe29b76277aea6fc",
+      "status": "SUFFICIENT"
+    },
+    "math": {
+      "target_tokens": 1500000,
+      "realized_tokens": 1500827,
+      "realized_docs": 847,
+      "file_path": "modern_gpt\\data_500m\\val_isolated\\val_math.jsonl",
+      "file_size_bytes": 5859330,
+      "file_sha256": "83e4cbfd41b09542bec089c82bcf24924a383bb0251501fce3105f7888f5b877",
+      "status": "SUFFICIENT"
+    },
+    "books": {
+      "target_tokens": 2000000,
+      "realized_tokens": 2000925,
+      "realized_docs": 92,
+      "file_path": "modern_gpt\\data_500m\\val_isolated\\val_books.jsonl",
+      "file_size_bytes": 7329935,
+      "file_sha256": "e2d831bbd8048762e6fa4a2e0ab96daded0e0cfc4a2225a6862b47c45f607a10",
+      "status": "SUFFICIENT"
+    },
+    "dialogue": {
+      "target_tokens": 1000000,
+      "realized_tokens": 1000441,
+      "realized_docs": 847,
+      "file_path": "modern_gpt\\data_500m\\val_isolated\\val_dialogue.jsonl",
+      "file_size_bytes": 5214428,
+      "file_sha256": "3d3126d4a606957a0a68dcab28d7d232384c84309e2ae436d031768c048cd101",
+      "status": "SUFFICIENT"
+    }
+  },
+  "supply_reconciliation_5b": {
+    "web": {
+      "target_5b_tokens": 2000000000,
+      "historical_clean_tokens": 162210616,
+      "acquired_clean_tokens": 1845789822,
+      "total_clean_tokens": 2008000438,
+      "validation_reserved_tokens": 8000113,
+      "training_eligible_tokens": 2000000325,
+      "remaining_shortfall_5b": 0,
+      "coverage_pct": 100.0,
+      "is_sufficient": true
+    },
+    "edu": {
+      "target_5b_tokens": 750000000,
+      "historical_clean_tokens": 51223479,
+      "acquired_clean_tokens": 701777608,
+      "total_clean_tokens": 753001087,
+      "validation_reserved_tokens": 3000369,
+      "training_eligible_tokens": 750000718,
+      "remaining_shortfall_5b": 0,
+      "coverage_pct": 100.0,
+      "is_sufficient": true
+    },
+    "code": {
+      "target_5b_tokens": 750000000,
+      "historical_clean_tokens": 13018692,
+      "acquired_clean_tokens": 739996991,
+      "total_clean_tokens": 753015683,
+      "validation_reserved_tokens": 3015673,
+      "training_eligible_tokens": 750000010,
+      "remaining_shortfall_5b": 0,
+      "coverage_pct": 100.0,
+      "is_sufficient": true
+    },
+    "wiki": {
+      "target_5b_tokens": 375000000,
+      "historical_clean_tokens": 406385,
+      "acquired_clean_tokens": 376100584,
+      "total_clean_tokens": 376506969,
+      "validation_reserved_tokens": 1506805,
+      "training_eligible_tokens": 375000164,
+      "remaining_shortfall_5b": 0,
+      "coverage_pct": 100.0,
+      "is_sufficient": true
+    },
+    "math": {
+      "target_5b_tokens": 375000000,
+      "historical_clean_tokens": 358188,
+      "acquired_clean_tokens": 376145857,
+      "total_clean_tokens": 376504045,
+      "validation_reserved_tokens": 1500827,
+      "training_eligible_tokens": 375003218,
+      "remaining_shortfall_5b": 0,
+      "coverage_pct": 100.0,
+      "is_sufficient": true
+    },
+    "books": {
+      "target_5b_tokens": 500000000,
+      "historical_clean_tokens": 0,
+      "acquired_clean_tokens": 502020614,
+      "total_clean_tokens": 502020614,
+      "validation_reserved_tokens": 2000925,
+      "training_eligible_tokens": 500019689,
+      "remaining_shortfall_5b": 0,
+      "coverage_pct": 100.0,
+      "is_sufficient": true
+    },
+    "dialogue": {
+      "target_5b_tokens": 250000000,
+      "historical_clean_tokens": 1391761,
+      "acquired_clean_tokens": 249775766,
+      "total_clean_tokens": 251167527,
+      "validation_reserved_tokens": 1000441,
+      "training_eligible_tokens": 250167086,
+      "remaining_shortfall_5b": 0,
+      "coverage_pct": 100.07,
+      "is_sufficient": true
+    }
+  }
+}

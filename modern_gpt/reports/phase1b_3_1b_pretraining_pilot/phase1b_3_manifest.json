@@ -1,0 +1,102 @@
+{
+  "phase": "1B.3",
+  "title": "ModernGPT-S 500M 1B-Token Pretraining Corpus Pilot Manifest",
+  "status": "PARTIALLY_COMPLETE_BLOCKED_ON_SUPPLY",
+  "timestamp_iso": "2026-11-11T02:24:00+05:30",
+  "tokenizer": {
+    "tokenizer.json": {
+      "bytes": 2326260,
+      "sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59"
+    },
+    "tokenizer_config.json": {
+      "bytes": 296,
+      "sha256": "b803c75253c44fd9a0745e83df72e9830335b9535c4d3fefc74f3381cb5e45ac"
+    },
+    "tokenizer_manifest.json": {
+      "bytes": 1528,
+      "sha256": "467bce0143ff0ef956cf2d49ce38951690fa6b6bb4fe3b0e5d846b339be26709"
+    }
+  },
+  "reports": {
+    "corpus_generation_report.md": {
+      "bytes": 2456,
+      "sha256": "ce7b077a62fbb60f7a6dc4c2f5b9e2cb9e310e87be15a92f7bb59500cf03a77b"
+    },
+    "dataloader_validation_report.md": {
+      "bytes": 2533,
+      "sha256": "983ca73c365a669a4b45364b92e7a94930684bf45f90ffc07c1445829cb109b9"
+    },
+    "dataset_partition_report.md": {
+      "bytes": 2968,
+      "sha256": "e6dbf8a38ce89f1e4f7142d2e32cae09a7a6aa02611ed658b358cd7d81f4c305"
+    },
+    "decisions_and_risks.md": {
+      "bytes": 3835,
+      "sha256": "161795626fdb2922ad0a690da8621a84f4b9b3d1af98a80cbfae791410abe5e4"
+    },
+    "document_boundary_and_loss_semantics.md": {
+      "bytes": 3968,
+      "sha256": "64fe3d972ae4868ca16b8e6593a854b582afd864d632bbd2303d62eed97ef030"
+    },
+    "domain_token_accounting.md": {
+      "bytes": 3896,
+      "sha256": "e9dd1e03f811181460b78c1b23079b562825812aa6a6756f7933578162dbbaff"
+    },
+    "licensing_and_provenance_report.md": {
+      "bytes": 2914,
+      "sha256": "a66bdf4eb1196a9d49b4539876b06fecf2d99732f2b4790049b35f3ed95e9f08"
+    },
+    "performance_and_resource_report.md": {
+      "bytes": 2658,
+      "sha256": "1bea5941c955d4cba220cdee0d0b0b28cd313a768e26ee18b6e08e67c1de8842"
+    },
+    "preflight_audit.md": {
+      "bytes": 5535,
+      "sha256": "a9815f5db67e31a5eef194afc3e8eada66f60830aa956b91db63a05a7a860668"
+    },
+    "README.md": {
+      "bytes": 5990,
+      "sha256": "d2495eed53bfa6c48ef93d447aa8d719e0d15b0ff0ab6574adb26373127b9d2c"
+    },
+    "reproducibility_report.md": {
+      "bytes": 3399,
+      "sha256": "ae0c3baac60c574751f36b010615fab3625651c4bb84bc249d5d7c978254cccb"
+    },
+    "shard_integrity_report.md": {
+      "bytes": 3909,
+      "sha256": "b7293f49c11b8223255df9a039467affc181b4bd115d03de92a769f1c59ddf82"
+    },
+    "tokenizer_integrity_report.md": {
+      "bytes": 3195,
+      "sha256": "060a025c8772d492859fee46e0eef9178d1793bd44dbb4b95c565c1cb056da10"
+    }
+  },
+  "shards": {
+    "pilot_g3_train_shard_00000.bin": {
+      "bytes": 99999824,
+      "sha256": "76aed0d63dbfbe346aa1c65a48b07c6ea2971115c9019afa33d6322c4c37aecb"
+    },
+    "pilot_g3_train_shard_00001.bin": {
+      "bytes": 99999824,
+      "sha256": "2e285eea9defbf8444cc5a2a019b40c8d1aa56e55edc0b7462ecaef4e454ac80"
+    },
+    "pilot_g3_train_shard_00002.bin": {
+      "bytes": 99999824,
+      "sha256": "133e44fbd6cdbbb23caaae3ca61d408e5afdad029f15647d06bdf3b5f7e9c4e0"
+    },
+    "pilot_g3_val_shard_00000.bin": {
+      "bytes": 17281104,
+      "sha256": "cbc3ca6b259b6c4e93e56c06f2ae36e47258a0b7e7566c15a73fd479372239d3"
+    }
+  },
+  "summary_metrics": {
+    "training_tokens": 149999616,
+    "validation_tokens": 8640512,
+    "total_tokens": 158640128,
+    "training_shards": 3,
+    "validation_shards": 1,
+    "total_shards": 4,
+    "total_shard_bytes": 317280576,
+    "tokenization_throughput_tokens_sec": 550942.5
+  }
+}

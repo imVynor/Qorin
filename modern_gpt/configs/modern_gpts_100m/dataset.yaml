@@ -1,0 +1,60 @@
+# ModernGPT-S 100M Dataset Mixture Configuration
+total_token_budget: 1500000000
+tokens_per_shard: 50000000
+total_target_shards: 30
+sequence_length: 512
+
+# Tokenizer specification
+tokenizer_dir: "artifacts/tokenizer_16k_v2"
+tokenizer_name: "bpe_16k_v2"
+tokenizer_fingerprint: "be6c3d60c5baf217"
+vocab_size: 16000
+
+# Storage layouts
+shard_dir: "artifacts/modern_gpts_100m/shards"
+manifest_dir: "artifacts/modern_gpts_100m/manifests"
+raw_staging_dir: "artifacts/modern_gpts_100m/raw"
+validation_split_ratio: 0.005 # ~7.5M tokens reserved for val across mixture
+
+# Dataset Mixture Ratios & Sources
+mixture:
+  - name: "fineweb_edu"
+    hf_repo: "HuggingFaceFW/fineweb-edu"
+    subset: "sample-10BT"
+    split: "train"
+    ratio: 0.60
+    target_tokens: 900000000
+    text_column: "text"
+
+  - name: "cosmopedia_v2"
+    hf_repo: "HuggingFaceTB/smollm-corpus"
+    subset: "cosmopedia-v2"
+    split: "train"
+    ratio: 0.20
+    target_tokens: 300000000
+    text_column: "text"
+
+  - name: "python_edu"
+    hf_repo: "Avelina/python-edu-cleaned"
+    subset: null
+    split: "train"
+    ratio: 0.08
+    target_tokens: 120000000
+    text_column: "text"
+
+  - name: "open_web_math"
+    hf_repo: "open-web-math/open-web-math"
+    subset: null
+    split: "train"
+    ratio: 0.07
+    target_tokens: 105000000
+    text_column: "text"
+
+  - name: "fineweb"
+    hf_repo: "HuggingFaceFW/fineweb"
+    subset: "sample-10BT"
+    split: "train"
+    ratio: 0.05
+    target_tokens: 75000000
+    text_column: "text"
+

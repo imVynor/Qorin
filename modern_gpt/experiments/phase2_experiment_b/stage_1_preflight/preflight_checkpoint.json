@@ -1,0 +1,21 @@
+{
+  "checkpoint_path": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\checkpoints\\500m_pretrain\\ckpt_latest.pt",
+  "observed_sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+  "expected_sha256": "28ac47b07e9616967d6a2ea0458e68432682085a2e05fba6ac2e55b82b6d639d",
+  "sha256_match": true,
+  "pretraining_tokens": 1121648640,
+  "pretraining_step": 34230,
+  "tokenizer_observed_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+  "tokenizer_expected_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+  "tokenizer_sha256_match": true,
+  "tokenizer_fingerprint": "3559c7435e1d9330",
+  "all_tensors_finite": true,
+  "state_dict_weights_equal": true,
+  "module_parameter_storage_sharing": true,
+  "missing_keys_count": 0,
+  "unexpected_keys_count": 0,
+  "unique_parameter_count": 514389504,
+  "expected_parameter_count": 514389504,
+  "parameter_count_match": true,
+  "status": "PASS"
+}

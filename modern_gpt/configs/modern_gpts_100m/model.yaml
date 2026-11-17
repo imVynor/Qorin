@@ -1,0 +1,22 @@
+# ModernGPT-S 100M Architecture Configuration
+architecture_name: "ModernGPT-S-100M-GQA4"
+parameter_count: 100401408
+vocab_size: 16000
+context_length: 512
+emb_dim: 768
+n_heads: 12
+num_kv_heads: 4
+head_dim: 64
+n_layers: 14
+ffn_hidden_dim: 2048
+dropout: 0.1
+qkv_bias: false
+rope_theta: 10000.0
+norm_type: "RMSNorm"
+activation: "SwiGLU"
+tied_embeddings: true
+gradient_checkpointing: false
+precision: "bf16"
+tokenizer: "bpe_16k_v2"
+tokenizer_fingerprint: "be6c3d60c5baf217"
+

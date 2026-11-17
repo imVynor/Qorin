@@ -1,0 +1,163 @@
+{
+  "manifest_name": "sft_v4_source_registry",
+  "version": "1.0.0",
+  "date": "2026-11-09",
+  "total_curated_sources": 16,
+  "sources": {
+    "tau/commonsense_qa:train": {
+      "upstream": "tau/commonsense_qa",
+      "license": "MIT",
+      "retained_records": 1500,
+      "pruned_records": 6769,
+      "retained_supervised_tokens": 65293,
+      "category": "knowledge_and_explanations",
+      "curation_strategy": "Deterministic quality-based subsampling across diverse premise topics"
+    },
+    "synthetic_long_retrieval_v3": {
+      "upstream": "internal_synthetic_generator",
+      "license": "MIT",
+      "retained_records": 1200,
+      "pruned_records": 8581,
+      "retained_supervised_tokens": 67440,
+      "category": "retrieval_and_structured_output",
+      "curation_strategy": "Stratified sampling of 300 records each across 512, 1024, 2048, 3072 context lengths"
+    },
+    "local_sft_v2:dolly_instruction": {
+      "upstream": "databricks/databricks-dolly-15k",
+      "license": "CC-BY-SA-3.0",
+      "retained_records": 941,
+      "retained_supervised_tokens": 111968,
+      "category": "instruction_following",
+      "curation_strategy": "Reclassified from general_conversation to instruction_following"
+    },
+    "smoltalk:smol-rewrite": {
+      "upstream": "HuggingFaceTB/smoltalk",
+      "license": "Apache-2.0",
+      "retained_records": 460,
+      "retained_supervised_tokens": 83444,
+      "category": "instruction_following",
+      "curation_strategy": "Reclassified from general_conversation to instruction_following"
+    },
+    "local_sft_v2:squad": {
+      "upstream": "rajpurkar/squad",
+      "license": "CC-BY-SA-4.0",
+      "retained_records": 946,
+      "retained_supervised_tokens": 14716,
+      "category": "knowledge_and_explanations",
+      "curation_strategy": "Reclassified from general_conversation to knowledge_and_explanations"
+    },
+    "smoltalk:explore-instruct": {
+      "upstream": "HuggingFaceTB/smoltalk",
+      "license": "Apache-2.0",
+      "retained_records": 916,
+      "retained_supervised_tokens": 33370,
+      "category": "knowledge_and_explanations",
+      "curation_strategy": "Reclassified from general_conversation to knowledge_and_explanations"
+    },
+    "curated_direct_qa": {
+      "upstream": "internal_curated",
+      "license": "MIT",
+      "retained_records": 19,
+      "retained_supervised_tokens": 748,
+      "category": "knowledge_and_explanations",
+      "curation_strategy": "Preserved direct factual concept explanations"
+    },
+    "local_sft_v2:dolly_qa": {
+      "upstream": "databricks/databricks-dolly-15k",
+      "license": "CC-BY-SA-3.0",
+      "retained_records": 321,
+      "retained_supervised_tokens": 15680,
+      "category": "general_conversation",
+      "curation_strategy": "Preserved conversational informational Q&A"
+    },
+    "smoltalk:openhermes": {
+      "upstream": "teknium/OpenHermes-2.5",
+      "license": "MIT / Apache-2.0",
+      "retained_records": 894,
+      "retained_supervised_tokens": 252463,
+      "category": "general_conversation",
+      "curation_strategy": "Preserved high quality conversational interaction pairs"
+    },
+    "curated_conversational_diverse": {
+      "upstream": "internal_curated",
+      "license": "MIT",
+      "retained_records": 9,
+      "retained_supervised_tokens": 216,
+      "category": "general_conversation",
+      "curation_strategy": "Preserved natural casual conversation items"
+    },
+    "curated_context_insulation": {
+      "upstream": "custom_context_insulation_1200",
+      "license": "MIT",
+      "retained_records": 1101,
+      "retained_supervised_tokens": 424032,
+      "category": "multi_turn_dialogue",
+      "curation_strategy": "Ingested 1,200 multi-turn topic-switching and state-retention dialogues"
+    },
+    "smoltalk:smol-magpie-ultra": {
+      "upstream": "HuggingFaceTB/smoltalk",
+      "license": "Apache-2.0",
+      "retained_records": 323,
+      "retained_supervised_tokens": 477575,
+      "category": "multi_turn_dialogue",
+      "curation_strategy": "Preserved true multi-turn instruction dialogue chains"
+    },
+    "openai/gsm8k:train": {
+      "upstream": "openai/gsm8k",
+      "license": "MIT",
+      "retained_records": 2729,
+      "retained_supervised_tokens": 337793,
+      "category": "reasoning_and_mathematics",
+      "curation_strategy": "Preserved grade-school math reasoning (test split strictly quarantined)"
+    },
+    "local_sft_v2:gsm8k": {
+      "upstream": "openai/gsm8k",
+      "license": "MIT",
+      "retained_records": 178,
+      "retained_supervised_tokens": 22222,
+      "category": "reasoning_and_mathematics",
+      "curation_strategy": "Preserved local verified arithmetic reasoning"
+    },
+    "local_sft_v2:code_alpaca": {
+      "upstream": "HuggingFaceH4/CodeAlpaca_20K",
+      "license": "CC-BY-4.0",
+      "retained_records": 1790,
+      "retained_supervised_tokens": 174606,
+      "category": "coding_technical",
+      "curation_strategy": "Validated 100% Python syntax via ast.parse()"
+    },
+    "smoltalk:self-oss-instruct": {
+      "upstream": "HuggingFaceTB/smoltalk",
+      "license": "Apache-2.0",
+      "retained_records": 889,
+      "retained_supervised_tokens": 243126,
+      "category": "coding_technical",
+      "curation_strategy": "Validated 100% Python syntax via ast.parse()"
+    },
+    "local_sft_v2:mbpp": {
+      "upstream": "google-research-datasets/mbpp",
+      "license": "CC-BY-4.0",
+      "retained_records": 311,
+      "retained_supervised_tokens": 30767,
+      "category": "coding_technical",
+      "curation_strategy": "Validated Python benchmark tasks"
+    },
+    "smoltalk:apigen-80k": {
+      "upstream": "HuggingFaceTB/smoltalk",
+      "license": "Apache-2.0",
+      "retained_records": 1167,
+      "retained_supervised_tokens": 118048,
+      "category": "retrieval_and_structured_output",
+      "curation_strategy": "Validated 100% JSON structure via json.loads()"
+    },
+    "local_sft_v2:json": {
+      "upstream": "internal_curated_json",
+      "license": "MIT",
+      "retained_records": 728,
+      "retained_supervised_tokens": 54814,
+      "category": "retrieval_and_structured_output",
+      "curation_strategy": "Validated 100% JSON schema via json.loads()"
+    }
+  }
+}
+

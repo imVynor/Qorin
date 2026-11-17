@@ -1,0 +1,41 @@
+# Experiment C: Joint Capability SFT (Full ModernGPT-S SFT)
+# Focus: Full multi-domain instruction following, tool execution, chain-of-thought reasoning, code generation/debugging, and structured extraction/transformation
+experiment_name: "sft_exp_c_joint_capability"
+model_architecture: "ModernGPT-S-500M"
+init_checkpoint: "modern_gpt/checkpoints/500m_pretrain/ckpt_latest.pt"
+tokenizer_path: "modern_gpt/artifacts/tokenizer_32k/tokenizer.json"
+train_dataset_path: "modern_gpt/data_sft_release/splits/train.jsonl"
+val_dataset_path: "modern_gpt/data_sft_release/splits/val.jsonl"
+output_dir: "modern_gpt/experiments/sft_exp_c_joint_capability"
+
+# Training Hyperparameters
+optimizer: "adamw_8bit"
+learning_rate: 2.0e-5
+min_learning_rate: 2.0e-6
+weight_decay: 0.01
+warmup_ratio: 0.03
+max_grad_norm: 1.0
+precision: "bfloat16"
+gradient_checkpointing: true
+
+# Batching & Schedule
+microbatch_size: 1
+gradient_accumulation_steps: 8
+max_seq_len: 2048
+max_training_tokens: 137164498 # 1 full epoch across entire release dataset
+num_epochs: 1
+
+# Category Sampling Filter (All 5 Categories included)
+category_filter:
+  - "general_instructions"
+  - "reasoning"
+  - "coding"
+  - "structured_output"
+  - "tool_use"
+
+# Logging & Checkpointing
+logging_steps: 10
+eval_steps: 250
+save_steps: 500
+thermal_cooldown_interval_minutes: 105
+thermal_cooldown_duration_minutes: 15

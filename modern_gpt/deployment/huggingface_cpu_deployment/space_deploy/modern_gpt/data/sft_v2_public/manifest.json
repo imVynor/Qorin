@@ -1,0 +1,53 @@
+{
+  "name": "ModernGPT-S SFT v2 Public Mixture",
+  "version": "2.0.0",
+  "tokenizer": "bpe_16k_v2",
+  "tokenizer_fingerprint": "be6c3d60c5baf217",
+  "sha256": "aecdcefaa68c7c217fd3f2c8957a4e740de72c814f0b64096002e640fa386338",
+  "total_records": 8597,
+  "total_tokens": 1939904,
+  "sources": [
+    {
+      "name": "google-research-datasets/mbpp",
+      "split": "train",
+      "license": "CC-BY-4.0",
+      "category": "python"
+    },
+    {
+      "name": "HuggingFaceH4/CodeAlpaca_20K",
+      "split": "train",
+      "license": "Apache-2.0",
+      "category": "python"
+    },
+    {
+      "name": "databricks/databricks-dolly-15k",
+      "split": "train",
+      "license": "CC-BY-SA-3.0",
+      "category": "instruction/qa"
+    },
+    {
+      "name": "HuggingFaceH4/ultrachat_200k",
+      "split": "train_sft",
+      "license": "MIT",
+      "category": "instruction"
+    },
+    {
+      "name": "rajpurkar/squad",
+      "split": "train",
+      "license": "CC-BY-SA-4.0",
+      "category": "qa"
+    },
+    {
+      "name": "openai/gsm8k",
+      "split": "train",
+      "license": "MIT",
+      "category": "math_reasoning"
+    },
+    {
+      "name": "structured_json_schema",
+      "split": "synthetic",
+      "license": "MIT",
+      "category": "json"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "checkpoint": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\checkpoints\\checkpoint_501M\\ckpt_501m_tokens_501678080.pt",
+  "checkpoint_sha256": "a57556554144bdba52bfc81072e097627280e3d7bc2e580719f071b3521f9122",
+  "tokenizer": "C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\modern_gpt\\artifacts\\tokenizer_32k\\tokenizer.json",
+  "tokenizer_sha256": "d10624a9069ffac5a660ef23ca101d5792fdc240575068adde1646b13407eb59",
+  "device": "cuda",
+  "precision": "bfloat16",
+  "decoding": {
+    "max_new_tokens": 128,
+    "temperature": 0.0,
+    "repetition_penalty": 1.15
+  },
+  "benchmarks": [
+    "validation_loss",
+    "behavioral_100",
+    "coding_50",
+    "json_50",
+    "math_50",
+    "tools_20",
+    "diagnostics",
+    "retrieval_matrix"
+  ]
+}

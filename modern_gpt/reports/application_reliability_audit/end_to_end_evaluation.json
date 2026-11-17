@@ -1,0 +1,792 @@
+{
+  "metadata": {
+    "evaluation_title": "QORIN End-to-End Capability & Reliability Audit",
+    "timestamp": "2026-11-16T20:19:08Z",
+    "evaluation_engine": "Deterministic Reliability Harness v2.0",
+    "evaluator": "Antigravity Research QA Engine",
+    "benchmark_dataset_size": 25,
+    "target_model": "qorin-500m-sft-exp-c",
+    "checkpoint_sha256": "6cb5125896bbe1d82b247212b2de7bc18832561c39d0be6a8dbc25724e839a1b"
+  },
+  "tasks": [
+    {
+      "id": "A1_conversational_greeting",
+      "category": "A_direct_response",
+      "prompt": "Hello! How are you doing today?",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "A2_direct_factual_capital",
+      "category": "A_direct_response",
+      "prompt": "What is the capital of France?",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": false,
+      "trace": null
+    },
+    {
+      "id": "A3_coding_explanation_no_exec",
+      "category": "A_direct_response",
+      "prompt": "Explain what a binary search tree is in one sentence without writing code.",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "B1_python_basic_arithmetic",
+      "category": "B_python_execution",
+      "prompt": "Compute 4321 * 8765 using python.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "print(4321 * 8765)"
+        },
+        "output_payload": {
+          "stdout": "37873565\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 45.76,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 46.78,
+        "error": null
+      }
+    },
+    {
+      "id": "B2_python_math_gcd",
+      "category": "B_python_execution",
+      "prompt": "Calculate the greatest common divisor of 123456 and 7890 using python math.gcd.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "import math\nprint(math.gcd(123456, 7890))"
+        },
+        "output_payload": {
+          "stdout": "6\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 43.65,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 44.9,
+        "error": null
+      }
+    },
+    {
+      "id": "B3_python_math_comb",
+      "category": "B_python_execution",
+      "prompt": "How many combinations are there when choosing 5 items out of 20? Compute using python math.comb.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "import math\nprint(math.comb(20, 5))"
+        },
+        "output_payload": {
+          "stdout": "15504\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 44.65,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 45.57,
+        "error": null
+      }
+    },
+    {
+      "id": "B4_python_primes_computation",
+      "category": "B_python_execution",
+      "prompt": "Find the sum of all prime numbers less than 50 using python.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "def is_p(n):\n    if n < 2: return False\n    for i in range(2, int(n**0.5)+1):\n        if n % i == 0: return False\n    return True\nprint(sum(x for x in range(50) if is_p(x)))"
+        },
+        "output_payload": {
+          "stdout": "328\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 44.8,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 45.83,
+        "error": null
+      }
+    },
+    {
+      "id": "B5_python_invalid_syntax",
+      "category": "B_python_execution",
+      "prompt": "Run python code with syntax error: def broken(: print(1)",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": false,
+      "dispatch_success": false,
+      "execution_success": false,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "status": "failed",
+        "error": "Python syntax error in generated code: invalid syntax at line 1"
+      }
+    },
+    {
+      "id": "B6_python_runtime_exception",
+      "category": "B_python_execution",
+      "prompt": "Run python code that divides by zero: print(1 / 0)",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "code": "print(1 / 0)"
+        },
+        "output_payload": {
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_9p8tfc67\\user_script.py\", line 8, in <module>\n    print(1 / 0)\n          ~~^~~\nZeroDivisionError: division by zero\n",
+          "exit_code": 1,
+          "execution_time_ms": 47.19,
+          "timed_out": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_9p8tfc67\\user_script.py\", line 8, in <module>\n    print(1 / 0)\n          ~~^~~\nZeroDivisionError: division by zero"
+        },
+        "latency_ms": 48.63,
+        "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_9p8tfc67\\user_script.py\", line 8, in <module>\n    print(1 / 0)\n          ~~^~~\nZeroDivisionError: division by zero"
+      }
+    },
+    {
+      "id": "B7_python_timeout_enforcement",
+      "category": "B_python_execution",
+      "prompt": "Run python code with infinite sleep: import time; time.sleep(10)",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "code": "import time\ntime.sleep(10)"
+        },
+        "output_payload": {
+          "stdout": "",
+          "stderr": "\nTimeoutError: Execution exceeded time limit of 5.0s.",
+          "exit_code": 124,
+          "execution_time_ms": 5011.24,
+          "timed_out": true,
+          "error": "TimeoutError: Execution exceeded time limit of 5.0s."
+        },
+        "latency_ms": 5012.34,
+        "error": "TimeoutError: Execution exceeded time limit of 5.0s."
+      }
+    },
+    {
+      "id": "C1_web_known_answer_fixture",
+      "category": "C_web_retrieval",
+      "prompt": "Search for Python programming language release year.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "query": "Python programming language release year Guido van Rossum"
+        },
+        "output_payload": {
+          "query": "Python programming language release year Guido van Rossum",
+          "sources": [
+            {
+              "title": "History of Python - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/History_of_Python",
+              "snippet": "Old Python logo, 1990s-2006 New Python logo, 2006-present Guido van Rossum in 2014 The programming language Python was conceived in the late 1980s, [1] and its implementation was started in December 1989 [2] by Guido van Rossum at CWI in the Netherlands as a successor to ABC capable of exception handling and interfacing with the Amoeba operating system. [3] Van Rossum was Python's ..."
+            },
+            {
+              "title": "Guido van Rossum - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Guido_van_Rossum",
+              "snippet": "Van Rossum at the 2008 Google I/O Developer's Conference Van Rossum at the 2006 O'Reilly Open Source Convention (OSCON) Guido van Rossum (Dutch: [\u02c8xido\u02d0 v\u0251n \u02c8r\u0254s\u028fm]; born 31 January 1956) is a Dutch programmer. He is the creator of the Python programming language, for which he was the \"benevolent dictator for life\" (BDFL) until he stepped down from the position on 12 July 2018. [4][5] He ..."
+            },
+            {
+              "title": "History of Python - GeeksforGeeks",
+              "url": "https://www.geeksforgeeks.org/python/history-of-python/",
+              "snippet": "Python is one of the most popular, high-level, general-purpose programming languages. It was created with a focus on code readability and allows developers to write concepts in fewer lines compared to C++ or Java. Who Invented Python? Creator: Guido van Rossum Started: 1989, at Centrum Wiskunde & Informatica (CWI), Netherlands First Release: 1991 Reason: Started as a hobby project during ..."
+            }
+          ],
+          "summary": "[1] History of Python - Wikipedia (https://en.wikipedia.org/wiki/History_of_Python):\nOld Python logo, 1990s-2006 New Python logo, 2006-present Guido van Rossum in 2014 The programming language Python was conceived in the late 1980s, [1] and its implementation was started in December 1989 [2] by Guido van Rossum at CWI in the Netherlands as a successor to ABC capable of exception handling and interfacing with the Amoeba operating system. [3] Van Rossum was Python's ...\n\n[2] Guido van Rossum - Wikipedia (https://en.wikipedia.org/wiki/Guido_van_Rossum):\nVan Rossum at the 2008 Google I/O Developer's Conference Van Rossum at the 2006 O'Reilly Open Source Convention (OSCON) Guido van Rossum (Dutch: [\u02c8xido\u02d0 v\u0251n \u02c8r\u0254s\u028fm]; born 31 January 1956) is a Dutch programmer. He is the creator of the Python programming language, for which he was the \"benevolent dictator for life\" (BDFL) until he stepped down from the position on 12 July 2018. [4][5] He ...\n\n[3] History of Python - GeeksforGeeks (https://www.geeksforgeeks.org/python/history-of-python/):\nPython is one of the most popular, high-level, general-purpose programming languages. It was created with a focus on code readability and allows developers to write concepts in fewer lines compared to C++ or Java. Who Invented Python? Creator: Guido van Rossum Started: 1989, at Centrum Wiskunde & Informatica (CWI), Netherlands First Release: 1991 Reason: Started as a hobby project during ...",
+          "latency_ms": 1104.76,
+          "error": null
+        },
+        "latency_ms": 1104.78,
+        "error": null
+      }
+    },
+    {
+      "id": "C2_web_multi_source_comparison",
+      "category": "C_web_retrieval",
+      "prompt": "Compare Python vs Julia benchmarks.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "query": "Python vs Julia benchmarks performance"
+        },
+        "output_payload": {
+          "query": "Python vs Julia benchmarks performance",
+          "sources": [
+            {
+              "title": "Optimized Python is as good as Julia - Performance - Julia Programming ...",
+              "url": "https://discourse.julialang.org/t/optimized-python-is-as-good-as-julia/104432",
+              "snippet": "Comparison of Python / Julia benchmarks for a maths problem. I am considering switching to Julia, but would like to know if it is worth it for such tasks. Here is the Python code I used: import random import numpy as np import matplotlib.pyplot as plt import time def benchmark_it(simul_func: callable, *args, **kwargs): def wrapper(*args, **kwargs): start = time.time() simul_func(*args ..."
+            },
+            {
+              "title": "Julia Micro-Benchmarks",
+              "url": "https://julialang.org/benchmarks/",
+              "snippet": "Julia Micro-Benchmarks These micro-benchmarks, while not comprehensive, do test compiler performance on a range of common code patterns, such as function calls, string parsing, sorting, numerical loops, random number generation, recursion, and array operations."
+            },
+            {
+              "title": "PDF 2018 09 Benchmark with Python - Copy1 - juliacomputing.com",
+              "url": "https://juliacomputing.com/assets/pdf/JuliaVsPython.pdf",
+              "snippet": "BENCHMARK AGAINST PYTHON 2: RECOMMENDER SYSTEM The package RecSys.jl is a package for recommender systems in Julia, it can currently work with explicit ratings data. For preparing the input create an object of ALSWRtype."
+            }
+          ],
+          "summary": "[1] Optimized Python is as good as Julia - Performance - Julia Programming ... (https://discourse.julialang.org/t/optimized-python-is-as-good-as-julia/104432):\nComparison of Python / Julia benchmarks for a maths problem. I am considering switching to Julia, but would like to know if it is worth it for such tasks. Here is the Python code I used: import random import numpy as np import matplotlib.pyplot as plt import time def benchmark_it(simul_func: callable, *args, **kwargs): def wrapper(*args, **kwargs): start = time.time() simul_func(*args ...\n\n[2] Julia Micro-Benchmarks (https://julialang.org/benchmarks/):\nJulia Micro-Benchmarks These micro-benchmarks, while not comprehensive, do test compiler performance on a range of common code patterns, such as function calls, string parsing, sorting, numerical loops, random number generation, recursion, and array operations.\n\n[3] PDF 2018 09 Benchmark with Python - Copy1 - juliacomputing.com (https://juliacomputing.com/assets/pdf/JuliaVsPython.pdf):\nBENCHMARK AGAINST PYTHON 2: RECOMMENDER SYSTEM The package RecSys.jl is a package for recommender systems in Julia, it can currently work with explicit ratings data. For preparing the input create an object of ALSWRtype.",
+          "latency_ms": 721.49,
+          "error": null
+        },
+        "latency_ms": 721.5,
+        "error": null
+      }
+    },
+    {
+      "id": "C3_web_empty_query_handling",
+      "category": "C_web_retrieval",
+      "prompt": "Search query: ''",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": false,
+      "dispatch_success": false,
+      "execution_success": false,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "status": "failed",
+        "error": "Web research payload missing non-empty 'query' argument."
+      }
+    },
+    {
+      "id": "C4_web_retrieval_failure_fallback",
+      "category": "C_web_retrieval",
+      "prompt": "Search for completely random hash: zxcvbnm12345qwertyuiop9876543210asdfghjkl",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "query": "zxcvbnm12345qwertyuiop9876543210asdfghjkl"
+        },
+        "output_payload": {
+          "query": "zxcvbnm12345qwertyuiop9876543210asdfghjkl",
+          "sources": [
+            {
+              "title": "qwertzuiopasdfghjklyxcvbnm song - YouTube",
+              "url": "https://www.youtube.com/watch?v=1sgfODcZm6s",
+              "snippet": "qwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm qwertzuiopasdfghjklyxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbn..."
+            },
+            {
+              "title": "YouTube Music",
+              "url": "https://music.youtube.com/watch?v=1sgfODcZm6s",
+              "snippet": "Add similar content to the end of the queue. qwertzuiopasdfghjklyxcvbnm song. Likees Boa. 2:33. Autoplay is on. 0:00 / 0:00"
+            },
+            {
+              "title": "qwertyuiopasdfghjklzxcvbnm - YouTube",
+              "url": "https://www.youtube.com/watch?v=A-bCqqSgw1Y",
+              "snippet": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube."
+            }
+          ],
+          "summary": "[1] qwertzuiopasdfghjklyxcvbnm song - YouTube (https://www.youtube.com/watch?v=1sgfODcZm6s):\nqwertzuiopasdfghjklyxcvbnmqwertzuiopasdfghjklyxcvbnm qwertzuiopasdfghjklyxcvbnmqwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm qwertyuiopasdfghjklzxcvbn...\n\n[2] YouTube Music (https://music.youtube.com/watch?v=1sgfODcZm6s):\nAdd similar content to the end of the queue. qwertzuiopasdfghjklyxcvbnm song. Likees Boa. 2:33. Autoplay is on. 0:00 / 0:00\n\n[3] qwertyuiopasdfghjklzxcvbnm - YouTube (https://www.youtube.com/watch?v=A-bCqqSgw1Y):\nEnjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+          "latency_ms": 680.8,
+          "error": null
+        },
+        "latency_ms": 680.81,
+        "error": null
+      }
+    },
+    {
+      "id": "C5_web_source_attribution",
+      "category": "C_web_retrieval",
+      "prompt": "Search for Turing Award recipients in computer science.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "query": "Turing Award computer science recipients list"
+        },
+        "output_payload": {
+          "query": "Turing Award computer science recipients list",
+          "sources": [
+            {
+              "title": "List of Turing Award Winners - stats.areppim.com",
+              "url": "https://stats.areppim.com/listes/list_turingxaward.htm",
+              "snippet": "Complete list of winners of Turing award for computer sciences by ACM (Association for Computing Machinery) since 1966, including laureates gender, age, citizenship and affiliation"
+            },
+            {
+              "title": "A.M. Turing Award Winners by Year",
+              "url": "https://amturing.acm.org/byyear.cfm",
+              "snippet": "your description (2025) Bennett, Charles Henry Brassard, Gilles (2024) Barto, Andrew Sutton, Richard (2023) Wigderson, Avi (2022) Metcalfe, Robert Melancton (2021 ..."
+            },
+            {
+              "title": "Turing Award - Wikipedia",
+              "url": "https://en.wikipedia.org/wiki/Turing_Award",
+              "snippet": "The ACM A. M. Turing Award is an annual prize given by the Association for Computing Machinery (ACM) for contributions of lasting and major technical importance to computer science."
+            }
+          ],
+          "summary": "[1] List of Turing Award Winners - stats.areppim.com (https://stats.areppim.com/listes/list_turingxaward.htm):\nComplete list of winners of Turing award for computer sciences by ACM (Association for Computing Machinery) since 1966, including laureates gender, age, citizenship and affiliation\n\n[2] A.M. Turing Award Winners by Year (https://amturing.acm.org/byyear.cfm):\nyour description (2025) Bennett, Charles Henry Brassard, Gilles (2024) Barto, Andrew Sutton, Richard (2023) Wigderson, Avi (2022) Metcalfe, Robert Melancton (2021 ...\n\n[3] Turing Award - Wikipedia (https://en.wikipedia.org/wiki/Turing_Award):\nThe ACM A. M. Turing Award is an annual prize given by the Association for Computing Machinery (ACM) for contributions of lasting and major technical importance to computer science.",
+          "latency_ms": 776.78,
+          "error": null
+        },
+        "latency_ms": 776.79,
+        "error": null
+      }
+    },
+    {
+      "id": "D1_select_python_only",
+      "category": "D_tool_selection",
+      "prompt": "Compute 987654 // 321 using python.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "print(987654 // 321)"
+        },
+        "output_payload": {
+          "stdout": "3076\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 44.11,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 45.06,
+        "error": null
+      }
+    },
+    {
+      "id": "D2_select_web_only",
+      "category": "D_tool_selection",
+      "prompt": "Search for the latest news on the James Webb Space Telescope discoveries.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "web_research",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": false,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "query": "James Webb Space Telescope discoveries latest news"
+        },
+        "output_payload": {
+          "query": "James Webb Space Telescope discoveries latest news",
+          "sources": [],
+          "summary": "No live web sources could be retrieved for this query.",
+          "latency_ms": 680.04,
+          "error": "Search returned 0 results or request timed out."
+        },
+        "latency_ms": 680.05,
+        "error": "Search returned 0 results or request timed out."
+      }
+    },
+    {
+      "id": "D3_select_both_tools_composite",
+      "category": "D_tool_selection",
+      "prompt": "Find the population of Canada, then calculate 15% of that population in Python.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "composite",
+      "selected_tool": "web_research",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "web_research",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "query": "Canada population"
+        },
+        "output_payload": {
+          "query": "Canada population",
+          "sources": [
+            {
+              "title": "Canada population (Wikipedia)",
+              "url": "https://en.wikipedia.org/wiki/Canada_population",
+              "snippet": "Encyclopedic entry for Canada population."
+            }
+          ],
+          "summary": "[1] Canada population (Wikipedia) (https://en.wikipedia.org/wiki/Canada_population):\nEncyclopedic entry for Canada population.",
+          "latency_ms": 621.01,
+          "error": null
+        },
+        "latency_ms": 621.02,
+        "error": null
+      }
+    },
+    {
+      "id": "D4_select_direct_with_both_enabled",
+      "category": "D_tool_selection",
+      "prompt": "Write a short haiku about autumn leaves falling.",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "D5_select_ambiguous_direct",
+      "category": "D_tool_selection",
+      "prompt": "What are the key mathematical properties of prime numbers?",
+      "expected_intent": false,
+      "detected_intent": false,
+      "expected_tool": null,
+      "selected_tool": null,
+      "syntax_valid": "N/A",
+      "dispatch_success": "N/A",
+      "execution_success": "N/A",
+      "end_to_end_semantic_success": true,
+      "trace": null
+    },
+    {
+      "id": "E1_call_exec_synthesis",
+      "category": "E_multi_stage",
+      "prompt": "Compute 2**16 in Python and state the result.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "print(2**16)"
+        },
+        "output_payload": {
+          "stdout": "65536\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 44.91,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 45.8,
+        "error": null
+      }
+    },
+    {
+      "id": "E2_error_recovery_attempt",
+      "category": "E_multi_stage",
+      "prompt": "Execute Python code with NameError, then recover with correct variable.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": false,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "failed",
+        "input_payload": {
+          "code": "print(non_existent_variable)"
+        },
+        "output_payload": {
+          "stdout": "",
+          "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_92z6nc0v\\user_script.py\", line 8, in <module>\n    print(non_existent_variable)\n          ^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'non_existent_variable' is not defined\n",
+          "exit_code": 1,
+          "execution_time_ms": 47.93,
+          "timed_out": false,
+          "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_92z6nc0v\\user_script.py\", line 8, in <module>\n    print(non_existent_variable)\n          ^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'non_existent_variable' is not defined"
+        },
+        "latency_ms": 48.95,
+        "error": "Traceback (most recent call last):\n  File \"C:\\Users\\Anish\\Desktop\\Projects\\ML-course\\backend\\data\\sandbox\\run_92z6nc0v\\user_script.py\", line 8, in <module>\n    print(non_existent_variable)\n          ^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'non_existent_variable' is not defined"
+      }
+    },
+    {
+      "id": "E3_two_sequential_tool_calls",
+      "category": "E_multi_stage",
+      "prompt": "Step 1: Compute 12 * 12 in Python. Step 2: Compute 144 * 2 in Python.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "print(12 * 12)"
+        },
+        "output_payload": {
+          "stdout": "144\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 46.34,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 47.4,
+        "error": null
+      }
+    },
+    {
+      "id": "E4_misinterpretation_audit",
+      "category": "E_multi_stage",
+      "prompt": "Is 91 a prime number? Compute using python.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "n = 91\nprint([i for i in range(2, n) if n % i == 0])"
+        },
+        "output_payload": {
+          "stdout": "[7, 13]\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 44.1,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 45.18,
+        "error": null
+      }
+    },
+    {
+      "id": "E5_contradiction_handling",
+      "category": "E_multi_stage",
+      "prompt": "Verify if 1001 is prime or composite in Python.",
+      "expected_intent": true,
+      "detected_intent": true,
+      "expected_tool": "python",
+      "selected_tool": "python",
+      "syntax_valid": true,
+      "dispatch_success": true,
+      "execution_success": true,
+      "end_to_end_semantic_success": true,
+      "trace": {
+        "tool_name": "python",
+        "requested_by": "model",
+        "status": "completed",
+        "input_payload": {
+          "code": "n = 1001\nprint([i for i in range(2, 50) if n % i == 0])"
+        },
+        "output_payload": {
+          "stdout": "[7, 11, 13]\n",
+          "stderr": "",
+          "exit_code": 0,
+          "execution_time_ms": 44.39,
+          "timed_out": false,
+          "error": null
+        },
+        "latency_ms": 45.46,
+        "error": null
+      }
+    }
+  ],
+  "configuration_matrix": {
+    "OFF_OFF": {
+      "web_enabled": false,
+      "python_enabled": false,
+      "python_call_dispatched": false,
+      "web_call_dispatched": false,
+      "enforcement_valid": true
+    },
+    "OFF_ON": {
+      "web_enabled": false,
+      "python_enabled": true,
+      "python_call_dispatched": true,
+      "web_call_dispatched": false,
+      "enforcement_valid": true
+    },
+    "ON_OFF": {
+      "web_enabled": true,
+      "python_enabled": false,
+      "python_call_dispatched": false,
+      "web_call_dispatched": true,
+      "enforcement_valid": true
+    },
+    "ON_ON": {
+      "web_enabled": true,
+      "python_enabled": true,
+      "python_call_dispatched": true,
+      "web_call_dispatched": true,
+      "enforcement_valid": true
+    }
+  },
+  "confusion_matrix": {
+    "true_positives": 20,
+    "false_positives": 0,
+    "true_negatives": 5,
+    "false_negatives": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "total_tasks": 25,
+    "tool_intent_tasks": 20,
+    "direct_response_tasks": 5
+  },
+  "metrics_summary": {
+    "tool_intent_recall": 100.0,
+    "tool_intent_precision": 100.0,
+    "tool_intent_f1": 1.0,
+    "syntax_validity_rate": 90.0,
+    "dispatch_success_rate": 90.0,
+    "execution_success_rate": 88.89,
+    "end_to_end_semantic_success_rate": 96.0
+  }
+}

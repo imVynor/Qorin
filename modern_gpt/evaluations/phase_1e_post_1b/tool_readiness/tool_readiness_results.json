@@ -1,0 +1,298 @@
+{
+  "ckpt_501m": {
+    "checkpoint": "ckpt_501m",
+    "total_tasks": 20,
+    "correct_tool_intent": 3,
+    "tool_intent_accuracy_pct": 15.0,
+    "records": [
+      {
+        "task_id": "tool_01",
+        "prompt": "Calculate the square root of 289 using python.",
+        "expected_tool": "python",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_02",
+        "prompt": "Check the current weather in Paris.",
+        "expected_tool": "weather",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_03",
+        "prompt": "Search the web for the latest NASA Artemis mission status.",
+        "expected_tool": "web_search",
+        "generated": "- Open the web browser and select the \"Search\" button.\n- Click the \"Search\" button.\n- Click the \"Search\" button.",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_04",
+        "prompt": "Run python code to find the 20th Fibonacci number.",
+        "expected_tool": "python",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_05",
+        "prompt": "Search for the author of 'To Kill a Mockingbird'.",
+        "expected_tool": "web_search",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_06",
+        "prompt": "Execute python: sum of numbers from 1 to 100.",
+        "expected_tool": "python",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_07",
+        "prompt": "What is the capital of France? (No tools needed)",
+        "expected_tool": null,
+        "generated": "The capital of France is the capital of the world. \nThe capital of the world is the capital of the world. \nThe capital of the",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_08",
+        "prompt": "Explain what photosythesis is in simple terms.",
+        "expected_tool": null,
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": true
+      },
+      {
+        "task_id": "tool_09",
+        "prompt": "Calculate 345 * 892 using python.",
+        "expected_tool": "python",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_10",
+        "prompt": "Look up today's stock price for Apple.",
+        "expected_tool": "web_search",
+        "generated": "The price of a product is the price of the product.\nThe price of a product is the price of the product.\nThe price of a product",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_11",
+        "prompt": "Write a python script to test if a string is a palindrome.",
+        "expected_tool": "python",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_12",
+        "prompt": "Tell me a short bedtime story about a friendly dragon.",
+        "expected_tool": null,
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": true
+      },
+      {
+        "task_id": "tool_13",
+        "prompt": "Search the web for recent papers on Grouped Query Attention.",
+        "expected_tool": "web_search",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_14",
+        "prompt": "Use python to sort this list: [9, 3, 7, 1, 5].",
+        "expected_tool": "python",
+        "generated": "- 1. The list of all the possible values of the list.\n- 2. The list of all the possible values of the list.\n-",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_15",
+        "prompt": "Define the word 'serendipity'.",
+        "expected_tool": null,
+        "generated": "\"serendipity\" is a word used in the English language to refer to a specific type of a person.\n\nSee also\nList of",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_16",
+        "prompt": "Check the temperature in Tokyo right now.",
+        "expected_tool": "weather",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_17",
+        "prompt": "Compute 2^32 using python.",
+        "expected_tool": "python",
+        "generated": "```python\nimport numpy as np\n\ndef _calc_calc_calc(self, x, y):\n    return np.array",
+        "intent_detected": true
+      },
+      {
+        "task_id": "tool_18",
+        "prompt": "Search the web for recipes with tofu and broccoli.",
+        "expected_tool": "web_search",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_19",
+        "prompt": "Summarize the rules of chess.",
+        "expected_tool": null,
+        "generated": "1. The game is a game of chess.\n2. The game is a game of chess.\n3. The game is a game of chess",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_20",
+        "prompt": "Evaluate math expression with python: math.factorial(10).",
+        "expected_tool": "python",
+        "generated": "Tool to invoke (or None if no tool needed): \nTool to invoke (or None if no tool needed): \nT",
+        "intent_detected": false
+      }
+    ]
+  },
+  "ckpt_latest": {
+    "checkpoint": "ckpt_latest",
+    "total_tasks": 20,
+    "correct_tool_intent": 0,
+    "tool_intent_accuracy_pct": 0.0,
+    "records": [
+      {
+        "task_id": "tool_01",
+        "prompt": "Calculate the square root of 289 using python.",
+        "expected_tool": "python",
+        "generated": "- The tool to invoke (or None if no tool needed): \n- The tool to invoke (or None if no tool needed):",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_02",
+        "prompt": "Check the current weather in Paris.",
+        "expected_tool": "weather",
+        "generated": "- The first thing you need to do is to make sure that you have the right tools.\n- If you have a tool, you can use it",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_03",
+        "prompt": "Search the web for the latest NASA Artemis mission status.",
+        "expected_tool": "web_search",
+        "generated": "- The NASA Artemis program is currently in development.\n- The NASA Artemis program is currently in development.\n- The NASA Artemis program is",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_04",
+        "prompt": "Run python code to find the 20th Fibonacci number.",
+        "expected_tool": "python",
+        "generated": "- The number of digits in the number.\n- The number of digits in the number.\n- The number of digits in the number.\n-",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_05",
+        "prompt": "Search for the author of 'To Kill a Mockingbird'.",
+        "expected_tool": "web_search",
+        "generated": "- The author of this article is not a member of the\n- The author of this article is not a member of the\n- The author of this",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_06",
+        "prompt": "Execute python: sum of numbers from 1 to 100.",
+        "expected_tool": "python",
+        "generated": "- The number of digits in the number.\n- The number of digits in the number.\n- The number of digits in the number.\n-",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_07",
+        "prompt": "What is the capital of France? (No tools needed)",
+        "expected_tool": null,
+        "generated": "- The name of the city.\n- The name of the city.\n- The name of the city.\n- The name of the city.",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_08",
+        "prompt": "Explain what photosythesis is in simple terms.",
+        "expected_tool": null,
+        "generated": "- The following is a description of the process:\n- The process is called \"photosynthesis\".\n- The process is called \"photosynthesis",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_09",
+        "prompt": "Calculate 345 * 892 using python.",
+        "expected_tool": "python",
+        "generated": "- The following code is used to invoke the given tool:\n- The following code is used to invoke the given tool:\n- The following",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_10",
+        "prompt": "Look up today's stock price for Apple.",
+        "expected_tool": "web_search",
+        "generated": "- The first time you see a button, click on it and then click on it.\n- The second time you see a button, click on it",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_11",
+        "prompt": "Write a python script to test if a string is a palindrome.",
+        "expected_tool": "python",
+        "generated": "- The string is a palindrome.\n- The string is a palindrome.\n- The string is a palindrome.\n-",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_12",
+        "prompt": "Tell me a short bedtime story about a friendly dragon.",
+        "expected_tool": null,
+        "generated": "- The dragon is a dragon.\n- The dragon is a dragon.\n- The dragon is a dragon.\n- The dragon is a dragon.",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_13",
+        "prompt": "Search the web for recent papers on Grouped Query Attention.",
+        "expected_tool": "web_search",
+        "generated": "- The following is a list of the most common types of groupings:\n- Grouped Query: Grouped Query\n- Grouped Qu",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_14",
+        "prompt": "Use python to sort this list: [9, 3, 7, 1, 5].",
+        "expected_tool": "python",
+        "generated": "[9, 3, 7, 1, 5].\n\n# The following is a list of the possible values of the list:\n# [9,",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_15",
+        "prompt": "Define the word 'serendipity'.",
+        "expected_tool": null,
+        "generated": "- The word 'serendipity' is used to invoke the word 'serendipity'.\n- The word 'serendipity",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_16",
+        "prompt": "Check the temperature in Tokyo right now.",
+        "expected_tool": "weather",
+        "generated": "- The temperature in Tokyo is about -15\u00b0C.\n- The temperature in Tokyo is about -15\u00b0C.\n- The temperature in Tokyo",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_17",
+        "prompt": "Compute 2^32 using python.",
+        "expected_tool": "python",
+        "generated": "- The following code is used to invoke the given function:\n\nimport os\nimport sys\nimport time\nimport subprocess\nimport sys\nimport",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_18",
+        "prompt": "Search the web for recipes with tofu and broccoli.",
+        "expected_tool": "web_search",
+        "generated": "- The web browser is not configured to allow the user to access the web page.\n- The web browser is not configured to allow the user to access",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_19",
+        "prompt": "Summarize the rules of chess.",
+        "expected_tool": null,
+        "generated": "- The first rule is the same as the second rule.\n- The first rule is the same as the second rule.\n- The first rule is",
+        "intent_detected": false
+      },
+      {
+        "task_id": "tool_20",
+        "prompt": "Evaluate math expression with python: math.factorial(10).",
+        "expected_tool": "python",
+        "generated": "- The following code is used to invoke the function:\n- The function is called with the argument \"math.factorial(10).\"",
+        "intent_detected": false
+      }
+    ]
+  }
+}

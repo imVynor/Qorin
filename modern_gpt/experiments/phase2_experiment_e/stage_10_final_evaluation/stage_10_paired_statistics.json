@@ -1,0 +1,142 @@
+{
+  "branch_d_best_vs_exp_d_parent": {
+    "candidate": "branch_d_best",
+    "reference": "exp_d_parent",
+    "total_tasks": 150,
+    "contingency_table": {
+      "both_pass": 28,
+      "candidate_only_wins": 6,
+      "reference_only_wins": 5,
+      "both_fail": 111
+    },
+    "exact_mcnemar": {
+      "b": 6,
+      "c": 5,
+      "exact_p_value": 1.0,
+      "asymptotic_chi2": 0.0,
+      "asymptotic_p_value": 1.0,
+      "significant_at_05_nominal": false,
+      "significant_at_01_nominal": false
+    },
+    "effect_size": {
+      "risk_difference": 0.0067,
+      "risk_difference_95ci": [
+        -0.0367,
+        0.05
+      ],
+      "odds_ratio": 1.2,
+      "relative_risk": 1.0303
+    },
+    "multiple_comparisons_correction": {
+      "rank": 1,
+      "raw_p_value": 1.0,
+      "bonferroni_adjusted_p": 1.0,
+      "holm_step_down_p": 1.0,
+      "holm_threshold": 0.016667,
+      "significant_after_correction": false
+    }
+  },
+  "branch_d_best_vs_branch_b_best": {
+    "candidate": "branch_d_best",
+    "reference": "branch_b_best",
+    "total_tasks": 150,
+    "contingency_table": {
+      "both_pass": 28,
+      "candidate_only_wins": 6,
+      "reference_only_wins": 7,
+      "both_fail": 109
+    },
+    "exact_mcnemar": {
+      "b": 6,
+      "c": 7,
+      "exact_p_value": 1.0,
+      "asymptotic_chi2": 0.0,
+      "asymptotic_p_value": 1.0,
+      "significant_at_05_nominal": false,
+      "significant_at_01_nominal": false
+    },
+    "effect_size": {
+      "risk_difference": -0.0067,
+      "risk_difference_95ci": [
+        -0.0538,
+        0.0404
+      ],
+      "odds_ratio": 0.8571,
+      "relative_risk": 0.9714
+    },
+    "multiple_comparisons_correction": {
+      "rank": 2,
+      "raw_p_value": 1.0,
+      "bonferroni_adjusted_p": 1.0,
+      "holm_step_down_p": 1.0,
+      "holm_threshold": 0.025,
+      "significant_after_correction": false
+    }
+  },
+  "branch_d_best_vs_branch_c_best": {
+    "candidate": "branch_d_best",
+    "reference": "branch_c_best",
+    "total_tasks": 150,
+    "contingency_table": {
+      "both_pass": 26,
+      "candidate_only_wins": 8,
+      "reference_only_wins": 8,
+      "both_fail": 108
+    },
+    "exact_mcnemar": {
+      "b": 8,
+      "c": 8,
+      "exact_p_value": 1.0,
+      "asymptotic_chi2": 0.0625,
+      "asymptotic_p_value": 0.802587,
+      "significant_at_05_nominal": false,
+      "significant_at_01_nominal": false
+    },
+    "effect_size": {
+      "risk_difference": 0.0,
+      "risk_difference_95ci": [
+        -0.0523,
+        0.0523
+      ],
+      "odds_ratio": 1.0,
+      "relative_risk": 1.0
+    },
+    "multiple_comparisons_correction": {
+      "rank": 3,
+      "raw_p_value": 1.0,
+      "bonferroni_adjusted_p": 1.0,
+      "holm_step_down_p": 1.0,
+      "holm_threshold": 0.05,
+      "significant_after_correction": false
+    }
+  },
+  "branch_d_best_vs_branch_d_terminal": {
+    "candidate": "branch_d_best",
+    "reference": "branch_d_terminal",
+    "total_tasks": 150,
+    "contingency_table": {
+      "both_pass": 29,
+      "candidate_only_wins": 5,
+      "reference_only_wins": 9,
+      "both_fail": 107
+    },
+    "exact_mcnemar": {
+      "b": 5,
+      "c": 9,
+      "exact_p_value": 0.42395,
+      "asymptotic_chi2": 0.6429,
+      "asymptotic_p_value": 0.422678,
+      "significant_at_05_nominal": false,
+      "significant_at_01_nominal": false
+    },
+    "effect_size": {
+      "risk_difference": -0.0267,
+      "risk_difference_95ci": [
+        -0.0754,
+        0.022
+      ],
+      "odds_ratio": 0.5556,
+      "relative_risk": 0.8947
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "manifest_name": "sft_v4_category_mapping",
+  "version": "1.0.0",
+  "date": "2026-11-09",
+  "mappings": [
+    {
+      "source": "tau/commonsense_qa:train",
+      "sft_v3_category": "science_commonsense",
+      "sft_v4_category": "knowledge_and_explanations",
+      "rationale": "Commonsense factual and reasoning questions represent everyday conceptual knowledge rather than pure multiple-choice science exams."
+    },
+    {
+      "source": "synthetic_long_retrieval_v3",
+      "sft_v3_category": "long_context_retrieval",
+      "sft_v4_category": "retrieval_and_structured_output",
+      "rationale": "Combines retrieval capabilities with structured output to meet the unified 5% target."
+    },
+    {
+      "source": "local_sft_v2:json",
+      "sft_v3_category": "structured_json",
+      "sft_v4_category": "retrieval_and_structured_output",
+      "rationale": "Combines schema-following JSON output with retrieval under a unified structured output category."
+    },
+    {
+      "source": "smoltalk:apigen-80k",
+      "sft_v3_category": "structured_json",
+      "sft_v4_category": "retrieval_and_structured_output",
+      "rationale": "Tool calling and API JSON generation aligned under retrieval and structured output."
+    },
+    {
+      "source": "smoltalk:smol-rewrite",
+      "sft_v3_category": "general_conversation",
+      "sft_v4_category": "instruction_following",
+      "rationale": "Text transformation, style transfer, and formal drafting tasks are instruction-following tasks, not natural casual conversation."
+    },
+    {
+      "source": "local_sft_v2:dolly_instruction",
+      "sft_v3_category": "general_conversation",
+      "sft_v4_category": "instruction_following",
+      "rationale": "Summarization, extraction, and creative drafting instructions belong in instruction following."
+    },
+    {
+      "source": "local_sft_v2:squad",
+      "sft_v3_category": "general_conversation",
+      "sft_v4_category": "knowledge_and_explanations",
+      "rationale": "Reading comprehension and factual answering belong under knowledge and conceptual explanations."
+    },
+    {
+      "source": "smoltalk:explore-instruct",
+      "sft_v3_category": "general_conversation",
+      "sft_v4_category": "knowledge_and_explanations",
+      "rationale": "In-depth domain explanations across academic and real-world subjects belong in knowledge and explanations."
+    },
+    {
+      "source": "curated_direct_qa",
+      "sft_v3_category": "general_conversation",
+      "sft_v4_category": "knowledge_and_explanations",
+      "rationale": "Direct scientific and historical explanations belong in knowledge and explanations."
+    },
+    {
+      "source": "local_sft_v2:code_alpaca",
+      "sft_v3_category": "coding_python",
+      "sft_v4_category": "coding_technical",
+      "rationale": "Broadened category name to cover general coding and technical tasks."
+    },
+    {
+      "source": "smoltalk:self-oss-instruct",
+      "sft_v3_category": "coding_python",
+      "sft_v4_category": "coding_technical",
+      "rationale": "Open source software engineering tasks mapped to coding and technical."
+    },
+    {
+      "source": "local_sft_v2:mbpp",
+      "sft_v3_category": "coding_python",
+      "sft_v4_category": "coding_technical",
+      "rationale": "Basic Python programming benchmark tasks mapped to coding and technical."
+    },
+    {
+      "source": "openai/gsm8k:train",
+      "sft_v3_category": "mathematics",
+      "sft_v4_category": "reasoning_and_mathematics",
+      "rationale": "Word problems and multi-step math mapped to reasoning and mathematics."
+    },
+    {
+      "source": "local_sft_v2:gsm8k",
+      "sft_v3_category": "mathematics",
+      "sft_v4_category": "reasoning_and_mathematics",
+      "rationale": "Grade school math reasoning mapped to reasoning and mathematics."
+    },
+    {
+      "source": "curated_context_insulation",
+      "sft_v3_category": "multi_turn_dialogue",
+      "sft_v4_category": "multi_turn_dialogue",
+      "rationale": "Maintained under multi-turn dialogue with expanded turn depth."
+    },
+    {
+      "source": "smoltalk:smol-magpie-ultra",
+      "sft_v3_category": "multi_turn_dialogue",
+      "sft_v4_category": "multi_turn_dialogue",
+      "rationale": "True multi-turn conversation chains retained under multi-turn dialogue."
+    },
+    {
+      "source": "local_sft_v2:dolly_qa",
+      "sft_v3_category": "general_conversation",
+      "sft_v4_category": "general_conversation",
+      "rationale": "Conversational Q&A retained under general conversation."
+    },
+    {
+      "source": "smoltalk:openhermes",
+      "sft_v3_category": "general_conversation",
+      "sft_v4_category": "general_conversation",
+      "rationale": "Interactive conversation pairs retained under general conversation."
+    },
+    {
+      "source": "curated_conversational_diverse",
+      "sft_v3_category": "general_conversation",
+      "sft_v4_category": "general_conversation",
+      "rationale": "Casual greeting and conversational items retained under general conversation."
+    }
+  ]
+}
+

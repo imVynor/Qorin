@@ -1,0 +1,772 @@
+{
+  "analysis_timestamp": "\"2026-11-17\"",
+  "prior_30task_5_failures_investigation": [
+    {
+      "original_benchmark_id": "selection_discrim_02",
+      "prompt": "Who was the historical mathematician that first published compound interest tables?",
+      "category": "selection_discrimination",
+      "root_cause": "poor_or_irrelevant_sources",
+      "detailed_mechanism": "DuckDuckGo returned modern financial banking blogs instead of mathematical history articles; model lacked Richard Witt / Simon Stevin historical citations in retrieved context."
+    },
+    {
+      "original_benchmark_id": "selection_discrim_04",
+      "prompt": "What is the latest published benchmark score of Gemini 1.5 Pro on MATH benchmark?",
+      "category": "selection_discrimination",
+      "root_cause": "failure_to_extract_evidence",
+      "detailed_mechanism": "Retrieved web snippet contained multi-benchmark evaluation tables (GSM8K, MMLU, MATH); model extracted GSM8K score (86.5%) instead of MATH benchmark score (67.7%)."
+    },
+    {
+      "original_benchmark_id": "multistep_01",
+      "prompt": "Find the annual revenue of Apple and Microsoft for fiscal year 2023, then compute the difference in billions.",
+      "category": "multistep_web_python",
+      "root_cause": "intermediate_transfer_failure",
+      "detailed_mechanism": "First stage successfully retrieved Apple ($383B) and Microsoft ($211B), but in second stage model attempted mental arithmetic rather than issuing a chained Python subtraction call, producing slight rounding discrepancy."
+    },
+    {
+      "original_benchmark_id": "multistep_03",
+      "prompt": "Find the distance in kilometers between Paris and Rome, then calculate travel time driving at 85 km/h.",
+      "category": "multistep_web_python",
+      "root_cause": "intermediate_transfer_failure",
+      "detailed_mechanism": "Model retrieved aerial/flight distance (1,105 km) rather than driving road route distance (1,420 km), leading to calculation discrepancy against ground truth driving time."
+    },
+    {
+      "original_benchmark_id": "multistep_04",
+      "prompt": "Look up the population of Australia and Canada in 2023, then calculate the ratio between them.",
+      "category": "multistep_web_python",
+      "root_cause": "failure_to_extract_evidence",
+      "detailed_mechanism": "Web researcher returned 2021 census data for Australia alongside 2023 estimate for Canada, causing the calculated population ratio to drift outside the tolerance window."
+    }
+  ],
+  "stage5_150task_exp_d_execution_failures_count": 80,
+  "stage5_150task_exp_d_execution_failures": [
+    {
+      "id": "colloquial_04",
+      "category": "colloquial_web_research",
+      "prompt": "find details on who won the nobel prize in physics 2024",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe Nobel Prize in Literature is a literary award awarded to a series of prizes, the Nobel Prizes. It is regarded as one of the most prestigious lit"
+    },
+    {
+      "id": "colloquial_05",
+      "category": "colloquial_web_research",
+      "prompt": "catch me up on the falcon 9 polaris dawn mission",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe Polaris Dawn crew combined their expertise, knowledge, and passion for spaceflight to further human space exploration. Launched on 10 September "
+    },
+    {
+      "id": "colloquial_06",
+      "category": "colloquial_web_research",
+      "prompt": "check out who founded mistral ai",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe OpenAI competitor (https://techcrunch.com/2026/07/04/what-is-mistral-ai-everything-to-know-about-the-openai-competitor/) is a French artificial "
+    },
+    {
+      "id": "colloquial_08",
+      "category": "colloquial_web_research",
+      "prompt": "what happened to the voyager 1 communication thruster issue?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nAuthors:\n1. Google AI Overview (Search):\nGoogle DeepMind launched in May 2024 in the United States, and globally by October 2024.\n\n[4] AI Overview ("
+    },
+    {
+      "id": "colloquial_10",
+      "category": "colloquial_web_research",
+      "prompt": "tell me about yann lecun's jepa architecture",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nconvolutional networks, Turing Award: convolutional networks, LeNet, deep learning, his Bell Labs, NYU and FAIR career, and the shared 2018 Turing A"
+    },
+    {
+      "id": "colloquial_12",
+      "category": "colloquial_web_research",
+      "prompt": "who directs openai's safety research now after jan leike left?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe United States is a federal republic of 50 states that occupies the middle latitudes of the continent, in the mid-Pacific Ocean. The state of Haw"
+    },
+    {
+      "id": "colloquial_14",
+      "category": "colloquial_web_research",
+      "prompt": "give me a rundown on the apple vision pro spatial computing release",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nApollo vision pro spatial computing is a computer vision technology that enables devices to perceive and understand the environment. It processes vi"
+    },
+    {
+      "id": "colloquial_15",
+      "category": "colloquial_web_research",
+      "prompt": "check what happened with the crowdstrike global it outage in july 2024",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nb8aa6656-72c9-4673-c70a9a8a79bc Get to know the evasive adversary, who is supercharging attacks with AI and making AI the new attack surface. 27 sec"
+    },
+    {
+      "id": "colloquial_17",
+      "category": "colloquial_web_research",
+      "prompt": "who is the prime minister of the uk in late 2024?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe prime minister of the United Kingdom in early 2024 is the principal minister of the Crown of His Majesty's Government, and the head of the Briti"
+    },
+    {
+      "id": "colloquial_21",
+      "category": "colloquial_web_research",
+      "prompt": "find out which rover is currently exploring mars' jezero crater",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe region includes the named features Cydonia Mensae, an area of flat-topped mesa -like features\n\nSource: [Mesa Mars](https://en.wikipedia.org/wiki"
+    },
+    {
+      "id": "colloquial_23",
+      "category": "colloquial_web_research",
+      "prompt": "who won the 2024 euro football championship?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nIan K. Smith, M.D. (born July 15, 1969) is an American physician, author, and television host best known for hosting The Doctors. In 2007, he launch"
+    },
+    {
+      "id": "colloquial_24",
+      "category": "colloquial_web_research",
+      "prompt": "find details on google deepmind's alphafold 3 capabilities",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nGoogle DeepMind (https://deepmind.google/about/) is a British-American artificial intelligence (AI) research laboratory which is a subsidiary of Alp"
+    },
+    {
+      "id": "colloquial_25",
+      "category": "colloquial_web_research",
+      "prompt": "check who holds the current men's marathon world record",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nMarathon world record progression - Wikipedia (https://en.wikipedia.org/wiki/Marathon_world_record_progression)"
+    },
+    {
+      "id": "colloquial_26",
+      "category": "colloquial_web_research",
+      "prompt": "who is the ceo of tsmc in 2024?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "Based on verified web research:\na chief executive officer (CEO) is the highest-ranking executive of a firm. CEOs find roles inside various organizations, including public and priva"
+    },
+    {
+      "id": "colloquial_27",
+      "category": "colloquial_web_research",
+      "prompt": "give me the latest on the nasa europa clipper launch",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe European Space Agency (ESA) launched a mission to explore Europa, a Galilean moon of Jupiter. The mission's detailed exploration of Europa will "
+    },
+    {
+      "id": "colloquial_28",
+      "category": "colloquial_web_research",
+      "prompt": "who received the 2022 fields medal in mathematics?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe Fields Medal is a prize awarded to two, three, or four mathematicians under 40 years of age at the International Mathematical Union (IMU) of the"
+    },
+    {
+      "id": "current_02",
+      "category": "current_information",
+      "prompt": "Who won the men's singles championship at Wimbledon in July 2024?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nThe Saint Remigius and the men's tennis tournaments were the men's tennis tournaments, the men's team tournament was played in the spring from May 1"
+    },
+    {
+      "id": "current_04",
+      "category": "current_information",
+      "prompt": "Which city and country hosted the 2024 Summer Olympic Games?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\n2024 Summer Olympics - 2024 Summer Olympics - 2024 Summer Olympics facts ...\n\n[4] 50 Facts About 2024 Summer Olympics - 2024 Summer Olympics - 2024 "
+    },
+    {
+      "id": "current_05",
+      "category": "current_information",
+      "prompt": "What was the closing price range of Bitcoin at the end of the first quarter (March 31) of 2024?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nBitcoin (ABC) is a digital currency that uses peer-to-peer technology to facilitate instant financial transactions and removes the need for third-pa"
+    },
+    {
+      "id": "current_07",
+      "category": "current_information",
+      "prompt": "What was the official release date of Python 3.12 final release?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\npython-3.12.0 is the newest major release of the Python programming language, and it contains many new features and optimizations."
+    },
+    {
+      "id": "current_08",
+      "category": "current_information",
+      "prompt": "What was the landing date of India's Chandrayaan-3 lunar lander Vikram on the Moon?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\n1. Web research: Chandrayaan-3 lunar lander Vikram is a follow-on mission to Chandrayaan-2 to demonstrate end-to-end capability in safe landing and "
+    },
+    {
+      "id": "current_09",
+      "category": "current_information",
+      "prompt": "Who was awarded the 2024 Nobel Peace Prize in October 2024?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe Nobel Peace Prize 2024 - Nobel Peace Prize (https://www.nobelprize.org/prizes/peace/2024/summary/):\nThe Nobel Peace Prize 2024 - Nobel Peace Pri"
+    },
+    {
+      "id": "current_10",
+      "category": "current_information",
+      "prompt": "What long-term target rate does the US Federal Reserve maintain for inflation?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nInterest Rates, Monetary Policy ... (https://economicreader.com/how-federal-reserve-controls-inflation/):\nThe Federal Reserve, the central bank of t"
+    },
+    {
+      "id": "current_11",
+      "category": "current_information",
+      "prompt": "Which motion picture won the 2024 Academy Award for Best Picture at the 96th Oscars?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "Based on verified web research:\nThe history of film, a popular form of mass media, from the 19th century, from the 1930s, from the present, is a work of visual art that simulates e"
+    },
+    {
+      "id": "current_12",
+      "category": "current_information",
+      "prompt": "On what date did SpaceX conduct the Starship Integrated Flight Test 4 (IFT-4)?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe fourth voyage of Columbus, named \"Starship Flight Test 4\" was a Spanish maritime expedition of discovery in 1502 to 1504 to the western Caribbea"
+    },
+    {
+      "id": "current_13",
+      "category": "current_information",
+      "prompt": "Who won the 2024 Eurovision Song Contest held in Malmo, Sweden?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe Eurovision Song Contest 2024 was the 68th edition of the Eurovision Song Contest. Hosted in Malm\u00f6, the contest began on 7 May 2024 with the firs"
+    },
+    {
+      "id": "current_14",
+      "category": "current_information",
+      "prompt": "What is the seated capacity of the Sphere entertainment arena in Las Vegas?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nThe Sphere entertainment arena in Las Vegas is a music and entertainment arena in Paradise, Nevada, United States, east of the Las Vegas Strip. Desi"
+    },
+    {
+      "id": "current_17",
+      "category": "current_information",
+      "prompt": "What is the official world record for the men's 100m sprint and who established it?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nThe men's 100m sprint is a prestigious event in track and field, often determining who earns the title of the fastest man in the world. Its simplici"
+    },
+    {
+      "id": "current_18",
+      "category": "current_information",
+      "prompt": "Which animated feature film crossed $1.6 billion worldwide to become the highest-grossing film of 2024?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "Based on verified web research:\nSunshine fork - The easiest way to stream with the native resolution of your client device - ClassicOldSong/Apollo: Sunshine fork - The easiest way "
+    },
+    {
+      "id": "current_19",
+      "category": "current_information",
+      "prompt": "What is the highest ambient air temperature officially recognized by the WMO on Earth and where was it recorded?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe WMO is the United Nations system's authoritative voice on the state and behaviour of the Earth's atmosphere, its interaction with the land and o"
+    },
+    {
+      "id": "current_20",
+      "category": "current_information",
+      "prompt": "Who won the 2024 Ballon d'Or for men's football in October 2024?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "Based on verified web research:\n1. Web research: Paul Bunyan is a giant lumberjack and folk hero in American and Canadian folklore.\n2. Web research: The name \"Billie Bunyan\" has a "
+    },
+    {
+      "id": "python_01",
+      "category": "python_computation",
+      "prompt": "Calculate the sum of all prime numbers strictly between 50 and 100 using Python.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/1.",
+      "final_response_snippet": "The Python execution yielded: `Sum of prime numbers: 40425`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_02",
+      "category": "python_computation",
+      "prompt": "Find the median of the array [45, 12, 89, 23, 67, 91, 10, 34, 56, 78] using Python statistics.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/1.",
+      "final_response_snippet": "The Python execution yielded: `Mean: <module 'statistics' from 'C:\\\\Users\\\\Anish\\\\AppData\\\\Roaming\\\\uv\\\\python\\\\cpython-3.12-windows-x86_64-none`. Therefore, the requested calculat"
+    },
+    {
+      "id": "python_03",
+      "category": "python_computation",
+      "prompt": "Calculate 23**17 % 1000 using Python pow.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/1.",
+      "final_response_snippet": "The Python execution yielded: `23`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_05",
+      "category": "python_computation",
+      "prompt": "Solve the quadratic equation 3*x**2 - 14*x + 8 = 0 and find both real roots using Python.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/3.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 3003`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_06",
+      "category": "python_computation",
+      "prompt": "Compute the sample standard deviation of [14.2, 16.5, 12.8, 19.1, 15.3, 17.6] rounded to 4 decimals using Python statistics.stdev.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/2.",
+      "final_response_snippet": "The Python execution yielded: `Stdev: <module 'statistics' from 'C:\\\\Users\\\\Anish\\\\AppData\\\\Roaming\\\\uv\\\\python\\\\cpython-3.12-windows-x86_64-none`. Therefore, the requested calcula"
+    },
+    {
+      "id": "python_07",
+      "category": "python_computation",
+      "prompt": "Find the greatest common divisor and least common multiple of 480 and 360 using Python math.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/2.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 705677424419202082469731388791331387073438885889148560411776974969027756\nTherefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_09",
+      "category": "python_computation",
+      "prompt": "Using Python, calculate the 20th Fibonacci number where F(1)=1, F(2)=1, F(3)=2.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/1.",
+      "final_response_snippet": "The Python execution yielded: `20: 20`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_11",
+      "category": "python_computation",
+      "prompt": "Calculate the determinant of the 2x2 matrix [[4, 7], [2, 6]] using Python.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/1.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 0`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_13",
+      "category": "python_computation",
+      "prompt": "Compute the sum of all proper divisors of 284 using Python.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/1.",
+      "final_response_snippet": "The Python execution yielded: `Sum of basic divisors: 7595154`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_18",
+      "category": "python_computation",
+      "prompt": "Find the sum of the digits of 2**100 using Python.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/1.",
+      "final_response_snippet": "The Python execution yielded: `Sum of digits: 1`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_20",
+      "category": "python_computation",
+      "prompt": "Compute the sum of 1/k**2 for k=1 to 1000 using Python, and compare it to pi**2 / 6.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/1.",
+      "final_response_snippet": "The Python execution yielded: `Sum of 1/k: 333833500`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_21",
+      "category": "python_computation",
+      "prompt": "Verify if the word 'racecar' is a palindrome using Python string slicing.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/2.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 0`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "python_23",
+      "category": "python_computation",
+      "prompt": "Count how many integers between 1 and 500 are divisible by both 7 and 9 using Python.",
+      "tool": "python",
+      "classified_root_cause": "incorrect_python_computation",
+      "diagnostic_details": "Failed numerical check; criteria match 0/1.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 0`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "direct_05",
+      "category": "direct_conceptual",
+      "prompt": "Write a short 4-line poem about autumn leaves.",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe Fall of Man Cornelis van Haarlem 1592 Rijksmuseum Amsterdam, Netherlands In the left background we see God (a cloud with a human face and hands)"
+    },
+    {
+      "id": "direct_06",
+      "category": "direct_conceptual",
+      "prompt": "What is Occam's razor and how is it applied in scientific modeling?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nThe problem-solving principle that recommends searching for explanations constructed with the smallest possible set of elements is to be preferred. "
+    },
+    {
+      "id": "direct_08",
+      "category": "direct_conceptual",
+      "prompt": "What are the three core axioms of probability theory formulated by Kolmogorov?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\n1. Kolmogorov, a Russian mathematician who revolutionized probability theory and contributed to various scientific fields, was a Russian mathematici"
+    },
+    {
+      "id": "direct_10",
+      "category": "direct_conceptual",
+      "prompt": "What does the CAP theorem state regarding distributed data stores?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nA distributed database system is a computing infrastructure designed to store and manage data across multiple interconnected nodes or servers. Data "
+    },
+    {
+      "id": "direct_11",
+      "category": "direct_conceptual",
+      "prompt": "Hello! Can you briefly introduce yourself and what you are designed to do?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "Based on verified web research:\na) \"Ian B. Johnson Photography - Bio\"\nb) \"Ian B. Johnson Photography - Bi\"\n\n[3] Ian B. Johnson Photography (writer) - Wikipedia (https://en.wikipedi"
+    },
+    {
+      "id": "direct_16",
+      "category": "direct_conceptual",
+      "prompt": "What is information entropy as formulated by Claude Shannon?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nIan Clausen is an American academic philosopher and theologian specializing in the thought of St. Augustine, particularly in areas of ethics, consci"
+    },
+    {
+      "id": "direct_18",
+      "category": "direct_conceptual",
+      "prompt": "What is Amdahl's Law in parallel computing?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\n1. \"Gene Amdahl - Wikipedia (https://en.wikipedia.org/wiki/Gene_Amdahl)\"\n2. \"Gene Amdahl - Wikipedia (https://en.wikipedia.org/wiki/Gene_Amdahl)\"\n\nS"
+    },
+    {
+      "id": "direct_23",
+      "category": "direct_conceptual",
+      "prompt": "Please write a concise, professional thank-you note to a colleague who assisted with project review.",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 1/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\npray-you-messages-for-appreciation (https://myhappythanks.com/blogs/guides/guides-for-appreciation)\n\n[4] 49 Professional Thank You Notes Part 1 Exam"
+    },
+    {
+      "id": "direct_24",
+      "category": "direct_conceptual",
+      "prompt": "What role does the loss function play in training deep learning models?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/4 criteria.",
+      "final_response_snippet": "Based on verified web research:\nDeep learning models can achieve high accuracy in tasks like image recognition, natural language processing, and deep learning. They can learn from "
+    },
+    {
+      "id": "discrim_01",
+      "category": "tool_discrimination",
+      "prompt": "What is the geometric formula for the surface area of a sphere?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nall 10 Meta Words in Survive Your Ideas word index: every meta word, its Cash or Robux price, the slash rule, and a smart unlock order for new playe"
+    },
+    {
+      "id": "discrim_03",
+      "category": "tool_discrimination",
+      "prompt": "Which ancient Greek mathematician first proved the surface area and volume of a sphere in On the Sphere and Cylinder?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/1 criteria.",
+      "final_response_snippet": "Based on verified web research:\nPaleobotany is the study of the history of plants in On the Sphere and Cylinder, focusing on the reconstruction of whole plants from fossilized part"
+    },
+    {
+      "id": "discrim_05",
+      "category": "tool_discrimination",
+      "prompt": "Compute the sample variance of [88, 92, 79, 95, 83, 71, 99] using Python statistics.variance.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/1 criteria.",
+      "final_response_snippet": "The Python execution yielded: `Variance: [88, 92, 79, 95, 83, 71, 99]`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "discrim_06",
+      "category": "tool_discrimination",
+      "prompt": "Who was awarded the 2023 Turing Award in computer science?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/1 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe A.M. Turing Award, the ACM's most prestigious technical award, is given for major contributions of lasting and major technical importance to com"
+    },
+    {
+      "id": "discrim_11",
+      "category": "tool_discrimination",
+      "prompt": "Define what market capitalization represents in corporate finance.",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nCorporate finance is the division of finance that deals with how corporations address funding sources, capital structure, dividends, and investment "
+    },
+    {
+      "id": "discrim_12",
+      "category": "tool_discrimination",
+      "prompt": "Look up what central bank sets the official cash rate in Australia.",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "Based on verified web research:\nthe Council of Australian Governments (COAG) was the primary intergovernmental forum for the Australian Local Government Association (ALGA) in 1992."
+    },
+    {
+      "id": "discrim_17",
+      "category": "tool_discrimination",
+      "prompt": "Explain Newton's second law of motion F = ma conceptually.",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nF = ma \u2014 Newton's Second Law F = ma - physicsfundamentals.uk (https://physicsfundamentals.uk/learn/newtons-second-law/)"
+    },
+    {
+      "id": "discrim_18",
+      "category": "tool_discrimination",
+      "prompt": "Who is the head coach of the Germany men's national football team in 2024?",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/1 criteria.",
+      "final_response_snippet": "Based on verified web research:\nThe German Football Association (German: Deutscher Fu\u00dfball-Bund or DFB) is the governing body of football in Germany, with 6.6 million members (roug"
+    },
+    {
+      "id": "multistep_01",
+      "category": "multistep_web_python",
+      "prompt": "Find the annual fiscal year 2023 revenue of Apple and Microsoft, then compute the difference in billions of USD using Python.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 0`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "multistep_03",
+      "category": "multistep_web_python",
+      "prompt": "Look up the land area of France and Spain in square kilometers, then find the average of their land areas using Python.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 0`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "multistep_06",
+      "category": "multistep_web_python",
+      "prompt": "Look up the exact launch date of the original iPhone and original iPad, then compute the exact number of days between them using Python datetime.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 0`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "multistep_08",
+      "category": "multistep_web_python",
+      "prompt": "Look up the nominal GDP of Germany and Japan in 2023 in trillions of USD, then compute their combined total using Python.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 0`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "multistep_10",
+      "category": "multistep_web_python",
+      "prompt": "Find the population of Australia (~26.6M) and Canada (~39.0M) in 2023, then calculate the percentage Australia's population is of Canada's using Python.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 0`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "multistep_14",
+      "category": "multistep_web_python",
+      "prompt": "Look up the flight distance in kilometers between London and Tokyo non-stop (~9,600 km) and typical flight duration (~14 hours), then compute the average speed in km/h using Python.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import math\\nres = math.comb(190, 280)\\nprint('Combinations:', res)\"}}"
+    },
+    {
+      "id": "multistep_15",
+      "category": "multistep_web_python",
+      "prompt": "Find the atomic numbers of Platinum (78) and Gold (79), then compute the sum of their squares using Python.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "The Python execution yielded: `Sum of squares: 671262558647881200`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "failure_01",
+      "category": "tool_failure_recovery",
+      "prompt": "Search the web for: !!!###$$$%%%&&&***@@@ (purely non-alphanumeric noise query)",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Failed to express required uncertainty or acknowledgment.",
+      "final_response_snippet": "Based on verified web research:\nA new kind of help (https://search.google/) for your everyday with breakthroughs in Search intelligence from Google I/O."
+    },
+    {
+      "id": "failure_02",
+      "category": "tool_failure_recovery",
+      "prompt": "Calculate 100 / 0 using Python and handle the resulting ZeroDivisionError gracefully.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 1`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "failure_03",
+      "category": "tool_failure_recovery",
+      "prompt": "Search for the private intranet password of employee ID 9841249 on our internal corporate system.",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Failed to express required uncertainty or acknowledgment.",
+      "final_response_snippet": "Based on verified web research:\n\n[4] Employee - Indian Oil Corporation (https://pwa.indianoil.in/MyIOCL/):\nEnter your ESS/eSambandh username and password I'm a Former-employee"
+    },
+    {
+      "id": "failure_05",
+      "category": "tool_failure_recovery",
+      "prompt": "Look up the exact real-time temperature on Neptune's surface right now at 12:00 UTC.",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Failed to express required uncertainty or acknowledgment.",
+      "final_response_snippet": "Based on verified web research:\nthe Neptune temperature on Neptune is 13,000 K (5,400 \u00b0C; 9,300 \u00b0F)."
+    },
+    {
+      "id": "failure_08",
+      "category": "tool_failure_recovery",
+      "prompt": "Find out which national team won the 2038 FIFA Men's World Cup.",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Failed to express required uncertainty or acknowledgment.",
+      "final_response_snippet": "Based on verified web research:\nthe 2038 FIFA World Cup was an international football tournament contested by the men's national teams of the member associations of FIFA. In this t"
+    },
+    {
+      "id": "failure_09",
+      "category": "tool_failure_recovery",
+      "prompt": "Search for: 'asdfghjklqwertyuiopzxcvbnm1234567890' (random unindexed string)",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Failed to express required uncertainty or acknowledgment.",
+      "final_response_snippet": "Based on verified web research:\npioneered by qwertzuiopasdfghjklyxcvbnm1234567890\nqwertzuiopasdfghjklyxcvbnm qwertyuiopasdfghjklyxcvbnm qwertyuiopasdfghjklzxc\nqwertzuiopasdfghjklyx"
+    },
+    {
+      "id": "failure_10",
+      "category": "tool_failure_recovery",
+      "prompt": "Execute Python: `int('hello_world')` and handle the error.",
+      "tool": "python",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "The Python execution yielded: `Combinations: 0`. Therefore, the requested calculation is verified."
+    },
+    {
+      "id": "failure_11",
+      "category": "tool_failure_recovery",
+      "prompt": "Look up what William Shakespeare had for breakfast on the morning of April 23, 1589.",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Failed to express required uncertainty or acknowledgment.",
+      "final_response_snippet": "Based on verified web research:\nThe life of William Shakespeare, from his baptism in Stratford in 1564:\nHe was born in 1564 in London, England, and was a native of the United Kingd"
+    },
+    {
+      "id": "failure_12",
+      "category": "tool_failure_recovery",
+      "prompt": "Run Python: `open('/non_existent_folder_abc/file_xyz.txt', 'r')` and explain the exception.",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/2 criteria.",
+      "final_response_snippet": "Based on verified web research:\nCapital Washington, DC. United States of America facts and country profile: capital, population, flag, government, economy, history, geography, cult"
+    },
+    {
+      "id": "failure_13",
+      "category": "tool_failure_recovery",
+      "prompt": "What is the exact closing price of gold per ounce on December 31, 2030?",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Failed to express required uncertainty or acknowledgment.",
+      "final_response_snippet": "Based on verified web research:\ngold is a chemical element, a group 11 element, and one of the noble metals. It is a transition metal, a group 11 element, and one of the noble meta"
+    },
+    {
+      "id": "failure_14",
+      "category": "tool_failure_recovery",
+      "prompt": "Execute Python: `import os; os.system('echo test')` in the restricted execution sandbox.",
+      "tool": "web_research",
+      "classified_root_cause": "poor_or_irrelevant_sources",
+      "diagnostic_details": "Semantic mismatch: matched only 0/3 criteria.",
+      "final_response_snippet": "Based on verified web research:\nLearn 10 practical web search techniques for finding reliable information in 2026. This AOFIRS guide explains how to refine search queries, use adva"
+    },
+    {
+      "id": "failure_15",
+      "category": "tool_failure_recovery",
+      "prompt": "Search the web for: 'the unified theory of quantum gravity published in Nature 2024 by John Doe' (fictional premise)",
+      "tool": "web_research",
+      "classified_root_cause": "hallucinated_synthesis",
+      "diagnostic_details": "Failed to express required uncertainty or acknowledgment.",
+      "final_response_snippet": "Based on verified web research:\na) Google Scholar: https://scholar.google.com/\nb) Google Scholar: https://scholar.google.com/\n\nSource: [QG](https://plato.stanford.edu/entries/quant"
+    }
+  ],
+  "taxonomy_of_failure_modes": {
+    "incorrect_search_query": "Model generates ambiguous or overly narrow query string.",
+    "poor_or_irrelevant_sources": "Search engine returns SEO blogs, ads, or tangential content.",
+    "failure_to_extract_evidence": "Evidence was present in snippet but model selected wrong number or entity.",
+    "incorrect_python_computation": "Python code executed without error but implemented the wrong formula.",
+    "intermediate_transfer_failure": "Information retrieved in Stage 1 was not transferred into Stage 2 computation.",
+    "hallucinated_synthesis": "Model ignored retrieved evidence and substituted parametric hallucination.",
+    "citation_grounding_failure": "Response made claims unsupported by or conflicting with retrieved URLs."
+  }
+}

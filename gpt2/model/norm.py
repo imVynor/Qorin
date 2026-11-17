@@ -1,0 +1,14 @@
+import torch.nn as nn
+
+
+class RMSNorm(nn.Module):
+    def __init__(self, dim, eps=1e-6):
+        super().__init__()
+        self.weight = nn.Parameter(nn.init.ones_(nn.Parameter(
+            __import__("torch").empty(dim)
+        )))
+        self.eps = eps
+
+    def forward(self, x):
+        variance = x.pow(2).mean(dim=-1, keepdim=True)
+        return x * torch.rsqrt(variance + self.eps) * self.weight

@@ -1,0 +1,76 @@
+{
+  "phase": "Phase 1B.2",
+  "title": "ModernGPT-S 500M Production Tokenizer and Corpus Pipeline Implementation",
+  "date": "2026-11-11",
+  "status": "IMPLEMENTED, AUDITED & G1/G2 PILOTS PASSED",
+  "artifacts": {
+    "binary_shard_format.md": {
+      "bytes": 3525,
+      "sha256": "916e8210b226c21c7a388bf423c9720077b8acb4c74815e2ea50ee41047d480a"
+    },
+    "dataloader_integration_report.md": {
+      "bytes": 2449,
+      "sha256": "51bbaf5382748b97929b5c85302db9cfbda1a062fc1bf81810326125312bb607"
+    },
+    "dataset_ingestion_report.md": {
+      "bytes": 2107,
+      "sha256": "954a184d3521db180bc2c6951b4f9db5efc88bd4386b2c08b31d7d1326bb4960"
+    },
+    "decisions_and_risks.md": {
+      "bytes": 3410,
+      "sha256": "9506542d92367803a296b82645a07e8e930f48228d0d5c58ebdcea7927ff9281"
+    },
+    "deduplication_implementation_report.md": {
+      "bytes": 3874,
+      "sha256": "9a7ddb25733e833119061cdb2c90fae826365b9b2486a6653dae090007c5bc6e"
+    },
+    "filtering_pipeline_report.md": {
+      "bytes": 3505,
+      "sha256": "c1314615580f877b1559e2ec2a844c8aabd89b3634460cd55360ff2e9425e6a4"
+    },
+    "licensing_and_provenance_report.md": {
+      "bytes": 3348,
+      "sha256": "eb91f2bcbed421fb65013d0c69eaf8ba1c761c412a532b69b2e9a10b91102afc"
+    },
+    "mixture_accounting_report.md": {
+      "bytes": 2906,
+      "sha256": "74c31aa75402f8d73eabb67727595c3986ff8696eb7fe674a9cc1a5b9ccf9d8c"
+    },
+    "packing_and_boundary_policy.md": {
+      "bytes": 2139,
+      "sha256": "53c4f5bb9f42ba05b290083f5795f9652007b0ce533e822b26ee1014a6cfcbd8"
+    },
+    "pilot_1m_5m_results.md": {
+      "bytes": 1163,
+      "sha256": "888f42cd9183112232c6f9dade03e9017a31e6055fa05ff4f6bb93ef6d2316ba"
+    },
+    "pilot_50m_results.md": {
+      "bytes": 1172,
+      "sha256": "5622508dceef4e7120544b1470c2211d93a8da9a2a5d683a6105532e5fec3c63"
+    },
+    "production_tokenizer_specification.md": {
+      "bytes": 4584,
+      "sha256": "8cef58228ef29ea1e2aa1e2b3a61afedb99b2215eeb3e97ccfc91c48e4e4d6f2"
+    },
+    "README.md": {
+      "bytes": 10003,
+      "sha256": "e3dd20a9b205324aa27827fc16b1eba437ac8717390e06771a0a2119bea0a30a"
+    },
+    "special_token_mapping.json": {
+      "bytes": 843,
+      "sha256": "298811e38b8c17d9d4ce7d1dd395db2a5c3bbced1177594d2bb8e70af1dacec6"
+    },
+    "tokenizer_manifest.json": {
+      "bytes": 1528,
+      "sha256": "467bce0143ff0ef956cf2d49ce38951690fa6b6bb4fe3b0e5d846b339be26709"
+    },
+    "tokenizer_regression_results.json": {
+      "bytes": 12356,
+      "sha256": "51ab97524f186fc5112bdccc721cf7c98a055f4cf598c4d9661ebc7ac3c1d7d0"
+    },
+    "tokenizer_regression_results.md": {
+      "bytes": 4789,
+      "sha256": "7a52a161043d33458b95fa7a8925dc9c94805e9aecaa2e2ff5425d8f8969f86a"
+    }
+  }
+}

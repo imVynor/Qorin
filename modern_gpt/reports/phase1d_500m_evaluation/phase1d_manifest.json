@@ -1,0 +1,131 @@
+{
+  "evaluation_suite": "Phase 1D: ModernGPT-S 500M 500M-Token Milestone",
+  "checkpoint": "ckpt_501m_tokens_501678080.pt",
+  "files": [
+    {
+      "filename": "README.md",
+      "size_bytes": 6076,
+      "sha256": "235b46e0fc38df42f53f25fb2c7c9e47d76549cff2bbe6b169166d055cd77110"
+    },
+    {
+      "filename": "baseline_comparison_report.md",
+      "size_bytes": 5771,
+      "sha256": "33e3cb2cb751fc6b98865f529a57abd35d11b2ef4ed51b3d33298a5650a02604"
+    },
+    {
+      "filename": "checkpoint_integrity_report.md",
+      "size_bytes": 2330,
+      "sha256": "8c5982ea1f651407e37c005f43df82b7cca7e9590ccaeab09cc2ef05670dafb9"
+    },
+    {
+      "filename": "coding_capability_report.md",
+      "size_bytes": 2586,
+      "sha256": "3c34c658402ac9b210ab29ff6a83f32050d540a899a53742fa7fbf5a81917f1e"
+    },
+    {
+      "filename": "conversational_capability_report.md",
+      "size_bytes": 4458,
+      "sha256": "9c67c2d6d62fecba1f86589cc84123e796eabaff699c2de4d53cb19b05eb263d"
+    },
+    {
+      "filename": "decisions_and_recommendations.md",
+      "size_bytes": 4775,
+      "sha256": "91ee63737a28f69a56ca045efc4ce2f3ca5ac4bcef8562d17553753a0a1b7149"
+    },
+    {
+      "filename": "error_analysis.md",
+      "size_bytes": 5146,
+      "sha256": "c36617d8e7d6dcca5260509be9a3bbad1b3178ff06e9153ad85b9e4d98c43fc0"
+    },
+    {
+      "filename": "evaluation_config.json",
+      "size_bytes": 786,
+      "sha256": "f446e047bc069fc97161d69af00e72f13d242a14bbd2cb860d919700ce961e27"
+    },
+    {
+      "filename": "evaluation_methodology.md",
+      "size_bytes": 4527,
+      "sha256": "686d504683d22cc5d4d25d77bfb72cc8489cc0febfe6e6f0431a5e03a5256dce"
+    },
+    {
+      "filename": "failure_cases.jsonl",
+      "size_bytes": 178793,
+      "sha256": "897f07b925582094a1f00987c3b1bf6aa234b1709e3e3ee965a4f284ae916528"
+    },
+    {
+      "filename": "generation_quality_report.md",
+      "size_bytes": 4600,
+      "sha256": "dbe37df6751f5f0980f74cfb397b22b2c2ff39e9a01250b33292b419b02c2ab6"
+    },
+    {
+      "filename": "mathematical_reasoning_report.md",
+      "size_bytes": 3282,
+      "sha256": "208908c2e17329cd73d809198f0c1c7f9a96cced52dbf084e8f52d6392263f7a"
+    },
+    {
+      "filename": "multi_turn_consistency_report.md",
+      "size_bytes": 2327,
+      "sha256": "7a290bd35df802c8148a4343fe6487cecab78dfca15564f540c15d608404b213"
+    },
+    {
+      "filename": "per_example_scores.jsonl",
+      "size_bytes": 38997,
+      "sha256": "919e00976c30127a5ce51d8d2aab32f112f9bb355b29ed6c5ae4672946c4f62a"
+    },
+    {
+      "filename": "project_timeline_and_context.md",
+      "size_bytes": 4073,
+      "sha256": "75e92a084f9b3a9ad87be3d8c348517aafc47e02fc73d6ab516f98194ba5c47a"
+    },
+    {
+      "filename": "raw_generations.jsonl",
+      "size_bytes": 203838,
+      "sha256": "55eebb3b87dfd074e591b02e65f64562da1299f5264bd31bb1293becba70e29a"
+    },
+    {
+      "filename": "repository_health_audit.md",
+      "size_bytes": 4689,
+      "sha256": "15b32612293e902b8106e37a07e66819a6c62c885770ad69a3442f38fc1a6378"
+    },
+    {
+      "filename": "repository_onboarding_report.md",
+      "size_bytes": 5026,
+      "sha256": "b6e7c95fb944d1cda8e63f237bb3a69abf87519846eb9302bb8dc3a5fa6387bf"
+    },
+    {
+      "filename": "resource_usage_report.md",
+      "size_bytes": 3199,
+      "sha256": "1bfac7cc5688238599a5abff6b04471aea8ae70c7242645684aed3d425e6e7a9"
+    },
+    {
+      "filename": "results.csv",
+      "size_bytes": 630,
+      "sha256": "b1065ea7e1e4c7e72ba1bc0e7a788973cae92e64c1083cd70d6c3fc424c55190"
+    },
+    {
+      "filename": "results.json",
+      "size_bytes": 6583,
+      "sha256": "9a2dc49f4f732b9ab6b0ea118ebea3f394c7aebaf9b0bc055f66ea036d3d88b7"
+    },
+    {
+      "filename": "retrieval_evaluation_report.md",
+      "size_bytes": 6589,
+      "sha256": "a64bc89ada417819c5f36aa7f08f7d0e01bde80d48ab0f67559639eded377569"
+    },
+    {
+      "filename": "structured_output_report.md",
+      "size_bytes": 1745,
+      "sha256": "1f3896ec3d9111803f2b814f54922c88645d224dd1831802be65ea35886922d8"
+    },
+    {
+      "filename": "tool_calling_report.md",
+      "size_bytes": 2140,
+      "sha256": "9882d4a4e78c826201496f3211c5632b48f729d4b80cb3965ecb9148115595cc"
+    },
+    {
+      "filename": "validation_loss_report.md",
+      "size_bytes": 3941,
+      "sha256": "474bbf889e95b01a0f1a99ca078895229bbb52999a7ab2db89b7e9212615c947"
+    }
+  ]
+}

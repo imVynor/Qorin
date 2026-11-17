@@ -1,0 +1,415 @@
+{
+  "audit_metadata": {
+    "stage": "Stage 11: Forensic Failure Analysis & Harness Audit",
+    "reconciliation_target": "Stage 9 (2/15) vs Stage 10 (0/15) Multi-Step Discrepancy",
+    "total_multistep_tasks": 15,
+    "root_cause_summary": "Stage 9 counted single-turn fuzzy criteria substring matches (semantic_pass) as multi-step completions without verifying if the multi-turn chain (Web -> Evidence -> Python -> Synthesis) executed. In reality, Turn 1 in Stage 9 selected Python prematurely on both tasks (multistep_05 and multistep_12) with invalid/hallucinated Python code, and Turn 2 was never executed due to an unhandled AttributeError on trace.status. Stage 10 strictly evaluated all 7 stages of the sequential state machine, correctly diagnosing 0/15 true autonomous multi-step completions."
+  },
+  "tasks": {
+    "multistep_01": {
+      "prompt": "Find the annual fiscal year 2023 revenue of Apple and Microsoft, then compute the difference in billions of USD using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "Apple FY2023 revenue ~$383.29B, Microsoft FY2023 revenue ~$211.91B; difference ~$171.38B.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection with invalid arguments",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"p = 2020(2023)\\nprint(f'Final amount: {p}, cost: {c}')\"}}<|end_tool_call|>"
+      }
+    },
+    "multistep_02": {
+      "prompt": "Look up the heights in meters of Mount Everest and Mount K2, then calculate the difference in feet using Python (1 meter = 3.28084 feet).",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "Everest: 8848.86m, K2: 8611m. Difference: 237.86m = ~780.38 feet.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection with invalid arguments",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import meters_of_Mount Everest\\nprint('Square Root:', meters_of_Mount K2)\"}}"
+      }
+    },
+    "multistep_03": {
+      "prompt": "Look up the land area of France and Spain in square kilometers, then find the average of their land areas using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "France: ~551,695 km^2 (metropolitan) to 643,801 km^2; Spain: ~505,990 km^2. Average: ~528,842 to 574,895 km^2.",
+      "stage_9_reported": {
+        "selected_tool": "web_research",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 1/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "web_research",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "web_research",
+        "classification_branch_d_terminal": "Harness failure (Web retrieval timeout)",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"web_research\", \"arguments\": {\"query\": \"French and Spain overview and facts\"}}"
+      }
+    },
+    "multistep_04": {
+      "prompt": "Find the top speed of a Peregrine Falcon in a dive (km/h) and a Cheetah on land (km/h), then compute the speed ratio using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "Falcon ~389 km/h, Cheetah ~120 km/h; ratio ~3.24x.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/4 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"p = p_peak_freq(p)\\nprint(f'Peak Speed: {p_peak_freq:.2f}')\"}}"
+      }
+    },
+    "multistep_05": {
+      "prompt": "Look up the surface area of Earth and Mars in square kilometers, then calculate what percentage of Earth's area Mars covers using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "Earth ~510.1M km^2, Mars ~144.8M km^2; Mars is approx 28.38% of Earth's area.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": true,
+        "semantic_reason": "Matched 2/3 semantic criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection with invalid arguments",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"p = Earth_and Mars_coverage(SRV)\\nprint('Pages:', p)\"}}"
+      }
+    },
+    "multistep_06": {
+      "prompt": "Look up the exact launch date of the original iPhone and original iPad, then compute the exact number of days between them using Python datetime.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "iPhone: June 29, 2007; iPad: April 3, 2010. Difference: 1,009 days.",
+      "stage_9_reported": {
+        "selected_tool": "web_research",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/2 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "web_research",
+        "classification_branch_d_terminal": "Harness failure (Web retrieval timeout)",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"web_research\", \"arguments\": {\"query\": \"Apple iPhone overview and facts\"}}"
+      }
+    },
+    "multistep_07": {
+      "prompt": "Find the worldwide box office grosses of Avatar (2009) and Avengers: Endgame (2019) in billions, then compute the difference in millions of USD using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "Avatar: ~$2.923B, Endgame: ~$2.799B; difference ~$124 million.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 1/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection with invalid arguments",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import math\\nres = math.comb(Avengers: Endgame)\\nprint('Combinations:', res)\"}}"
+      }
+    },
+    "multistep_08": {
+      "prompt": "Look up the nominal GDP of Germany and Japan in 2023 in trillions of USD, then compute their combined total using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "Germany ~$4.46T, Japan ~$4.21T; combined ~$8.67 trillion USD.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection with invalid arguments",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"p = Germany_and_ Japan\\nprint('Combinations:', p)\"}}"
+      }
+    },
+    "multistep_09": {
+      "prompt": "Look up the distance of Voyager 1 in astronomical units (AU) in 2024 (~164 AU) and convert that distance to kilometers using Python (1 AU = 149,597,870.7 km).",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "164 AU * 149,597,870.7 km = ~24.53 billion kilometers.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import distance_kb_15_km\\nprint('Ky:', len(AU))\"}}"
+      }
+    },
+    "multistep_10": {
+      "prompt": "Find the population of Australia (~26.6M) and Canada (~39.0M) in 2023, then calculate the percentage Australia's population is of Canada's using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "26.6M / 39.0M = approx 68.2%.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection with invalid arguments",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"p = (26.6M)\\nprint('Pages:', p)\"}}"
+      }
+    },
+    "multistep_11": {
+      "prompt": "Look up the orbital periods in Earth days of Mercury (~88 days) and Neptune (~60,190 days), then calculate how many Mercury years occur during one Neptune year using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "60,190 / 87.97 = ~684 Mercury years.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 1/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import math\\nres = math.comb(Neptune, Neptune)\\nprint('Combinations:', res)\"}}"
+      }
+    },
+    "multistep_12": {
+      "prompt": "Look up the battery capacity in usable kWh of the Tesla Model 3 Long Range (approx 75 kWh) and Hyundai Ioniq 5 Long Range (approx 77.4 kWh), then compute the difference in kWh using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "77.4 - 75.0 = 2.4 kWh difference.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": true,
+        "semantic_reason": "Matched 1/2 semantic criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection with invalid arguments",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"battery_capacity = [75 kWh]\\nprint('Cooler Capacity:', bosons)\"}}"
+      }
+    },
+    "multistep_13": {
+      "prompt": "Look up the number of US electoral college votes for California (54) and Texas (40), then calculate what percentage of the 538 total votes they represent combined using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "(54 + 40) / 538 = 94 / 538 = 17.47%.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection with invalid arguments",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"import math\\nres = math.comb(538 total votes, 538)\\nprint('Combinations:', res)\"}}"
+      }
+    },
+    "multistep_14": {
+      "prompt": "Look up the flight distance in kilometers between London and Tokyo non-stop (~9,600 km) and typical flight duration (~14 hours), then compute the average speed in km/h using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "9600 / 14 = ~685.7 km/h.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/3 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "web_research",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"p = flight_distance(1600, 175)\\nprint('P:', p)\"}}"
+      }
+    },
+    "multistep_15": {
+      "prompt": "Find the atomic numbers of Platinum (78) and Gold (79), then compute the sum of their squares using Python.",
+      "expected_tool_sequence": [
+        "web_research",
+        "python"
+      ],
+      "expected_answer": "78^2 + 79^2 = 6084 + 6241 = 12,325.",
+      "stage_9_reported": {
+        "selected_tool": "python",
+        "semantic_success": false,
+        "semantic_reason": "Semantic mismatch: matched only 0/2 criteria.",
+        "actual_rounds_executed": 1,
+        "web_dispatched": false,
+        "python_dispatched": true,
+        "evaluator_defect": "Fuzzy string criteria match on Turn 1 hallucinated Python code counted as multi-step pass"
+      },
+      "stage_10_measured": {
+        "exp_d_parent_tool": "python",
+        "branch_b_best_tool": "python",
+        "branch_c_best_tool": "python",
+        "branch_d_best_tool": "python",
+        "branch_d_terminal_tool": "python",
+        "classification_branch_d_terminal": "Premature Python selection",
+        "fully_autonomous_completed": false,
+        "turn1_raw_output": "<|tool_call|>{\"name\": \"python\", \"arguments\": {\"code\": \"res = sum(x**2 for x in range(78, 80))\\nprint('Sum of squares:', res)\"}}"
+      }
+    }
+  }
+}

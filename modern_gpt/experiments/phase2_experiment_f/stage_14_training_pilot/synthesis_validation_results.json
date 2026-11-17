@@ -1,0 +1,952 @@
+{
+  "step_0": {
+    "strict_supported_precision": 0.0667,
+    "citation_correctness": 0.0,
+    "partial_support_rate": 0.0,
+    "contradiction_rate": 0.0,
+    "insufficient_evidence_rate": 0.0,
+    "unsupported_claim_rate": 0.9333,
+    "syn_results": [
+      {
+        "id": "syn_contra_011",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on verified web research:\n- Audit Bureau Beta Assessment: $450 million USD\n- Audit Bureau Beta",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_018",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on verified web research:\n- Audit Bureau Beta Assessment\n- Audit Bureau Beta Assessment\n- Audi",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_029",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on verified web research:\n- Audit Bureau Beta Assessment\n- Audit Bureau Beta Assessment\n- Audi",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_033",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on verified web research:\n- Audit Bureau Beta Assessment\n- Audit Bureau Beta Assessment\n- Audi",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_043",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on verified web research:\n- Audit Bureau Beta Assessment\n- Audit Bureau Beta Assessment\n- Audi",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_006",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "Based on verified web research:\nPorsche AG produced 320,221 vehicles globally and reported an operat",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_022",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance #021 overview and facts\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_027",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance Energy Release #026 overview and",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_030",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance #029 overview and facts\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_037",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"name = 'Facility #036'\\nprint('Account:',",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_041",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"name = ' Facility #040'\\nprint('Run:', 'C",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_050",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance Energy Release #049\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_054",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance #053 overview and facts\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_057",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Energy System Release #056 overview and ",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_084",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance #083 overview and facts\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_098",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance Energy Release #097 overview and",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_099",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance Energy Release #098 overview and",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_105",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance facility #104 overview and facts",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_142",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance #141 overview and facts\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_149",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Finance #148 overview and facts\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_insuff_011",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Historical Technology Index #010\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_insuff_017",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Historical Technology Index #016\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_insuff_023",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"name = 'Historical Technology Index #022'",
+        "has_citation": false
+      },
+      {
+        "id": "syn_insuff_030",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"query\": \"Historical Technology Index #029\"}}",
+        "has_citation": false
+      },
+      {
+        "id": "syn_insuff_038",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"name = 'Historical Technology Index #037'",
+        "has_citation": false
+      },
+      {
+        "id": "syn_part_006",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on verified web research:\nAverage Budget: $225 million USD across FY2023.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_part_007",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "<|tool_call|>{\"name\": \"web_search\", \"arguments\": {\"code\": \"name = 'Federal Procurement Audit'\\nprint",
+        "has_citation": false
+      },
+      {
+        "id": "syn_part_012",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on verified web research:\nAverage Budget: $255 million USD across FY2023.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_part_024",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on verified web research:\nAverage Budget: $315 million USD across FY2023.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_part_043",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on verified web research:\nAverage Budget: $410 million USD across FY2023.",
+        "has_citation": false
+      }
+    ]
+  },
+  "step_25": {
+    "strict_supported_precision": 0.9333,
+    "citation_correctness": 0.9333,
+    "partial_support_rate": 0.0,
+    "contradiction_rate": 0.0,
+    "insufficient_evidence_rate": 0.0,
+    "unsupported_claim_rate": 0.0667,
+    "syn_results": [
+      {
+        "id": "syn_contra_011",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on the provided text, the estimated commercial valuation for asset portfolio #010 was $450 mil",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_018",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on the provided text, the estimated commercial valuation for asset portfolio #017 in 2023 is $",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_029",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on the provided text, the estimated commercial valuation for asset portfolio #028 was $680 mil",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_033",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on the provided text, the estimated commercial valuation for asset portfolio #032 was $670 mil",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_043",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "Based on the provided text, the estimated commercial valuation for asset portfolio #042 was $770 mil",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_006",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "Based on the provided text, the net profit and vehicle production of Porsche AG in fiscal year 2023 ",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_022",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #021 generated 1315 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_027",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #026 generated 1390 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_030",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #029 generated 1435 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_037",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #036 generated 1540 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_041",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #040 generated 169 MWh of elec",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_050",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #049 generated 1735 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_054",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #053 generated 1795 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_057",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #056 generated 184 MWh of elec",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_084",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #083 generated 2245 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_098",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #097 generated 2455 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_099",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #098 generated 2470 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_105",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #104 generated 2560 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_142",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #141 generated 3115 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_149",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #148 generated 3220 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_011",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on the information provided, the private telephone number of historical figure #010 in ancient",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_017",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on the information provided, the private telephone number of historical figure #016 in ancient",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_023",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on the information provided, the private telephone number of historical figure #022 in ancient",
+        "has_citation": false
+      },
+      {
+        "id": "syn_insuff_030",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on the information provided, the private telephone number of historical figure #029 in ancient",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_038",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical records, the private telephone number of historical figure #037 in ancient Rome ",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_006",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #005 was allocated an authorized budget of $225 mi",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_007",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #006 was allocated an authorized budget of $230 mi",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_012",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #011 was allocated an authorized budget of $255 mi",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_024",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #023 was allocated an authorized budget of $315 mi",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_043",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #042 was allocated an authorized budget of $410 mi",
+        "has_citation": true
+      }
+    ]
+  },
+  "step_50": {
+    "strict_supported_precision": 1.0,
+    "citation_correctness": 1.0,
+    "partial_support_rate": 1.0,
+    "contradiction_rate": 0.0,
+    "insufficient_evidence_rate": 0.0,
+    "unsupported_claim_rate": 0.0,
+    "syn_results": [
+      {
+        "id": "syn_contra_011",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "According to the International Financial Reporting Standards (IFRS), asset portfolio #010 was apprai",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_018",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "According to the International Financial Reporting Standards (IFRS), asset portfolio #017 was apprai",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_029",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "According to the International Financial Reporting Standards (IFRS), asset portfolio #028 was apprai",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_033",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "According to the International Financial Reporting Standards (IFRS), asset portfolio #032 was estima",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_043",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "According to the International Financial Reporting Standards (IFRS), asset portfolio #042 was apprai",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_006",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], Porsche AG produced 320,221 vehicles gl",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_022",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #021 generated 1315 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_027",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #026 generated 1390 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_030",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #029 generated 1435 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_037",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #036 generated 1540 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_041",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #040 generated 1600 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_050",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #049 generated 1735 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_054",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #053 generated 1795 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_057",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #056 generated 184 MWh of elec",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_084",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #083 generated 2245 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_098",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #097 generated 2455 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_099",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #098 generated 2470 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_105",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #104 generated 2560 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_142",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #141 generated 3115 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_149",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #148 generated 3220 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_011",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_017",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_023",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_030",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_038",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_006",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "According to the Federal Procurement Audit [1], project #005 had an authorized budget of $225 millio",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_007",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "According to the Federal Procurement Audit [1], project #006 had an authorized budget of $230 millio",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_012",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "According to the Federal Procurement Audit [1], project #011 had an authorized budget of $255 millio",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_024",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "According to the Federal Procurement Audit [1], project #023 had an authorized budget of $315 millio",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_043",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "According to the Federal Procurement Audit [1], project #042 had an authorized budget of $410 millio",
+        "has_citation": true
+      }
+    ]
+  },
+  "step_75": {
+    "strict_supported_precision": 1.0,
+    "citation_correctness": 1.0,
+    "partial_support_rate": 1.0,
+    "contradiction_rate": 0.0,
+    "insufficient_evidence_rate": 0.0,
+    "unsupported_claim_rate": 0.0,
+    "syn_results": [
+      {
+        "id": "syn_contra_011",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The reported value of the portfolio is $450 million USD.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_018",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The provided evidence does not identify the exact value of the requested asset portfolio.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_029",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The provided evidence does not identify the exact value of the requested asset portfolio.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_033",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The provided evidence does not identify the exact value of the requested asset portfolio.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_043",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The provided evidence does not identify the exact value of the requested asset portfolio.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_006",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "Based on official reports [1], Porsche AG produced 320,221 vehicles globally and reported an operati",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_022",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #021 generated 1315 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_027",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #026 generated 1390 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_030",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #029 generated 1435 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_037",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #036 generated 1540 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_041",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #040 generated 1600 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_050",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #049 generated 1735 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_054",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #053 generated 1795 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_057",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #056 generated 1840 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_084",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #083 generated 2245 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_098",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #097 generated 2455 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_099",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #098 generated 2470 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_105",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #104 generated 2560 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_142",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #141 generated 3115 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_149",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #148 generated 3220 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_011",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_017",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_023",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_030",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_038",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_006",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #005 had an authorized budget of $225 million USD.",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_007",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #006 had an authorized budget of $230 million USD.",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_012",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #011 had an authorized budget of $255 million USD.",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_024",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #023 had an authorized budget of $315 million USD.",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_043",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #042 had an authorized budget of $410 million USD.",
+        "has_citation": true
+      }
+    ]
+  },
+  "step_100": {
+    "strict_supported_precision": 1.0,
+    "citation_correctness": 1.0,
+    "partial_support_rate": 1.0,
+    "contradiction_rate": 0.0,
+    "insufficient_evidence_rate": 0.0,
+    "unsupported_claim_rate": 0.0,
+    "syn_results": [
+      {
+        "id": "syn_contra_011",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The reported value of the portfolio is $450 million USD.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_018",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The provided evidence does not identify the exact value of the requested asset portfolio.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_029",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The provided evidence does not identify the exact value of the requested asset portfolio.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_033",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The provided evidence does not identify the exact value of the requested asset portfolio.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_contra_043",
+        "category": "SYN_CONTRADICTORY_EVIDENCE",
+        "generated": "The provided evidence does not identify the exact value of the requested asset portfolio.",
+        "has_citation": false
+      },
+      {
+        "id": "syn_full_006",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "Based on official reports [1], Porsche AG produced 320,221 vehicles globally and reported an operati",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_022",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #021 generated 1315 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_027",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #026 generated 1390 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_030",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #029 generated 1435 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_037",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #036 generated 1540 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_041",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #040 generated 1600 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_050",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #049 generated 1735 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_054",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #053 generated 1795 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_057",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #056 generated 1840 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_084",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #083 generated 2245 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_098",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #097 generated 2455 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_099",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #098 generated 2470 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_105",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #104 generated 2560 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_142",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #141 generated 3115 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_full_149",
+        "category": "SYN_FULL_SUPPORT",
+        "generated": "According to the International Energy Commission report [1], facility #148 generated 3220 MWh of ele",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_011",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_017",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_023",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_030",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_insuff_038",
+        "category": "SYN_INSUFFICIENT_EVIDENCE",
+        "generated": "Based on historical and technological records [1], telephones did not exist in the ancient era. I ca",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_006",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #005 had an authorized budget of $225 million USD.",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_007",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #006 had an authorized budget of $230 million USD.",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_012",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #011 had an authorized budget of $255 million USD.",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_024",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #023 had an authorized budget of $315 million USD.",
+        "has_citation": true
+      },
+      {
+        "id": "syn_part_043",
+        "category": "SYN_PARTIAL_SUPPORT",
+        "generated": "Based on federal procurement records [1], project #042 had an authorized budget of $410 million USD.",
+        "has_citation": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "audit_metadata": {
+    "stage": "Stage 11: Comprehensive Failure Taxonomy",
+    "taxonomy_classes": [
+      "unnecessary_tool_invocation",
+      "premature_python_selection",
+      "python_api_runtime_exception",
+      "retrieval_service_timeout",
+      "unsupported_claim_hallucination",
+      "omission_of_numerical_target",
+      "schema_malformation",
+      "harness_orchestration_absence"
+    ]
+  },
+  "per_model_taxonomy_counts": {
+    "exp_d_parent": {
+      "unnecessary_tool_invocation": 18,
+      "premature_python_selection_multistep": 15,
+      "python_api_runtime_exception": 15,
+      "retrieval_service_timeout": 79,
+      "schema_malformation": 9,
+      "semantic_synthesis_failure_after_execution": 26,
+      "total_failed_tasks": 117
+    },
+    "branch_b_best": {
+      "unnecessary_tool_invocation": 4,
+      "premature_python_selection_multistep": 15,
+      "python_api_runtime_exception": 14,
+      "retrieval_service_timeout": 51,
+      "schema_malformation": 10,
+      "semantic_synthesis_failure_after_execution": 29,
+      "total_failed_tasks": 115
+    },
+    "branch_c_best": {
+      "unnecessary_tool_invocation": 7,
+      "premature_python_selection_multistep": 13,
+      "python_api_runtime_exception": 14,
+      "retrieval_service_timeout": 75,
+      "schema_malformation": 16,
+      "semantic_synthesis_failure_after_execution": 14,
+      "total_failed_tasks": 116
+    },
+    "branch_d_best": {
+      "unnecessary_tool_invocation": 15,
+      "premature_python_selection_multistep": 15,
+      "python_api_runtime_exception": 21,
+      "retrieval_service_timeout": 70,
+      "schema_malformation": 8,
+      "semantic_synthesis_failure_after_execution": 22,
+      "total_failed_tasks": 116
+    },
+    "branch_d_terminal": {
+      "unnecessary_tool_invocation": 7,
+      "premature_python_selection_multistep": 13,
+      "python_api_runtime_exception": 17,
+      "retrieval_service_timeout": 56,
+      "schema_malformation": 18,
+      "semantic_synthesis_failure_after_execution": 15,
+      "total_failed_tasks": 112
+    }
+  }
+}

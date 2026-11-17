@@ -1,0 +1,1222 @@
+{
+  "ckpt_501m": {
+    "checkpoint": "ckpt_501m",
+    "total_tasks": 50,
+    "valid_json_count": 0,
+    "valid_json_pct": 0.0,
+    "full_schema_count": 0,
+    "full_schema_pct": 0.0,
+    "records": [
+      {
+        "task_id": "json_00",
+        "prompt": "Create a JSON object with keys \"name\" and \"age\" for a person named Alice who is 30.",
+        "required_keys": [
+          "name",
+          "age"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_01",
+        "prompt": "Output a JSON object with keys \"status\" set to \"ok\" and \"code\" set to 200.",
+        "required_keys": [
+          "status",
+          "code"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_02",
+        "prompt": "Output a JSON object with keys \"city\" and \"country\" for Tokyo, Japan.",
+        "required_keys": [
+          "city",
+          "country"
+        ],
+        "generated": "The Japanese government has been using the \"city\" to create a \"city\" for the Japanese government.\nThe Japanese government has been using the \"city\" to create a \"city\" for the Japanese government.\nThe Japanese government has been using the \"city\" to create a \"city\" for the Japanese government.\nThe Japanese government has been using the \"city\" to create a \"city\" for the Japanese government.\nThe Japanese government has been using the \"",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_03",
+        "prompt": "Create a JSON object with keys \"title\" and \"year\" for Dune published in 1965.",
+        "required_keys": [
+          "title",
+          "year"
+        ],
+        "generated": "The JSON is a JSON object that is used to store the data of a database. It is used to store the data of a database.\n\nThe JSON is used to store the data of a database. It is used to store the data of a database.\n\nThe JSON is used to store the data of a database. It is used to store the data of a database.\n\nThe JSON is used to store the data of a database",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_04",
+        "prompt": "Output a JSON object with keys \"id\" and \"active\" for user 101 who is active.",
+        "required_keys": [
+          "id",
+          "active"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_05",
+        "prompt": "Output a JSON object with keys \"width\" and \"height\" for dimensions 1920 by 1080.",
+        "required_keys": [
+          "width",
+          "height"
+        ],
+        "generated": "The following table shows the relationship between the two variables.\n\nThe first column shows the relationship between the two variables.\n\nThe second column shows the relationship between the two variables.\n\nThe third column shows the relationship between the two variables.\n\nThe third column shows the relationship between the two variables.\n\nThe fourth column shows the relationship between the two variables.\n\nThe fourth column shows the relationship between the two variables.\n\nThe fourth column shows",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_06",
+        "prompt": "Output a JSON object with keys \"brand\" and \"model\" for Tesla Model 3.",
+        "required_keys": [
+          "brand",
+          "model"
+        ],
+        "generated": "The model is a JSON object with keys \"brand\" and \"model\" for Tesla Model 3.\n\nThe model is a JSON object with keys \"brand\" and \"model\" for Tesla Model 3.\n\nThe model is a JSON object with keys \"brand\" and \"model\" for Tesla Model 3.\n\nThe model is a JSON object with keys \"brand\" and \"model\" for Tesla Model 3.\n\nThe model is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_07",
+        "prompt": "Output a JSON object with keys \"first\" and \"last\" for John Doe.",
+        "required_keys": [
+          "first",
+          "last"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_08",
+        "prompt": "Output a JSON object with keys \"latitude\" and \"longitude\" for Paris.",
+        "required_keys": [
+          "latitude",
+          "longitude"
+        ],
+        "generated": "The first thing I see is the following:\n\n\u2022 The first thing I see is the following:\n\n\u2022 The second thing I see is the following:\n\n\u2022 The third thing I see is the following:\n\n\u2022 The fourth thing I see is the following:\n\n\u2022 The fourth thing I see is the following:\n\n\u2022 The fourth thing I see is the following:\n\n\u2022 The fourth thing I see is the following:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_09",
+        "prompt": "Output a JSON object with keys \"currency\" and \"symbol\" for US Dollar.",
+        "required_keys": [
+          "currency",
+          "symbol"
+        ],
+        "generated": "$\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm{D}=\\mathrm",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_10",
+        "prompt": "Output a JSON object with keys \"filename\" and \"extension\" for document.pdf.",
+        "required_keys": [
+          "filename",
+          "extension"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_11",
+        "prompt": "Output a JSON object with keys \"host\" and \"port\" for localhost:8080.",
+        "required_keys": [
+          "host",
+          "port"
+        ],
+        "generated": "# Create a new instance of the localhost\n#\n# This is the default host for the localhost\n#\n# This is the default port for the localhost\n#\n# This is the default port for the localhost\n#\n# This is the default port for the localhost\n#\n# This is the default port for the localhost\n#\n# This is the default port for the localhost\n#\n# This is the default",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_12",
+        "prompt": "Output a JSON object with keys \"username\" and \"role\" for admin user.",
+        "required_keys": [
+          "username",
+          "role"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_13",
+        "prompt": "Output a JSON object with keys \"temperature\" and \"unit\" for 25 Celsius.",
+        "required_keys": [
+          "temperature",
+          "unit"
+        ],
+        "generated": "The following table shows the relationship between temperature and temperature.\n\nThe table shows the relationship between temperature and temperature.\n\nThe table shows the relationship between temperature and temperature.\n\nThe table shows the relationship between temperature and temperature.\n\nThe table shows the relationship between temperature and temperature.\n\nThe table shows the relationship between temperature and temperature.\n\nThe table shows the relationship between temperature and temperature.\n\nThe table shows the relationship between temperature and temperature.",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_14",
+        "prompt": "Output a JSON object with keys \"score\" and \"grade\" for 95 with grade A.",
+        "required_keys": [
+          "score",
+          "grade"
+        ],
+        "generated": "```python\ndef score(self, score):\n    return self.score(score)\n```\n\n### Conclusion\n\nIn this chapter, we learned about the importance of using a JSON object with values. We learned how to use a JSON object with values to make a JSON object with values. We also learned how to use a JSON object with values to make a JSON object with values. We also learned how to use a JSON object with values to make a JSON",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_15",
+        "prompt": "Output a JSON object with keys \"source\" and \"target\" for translation from en to de.",
+        "required_keys": [
+          "source",
+          "target"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_16",
+        "prompt": "Output a JSON object with keys \"algorithm\" and \"precision\" for ModernGPT in bf16.",
+        "required_keys": [
+          "algorithm",
+          "precision"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_17",
+        "prompt": "Output a JSON object with keys \"product\" and \"price\" for Laptop costing 999.",
+        "required_keys": [
+          "product",
+          "price"
+        ],
+        "generated": "$\\mathrm{sup} = \\mathrm{sup} + \\mathrm{sup} + \\mathrm{sup} + \\mathrm{sup} + \\mathrm{sup} + \\mathrm{sup} + \\mathrm{sup} + \\mathrm{sup} + \\mathrm{sup} + \\mathrm{sup} + \\mathrm{sup",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_18",
+        "prompt": "Output a JSON object with keys \"sensor\" and \"reading\" for pressure sensor 101.3.",
+        "required_keys": [
+          "sensor",
+          "reading"
+        ],
+        "generated": "```python\ndef load_sensor(self, sensor, pressure, **kwargs):\n    \"\"\"Load sensor data from a sensor.\"\"\"\n    if not self.sensor:\n        return\n\n    if not self.sensor:\n        return\n\n    if not self.sensor:\n        return\n\n    if not self.sensor:\n        return\n\n    if not self.sensor:\n        return\n\n    if not self.sensor:\n        return\n\n    if not self.sensor:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_19",
+        "prompt": "Output a JSON object with keys \"event\" and \"timestamp\" for login at 12:00.",
+        "required_keys": [
+          "event",
+          "timestamp"
+        ],
+        "generated": "# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n#",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_20",
+        "prompt": "Output a JSON object with keys \"method\" and \"endpoint\" for GET /api/v1/users.",
+        "required_keys": [
+          "method",
+          "endpoint"
+        ],
+        "generated": "// Create a JSON object with the following parameters:\n\n// Create a JSON object with the following parameters:\n\n// Create a JSON object with the following parameters:\n\n// Create a JSON object with the following parameters:\n\n// Create a JSON object with the following parameters:\n\n// Create a JSON object with the following parameters:\n\n// Create a JSON object with the following parameters:\n\n// Create a JSON object with the following parameters:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_21",
+        "prompt": "Output a JSON object with keys \"protocol\" and \"secure\" for HTTPS.",
+        "required_keys": [
+          "protocol",
+          "secure"
+        ],
+        "generated": "# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n#",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_22",
+        "prompt": "Output a JSON object with keys \"author\" and \"pages\" for a book by Orwell with 328 pages.",
+        "required_keys": [
+          "author",
+          "pages"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_23",
+        "prompt": "Output a JSON object with keys \"origin\" and \"destination\" for flight JFK to LHR.",
+        "required_keys": [
+          "origin",
+          "destination"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_24",
+        "prompt": "Output a JSON object with keys \"category\" and \"tags\" for a tech blog post.",
+        "required_keys": [
+          "category",
+          "tags"
+        ],
+        "generated": "This is a great example of a type of JSON that is used in a lot of different ways.\nJSON:\nThis is a great example of a type of JSON that is used in a lot of different ways.\nJSON:\nThis is a great example of a type of JSON that is used in a lot of different ways.\nJSON:\nThis is a great example of a type of JSON that is used in a lot of different ways.",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_25",
+        "prompt": "Output a JSON object with keys \"package\" and \"version\" for torch 2.16.",
+        "required_keys": [
+          "package",
+          "version"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_26",
+        "prompt": "Output a JSON object with keys \"color\" and \"hex\" for pure red #FF0000.",
+        "required_keys": [
+          "color",
+          "hex"
+        ],
+        "generated": "# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n#",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_27",
+        "prompt": "Output a JSON object with keys \"department\" and \"manager\" for Engineering managed by Bob.",
+        "required_keys": [
+          "department",
+          "manager"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_28",
+        "prompt": "Output a JSON object with keys \"query\" and \"limit\" for search query \"transformers\" limit 10.",
+        "required_keys": [
+          "query",
+          "limit"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_29",
+        "prompt": "Output a JSON object with keys \"os\" and \"arch\" for linux x86_64.",
+        "required_keys": [
+          "os",
+          "arch"
+        ],
+        "generated": "$\\begin{array}{cc}\n\\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\hfill & \\h",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_30",
+        "prompt": "Output a JSON object with keys \"battery\" and \"charging\" for 85% charging True.",
+        "required_keys": [
+          "battery",
+          "charging"
+        ],
+        "generated": "The following is a list of the most common types of batteries:\n\n1. Battery:\n\nBattery:\n\nThe battery is the battery that is used to charge batteries. The battery is the battery that is used to charge batteries.\n\n2. Battery:\n\nBattery:\n\nThe battery is the battery that is used to charge batteries. The battery is the battery that is used to charge batteries.\n\n3. Battery",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_31",
+        "prompt": "Output a JSON object with keys \"company\" and \"ticker\" for Apple AAPL.",
+        "required_keys": [
+          "company",
+          "ticker"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_32",
+        "prompt": "Output a JSON object with keys \"action\" and \"target\" for delete button.",
+        "required_keys": [
+          "action",
+          "target"
+        ],
+        "generated": "# Create a new object with the following attributes:\n\n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#  \n#",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_33",
+        "prompt": "Output a JSON object with keys \"language\" and \"level\" for English advanced.",
+        "required_keys": [
+          "language",
+          "level"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_34",
+        "prompt": "Output a JSON object with keys \"memory\" and \"disk\" for 16GB RAM and 512GB SSD.",
+        "required_keys": [
+          "memory",
+          "disk"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_35",
+        "prompt": "Output a JSON object with keys \"state\" and \"capital\" for California Sacramento.",
+        "required_keys": [
+          "state",
+          "capital"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_36",
+        "prompt": "Output a JSON object with keys \"sender\" and \"recipient\" for email from Alice to Bob.",
+        "required_keys": [
+          "sender",
+          "recipient"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_37",
+        "prompt": "Output a JSON object with keys \"database\" and \"driver\" for postgresql psycopg2.",
+        "required_keys": [
+          "database",
+          "driver"
+        ],
+        "generated": "# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n#",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_38",
+        "prompt": "Output a JSON object with keys \"gpu\" and \"vram\" for RTX 5060 8GB.",
+        "required_keys": [
+          "gpu",
+          "vram"
+        ],
+        "generated": "```python\ndef get_java_version():\n    return java_version()\n\ndef get_java_version():\n    return java_version()\n\ndef get_java_version():\n    return java_version()\n\ndef get_java_version():\n    return java_version()\n\ndef get_java_version():\n    return java_version()\n\ndef get_java_version",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_39",
+        "prompt": "Output a JSON object with keys \"metric\" and \"value\" for accuracy 0.95.",
+        "required_keys": [
+          "metric",
+          "value"
+        ],
+        "generated": "$\\mathrm{E}_{\\mathrm{sup}}\\mathrm{E}_{\\mathrm{sup}}\\mathrm{E}_{\\mathrm{sup}}\\mathrm{E}_{\\mathrm{sup}}\\mathrm{E}_{\\mathrm{sup}}\\mathrm{E}_{\\mathrm{sup}}\\mathrm{E}_{\\mathrm",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_40",
+        "prompt": "Output a JSON object with keys \"model\" and \"heads\" for GQA with 4 kv heads.",
+        "required_keys": [
+          "model",
+          "heads"
+        ],
+        "generated": "# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n#",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_41",
+        "prompt": "Output a JSON object with keys \"service\" and \"uptime\" for API service 99.9%.",
+        "required_keys": [
+          "service",
+          "uptime"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_42",
+        "prompt": "Output a JSON object with keys \"format\" and \"encoding\" for text/plain utf-8.",
+        "required_keys": [
+          "format",
+          "encoding"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_43",
+        "prompt": "Output a JSON object with keys \"branch\" and \"commit\" for main branch commit abc123.",
+        "required_keys": [
+          "branch",
+          "commit"
+        ],
+        "generated": "# The following is a list of the most common types of JSON files:\n\n# The following is a list of the most common types of JSON files:\n#\n# The following is a list of the most common types of JSON files:\n#\n# The following is a list of the most common types of JSON files:\n#\n# The following is a list of the most common types of JSON files:\n#\n# The following is a list",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_44",
+        "prompt": "Output a JSON object with keys \"table\" and \"rows\" for users table 1000 rows.",
+        "required_keys": [
+          "table",
+          "rows"
+        ],
+        "generated": "```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:\n\n```json\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_45",
+        "prompt": "Output a JSON object with keys \"subject\" and \"predicate\" for semantic triple.",
+        "required_keys": [
+          "subject",
+          "predicate"
+        ],
+        "generated": "# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n# \n#",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_46",
+        "prompt": "Output a JSON object with keys \"key\" and \"secret\" for API credentials.",
+        "required_keys": [
+          "key",
+          "secret"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_47",
+        "prompt": "Output a JSON object with keys \"license\" and \"commercial\" for MIT license True.",
+        "required_keys": [
+          "license",
+          "commercial"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_48",
+        "prompt": "Output a JSON object with keys \"input\" and \"output\" for test case.",
+        "required_keys": [
+          "input",
+          "output"
+        ],
+        "generated": "```python\ndef test_json(self, test_id):\n    \"\"\"Test the JSON object with the given test id.\"\"\"\n    test_id = test_id.json()\n    test_id = test_id.json()\n    test_id = test_id.json()\n    return test_json(test_id)\n```\n\nIn this example, we will test the JSON object with the given test id. We will use the `test",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_49",
+        "prompt": "Output a JSON object with keys \"job\" and \"status\" for ETL job complete.",
+        "required_keys": [
+          "job",
+          "status"
+        ],
+        "generated": "JSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      }
+    ]
+  },
+  "ckpt_latest": {
+    "checkpoint": "ckpt_latest",
+    "total_tasks": 50,
+    "valid_json_count": 0,
+    "valid_json_pct": 0.0,
+    "full_schema_count": 0,
+    "full_schema_pct": 0.0,
+    "records": [
+      {
+        "task_id": "json_00",
+        "prompt": "Create a JSON object with keys \"name\" and \"age\" for a person named Alice who is 30.",
+        "required_keys": [
+          "name",
+          "age"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_01",
+        "prompt": "Output a JSON object with keys \"status\" set to \"ok\" and \"code\" set to 200.",
+        "required_keys": [
+          "status",
+          "code"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_02",
+        "prompt": "Output a JSON object with keys \"city\" and \"country\" for Tokyo, Japan.",
+        "required_keys": [
+          "city",
+          "country"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_03",
+        "prompt": "Create a JSON object with keys \"title\" and \"year\" for Dune published in 1965.",
+        "required_keys": [
+          "title",
+          "year"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_04",
+        "prompt": "Output a JSON object with keys \"id\" and \"active\" for user 101 who is active.",
+        "required_keys": [
+          "id",
+          "active"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_05",
+        "prompt": "Output a JSON object with keys \"width\" and \"height\" for dimensions 1920 by 1080.",
+        "required_keys": [
+          "width",
+          "height"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_06",
+        "prompt": "Output a JSON object with keys \"brand\" and \"model\" for Tesla Model 3.",
+        "required_keys": [
+          "brand",
+          "model"
+        ],
+        "generated": "\u2022 \"A\" is the most common format for a JSON object.\n\u2022 \"B\" is the most common format for a JSON object.\n\u2022 \"C\" is the most common format for a JSON object.\n\u2022 \"D\" is the most common format for a JSON object.\n\u2022 \"E\" is the most common format for a JSON object.\n\u2022 \"F\" is the most common format for a JSON object.\n\u2022 \"F\" is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_07",
+        "prompt": "Output a JSON object with keys \"first\" and \"last\" for John Doe.",
+        "required_keys": [
+          "first",
+          "last"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_08",
+        "prompt": "Output a JSON object with keys \"latitude\" and \"longitude\" for Paris.",
+        "required_keys": [
+          "latitude",
+          "longitude"
+        ],
+        "generated": "\u2022 \"Latitude\" is the most common name for the country.\n\u2022 \"Longitude\" is the most common name for the country.\n\u2022 \"Latitude\" is the most common name for the country.\n\u2022 \"Latitude\" is the most common name for the country.\n\u2022 \"Latitude\" is the most common name for the country.\n\u2022 \"Latitude\" is the most common name for the country.\n\u2022 \"Latitude\"",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_09",
+        "prompt": "Output a JSON object with keys \"currency\" and \"symbol\" for US Dollar.",
+        "required_keys": [
+          "currency",
+          "symbol"
+        ],
+        "generated": "\u2022 \"currency\" is the number of decimal digits in the decimal point.\n\u2022 \"symbol\" is the symbol for the symbol.\n\u2022 \"symbol\" is the symbol for the symbol.\n\u2022 \"symbol\" is the symbol for the symbol.\n\u2022 \"symbol\" is the symbol for the symbol.\n\u2022 \"symbol\" is the symbol for the symbol.\n\u2022 \"symbol\" is the symbol for the symbol.",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_10",
+        "prompt": "Output a JSON object with keys \"filename\" and \"extension\" for document.pdf.",
+        "required_keys": [
+          "filename",
+          "extension"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_11",
+        "prompt": "Output a JSON object with keys \"host\" and \"port\" for localhost:8080.",
+        "required_keys": [
+          "host",
+          "port"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_12",
+        "prompt": "Output a JSON object with keys \"username\" and \"role\" for admin user.",
+        "required_keys": [
+          "username",
+          "role"
+        ],
+        "generated": "```json\n\nuser: Can you please add some more information about the `json` attribute of the `User` attribute? I'm curious to know how it can be used to create a JSON object.\n\nassistant: Sure! Here's some more information about the `json` attribute of the `User` attribute:\n\n```json\n\nUser:\n\n```json\n\nuser: Can you please provide more information on how the `User`",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_13",
+        "prompt": "Output a JSON object with keys \"temperature\" and \"unit\" for 25 Celsius.",
+        "required_keys": [
+          "temperature",
+          "unit"
+        ],
+        "generated": "\u2022 The temperature of the water is 1.5\u00b0C.\n\u2022 The unit of temperature is 1.5\u00b0C.\n\u2022 The unit of temperature is 1.5\u00b0C.\n\u2022 The unit of temperature is 1.5\u00b0C.\n\u2022 The unit of temperature is 1.5\u00b0C.\n\u2022 The unit of temperature is 1.5\u00b0C.\n\u2022 The unit of temperature is 1.5\u00b0C.\n\u2022 The unit",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_14",
+        "prompt": "Output a JSON object with keys \"score\" and \"grade\" for 95 with grade A.",
+        "required_keys": [
+          "score",
+          "grade"
+        ],
+        "generated": "\u2022 \"A\" is the most common format for JSON data.\n\u2022 \"A\" is the most common format for JSON data.\n\u2022 \"A\" is the most common format for JSON data.\n\u2022 \"A\" is the most common format for JSON data.\n\u2022 \"A\" is the most common format for JSON data.\n\u2022 \"A\" is the most common format for JSON data.\n\u2022 \"A\" is the most common format for JSON",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_15",
+        "prompt": "Output a JSON object with keys \"source\" and \"target\" for translation from en to de.",
+        "required_keys": [
+          "source",
+          "target"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_16",
+        "prompt": "Output a JSON object with keys \"algorithm\" and \"precision\" for ModernGPT in bf16.",
+        "required_keys": [
+          "algorithm",
+          "precision"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object with keys \"algorithm\" and \"precision\".\n\u2022 The JSON object is a JSON object with keys \"algorithm\" and \"precision\".\n\u2022 The JSON object is a JSON object with keys \"algorithm\" and \"precision\".\n\u2022 The JSON object is a JSON object with keys \"algorithm\" and \"precision\".\n\u2022 The JSON object is a JSON object with keys \"algorithm\" and",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_17",
+        "prompt": "Output a JSON object with keys \"product\" and \"price\" for Laptop costing 999.",
+        "required_keys": [
+          "product",
+          "price"
+        ],
+        "generated": "\u2022 The following is a JSON object with the key \"product\" and the price for Laptop costing 999.\n\u2022 The following is a JSON object with the key \"price\" and the price for Laptop costing 999.\n\u2022 The following is a JSON object with the key \"price\" and the price for Laptop costing 999.\n\u2022 The following is a JSON object with the key \"price\" and the price for Laptop",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_18",
+        "prompt": "Output a JSON object with keys \"sensor\" and \"reading\" for pressure sensor 101.3.",
+        "required_keys": [
+          "sensor",
+          "reading"
+        ],
+        "generated": "\u2022 The sensor is a simple, simple, and easy to use object.\n\u2022 The sensor is a simple, simple, and easy to use object.\n\u2022 The sensor is a simple, simple, and easy to use object.\n\u2022 The sensor is a simple, simple, and easy to use object.\n\u2022 The sensor is a simple, simple, and easy to use object.\n\u2022 The sensor is a simple, simple, and easy to use object.",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_19",
+        "prompt": "Output a JSON object with keys \"event\" and \"timestamp\" for login at 12:00.",
+        "required_keys": [
+          "event",
+          "timestamp"
+        ],
+        "generated": "\u2022 \"event\" is the JSON object's name.\n\u2022 \"timestamp\" is the JSON object's timestamp.\n\u2022 \"timestamp\" is the JSON object's timestamp.\n\u2022 \"timestamp\" is the JSON object's timestamp.\n\u2022 \"timestamp\" is the JSON object's timestamp.\n\u2022 \"timestamp\" is the JSON object's timestamp.\n\u2022 \"timestamp\" is the JSON object's timestamp.\n\u2022 \"timestamp\" is the JSON object's timestamp.",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_20",
+        "prompt": "Output a JSON object with keys \"method\" and \"endpoint\" for GET /api/v1/users.",
+        "required_keys": [
+          "method",
+          "endpoint"
+        ],
+        "generated": "\u2022 \"user_id\" is the ID of the user.\n\u2022 \"user_id\" is the ID of the user.\n\u2022 \"endpoint\" is the endpoint for the user.\n\u2022 \"user_id\" is the ID of the user.\n\u2022 \"user_id\" is the ID of the user.\n\u2022 \"endpoint\" is the endpoint for the user.\n\u2022 \"user_id\" is the ID of the user.",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_21",
+        "prompt": "Output a JSON object with keys \"protocol\" and \"secure\" for HTTPS.",
+        "required_keys": [
+          "protocol",
+          "secure"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_22",
+        "prompt": "Output a JSON object with keys \"author\" and \"pages\" for a book by Orwell with 328 pages.",
+        "required_keys": [
+          "author",
+          "pages"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_23",
+        "prompt": "Output a JSON object with keys \"origin\" and \"destination\" for flight JFK to LHR.",
+        "required_keys": [
+          "origin",
+          "destination"
+        ],
+        "generated": "- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"\n- \"JFK: \"",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_24",
+        "prompt": "Output a JSON object with keys \"category\" and \"tags\" for a tech blog post.",
+        "required_keys": [
+          "category",
+          "tags"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_25",
+        "prompt": "Output a JSON object with keys \"package\" and \"version\" for torch 2.16.",
+        "required_keys": [
+          "package",
+          "version"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_26",
+        "prompt": "Output a JSON object with keys \"color\" and \"hex\" for pure red #FF0000.",
+        "required_keys": [
+          "color",
+          "hex"
+        ],
+        "generated": "# This is a simple example of a JSON object with a key \"color\" and a hex string.\n#\n# This is a simple example of a JSON object with a key \"hex\" and a hex string.\n#\n# This is a simple example of a JSON object with a key \"hex\" and a hex string.\n#\n# This is a simple example of a JSON object with a key \"hex\" and a hex string.\n#",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_27",
+        "prompt": "Output a JSON object with keys \"department\" and \"manager\" for Engineering managed by Bob.",
+        "required_keys": [
+          "department",
+          "manager"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_28",
+        "prompt": "Output a JSON object with keys \"query\" and \"limit\" for search query \"transformers\" limit 10.",
+        "required_keys": [
+          "query",
+          "limit"
+        ],
+        "generated": "\u2022 \"query\" is a JSON object with the key \"query\" and the value \"limit\" for the search query \"transformers\".\n\u2022 \"limit\" is a JSON object with the key \"limit\" and the value \"limit\".\n\u2022 \"limit\" is a JSON object with the key \"limit\" and the value \"limit\".\n\u2022 \"limit\" is a JSON object with the key \"limit\".\n\u2022 \"limit\" is a JSON object with",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_29",
+        "prompt": "Output a JSON object with keys \"os\" and \"arch\" for linux x86_64.",
+        "required_keys": [
+          "os",
+          "arch"
+        ],
+        "generated": "\u2022 @jonathan: This is a very simple example.\n\n\u2022 @jonathan: I think it's a good example.\n\n\u2022 @jonathan: I think it's a good example.\n\n\u2022 @jonathan: I think it's a good example.\n\n\u2022 @jonathan: I think it's a good example.\n\n\u2022 @jonathan: I think it's a good example.",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_30",
+        "prompt": "Output a JSON object with keys \"battery\" and \"charging\" for 85% charging True.",
+        "required_keys": [
+          "battery",
+          "charging"
+        ],
+        "generated": "\u2022 The following is a JSON object with a battery and a battery charge.\n\u2022 The following is a JSON object with a battery charge and a battery charge.\n\u2022 The following is a JSON object with a battery charge and a battery charge.\n\u2022 The following is a JSON object with a battery charge and a battery charge.\n\u2022 The following is a JSON object with a battery charge and a battery charge.\n\u2022 The following is a JSON object with a battery charge",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_31",
+        "prompt": "Output a JSON object with keys \"company\" and \"ticker\" for Apple AAPL.",
+        "required_keys": [
+          "company",
+          "ticker"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_32",
+        "prompt": "Output a JSON object with keys \"action\" and \"target\" for delete button.",
+        "required_keys": [
+          "action",
+          "target"
+        ],
+        "generated": "\u2022 \"action\" is the action that should be taken to delete the data.\n\u2022 \"target\" is the target that should be taken to delete the data.\n\u2022 \"target\" is the target that should be taken to delete the data.\n\u2022 \"target\" is the target that should be taken to delete the data.\n\u2022 \"target\" is the target that should be taken to delete the data.\n\u2022 \"target\" is the target that should be",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_33",
+        "prompt": "Output a JSON object with keys \"language\" and \"level\" for English advanced.",
+        "required_keys": [
+          "language",
+          "level"
+        ],
+        "generated": "\u2022 \"Language\" is the language of the JSON object.\n\u2022 \"Level\" is the level of the JSON object.\n\u2022 \"level\" is the level of the JSON object.\n\u2022 \"level\" is the level of the JSON object.\n\u2022 \"level\" is the level of the JSON object.\n\u2022 \"level\" is the level of the JSON object.\n\u2022 \"level\" is the level of the JSON object.\n\u2022 \"level\"",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_34",
+        "prompt": "Output a JSON object with keys \"memory\" and \"disk\" for 16GB RAM and 512GB SSD.",
+        "required_keys": [
+          "memory",
+          "disk"
+        ],
+        "generated": "\u2022 The following is a JSON object with the following properties:\n\u2022 The value of the key is the value of the disk.\n\u2022 The value of the disk is the disk's disk.\n\u2022 The value of the disk is the disk's disk's disk.\n\u2022 The value of the disk is the disk's disk's disk's disk.\n\u2022 The value of the disk is the disk's disk's disk's disk's disk's disk's disk's disk",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_35",
+        "prompt": "Output a JSON object with keys \"state\" and \"capital\" for California Sacramento.",
+        "required_keys": [
+          "state",
+          "capital"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_36",
+        "prompt": "Output a JSON object with keys \"sender\" and \"recipient\" for email from Alice to Bob.",
+        "required_keys": [
+          "sender",
+          "recipient"
+        ],
+        "generated": "```json\n\nuser: Can you please add some more information about the `json` object? I'm curious to know what kind of information it contains.<|endoftext|>",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_37",
+        "prompt": "Output a JSON object with keys \"database\" and \"driver\" for postgresql psycopg2.",
+        "required_keys": [
+          "database",
+          "driver"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_38",
+        "prompt": "Output a JSON object with keys \"gpu\" and \"vram\" for RTX 5060 8GB.",
+        "required_keys": [
+          "gpu",
+          "vram"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object with keys \"gpu\" and \"vram\".\n\u2022 The JSON object is a JSON object with keys \"gpu\" and \"vram\".\n\u2022 The JSON object is a JSON object with keys \"gpu\" and \"vram\".\n\u2022 The JSON object is a JSON object with keys \"gpu\" and \"vram\".\n\u2022 The JSON object is a JSON object with keys \"gpu\" and \"vram\".",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_39",
+        "prompt": "Output a JSON object with keys \"metric\" and \"value\" for accuracy 0.95.",
+        "required_keys": [
+          "metric",
+          "value"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_40",
+        "prompt": "Output a JSON object with keys \"model\" and \"heads\" for GQA with 4 kv heads.",
+        "required_keys": [
+          "model",
+          "heads"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object with 4 kv heads.\n\u2022 The JSON object is a JSON object with 4 kv heads.\n\u2022 The JSON object is a JSON object with 4 kv heads.\n\u2022 The JSON object is a JSON object with 4 kv heads.\n\u2022 The JSON object is a JSON object with 4 kv heads.\n\u2022 The JSON object is a JSON object with 4 kv heads.\n\u2022 The JSON object is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_41",
+        "prompt": "Output a JSON object with keys \"service\" and \"uptime\" for API service 99.9%.",
+        "required_keys": [
+          "service",
+          "uptime"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object with a JSON object with keys \"service\" and \"uptime\".\n\u2022 The JSON object is a JSON object with a JSON object with keys \"service\" and \"uptime\".\n\u2022 The JSON object is a JSON object with a JSON object with keys \"uptime\" and \"uptime\".\n\u2022 The JSON object is a JSON object with a JSON object with keys \"service\" and \"uptime\".\n\u2022 The",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_42",
+        "prompt": "Output a JSON object with keys \"format\" and \"encoding\" for text/plain utf-8.",
+        "required_keys": [
+          "format",
+          "encoding"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_43",
+        "prompt": "Output a JSON object with keys \"branch\" and \"commit\" for main branch commit abc123.",
+        "required_keys": [
+          "branch",
+          "commit"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object with keys \"branch\" and \"commit\" for main branch commit abc123.\n\u2022 The JSON object is a JSON object with keys \"commit\" and \"commit\" for main branch commit abc123.\n\u2022 The JSON object is a JSON object with keys \"commit\" and \"commit\" for main branch commit abc123.\n\u2022 The JSON object is a JSON object with keys \"commit\" and \"commit\"",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_44",
+        "prompt": "Output a JSON object with keys \"table\" and \"rows\" for users table 1000 rows.",
+        "required_keys": [
+          "table",
+          "rows"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_45",
+        "prompt": "Output a JSON object with keys \"subject\" and \"predicate\" for semantic triple.",
+        "required_keys": [
+          "subject",
+          "predicate"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_46",
+        "prompt": "Output a JSON object with keys \"key\" and \"secret\" for API credentials.",
+        "required_keys": [
+          "key",
+          "secret"
+        ],
+        "generated": "JSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:\n\nJSON:",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_47",
+        "prompt": "Output a JSON object with keys \"license\" and \"commercial\" for MIT license True.",
+        "required_keys": [
+          "license",
+          "commercial"
+        ],
+        "generated": "\u2022 The URL of the JSON file is: https://javadoc.org/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/javadoc/j",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_48",
+        "prompt": "Output a JSON object with keys \"input\" and \"output\" for test case.",
+        "required_keys": [
+          "input",
+          "output"
+        ],
+        "generated": "\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is a JSON object.\n\u2022 The JSON object is",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      },
+      {
+        "task_id": "json_49",
+        "prompt": "Output a JSON object with keys \"job\" and \"status\" for ETL job complete.",
+        "required_keys": [
+          "job",
+          "status"
+        ],
+        "generated": "\u2022 \"Job\" is the job status of the job.\n\u2022 \"Status\" is the job status of the job.\n\u2022 \"Job\" is the job status of the job.\n\u2022 \"Status\" is the job status of the job.\n\u2022 \"Job\" is the job status of the job.\n\u2022 \"Job\" is the job status of the job.\n\u2022 \"Job\" is the job status of the job.\n\u2022 \"Job\"",
+        "parsed_json": null,
+        "is_valid_json": false,
+        "has_all_keys": false
+      }
+    ]
+  }
+}

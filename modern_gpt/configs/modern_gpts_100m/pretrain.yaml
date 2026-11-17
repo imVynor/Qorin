@@ -1,0 +1,43 @@
+# ModernGPT-S 100M Pretraining Hyperparameters
+experiment_id: "pretrain_100m_1.5b"
+experiment_name: "ModernGPT-S-100M-Pretrain-1.5B"
+category: "pretraining"
+
+# Model architecture reference
+model_config_file: "configs/modern_gpts_100m/model.yaml"
+
+# Token budget & schedule (Exact full-step budget: 45,777 steps * 32,768 tokens = 1,500,020,736 tokens)
+# Sits +20,736 tokens (+0.00138%) over 1.5B to preserve full gradient accumulation and exact cosine termination
+total_tokens: 1500020736
+target_nominal_tokens: 1500000000
+context_length: 512
+micro_batch_size: 8
+gradient_accumulation_steps: 8
+effective_batch_size: 64
+tokens_per_step: 32768
+total_optimizer_steps: 45777
+
+# Optimization
+optimizer: "AdamW"
+learning_rate: 0.00025
+min_learning_rate: 0.000025
+weight_decay: 0.1
+beta1: 0.9
+beta2: 0.95
+eps: 1.0e-8
+grad_clip_norm: 1.0
+warmup_steps: 2000
+lr_schedule: "cosine"
+precision: "bf16"
+
+# Checkpoint & Evaluation Cadence
+eval_interval_steps: 500
+save_interval_steps: 500
+eval_batches: 50
+
+# Output Paths
+output_dir: "checkpoints/modern_gpts_100m"
+session_backup_dir: "checkpoints/modern_gpts_100m/session_backups"
+log_dir: "logs/pretrain_100m"
+metrics_file: "logs/pretrain_100m/training_metrics.jsonl"
+

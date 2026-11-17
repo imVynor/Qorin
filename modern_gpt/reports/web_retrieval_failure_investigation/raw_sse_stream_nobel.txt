@@ -1,0 +1,141 @@
+event: retrieval
+data: {"triggered": false, "mode": "auto", "decision_reason": "Query did not match technical knowledge base routing threshold.", "query": "Search the web for: Nobel Prize in Physics 2024 winners.", "retrieved_chunks": [], "injected_context": "", "retrieval_latency_ms": 0.02}
+
+event: token
+data: {"text": "<|tool_call|>", "is_finished": false, "token_count": 1, "ttft_ms": 87.1, "tok_per_sec": 11.5, "elapsed_ms": 87.2}
+
+event: token
+data: {"text": "{", "is_finished": false, "token_count": 2, "ttft_ms": 87.1, "tok_per_sec": 13.2, "elapsed_ms": 151.2}
+
+event: token
+data: {"text": "\"", "is_finished": false, "token_count": 3, "ttft_ms": 87.1, "tok_per_sec": 14.0, "elapsed_ms": 213.9}
+
+event: token
+data: {"text": "name", "is_finished": false, "token_count": 4, "ttft_ms": 87.1, "tok_per_sec": 16.0, "elapsed_ms": 249.3}
+
+event: token
+data: {"text": "\":", "is_finished": false, "token_count": 5, "ttft_ms": 87.1, "tok_per_sec": 19.0, "elapsed_ms": 263.4}
+
+event: token
+data: {"text": " \"", "is_finished": false, "token_count": 6, "ttft_ms": 87.1, "tok_per_sec": 21.6, "elapsed_ms": 277.5}
+
+event: token
+data: {"text": "New", "is_finished": false, "token_count": 7, "ttft_ms": 87.1, "tok_per_sec": 24.0, "elapsed_ms": 292.2}
+
+event: token
+data: {"text": " York", "is_finished": false, "token_count": 8, "ttft_ms": 87.1, "tok_per_sec": 26.1, "elapsed_ms": 306.6}
+
+event: token
+data: {"text": " State", "is_finished": false, "token_count": 9, "ttft_ms": 87.1, "tok_per_sec": 28.0, "elapsed_ms": 321.1}
+
+event: token
+data: {"text": " University", "is_finished": false, "token_count": 10, "ttft_ms": 87.1, "tok_per_sec": 29.8, "elapsed_ms": 335.3}
+
+event: token
+data: {"text": "\",", "is_finished": false, "token_count": 11, "ttft_ms": 87.1, "tok_per_sec": 31.4, "elapsed_ms": 350.3}
+
+event: token
+data: {"text": " \"", "is_finished": false, "token_count": 12, "ttft_ms": 87.1, "tok_per_sec": 32.9, "elapsed_ms": 364.7}
+
+event: token
+data: {"text": "arg", "is_finished": false, "token_count": 13, "ttft_ms": 87.1, "tok_per_sec": 34.3, "elapsed_ms": 378.9}
+
+event: token
+data: {"text": "uments", "is_finished": false, "token_count": 14, "ttft_ms": 87.1, "tok_per_sec": 35.6, "elapsed_ms": 393.2}
+
+event: token
+data: {"text": "\":", "is_finished": false, "token_count": 15, "ttft_ms": 87.1, "tok_per_sec": 36.8, "elapsed_ms": 407.6}
+
+event: token
+data: {"text": " {\"", "is_finished": false, "token_count": 16, "ttft_ms": 87.1, "tok_per_sec": 37.9, "elapsed_ms": 422.1}
+
+event: token
+data: {"text": "query", "is_finished": false, "token_count": 17, "ttft_ms": 87.1, "tok_per_sec": 38.8, "elapsed_ms": 437.6}
+
+event: token
+data: {"text": "\":", "is_finished": false, "token_count": 18, "ttft_ms": 87.1, "tok_per_sec": 39.7, "elapsed_ms": 453.1}
+
+event: token
+data: {"text": " \"", "is_finished": false, "token_count": 19, "ttft_ms": 87.1, "tok_per_sec": 40.6, "elapsed_ms": 468.4}
+
+event: token
+data: {"text": "In", "is_finished": false, "token_count": 20, "ttft_ms": 87.1, "tok_per_sec": 41.4, "elapsed_ms": 483.4}
+
+event: token
+data: {"text": "stitute", "is_finished": false, "token_count": 21, "ttft_ms": 87.1, "tok_per_sec": 42.1, "elapsed_ms": 498.9}
+
+event: token
+data: {"text": " of", "is_finished": false, "token_count": 22, "ttft_ms": 87.1, "tok_per_sec": 42.8, "elapsed_ms": 514.5}
+
+event: token
+data: {"text": " Physics", "is_finished": false, "token_count": 23, "ttft_ms": 87.1, "tok_per_sec": 43.3, "elapsed_ms": 530.6}
+
+event: token
+data: {"text": " and", "is_finished": false, "token_count": 24, "ttft_ms": 87.1, "tok_per_sec": 43.8, "elapsed_ms": 547.4}
+
+event: token
+data: {"text": " Mathematics", "is_finished": false, "token_count": 25, "ttft_ms": 87.1, "tok_per_sec": 44.4, "elapsed_ms": 563.0}
+
+event: token
+data: {"text": " (", "is_finished": false, "token_count": 26, "ttft_ms": 87.1, "tok_per_sec": 44.9, "elapsed_ms": 578.4}
+
+event: token
+data: {"text": "U", "is_finished": false, "token_count": 27, "ttft_ms": 87.1, "tok_per_sec": 45.5, "elapsed_ms": 593.9}
+
+event: token
+data: {"text": "PT", "is_finished": false, "token_count": 28, "ttft_ms": 87.1, "tok_per_sec": 45.9, "elapsed_ms": 609.6}
+
+event: token
+data: {"text": "A", "is_finished": false, "token_count": 29, "ttft_ms": 87.1, "tok_per_sec": 46.4, "elapsed_ms": 625.3}
+
+event: token
+data: {"text": ")\",", "is_finished": false, "token_count": 30, "ttft_ms": 87.1, "tok_per_sec": 46.8, "elapsed_ms": 641.3}
+
+event: token
+data: {"text": " \"", "is_finished": false, "token_count": 31, "ttft_ms": 87.1, "tok_per_sec": 47.1, "elapsed_ms": 657.8}
+
+event: token
+data: {"text": "v", "is_finished": false, "token_count": 32, "ttft_ms": 87.1, "tok_per_sec": 47.5, "elapsed_ms": 673.9}
+
+event: token
+data: {"text": "ote", "is_finished": false, "token_count": 33, "ttft_ms": 87.1, "tok_per_sec": 47.8, "elapsed_ms": 689.7}
+
+event: token
+data: {"text": "_", "is_finished": false, "token_count": 34, "ttft_ms": 87.1, "tok_per_sec": 48.2, "elapsed_ms": 705.2}
+
+event: token
+data: {"text": "count", "is_finished": false, "token_count": 35, "ttft_ms": 87.1, "tok_per_sec": 48.6, "elapsed_ms": 720.9}
+
+event: token
+data: {"text": "\":", "is_finished": false, "token_count": 36, "ttft_ms": 87.1, "tok_per_sec": 48.9, "elapsed_ms": 736.6}
+
+event: token
+data: {"text": " 5", "is_finished": false, "token_count": 37, "ttft_ms": 87.1, "tok_per_sec": 49.1, "elapsed_ms": 752.9}
+
+event: token
+data: {"text": ",", "is_finished": false, "token_count": 38, "ttft_ms": 87.1, "tok_per_sec": 49.4, "elapsed_ms": 769.3}
+
+event: token
+data: {"text": " \"", "is_finished": false, "token_count": 39, "ttft_ms": 87.1, "tok_per_sec": 49.7, "elapsed_ms": 785.5}
+
+event: token
+data: {"text": "v", "is_finished": false, "token_count": 40, "ttft_ms": 87.1, "tok_per_sec": 49.9, "elapsed_ms": 801.9}
+
+event: token
+data: {"text": "otes", "is_finished": false, "token_count": 41, "ttft_ms": 87.1, "tok_per_sec": 50.1, "elapsed_ms": 818.1}
+
+event: token
+data: {"text": "\":", "is_finished": false, "token_count": 42, "ttft_ms": 87.1, "tok_per_sec": 50.3, "elapsed_ms": 834.4}
+
+event: token
+data: {"text": " 1", "is_finished": false, "token_count": 43, "ttft_ms": 87.1, "tok_per_sec": 50.6, "elapsed_ms": 850.2}
+
+event: token
+data: {"text": "}}", "is_finished": false, "token_count": 44, "ttft_ms": 87.1, "tok_per_sec": 50.8, "elapsed_ms": 866.2}
+
+event: token
+data: {"text": "", "is_finished": true, "token_count": 45, "ttft_ms": 87.1, "tok_per_sec": 51.0, "elapsed_ms": 882.6}
+
+event: done
+data: {"trace_id": "2300d4d6-ab87-4f07-96c4-f8b15bae79df", "total_tokens": 1035, "ttft_ms": 87.12, "total_latency_ms": 884.9, "tok_per_sec": 50.98, "retrieval_triggered": false, "tools_executed": 0}
+

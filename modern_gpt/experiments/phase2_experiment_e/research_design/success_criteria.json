@@ -1,0 +1,96 @@
+{
+  "target_system": "QORIN-500M Experiment E",
+  "parent_baseline": "Experiment D Step 425 (ckpt_experiment_d_best.pt)",
+  "benchmark_suite": "150-task held-out generalization audit suite",
+  "primary_success_philosophy": "Targeted behavioral and semantic correctness over loss minimization",
+  "criteria": {
+    "unnecessary_tool_call_rate": {
+      "metric_name": "Unnecessary Tool Call Rate on Direct Questions (FPR)",
+      "denominator_description": "36 direct-expected tasks (25 conceptual, 7 discrimination, 4 recovery)",
+      "baseline_exp_d": 0.50,
+      "minimum_acceptable_threshold": 0.20,
+      "target_threshold": 0.10,
+      "direction": "minimize",
+      "rationale": "Experiment D called tools on 18/36 direct tasks. Experiment E must eliminate false positives on conceptual knowledge."
+    },
+    "web_selection_recall": {
+      "metric_name": "Web Tool Selection Recall",
+      "denominator_description": "76 web-expected tasks across the 150-task benchmark",
+      "baseline_exp_d": 0.8026,
+      "minimum_acceptable_threshold": 0.80,
+      "target_threshold": 0.90,
+      "direction": "maximize",
+      "rationale": "Must not sacrifice web retrieval capability while calibrating direct decisions."
+    },
+    "python_selection_recall": {
+      "metric_name": "Python Tool Selection Recall",
+      "denominator_description": "38 python-expected tasks across the 150-task benchmark",
+      "baseline_exp_d": 0.9211,
+      "minimum_acceptable_threshold": 0.88,
+      "target_threshold": 0.95,
+      "direction": "maximize",
+      "rationale": "Preserve high-precision mathematical and programmatic execution."
+    },
+    "evidence_extraction_accuracy": {
+      "metric_name": "Factual Evidence Extraction Accuracy on Executed Web Calls",
+      "denominator_description": "All tasks where web search executed cleanly with factual target",
+      "baseline_exp_d": 0.2453,
+      "minimum_acceptable_threshold": 0.50,
+      "target_threshold": 0.65,
+      "direction": "maximize",
+      "rationale": "Currently 80 of 106 executed calls fail to extract correct facts. Structured evidence schema must more than double this."
+    },
+    "evidence_grounded_answer_correctness": {
+      "metric_name": "Evidence-Grounded Semantic Correctness on Web Tasks",
+      "denominator_description": "All 76 web-expected benchmark tasks",
+      "baseline_exp_d": 0.2632,
+      "minimum_acceptable_threshold": 0.45,
+      "target_threshold": 0.60,
+      "direction": "maximize",
+      "rationale": "Final answers must be strictly grounded in retrieved evidence rather than parametric hallucinations."
+    },
+    "multistep_web_python_success": {
+      "metric_name": "Multi-Step Web -> Python Chaining Success Rate",
+      "denominator_description": "15 multi-step benchmark tasks requiring empirical lookup then math",
+      "baseline_exp_d": 0.00,
+      "minimum_acceptable_threshold": 0.3333,
+      "target_threshold": 0.60,
+      "direction": "maximize",
+      "rationale": "Experiment D had 0/15 success due to lack of chaining. Multi-turn harness support must unlock this pathway."
+    },
+    "end_to_end_semantic_success": {
+      "metric_name": "Overall Benchmark Semantic Pass Rate",
+      "denominator_description": "All 150 benchmark tasks",
+      "baseline_exp_d": 0.28,
+      "baseline_exp_c": 0.2267,
+      "minimum_acceptable_threshold": 0.40,
+      "target_threshold": 0.50,
+      "direction": "maximize",
+      "rationale": "Must achieve statistically significant improvement over Experiment D (p < 0.01 via McNemar test)."
+    },
+    "mcnemar_statistical_significance": {
+      "metric_name": "Statistical Significance of Improvement vs Experiment D",
+      "test_type": "McNemar two-tailed test with Edwards continuity correction",
+      "baseline_p_value_exp_d_vs_exp_c": 0.2012,
+      "required_p_value_exp_e_vs_exp_d": 0.01,
+      "direction": "minimize",
+      "rationale": "Prove conclusively that gains are not random variance."
+    }
+  },
+  "branch_level_milestones": {
+    "branch_b_calibration": {
+      "target_unnecessary_tool_calls": "<= 12%",
+      "target_web_recall": ">= 80%",
+      "target_python_recall": ">= 90%"
+    },
+    "branch_c_synthesis": {
+      "target_evidence_extraction": ">= 55%",
+      "target_hallucination_rate": "<= 15%"
+    },
+    "branch_d_combined": {
+      "target_unnecessary_tool_calls": "<= 10%",
+      "target_overall_semantic_success": ">= 45%",
+      "target_multistep_success": ">= 50%"
+    }
+  }
+}
