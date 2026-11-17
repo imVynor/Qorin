@@ -52,6 +52,7 @@ checkJsonRegistry('references_registry.json');
 console.log('\n2. Auditing Static Brand Assets & Deployment Routes...');
 checkFile('web/public/qorin.svg', 'Brand SVG Favicon & Navbar Logo');
 checkFile('web/public/404.html', 'GitHub Pages SPA Router Decoder');
+checkFile('web/public/.nojekyll', 'GitHub Pages Jekyll Bypass Flag');
 checkFile('web/src/assets/hero.png', 'Homepage Visual Asset');
 checkFile('.github/workflows/deploy-pages.yml', 'GitHub Actions Deployment Workflow');
 

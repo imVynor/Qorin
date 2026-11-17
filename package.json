@@ -9,6 +9,9 @@
   "scripts": {
     "dev": "npm --prefix web run dev",
     "build": "npm --prefix web run build",
+    "build:pages": "npm --prefix web run build:pages",
+    "predeploy": "npm run build:pages",
+    "deploy": "gh-pages -d web/dist -t --nojekyll",
     "preview": "npm --prefix web run preview",
     "lint": "npm --prefix web run lint",
     "test": "node scripts/verify_showcase.cjs",
@@ -23,5 +26,8 @@
     "vite",
     "react"
   ],
-  "author": "QORIN Research Collaboration"
+  "author": "QORIN Research Collaboration",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }

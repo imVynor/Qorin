@@ -22,6 +22,7 @@ interface ChatAreaProps {
   onTraceRecorded?: () => void;
   onActivePromptChanged?: (prompt: string) => void;
   isBackendAvailable?: boolean;
+  onRequireComputeAuth?: () => void;
 }
 
 export const ChatArea: React.FC<ChatAreaProps> = ({
@@ -31,6 +32,7 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
   onTraceRecorded,
   onActivePromptChanged,
   isBackendAvailable = true,
+  onRequireComputeAuth,
 }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [inputPrompt, setInputPrompt] = useState('');
@@ -182,14 +184,26 @@ export const ChatArea: React.FC<ChatAreaProps> = ({
         if (onTraceRecorded) onTraceRecorded();
       },
       onError: (err) => {
+        const isAuthError =
+          err.message &&
+          (err.message.includes('compute access protected') ||
+            err.message.includes('401') ||
+            err.message.includes('ALL CAPS'));
+
         const errorMsg: ChatMessage = {
           id: `msg-err-${Date.now()}`,
           role: 'assistant',
-          content: `[Inference Error: ${err.message}]`,
+          content: isAuthError
+            ? `[Personal Compute Protected]\n\nAccess to the author's local GPU inference and execution runtime is restricted to Prof. Udit Bhatia.\n\nHint: Professor's name in ALL CAPS (____ ______ / XXXX XXXXXX).\n\nPlease authorize compute access to run live inference.`
+            : `[Inference Error: ${err.message}]`,
         };
         setMessages((prev) => [...prev, errorMsg]);
         setIsGenerating(false);
         abortRef.current = null;
+
+        if (isAuthError && onRequireComputeAuth) {
+          onRequireComputeAuth();
+        }
       },
     });
 

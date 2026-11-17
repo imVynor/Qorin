@@ -92,14 +92,26 @@ npm test
 
 ---
 
-## 5. Accessing the Website
+## 5. Live Showcase & GitHub Pages Deployment
 
-Once the development server is running, open your browser and navigate to:
-```
-http://localhost:5173
-```
+The QORIN frontend showcase is optimized for static hosting on **GitHub Pages** with complete client-side routing, interactive modules, and offline-resilient fallbacks.
 
-*(The public website has not yet been deployed. The production URL will be available here once GitHub Pages deployment is complete.)*
+- **Live URL**: [https://imvynor.github.io/Qorin/](https://imvynor.github.io/Qorin/)
+
+### Automated Deployment (GitHub Actions)
+The repository includes a GitHub Actions workflow (`.github/workflows/deploy-pages.yml`) that automatically builds and publishes the website on every push to `main`.
+
+To enable native GitHub Actions deployment on your repository:
+1. Navigate to **Settings** > **Pages** in your GitHub repository.
+2. Under **Build and deployment** > **Source**, select **GitHub Actions** (or select **Deploy from a branch** and choose the `gh-pages` branch).
+3. Push to `main` or trigger the workflow manually from the **Actions** tab.
+
+### Manual / One-Command Deployment (gh-pages)
+You can also build and deploy directly to the `gh-pages` branch from your local terminal:
+```bash
+npm run deploy
+```
+This runs `npm run build:pages` (bundling with the `/Qorin/` base path and `.nojekyll` / `404.html` SPA routing support) and pushes the distribution to the `gh-pages` branch.
 
 ---
 

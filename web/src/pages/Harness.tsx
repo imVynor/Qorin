@@ -9,15 +9,25 @@ import {
   Database,
   Zap,
   AlertCircle,
+  Lock,
+  Unlock,
 } from 'lucide-react';
 import type { ModelInfo, TelemetryInfo, GenerationSettings } from '../types/harness';
-import { getHealth, getModels, selectModel, unloadModel, isBackendConfigured } from '../services/api';
+import {
+  getHealth,
+  getModels,
+  selectModel,
+  unloadModel,
+  isBackendConfigured,
+  isComputeAuthorized,
+} from '../services/api';
 import { HarnessControls } from '../components/harness/HarnessControls';
 import { ChatArea } from '../components/harness/ChatArea';
 import { InspectionPanel } from '../components/harness/InspectionPanel';
 import { RetrievalComparisonView } from '../components/harness/RetrievalComparisonView';
 import { TrainingDashboardView } from '../components/harness/TrainingDashboardView';
 import { ExperimentTracesView } from '../components/harness/ExperimentTracesView';
+import { ComputeAuthModal } from '../components/auth/ComputeAuthModal';
 import styles from '../components/harness/Harness.module.css';
 
 const DEFAULT_SETTINGS: GenerationSettings = {
@@ -101,6 +111,8 @@ export const Harness: React.FC = () => {
   const [settings, setSettings] = useState<GenerationSettings>(DEFAULT_SETTINGS);
   const [isLoadingModel, setIsLoadingModel] = useState<boolean>(false);
   const [isBackendAvailable, setIsBackendAvailable] = useState<boolean>(true);
+  const [authModalOpen, setAuthModalOpen] = useState<boolean>(false);
+  const [isAuthorized, setIsAuthorized] = useState<boolean>(false);
   const [lastStats, setLastStats] = useState<{
     ttft_ms?: number;
     tok_per_sec?: number;
@@ -108,6 +120,13 @@ export const Harness: React.FC = () => {
     token_count?: number;
     injected_prompt?: string;
   }>({});
+
+  useEffect(() => {
+    const checkAuth = () => setIsAuthorized(isComputeAuthorized());
+    checkAuth();
+    window.addEventListener('qorin-compute-auth-changed', checkAuth);
+    return () => window.removeEventListener('qorin-compute-auth-changed', checkAuth);
+  }, []);
 
   useEffect(() => {
     initHarness();
@@ -165,6 +184,9 @@ export const Harness: React.FC = () => {
         setTelemetry(res.telemetry);
       } catch (err: any) {
         console.warn('Model selection notice:', err.message);
+        if (err.message && (err.message.includes('compute access protected') || err.message.includes('401'))) {
+          setAuthModalOpen(true);
+        }
       } finally {
         setIsLoadingModel(false);
       }
@@ -281,6 +303,28 @@ export const Harness: React.FC = () => {
                   <Database size={12} />
                   <span>RAG: {settings.retrieval_mode.toUpperCase()}</span>
                 </div>
+
+                {isAuthorized ? (
+                  <button
+                    type="button"
+                    onClick={() => setAuthModalOpen(true)}
+                    className={styles.telemetryPillAuthUnlocked}
+                    title="Compute Unlocked: Prof. Udit Bhatia. Click to inspect or revoke."
+                  >
+                    <Unlock size={11} />
+                    <span>Compute: Authorized</span>
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setAuthModalOpen(true)}
+                    className={styles.telemetryPillAuthLocked}
+                    title="Workstation GPU compute locked. Click to enter evaluator password."
+                  >
+                    <Lock size={11} />
+                    <span>Compute: Locked</span>
+                  </button>
+                )}
               </>
             ) : (
               <div className={styles.telemetryPill} style={{ color: 'var(--color-ink-muted)' }}>
@@ -370,6 +414,7 @@ export const Harness: React.FC = () => {
                 onTraceRecorded={() => {}}
                 onActivePromptChanged={(prompt) => setLastStats((prev) => ({ ...prev, injected_prompt: prompt }))}
                 isBackendAvailable={isBackendAvailable}
+                onRequireComputeAuth={() => setAuthModalOpen(true)}
               />
 
               <InspectionPanel
@@ -399,6 +444,13 @@ export const Harness: React.FC = () => {
           <ExperimentTracesView />
         )}
       </main>
+
+      {/* Compute Access Protection Modal (Prof. Udit Bhatia) */}
+      <ComputeAuthModal
+        isOpen={authModalOpen}
+        onClose={() => setAuthModalOpen(false)}
+        onAuthorized={() => setIsAuthorized(true)}
+      />
     </div>
   );
 };
