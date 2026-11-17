@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QORIN — Independent Small Language Model Research Showcase</title>
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%qorin.svg" />
+    <meta name="description" content="QORIN: The Quiet Origin of Reasoning and Intelligence Networks. An independent decoder-only Transformer built from randomly initialized weights on consumer hardware." />
+    <!-- Open Graph Metadata (Absolute Public URL Strategy for Social Sharing) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="QORIN Research" />
+    <meta property="og:title" content="QORIN: Tool-Augmented Small Language Models" />
+    <meta property="og:description" content="The Quiet Origin of Reasoning and Intelligence Networks — An empirical investigation into training, tool augmentation, and grounded reasoning across 16M to 500M parameter language models." />
+    <meta property="og:url" content="https://imvynor.github.io/Qorin/" />
+    <meta property="og:image" content="https://imvynor.github.io/Qorin/qorin.svg" />
+    <meta property="og:image:secure_url" content="https://imvynor.github.io/Qorin/qorin.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="QORIN Research Logo" />
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="QORIN: Tool-Augmented Small Language Models" />
+    <meta name="twitter:description" content="The Quiet Origin of Reasoning and Intelligence Networks — An empirical investigation into training, tool augmentation, and grounded reasoning across 16M to 500M parameter language models." />
+    <meta name="twitter:image" content="https://imvynor.github.io/Qorin/qorin.svg" />
+    <meta name="twitter:image:alt" content="QORIN Research Logo" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <!-- Single Page Apps for GitHub Pages redirect decoder -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('qorin-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved === 'dark' || (saved !== 'light' && prefersDark) ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          document.documentElement.setAttribute('data-theme-mode', saved || 'system');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

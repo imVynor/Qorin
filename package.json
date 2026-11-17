@@ -1,0 +1,27 @@
+{
+  "name": "qorin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tool-Augmented Small Language Models: Building and Evaluating a Lightweight Transformer",
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm --prefix web run dev",
+    "build": "npm --prefix web run build",
+    "preview": "npm --prefix web run preview",
+    "lint": "npm --prefix web run lint",
+    "test": "node scripts/verify_showcase.cjs",
+    "test:e2e": "node tests/frontend/e2e_showcase.test.cjs"
+  },
+  "keywords": [
+    "transformer",
+    "small-language-models",
+    "tool-augmentation",
+    "machine-learning",
+    "research",
+    "vite",
+    "react"
+  ],
+  "author": "QORIN Research Collaboration"
+}

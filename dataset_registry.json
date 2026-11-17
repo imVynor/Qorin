@@ -1,0 +1,183 @@
+[
+  {
+    "dataset_id": "CORPUS-5B-PRETRAIN",
+    "name": "QORIN 5B Multi-Domain Pretraining Corpus",
+    "purpose": "Foundational pretraining for QORIN-500M",
+    "total_training_tokens": 5000000000,
+    "total_validation_tokens": 20000000,
+    "token_dtype": "uint16 (little-endian)",
+    "shard_format": "Binary (.bin) with 80-byte header",
+    "total_shards": 108,
+    "training_shards": 101,
+    "validation_shards": 7,
+    "quarantined_validation_documents": 15789,
+    "cross_split_contamination_rate": 0.0,
+    "tokenizer_fingerprint": "3559c7435e1d9330",
+    "domains": [
+      {
+        "domain": "Quality Web",
+        "weight": 0.40,
+        "source": "HuggingFaceFW/fineweb-edu",
+        "official_url": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu",
+        "license": "ODC-By 1.0",
+        "training_tokens": 2000000000,
+        "validation_tokens": 8000000,
+        "train_shards": 40,
+        "val_shards": 1
+      },
+      {
+        "domain": "Educational",
+        "weight": 0.15,
+        "source": "HuggingFaceTB/smollm-corpus (Cosmopedia v2)",
+        "official_url": "https://huggingface.co/datasets/HuggingFaceTB/smollm-corpus",
+        "license": "Apache 2.0",
+        "training_tokens": 750000000,
+        "validation_tokens": 3000000,
+        "train_shards": 15,
+        "val_shards": 1
+      },
+      {
+        "domain": "Source Code",
+        "weight": 0.15,
+        "source": "codeparrot/codeparrot-clean",
+        "official_url": "https://huggingface.co/datasets/codeparrot/codeparrot-clean",
+        "license": "Apache 2.0 / MIT",
+        "training_tokens": 750000000,
+        "validation_tokens": 3000000,
+        "train_shards": 15,
+        "val_shards": 1
+      },
+      {
+        "domain": "Wikipedia",
+        "weight": 0.075,
+        "source": "wikimedia/wikipedia (20231101.en)",
+        "official_url": "https://huggingface.co/datasets/wikimedia/wikipedia",
+        "license": "CC BY-SA 3.0",
+        "training_tokens": 375000000,
+        "validation_tokens": 1500000,
+        "train_shards": 8,
+        "val_shards": 1
+      },
+      {
+        "domain": "Mathematics",
+        "weight": 0.075,
+        "source": "open-web-math/open-web-math",
+        "official_url": "https://huggingface.co/datasets/open-web-math/open-web-math",
+        "license": "ODC-By 1.0",
+        "training_tokens": 375000000,
+        "validation_tokens": 1500000,
+        "train_shards": 8,
+        "val_shards": 1
+      },
+      {
+        "domain": "Books / Prose",
+        "weight": 0.10,
+        "source": "Standard Ebooks & Project Gutenberg",
+        "official_url": "https://standardebooks.org / https://gutenberg.org",
+        "license": "Public Domain",
+        "training_tokens": 500000000,
+        "validation_tokens": 2000000,
+        "train_shards": 10,
+        "val_shards": 1
+      },
+      {
+        "domain": "Curated Dialogue",
+        "weight": 0.05,
+        "source": "HuggingFaceH4/ultrachat_200k",
+        "official_url": "https://huggingface.co/datasets/HuggingFaceH4/ultrachat_200k",
+        "license": "MIT",
+        "training_tokens": 250000000,
+        "validation_tokens": 1000000,
+        "train_shards": 5,
+        "val_shards": 1
+      }
+    ],
+    "location": "modern_gpt/data_500m/final_5b"
+  },
+  {
+    "dataset_id": "CORPUS-100M-HISTORICAL",
+    "name": "ModernGPT-S 100M Historical Pretraining Corpus",
+    "purpose": "100M baseline pretraining",
+    "total_training_tokens": 102300000,
+    "total_validation_tokens": 11184128,
+    "token_dtype": "uint16",
+    "tokenizer_fingerprint": "be6c3d60c5baf217",
+    "domains": [
+      { "domain": "fineweb_edu", "weight": 0.7008 },
+      { "domain": "cosmopedia_v2", "weight": 0.1994 },
+      { "domain": "codeparrot_clean", "weight": 0.0998 }
+    ],
+    "location": "modern_gpt/archive/100m_baseline/checkpoints"
+  },
+  {
+    "dataset_id": "CORPUS-250M-HISTORICAL",
+    "name": "ModernGPT-S 250M Multi-Source Corpus",
+    "purpose": "50M parameter GQA and deep-thin architectural comparison",
+    "total_training_tokens": 250019840,
+    "total_validation_tokens": null,
+    "tokenizer_fingerprint": "be6c3d60c5baf217",
+    "location": "artifacts/shards_250m"
+  },
+  {
+    "dataset_id": "SFT-MIDSCALE-500",
+    "name": "500-Example Midscale Capability Diagnostic Dataset",
+    "purpose": "Controlled syntax internalization and functional generalization audit",
+    "total_examples": 500,
+    "train_examples": 400,
+    "val_examples": 100,
+    "task_families": 68,
+    "train_families": 54,
+    "val_families": 14,
+    "categories": {
+      "python_atomic": 200,
+      "json_raw": 200,
+      "factoid_qa": 50,
+      "conceptual_explanation": 50
+    },
+    "split_isolation_verified": true,
+    "license": "Internal Research Cleanroom",
+    "location": "modern_gpt/data/midscale_500"
+  },
+  {
+    "dataset_id": "SFT-V1-4K",
+    "name": "SFT v1 4K Context Dataset",
+    "purpose": "Initial ChatML instruction fine-tuning",
+    "total_records": 9997,
+    "format": "ChatML (<|im_start|>, <|im_end|>)",
+    "context_length": 4096,
+    "location": "modern_gpt/data/sft_4k"
+  },
+  {
+    "dataset_id": "SFT-V2-4K",
+    "name": "SFT v2 4K Context Dataset",
+    "purpose": "Expanded code and JSON instruction tuning",
+    "total_records": 26734,
+    "format": "ChatML",
+    "context_length": 4096,
+    "location": "modern_gpt/data/sft_4k_v2"
+  },
+  {
+    "dataset_id": "SFT-V3-4K",
+    "name": "SFT v3 4K Context Dataset",
+    "purpose": "3-epoch high-volume instruction fine-tuning",
+    "total_records": 31949,
+    "format": "ChatML",
+    "context_length": 4096,
+    "known_issues": "Suffered from 56.5% template lock-in and 0.003% conversational starvation",
+    "location": "modern_gpt/data/sft_4k_v3"
+  },
+  {
+    "dataset_id": "SFT-V4-CURATED-POOL",
+    "name": "SFT v4 Curated Instruction Pool",
+    "purpose": "Targeted instruction, greeting repair, and multi-turn identity retention",
+    "total_records": 18322,
+    "supervised_tokens": 2783053,
+    "components": {
+      "deduplicated_core_instructions": 16422,
+      "natural_greetings_supplement": 1300,
+      "identity_retention_supplement": 600
+    },
+    "location": "modern_gpt/data/sft_4k_v4"
+  }
+]
+

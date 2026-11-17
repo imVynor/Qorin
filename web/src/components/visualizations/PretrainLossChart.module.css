@@ -1,0 +1,139 @@
+.figureWrap {
+  margin: var(--space-8) 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  font-family: var(--font-sans);
+}
+
+.figureHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.figureTitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-ink-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.figureIndex {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+}
+
+.toggleGroup {
+  display: flex;
+  gap: 2px;
+  background: var(--color-paper-subtle);
+  padding: 2px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-rule-subtle);
+}
+
+.toggleBtn {
+  background: transparent;
+  border: none;
+  padding: 3px 8px;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  cursor: pointer;
+  border-radius: var(--radius-xs);
+  transition: all var(--duration-fast) ease;
+}
+
+.toggleBtnActive {
+  background: var(--color-surface);
+  color: var(--color-ink-primary);
+  font-weight: 500;
+  box-shadow: var(--shadow-subtle);
+}
+
+.svgWrapper {
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  min-width: 600px;
+  display: block;
+}
+
+.grid {
+  stroke: var(--color-rule-subtle);
+  stroke-dasharray: 2 3;
+}
+
+.axis {
+  stroke: var(--color-rule);
+  stroke-width: 1;
+}
+
+.axisLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  fill: var(--color-ink-muted);
+}
+
+.axisTitle {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  fill: var(--color-ink-secondary);
+}
+
+.isoLine {
+  stroke: var(--color-accent-rust);
+  stroke-dasharray: 3 3;
+  stroke-width: 1;
+}
+
+.isoLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  fill: var(--color-accent-rust);
+}
+
+.tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: var(--color-ink-primary);
+  color: var(--color-paper);
+  padding: 6px 10px;
+  border-radius: var(--radius-xs);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  box-shadow: var(--shadow-plate);
+  max-width: 260px;
+  z-index: 20;
+  transform: translate(-50%, -125%);
+}
+
+.caption {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+  color: var(--color-ink-muted);
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-rule-subtle);
+}
+
+.caption strong {
+  color: var(--color-ink-primary);
+  font-weight: 600;
+}

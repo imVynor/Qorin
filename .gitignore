@@ -1,0 +1,118 @@
+# ==============================================================================
+# QORIN Repository .gitignore (Frontend-First & Clean Release)
+# ==============================================================================
+
+# Node / Frontend Build Outputs
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+build/
+*.local
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment Variables & Local Secrets
+.env
+.env.*
+!.env.example
+!.env.test
+*.env.local
+
+# Backend & Inference Server (Decoupled; Excluded from Initial Frontend Release)
+backend/
+**/backend/
+
+# Python Environments, Caches & Bytecode
+.venv/
+venv/
+env/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Model Weights, Binary Checkpoints & Tensor Dumps (>50MB / GB-scale)
+# Note: Checkpoints are hosted separately; not committed to git.
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.h5
+*.tflite
+*.joblib
+*.pkl
+checkpoints/
+**/checkpoints/
+modern_gpt/
+gpt2/
+
+# Large Training Datasets, Tokenized Shards & Corpora
+*.jsonl
+*.parquet
+*.arrow
+*.tar
+*.tar.gz
+*.gz
+*.zip
+web.zip
+modern-gpt-instruction-data/
+artifacts/
+**/artifacts/
+
+# Databases, Cache & Transient Sandboxes
+*.db
+*.sqlite
+*.sqlite3
+
+# Operating System & IDE Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Testing Scripts & Verification Exclusions
+# Retain frontend verification scripts and tests; exclude internal Python test harnesses
+tests/*.py
+scripts/*.py
+tests/__pycache__/
+scripts/__pycache__/
+web/*.png
+!web/src/assets/*.png
+web/screenshot_*.png
+web/debug_capture.cjs
+web/test_*.cjs
+web/verify_*.cjs
+*.tmp
+*.bak
+*.bak_*
+
+# Internal Planning Documents & Scratch Workspaces
+scratch/
+QORIN_*.md
+website_content_inventory.md
+resources.txt
+test.ipynb
+start_harness.bat
+start_harness.ps1
+tools_export_data.py
+tool_context_spec.json
+web/README.md

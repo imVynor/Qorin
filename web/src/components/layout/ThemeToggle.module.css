@@ -1,0 +1,33 @@
+.toggleBtn {
+  background: var(--color-paper-subtle);
+  border: 1px solid var(--color-rule);
+  color: var(--color-ink-secondary);
+  border-radius: var(--radius-xs);
+  padding: 5px 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+  line-height: 1;
+}
+
+.toggleBtn:hover {
+  background: var(--color-surface);
+  color: var(--color-ink-primary);
+  border-color: var(--color-rule-strong);
+}
+
+.toggleLabel {
+  font-size: 11px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 640px) {
+  .toggleLabel {
+    display: none;
+  }
+}
+

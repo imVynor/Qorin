@@ -1,0 +1,238 @@
+.moduleSection {
+  padding: var(--space-12) 0;
+  border-bottom: 1px solid var(--color-rule);
+  scroll-margin-top: 100px;
+}
+
+.moduleSection:last-child {
+  border-bottom: none;
+}
+
+.moduleHeader {
+  margin-bottom: var(--space-8);
+}
+
+.moduleKicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-accent-indigo);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-2);
+}
+
+.moduleTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--color-ink-primary);
+  margin-bottom: var(--space-3);
+}
+
+.moduleLead {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--color-ink-secondary);
+  max-width: var(--measure-prose);
+}
+
+.teachingBlock {
+  margin-bottom: var(--space-10);
+}
+
+.partKicker {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.partTag {
+  color: var(--color-accent-indigo);
+  font-weight: 600;
+}
+
+.partHeading {
+  font-family: var(--font-sans);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-ink-primary);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.015em;
+}
+
+.prose {
+  max-width: var(--measure-prose);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-ink-secondary);
+}
+
+.prose p {
+  margin-bottom: var(--space-4);
+}
+
+.prose strong {
+  color: var(--color-ink-primary);
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.25rem;
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.formulaBox {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  background: var(--color-paper-subtle);
+  border: 1px solid var(--color-rule-subtle);
+  border-left: 3px solid var(--color-accent-indigo);
+  border-radius: var(--radius-xs);
+  padding: 10px 14px;
+  margin: var(--space-4) 0;
+  color: var(--color-ink-primary);
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.labCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-sm);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+  box-shadow: var(--shadow-subtle);
+}
+
+.labHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-rule-subtle);
+}
+
+.labTitle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-ink-primary);
+}
+
+.controlsRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+.controlItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.controlLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+}
+
+.textInput {
+  padding: 6px 10px;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-xs);
+  background: var(--color-paper-subtle);
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-ink-primary);
+  outline: none;
+  min-width: 260px;
+}
+
+.textInput:focus {
+  border-color: var(--color-ink-primary);
+  background: var(--color-surface);
+}
+
+.sliderInput {
+  width: 160px;
+  accent-color: var(--color-accent-indigo);
+  cursor: pointer;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 2px;
+  background: var(--color-paper-subtle);
+  padding: 2px;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--color-rule-subtle);
+}
+
+.btnToggle {
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-ink-muted);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.btnToggleActive {
+  background: var(--color-surface);
+  color: var(--color-ink-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-subtle);
+}
+
+.outputArea {
+  background: var(--color-paper-subtle);
+  border: 1px solid var(--color-rule-subtle);
+  border-radius: var(--radius-xs);
+  padding: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.outputTitle {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  color: var(--color-ink-muted);
+  margin-bottom: var(--space-2);
+}
+
+.qorinConnection {
+  margin-top: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-paper-subtle);
+  border-left: 2px solid var(--color-accent-sage);
+  border-radius: var(--radius-xs);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  color: var(--color-ink-secondary);
+}
+
+.qorinConnection strong {
+  color: var(--color-ink-primary);
+}
+

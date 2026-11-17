@@ -1,0 +1,145 @@
+[
+  {
+    "reference_id": "REF-TRANSFORMER-2017",
+    "title": "Attention Is All You Need",
+    "authors": ["Ashish Vaswani", "Noam Shazeer", "Niki Parmar", "Jakob Uszkoreit", "Llion Jones", "Aidan N. Gomez", "Łukasz Kaiser", "Illia Polosukhin"],
+    "year": 2017,
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS 2017)",
+    "arxiv_id": "1706.03762",
+    "doi": "10.48550/arXiv.1706.03762",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "category": "architecture",
+    "relevance_to_qorin": "Foundation of decoder-only autoregressive Transformer blocks, self-attention mechanisms, and residual connections."
+  },
+  {
+    "reference_id": "REF-SWIGLU-2020",
+    "title": "GLU Variants Improve Transformer",
+    "authors": ["Noam Shazeer"],
+    "year": 2020,
+    "venue": "arXiv preprint",
+    "arxiv_id": "2002.05202",
+    "doi": "10.48550/arXiv.2002.05202",
+    "url": "https://arxiv.org/abs/2002.05202",
+    "category": "architecture",
+    "relevance_to_qorin": "SwiGLU feed-forward network implementation used in ModernGPT-S / QORIN across 16M, 50M, 100M, and 500M models."
+  },
+  {
+    "reference_id": "REF-RMSNORM-2019",
+    "title": "Root Mean Square Layer Normalization",
+    "authors": ["Biao Zhang", "Rico Sennrich"],
+    "year": 2019,
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS 2019)",
+    "arxiv_id": "1910.07467",
+    "doi": "10.48550/arXiv.1910.07467",
+    "url": "https://arxiv.org/abs/1910.07467",
+    "category": "architecture",
+    "relevance_to_qorin": "Pre-norm RMSNorm layer formulation replacing standard LayerNorm to improve throughput and numerical stability."
+  },
+  {
+    "reference_id": "REF-ROPE-2021",
+    "title": "RoFormer: Enhanced Transformer with Rotary Position Embedding",
+    "authors": ["Jianlin Su", "Yu Lu", "Shengfeng Pan", "Ahmed Murtadha", "Bo Wen", "Yunfeng Liu"],
+    "year": 2021,
+    "venue": "Neurocomputing (2024)",
+    "arxiv_id": "2104.09864",
+    "doi": "10.1016/j.neucom.2023.127063",
+    "url": "https://arxiv.org/abs/2104.09864",
+    "category": "positional_encoding",
+    "relevance_to_qorin": "Rotary position embedding implementation and linear frequency scaling for 4,096-token context extension."
+  },
+  {
+    "reference_id": "REF-GQA-2023",
+    "title": "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints",
+    "authors": ["Joshua Ainslie", "James Lee-Thorp", "Michiel de Jong", "Yury Zemlyanskiy", "Federico Lebrón", "Sumit Sanghai"],
+    "year": 2023,
+    "venue": "EMNLP 2023",
+    "arxiv_id": "2305.13245",
+    "doi": "10.18653/v1/2023.emnlp-main.298",
+    "url": "https://arxiv.org/abs/2305.13245",
+    "category": "attention",
+    "relevance_to_qorin": "Grouped-Query Attention design: 4 KV heads for 12 query heads in 100M (3:1) and 4 KV heads for 24 query heads in 500M (6:1)."
+  },
+  {
+    "reference_id": "REF-CHINCHILLA-2022",
+    "title": "Training Compute-Optimal Large Language Models",
+    "authors": ["Jordan Hoffmann", "Sebastian Borgeaud", "Arthur Mensch", "Elena Buchatskaya", "Trevor Cai", "Eliza Rutherford", "Diego de Las Casas", "Lisa Anne Hendricks", "Johannes Welbl", "Aidan Clark", "Tom Hennigan", "Eric Noland", "Katie Millican", "George van den Driessche", "Bogdan Damoc", "Aurelia Guy", "Simon Osindero", "Karen Simonyan", "Erich Elsen", "Jack W. Rae", "Oriol Vinyals", "Laurent Sifre"],
+    "year": 2022,
+    "venue": "NeurIPS 2022",
+    "arxiv_id": "2203.15556",
+    "doi": "10.48550/arXiv.2203.15556",
+    "url": "https://arxiv.org/abs/2203.15556",
+    "category": "scaling_laws",
+    "relevance_to_qorin": "Theoretical basis for the 5,000,000,000 token budget for a 514M parameter model (~9.7 tokens/parameter)."
+  },
+  {
+    "reference_id": "REF-ADAMW-2019",
+    "title": "Decoupled Weight Decay Regularization",
+    "authors": ["Ilya Loshchilov", "Frank Hutter"],
+    "year": 2019,
+    "venue": "ICLR 2019",
+    "arxiv_id": "1711.05101",
+    "doi": "10.48550/arXiv.1711.05101",
+    "url": "https://arxiv.org/abs/1711.05101",
+    "category": "optimization",
+    "relevance_to_qorin": "Fused AdamW optimizer implementation with decoupled weight decay (0.1) across non-1D parameters."
+  },
+  {
+    "reference_id": "REF-RAG-2020",
+    "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+    "authors": ["Patrick Lewis", "Ethan Perez", "Aleksandra Piktus", "Fabio Petroni", "Vladimir Karpukhin", "Naman Goyal", "Heinrich Küttler", "Mike Lewis", "Wen-tau Yih", "Tim Rocktäschel", "Sebastian Riedel", "Douwe Kiela"],
+    "year": 2020,
+    "venue": "NeurIPS 2020",
+    "arxiv_id": "2005.11401",
+    "doi": "10.48550/arXiv.2005.11401",
+    "url": "https://arxiv.org/abs/2005.11401",
+    "category": "retrieval",
+    "relevance_to_qorin": "Foundation for Dimension B: testing whether external retrieval can compensate for small model capacity limits."
+  },
+  {
+    "reference_id": "REF-FINEWEB-EDU-2024",
+    "title": "The FineWeb Datasets: Decanting the Web for the Finest Text Data at Scale",
+    "authors": ["Guilherme Penedo", "Hynek Kydlíček", "Loubna Ben Allal", "Anton Lozhkov", "Margaret Mitchell", "Colin Raffel", "Leandro von Werra", "Thomas Wolf"],
+    "year": 2024,
+    "venue": "arXiv preprint",
+    "arxiv_id": "2406.17557",
+    "doi": "10.48550/arXiv.2406.17557",
+    "url": "https://arxiv.org/abs/2406.17557",
+    "category": "dataset",
+    "relevance_to_qorin": "Primary source for the Quality Web domain (2B tokens / 40% mixture in the QORIN 5B pretraining corpus)."
+  },
+  {
+    "reference_id": "REF-SMOLLM-COSMOPEDIA-2024",
+    "title": "SmolLM: Blazing Fast and Remarkably Capable Small Models",
+    "authors": ["Loubna Ben Allal", "Anton Lozhkov", "Elie Bakouch", "Gabriel Martín Blázquez", "Lewis Tunstall", "Thomas Wolf"],
+    "year": 2024,
+    "venue": "Hugging Face Technical Report",
+    "url": "https://huggingface.co/blog/smollm",
+    "category": "dataset",
+    "relevance_to_qorin": "Source for Educational synthetic corpus (Cosmopedia v2, 750M tokens / 15% mixture in 5B corpus)."
+  },
+  {
+    "reference_id": "REF-OPENWEBMATH-2023",
+    "title": "OpenWebMath: An Open Dataset of High-Quality Mathematical Web Text",
+    "authors": ["Keiran Paster", "Marco Dos Santos", "Azer Bestavros", "Jimmy Ba"],
+    "year": 2023,
+    "venue": "arXiv preprint",
+    "arxiv_id": "2310.06786",
+    "doi": "10.48550/arXiv.2310.06786",
+    "url": "https://arxiv.org/abs/2310.06786",
+    "category": "dataset",
+    "relevance_to_qorin": "Source for Mathematics pretraining domain (375M tokens / 7.5% mixture in 5B corpus)."
+  },
+  {
+    "reference_id": "REF-ULTR夫CHAT-2023",
+    "title": "Enhancing Chat Language Models by Scaling High-quality Multi-turn Conversations",
+    "authors": ["Ning Ding", "Yulin Chen", "Bokai Xu", "Yujia Qin", "Zhi Zheng", "Shengding Hu", "Zhiyuan Liu", "Maosong Sun", "Bowen Zhou"],
+    "year": 2023,
+    "venue": "EMNLP 2023",
+    "arxiv_id": "2305.10403",
+    "doi": "10.18653/v1/2023.emnlp-main.748",
+    "url": "https://arxiv.org/abs/2305.10403",
+    "category": "dataset",
+    "relevance_to_qorin": "Source for Curated Dialogue pretraining domain (250M tokens / 5% mixture in 5B corpus)."
+  }
+]
+
